@@ -74,7 +74,7 @@
     <owl:DatatypeProperty rdf:about="http://geo.linkeddata.es/def/feature#OWLDataProperty_7fe078a6_48e8_40c9_a50c_536e433fea96">
         <rdfs:label xml:lang="es">cota</rdfs:label>
         <rdfs:comment xml:lang="es">Altitud expresada en metros</rdfs:comment>
-        <rdfs:domain rdf:resource="http://geo.linkeddata.es/def/feature#OWLClass_00b15bda_5901_4e89_b02e_c6a043adcb1e"/>
+        <rdfs:domain rdf:resource="http://geo.linkeddata.es/def/feature#PuntoAcotado"/>
         <rdfs:range rdf:resource="&xsd;int"/>
     </owl:DatatypeProperty>
     
@@ -91,206 +91,46 @@
     
 
 
-    <!-- http://geo.linkeddata.es/def/feature#OWLClass_00b15bda_5901_4e89_b02e_c6a043adcb1e -->
+    <!-- http://geo.linkeddata.es/def/feature#Albergue -->
 
-    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#OWLClass_00b15bda_5901_4e89_b02e_c6a043adcb1e">
-        <rdfs:label xml:lang="es">PuntoAcotado</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#OWLClass_5ce51c8c_71ca_472b_a1f1_a209de0edf21"/>
-        <rdfs:comment xml:lang="es">Se define como puntos acotados a aquellos puntos con cota que poseen una ubicación
-representativa del relieve y complementan la información facilitada por las curvas de nivel.</rdfs:comment>
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#Albergue">
+        <rdfs:label xml:lang="es">Albergue</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#AlojamientoYOcio"/>
     </owl:Class>
     
 
 
-    <!-- http://geo.linkeddata.es/def/feature#OWLClass_0931f664_660c_42b6_ab07_8766f0387b59 -->
+    <!-- http://geo.linkeddata.es/def/feature#AlojamientoYOcio -->
 
-    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#OWLClass_0931f664_660c_42b6_ab07_8766f0387b59">
-        <rdfs:label xml:lang="es">PoblacionesYConstrucciones</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#AlojamientoYOcio">
+        <rdfs:label xml:lang="es">AlojamientoYOcio</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://geo.linkeddata.es/def/feature#OWLClass_0faa9d03_ede3_44a3_be68_0618f24621b6 -->
+    <!-- http://geo.linkeddata.es/def/feature#Balneario -->
 
-    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#OWLClass_0faa9d03_ede3_44a3_be68_0618f24621b6">
-        <rdfs:label xml:lang="es">CurvaDeNivelGenericaYAltimetrica</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#OWLClass_24996d7f_69e9_4888_b890_356fcf83b64d"/>
-        <rdfs:comment xml:lang="es">Curva de  nivel en superficie con altitud cada 20 m</rdfs:comment>
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#Balneario">
+        <rdfs:label xml:lang="es">Balneario</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#AlojamientoYOcio"/>
     </owl:Class>
     
 
 
-    <!-- http://geo.linkeddata.es/def/feature#OWLClass_11112674_78ec_4299_ad3d_3edab9bae8ed -->
+    <!-- http://geo.linkeddata.es/def/feature#Camping -->
 
-    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#OWLClass_11112674_78ec_4299_ad3d_3edab9bae8ed">
-        <rdfs:label xml:lang="es">CurvaDeNivelInterpoladaYAltimetrica</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#OWLClass_24996d7f_69e9_4888_b890_356fcf83b64d"/>
-        <rdfs:comment xml:lang="es">Curva de nivel en superficie con altitud resultado de un algoritmo de cálculo y no de los datos del terreno</rdfs:comment>
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#Camping">
+        <rdfs:label xml:lang="es">Camping</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#AlojamientoYOcio"/>
     </owl:Class>
     
 
 
-    <!-- http://geo.linkeddata.es/def/feature#OWLClass_12188ce2_a705_499a_ab2d_ad2579288451 -->
+    <!-- http://geo.linkeddata.es/def/feature#Cerro -->
 
-    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#OWLClass_12188ce2_a705_499a_ab2d_ad2579288451">
-        <rdfs:label xml:lang="es">PuertoDeMontana</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#OWLClass_00b15bda_5901_4e89_b02e_c6a043adcb1e"/>
-        <rdfs:comment xml:lang="es">05. Paso entre montañas.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://geo.linkeddata.es/def/feature#OWLClass_1cd963f2_40e5_4060_a957_e92279cca77c -->
-
-    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#OWLClass_1cd963f2_40e5_4060_a957_e92279cca77c">
-        <rdfs:label xml:lang="es">Nacion</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#OWLClass_b7104a84_69af_446b_b44a_ef6aca39a714"/>
-        <rdfs:comment xml:lang="es">01. Límite de Nación</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://geo.linkeddata.es/def/feature#OWLClass_24996d7f_69e9_4888_b890_356fcf83b64d -->
-
-    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#OWLClass_24996d7f_69e9_4888_b890_356fcf83b64d">
-        <rdfs:label xml:lang="es">CurvaDeNivel</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#OWLClass_5ce51c8c_71ca_472b_a1f1_a209de0edf21"/>
-        <rdfs:comment xml:lang="es">Se representan como curvas de nivel aquellas líneas que tienen la misma altitud sobre la superficie de referencia, siendo esta altitud un múltiplo de 40 o un múltiplo de 100 (para líneas interpoladas).</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://geo.linkeddata.es/def/feature#OWLClass_28e0ce00_0185_4a19_a021_92086c5dfe41 -->
-
-    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#OWLClass_28e0ce00_0185_4a19_a021_92086c5dfe41">
-        <rdfs:label xml:lang="es">LIC</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#OWLClass_9bd268ca_1d36_41f3_9dd5_27d09ea21ede"/>
-        <rdfs:comment xml:lang="es">03. Lugar de importancia comunitaria garantiza la conservación de la biodiversidad (fauna y flora)</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://geo.linkeddata.es/def/feature#OWLClass_2e031808_6f97_4e1b_b5d3_7083fda48dbb -->
-
-    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#OWLClass_2e031808_6f97_4e1b_b5d3_7083fda48dbb">
-        <rdfs:label xml:lang="es">PuntosDeControl</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
-    </owl:Class>
-    
-
-
-    <!-- http://geo.linkeddata.es/def/feature#OWLClass_3100b138_be04_4f01_a588_4440f60ab104 -->
-
-    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#OWLClass_3100b138_be04_4f01_a588_4440f60ab104">
-        <rdfs:label xml:lang="es">CotaMunicipal</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#OWLClass_00b15bda_5901_4e89_b02e_c6a043adcb1e"/>
-        <rdfs:comment xml:lang="es">01. Cota municipal</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://geo.linkeddata.es/def/feature#OWLClass_31e05222_5568_481c_945d_e62770e0c955 -->
-
-    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#OWLClass_31e05222_5568_481c_945d_e62770e0c955">
-        <rdfs:label xml:lang="es">ComunidadJurisdiccional</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#OWLClass_b7104a84_69af_446b_b44a_ef6aca39a714"/>
-        <rdfs:comment xml:lang="es">04. Límite de comunidad jurisdiccional</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://geo.linkeddata.es/def/feature#OWLClass_399af843_4457_45e1_84c8_80e717ad629d -->
-
-    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#OWLClass_399af843_4457_45e1_84c8_80e717ad629d">
-        <rdfs:label xml:lang="es">CiudadAutonoma</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#OWLClass_b7104a84_69af_446b_b44a_ef6aca39a714"/>
-        <rdfs:comment xml:lang="es">06. Límite de Ciudad Autónoma.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://geo.linkeddata.es/def/feature#OWLClass_3e3bc9fb_0c5b_49f5_96f2_11920c8b5fdc -->
-
-    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#OWLClass_3e3bc9fb_0c5b_49f5_96f2_11920c8b5fdc">
-        <rdfs:label xml:lang="es">CurvaDeNivelMaestraYBatimetrica</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#OWLClass_24996d7f_69e9_4888_b890_356fcf83b64d"/>
-        <rdfs:comment xml:lang="es">Curva de nivel submarina con altitud múltiplo de 100 m</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://geo.linkeddata.es/def/feature#OWLClass_40fa2798_5ab1_4e59_a099_565d6e68017f -->
-
-    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#OWLClass_40fa2798_5ab1_4e59_a099_565d6e68017f">
-        <rdfs:label xml:lang="es">Provincia</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#OWLClass_b7104a84_69af_446b_b44a_ef6aca39a714"/>
-        <rdfs:comment xml:lang="es">03. Límite de Provincia</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://geo.linkeddata.es/def/feature#OWLClass_467245ab_4b60_4636_8a37_aabfe2312e86 -->
-
-    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#OWLClass_467245ab_4b60_4636_8a37_aabfe2312e86">
-        <rdfs:label xml:lang="es">Municipio</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#OWLClass_b7104a84_69af_446b_b44a_ef6aca39a714"/>
-        <rdfs:comment xml:lang="es">05. Límite de Municipio</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://geo.linkeddata.es/def/feature#OWLClass_4b911ab9_2233_435c_9433_7a9547bc15be -->
-
-    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#OWLClass_4b911ab9_2233_435c_9433_7a9547bc15be">
-        <rdfs:label xml:lang="es">Zepa</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#OWLClass_9bd268ca_1d36_41f3_9dd5_27d09ea21ede"/>
-        <rdfs:comment xml:lang="es">04. Zona especial de protección de aves</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://geo.linkeddata.es/def/feature#OWLClass_4ec1d5b5_4648_4120_a79a_873e76077da7 -->
-
-    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#OWLClass_4ec1d5b5_4648_4120_a79a_873e76077da7">
-        <rdfs:label xml:lang="es">InstalacionDeportiva</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#OWLClass_c22c714d_01be_44d8_ab6c_9aa91f2df499"/>
-    </owl:Class>
-    
-
-
-    <!-- http://geo.linkeddata.es/def/feature#OWLClass_530faad4_4f5c_465e_8409_2bd0f7496a56 -->
-
-    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#OWLClass_530faad4_4f5c_465e_8409_2bd0f7496a56">
-        <rdfs:label xml:lang="es">ConduccionesYEnergia</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
-    </owl:Class>
-    
-
-
-    <!-- http://geo.linkeddata.es/def/feature#OWLClass_55aa7f4b_887d_4f00_8199_27a4a506ba59 -->
-
-    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#OWLClass_55aa7f4b_887d_4f00_8199_27a4a506ba59">
-        <rdfs:label xml:lang="es">Hidrografia</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
-    </owl:Class>
-    
-
-
-    <!-- http://geo.linkeddata.es/def/feature#OWLClass_5ce51c8c_71ca_472b_a1f1_a209de0edf21 -->
-
-    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#OWLClass_5ce51c8c_71ca_472b_a1f1_a209de0edf21">
-        <rdfs:label xml:lang="es">Relive</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
-    </owl:Class>
-    
-
-
-    <!-- http://geo.linkeddata.es/def/feature#OWLClass_66c7a532_0048_4b47_9add_3f06eb8c263a -->
-
-    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#OWLClass_66c7a532_0048_4b47_9add_3f06eb8c263a">
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#Cerro">
         <rdfs:label xml:lang="es">Cerro</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#OWLClass_00b15bda_5901_4e89_b02e_c6a043adcb1e"/>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#PuntoAcotado"/>
         <rdfs:comment xml:lang="es">03. Elevación de tierra aislada y de menor altura que el monte o la
 montaña.
 </rdfs:comment>
@@ -298,96 +138,342 @@ montaña.
     
 
 
-    <!-- http://geo.linkeddata.es/def/feature#OWLClass_6d94efc8_8abd_4f8d_99e0_aa1b63bb74ed -->
+    <!-- http://geo.linkeddata.es/def/feature#CiudadAutonoma -->
 
-    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#OWLClass_6d94efc8_8abd_4f8d_99e0_aa1b63bb74ed">
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#CiudadAutonoma">
+        <rdfs:label xml:lang="es">CiudadAutonoma</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#UnidadAdministrativa"/>
+        <rdfs:comment xml:lang="es">06. Límite de Ciudad Autónoma.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/def/feature#Collado -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#Collado">
+        <rdfs:label xml:lang="es">Collado</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#PuntoAcotado"/>
+        <rdfs:comment xml:lang="es">04. Paso o depresión suave por donde se puede atravesar con
+facilidad de un lado a otro una montaña o sierra.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/def/feature#ComunidadAutonoma -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#ComunidadAutonoma">
+        <rdfs:label xml:lang="es">ComunidadAutonoma</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#UnidadAdministrativa"/>
+        <rdfs:comment xml:lang="es">02. Límite de Comunidad Autónoma</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/def/feature#ComunidadJurisdiccional -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#ComunidadJurisdiccional">
+        <rdfs:label xml:lang="es">ComunidadJurisdiccional</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#UnidadAdministrativa"/>
+        <rdfs:comment xml:lang="es">04. Límite de comunidad jurisdiccional</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/def/feature#ConduccionesYEnergia -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#ConduccionesYEnergia">
+        <rdfs:label xml:lang="es">ConduccionesYEnergia</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/def/feature#CotaMunicipal -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#CotaMunicipal">
+        <rdfs:label xml:lang="es">CotaMunicipal</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#PuntoAcotado"/>
+        <rdfs:comment xml:lang="es">01. Cota municipal</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/def/feature#CurvaDeNivel -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#CurvaDeNivel">
+        <rdfs:label xml:lang="es">CurvaDeNivel</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#Relieve"/>
+        <rdfs:comment xml:lang="es">Se representan como curvas de nivel aquellas líneas que tienen la misma altitud sobre la superficie de referencia, siendo esta altitud un múltiplo de 40 o un múltiplo de 100 (para líneas interpoladas).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/def/feature#CurvaDeNivelDepresionGeometricaYAltimetrica -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#CurvaDeNivelDepresionGeometricaYAltimetrica">
         <rdfs:label xml:lang="es">CurvaDeNivelDepresionGeometricaYAltimetrica</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#OWLClass_24996d7f_69e9_4888_b890_356fcf83b64d"/>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#CurvaDeNivel"/>
         <rdfs:comment xml:lang="es">Curva de nivel en superficie que define una concavidad del terreno cada 20 m</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://geo.linkeddata.es/def/feature#OWLClass_7634b865_f02e_4690_9977_77a354f86324 -->
+    <!-- http://geo.linkeddata.es/def/feature#CurvaDeNivelDepresionMaestraYAltimetrica -->
 
-    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#OWLClass_7634b865_f02e_4690_9977_77a354f86324">
-        <rdfs:label xml:lang="es">ParqueNacional</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#OWLClass_9bd268ca_1d36_41f3_9dd5_27d09ea21ede"/>
-        <rdfs:comment xml:lang="es">01. Delimitación de protección legal por el estado</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://geo.linkeddata.es/def/feature#OWLClass_78bd6ed6_2ce1_4a0b_87b6_7bc86f78b76e -->
-
-    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#OWLClass_78bd6ed6_2ce1_4a0b_87b6_7bc86f78b76e">
-        <rdfs:label xml:lang="es">Camping</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#OWLClass_c22c714d_01be_44d8_ab6c_9aa91f2df499"/>
-    </owl:Class>
-    
-
-
-    <!-- http://geo.linkeddata.es/def/feature#OWLClass_7a988427_57af_420e_9270_6040c1fc33a8 -->
-
-    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#OWLClass_7a988427_57af_420e_9270_6040c1fc33a8">
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#CurvaDeNivelDepresionMaestraYAltimetrica">
         <rdfs:label xml:lang="es">CurvaDeNivelDepresionMaestraYAltimetrica</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#OWLClass_24996d7f_69e9_4888_b890_356fcf83b64d"/>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#CurvaDeNivel"/>
         <rdfs:comment xml:lang="es">Curva de nivel en superficie que define una concavidad del terreno cada 100 m</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://geo.linkeddata.es/def/feature#OWLClass_82cb619c_613d_4e3e_9f14_eae67ec5dd28 -->
+    <!-- http://geo.linkeddata.es/def/feature#CurvaDeNivelGenericaYAltimetrica -->
 
-    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#OWLClass_82cb619c_613d_4e3e_9f14_eae67ec5dd28">
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#CurvaDeNivelGenericaYAltimetrica">
+        <rdfs:label xml:lang="es">CurvaDeNivelGenericaYAltimetrica</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#CurvaDeNivel"/>
+        <rdfs:comment xml:lang="es">Curva de  nivel en superficie con altitud cada 20 m</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/def/feature#CurvaDeNivelGenericaYBatimetrica -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#CurvaDeNivelGenericaYBatimetrica">
+        <rdfs:label xml:lang="es">CurvaDeNivelGenericaYBatimetrica</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#CurvaDeNivel"/>
+        <rdfs:comment xml:lang="es">Curva de  nivel submarina con altitud cada 20 m</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/def/feature#CurvaDeNivelInterpoladaYAltimetrica -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#CurvaDeNivelInterpoladaYAltimetrica">
+        <rdfs:label xml:lang="es">CurvaDeNivelInterpoladaYAltimetrica</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#CurvaDeNivel"/>
+        <rdfs:comment xml:lang="es">Curva de nivel en superficie con altitud resultado de un algoritmo de cálculo y no de los datos del terreno</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/def/feature#CurvaDeNivelMaestraYAltimetrica -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#CurvaDeNivelMaestraYAltimetrica">
         <rdfs:label xml:lang="es">CurvaDeNivelMaestraYAltimetrica</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#OWLClass_24996d7f_69e9_4888_b890_356fcf83b64d"/>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#CurvaDeNivel"/>
         <rdfs:comment xml:lang="es">Curva de nivel en superficie con altitud múltiplo de 100 m</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://geo.linkeddata.es/def/feature#OWLClass_8c043c51_09b5_4ac2_9073_d051575365a3 -->
+    <!-- http://geo.linkeddata.es/def/feature#CurvaDeNivelMaestraYBatimetrica -->
 
-    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#OWLClass_8c043c51_09b5_4ac2_9073_d051575365a3">
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#CurvaDeNivelMaestraYBatimetrica">
+        <rdfs:label xml:lang="es">CurvaDeNivelMaestraYBatimetrica</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#CurvaDeNivel"/>
+        <rdfs:comment xml:lang="es">Curva de nivel submarina con altitud múltiplo de 100 m</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/def/feature#EstacionInvernal -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#EstacionInvernal">
+        <rdfs:label xml:lang="es">EstacionInvernal</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#AlojamientoYOcio"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/def/feature#Hidrografia -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#Hidrografia">
+        <rdfs:label xml:lang="es">Hidrografia</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/def/feature#InstalacionDeportiva -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#InstalacionDeportiva">
+        <rdfs:label xml:lang="es">InstalacionDeportiva</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#AlojamientoYOcio"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/def/feature#LIC -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#LIC">
+        <rdfs:label xml:lang="es">LIC</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#ZonasProtegidas"/>
+        <rdfs:comment xml:lang="es">03. Lugar de importancia comunitaria garantiza la conservación de la biodiversidad (fauna y flora)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/def/feature#Municipio -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#Municipio">
+        <rdfs:label xml:lang="es">Municipio</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#UnidadAdministrativa"/>
+        <rdfs:comment xml:lang="es">05. Límite de Municipio</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/def/feature#Nacion -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#Nacion">
+        <rdfs:label xml:lang="es">Nacion</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#UnidadAdministrativa"/>
+        <rdfs:comment xml:lang="es">01. Límite de Nación</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/def/feature#OtrasZonasProtegidas -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#OtrasZonasProtegidas">
+        <rdfs:label xml:lang="es">OtrasZonasProtegidas</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#ZonasProtegidas"/>
+        <rdfs:comment xml:lang="es">00. Delimitación de zona natural.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/def/feature#ParadorNacional -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#ParadorNacional">
+        <rdfs:label xml:lang="es">ParadorNacional</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#AlojamientoYOcio"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/def/feature#ParqueNacional -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#ParqueNacional">
+        <rdfs:label xml:lang="es">ParqueNacional</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#ZonasProtegidas"/>
+        <rdfs:comment xml:lang="es">01. Delimitación de protección legal por el estado</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/def/feature#ParqueNatural -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#ParqueNatural">
+        <rdfs:label xml:lang="es">ParqueNatural</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#ZonasProtegidas"/>
+        <rdfs:comment xml:lang="es">02. Delimitación de protección legal por otros organismos</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/def/feature#Pico -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#Pico">
+        <rdfs:label xml:lang="es">Pico</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#PuntoAcotado"/>
+        <rdfs:comment xml:lang="es">02. Montaña de cumbre puntiaguda</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/def/feature#PoblacionesYConstrucciones -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#PoblacionesYConstrucciones">
+        <rdfs:label xml:lang="es">PoblacionesYConstrucciones</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/def/feature#Provincia -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#Provincia">
+        <rdfs:label xml:lang="es">Provincia</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#UnidadAdministrativa"/>
+        <rdfs:comment xml:lang="es">03. Límite de Provincia</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/def/feature#PuertoDeMontana -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#PuertoDeMontana">
+        <rdfs:label xml:lang="es">PuertoDeMontana</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#PuntoAcotado"/>
+        <rdfs:comment xml:lang="es">05. Paso entre montañas.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/def/feature#PuntoAcotado -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#PuntoAcotado">
+        <rdfs:label xml:lang="es">PuntoAcotado</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#Relieve"/>
+        <rdfs:comment xml:lang="es">Se define como puntos acotados a aquellos puntos con cota que poseen una ubicación
+representativa del relieve y complementan la información facilitada por las curvas de nivel.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/def/feature#PuntoAcotadoGenerico -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#PuntoAcotadoGenerico">
+        <rdfs:label xml:lang="es">PuntoAcotadoGenerico</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#PuntoAcotado"/>
+        <rdfs:comment xml:lang="es">00. Tipología no definida</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/def/feature#PuntosDeControl -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#PuntosDeControl">
+        <rdfs:label xml:lang="es">PuntosDeControl</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/def/feature#Relieve -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#Relieve">
+        <rdfs:label xml:lang="es">Relive</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/def/feature#Transportes -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#Transportes">
         <rdfs:label xml:lang="es">Transportes</rdfs:label>
         <rdfs:subClassOf rdf:resource="&owl;Thing"/>
     </owl:Class>
     
 
 
-    <!-- http://geo.linkeddata.es/def/feature#OWLClass_9bd268ca_1d36_41f3_9dd5_27d09ea21ede -->
+    <!-- http://geo.linkeddata.es/def/feature#UnidadAdministrativa -->
 
-    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#OWLClass_9bd268ca_1d36_41f3_9dd5_27d09ea21ede">
-        <rdfs:label xml:lang="es">ZonasProtegidas</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#OWLClass_b689b83c_976b_49b0_aa85_c2beff714670"/>
-        <rdfs:comment xml:lang="es">Se capturan los espacios protegidos que según MAGRAMA se corresponden con las figuras de Parque Nacional, Parque Natural, Paisaje protegido, Parque Regional y Paraje Natural, así como los LICs y ZEPAs facilitados por la Red Natura 2000.</rdfs:comment>
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#UnidadAdministrativa">
+        <rdfs:label xml:lang="es">UnidadAdministrativa</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#UnidadesAdministrativasYZonasProtegidas"/>
+        <rdfs:comment xml:lang="es">Definen las áreas de cada municipio o condominio, provincia, comunidad autónoma y nación española.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://geo.linkeddata.es/def/feature#OWLClass_a5fb4aeb_bf1f_4040_8849_95bf85df695e -->
+    <!-- http://geo.linkeddata.es/def/feature#UnidadesAdministrativasYZonasProtegidas -->
 
-    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#OWLClass_a5fb4aeb_bf1f_4040_8849_95bf85df695e">
-        <rdfs:label xml:lang="es">ComunidadAutonoma</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#OWLClass_b7104a84_69af_446b_b44a_ef6aca39a714"/>
-        <rdfs:comment xml:lang="es">02. Límite de Comunidad Autónoma</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://geo.linkeddata.es/def/feature#OWLClass_b4841aa0_9a21_4830_a82b_2c4a090c8dd3 -->
-
-    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#OWLClass_b4841aa0_9a21_4830_a82b_2c4a090c8dd3">
-        <rdfs:label xml:lang="es">Balneario</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#OWLClass_c22c714d_01be_44d8_ab6c_9aa91f2df499"/>
-    </owl:Class>
-    
-
-
-    <!-- http://geo.linkeddata.es/def/feature#OWLClass_b689b83c_976b_49b0_aa85_c2beff714670 -->
-
-    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#OWLClass_b689b83c_976b_49b0_aa85_c2beff714670">
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#UnidadesAdministrativasYZonasProtegidas">
         <rdfs:label xml:lang="es">UnidadesAdministrativasYZonasProtegidas</rdfs:label>
         <rdfs:subClassOf rdf:resource="&owl;Thing"/>
         <rdfs:comment xml:lang="es">Grupo temático 01</rdfs:comment>
@@ -395,108 +481,22 @@ montaña.
     
 
 
-    <!-- http://geo.linkeddata.es/def/feature#OWLClass_b7104a84_69af_446b_b44a_ef6aca39a714 -->
+    <!-- http://geo.linkeddata.es/def/feature#Zepa -->
 
-    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#OWLClass_b7104a84_69af_446b_b44a_ef6aca39a714">
-        <rdfs:label xml:lang="es">UnidadAdministrativa</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#OWLClass_b689b83c_976b_49b0_aa85_c2beff714670"/>
-        <rdfs:comment xml:lang="es">Definen las áreas de cada municipio o condominio, provincia, comunidad autónoma y nación española.</rdfs:comment>
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#Zepa">
+        <rdfs:label xml:lang="es">Zepa</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#ZonasProtegidas"/>
+        <rdfs:comment xml:lang="es">04. Zona especial de protección de aves</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://geo.linkeddata.es/def/feature#OWLClass_bd63aa5c_3d11_45dd_99c6_cbe6c6412c55 -->
+    <!-- http://geo.linkeddata.es/def/feature#ZonasProtegidas -->
 
-    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#OWLClass_bd63aa5c_3d11_45dd_99c6_cbe6c6412c55">
-        <rdfs:label xml:lang="es">Collado</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#OWLClass_00b15bda_5901_4e89_b02e_c6a043adcb1e"/>
-        <rdfs:comment xml:lang="es">04. Paso o depresión suave por donde se puede atravesar con
-facilidad de un lado a otro una montaña o sierra.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://geo.linkeddata.es/def/feature#OWLClass_c22c714d_01be_44d8_ab6c_9aa91f2df499 -->
-
-    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#OWLClass_c22c714d_01be_44d8_ab6c_9aa91f2df499">
-        <rdfs:label xml:lang="es">AlojamientoYOcio</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://geo.linkeddata.es/def/feature#OWLClass_c7db3a93_e38c_47ee_a0b9_d63836ffbe65 -->
-
-    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#OWLClass_c7db3a93_e38c_47ee_a0b9_d63836ffbe65">
-        <rdfs:label xml:lang="es">EstacionInvernal</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#OWLClass_c22c714d_01be_44d8_ab6c_9aa91f2df499"/>
-    </owl:Class>
-    
-
-
-    <!-- http://geo.linkeddata.es/def/feature#OWLClass_e213592e_155f_42cd_81d4_65075b8a82ce -->
-
-    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#OWLClass_e213592e_155f_42cd_81d4_65075b8a82ce">
-        <rdfs:label xml:lang="es">CurvaDeNivelGenericaYBatimetrica</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#OWLClass_24996d7f_69e9_4888_b890_356fcf83b64d"/>
-        <rdfs:comment xml:lang="es">Curva de  nivel submarina con altitud cada 20 m</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://geo.linkeddata.es/def/feature#OWLClass_e2a3ccba_a802_4de4_8161_b0bc0e00f287 -->
-
-    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#OWLClass_e2a3ccba_a802_4de4_8161_b0bc0e00f287">
-        <rdfs:label xml:lang="es">OtrasZonasProtegidas</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#OWLClass_9bd268ca_1d36_41f3_9dd5_27d09ea21ede"/>
-        <rdfs:comment xml:lang="es">00. Delimitación de zona natural.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://geo.linkeddata.es/def/feature#OWLClass_e49f4b86_f567_48f1_a0ab_936197ee40a0 -->
-
-    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#OWLClass_e49f4b86_f567_48f1_a0ab_936197ee40a0">
-        <rdfs:label xml:lang="es">Pico</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#OWLClass_00b15bda_5901_4e89_b02e_c6a043adcb1e"/>
-        <rdfs:comment xml:lang="es">02. Montaña de cumbre puntiaguda</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://geo.linkeddata.es/def/feature#OWLClass_f381c13a_4f5f_4055_9696_99e6a0236c64 -->
-
-    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#OWLClass_f381c13a_4f5f_4055_9696_99e6a0236c64">
-        <rdfs:label xml:lang="es">PuntoAcotadoGenerico</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#OWLClass_00b15bda_5901_4e89_b02e_c6a043adcb1e"/>
-        <rdfs:comment xml:lang="es">00. Tipología no definida</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://geo.linkeddata.es/def/feature#OWLClass_f3ee6ad8_70f4_4660_9b5b_a6f5d4a1f070 -->
-
-    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#OWLClass_f3ee6ad8_70f4_4660_9b5b_a6f5d4a1f070">
-        <rdfs:label xml:lang="es">ParqueNatural</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#OWLClass_9bd268ca_1d36_41f3_9dd5_27d09ea21ede"/>
-        <rdfs:comment xml:lang="es">02. Delimitación de protección legal por otros organismos</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://geo.linkeddata.es/def/feature#OWLClass_f95bf566_9339_47c9_9a8a_ab7bbc420709 -->
-
-    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#OWLClass_f95bf566_9339_47c9_9a8a_ab7bbc420709">
-        <rdfs:label xml:lang="es">Albergue</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#OWLClass_c22c714d_01be_44d8_ab6c_9aa91f2df499"/>
-    </owl:Class>
-    
-
-
-    <!-- http://geo.linkeddata.es/def/feature#OWLClass_fd066a1b_4721_4ebc_8cb8_3d4e279b2621 -->
-
-    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#OWLClass_fd066a1b_4721_4ebc_8cb8_3d4e279b2621">
-        <rdfs:label xml:lang="es">ParadorNacional</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#OWLClass_c22c714d_01be_44d8_ab6c_9aa91f2df499"/>
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#ZonasProtegidas">
+        <rdfs:label xml:lang="es">ZonasProtegidas</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#UnidadesAdministrativasYZonasProtegidas"/>
+        <rdfs:comment xml:lang="es">Se capturan los espacios protegidos que según MAGRAMA se corresponden con las figuras de Parque Nacional, Parque Natural, Paisaje protegido, Parque Regional y Paraje Natural, así como los LICs y ZEPAs facilitados por la Red Natura 2000.</rdfs:comment>
     </owl:Class>
     
 
@@ -512,10 +512,10 @@ facilidad de un lado a otro una montaña o sierra.</rdfs:comment>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://geo.linkeddata.es/def/feature#OWLClass_28e0ce00_0185_4a19_a021_92086c5dfe41"/>
-            <rdf:Description rdf:about="http://geo.linkeddata.es/def/feature#OWLClass_7634b865_f02e_4690_9977_77a354f86324"/>
-            <rdf:Description rdf:about="http://geo.linkeddata.es/def/feature#OWLClass_e2a3ccba_a802_4de4_8161_b0bc0e00f287"/>
-            <rdf:Description rdf:about="http://geo.linkeddata.es/def/feature#OWLClass_f3ee6ad8_70f4_4660_9b5b_a6f5d4a1f070"/>
+            <rdf:Description rdf:about="http://geo.linkeddata.es/def/feature#LIC"/>
+            <rdf:Description rdf:about="http://geo.linkeddata.es/def/feature#OtrasZonasProtegidas"/>
+            <rdf:Description rdf:about="http://geo.linkeddata.es/def/feature#ParqueNacional"/>
+            <rdf:Description rdf:about="http://geo.linkeddata.es/def/feature#ParqueNatural"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>
