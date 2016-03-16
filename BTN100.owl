@@ -111,6 +111,26 @@ representativa del relieve y complementan la información facilitada por las cur
     
 
 
+    <!-- http://geo.linkeddata.es/def/feature#OWLClass_0faa9d03_ede3_44a3_be68_0618f24621b6 -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#OWLClass_0faa9d03_ede3_44a3_be68_0618f24621b6">
+        <rdfs:label xml:lang="es">CurvaDeNivelGenericaYAltimetrica</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#OWLClass_24996d7f_69e9_4888_b890_356fcf83b64d"/>
+        <rdfs:comment xml:lang="es">Curva de  nivel en superficie con altitud cada 20 m</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/def/feature#OWLClass_11112674_78ec_4299_ad3d_3edab9bae8ed -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#OWLClass_11112674_78ec_4299_ad3d_3edab9bae8ed">
+        <rdfs:label xml:lang="es">CurvaDeNivelInterpoladaYAltimetrica</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#OWLClass_24996d7f_69e9_4888_b890_356fcf83b64d"/>
+        <rdfs:comment xml:lang="es">Curva de nivel en superficie con altitud resultado de un algoritmo de cálculo y no de los datos del terreno</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://geo.linkeddata.es/def/feature#OWLClass_12188ce2_a705_499a_ab2d_ad2579288451 -->
 
     <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#OWLClass_12188ce2_a705_499a_ab2d_ad2579288451">
@@ -127,6 +147,16 @@ representativa del relieve y complementan la información facilitada por las cur
         <rdfs:label xml:lang="es">Nacion</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#OWLClass_b7104a84_69af_446b_b44a_ef6aca39a714"/>
         <rdfs:comment xml:lang="es">01. Límite de Nación</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/def/feature#OWLClass_24996d7f_69e9_4888_b890_356fcf83b64d -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#OWLClass_24996d7f_69e9_4888_b890_356fcf83b64d">
+        <rdfs:label xml:lang="es">CurvaDeNivel</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#OWLClass_5ce51c8c_71ca_472b_a1f1_a209de0edf21"/>
+        <rdfs:comment xml:lang="es">Se representan como curvas de nivel aquellas líneas que tienen la misma altitud sobre la superficie de referencia, siendo esta altitud un múltiplo de 40 o un múltiplo de 100 (para líneas interpoladas).</rdfs:comment>
     </owl:Class>
     
 
@@ -176,6 +206,16 @@ representativa del relieve y complementan la información facilitada por las cur
         <rdfs:label xml:lang="es">CiudadAutonoma</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#OWLClass_b7104a84_69af_446b_b44a_ef6aca39a714"/>
         <rdfs:comment xml:lang="es">06. Límite de Ciudad Autónoma.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/def/feature#OWLClass_3e3bc9fb_0c5b_49f5_96f2_11920c8b5fdc -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#OWLClass_3e3bc9fb_0c5b_49f5_96f2_11920c8b5fdc">
+        <rdfs:label xml:lang="es">CurvaDeNivelMaestraYBatimetrica</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#OWLClass_24996d7f_69e9_4888_b890_356fcf83b64d"/>
+        <rdfs:comment xml:lang="es">Curva de nivel submarina con altitud múltiplo de 100 m</rdfs:comment>
     </owl:Class>
     
 
@@ -258,6 +298,16 @@ montaña.
     
 
 
+    <!-- http://geo.linkeddata.es/def/feature#OWLClass_6d94efc8_8abd_4f8d_99e0_aa1b63bb74ed -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#OWLClass_6d94efc8_8abd_4f8d_99e0_aa1b63bb74ed">
+        <rdfs:label xml:lang="es">CurvaDeNivelDepresionGeometricaYAltimetrica</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#OWLClass_24996d7f_69e9_4888_b890_356fcf83b64d"/>
+        <rdfs:comment xml:lang="es">Curva de nivel en superficie que define una concavidad del terreno cada 20 m</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://geo.linkeddata.es/def/feature#OWLClass_7634b865_f02e_4690_9977_77a354f86324 -->
 
     <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#OWLClass_7634b865_f02e_4690_9977_77a354f86324">
@@ -273,6 +323,26 @@ montaña.
     <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#OWLClass_78bd6ed6_2ce1_4a0b_87b6_7bc86f78b76e">
         <rdfs:label xml:lang="es">Camping</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#OWLClass_c22c714d_01be_44d8_ab6c_9aa91f2df499"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/def/feature#OWLClass_7a988427_57af_420e_9270_6040c1fc33a8 -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#OWLClass_7a988427_57af_420e_9270_6040c1fc33a8">
+        <rdfs:label xml:lang="es">CurvaDeNivelDepresionMaestraYAltimetrica</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#OWLClass_24996d7f_69e9_4888_b890_356fcf83b64d"/>
+        <rdfs:comment xml:lang="es">Curva de nivel en superficie que define una concavidad del terreno cada 100 m</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/def/feature#OWLClass_82cb619c_613d_4e3e_9f14_eae67ec5dd28 -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#OWLClass_82cb619c_613d_4e3e_9f14_eae67ec5dd28">
+        <rdfs:label xml:lang="es">CurvaDeNivelMaestraYAltimetrica</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#OWLClass_24996d7f_69e9_4888_b890_356fcf83b64d"/>
+        <rdfs:comment xml:lang="es">Curva de nivel en superficie con altitud múltiplo de 100 m</rdfs:comment>
     </owl:Class>
     
 
@@ -359,6 +429,16 @@ facilidad de un lado a otro una montaña o sierra.</rdfs:comment>
     <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#OWLClass_c7db3a93_e38c_47ee_a0b9_d63836ffbe65">
         <rdfs:label xml:lang="es">EstacionInvernal</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#OWLClass_c22c714d_01be_44d8_ab6c_9aa91f2df499"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/def/feature#OWLClass_e213592e_155f_42cd_81d4_65075b8a82ce -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#OWLClass_e213592e_155f_42cd_81d4_65075b8a82ce">
+        <rdfs:label xml:lang="es">CurvaDeNivelGenericaYBatimetrica</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#OWLClass_24996d7f_69e9_4888_b890_356fcf83b64d"/>
+        <rdfs:comment xml:lang="es">Curva de  nivel submarina con altitud cada 20 m</rdfs:comment>
     </owl:Class>
     
 
