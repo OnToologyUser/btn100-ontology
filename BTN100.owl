@@ -74,8 +74,18 @@
     <owl:DatatypeProperty rdf:about="http://geo.linkeddata.es/def/feature#OWLDataProperty_7fe078a6_48e8_40c9_a50c_536e433fea96">
         <rdfs:label xml:lang="es">cota</rdfs:label>
         <rdfs:comment xml:lang="es">Altitud expresada en metros</rdfs:comment>
+        <rdfs:domain rdf:resource="http://geo.linkeddata.es/def/feature#CurvaDeNivel"/>
         <rdfs:domain rdf:resource="http://geo.linkeddata.es/def/feature#PuntoAcotado"/>
         <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://geo.linkeddata.es/def/feature#producto -->
+
+    <owl:DatatypeProperty rdf:about="http://geo.linkeddata.es/def/feature#producto">
+        <rdfs:domain rdf:resource="http://geo.linkeddata.es/def/feature#EntidadVirtualAccidenteOrografico"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
     
 
@@ -88,6 +98,306 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://geo.linkeddata.es/def/feature#AccidenteOrograficoComarcaRegionYLugarDeInteresNoDefinido -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#AccidenteOrograficoComarcaRegionYLugarDeInteresNoDefinido">
+        <rdfs:label xml:lang="es">AccidenteOrograficoComarcaRegionYLugarDeInteresNoDefinido</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#EntidadVirtualAccidenteOrografico"/>
+        <rdfs:comment xml:lang="es">Accidente Orográfico en comarca/region y lugar de interes no definido</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/def/feature#AccidenteOrograficoComarcaRegionYLugarDeInteresPrincipal -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#AccidenteOrograficoComarcaRegionYLugarDeInteresPrincipal">
+        <rdfs:label xml:lang="es">AccidenteOrograficoComarcaRegionYLugarDeInteresPrincipal</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#EntidadVirtualAccidenteOrografico"/>
+        <rdfs:comment xml:lang="es">Accidente Orográfico en comarca/region y lugar de interes principal</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/def/feature#AccidenteOrograficoComarcaRegionYLugarDeInteresSecundario -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#AccidenteOrograficoComarcaRegionYLugarDeInteresSecundario">
+        <rdfs:label xml:lang="es">AccidenteOrograficaTipologiaSinDefinirYLugarDeInteresSecundario</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#EntidadVirtualAccidenteOrografico"/>
+        <rdfs:comment xml:lang="es">Accidente Orográfico en comarca/region y lugar de interes secundario</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/def/feature#AccidenteOrograficoComarcaRegionYLugarDeInteresTerceario -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#AccidenteOrograficoComarcaRegionYLugarDeInteresTerceario">
+        <rdfs:label xml:lang="es">AccidenteOrograficoComarcaRegionYLugarDeInteresTerceario</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#EntidadVirtualAccidenteOrografico"/>
+        <rdfs:comment xml:lang="es">Accidente Orográfico en comarca/region y lugar de interes terceario</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/def/feature#AccidenteOrograficoComarcaRegionYLugarDeMenorInteres -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#AccidenteOrograficoComarcaRegionYLugarDeMenorInteres">
+        <rdfs:label xml:lang="es">AccidenteOrograficoComarcaRegionYLugarDeMenorInteres</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#EntidadVirtualAccidenteOrografico"/>
+        <rdfs:comment xml:lang="es">Accidente Orográfico en comarca/region y lugar de interes menor</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/def/feature#AccidenteOrograficoCordilleraYLugarDeInteresNoDefinido -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#AccidenteOrograficoCordilleraYLugarDeInteresNoDefinido">
+        <rdfs:label xml:lang="es">AccidenteOrograficoCordilleraYLugarDeInteresNoDefinido</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#EntidadVirtualAccidenteOrografico"/>
+        <rdfs:comment xml:lang="es">Accidente Orográfico en Cordillera y lugar de interes no definido</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/def/feature#AccidenteOrograficoCordilleraYLugarDeInteresPrincipal -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#AccidenteOrograficoCordilleraYLugarDeInteresPrincipal">
+        <rdfs:label xml:lang="es">AccidenteOrograficoCordilleraYLugarDeInteresPrincipal</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#EntidadVirtualAccidenteOrografico"/>
+        <rdfs:comment xml:lang="es">Accidente Orográfico en Cordillera y lugar de interes principal</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/def/feature#AccidenteOrograficoCordilleraYLugarDeInteresSecundario -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#AccidenteOrograficoCordilleraYLugarDeInteresSecundario">
+        <rdfs:label xml:lang="es">AccidenteOrograficaCordilleraYLugarDeInteresSecundario</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#EntidadVirtualAccidenteOrografico"/>
+        <rdfs:comment xml:lang="es">Accidente Orográfico en Cordillera y lugar de interes secundario</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/def/feature#AccidenteOrograficoCordilleraYLugarDeInteresTerceario -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#AccidenteOrograficoCordilleraYLugarDeInteresTerceario">
+        <rdfs:label xml:lang="es">AccidenteOrograficoCordilleraYLugarDeInteresTerceario</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#EntidadVirtualAccidenteOrografico"/>
+        <rdfs:comment xml:lang="es">Accidente Orográfico en Cordillera y lugar de interes terceario</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/def/feature#AccidenteOrograficoCordilleraYLugarDeMenorInteres -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#AccidenteOrograficoCordilleraYLugarDeMenorInteres">
+        <rdfs:label xml:lang="es">AccidenteOrograficoCordilleraYLugarDeMenorInteres</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#EntidadVirtualAccidenteOrografico"/>
+        <rdfs:comment xml:lang="es">Accidente Orográfico en Cordillera y lugar de interes menor</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/def/feature#AccidenteOrograficoMontañaYLugarDeInteresNoDefinido -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#AccidenteOrograficoMontañaYLugarDeInteresNoDefinido">
+        <rdfs:label xml:lang="es">AccidenteOrograficoMontañaYLugarDeInteresNoDefinido</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#EntidadVirtualAccidenteOrografico"/>
+        <rdfs:comment xml:lang="es">Accidente Orográfico en la montala y lugar de interes no definido</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/def/feature#AccidenteOrograficoMontañaYLugarDeInteresPrincipal -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#AccidenteOrograficoMontañaYLugarDeInteresPrincipal">
+        <rdfs:label xml:lang="es">AccidenteOrograficoMontañaYLugarDeInteresPrincipal</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#EntidadVirtualAccidenteOrografico"/>
+        <rdfs:comment xml:lang="es">Accidente Orográfico en la montala y lugar de interes principal</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/def/feature#AccidenteOrograficoMontañaYLugarDeInteresSecundario -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#AccidenteOrograficoMontañaYLugarDeInteresSecundario">
+        <rdfs:label xml:lang="es">AccidenteOrograficaTipologiaSinDefinirYLugarDeInteresSecundario</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#EntidadVirtualAccidenteOrografico"/>
+        <rdfs:comment xml:lang="es">Accidente Orográfico en la montala y lugar de interes secundario</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/def/feature#AccidenteOrograficoMontañaYLugarDeInteresTerceario -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#AccidenteOrograficoMontañaYLugarDeInteresTerceario">
+        <rdfs:label xml:lang="es">AccidenteOrograficoMontañaYLugarDeInteresTerceario</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#EntidadVirtualAccidenteOrografico"/>
+        <rdfs:comment xml:lang="es">Accidente Orográfico en la montala y lugar de interes terceario</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/def/feature#AccidenteOrograficoMontañaYLugarDeMenorInteres -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#AccidenteOrograficoMontañaYLugarDeMenorInteres">
+        <rdfs:label xml:lang="es">AccidenteOrograficoMontañaYLugarDeMenorInteres</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#EntidadVirtualAccidenteOrografico"/>
+        <rdfs:comment xml:lang="es">Accidente Orográfico en la montala y lugar de interes menor</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/def/feature#AccidenteOrograficoParajeYLugarDeInteresNoDefinido -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#AccidenteOrograficoParajeYLugarDeInteresNoDefinido">
+        <rdfs:label xml:lang="es">AccidenteOrograficoParajeYLugarDeInteresNoDefinido</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#EntidadVirtualAccidenteOrografico"/>
+        <rdfs:comment xml:lang="es">Accidente Orográfico en paraje y lugar de interes no definido</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/def/feature#AccidenteOrograficoParajeYLugarDeInteresPrincipal -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#AccidenteOrograficoParajeYLugarDeInteresPrincipal">
+        <rdfs:label xml:lang="es">AccidenteOrograficoParajeYLugarDeInteresPrincipal</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#EntidadVirtualAccidenteOrografico"/>
+        <rdfs:comment xml:lang="es">Accidente Orográfico en paraje y lugar de interes principal</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/def/feature#AccidenteOrograficoParajeYLugarDeInteresSecundario -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#AccidenteOrograficoParajeYLugarDeInteresSecundario">
+        <rdfs:label xml:lang="es">AccidenteOrograficaTipologiaSinDefinirYLugarDeInteresSecundario</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#EntidadVirtualAccidenteOrografico"/>
+        <rdfs:comment xml:lang="es">Accidente Orográfico en paraje y lugar de interes secundario</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/def/feature#AccidenteOrograficoParajeYLugarDeInteresTerceario -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#AccidenteOrograficoParajeYLugarDeInteresTerceario">
+        <rdfs:label xml:lang="es">AccidenteOrograficoParajeYLugarDeInteresTerceario</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#EntidadVirtualAccidenteOrografico"/>
+        <rdfs:comment xml:lang="es">Accidente Orográfico en paraje y lugar de interes terceario</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/def/feature#AccidenteOrograficoParajeYLugarDeMenorInteres -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#AccidenteOrograficoParajeYLugarDeMenorInteres">
+        <rdfs:label xml:lang="es">AccidenteOrograficoParajeYLugarDeMenorInteres</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#EntidadVirtualAccidenteOrografico"/>
+        <rdfs:comment xml:lang="es">Accidente Orográfico en paraje y lugar de interes menor</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/def/feature#AccidenteOrograficoSierraYLugarDeInteresNoDefinido -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#AccidenteOrograficoSierraYLugarDeInteresNoDefinido">
+        <rdfs:label xml:lang="es">AccidenteOrograficoSierraYLugarDeInteresNoDefinido</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#EntidadVirtualAccidenteOrografico"/>
+        <rdfs:comment xml:lang="es">Accidente Orográfico en la Sierra y lugar de interes no definido</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/def/feature#AccidenteOrograficoSierraYLugarDeInteresPrincipal -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#AccidenteOrograficoSierraYLugarDeInteresPrincipal">
+        <rdfs:label xml:lang="es">AccidenteOrograficoSierraYLugarDeInteresPrincipal</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#EntidadVirtualAccidenteOrografico"/>
+        <rdfs:comment xml:lang="es">Accidente Orográfico en la Sierra y lugar de interes principal</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/def/feature#AccidenteOrograficoSierraYLugarDeInteresSecundario -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#AccidenteOrograficoSierraYLugarDeInteresSecundario">
+        <rdfs:label xml:lang="es">AccidenteOrograficaTipologiaSinDefinirYLugarDeInteresSecundario</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#EntidadVirtualAccidenteOrografico"/>
+        <rdfs:comment xml:lang="es">Accidente Orográfico en la Sierra y lugar de interes secundario</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/def/feature#AccidenteOrograficoSierraYLugarDeInteresTerceario -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#AccidenteOrograficoSierraYLugarDeInteresTerceario">
+        <rdfs:label xml:lang="es">AccidenteOrograficoSierraYLugarDeInteresTerceario</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#EntidadVirtualAccidenteOrografico"/>
+        <rdfs:comment xml:lang="es">Accidente Orográfico en la Sierra y lugar de interes terceario</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/def/feature#AccidenteOrograficoSierraYLugarDeMenorInteres -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#AccidenteOrograficoSierraYLugarDeMenorInteres">
+        <rdfs:label xml:lang="es">AccidenteOrograficoSierraYLugarDeMenorInteres</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#EntidadVirtualAccidenteOrografico"/>
+        <rdfs:comment xml:lang="es">Accidente Orográfico en la Sierra y lugar de interes menor</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/def/feature#AccidenteOrograficoTipologiaSinDefinirYLugarDeInteresNoDefinido -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#AccidenteOrograficoTipologiaSinDefinirYLugarDeInteresNoDefinido">
+        <rdfs:label xml:lang="es">AccidenteOrograficoTipologiaSinDefinirYLugarDeInteresNoDefinido</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#EntidadVirtualAccidenteOrografico"/>
+        <rdfs:comment xml:lang="es">Accidente Orográfico con tipología sin definir y lugar de interes no definido</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/def/feature#AccidenteOrograficoTipologiaSinDefinirYLugarDeInteresPrincipal -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#AccidenteOrograficoTipologiaSinDefinirYLugarDeInteresPrincipal">
+        <rdfs:label xml:lang="es">AccidenteOrograficoTipologiaSinDefinirYLugarDeInteresPrincipal</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#EntidadVirtualAccidenteOrografico"/>
+        <rdfs:comment xml:lang="es">Accidente Orográfico con tipología sin definir y lugar de interes principal</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/def/feature#AccidenteOrograficoTipologiaSinDefinirYLugarDeInteresSecundario -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#AccidenteOrograficoTipologiaSinDefinirYLugarDeInteresSecundario">
+        <rdfs:label xml:lang="es">AccidenteOrograficaTipologiaSinDefinirYLugarDeInteresSecundario</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#EntidadVirtualAccidenteOrografico"/>
+        <rdfs:comment xml:lang="es">Accidente Orográfico con tipología sin definir y lugar de interes secundario</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/def/feature#AccidenteOrograficoTipologiaSinDefinirYLugarDeInteresTerceario -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#AccidenteOrograficoTipologiaSinDefinirYLugarDeInteresTerceario">
+        <rdfs:label xml:lang="es">AccidenteOrograficoTipologiaSinDefinirYLugarDeInteresTerceario</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#EntidadVirtualAccidenteOrografico"/>
+        <rdfs:comment xml:lang="es">Accidente Orográfico con tipología sin definir y lugar de interes terceario</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/def/feature#AccidenteOrograficoTipologiaSinDefinirYLugarDeMenorInteres -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#AccidenteOrograficoTipologiaSinDefinirYLugarDeMenorInteres">
+        <rdfs:label xml:lang="es">AccidenteOrograficoTipologiaSinDefinirYLugarDeMenorInteres</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#EntidadVirtualAccidenteOrografico"/>
+        <rdfs:comment xml:lang="es">Accidente Orográfico con tipología sin definir y lugar de interes menor</rdfs:comment>
+    </owl:Class>
     
 
 
@@ -278,6 +588,16 @@ facilidad de un lado a otro una montaña o sierra.</rdfs:comment>
     
 
 
+    <!-- http://geo.linkeddata.es/def/feature#EntidadVirtualAccidenteOrografico -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#EntidadVirtualAccidenteOrografico">
+        <rdfs:label xml:lang="es">EntidadVirtualAccidenteOrografico</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#Relieve"/>
+        <rdfs:comment xml:lang="es">Línea sobre la que iría colocado el texto del accidente orográfico que representa.</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://geo.linkeddata.es/def/feature#EstacionInvernal -->
 
     <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#EstacionInvernal">
@@ -311,6 +631,24 @@ facilidad de un lado a otro una montaña o sierra.</rdfs:comment>
         <rdfs:label xml:lang="es">LIC</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#ZonasProtegidas"/>
         <rdfs:comment xml:lang="es">03. Lugar de importancia comunitaria garantiza la conservación de la biodiversidad (fauna y flora)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/def/feature#MP200 -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#MP200">
+        <rdfs:label xml:lang="es">MP200</rdfs:label>
+        <rdfs:comment xml:lang="es">Mapa provincial del IGN</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/def/feature#MP200_y_SERIE_C -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#MP200_y_SERIE_C">
+        <rdfs:label xml:lang="es">MP200 y SERIE C</rdfs:label>
+        <rdfs:comment xml:lang="es">Mapa serie C del CEGET y Mapa provincial del IGN</rdfs:comment>
     </owl:Class>
     
 
@@ -448,6 +786,15 @@ representativa del relieve y complementan la información facilitada por las cur
     <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#Relieve">
         <rdfs:label xml:lang="es">Relive</rdfs:label>
         <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/def/feature#SERIE_C -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#SERIE_C">
+        <rdfs:label xml:lang="es">SERIE C</rdfs:label>
+        <rdfs:comment xml:lang="es">Mapa serie C del CEGET</rdfs:comment>
     </owl:Class>
     
 
