@@ -102,6 +102,16 @@
     
 
 
+    <!-- http://geo.linkeddata.es/def/feature#situacion -->
+
+    <owl:DatatypeProperty rdf:about="http://geo.linkeddata.es/def/feature#situacion">
+        <rdfs:label xml:lang="es">situacion</rdfs:label>
+        <rdfs:domain rdf:resource="http://geo.linkeddata.es/def/feature#CauseArtificial"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -444,6 +454,46 @@
     <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#Camping">
         <rdfs:label xml:lang="es">Camping</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#AlojamientoYOcio"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/def/feature#CanalMayor -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#CanalMayor">
+        <rdfs:label xml:lang="es">CanalMayor</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#CauseArtificial"/>
+        <rdfs:comment xml:lang="es">Canal de mayor importancia</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/def/feature#CanalMenor -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#CanalMenor">
+        <rdfs:label xml:lang="es">CanalMenor</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#CauseArtificial"/>
+        <rdfs:comment xml:lang="es">Canal de menor importancia (Acequias y drenajes)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/def/feature#CanalTrasvase -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#CanalTrasvase">
+        <rdfs:label xml:lang="es">CanalTrasvase</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#CauseArtificial"/>
+        <rdfs:comment xml:lang="es">Trasvase o aporte fluvial entre diferentes objetos hidrográficos.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/def/feature#CauseArtificial -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#CauseArtificial">
+        <rdfs:label xml:lang="es">CauseArtificial</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#Hidrografia"/>
+        <rdfs:comment xml:lang="es">Canalización artificial diseñada para transvasar agua.</rdfs:comment>
     </owl:Class>
     
 
