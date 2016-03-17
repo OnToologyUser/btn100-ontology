@@ -81,6 +81,18 @@
     
 
 
+    <!-- http://geo.linkeddata.es/def/feature#cod_rio -->
+
+    <owl:DatatypeProperty rdf:about="http://geo.linkeddata.es/def/feature#cod_rio">
+        <rdfs:label xml:lang="es">cod_rio</rdfs:label>
+        <rdfs:comment xml:lang="es">Codificación única para cada río de otros organismos</rdfs:comment>
+        <rdfs:domain rdf:resource="http://geo.linkeddata.es/def/feature#RioLineal"/>
+        <rdfs:domain rdf:resource="http://geo.linkeddata.es/def/feature#RioSuperficial"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://geo.linkeddata.es/def/feature#producto -->
 
     <owl:DatatypeProperty rdf:about="http://geo.linkeddata.es/def/feature#producto">
@@ -683,6 +695,15 @@ facilidad de un lado a otro una montaña o sierra.</rdfs:comment>
     
 
 
+    <!-- http://geo.linkeddata.es/def/feature#OtrosRiosSuperficiales -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#OtrosRiosSuperficiales">
+        <rdfs:label xml:lang="es">OtrosRiosSuperficiales</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#RioSuperficial"/>
+    </owl:Class>
+    
+
+
     <!-- http://geo.linkeddata.es/def/feature#ParadorNacional -->
 
     <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#ParadorNacional">
@@ -786,6 +807,61 @@ representativa del relieve y complementan la información facilitada por las cur
     <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#Relieve">
         <rdfs:label xml:lang="es">Relive</rdfs:label>
         <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/def/feature#RioLineal -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#RioLineal">
+        <rdfs:label xml:lang="es">RioLineal</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#Hidrografia"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/def/feature#RioSuperficial -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#RioSuperficial">
+        <rdfs:label xml:lang="es">RioSuperficial</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#Hidrografia"/>
+        <rdfs:comment xml:lang="es">Hace referencia a la corriente de agua permanente, más o menos caudalosa que desemboca en otra, en laguna, o en el mar y que tiene un ancho mayor de 20m durante más de 500m.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/def/feature#RioSuperficialDeInteresPrincipal -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#RioSuperficialDeInteresPrincipal">
+        <rdfs:label xml:lang="es">RioSuperficialDeInteresPrincipal</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#RioSuperficial"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/def/feature#RioSuperficialDeInteresSecundario -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#RioSuperficialDeInteresSecundario">
+        <rdfs:label xml:lang="es">RioSuperficialDeInteresSecundario</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#RioSuperficial"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/def/feature#RioSuperficialDeInteresTerceario -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#RioSuperficialDeInteresTerceario">
+        <rdfs:label xml:lang="es">RioSuperficialDeInteresTerceario</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#RioSuperficial"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/def/feature#RioSuperficialDeMenorInteres -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#RioSuperficialDeMenorInteres">
+        <rdfs:label xml:lang="es">RioSuperficialDeMenorInteres</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#RioSuperficial"/>
     </owl:Class>
     
 
