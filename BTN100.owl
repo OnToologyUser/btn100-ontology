@@ -96,8 +96,60 @@
     <!-- http://geo.linkeddata.es/def/feature#producto -->
 
     <owl:DatatypeProperty rdf:about="http://geo.linkeddata.es/def/feature#producto">
+        <rdfs:label xml:lang="es">producto</rdfs:label>
+        <rdfs:comment xml:lang="es">Producto de origen o fuente de información</rdfs:comment>
         <rdfs:domain rdf:resource="http://geo.linkeddata.es/def/feature#EntidadVirtualAccidenteOrografico"/>
-        <rdfs:range rdf:resource="&rdfs;Literal"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first>MP200</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first>MP200 y SERIE C</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&rdf;List"/>
+                                        <rdf:first>SERIE C</rdf:first>
+                                        <rdf:rest rdf:resource="&rdf;nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://geo.linkeddata.es/def/feature#regimen -->
+
+    <owl:DatatypeProperty rdf:about="http://geo.linkeddata.es/def/feature#regimen">
+        <rdfs:label xml:lang="es">regimen</rdfs:label>
+        <rdfs:comment xml:lang="es">Estacionalidad de las aguas en cauce</rdfs:comment>
+        <rdfs:domain rdf:resource="http://geo.linkeddata.es/def/feature#Laguna"/>
+        <rdfs:domain rdf:resource="http://geo.linkeddata.es/def/feature#RioLineal"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first>No permanente</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first>Permanente</rdf:first>
+                                <rdf:rest rdf:resource="&rdf;nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
     </owl:DatatypeProperty>
     
 
@@ -106,8 +158,31 @@
 
     <owl:DatatypeProperty rdf:about="http://geo.linkeddata.es/def/feature#situacion">
         <rdfs:label xml:lang="es">situacion</rdfs:label>
+        <rdfs:comment xml:lang="es">Disposición del tramo de vía sobre la superficie</rdfs:comment>
         <rdfs:domain rdf:resource="http://geo.linkeddata.es/def/feature#CauseArtificial"/>
-        <rdfs:range rdf:resource="&rdfs;Literal"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first>Elevada</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first>Subterránea</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&rdf;List"/>
+                                        <rdf:first>Superficial</rdf:first>
+                                        <rdf:rest rdf:resource="&rdf;nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
     </owl:DatatypeProperty>
     
 
@@ -697,20 +772,12 @@ facilidad de un lado a otro una montaña o sierra.</rdfs:comment>
     
 
 
-    <!-- http://geo.linkeddata.es/def/feature#MP200 -->
+    <!-- http://geo.linkeddata.es/def/feature#Laguna -->
 
-    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#MP200">
-        <rdfs:label xml:lang="es">MP200</rdfs:label>
-        <rdfs:comment xml:lang="es">Mapa provincial del IGN</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://geo.linkeddata.es/def/feature#MP200_y_SERIE_C -->
-
-    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#MP200_y_SERIE_C">
-        <rdfs:label xml:lang="es">MP200 y SERIE C</rdfs:label>
-        <rdfs:comment xml:lang="es">Mapa serie C del CEGET y Mapa provincial del IGN</rdfs:comment>
+    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#Laguna">
+        <rdfs:label xml:lang="es">Laguna</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#Hidrografia"/>
+        <rdfs:comment xml:lang="es">Depósito natural de agua, generalmente dulce.</rdfs:comment>
     </owl:Class>
     
 
@@ -912,15 +979,6 @@ representativa del relieve y complementan la información facilitada por las cur
     <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#RioSuperficialDeMenorInteres">
         <rdfs:label xml:lang="es">RioSuperficialDeMenorInteres</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/def/feature#RioSuperficial"/>
-    </owl:Class>
-    
-
-
-    <!-- http://geo.linkeddata.es/def/feature#SERIE_C -->
-
-    <owl:Class rdf:about="http://geo.linkeddata.es/def/feature#SERIE_C">
-        <rdfs:label xml:lang="es">SERIE C</rdfs:label>
-        <rdfs:comment xml:lang="es">Mapa serie C del CEGET</rdfs:comment>
     </owl:Class>
     
 
