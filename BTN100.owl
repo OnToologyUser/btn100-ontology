@@ -9,6 +9,7 @@
     <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
     <!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
+    <!ENTITY feature2 "ttp://geo.linkeddata.es/def/feature#" >
     <!ENTITY feature "http://geo.linkeddata.es/def/feature#" >
     <!ENTITY geosparql "http://www.opengis.net/ont/geosparql#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
@@ -20,14 +21,15 @@
      xml:base="http://www.semanticweb.org/lissete/ontologies/2016/2/Ontology1459008738901.owl"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:feature2="ttp://geo.linkeddata.es/def/feature#"
      xmlns:sf="http://www.opengis.net/ont/sf#"
-     xmlns:geosparql="http://www.opengis.net/ont/geosparql#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:geosparql="http://www.opengis.net/ont/geosparql#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:feature="http://geo.linkeddata.es/def/feature#"
      xmlns:gml="http://www.opengis.net/ont/gml#"
+     xmlns:feature="h&feature2;"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#">
     <owl:Ontology rdf:about="ttp://geo.linkeddata.es/def/feature#">
         <dc:date rdf:datatype="&xsd;date">2012-04-30</dc:date>
@@ -162,6 +164,7 @@
         <rdfs:subPropertyOf rdf:resource="&dc;date"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
         <rdfs:subPropertyOf rdf:resource="&terms;date"/>
+        <rdfs:domain rdf:resource="&geosparql;Feature"/>
     </owl:AnnotationProperty>
     <owl:AnnotationProperty rdf:about="&terms;coverage">
         <rdfs:label xml:lang="en">Coverage</rdfs:label>
@@ -562,6 +565,7 @@
         <rdfs:subPropertyOf rdf:resource="&dc;relation"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
         <rdfs:subPropertyOf rdf:resource="&terms;relation"/>
+        <rdfs:domain rdf:resource="&geosparql;Feature"/>
     </owl:AnnotationProperty>
     <owl:AnnotationProperty rdf:about="&skos;example">
         <rdfs:label xml:lang="en">example</rdfs:label>
@@ -585,8 +589,14 @@
         <terms:modified rdf:datatype="&xsd;date">2010-10-11</terms:modified>
         <rdfs:comment xml:lang="en">A name given to the resource.</rdfs:comment>
         <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#titleT-002"/>
+        <rdfs:domain rdf:resource="h&feature2;UnidadAdministrativa"/>
+        <rdfs:domain rdf:resource="h&feature2;ZonaProtegida"/>
         <rdfs:subPropertyOf rdf:resource="&dc;title"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <rdfs:domain rdf:resource="&feature2;Cerro"/>
+        <rdfs:domain rdf:resource="&feature2;Collado"/>
+        <rdfs:domain rdf:resource="&feature2;Pico"/>
+        <rdfs:domain rdf:resource="&feature2;PuertoDeMontanna"/>
     </owl:AnnotationProperty>
     <rdf:Description rdf:about="&terms;audience">
         <rdfs:label xml:lang="en">Audience</rdfs:label>
@@ -672,6 +682,7 @@
         <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#identifierT-001"/>
         <rdfs:subPropertyOf rdf:resource="&dc;identifier"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <rdfs:domain rdf:resource="&geosparql;Feature"/>
     </owl:AnnotationProperty>
     <owl:AnnotationProperty rdf:about="&skos;note">
         <rdfs:label xml:lang="en">note</rdfs:label>
@@ -1061,49 +1072,24 @@
     
 
 
-    <!-- http://geo.linkeddata.es/def/feature#OWLDataProperty_0eff3bd8_4c99_4b79_a37b_c5efdda85208 -->
-
-    <owl:DatatypeProperty rdf:about="&feature;OWLDataProperty_0eff3bd8_4c99_4b79_a37b_c5efdda85208">
-        <rdfs:label xml:lang="es">id_mod</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://geo.linkeddata.es/def/feature#OWLDataProperty_53c2dbd0_d840_4498_93a6_62d41fdbf28b -->
-
-    <owl:DatatypeProperty rdf:about="&feature;OWLDataProperty_53c2dbd0_d840_4498_93a6_62d41fdbf28b">
-        <rdfs:label xml:lang="es">id_bd</rdfs:label>
-        <dc:format xml:lang="es">Identificador de la BD del objeto.</dc:format>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://geo.linkeddata.es/def/feature#OWLDataProperty_7fe078a6_48e8_40c9_a50c_536e433fea96 -->
 
-    <owl:DatatypeProperty rdf:about="&feature;OWLDataProperty_7fe078a6_48e8_40c9_a50c_536e433fea96">
+    <owl:DatatypeProperty rdf:about="h&feature2;OWLDataProperty_7fe078a6_48e8_40c9_a50c_536e433fea96">
         <rdfs:label xml:lang="es">cota</rdfs:label>
         <rdfs:comment xml:lang="es">Altitud expresada en metros</rdfs:comment>
         <rdfs:range rdf:resource="&xsd;int"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://geo.linkeddata.es/def/feature#cod_rio -->
-
-    <owl:DatatypeProperty rdf:about="&feature;cod_rio">
-        <rdfs:label xml:lang="es">cod_rio</rdfs:label>
-        <rdfs:comment xml:lang="es">Codificación única para cada río de otros organismos</rdfs:comment>
-        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="&feature2;CurvaDeNivel"/>
+        <rdfs:domain rdf:resource="&feature2;PuntoAcotado"/>
     </owl:DatatypeProperty>
     
 
 
     <!-- http://geo.linkeddata.es/def/feature#codificacionOficial -->
 
-    <owl:DatatypeProperty rdf:about="&feature;codificacionOficial">
+    <owl:DatatypeProperty rdf:about="h&feature2;codificacionOficial">
         <rdfs:label xml:lang="es">codificacionOficial</rdfs:label>
         <rdfs:comment xml:lang="es">refleja el valor del código INE en los municipios, y códigos arbitrarios consensuados para el resto de entidades</rdfs:comment>
-        <rdfs:domain rdf:resource="&feature;UnidadAdministrativa"/>
+        <rdfs:domain rdf:resource="h&feature2;UnidadAdministrativa"/>
         <rdfs:range>
             <rdfs:Datatype>
                 <owl:onDatatype rdf:resource="&xsd;string"/>
@@ -1120,41 +1106,40 @@
 
     <!-- http://geo.linkeddata.es/def/feature#grupoTematico -->
 
-    <owl:DatatypeProperty rdf:about="&feature;grupoTematico">
+    <owl:DatatypeProperty rdf:about="h&feature2;grupoTematico">
         <rdfs:label xml:lang="es">grupoTematico</rdfs:label>
-        <rdfs:domain rdf:resource="&feature;UnidadAdministrativa"/>
-        <rdfs:domain rdf:resource="&feature;ZonaProtegida"/>
+        <rdfs:domain rdf:resource="h&feature2;UnidadAdministrativa"/>
+        <rdfs:domain rdf:resource="h&feature2;ZonaProtegida"/>
         <rdfs:range>
             <rdfs:Datatype>
                 <owl:oneOf>
                     <rdf:Description>
                         <rdf:type rdf:resource="&rdf;List"/>
-                        <rdf:first>Conducciones y energía</rdf:first>
+                        <rdf:first rdf:datatype="&xsd;string">Conducciones y energía</rdf:first>
                         <rdf:rest>
                             <rdf:Description>
                                 <rdf:type rdf:resource="&rdf;List"/>
-                                <rdf:first>Hidrografía</rdf:first>
+                                <rdf:first rdf:datatype="&xsd;string">Hidrografía</rdf:first>
                                 <rdf:rest>
                                     <rdf:Description>
                                         <rdf:type rdf:resource="&rdf;List"/>
-                                        <rdf:first>Poblaciones y construcciones</rdf:first>
+                                        <rdf:first rdf:datatype="&xsd;string">Poblaciones y construcciones</rdf:first>
                                         <rdf:rest>
                                             <rdf:Description>
                                                 <rdf:type rdf:resource="&rdf;List"/>
-                                                <rdf:first>Puntos de Contro,</rdf:first>
+                                                <rdf:first rdf:datatype="&xsd;string">Puntos de Control</rdf:first>
                                                 <rdf:rest>
                                                     <rdf:Description>
                                                         <rdf:type rdf:resource="&rdf;List"/>
-                                                        <rdf:first>Relieve</rdf:first>
+                                                        <rdf:first rdf:datatype="&xsd;string">Relieve</rdf:first>
                                                         <rdf:rest>
                                                             <rdf:Description>
                                                                 <rdf:type rdf:resource="&rdf;List"/>
-                                                                <rdf:first>Transportes</rdf:first>
+                                                                <rdf:first rdf:datatype="&xsd;string">Transportes</rdf:first>
                                                                 <rdf:rest>
                                                                     <rdf:Description>
                                                                         <rdf:type rdf:resource="&rdf;List"/>
-                                                                        <rdf:first>Unidades administrativas
-y zonas protegidas</rdf:first>
+                                                                        <rdf:first rdf:datatype="&xsd;string">Unidades administrativas y zonas protegidas</rdf:first>
                                                                         <rdf:rest rdf:resource="&rdf;nil"/>
                                                                     </rdf:Description>
                                                                 </rdf:rest>
@@ -1178,23 +1163,24 @@ y zonas protegidas</rdf:first>
 
     <!-- http://geo.linkeddata.es/def/feature#producto -->
 
-    <owl:DatatypeProperty rdf:about="&feature;producto">
+    <owl:DatatypeProperty rdf:about="h&feature2;producto">
         <rdfs:label xml:lang="es">producto</rdfs:label>
         <rdfs:comment xml:lang="es">Producto de origen o fuente de información</rdfs:comment>
+        <rdfs:domain rdf:resource="&feature2;EntidadVirtualDeAccidenteOrografico"/>
         <rdfs:range>
             <rdfs:Datatype>
                 <owl:oneOf>
                     <rdf:Description>
                         <rdf:type rdf:resource="&rdf;List"/>
-                        <rdf:first>MP200</rdf:first>
+                        <rdf:first rdf:datatype="&xsd;string">MP200</rdf:first>
                         <rdf:rest>
                             <rdf:Description>
                                 <rdf:type rdf:resource="&rdf;List"/>
-                                <rdf:first>MP200 y SERIE C</rdf:first>
+                                <rdf:first rdf:datatype="&xsd;string">MP200 y SERIE C</rdf:first>
                                 <rdf:rest>
                                     <rdf:Description>
                                         <rdf:type rdf:resource="&rdf;List"/>
-                                        <rdf:first>SERIE C</rdf:first>
+                                        <rdf:first rdf:datatype="&xsd;string">SERIE C</rdf:first>
                                         <rdf:rest rdf:resource="&rdf;nil"/>
                                     </rdf:Description>
                                 </rdf:rest>
@@ -1210,7 +1196,7 @@ y zonas protegidas</rdf:first>
 
     <!-- http://geo.linkeddata.es/def/feature#regimen -->
 
-    <owl:DatatypeProperty rdf:about="&feature;regimen">
+    <owl:DatatypeProperty rdf:about="h&feature2;regimen">
         <rdfs:label xml:lang="es">regimen</rdfs:label>
         <rdfs:comment xml:lang="es">Estacionalidad de las aguas en cauce</rdfs:comment>
         <rdfs:range>
@@ -1218,11 +1204,11 @@ y zonas protegidas</rdf:first>
                 <owl:oneOf>
                     <rdf:Description>
                         <rdf:type rdf:resource="&rdf;List"/>
-                        <rdf:first>No permanente</rdf:first>
+                        <rdf:first rdf:datatype="&xsd;string">No permanente</rdf:first>
                         <rdf:rest>
                             <rdf:Description>
                                 <rdf:type rdf:resource="&rdf;List"/>
-                                <rdf:first>Permanente</rdf:first>
+                                <rdf:first rdf:datatype="&xsd;string">Permanente</rdf:first>
                                 <rdf:rest rdf:resource="&rdf;nil"/>
                             </rdf:Description>
                         </rdf:rest>
@@ -1236,7 +1222,7 @@ y zonas protegidas</rdf:first>
 
     <!-- http://geo.linkeddata.es/def/feature#situacion -->
 
-    <owl:DatatypeProperty rdf:about="&feature;situacion">
+    <owl:DatatypeProperty rdf:about="h&feature2;situacion">
         <rdfs:label xml:lang="es">situacion</rdfs:label>
         <rdfs:comment xml:lang="es">Disposición del tramo de vía sobre la superficie</rdfs:comment>
         <rdfs:range>
@@ -1244,15 +1230,15 @@ y zonas protegidas</rdf:first>
                 <owl:oneOf>
                     <rdf:Description>
                         <rdf:type rdf:resource="&rdf;List"/>
-                        <rdf:first>Elevada</rdf:first>
+                        <rdf:first rdf:datatype="&xsd;string">elevada</rdf:first>
                         <rdf:rest>
                             <rdf:Description>
                                 <rdf:type rdf:resource="&rdf;List"/>
-                                <rdf:first>Subterránea</rdf:first>
+                                <rdf:first rdf:datatype="&xsd;string">subterránea</rdf:first>
                                 <rdf:rest>
                                     <rdf:Description>
                                         <rdf:type rdf:resource="&rdf;List"/>
-                                        <rdf:first>Superficial</rdf:first>
+                                        <rdf:first rdf:datatype="&xsd;string">superficial</rdf:first>
                                         <rdf:rest rdf:resource="&rdf;nil"/>
                                     </rdf:Description>
                                 </rdf:rest>
@@ -1268,24 +1254,24 @@ y zonas protegidas</rdf:first>
 
     <!-- http://geo.linkeddata.es/def/feature#tipoDeGeometria -->
 
-    <owl:DatatypeProperty rdf:about="&feature;tipoDeGeometria">
+    <owl:DatatypeProperty rdf:about="h&feature2;tipoDeGeometria">
         <rdfs:label xml:lang="es">tipoDeGeometria</rdfs:label>
-        <rdfs:domain rdf:resource="&feature;UnidadAdministrativa"/>
-        <rdfs:domain rdf:resource="&feature;ZonaProtegida"/>
+        <rdfs:domain rdf:resource="h&feature2;UnidadAdministrativa"/>
+        <rdfs:domain rdf:resource="h&feature2;ZonaProtegida"/>
         <rdfs:range>
             <rdfs:Datatype>
                 <owl:oneOf>
                     <rdf:Description>
                         <rdf:type rdf:resource="&rdf;List"/>
-                        <rdf:first>Lineal</rdf:first>
+                        <rdf:first rdf:datatype="&xsd;string">Lineal</rdf:first>
                         <rdf:rest>
                             <rdf:Description>
                                 <rdf:type rdf:resource="&rdf;List"/>
-                                <rdf:first>Puntual</rdf:first>
+                                <rdf:first rdf:datatype="&xsd;string">Puntual</rdf:first>
                                 <rdf:rest>
                                     <rdf:Description>
                                         <rdf:type rdf:resource="&rdf;List"/>
-                                        <rdf:first>Superficial</rdf:first>
+                                        <rdf:first rdf:datatype="&xsd;string">Superficial</rdf:first>
                                         <rdf:rest rdf:resource="&rdf;nil"/>
                                     </rdf:Description>
                                 </rdf:rest>
@@ -1308,6 +1294,7 @@ y zonas protegidas</rdf:first>
         <rdfs:comment xml:lang="en">Date of creation of the resource.</rdfs:comment>
         <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#created-003"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <rdfs:domain rdf:resource="&geosparql;Feature"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
     
@@ -1323,6 +1310,7 @@ y zonas protegidas</rdf:first>
         <terms:description xml:lang="en">Recommended best practice is to identify the resource by means of a string conforming to a formal identification system. </terms:description>
         <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#identifierT-001"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <rdfs:domain rdf:resource="&geosparql;Feature"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
     
@@ -1338,6 +1326,7 @@ y zonas protegidas</rdf:first>
         <skos:note xml:lang="en">This term is intended to be used with non-literal values as defined in the DCMI Abstract Model (http://dublincore.org/documents/abstract-model/).  As of December 2007, the DCMI Usage Board is seeking a way to express this intention with a formal range declaration.</skos:note>
         <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#replaces-003"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <rdfs:domain rdf:resource="&geosparql;Feature"/>
     </owl:DatatypeProperty>
     
 
@@ -1350,8 +1339,15 @@ y zonas protegidas</rdf:first>
         <terms:modified rdf:datatype="&xsd;date">2010-10-11</terms:modified>
         <rdfs:comment xml:lang="en">A name given to the resource.</rdfs:comment>
         <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#titleT-002"/>
+        <rdfs:domain rdf:resource="h&feature2;UnidadAdministrativa"/>
+        <rdfs:domain rdf:resource="h&feature2;ZonaProtegida"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
+        <rdfs:domain rdf:resource="&feature2;Cerro"/>
+        <rdfs:domain rdf:resource="&feature2;Collado"/>
+        <rdfs:domain rdf:resource="&feature2;EntidadVirtualDeAccidenteOrografico"/>
+        <rdfs:domain rdf:resource="&feature2;Pico"/>
+        <rdfs:domain rdf:resource="&feature2;PuertoDeMontanna"/>
     </owl:DatatypeProperty>
     
 
@@ -1433,6 +1429,96 @@ y zonas protegidas</rdf:first>
     
 
 
+    <!-- ttp://geo.linkeddata.es/def/feature#categoria -->
+
+    <owl:DatatypeProperty rdf:about="&feature2;categoria">
+        <rdfs:label xml:lang="es">categoria</rdfs:label>
+        <rdfs:domain rdf:resource="&feature2;CurvaDeNivel"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first rdf:datatype="&xsd;string">depresion genérica (Curva que define una concavidad del terreno cada 20 m)</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first rdf:datatype="&xsd;string">depresion maestra (Curva que define una concavidad del terreno cada 100 m)</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&rdf;List"/>
+                                        <rdf:first rdf:datatype="&xsd;string">genérica (Curva de nivel con altitud cada 20 m)</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                <rdf:first rdf:datatype="&xsd;string">interpolada (Curva con altitud resultado de un algoritmo de cálculo y no de los
+datos del terreno)</rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="&rdf;List"/>
+                                                        <rdf:first rdf:datatype="&xsd;string">maestra (Curva de nivel con altitud múltiplo de 100 m)</rdf:first>
+                                                        <rdf:rest rdf:resource="&rdf;nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- ttp://geo.linkeddata.es/def/feature#situadoEnLugarDeInteres -->
+
+    <owl:DatatypeProperty rdf:about="&feature2;situadoEnLugarDeInteres">
+        <rdfs:label xml:lang="es">situadoEnLugarDeInteres</rdfs:label>
+        <rdfs:comment xml:lang="es">Tipo de lugar de interes donde está situada la entidad virtual del accidente orogŕafico</rdfs:comment>
+        <rdfs:domain rdf:resource="&feature2;EntidadVirtualDeAccidenteOrografico"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first rdf:datatype="&xsd;string">Interés no definido</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first rdf:datatype="&xsd;string">Lugar de interés principal</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&rdf;List"/>
+                                        <rdf:first rdf:datatype="&xsd;string">Lugar de interés secundario</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                <rdf:first rdf:datatype="&xsd;string">Lugar de interés terciario</rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="&rdf;List"/>
+                                                        <rdf:first rdf:datatype="&xsd;string">Lugar de menor interés</rdf:first>
+                                                        <rdf:rest rdf:resource="&rdf;nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -1446,66 +1532,48 @@ y zonas protegidas</rdf:first>
 
     <!-- http://geo.linkeddata.es/def/feature#LIC -->
 
-    <owl:Class rdf:about="&feature;LIC">
+    <owl:Class rdf:about="h&feature2;LIC">
         <rdfs:label xml:lang="es">LIC</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&feature;ZonaProtegida"/>
-        <rdfs:comment xml:lang="es">03. Lugar de importancia comunitaria garantiza la conservación de la biodiversidad (fauna y flora)</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="h&feature2;ZonaProtegida"/>
+        <rdfs:comment xml:lang="es"> Lugar de importancia comunitaria garantiza la conservación de la biodiversidad (fauna y flora)</rdfs:comment>
     </owl:Class>
     
 
 
     <!-- http://geo.linkeddata.es/def/feature#ParqueNacional -->
 
-    <owl:Class rdf:about="&feature;ParqueNacional">
+    <owl:Class rdf:about="h&feature2;ParqueNacional">
         <rdfs:label xml:lang="es">ParqueNacional</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&feature;ZonaProtegida"/>
-        <rdfs:comment xml:lang="es">01. Delimitación de protección legal por el estado</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="h&feature2;ZonaProtegida"/>
+        <rdfs:comment xml:lang="es">Delimitación de protección legal por el estado</rdfs:comment>
     </owl:Class>
     
 
 
     <!-- http://geo.linkeddata.es/def/feature#ParqueNatural -->
 
-    <owl:Class rdf:about="&feature;ParqueNatural">
+    <owl:Class rdf:about="h&feature2;ParqueNatural">
         <rdfs:label xml:lang="es">ParqueNatural</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&feature;ZonaProtegida"/>
-        <rdfs:comment xml:lang="es">02. Delimitación de protección legal por otros organismos</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://geo.linkeddata.es/def/feature#PuntosDeControl -->
-
-    <owl:Class rdf:about="&feature;PuntosDeControl">
-        <rdfs:label xml:lang="es">PuntosDeControl</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&geosparql;Feature"/>
-    </owl:Class>
-    
-
-
-    <!-- http://geo.linkeddata.es/def/feature#Transportes -->
-
-    <owl:Class rdf:about="&feature;Transportes">
-        <rdfs:label xml:lang="es">Transportes</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&geosparql;Feature"/>
+        <rdfs:subClassOf rdf:resource="h&feature2;ZonaProtegida"/>
+        <rdfs:comment xml:lang="es">Delimitación de protección legal por otros organismos</rdfs:comment>
     </owl:Class>
     
 
 
     <!-- http://geo.linkeddata.es/def/feature#UnidadAdministrativa -->
 
-    <owl:Class rdf:about="&feature;UnidadAdministrativa">
+    <owl:Class rdf:about="h&feature2;UnidadAdministrativa">
         <rdfs:label xml:lang="es">Unidad Administrativa</rdfs:label>
         <rdfs:subClassOf rdf:resource="&geosparql;Feature"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&feature;tipoDeGeometria"/>
+                <owl:onProperty rdf:resource="h&feature2;tipoDeGeometria"/>
                 <owl:hasValue>Superficial</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&feature;grupoTematico"/>
+                <owl:onProperty rdf:resource="h&feature2;grupoTematico"/>
                 <owl:hasValue>Unidades administrativas y zonas protegidas</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1516,9 +1584,9 @@ y zonas protegidas</rdf:first>
 
     <!-- http://geo.linkeddata.es/def/feature#UnidadAdministrativaDeCiudadAutonoma -->
 
-    <owl:Class rdf:about="&feature;UnidadAdministrativaDeCiudadAutonoma">
+    <owl:Class rdf:about="h&feature2;UnidadAdministrativaDeCiudadAutonoma">
         <rdfs:label xml:lang="es">Unidad Administrativa de Ciudad Autonoma</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&feature;UnidadAdministrativa"/>
+        <rdfs:subClassOf rdf:resource="h&feature2;UnidadAdministrativa"/>
         <rdfs:comment xml:lang="es">Unidad administrativa de Ciudad Autónoma.</rdfs:comment>
     </owl:Class>
     
@@ -1526,9 +1594,9 @@ y zonas protegidas</rdf:first>
 
     <!-- http://geo.linkeddata.es/def/feature#UnidadAdministrativaDeComunidadAutonoma -->
 
-    <owl:Class rdf:about="&feature;UnidadAdministrativaDeComunidadAutonoma">
+    <owl:Class rdf:about="h&feature2;UnidadAdministrativaDeComunidadAutonoma">
         <rdfs:label xml:lang="es">Unidad Administrativa de Comunidad Autonoma</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&feature;UnidadAdministrativa"/>
+        <rdfs:subClassOf rdf:resource="h&feature2;UnidadAdministrativa"/>
         <rdfs:comment xml:lang="es">Unidad administrativa de Comunidad Autónoma</rdfs:comment>
     </owl:Class>
     
@@ -1536,9 +1604,9 @@ y zonas protegidas</rdf:first>
 
     <!-- http://geo.linkeddata.es/def/feature#UnidadAdministrativaDeComunidadJurisdiccional -->
 
-    <owl:Class rdf:about="&feature;UnidadAdministrativaDeComunidadJurisdiccional">
+    <owl:Class rdf:about="h&feature2;UnidadAdministrativaDeComunidadJurisdiccional">
         <rdfs:label xml:lang="es">Unidad Administrativa de Comunidad Jurisdiccional</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&feature;UnidadAdministrativa"/>
+        <rdfs:subClassOf rdf:resource="h&feature2;UnidadAdministrativa"/>
         <rdfs:comment xml:lang="es">Unidad administrativa de comunidad jurisdiccional</rdfs:comment>
     </owl:Class>
     
@@ -1546,9 +1614,9 @@ y zonas protegidas</rdf:first>
 
     <!-- http://geo.linkeddata.es/def/feature#UnidadAdministrativaDeMunicipio -->
 
-    <owl:Class rdf:about="&feature;UnidadAdministrativaDeMunicipio">
+    <owl:Class rdf:about="h&feature2;UnidadAdministrativaDeMunicipio">
         <rdfs:label xml:lang="es">Unidad Administrativa de Municipio</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&feature;UnidadAdministrativa"/>
+        <rdfs:subClassOf rdf:resource="h&feature2;UnidadAdministrativa"/>
         <rdfs:comment xml:lang="es">Unidad administrativa de Municipio</rdfs:comment>
     </owl:Class>
     
@@ -1556,9 +1624,9 @@ y zonas protegidas</rdf:first>
 
     <!-- http://geo.linkeddata.es/def/feature#UnidadAdministrativaDeNacion -->
 
-    <owl:Class rdf:about="&feature;UnidadAdministrativaDeNacion">
+    <owl:Class rdf:about="h&feature2;UnidadAdministrativaDeNacion">
         <rdfs:label xml:lang="es">Unidad Administrativa de Nacion</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&feature;UnidadAdministrativa"/>
+        <rdfs:subClassOf rdf:resource="h&feature2;UnidadAdministrativa"/>
         <rdfs:comment xml:lang="es">Unidad administrativa de Nación</rdfs:comment>
     </owl:Class>
     
@@ -1566,9 +1634,9 @@ y zonas protegidas</rdf:first>
 
     <!-- http://geo.linkeddata.es/def/feature#UnidadAdministrativaDeProvincia -->
 
-    <owl:Class rdf:about="&feature;UnidadAdministrativaDeProvincia">
+    <owl:Class rdf:about="h&feature2;UnidadAdministrativaDeProvincia">
         <rdfs:label xml:lang="es">Unidad Administrativa de Provincia</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&feature;UnidadAdministrativa"/>
+        <rdfs:subClassOf rdf:resource="h&feature2;UnidadAdministrativa"/>
         <rdfs:comment xml:lang="es">Unidad administrativa de Provincia</rdfs:comment>
     </owl:Class>
     
@@ -1576,28 +1644,28 @@ y zonas protegidas</rdf:first>
 
     <!-- http://geo.linkeddata.es/def/feature#Zepa -->
 
-    <owl:Class rdf:about="&feature;Zepa">
+    <owl:Class rdf:about="h&feature2;Zepa">
         <rdfs:label xml:lang="es">Zepa</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&feature;ZonaProtegida"/>
-        <rdfs:comment xml:lang="es">04. Zona especial de protección de aves</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="h&feature2;ZonaProtegida"/>
+        <rdfs:comment xml:lang="es">Zona especial de protección de aves.</rdfs:comment>
     </owl:Class>
     
 
 
     <!-- http://geo.linkeddata.es/def/feature#ZonaProtegida -->
 
-    <owl:Class rdf:about="&feature;ZonaProtegida">
+    <owl:Class rdf:about="h&feature2;ZonaProtegida">
         <rdfs:label xml:lang="es">Zona Protegida</rdfs:label>
         <rdfs:subClassOf rdf:resource="&geosparql;Feature"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&feature;grupoTematico"/>
+                <owl:onProperty rdf:resource="h&feature2;grupoTematico"/>
                 <owl:hasValue>Unidades administrativas y zonas protegidas</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&feature;tipoDeGeometria"/>
+                <owl:onProperty rdf:resource="h&feature2;tipoDeGeometria"/>
                 <owl:hasValue>Superficial</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -2541,6 +2609,205 @@ A TIN (triangulated irregular network) is a PolyhedralSurface consisting only of
         <skos:definition xml:lang="en">An ordered collection of concepts, where both the grouping and the ordering are meaningful.</skos:definition>
         <skos:scopeNote xml:lang="en">Ordered collections can be used where you would like a set of concepts to be displayed in a specific order, and optionally under a &#39;node label&#39;.</skos:scopeNote>
         <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+    </owl:Class>
+    
+
+
+    <!-- ttp://geo.linkeddata.es/def/feature#Cerro -->
+
+    <owl:Class rdf:about="&feature2;Cerro">
+        <rdfs:label xml:lang="es">Cerro</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&feature2;PuntoAcotado"/>
+        <rdfs:comment xml:lang="es">Elevación de tierra aislada y de menor altura que el monte o la montaña.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- ttp://geo.linkeddata.es/def/feature#Collado -->
+
+    <owl:Class rdf:about="&feature2;Collado">
+        <rdfs:label xml:lang="es">Collado</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&feature2;PuntoAcotado"/>
+        <rdfs:comment xml:lang="es">Paso o depresión suave por donde se puede atravesar con facilidad de un lado a otro una montaña o sierra.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- ttp://geo.linkeddata.es/def/feature#Comarca -->
+
+    <owl:Class rdf:about="&feature2;Comarca">
+        <rdfs:label xml:lang="es">Comarca</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&feature2;EntidadVirtualDeAccidenteOrografico"/>
+        <rdfs:comment xml:lang="es">Delimitación que contiene conjunto de municipios oficiales</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- ttp://geo.linkeddata.es/def/feature#Cordillera -->
+
+    <owl:Class rdf:about="&feature2;Cordillera">
+        <rdfs:label xml:lang="es">Cordillera</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&feature2;EntidadVirtualDeAccidenteOrografico"/>
+        <rdfs:comment xml:lang="es">Serie de montañas enlazadas entre sí.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- ttp://geo.linkeddata.es/def/feature#CotaMunicipal -->
+
+    <owl:Class rdf:about="&feature2;CotaMunicipal">
+        <rdfs:label xml:lang="es">CotaMunicipal</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&feature2;PuntoAcotado"/>
+    </owl:Class>
+    
+
+
+    <!-- ttp://geo.linkeddata.es/def/feature#CurvaDeNivel -->
+
+    <owl:Class rdf:about="&feature2;CurvaDeNivel">
+        <rdfs:label xml:lang="es">CurvaDeNivel</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&feature2;Relieve"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="h&feature2;tipoDeGeometria"/>
+                <owl:hasValue>Lineal</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="es">Se representan como curvas de nivel aquellas líneas que tienen la misma altitud sobre la superficie de referencia, siendo esta altitud un múltiplo de 40 o un múltiplo de 100 (para líneas interpoladas).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- ttp://geo.linkeddata.es/def/feature#CurvaDeNivelAltimetrica -->
+
+    <owl:Class rdf:about="&feature2;CurvaDeNivelAltimetrica">
+        <rdfs:label xml:lang="es">CurvaDeNivelAltimetrica</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&feature2;CurvaDeNivel"/>
+    </owl:Class>
+    
+
+
+    <!-- ttp://geo.linkeddata.es/def/feature#CurvaDeNivelBatimetrica -->
+
+    <owl:Class rdf:about="&feature2;CurvaDeNivelBatimetrica">
+        <rdfs:label xml:lang="es">CurvaDeNivelBatimetrica</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&feature2;CurvaDeNivel"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&feature2;categoria"/>
+                        <owl:hasValue rdf:datatype="&xsd;string">genérica (Curva de nivel con altitud cada 20 m)</owl:hasValue>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&feature2;categoria"/>
+                        <owl:hasValue rdf:datatype="&xsd;string">maestra (Curva de nivel con altitud múltiplo de 100 m)</owl:hasValue>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- ttp://geo.linkeddata.es/def/feature#EntidadVirtualDeAccidenteOrografico -->
+
+    <owl:Class rdf:about="&feature2;EntidadVirtualDeAccidenteOrografico">
+        <rdfs:label xml:lang="es">EntidadVirtualDeAccidenteOrografico</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&feature2;Relieve"/>
+        <rdfs:comment xml:lang="es">Línea sobre la que iría colocado el texto del accidente orográfico que representa.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- ttp://geo.linkeddata.es/def/feature#Montanna -->
+
+    <owl:Class rdf:about="&feature2;Montanna">
+        <rdfs:label xml:lang="es">Montanna</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&feature2;EntidadVirtualDeAccidenteOrografico"/>
+        <rdfs:comment xml:lang="es">Gran elevación natural del terreno.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- ttp://geo.linkeddata.es/def/feature#Paraje -->
+
+    <owl:Class rdf:about="&feature2;Paraje">
+        <rdfs:label xml:lang="es">Paraje</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&feature2;EntidadVirtualDeAccidenteOrografico"/>
+        <rdfs:comment xml:lang="es">Lugar, sitio con interés.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- ttp://geo.linkeddata.es/def/feature#Pico -->
+
+    <owl:Class rdf:about="&feature2;Pico">
+        <rdfs:label xml:lang="es">Pico</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&feature2;PuntoAcotado"/>
+        <rdfs:comment xml:lang="es">Montaña de cumbre puntiaguda</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- ttp://geo.linkeddata.es/def/feature#PuertoDeMontanna -->
+
+    <owl:Class rdf:about="&feature2;PuertoDeMontanna">
+        <rdfs:label xml:lang="es">PuertoDeMontanna</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&feature2;PuntoAcotado"/>
+        <rdfs:comment xml:lang="es">Paso entre montañas.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- ttp://geo.linkeddata.es/def/feature#PuntoAcotado -->
+
+    <owl:Class rdf:about="&feature2;PuntoAcotado">
+        <rdfs:label xml:lang="es">PuntoAcotado</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&feature2;Relieve"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="h&feature2;tipoDeGeometria"/>
+                <owl:hasValue>Puntual</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="es">Se define como puntos acotados a aquellos puntos con cota que poseen una ubicación representativa del relieve y complementan la información facilitada por las curvas de nivel.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- ttp://geo.linkeddata.es/def/feature#Region -->
+
+    <owl:Class rdf:about="&feature2;Region">
+        <rdfs:label xml:lang="es">Region</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&feature2;EntidadVirtualDeAccidenteOrografico"/>
+        <rdfs:comment xml:lang="es">Delimitación que contiene conjunto de municipios históricos</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- ttp://geo.linkeddata.es/def/feature#Relieve -->
+
+    <owl:Class rdf:about="&feature2;Relieve">
+        <rdfs:label xml:lang="es">Relieve</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&geosparql;Feature"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="h&feature2;grupoTematico"/>
+                <owl:hasValue>Relieve</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="es">El relieve es el conjunto de formas de la superficie terrestre que resalta sobre una superficie horizontal</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- ttp://geo.linkeddata.es/def/feature#Sierra -->
+
+    <owl:Class rdf:about="&feature2;Sierra">
+        <rdfs:label xml:lang="es">Sierra</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&feature2;EntidadVirtualDeAccidenteOrografico"/>
+        <rdfs:comment xml:lang="es">Conjunto de montañas o Parte de una cordillera.</rdfs:comment>
     </owl:Class>
     
 
