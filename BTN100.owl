@@ -209,16 +209,6 @@
         <rdfs:subPropertyOf rdf:resource="&dc;date"/>
         <rdfs:subPropertyOf rdf:resource="&terms;date"/>
     </owl:AnnotationProperty>
-    <owl:AnnotationProperty rdf:about="&terms;coverage">
-        <rdfs:label xml:lang="en">Coverage</rdfs:label>
-        <terms:issued rdf:datatype="&xsd;date">2008-01-14</terms:issued>
-        <terms:modified rdf:datatype="&xsd;date">2008-01-14</terms:modified>
-        <terms:description xml:lang="en">Spatial topic and spatial applicability may be a named place or a location specified by its geographic coordinates. Temporal topic may be a named period, date, or date range. A jurisdiction may be a named administrative entity or a geographic place to which the resource applies. Recommended best practice is to use a controlled vocabulary such as the Thesaurus of Geographic Names [TGN]. Where appropriate, named places or time periods can be used in preference to numeric identifiers such as sets of coordinates or date ranges.</terms:description>
-        <rdfs:comment xml:lang="en">The spatial or temporal topic of the resource, the spatial applicability of the resource, or the jurisdiction under which the resource is relevant.</rdfs:comment>
-        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#coverageT-001"/>
-        <rdfs:subPropertyOf rdf:resource="&dc;coverage"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
-    </owl:AnnotationProperty>
     <owl:AnnotationProperty rdf:about="&terms;created">
         <rdfs:label xml:lang="en">Date Created</rdfs:label>
         <terms:issued rdf:datatype="&xsd;date">2000-07-11</terms:issued>
@@ -232,22 +222,21 @@
         <rdfs:domain rdf:resource="&geosparql;Feature"/>
         <rdfs:domain rdf:resource="&feature2;Relieve"/>
     </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="&terms;coverage">
+        <rdfs:label xml:lang="en">Coverage</rdfs:label>
+        <terms:issued rdf:datatype="&xsd;date">2008-01-14</terms:issued>
+        <terms:modified rdf:datatype="&xsd;date">2008-01-14</terms:modified>
+        <terms:description xml:lang="en">Spatial topic and spatial applicability may be a named place or a location specified by its geographic coordinates. Temporal topic may be a named period, date, or date range. A jurisdiction may be a named administrative entity or a geographic place to which the resource applies. Recommended best practice is to use a controlled vocabulary such as the Thesaurus of Geographic Names [TGN]. Where appropriate, named places or time periods can be used in preference to numeric identifiers such as sets of coordinates or date ranges.</terms:description>
+        <rdfs:comment xml:lang="en">The spatial or temporal topic of the resource, the spatial applicability of the resource, or the jurisdiction under which the resource is relevant.</rdfs:comment>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#coverageT-001"/>
+        <rdfs:subPropertyOf rdf:resource="&dc;coverage"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    </owl:AnnotationProperty>
     <owl:AnnotationProperty rdf:about="&skos;editorialNote">
         <rdfs:label xml:lang="en">editorial note</rdfs:label>
         <skos:definition xml:lang="en">A note for an editor, translator or maintainer of the vocabulary.</skos:definition>
         <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
         <rdfs:subPropertyOf rdf:resource="&skos;note"/>
-    </owl:AnnotationProperty>
-    <owl:AnnotationProperty rdf:about="&terms;isFormatOf">
-        <rdfs:label xml:lang="en">Is Format Of</rdfs:label>
-        <terms:issued rdf:datatype="&xsd;date">2000-07-11</terms:issued>
-        <terms:modified rdf:datatype="&xsd;date">2008-01-14</terms:modified>
-        <rdfs:comment xml:lang="en">A related resource that is substantially the same as the described resource, but in another format.</rdfs:comment>
-        <skos:note xml:lang="en">This term is intended to be used with non-literal values as defined in the DCMI Abstract Model (http://dublincore.org/documents/abstract-model/).  As of December 2007, the DCMI Usage Board is seeking a way to express this intention with a formal range declaration.</skos:note>
-        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#isFormatOf-003"/>
-        <rdfs:subPropertyOf rdf:resource="&dc;relation"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
-        <rdfs:subPropertyOf rdf:resource="&terms;relation"/>
     </owl:AnnotationProperty>
     <owl:AnnotationProperty rdf:about="&terms;isRequiredBy">
         <rdfs:label xml:lang="en">Is Required By</rdfs:label>
@@ -256,6 +245,17 @@
         <rdfs:comment xml:lang="en">A related resource that requires the described resource to support its function, delivery, or coherence.</rdfs:comment>
         <skos:note xml:lang="en">This term is intended to be used with non-literal values as defined in the DCMI Abstract Model (http://dublincore.org/documents/abstract-model/).  As of December 2007, the DCMI Usage Board is seeking a way to express this intention with a formal range declaration.</skos:note>
         <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#isRequiredBy-003"/>
+        <rdfs:subPropertyOf rdf:resource="&dc;relation"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <rdfs:subPropertyOf rdf:resource="&terms;relation"/>
+    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="&terms;isFormatOf">
+        <rdfs:label xml:lang="en">Is Format Of</rdfs:label>
+        <terms:issued rdf:datatype="&xsd;date">2000-07-11</terms:issued>
+        <terms:modified rdf:datatype="&xsd;date">2008-01-14</terms:modified>
+        <rdfs:comment xml:lang="en">A related resource that is substantially the same as the described resource, but in another format.</rdfs:comment>
+        <skos:note xml:lang="en">This term is intended to be used with non-literal values as defined in the DCMI Abstract Model (http://dublincore.org/documents/abstract-model/).  As of December 2007, the DCMI Usage Board is seeking a way to express this intention with a formal range declaration.</skos:note>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#isFormatOf-003"/>
         <rdfs:subPropertyOf rdf:resource="&dc;relation"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
         <rdfs:subPropertyOf rdf:resource="&terms;relation"/>
@@ -280,17 +280,6 @@
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
         <rdfs:subPropertyOf rdf:resource="&terms;description"/>
     </owl:AnnotationProperty>
-    <owl:AnnotationProperty rdf:about="&terms;bibliographicCitation">
-        <rdfs:subPropertyOf rdf:resource="&dc;identifier"/>
-        <rdfs:domain rdf:resource="&terms;BibliographicResource"/>
-        <rdfs:subPropertyOf rdf:resource="&terms;identifier"/>
-    </owl:AnnotationProperty>
-    <owl:AnnotationProperty rdf:about="&wgs84_pos;lat">
-        <rdfs:label>latitude</rdfs:label>
-        <rdfs:comment>The WGS84 latitude of a SpatialThing (decimal degrees).</rdfs:comment>
-        <rdfs:domain rdf:resource="h&feature2;VerticeGeodesico"/>
-        <rdfs:domain rdf:resource="&wgs84_pos;SpatialThing"/>
-    </owl:AnnotationProperty>
     <owl:AnnotationProperty rdf:about="&dc;subject">
         <rdfs:label xml:lang="en">Subject</rdfs:label>
         <terms:issued rdf:datatype="&xsd;date">1999-07-02</terms:issued>
@@ -300,6 +289,18 @@
         <terms:description xml:lang="en">Typically, the subject will be represented using keywords, key phrases, or classification codes. Recommended best practice is to use a controlled vocabulary.</terms:description>
         <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#subject-007"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="&wgs84_pos;lat">
+        <rdfs:label>latitude</rdfs:label>
+        <rdfs:comment>The WGS84 latitude of a SpatialThing (decimal degrees).</rdfs:comment>
+        <rdfs:domain rdf:resource="h&feature2;VerticeGeodesico"/>
+        <rdfs:domain rdf:resource="http://geo.linkeddate.es/def/feature#EstacionGPS"/>
+        <rdfs:domain rdf:resource="&wgs84_pos;SpatialThing"/>
+    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="&terms;bibliographicCitation">
+        <rdfs:subPropertyOf rdf:resource="&dc;identifier"/>
+        <rdfs:domain rdf:resource="&terms;BibliographicResource"/>
+        <rdfs:subPropertyOf rdf:resource="&terms;identifier"/>
     </owl:AnnotationProperty>
     <owl:AnnotationProperty rdf:about="&scovo2;dataset"/>
     <owl:AnnotationProperty rdf:about="&foaf;member"/>
@@ -463,6 +464,54 @@ above the local reference ellipsoid).</rdfs:comment>
         <rdfs:domain rdf:resource="http://purl.org/dc/dcmitype/Collection"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
     </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="&terms;replaces">
+        <rdfs:label xml:lang="en">Replaces</rdfs:label>
+        <terms:issued rdf:datatype="&xsd;date">2000-07-11</terms:issued>
+        <terms:modified rdf:datatype="&xsd;date">2008-01-14</terms:modified>
+        <rdfs:comment xml:lang="en">A related resource that is supplanted, displaced, or superseded by the described resource.</rdfs:comment>
+        <skos:note xml:lang="en">This term is intended to be used with non-literal values as defined in the DCMI Abstract Model (http://dublincore.org/documents/abstract-model/).  As of December 2007, the DCMI Usage Board is seeking a way to express this intention with a formal range declaration.</skos:note>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#replaces-003"/>
+        <rdfs:domain rdf:resource="h&feature2;Alojamiento"/>
+        <rdfs:domain rdf:resource="h&feature2;ApartaderoCargadero"/>
+        <rdfs:domain rdf:resource="h&feature2;Apeadero"/>
+        <rdfs:domain rdf:resource="h&feature2;CentralElectrica"/>
+        <rdfs:domain rdf:resource="h&feature2;ConduccionDeCombustible"/>
+        <rdfs:domain rdf:resource="h&feature2;DepositoCombustible"/>
+        <rdfs:domain rdf:resource="h&feature2;DepositoDeAgua"/>
+        <rdfs:domain rdf:resource="h&feature2;Diseminado"/>
+        <rdfs:domain rdf:resource="h&feature2;EstacionDeSuministro"/>
+        <rdfs:domain rdf:resource="h&feature2;EstacionDepuradora"/>
+        <rdfs:domain rdf:resource="h&feature2;EstacionTelecomunicaciones"/>
+        <rdfs:domain rdf:resource="h&feature2;ExplotacionMinera"/>
+        <rdfs:domain rdf:resource="h&feature2;InstalacionFerroviaria"/>
+        <rdfs:domain rdf:resource="h&feature2;LineaElectrica"/>
+        <rdfs:domain rdf:resource="h&feature2;LugarDeInteres"/>
+        <rdfs:domain rdf:resource="h&feature2;LugarDeOcio"/>
+        <rdfs:domain rdf:resource="h&feature2;Muralla"/>
+        <rdfs:domain rdf:resource="h&feature2;NucleoPoblacional"/>
+        <rdfs:domain rdf:resource="h&feature2;PasoANivel"/>
+        <rdfs:domain rdf:resource="h&feature2;PistaDeAterrizaje"/>
+        <rdfs:domain rdf:resource="h&feature2;Presa"/>
+        <rdfs:domain rdf:resource="h&feature2;Puente"/>
+        <rdfs:domain rdf:resource="h&feature2;RedDeTransportes"/>
+        <rdfs:domain rdf:resource="h&feature2;SubestacionElectrica"/>
+        <rdfs:domain rdf:resource="h&feature2;TransporteSuspendido"/>
+        <rdfs:domain rdf:resource="h&feature2;UnidadAdministrativa"/>
+        <rdfs:domain rdf:resource="h&feature2;VerticeGeodesico"/>
+        <rdfs:domain rdf:resource="h&feature2;ZonaDeUsoCaracteristico"/>
+        <rdfs:domain rdf:resource="h&feature2;ZonaProtegida"/>
+        <rdfs:domain rdf:resource="&ontology;Aeropuerto"/>
+        <rdfs:domain rdf:resource="&ontology;EstacionDeFerrocarril"/>
+        <rdfs:domain rdf:resource="&ontology;Faro"/>
+        <rdfs:domain rdf:resource="&ontology;FenomenoHidrografico"/>
+        <rdfs:domain rdf:resource="&ontology;Puerto"/>
+        <rdfs:domain rdf:resource="http://geo.linkeddate.es/def/feature#EstacionGPS"/>
+        <rdfs:subPropertyOf rdf:resource="&dc;relation"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <rdfs:subPropertyOf rdf:resource="&terms;relation"/>
+        <rdfs:domain rdf:resource="&geosparql;Feature"/>
+        <rdfs:domain rdf:resource="&feature2;Relieve"/>
+    </owl:AnnotationProperty>
     <owl:AnnotationProperty rdf:about="&terms;spatial">
         <rdfs:label xml:lang="en">Spatial Coverage</rdfs:label>
         <terms:issued rdf:datatype="&xsd;date">2000-07-11</terms:issued>
@@ -472,18 +521,6 @@ above the local reference ellipsoid).</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="&dc;coverage"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
         <rdfs:subPropertyOf rdf:resource="&terms;coverage"/>
-    </owl:AnnotationProperty>
-    <owl:AnnotationProperty rdf:about="&terms;replaces">
-        <rdfs:label xml:lang="en">Replaces</rdfs:label>
-        <terms:issued rdf:datatype="&xsd;date">2000-07-11</terms:issued>
-        <terms:modified rdf:datatype="&xsd;date">2008-01-14</terms:modified>
-        <rdfs:comment xml:lang="en">A related resource that is supplanted, displaced, or superseded by the described resource.</rdfs:comment>
-        <skos:note xml:lang="en">This term is intended to be used with non-literal values as defined in the DCMI Abstract Model (http://dublincore.org/documents/abstract-model/).  As of December 2007, the DCMI Usage Board is seeking a way to express this intention with a formal range declaration.</skos:note>
-        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#replaces-003"/>
-        <rdfs:subPropertyOf rdf:resource="&dc;relation"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
-        <rdfs:subPropertyOf rdf:resource="&terms;relation"/>
-        <rdfs:domain rdf:resource="&geosparql;Feature"/>
     </owl:AnnotationProperty>
     <owl:AnnotationProperty rdf:about="&terms;subject">
         <rdfs:label xml:lang="en">Subject</rdfs:label>
@@ -513,9 +550,55 @@ above the local reference ellipsoid).</rdfs:comment>
         <rdfs:comment xml:lang="en">An unambiguous reference to the resource within a given context.</rdfs:comment>
         <terms:description xml:lang="en">Recommended best practice is to identify the resource by means of a string conforming to a formal identification system. </terms:description>
         <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#identifierT-001"/>
+        <rdfs:domain rdf:resource="h&feature2;Alojamiento"/>
+        <rdfs:domain rdf:resource="h&feature2;ApartaderoCargadero"/>
+        <rdfs:domain rdf:resource="h&feature2;Apeadero"/>
+        <rdfs:domain rdf:resource="h&feature2;CentralElectrica"/>
+        <rdfs:domain rdf:resource="h&feature2;ConduccionDeCombustible"/>
+        <rdfs:domain rdf:resource="h&feature2;DepositoCombustible"/>
+        <rdfs:domain rdf:resource="h&feature2;DepositoDeAgua"/>
+        <rdfs:domain rdf:resource="h&feature2;Diseminado"/>
+        <rdfs:domain rdf:resource="h&feature2;EstacionDeSuministro"/>
+        <rdfs:domain rdf:resource="h&feature2;EstacionDepuradora"/>
+        <rdfs:domain rdf:resource="h&feature2;EstacionTelecomunicaciones"/>
+        <rdfs:domain rdf:resource="h&feature2;ExplotacionMinera"/>
+        <rdfs:domain rdf:resource="h&feature2;InstalacionFerroviaria"/>
+        <rdfs:domain rdf:resource="h&feature2;LineaElectrica"/>
+        <rdfs:domain rdf:resource="h&feature2;LugarDeInteres"/>
+        <rdfs:domain rdf:resource="h&feature2;LugarDeOcio"/>
+        <rdfs:domain rdf:resource="h&feature2;Muralla"/>
+        <rdfs:domain rdf:resource="h&feature2;NucleoPoblacional"/>
+        <rdfs:domain rdf:resource="h&feature2;PasoANivel"/>
+        <rdfs:domain rdf:resource="h&feature2;PistaDeAterrizaje"/>
+        <rdfs:domain rdf:resource="h&feature2;Presa"/>
+        <rdfs:domain rdf:resource="h&feature2;Puente"/>
+        <rdfs:domain rdf:resource="h&feature2;RedDeTransportes"/>
+        <rdfs:domain rdf:resource="h&feature2;SubestacionElectrica"/>
+        <rdfs:domain rdf:resource="h&feature2;TransporteSuspendido"/>
+        <rdfs:domain rdf:resource="h&feature2;UnidadAdministrativa"/>
+        <rdfs:domain rdf:resource="h&feature2;VerticeGeodesico"/>
+        <rdfs:domain rdf:resource="h&feature2;ZonaDeUsoCaracteristico"/>
+        <rdfs:domain rdf:resource="h&feature2;ZonaProtegida"/>
+        <rdfs:domain rdf:resource="&ontology;Aeropuerto"/>
+        <rdfs:domain rdf:resource="&ontology;EstacionDeFerrocarril"/>
+        <rdfs:domain rdf:resource="&ontology;Faro"/>
+        <rdfs:domain rdf:resource="&ontology;FenomenoHidrografico"/>
+        <rdfs:domain rdf:resource="&ontology;Puerto"/>
+        <rdfs:domain rdf:resource="http://geo.linkeddate.es/def/feature#EstacionGPS"/>
         <rdfs:subPropertyOf rdf:resource="&dc;identifier"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
         <rdfs:domain rdf:resource="&geosparql;Feature"/>
+        <rdfs:domain rdf:resource="&feature2;Relieve"/>
+    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="&terms;type">
+        <rdfs:label xml:lang="en">Type</rdfs:label>
+        <terms:modified rdf:datatype="&xsd;date">2008-01-14</terms:modified>
+        <terms:issued rdf:datatype="&xsd;date">2008-01-14</terms:issued>
+        <terms:description xml:lang="en">Recommended best practice is to use a controlled vocabulary such as the DCMI Type Vocabulary [DCMITYPE]. To describe the file format, physical medium, or dimensions of the resource, use the Format element.</terms:description>
+        <rdfs:comment xml:lang="en">The nature or genre of the resource.</rdfs:comment>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#typeT-001"/>
+        <rdfs:subPropertyOf rdf:resource="&dc;type"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
     </owl:AnnotationProperty>
     <owl:AnnotationProperty rdf:about="&terms;requires">
         <rdfs:label xml:lang="en">Requires</rdfs:label>
@@ -527,16 +610,6 @@ above the local reference ellipsoid).</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="&dc;relation"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
         <rdfs:subPropertyOf rdf:resource="&terms;relation"/>
-    </owl:AnnotationProperty>
-    <owl:AnnotationProperty rdf:about="&terms;type">
-        <rdfs:label xml:lang="en">Type</rdfs:label>
-        <terms:modified rdf:datatype="&xsd;date">2008-01-14</terms:modified>
-        <terms:issued rdf:datatype="&xsd;date">2008-01-14</terms:issued>
-        <terms:description xml:lang="en">Recommended best practice is to use a controlled vocabulary such as the DCMI Type Vocabulary [DCMITYPE]. To describe the file format, physical medium, or dimensions of the resource, use the Format element.</terms:description>
-        <rdfs:comment xml:lang="en">The nature or genre of the resource.</rdfs:comment>
-        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#typeT-001"/>
-        <rdfs:subPropertyOf rdf:resource="&dc;type"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
     </owl:AnnotationProperty>
     <owl:AnnotationProperty rdf:about="&terms;extent">
         <rdfs:label xml:lang="en">Extent</rdfs:label>
@@ -559,6 +632,16 @@ above the local reference ellipsoid).</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="&dc;rights"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
     </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="&dc;format">
+        <rdfs:label xml:lang="en">Format</rdfs:label>
+        <terms:issued rdf:datatype="&xsd;date">1999-07-02</terms:issued>
+        <terms:modified rdf:datatype="&xsd;date">2008-01-14</terms:modified>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <terms:description xml:lang="en">Examples of dimensions include size and duration. Recommended best practice is to use a controlled vocabulary such as the list of Internet Media Types [MIME].</terms:description>
+        <rdfs:comment xml:lang="en">The file format, physical medium, or dimensions of the resource.</rdfs:comment>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#format-007"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </owl:AnnotationProperty>
     <owl:AnnotationProperty rdf:about="&terms;isReferencedBy">
         <rdfs:label xml:lang="en">Is Referenced By</rdfs:label>
         <terms:issued rdf:datatype="&xsd;date">2000-07-11</terms:issued>
@@ -569,16 +652,6 @@ above the local reference ellipsoid).</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="&dc;relation"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
         <rdfs:subPropertyOf rdf:resource="&terms;relation"/>
-    </owl:AnnotationProperty>
-    <owl:AnnotationProperty rdf:about="&dc;format">
-        <rdfs:label xml:lang="en">Format</rdfs:label>
-        <terms:issued rdf:datatype="&xsd;date">1999-07-02</terms:issued>
-        <terms:modified rdf:datatype="&xsd;date">2008-01-14</terms:modified>
-        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
-        <terms:description xml:lang="en">Examples of dimensions include size and duration. Recommended best practice is to use a controlled vocabulary such as the list of Internet Media Types [MIME].</terms:description>
-        <rdfs:comment xml:lang="en">The file format, physical medium, or dimensions of the resource.</rdfs:comment>
-        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#format-007"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
     </owl:AnnotationProperty>
     <owl:AnnotationProperty rdf:about="&dc;rights">
         <rdfs:label xml:lang="en">Rights</rdfs:label>
@@ -682,10 +755,6 @@ above the local reference ellipsoid).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
         <rdfs:subPropertyOf rdf:resource="&terms;coverage"/>
     </owl:AnnotationProperty>
-    <owl:AnnotationProperty rdf:about="&terms;issued">
-        <rdfs:subPropertyOf rdf:resource="&dc;date"/>
-        <rdfs:subPropertyOf rdf:resource="&terms;date"/>
-    </owl:AnnotationProperty>
     <owl:AnnotationProperty rdf:about="&dc;identifier">
         <rdfs:label xml:lang="en">Identifier</rdfs:label>
         <terms:issued rdf:datatype="&xsd;date">1999-07-02</terms:issued>
@@ -695,6 +764,10 @@ above the local reference ellipsoid).</rdfs:comment>
         <terms:description xml:lang="en">Recommended best practice is to identify the resource by means of a string conforming to a formal identification system. </terms:description>
         <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#identifier-006"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="&terms;issued">
+        <rdfs:subPropertyOf rdf:resource="&dc;date"/>
+        <rdfs:subPropertyOf rdf:resource="&terms;date"/>
     </owl:AnnotationProperty>
     <owl:AnnotationProperty rdf:about="&dc;date">
         <rdfs:label xml:lang="en">Date</rdfs:label>
@@ -782,6 +855,7 @@ above the local reference ellipsoid).</rdfs:comment>
         <rdfs:label>longitude</rdfs:label>
         <rdfs:comment>The WGS84 longitude of a SpatialThing (decimal degrees).</rdfs:comment>
         <rdfs:domain rdf:resource="h&feature2;VerticeGeodesico"/>
+        <rdfs:domain rdf:resource="http://geo.linkeddate.es/def/feature#EstacionGPS"/>
         <rdfs:domain rdf:resource="&wgs84_pos;SpatialThing"/>
     </owl:AnnotationProperty>
     <owl:AnnotationProperty rdf:about="&terms;accessRights">
@@ -830,8 +904,10 @@ above the local reference ellipsoid).</rdfs:comment>
         <rdfs:domain rdf:resource="h&feature2;LugarDeInteres"/>
         <rdfs:domain rdf:resource="h&feature2;LugarDeOcio"/>
         <rdfs:domain rdf:resource="h&feature2;NucleoPoblacional"/>
+        <rdfs:domain rdf:resource="h&feature2;PistaDeAterrizaje"/>
         <rdfs:domain rdf:resource="h&feature2;Rio"/>
         <rdfs:domain rdf:resource="h&feature2;UnidadAdministrativa"/>
+        <rdfs:domain rdf:resource="h&feature2;VerticeGeodesico"/>
         <rdfs:domain rdf:resource="h&feature2;ViaDeFerrocarril"/>
         <rdfs:domain rdf:resource="h&feature2;ZonaDeUsoCaracteristico"/>
         <rdfs:domain rdf:resource="h&feature2;ZonaProtegida"/>
@@ -848,6 +924,7 @@ above the local reference ellipsoid).</rdfs:comment>
         <rdfs:domain rdf:resource="&ontology;Pista"/>
         <rdfs:domain rdf:resource="&ontology;Puerto"/>
         <rdfs:domain rdf:resource="&ontology;Ria"/>
+        <rdfs:domain rdf:resource="http://geo.linkeddate.es/def/feature#EstacionGPS"/>
         <rdfs:subPropertyOf rdf:resource="&dc;title"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
         <rdfs:domain rdf:resource="&feature2;Cerro"/>
@@ -2158,23 +2235,23 @@ superficiales)</rdf:first>
                 <owl:oneOf>
                     <rdf:Description>
                         <rdf:type rdf:resource="&rdf;List"/>
-                        <rdf:first rdf:datatype="&xsd;string">Interés no definido</rdf:first>
+                        <rdf:first rdf:datatype="&xsd;string">lugar de Interés no definido</rdf:first>
                         <rdf:rest>
                             <rdf:Description>
                                 <rdf:type rdf:resource="&rdf;List"/>
-                                <rdf:first rdf:datatype="&xsd;string">Lugar de interés principal</rdf:first>
+                                <rdf:first rdf:datatype="&xsd;string">lugar de interés principal</rdf:first>
                                 <rdf:rest>
                                     <rdf:Description>
                                         <rdf:type rdf:resource="&rdf;List"/>
-                                        <rdf:first rdf:datatype="&xsd;string">Lugar de interés secundario</rdf:first>
+                                        <rdf:first rdf:datatype="&xsd;string">lugar de interés secundario</rdf:first>
                                         <rdf:rest>
                                             <rdf:Description>
                                                 <rdf:type rdf:resource="&rdf;List"/>
-                                                <rdf:first rdf:datatype="&xsd;string">Lugar de interés terciario</rdf:first>
+                                                <rdf:first rdf:datatype="&xsd;string">lugar de interés terciario</rdf:first>
                                                 <rdf:rest>
                                                     <rdf:Description>
                                                         <rdf:type rdf:resource="&rdf;List"/>
-                                                        <rdf:first rdf:datatype="&xsd;string">Lugar de menor interés</rdf:first>
+                                                        <rdf:first rdf:datatype="&xsd;string">lugar de menor interés</rdf:first>
                                                         <rdf:rest rdf:resource="&rdf;nil"/>
                                                     </rdf:Description>
                                                 </rdf:rest>
@@ -2564,44 +2641,8 @@ de la provincia, capital de una provincia, capital de un municipio, o es capital
         <rdfs:comment xml:lang="en">An unambiguous reference to the resource within a given context.</rdfs:comment>
         <terms:description xml:lang="en">Recommended best practice is to identify the resource by means of a string conforming to a formal identification system. </terms:description>
         <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#identifierT-001"/>
-        <rdfs:domain rdf:resource="h&feature2;Alojamiento"/>
-        <rdfs:domain rdf:resource="h&feature2;ApartaderoCargadero"/>
-        <rdfs:domain rdf:resource="h&feature2;Apeadero"/>
-        <rdfs:domain rdf:resource="h&feature2;CentralElectrica"/>
-        <rdfs:domain rdf:resource="h&feature2;ConduccionDeCombustible"/>
-        <rdfs:domain rdf:resource="h&feature2;DepositoCombustible"/>
-        <rdfs:domain rdf:resource="h&feature2;DepositoDeAgua"/>
-        <rdfs:domain rdf:resource="h&feature2;Diseminado"/>
-        <rdfs:domain rdf:resource="h&feature2;EstacionDeSuministro"/>
-        <rdfs:domain rdf:resource="h&feature2;EstacionDepuradora"/>
-        <rdfs:domain rdf:resource="h&feature2;EstacionTelecomunicaciones"/>
-        <rdfs:domain rdf:resource="h&feature2;ExplotacionMinera"/>
-        <rdfs:domain rdf:resource="h&feature2;InstalacionFerroviaria"/>
-        <rdfs:domain rdf:resource="h&feature2;LineaElectrica"/>
-        <rdfs:domain rdf:resource="h&feature2;LugarDeInteres"/>
-        <rdfs:domain rdf:resource="h&feature2;LugarDeOcio"/>
-        <rdfs:domain rdf:resource="h&feature2;Muralla"/>
-        <rdfs:domain rdf:resource="h&feature2;NucleoPoblacional"/>
-        <rdfs:domain rdf:resource="h&feature2;PasoANivel"/>
-        <rdfs:domain rdf:resource="h&feature2;PistaDeAterrizaje"/>
-        <rdfs:domain rdf:resource="h&feature2;Presa"/>
-        <rdfs:domain rdf:resource="h&feature2;Puente"/>
-        <rdfs:domain rdf:resource="h&feature2;RedDeTransportes"/>
-        <rdfs:domain rdf:resource="h&feature2;SubestacionElectrica"/>
-        <rdfs:domain rdf:resource="h&feature2;TransporteSuspendido"/>
-        <rdfs:domain rdf:resource="h&feature2;UnidadAdministrativa"/>
-        <rdfs:domain rdf:resource="h&feature2;VerticeGeodesico"/>
-        <rdfs:domain rdf:resource="h&feature2;ZonaDeUsoCaracteristico"/>
-        <rdfs:domain rdf:resource="h&feature2;ZonaProtegida"/>
-        <rdfs:domain rdf:resource="&ontology;Aeropuerto"/>
-        <rdfs:domain rdf:resource="&ontology;EstacionDeFerrocarril"/>
-        <rdfs:domain rdf:resource="&ontology;Faro"/>
-        <rdfs:domain rdf:resource="&ontology;FenomenoHidrografico"/>
-        <rdfs:domain rdf:resource="&ontology;Puerto"/>
-        <rdfs:domain rdf:resource="http://geo.linkeddate.es/def/feature#EstacionGPS"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
-        <rdfs:domain rdf:resource="&feature2;Relieve"/>
     </owl:DatatypeProperty>
     
 
@@ -2615,43 +2656,7 @@ de la provincia, capital de una provincia, capital de un municipio, o es capital
         <rdfs:comment xml:lang="en">A related resource that is supplanted, displaced, or superseded by the described resource.</rdfs:comment>
         <skos:note xml:lang="en">This term is intended to be used with non-literal values as defined in the DCMI Abstract Model (http://dublincore.org/documents/abstract-model/).  As of December 2007, the DCMI Usage Board is seeking a way to express this intention with a formal range declaration.</skos:note>
         <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#replaces-003"/>
-        <rdfs:domain rdf:resource="h&feature2;Alojamiento"/>
-        <rdfs:domain rdf:resource="h&feature2;ApartaderoCargadero"/>
-        <rdfs:domain rdf:resource="h&feature2;Apeadero"/>
-        <rdfs:domain rdf:resource="h&feature2;CentralElectrica"/>
-        <rdfs:domain rdf:resource="h&feature2;ConduccionDeCombustible"/>
-        <rdfs:domain rdf:resource="h&feature2;DepositoCombustible"/>
-        <rdfs:domain rdf:resource="h&feature2;DepositoDeAgua"/>
-        <rdfs:domain rdf:resource="h&feature2;Diseminado"/>
-        <rdfs:domain rdf:resource="h&feature2;EstacionDeSuministro"/>
-        <rdfs:domain rdf:resource="h&feature2;EstacionDepuradora"/>
-        <rdfs:domain rdf:resource="h&feature2;EstacionTelecomunicaciones"/>
-        <rdfs:domain rdf:resource="h&feature2;ExplotacionMinera"/>
-        <rdfs:domain rdf:resource="h&feature2;InstalacionFerroviaria"/>
-        <rdfs:domain rdf:resource="h&feature2;LineaElectrica"/>
-        <rdfs:domain rdf:resource="h&feature2;LugarDeInteres"/>
-        <rdfs:domain rdf:resource="h&feature2;LugarDeOcio"/>
-        <rdfs:domain rdf:resource="h&feature2;Muralla"/>
-        <rdfs:domain rdf:resource="h&feature2;NucleoPoblacional"/>
-        <rdfs:domain rdf:resource="h&feature2;PasoANivel"/>
-        <rdfs:domain rdf:resource="h&feature2;PistaDeAterrizaje"/>
-        <rdfs:domain rdf:resource="h&feature2;Presa"/>
-        <rdfs:domain rdf:resource="h&feature2;Puente"/>
-        <rdfs:domain rdf:resource="h&feature2;RedDeTransportes"/>
-        <rdfs:domain rdf:resource="h&feature2;SubestacionElectrica"/>
-        <rdfs:domain rdf:resource="h&feature2;TransporteSuspendido"/>
-        <rdfs:domain rdf:resource="h&feature2;UnidadAdministrativa"/>
-        <rdfs:domain rdf:resource="h&feature2;VerticeGeodesico"/>
-        <rdfs:domain rdf:resource="h&feature2;ZonaDeUsoCaracteristico"/>
-        <rdfs:domain rdf:resource="h&feature2;ZonaProtegida"/>
-        <rdfs:domain rdf:resource="&ontology;Aeropuerto"/>
-        <rdfs:domain rdf:resource="&ontology;EstacionDeFerrocarril"/>
-        <rdfs:domain rdf:resource="&ontology;Faro"/>
-        <rdfs:domain rdf:resource="&ontology;FenomenoHidrografico"/>
-        <rdfs:domain rdf:resource="&ontology;Puerto"/>
-        <rdfs:domain rdf:resource="http://geo.linkeddate.es/def/feature#EstacionGPS"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
-        <rdfs:domain rdf:resource="&feature2;Relieve"/>
     </owl:DatatypeProperty>
     
 
@@ -2796,8 +2801,6 @@ de la provincia, capital de una provincia, capital de un municipio, o es capital
     <owl:DatatypeProperty rdf:about="&wgs84_pos;lat">
         <rdfs:label>latitude</rdfs:label>
         <rdfs:comment>The WGS84 latitude of a SpatialThing (decimal degrees).</rdfs:comment>
-        <rdfs:domain rdf:resource="h&feature2;VerticeGeodesico"/>
-        <rdfs:domain rdf:resource="http://geo.linkeddate.es/def/feature#EstacionGPS"/>
     </owl:DatatypeProperty>
     
 
@@ -2807,8 +2810,6 @@ de la provincia, capital de una provincia, capital de un municipio, o es capital
     <owl:DatatypeProperty rdf:about="&wgs84_pos;long">
         <rdfs:label>longitude</rdfs:label>
         <rdfs:comment>The WGS84 longitude of a SpatialThing (decimal degrees).</rdfs:comment>
-        <rdfs:domain rdf:resource="h&feature2;VerticeGeodesico"/>
-        <rdfs:domain rdf:resource="http://geo.linkeddate.es/def/feature#EstacionGPS"/>
         <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
     </owl:DatatypeProperty>
     
@@ -2923,14 +2924,14 @@ datos del terreno)</rdf:first>
         <rdfs:subClassOf rdf:resource="&geosparql;Feature"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="h&feature2;grupoTematico"/>
-                <owl:hasValue rdf:datatype="&xsd;string">Poblaciones y Construcciones</owl:hasValue>
+                <owl:onProperty rdf:resource="h&feature2;tipoDeGeometria"/>
+                <owl:hasValue rdf:datatype="&xsd;string">Puntual</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="h&feature2;tipoDeGeometria"/>
-                <owl:hasValue rdf:datatype="&xsd;string">Puntual</owl:hasValue>
+                <owl:onProperty rdf:resource="h&feature2;grupoTematico"/>
+                <owl:hasValue rdf:datatype="&xsd;string">Poblaciones y Construcciones</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -3004,12 +3005,6 @@ servicios.</rdfs:comment>
         <rdfs:label xml:lang="es">Autovia</rdfs:label>
         <rdfs:subClassOf rdf:resource="h&feature2;RedDeTransportes"/>
         <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="h&feature2;tipoDeGeometria"/>
-                <owl:hasValue rdf:datatype="&xsd;string">Lineal</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <owl:Restriction>
@@ -3022,6 +3017,12 @@ servicios.</rdfs:comment>
                     </owl:Restriction>
                 </owl:unionOf>
             </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="h&feature2;tipoDeGeometria"/>
+                <owl:hasValue rdf:datatype="&xsd;string">Lineal</owl:hasValue>
+            </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Class>
@@ -3133,20 +3134,6 @@ servicios.</rdfs:comment>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="h&feature2;tipoDeCalzada"/>
-                        <owl:hasValue rdf:datatype="&xsd;string">convencional</owl:hasValue>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="h&feature2;tipoDeCalzada"/>
-                        <owl:hasValue rdf:datatype="&xsd;string">sentido único</owl:hasValue>
-                    </owl:Restriction>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <owl:Restriction>
                         <owl:onProperty rdf:resource="h&feature2;competencia"/>
                         <owl:hasValue rdf:datatype="&xsd;string">autonómica</owl:hasValue>
                     </owl:Restriction>
@@ -3157,6 +3144,20 @@ servicios.</rdfs:comment>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="h&feature2;competencia"/>
                         <owl:hasValue rdf:datatype="&xsd;string">provincial</owl:hasValue>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="h&feature2;tipoDeCalzada"/>
+                        <owl:hasValue rdf:datatype="&xsd;string">convencional</owl:hasValue>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="h&feature2;tipoDeCalzada"/>
+                        <owl:hasValue rdf:datatype="&xsd;string">sentido único</owl:hasValue>
                     </owl:Restriction>
                 </owl:unionOf>
             </owl:Class>
@@ -3350,14 +3351,14 @@ servicios.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&geosparql;Feature"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="h&feature2;grupoTematico"/>
-                <owl:hasValue rdf:datatype="&xsd;string">Conducciones y energía</owl:hasValue>
+                <owl:onProperty rdf:resource="h&feature2;tipoDeGeometria"/>
+                <owl:hasValue rdf:datatype="&xsd;string">Lineal</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="h&feature2;tipoDeGeometria"/>
-                <owl:hasValue rdf:datatype="&xsd;string">Lineal</owl:hasValue>
+                <owl:onProperty rdf:resource="h&feature2;grupoTematico"/>
+                <owl:hasValue rdf:datatype="&xsd;string">Conducciones y energía</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="es">Tubería e instalaciones conexas utilizadas para el transporte de combustibles.</rdfs:comment>
@@ -3403,14 +3404,14 @@ servicios.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&geosparql;Feature"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="h&feature2;tipoDeGeometria"/>
-                <owl:hasValue rdf:datatype="&xsd;string">Puntual</owl:hasValue>
+                <owl:onProperty rdf:resource="h&feature2;grupoTematico"/>
+                <owl:hasValue rdf:datatype="&xsd;string">Conducciones y energía</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="h&feature2;grupoTematico"/>
-                <owl:hasValue rdf:datatype="&xsd;string">Conducciones y energía</owl:hasValue>
+                <owl:onProperty rdf:resource="h&feature2;tipoDeGeometria"/>
+                <owl:hasValue rdf:datatype="&xsd;string">Puntual</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="es">Contenedor seguro destinado al almacenamiento de líquidos o gases inflamables para su posterior distribución en algunos casos por medio de oleoductos o gaseoductos.</rdfs:comment>
@@ -3425,14 +3426,14 @@ servicios.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&geosparql;Feature"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="h&feature2;grupoTematico"/>
-                <owl:hasValue rdf:datatype="&xsd;string">Conducciones y energía</owl:hasValue>
+                <owl:onProperty rdf:resource="h&feature2;tipoDeGeometria"/>
+                <owl:hasValue rdf:datatype="&xsd;string">Puntual</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="h&feature2;tipoDeGeometria"/>
-                <owl:hasValue rdf:datatype="&xsd;string">Puntual</owl:hasValue>
+                <owl:onProperty rdf:resource="h&feature2;grupoTematico"/>
+                <owl:hasValue rdf:datatype="&xsd;string">Conducciones y energía</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -3663,14 +3664,14 @@ hoteles para el descanso de los usuarios, remontes para el transporte de los esq
         <rdfs:subClassOf rdf:resource="&geosparql;Feature"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="h&feature2;tipoDeGeometria"/>
-                <owl:hasValue rdf:datatype="&xsd;string">Puntual</owl:hasValue>
+                <owl:onProperty rdf:resource="h&feature2;grupoTematico"/>
+                <owl:hasValue rdf:datatype="&xsd;string">Conducciones y energía</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="h&feature2;grupoTematico"/>
-                <owl:hasValue rdf:datatype="&xsd;string">Conducciones y energía</owl:hasValue>
+                <owl:onProperty rdf:resource="h&feature2;tipoDeGeometria"/>
+                <owl:hasValue rdf:datatype="&xsd;string">Puntual</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="es">Centro que consta de todas las instalaciones necesarias para transmitir y recibir señales que aseguren un servicio de radiotelecomunicación determinado.</rdfs:comment>
@@ -3703,18 +3704,6 @@ hoteles para el descanso de los usuarios, remontes para el transporte de los esq
         <rdfs:label xml:lang="es">ExplotacionMinera</rdfs:label>
         <rdfs:subClassOf rdf:resource="&geosparql;Feature"/>
         <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="h&feature2;grupoTematico"/>
-                <owl:hasValue rdf:datatype="&xsd;string">Poblaciones y Construcciones</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="h&feature2;tipoDeGeometria"/>
-                <owl:hasValue rdf:datatype="&xsd;string">Puntual</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <owl:Restriction>
@@ -3727,6 +3716,18 @@ hoteles para el descanso de los usuarios, remontes para el transporte de los esq
                     </owl:Restriction>
                 </owl:unionOf>
             </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="h&feature2;grupoTematico"/>
+                <owl:hasValue rdf:datatype="&xsd;string">Poblaciones y Construcciones</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="h&feature2;tipoDeGeometria"/>
+                <owl:hasValue rdf:datatype="&xsd;string">Puntual</owl:hasValue>
+            </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="es">Terreno dedicado a la explotación de minerales o piedra.</rdfs:comment>
     </owl:Class>
@@ -3972,14 +3973,14 @@ estimado de interés en función de su origen o pasado histórico, o de sus valo
         <rdfs:subClassOf rdf:resource="&geosparql;Feature"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="h&feature2;grupoTematico"/>
-                <owl:hasValue rdf:datatype="&xsd;string">Poblaciones y Construcciones</owl:hasValue>
+                <owl:onProperty rdf:resource="h&feature2;tipoDeGeometria"/>
+                <owl:hasValue rdf:datatype="&xsd;string">Puntual</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="h&feature2;tipoDeGeometria"/>
-                <owl:hasValue rdf:datatype="&xsd;string">Puntual</owl:hasValue>
+                <owl:onProperty rdf:resource="h&feature2;grupoTematico"/>
+                <owl:hasValue rdf:datatype="&xsd;string">Poblaciones y Construcciones</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="es">Edificación o Lugar de interés por el uso que se le da o su relación con la cultura. Aquí se incluyen los Bienes de Interés Cultural (BIC)</rdfs:comment>
@@ -3994,14 +3995,14 @@ estimado de interés en función de su origen o pasado histórico, o de sus valo
         <rdfs:subClassOf rdf:resource="&geosparql;Feature"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="h&feature2;grupoTematico"/>
-                <owl:hasValue rdf:datatype="&xsd;string">Poblaciones y Construcciones</owl:hasValue>
+                <owl:onProperty rdf:resource="h&feature2;tipoDeGeometria"/>
+                <owl:hasValue rdf:datatype="&xsd;string">Puntual</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="h&feature2;tipoDeGeometria"/>
-                <owl:hasValue rdf:datatype="&xsd;string">Puntual</owl:hasValue>
+                <owl:onProperty rdf:resource="h&feature2;grupoTematico"/>
+                <owl:hasValue rdf:datatype="&xsd;string">Poblaciones y Construcciones</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -4061,6 +4062,12 @@ estimado de interés en función de su origen o pasado histórico, o de sus valo
         <rdfs:label xml:lang="es">NucleoPoblacionalPuntual</rdfs:label>
         <rdfs:subClassOf rdf:resource="h&feature2;NucleoPoblacional"/>
         <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="h&feature2;tipoDeGeometria"/>
+                <owl:hasValue rdf:datatype="&xsd;string">Puntual</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <owl:Restriction>
@@ -4073,12 +4080,6 @@ estimado de interés en función de su origen o pasado histórico, o de sus valo
                     </owl:Restriction>
                 </owl:unionOf>
             </owl:Class>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="h&feature2;tipoDeGeometria"/>
-                <owl:hasValue rdf:datatype="&xsd;string">Puntual</owl:hasValue>
-            </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="es">Se considera Núcleo de población a un conjunto de al menos diez edificaciones, que están formando calles, plazas y otras vías urbanas. Por excepción el número de edificaciones podrá ser inferior
 a 10, siempre que la población de derecho supere los 50 habitantes.
@@ -4198,14 +4199,14 @@ ciudad) que han sido nominados y confirmados para su inclusión en la lista mant
         <rdfs:subClassOf rdf:resource="&geosparql;Feature"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="h&feature2;tipoDeGeometria"/>
-                <owl:hasValue rdf:datatype="&xsd;string">Superficie</owl:hasValue>
+                <owl:onProperty rdf:resource="h&feature2;grupoTematico"/>
+                <owl:hasValue rdf:datatype="&xsd;string">Transportes</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="h&feature2;grupoTematico"/>
-                <owl:hasValue rdf:datatype="&xsd;string">Transportes</owl:hasValue>
+                <owl:onProperty rdf:resource="h&feature2;tipoDeGeometria"/>
+                <owl:hasValue rdf:datatype="&xsd;string">Superficie</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="es">Espacio dentro de las instalaciones de un aeropuerto, donde circulan los aviones y otros aparatos de navegación aérea, y desde donde se realiza el despegue/aterrizaje.</rdfs:comment>
@@ -4220,14 +4221,14 @@ ciudad) que han sido nominados y confirmados para su inclusión en la lista mant
         <rdfs:subClassOf rdf:resource="&geosparql;Feature"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="h&feature2;grupoTematico"/>
-                <owl:hasValue rdf:datatype="&xsd;string">Poblaciones y Construcciones</owl:hasValue>
+                <owl:onProperty rdf:resource="h&feature2;tipoDeGeometria"/>
+                <owl:hasValue rdf:datatype="&xsd;string">Lineal</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="h&feature2;tipoDeGeometria"/>
-                <owl:hasValue rdf:datatype="&xsd;string">Lineal</owl:hasValue>
+                <owl:onProperty rdf:resource="h&feature2;grupoTematico"/>
+                <owl:hasValue rdf:datatype="&xsd;string">Poblaciones y Construcciones</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="es">Construcción que se realiza en los embalses o ríos para almacenar el agua.</rdfs:comment>
@@ -4242,14 +4243,14 @@ ciudad) que han sido nominados y confirmados para su inclusión en la lista mant
         <rdfs:subClassOf rdf:resource="&geosparql;Feature"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="h&feature2;grupoTematico"/>
-                <owl:hasValue rdf:datatype="&xsd;string">Poblaciones y Construcciones</owl:hasValue>
+                <owl:onProperty rdf:resource="h&feature2;tipoDeGeometria"/>
+                <owl:hasValue rdf:datatype="&xsd;string">Puntual</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="h&feature2;tipoDeGeometria"/>
-                <owl:hasValue rdf:datatype="&xsd;string">Puntual</owl:hasValue>
+                <owl:onProperty rdf:resource="h&feature2;grupoTematico"/>
+                <owl:hasValue rdf:datatype="&xsd;string">Poblaciones y Construcciones</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="es">Construcción realizada para paso a distinto nivel entre vías de comunicación o hidrografía.</rdfs:comment>
@@ -4436,14 +4437,14 @@ antropológico.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&geosparql;Feature"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="h&feature2;tipoDeGeometria"/>
-                <owl:hasValue rdf:datatype="&xsd;string">Lineal</owl:hasValue>
+                <owl:onProperty rdf:resource="h&feature2;grupoTematico"/>
+                <owl:hasValue rdf:datatype="&xsd;string">Transportes</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="h&feature2;grupoTematico"/>
-                <owl:hasValue rdf:datatype="&xsd;string">Transportes</owl:hasValue>
+                <owl:onProperty rdf:resource="h&feature2;tipoDeGeometria"/>
+                <owl:hasValue rdf:datatype="&xsd;string">Lineal</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="es">Sistema de transporte en el que los vehículos van suspendidos de un cable de tracción. Se emplea principalmente para salvar grandes diferencias de altitud.</rdfs:comment>
@@ -4647,14 +4648,14 @@ antropológico.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&geosparql;Feature"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="h&feature2;grupoTematico"/>
-                <owl:hasValue rdf:datatype="&xsd;string">Poblaciones y Construcciones</owl:hasValue>
+                <owl:onProperty rdf:resource="h&feature2;tipoDeGeometria"/>
+                <owl:hasValue rdf:datatype="&xsd;string">Superficial</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="h&feature2;tipoDeGeometria"/>
-                <owl:hasValue rdf:datatype="&xsd;string">Superficial</owl:hasValue>
+                <owl:onProperty rdf:resource="h&feature2;grupoTematico"/>
+                <owl:hasValue rdf:datatype="&xsd;string">Poblaciones y Construcciones</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="es">Superficie delimitada, empleada para desarrollar una actividad específica.</rdfs:comment>
@@ -4729,14 +4730,14 @@ antropológico.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&geosparql;Feature"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="h&feature2;grupoTematico"/>
-                <owl:hasValue>Unidades administrativas y zonas protegidas</owl:hasValue>
+                <owl:onProperty rdf:resource="h&feature2;tipoDeGeometria"/>
+                <owl:hasValue>Superficial</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="h&feature2;tipoDeGeometria"/>
-                <owl:hasValue>Superficial</owl:hasValue>
+                <owl:onProperty rdf:resource="h&feature2;grupoTematico"/>
+                <owl:hasValue>Unidades administrativas y zonas protegidas</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="es">Se capturan los espacios protegidos que según MAGRAMA se corresponden con las figuras de Parque Nacional, Parque Natural, Paisaje protegido, Parque Regional y Paraje Natural, así como los LICs y ZEPAs facilitados por la Red Natura 2000.</rdfs:comment>
@@ -4804,14 +4805,14 @@ antropológico.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&geosparql;Feature"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="h&feature2;tipoDeGeometria"/>
-                <owl:hasValue rdf:datatype="&xsd;string">Puntual</owl:hasValue>
+                <owl:onProperty rdf:resource="h&feature2;grupoTematico"/>
+                <owl:hasValue rdf:datatype="&xsd;string">Transportes</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="h&feature2;grupoTematico"/>
-                <owl:hasValue rdf:datatype="&xsd;string">Transportes</owl:hasValue>
+                <owl:onProperty rdf:resource="h&feature2;tipoDeGeometria"/>
+                <owl:hasValue rdf:datatype="&xsd;string">Puntual</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="es">Terreno llano provisto de un conjunto de pistas, instalaciones y servicios destinados al tráfico regular de aviones.</rdfs:comment>
@@ -4874,6 +4875,15 @@ antropológico.</rdfs:comment>
             </owl:Class>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="es">Carretera con calzadas separadas para los dos sentidos de la circulación, cada una de ellas con dos o más carriles, sin cruces a nivel.</rdfs:comment>
+    </owl:Class>
+
+    <!-- http://geo.linkeddata.es/ontology/Canyo -->
+
+    <owl:Class rdf:about="&ontology;Canyo">
+        <rdfs:label xml:lang="es">Caño</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ontology;Humedal"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Corriente de agua salada. Puede ser un cauce maritimo angosto que se interna en tierra, una comunicacion entre una albufera y el mar, o un cauce despejado entre una marisma</rdfs:comment>
+        <dc:source rdf:datatype="&xsd;string">Vazquez Maure F.; Martin Lopez J. (1987) Vocabulario de terminos geograficos. Ed. Ministerio de Obras Publicas y Urbanismo. Instituto Geografico Nacional. Madrid. ISBN: 84-505-4929-9.</dc:source>
     </owl:Class>
     
 
@@ -4949,14 +4959,14 @@ antropológico.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&geosparql;Feature"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="h&feature2;tipoDeGeometria"/>
-                <owl:hasValue rdf:datatype="&xsd;string">Puntual</owl:hasValue>
+                <owl:onProperty rdf:resource="h&feature2;grupoTematico"/>
+                <owl:hasValue rdf:datatype="&xsd;string">Transportes</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="h&feature2;grupoTematico"/>
-                <owl:hasValue rdf:datatype="&xsd;string">Transportes</owl:hasValue>
+                <owl:onProperty rdf:resource="h&feature2;tipoDeGeometria"/>
+                <owl:hasValue rdf:datatype="&xsd;string">Puntual</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="es">Torre alta en las costas, con luz en su parte superior, para que durante la noche sirva de señal a los navegantes.</rdfs:comment>
@@ -5011,7 +5021,6 @@ antropológico.</rdfs:comment>
         <dc:source xml:lang="es">Diccionario de la Real Academia Española &amp; Elaboración propia</dc:source>
         <rdfs:comment xml:lang="es">Porcion de tierra rodeada por las aguas de un río, laguna o embalse</rdfs:comment>
     </owl:Class>
-    
     
 
 
@@ -5117,12 +5126,6 @@ antropológico.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&geosparql;Feature"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="h&feature2;grupoTematico"/>
-                <owl:hasValue rdf:datatype="&xsd;string">Transportes</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="h&feature2;tipoDeGeometria"/>
                 <owl:hasValue rdf:datatype="&xsd;string">Puntual</owl:hasValue>
             </owl:Restriction>
@@ -5140,6 +5143,12 @@ antropológico.</rdfs:comment>
                     </owl:Restriction>
                 </owl:unionOf>
             </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="h&feature2;grupoTematico"/>
+                <owl:hasValue rdf:datatype="&xsd;string">Transportes</owl:hasValue>
+            </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="es">Lugar en la costa o en las orillas de un río que por sus características, naturales o artificiales, sirve para que las embarcaciones realicen operaciones de carga y descarga, embarque y desembarco, etc.</rdfs:comment>
     </owl:Class>
