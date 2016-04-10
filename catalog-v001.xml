@@ -7,6 +7,6 @@
     <uri id="Imports Wizard Entry" name="http://www.opengis.net/ont/geosparql" uri="http://schemas.opengis.net/geosparql/1.0/geosparql_vocab_all.rdf"/>
     <uri id="Imports Wizard Entry" name="http://geo.linkeddata.es/ontology/" uri="http://geo.linkeddata.es/ontology-content/geolinkeddata.owl"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1460301822322" name="http://geo.linkeddata.es/def/feature" uri="BTN100.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1460304929450" name="http://geo.linkeddata.es/def/feature" uri="BTN100.owl"/>
     </group>
 </catalog>
