@@ -6201,6 +6201,18 @@ waters is measured, extending where appropriate up to the outer limit of transit
     
 
 
+    <!-- http://geo.linkeddata.es/ontology/hydro.owl#Bahia -->
+
+    <owl:Class rdf:about="&hydro;Bahia">
+        <rdfs:label xml:lang="en">Bay</rdfs:label>
+        <rdfs:label xml:lang="es">Bahía</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/Morfologia"/>
+        <dc:source xml:lang="es">Diccionario de la Real Academia Española</dc:source>
+        <rdfs:comment xml:lang="es">Entrada natural de mar en la costa, de extensión considerable pero generalmente menor que la de un golfo.</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://geo.linkeddata.es/ontology/hydro.owl#Cabo -->
 
     <owl:Class rdf:about="&hydro;Cabo">
@@ -6219,9 +6231,32 @@ waters is measured, extending where appropriate up to the outer limit of transit
     <owl:Class rdf:about="&hydro;Cala">
         <rdfs:label xml:lang="en">creek</rdfs:label>
         <rdfs:label xml:lang="es">Cala</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/Morfologia"/>
+        <rdfs:subClassOf rdf:resource="&hydro;Ensenada"/>
         <dc:source xml:lang="es">Diccionario de la Real Academia Española</dc:source>
         <rdfs:comment xml:lang="es">Ensenada pequeña</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/hydro.owl#Costa -->
+
+    <owl:Class rdf:about="&hydro;Costa">
+        <rdfs:label xml:lang="en">seashore</rdfs:label>
+        <rdfs:label xml:lang="es">Costa</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/Morfologia"/>
+        <dc:source xml:lang="es">Diccionario de la Real Academia Española</dc:source>
+        <rdfs:comment xml:lang="es">Orilla del mar, de un río, de un lago, etc., y tierra que está cerca de ella.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/hydro.owl#Ensenada -->
+
+    <owl:Class rdf:about="&hydro;Ensenada">
+        <rdfs:label xml:lang="es">Ensenada</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/Morfologia"/>
+        <dc:source xml:lang="es">Diccionario de la Real Academia Española</dc:source>
+        <rdfs:comment xml:lang="es">Parte de mar que entra en la tierra.</rdfs:comment>
     </owl:Class>
     
 
@@ -6233,6 +6268,29 @@ waters is measured, extending where appropriate up to the outer limit of transit
         <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/AguasCorrientesArtificiales"/>
         <rdfs:comment xml:lang="es">Compartimento, con puertas de entrada y salida, que se construye en un canal de navegación para que los barcos puedan pasar de un tramo a otro de diferente nivel, para lo cual se llena de agua o se vacía el espacio comprendido entre dichas puertas</rdfs:comment>
         <dc:source xml:lang="es">Diccionario de la Real Academia Española</dc:source>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/hydro.owl#Estrecho -->
+
+    <owl:Class rdf:about="&hydro;Estrecho">
+        <rdfs:label xml:lang="en">Strait</rdfs:label>
+        <rdfs:label xml:lang="es">Estrecho</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/Morfologia"/>
+        <dc:source xml:lang="es">Diccionario de la Real Academia Española</dc:source>
+        <rdfs:comment xml:lang="es">Paso angosto comprendido entre dos tierras y por el cual se comunica un mar con otro</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/hydro.owl#Golfo -->
+
+    <owl:Class rdf:about="&hydro;Golfo">
+        <rdfs:label xml:lang="es">Golfo</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/Morfologia"/>
+        <dc:source xml:lang="es">Diccionario de la Real Academia Española</dc:source>
+        <rdfs:comment xml:lang="es">Gran porción de mar que se interna en la tierra entre dos cabos.</rdfs:comment>
     </owl:Class>
     
 
@@ -6279,6 +6337,18 @@ waters is measured, extending where appropriate up to the outer limit of transit
         <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/Morfologia"/>
         <dc:source xml:lang="es">Diccionario de la Real Academia Española</dc:source>
         <rdfs:comment xml:lang="es">Lengua de tierra, generalmente baja y de poca extensión, que penetra en el mar.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/hydro.owl#Rada -->
+
+    <owl:Class rdf:about="&hydro;Rada">
+        <rdfs:label xml:lang="en">Roadstead</rdfs:label>
+        <rdfs:label xml:lang="es">Rada</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/Morfologia"/>
+        <rdfs:comment xml:lang="es">Bahía, ensenada, donde las naves pueden estar ancladas al abrigo de algunos viento</rdfs:comment>
+        <dc:source xml:lang="es">Diccionario de la Real Academia Española</dc:source>
     </owl:Class>
     
 
