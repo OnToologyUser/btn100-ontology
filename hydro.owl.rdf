@@ -9,6 +9,7 @@
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY geopolitical "http://aims.fao.org/aos/geopolitical.owl#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY hydro "http://geo.linkeddata.es/ontology/hydro.owl#" >
     <!ENTITY hydro-ontology "http://geo.linkeddata.es/ontology/hydro-ontology.owl#" >
 ]>
 
@@ -22,7 +23,8 @@
      xmlns:geopolitical="http://aims.fao.org/aos/geopolitical.owl#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:hydro="http://geo.linkeddata.es/ontology/hydro.owl#">
     <owl:Ontology rdf:about="http://geo.linkeddata.es/ontology/hydro.owl">
         <dc:creator rdf:datatype="&xsd;string">Luis Manuel Vilches-Blázquez</dc:creator>
         <dc:title rdf:datatype="&xsd;string">hydrOntology</dc:title>
@@ -2489,6 +2491,33 @@ Aplicar tb a segmentoRio columna Regimen</rdfs:comment>
     
 
 
+    <!-- http://geo.linkeddata.es/ontology/hydro.owl#importancia_cartografica -->
+
+    <owl:DatatypeProperty rdf:about="&hydro;importancia_cartografica">
+        <rdfs:label xml:lang="es">importancia_cartografica</rdfs:label>
+        <rdfs:domain rdf:resource="&hydro;Isla"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first rdf:datatype="&xsd;string">importante</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first rdf:datatype="&xsd;string">no definida</rdf:first>
+                                <rdf:rest rdf:resource="&rdf;nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -4683,7 +4712,7 @@ waters is measured, extending where appropriate up to the outer limit of transit
     <owl:Class rdf:about="http://geo.linkeddata.es/ontology/IslaFluvial">
         <rdfs:label xml:lang="en">River island</rdfs:label>
         <rdfs:label xml:lang="es">Isla fluvial</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/Morfologia"/>
+        <rdfs:subClassOf rdf:resource="&hydro;Isla"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://geo.linkeddata.es/ontology/parte_de"/>
@@ -6168,6 +6197,29 @@ waters is measured, extending where appropriate up to the outer limit of transit
         </owl:equivalentClass>
         <dc:source rdf:datatype="&xsd;string">Gonzalez Bernaldez, Fernando. (1992) Los paisajes del agua. Terminologia popular de los humedales. Madrid: J.M. Reyero Editor. 257 p. ISBN: 84-604-3756-6.</dc:source>
         <rdfs:comment rdf:datatype="&xsd;string">Terreno sometido a una descarga difusa de agua subterranea sin que se manifieste forzosamente un flujo copioso de agua liquida, aunque suele ser inundable y estar generalmente cubierto de vegetacion freatofitica tipo soto o juncal</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/hydro.owl#Isla -->
+
+    <owl:Class rdf:about="&hydro;Isla">
+        <rdfs:label xml:lang="en">Island</rdfs:label>
+        <rdfs:label xml:lang="es">Isla</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/Morfologia"/>
+        <dc:source xml:lang="es">Diccionario de la Real Academia Española</dc:source>
+        <rdfs:comment xml:lang="es">Porción de tierra rodeada de agua por todas partes.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/hydro.owl#IslaMaritima -->
+
+    <owl:Class rdf:about="&hydro;IslaMaritima">
+        <rdfs:label xml:lang="es">Isla Marítima</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&hydro;Isla"/>
+        <dc:source xml:lang="es">Catálogo de Objetos Geográficos BTN100</dc:source>
+        <rdfs:comment xml:lang="es">Porción de tierra rodeada de agua del mar</rdfs:comment>
     </owl:Class>
     
 
