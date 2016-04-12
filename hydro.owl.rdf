@@ -6201,6 +6201,17 @@ waters is measured, extending where appropriate up to the outer limit of transit
     
 
 
+    <!-- http://geo.linkeddata.es/ontology/hydro.owl#Esclusa -->
+
+    <owl:Class rdf:about="&hydro;Esclusa">
+        <rdfs:label xml:lang="es">Esclusa</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/AguasCorrientesArtificiales"/>
+        <rdfs:comment xml:lang="es">Compartimento, con puertas de entrada y salida, que se construye en un canal de navegación para que los barcos puedan pasar de un tramo a otro de diferente nivel, para lo cual se llena de agua o se vacía el espacio comprendido entre dichas puertas</rdfs:comment>
+        <dc:source xml:lang="es">Diccionario de la Real Academia Española</dc:source>
+    </owl:Class>
+    
+
+
     <!-- http://geo.linkeddata.es/ontology/hydro.owl#Isla -->
 
     <owl:Class rdf:about="&hydro;Isla">
