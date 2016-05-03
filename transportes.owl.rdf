@@ -1193,11 +1193,23 @@ Versión 1.0.</terms:source>
     
 
 
+    <!-- http://geo.linkeddata.es/ontology/transportes.owl#PasoANivel -->
+
+    <owl:Class rdf:about="&ontology;transportes.owl#PasoANivel">
+        <rdfs:label xml:lang="es">Paso a nivel</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <terms:source xml:lang="es">Anexo A: Catálogo de Objetos Geográficos de BTN100.</terms:source>
+        <rdfs:comment xml:lang="es">Cruce entre carretera y ferrocarril, que se produce al mismo nivel.</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://geo.linkeddata.es/ontology/transportes.owl#PistaDeAterrizaje -->
 
     <owl:Class rdf:about="&ontology;transportes.owl#PistaDeAterrizaje">
         <rdfs:label xml:lang="es">Pista de aterrizaje</rdfs:label>
         <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <terms:source xml:lang="es">Anexo A: Catálogo de Objetos Geográficos de BTN100.</terms:source>
         <rdfs:comment xml:lang="es">Espacio dentro de las instalaciones de un aeropuerto, donde circulan los aviones y otros aparatos de navegación aérea, y desde donde se realiza el despegue/aterrizaje.</rdfs:comment>
     </owl:Class>
     
