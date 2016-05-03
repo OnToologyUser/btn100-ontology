@@ -149,15 +149,6 @@
     
 
 
-    <!-- http://geo.linkeddata.es/ontology/geopolitica.owl#ComunidadJurisdiccional -->
-
-    <owl:Class rdf:about="&ontology;geopolitica.owl#ComunidadJurisdiccional">
-        <rdfs:label xml:lang="es">Comunidad Jurisdiccional</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&geopolitical;territory"/>
-    </owl:Class>
-    
-
-
     <!-- http://geo.linkeddata.es/ontology/geopolitica.owl#Nacion -->
 
     <owl:Class rdf:about="&ontology;geopolitica.owl#Nacion">
