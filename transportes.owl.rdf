@@ -1193,6 +1193,16 @@ Versión 1.0.</terms:source>
     
 
 
+    <!-- http://geo.linkeddata.es/ontology/transportes.owl#PistaDeAterrizaje -->
+
+    <owl:Class rdf:about="&ontology;transportes.owl#PistaDeAterrizaje">
+        <rdfs:label xml:lang="es">Pista de aterrizaje</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:comment xml:lang="es">Espacio dentro de las instalaciones de un aeropuerto, donde circulan los aviones y otros aparatos de navegación aérea, y desde donde se realiza el despegue/aterrizaje.</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://geo.linkeddata.es/ontology/transportes.owl#Teleferico -->
 
     <owl:Class rdf:about="&ontology;transportes.owl#Teleferico">
