@@ -170,6 +170,25 @@
     
 
 
+    <!-- http://geo.linkeddata.es/ontology/transportes.owl#codigoDeEstacion -->
+
+    <owl:DatatypeProperty rdf:about="&ontology;transportes.owl#codigoDeEstacion">
+        <rdfs:label xml:lang="es">código de estación</rdfs:label>
+        <rdfs:domain rdf:resource="&ontology;transportes.owl#EnclaveFerroviario"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="&xsd;string"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:length rdf:datatype="&xsd;integer">6</xsd:length>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://geo.linkeddata.es/ontology/transportes.owl#codigoDeVia -->
 
     <owl:DatatypeProperty rdf:about="&ontology;transportes.owl#codigoDeVia">
@@ -521,6 +540,7 @@ Tabla INTERNA</terms:source>
     <owl:DatatypeProperty rdf:about="&ontology;transportes.owl#trafico">
         <rdfs:label xml:lang="es">tráfico</rdfs:label>
         <rdfs:comment xml:lang="es">Tipo de tráfico de la estación</rdfs:comment>
+        <rdfs:domain rdf:resource="&ontology;transportes.owl#EnclaveFerroviario"/>
         <rdfs:domain rdf:resource="&ontology;transportes.owl#FerrocarrilConvencional"/>
         <rdfs:range>
             <rdfs:Datatype>
@@ -690,6 +710,9 @@ Tabla INTERNA</terms:source>
     <owl:Class rdf:about="&ontology;EstacionDeFerrocarril">
         <rdfs:label xml:lang="en">Train station</rdfs:label>
         <rdfs:label xml:lang="es">Estación de ferrocarril</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ontology;transportes.owl#EnclaveFerroviario"/>
+        <terms:source xml:lang="es">Administrador de Infraestructuras Ferroviarias (ADIF)</terms:source>
+        <rdfs:comment xml:lang="es">Conjunto de instalaciones de vías y agujas desde las que se coordina el tráfico ferroviario, tanto de trenes de viajeros como de mercancías y maniobras, y da servicio comercial de todo tipo a los usuarios del ferrocarril.</rdfs:comment>
     </owl:Class>
     
 
@@ -763,6 +786,30 @@ Tabla INTERNA</terms:source>
     
 
 
+    <!-- http://geo.linkeddata.es/ontology/transportes.owl#Apartadero -->
+
+    <owl:Class rdf:about="&ontology;transportes.owl#Apartadero">
+        <rdfs:label xml:lang="es">Apartadero</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ontology;transportes.owl#EnclaveFerroviario"/>
+        <terms:source xml:lang="es">Administrador de Infraestructuras Ferroviarias (ADIF)</terms:source>
+        <rdfs:comment xml:lang="es">Son estaciones de poco tráfico de viajeros y cuyo objetivo fundamental es la regulación del tráfico ferroviario, posibilitando la realización de cruces de trenes, adelantamientos, etc.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Vía corta derivada de la principal, que sirve para apartar en ella trenes, coches, vagones, tranvías y/o locomotoras.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/transportes.owl#Apeadero -->
+
+    <owl:Class rdf:about="&ontology;transportes.owl#Apeadero">
+        <rdfs:label xml:lang="es">Apeadero</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ontology;transportes.owl#EnclaveFerroviario"/>
+        <terms:source xml:lang="es">Administrador de Infraestructuras Ferroviarias (ADIF)</terms:source>
+        <rdfs:comment xml:lang="es">En los ferrocarriles, sitio de la vía preparado para el servicio público, pero sin apartadero ni los demás accesorios de una estación.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Son dependencias con servicio exclusivo para la subida y bajada de viajeros. Son muy habituales en los grandes núcleos de población, y no tienen personal.</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://geo.linkeddata.es/ontology/transportes.owl#Autovia -->
 
     <owl:Class rdf:about="&ontology;transportes.owl#Autovia">
@@ -809,6 +856,17 @@ Tabla INTERNA</terms:source>
         <terms:source xml:lang="es">ESPECIFICACIONES DEL PRODUCTO DE DATOS BTN100
 Versión 1.0.</terms:source>
         <rdfs:comment xml:lang="es">Vía que se encuentra localizada dentro de un núcleo de población o Diseminado superficial, y que ayuda a identificar la estructura de manzanas de dicho núcleo/diseminado.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/transportes.owl#Cargadero -->
+
+    <owl:Class rdf:about="&ontology;transportes.owl#Cargadero">
+        <rdfs:label xml:lang="es">Cargadero</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ontology;transportes.owl#EnclaveFerroviario"/>
+        <terms:source xml:lang="es">Administrador de Infraestructuras Ferroviarias (ADIF)</terms:source>
+        <rdfs:comment xml:lang="es">Instalación ferroviaria que permite el acceso de mercancías desde los trenes a los barcos. Se distingue de una estación en que no es parte de la gestión de la circulación, ni tiene que disponer de desvíos y señales.</rdfs:comment>
     </owl:Class>
     
 
@@ -887,6 +945,16 @@ Versión 1.0.</terms:source>
             </owl:Class>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="es">Vía de comunicación dedicada al tráfico rodado, cuya competencia corresponde a la Administración Central del Estado, clasificada como carretera de primer orden por el Ministerio de Fomento (Red de Interés General del Estado).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/transportes.owl#EnclaveFerroviario -->
+
+    <owl:Class rdf:about="&ontology;transportes.owl#EnclaveFerroviario">
+        <rdfs:label xml:lang="es">EnclaveFerroviario</rdfs:label>
+        <terms:source xml:lang="es">Administrador de Infraestructuras Ferroviarias (ADIF)</terms:source>
+        <rdfs:comment xml:lang="es">instalaciones necesarias para el  funcionamiento del ferrocarril en todas sus faceta</rdfs:comment>
     </owl:Class>
     
 
@@ -987,6 +1055,17 @@ Versión 1.0.</terms:source>
         <rdfs:label xml:lang="es">Via verde</rdfs:label>
         <rdfs:subClassOf rdf:resource="&ontology;transportes.owl#Itinerario"/>
         <rdfs:comment xml:lang="es">Itinerario catalogado como Vía Verde</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/transportes.owl#TerminalDeMercancia -->
+
+    <owl:Class rdf:about="&ontology;transportes.owl#TerminalDeMercancia">
+        <rdfs:label xml:lang="es">Suministro</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ontology;transportes.owl#EnclaveFerroviario"/>
+        <terms:source xml:lang="es">Administrador de Infraestructuras Ferroviarias (ADIF)</terms:source>
+        <rdfs:comment xml:lang="es">Son estaciones que aparte de regular el tráfico, tienen como misión principal la prestación de servicios de mercancías. Disponen de todas las instalaciones necesarias para la recepción, clasificación y formación, y expedición de los trenes de mercancías convencionales, que circulan entre ellas y/o a otros destinos nacionales e internacionales.</rdfs:comment>
     </owl:Class>
     
 
