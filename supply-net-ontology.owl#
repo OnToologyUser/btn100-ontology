@@ -1,0 +1,144 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY terms "http://purl.org/dc/terms/" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY supply-net-ontology "http://geo.linkeddata.es/ontology/supply-net-ontology.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://geo.linkeddata.es/ontology/supply-net-ontology.owl#"
+     xml:base="http://geo.linkeddata.es/ontology/supply-net-ontology.owl"
+     xmlns:supply-net-ontology="http://geo.linkeddata.es/ontology/supply-net-ontology.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://geo.linkeddata.es/ontology/supply-net-ontology.owl#">
+        <owl:imports rdf:resource="http://geo.linkeddata.es/ontology/top.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/supply-net-ontology.owl#situacion -->
+
+    <owl:DatatypeProperty rdf:about="&supply-net-ontology;situacion">
+        <rdfs:label xml:lang="es">situacion</rdfs:label>
+        <rdfs:domain rdf:resource="&supply-net-ontology;ConduccionDeCombustible"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first rdf:datatype="&xsd;string">elevado</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first rdf:datatype="&xsd;string">en superficie</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&rdf;List"/>
+                                        <rdf:first rdf:datatype="&xsd;string">sin clasificar</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                <rdf:first rdf:datatype="&xsd;string">subterraneo</rdf:first>
+                                                <rdf:rest rdf:resource="&rdf;nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/supply-net-ontology.owl#ConduccionDeCombustible -->
+
+    <owl:Class rdf:about="&supply-net-ontology;ConduccionDeCombustible">
+        <rdfs:label xml:lang="es">ConduccionDeCombustible</rdfs:label>
+        <terms:source xml:lang="es">Anexo A: Catálogo de Objetos Geográficos de BTN100.</terms:source>
+        <rdfs:comment xml:lang="es">Tubería e instalaciones conexas utilizadas para el transporte de combustibles.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/supply-net-ontology.owl#Gaseoducto -->
+
+    <owl:Class rdf:about="&supply-net-ontology;Gaseoducto">
+        <rdfs:label xml:lang="es">Gaseoducto</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&supply-net-ontology;ConduccionDeCombustible"/>
+        <terms:source xml:lang="es">Diccionario de la Real Academia Espannola</terms:source>
+        <rdfs:comment xml:lang="es">Tubería de grueso calibre y gran longitud para conducir a distancia gas combustible, procedente por lo general de emanaciones naturales.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/supply-net-ontology.owl#Oleoducto -->
+
+    <owl:Class rdf:about="&supply-net-ontology;Oleoducto">
+        <rdfs:label xml:lang="es">Oleoducto</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&supply-net-ontology;ConduccionDeCombustible"/>
+        <terms:source xml:lang="es">Diccionario de la Real Academia Espannola</terms:source>
+        <rdfs:comment xml:lang="es">Tubería provista de bombas y otros aparatos para conducir el petróleo a larga distancia.</rdfs:comment>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
+
