@@ -3,6 +3,7 @@
 
 <!DOCTYPE rdf:RDF [
     <!ENTITY terms "http://purl.org/dc/terms/" >
+    <!ENTITY ontology2 "http://dbpedia.org/ontology/" >
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
     <!ENTITY ontology "http://geo.linkeddata.es/ontology/" >
@@ -20,8 +21,10 @@
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:ontology="http://geo.linkeddata.es/ontology/">
+     xmlns:ontology="http://geo.linkeddata.es/ontology/"
+     xmlns:ontology2="http://dbpedia.org/ontology/">
     <owl:Ontology rdf:about="&ontology;transportes.owl">
+        <owl:imports rdf:resource="&ontology2;unloCode"/>
         <owl:imports rdf:resource="&ontology;top.owl"/>
     </owl:Ontology>
     
@@ -57,6 +60,14 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://dbpedia.org/ontology/unloCode -->
+
+    <rdf:Description rdf:about="&ontology2;unloCode">
+        <rdfs:domain rdf:resource="&ontology;Puerto"/>
+    </rdf:Description>
     
 
 
@@ -211,6 +222,32 @@
     
 
 
+    <!-- http://geo.linkeddata.es/ontology/transportes.owl#competenciaPortuaria -->
+
+    <owl:DatatypeProperty rdf:about="&ontology;transportes.owl#competenciaPortuaria">
+        <rdfs:label xml:lang="es">competencia portuaria</rdfs:label>
+        <rdfs:domain rdf:resource="&ontology;Puerto"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first rdf:datatype="&xsd;string">no definido</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first rdf:datatype="&xsd;string">puerto del estado</rdf:first>
+                                <rdf:rest rdf:resource="&rdf;nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://geo.linkeddata.es/ontology/transportes.owl#electrificacion -->
 
     <owl:DatatypeProperty rdf:about="&ontology;transportes.owl#electrificacion">
@@ -252,6 +289,7 @@ Tabla ESTADO</terms:source>
         <rdfs:comment xml:lang="es">Determina el estado de uso.</rdfs:comment>
         <rdfs:domain rdf:resource="&ontology;Autopista"/>
         <rdfs:domain rdf:resource="&ontology;Carretera"/>
+        <rdfs:domain rdf:resource="&ontology;Puerto"/>
         <rdfs:domain rdf:resource="&ontology;transportes.owl#Autovia"/>
         <rdfs:domain rdf:resource="&ontology;transportes.owl#Enlace"/>
         <rdfs:domain rdf:resource="&ontology;transportes.owl#Ferrocarril"/>
@@ -751,6 +789,20 @@ Tabla INTERNA</terms:source>
     <owl:Class rdf:about="&ontology;Puerto">
         <rdfs:label xml:lang="en">Port</rdfs:label>
         <rdfs:label xml:lang="es">Puerto</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&ontology;transportes.owl#estado"/>
+                        <owl:hasValue rdf:datatype="&xsd;string">en construcción</owl:hasValue>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&ontology;transportes.owl#estado"/>
+                        <owl:hasValue rdf:datatype="&xsd;string">en uso</owl:hasValue>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="es">Lugar en la costa o en las orillas de un río que por sus características, naturales o artificiales, sirve para que las embarcaciones realicen operaciones de carga y descarga, embarque y desembarco, etc.</rdfs:comment>
     </owl:Class>
     
