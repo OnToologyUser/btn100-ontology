@@ -87,6 +87,50 @@
     
 
 
+    <!-- http://geo.linkeddata.es/ontology/transportes.owl#anchoDeVia -->
+
+    <owl:DatatypeProperty rdf:about="&ontology;transportes.owl#anchoDeVia">
+        <rdfs:label xml:lang="es">ancho de vía</rdfs:label>
+        <rdfs:domain rdf:resource="&ontology;transportes.owl#FerrocarrilConvencional"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first rdf:datatype="&xsd;string">desconocido</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first rdf:datatype="&xsd;string">ibérico</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&rdf;List"/>
+                                        <rdf:first rdf:datatype="&xsd;string">internacional</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                <rdf:first rdf:datatype="&xsd;string">mixto</rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="&rdf;List"/>
+                                                        <rdf:first rdf:datatype="&xsd;string">métrico</rdf:first>
+                                                        <rdf:rest rdf:resource="&rdf;nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://geo.linkeddata.es/ontology/transportes.owl#categoriaVial -->
 
     <owl:DatatypeProperty rdf:about="&ontology;transportes.owl#categoriaVial">
@@ -126,6 +170,60 @@
     
 
 
+    <!-- http://geo.linkeddata.es/ontology/transportes.owl#codigoDeVia -->
+
+    <owl:DatatypeProperty rdf:about="&ontology;transportes.owl#codigoDeVia">
+        <rdfs:label xml:lang="es">código de vía</rdfs:label>
+        <rdfs:comment xml:lang="es">Código de la vía (según ADIF)</rdfs:comment>
+        <rdfs:domain rdf:resource="&ontology;transportes.owl#Ferrocarril"/>
+        <rdfs:domain rdf:resource="&ontology;transportes.owl#FerrocarrilConvencional"/>
+        <rdfs:domain rdf:resource="&ontology;transportes.owl#FerrocarrilDeAltaVelocidad"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="&xsd;string"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:length rdf:datatype="&xsd;integer">6</xsd:length>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/transportes.owl#electrificacion -->
+
+    <owl:DatatypeProperty rdf:about="&ontology;transportes.owl#electrificacion">
+        <rdfs:label xml:lang="es">electrificación</rdfs:label>
+        <rdfs:domain rdf:resource="&ontology;transportes.owl#FerrocarrilConvencional"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first rdf:datatype="&xsd;string">desconocido</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first rdf:datatype="&xsd;string">electrificada</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&rdf;List"/>
+                                        <rdf:first rdf:datatype="&xsd;string">no electrificada</rdf:first>
+                                        <rdf:rest rdf:resource="&rdf;nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://geo.linkeddata.es/ontology/transportes.owl#estado -->
 
     <owl:DatatypeProperty rdf:about="&ontology;transportes.owl#estado">
@@ -137,6 +235,9 @@ Tabla ESTADO</terms:source>
         <rdfs:domain rdf:resource="&ontology;Carretera"/>
         <rdfs:domain rdf:resource="&ontology;transportes.owl#Autovia"/>
         <rdfs:domain rdf:resource="&ontology;transportes.owl#Enlace"/>
+        <rdfs:domain rdf:resource="&ontology;transportes.owl#Ferrocarril"/>
+        <rdfs:domain rdf:resource="&ontology;transportes.owl#FerrocarrilConvencional"/>
+        <rdfs:domain rdf:resource="&ontology;transportes.owl#FerrocarrilDeAltaVelocidad"/>
         <rdfs:range>
             <rdfs:Datatype>
                 <owl:oneOf>
@@ -167,7 +268,7 @@ Tabla ESTADO</terms:source>
     <!-- http://geo.linkeddata.es/ontology/transportes.owl#itinerarioEuropeo -->
 
     <owl:DatatypeProperty rdf:about="&ontology;transportes.owl#itinerarioEuropeo">
-        <rdfs:label xml:lang="es">itinerarioEuropeo</rdfs:label>
+        <rdfs:label xml:lang="es">itinerario europeo</rdfs:label>
         <terms:source xml:lang="es">Anexo A: Catálogo de Objetos Geográficos de BTN100.
 Tabla ITINERARIO EUROPEO</terms:source>
         <rdfs:comment xml:lang="es">Indica si el tramo de vía perteneciente a la Red de Carreteras Europeas</rdfs:comment>
@@ -195,6 +296,38 @@ Tabla ITINERARIO EUROPEO</terms:source>
     
 
 
+    <!-- http://geo.linkeddata.es/ontology/transportes.owl#numeroDeVias -->
+
+    <owl:DatatypeProperty rdf:about="&ontology;transportes.owl#numeroDeVias">
+        <rdfs:label xml:lang="es">número de vías</rdfs:label>
+        <rdfs:domain rdf:resource="&ontology;transportes.owl#FerrocarrilConvencional"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first rdf:datatype="&xsd;string">desconocido</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first rdf:datatype="&xsd;string">doble (una via para cada sentido)</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&rdf;List"/>
+                                        <rdf:first rdf:datatype="&xsd;string">única (via de doble sentido)</rdf:first>
+                                        <rdf:rest rdf:resource="&rdf;nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://geo.linkeddata.es/ontology/transportes.owl#rutaTenT -->
 
     <owl:DatatypeProperty rdf:about="&ontology;transportes.owl#rutaTenT">
@@ -206,6 +339,7 @@ Transporte (TEN-T).</rdfs:comment>
         <rdfs:domain rdf:resource="&ontology;Autopista"/>
         <rdfs:domain rdf:resource="&ontology;Carretera"/>
         <rdfs:domain rdf:resource="&ontology;transportes.owl#Autovia"/>
+        <rdfs:domain rdf:resource="&ontology;transportes.owl#FerrocarrilConvencional"/>
         <rdfs:range>
             <rdfs:Datatype>
                 <owl:oneOf>
@@ -238,6 +372,7 @@ Tabla SITUACION</terms:source>
         <rdfs:domain rdf:resource="&ontology;Carretera"/>
         <rdfs:domain rdf:resource="&ontology;transportes.owl#Autovia"/>
         <rdfs:domain rdf:resource="&ontology;transportes.owl#Enlace"/>
+        <rdfs:domain rdf:resource="&ontology;transportes.owl#FerrocarrilConvencional"/>
         <rdfs:range>
             <rdfs:Datatype>
                 <owl:oneOf>
@@ -381,6 +516,45 @@ Tabla INTERNA</terms:source>
     
 
 
+    <!-- http://geo.linkeddata.es/ontology/transportes.owl#trafico -->
+
+    <owl:DatatypeProperty rdf:about="&ontology;transportes.owl#trafico">
+        <rdfs:label xml:lang="es">tráfico</rdfs:label>
+        <rdfs:comment xml:lang="es">Tipo de tráfico de la estación</rdfs:comment>
+        <rdfs:domain rdf:resource="&ontology;transportes.owl#FerrocarrilConvencional"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first rdf:datatype="&xsd;string">desconocido</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first rdf:datatype="&xsd;string">mercancías</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&rdf;List"/>
+                                        <rdf:first rdf:datatype="&xsd;string">viajeros</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                <rdf:first rdf:datatype="&xsd;string">viajeros y mercancías</rdf:first>
+                                                <rdf:rest rdf:resource="&rdf;nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -433,12 +607,12 @@ Tabla INTERNA</terms:source>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="&ontology;transportes.owl#estado"/>
-                        <owl:hasValue rdf:datatype="&xsd;string">en construcción</owl:hasValue>
+                        <owl:onProperty rdf:resource="&ontology;transportes.owl#tipoDeCalzada"/>
+                        <owl:hasValue rdf:datatype="&xsd;string">doble (dos calzadas separadas y paralelas, con sentidos distintos)</owl:hasValue>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="&ontology;transportes.owl#estado"/>
-                        <owl:hasValue rdf:datatype="&xsd;string">en uso</owl:hasValue>
+                        <owl:onProperty rdf:resource="&ontology;transportes.owl#tipoDeCalzada"/>
+                        <owl:hasValue rdf:datatype="&xsd;string">sentido único (calzada de sentido único no contigua a la del contrario)</owl:hasValue>
                     </owl:Restriction>
                 </owl:unionOf>
             </owl:Class>
@@ -447,12 +621,12 @@ Tabla INTERNA</terms:source>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="&ontology;transportes.owl#tipoDeCalzada"/>
-                        <owl:hasValue rdf:datatype="&xsd;string">doble (dos calzadas separadas y paralelas, con sentidos distintos)</owl:hasValue>
+                        <owl:onProperty rdf:resource="&ontology;transportes.owl#estado"/>
+                        <owl:hasValue rdf:datatype="&xsd;string">en construcción</owl:hasValue>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="&ontology;transportes.owl#tipoDeCalzada"/>
-                        <owl:hasValue rdf:datatype="&xsd;string">sentido único (calzada de sentido único no contigua a la del contrario)</owl:hasValue>
+                        <owl:onProperty rdf:resource="&ontology;transportes.owl#estado"/>
+                        <owl:hasValue rdf:datatype="&xsd;string">en uso</owl:hasValue>
                     </owl:Restriction>
                 </owl:unionOf>
             </owl:Class>
@@ -648,6 +822,20 @@ Versión 1.0.</terms:source>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <owl:Restriction>
+                        <owl:onProperty rdf:resource="&ontology;transportes.owl#tipoDeCalzada"/>
+                        <owl:hasValue rdf:datatype="&xsd;string">convencional (una calzada con doble sentido de circulación)</owl:hasValue>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&ontology;transportes.owl#tipoDeCalzada"/>
+                        <owl:hasValue rdf:datatype="&xsd;string">sentido único (calzada de sentido único no contigua a la del contrario)</owl:hasValue>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
                         <owl:onProperty rdf:resource="&ontology;transportes.owl#tipoDeCompetenciaVial"/>
                         <owl:hasValue rdf:datatype="&xsd;string">autonómica</owl:hasValue>
                     </owl:Restriction>
@@ -658,20 +846,6 @@ Versión 1.0.</terms:source>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&ontology;transportes.owl#tipoDeCompetenciaVial"/>
                         <owl:hasValue rdf:datatype="&xsd;string">provincial</owl:hasValue>
-                    </owl:Restriction>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="&ontology;transportes.owl#tipoDeCalzada"/>
-                        <owl:hasValue rdf:datatype="&xsd;string">convencional (una calzada con doble sentido de circulación)</owl:hasValue>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="&ontology;transportes.owl#tipoDeCalzada"/>
-                        <owl:hasValue rdf:datatype="&xsd;string">sentido único (calzada de sentido único no contigua a la del contrario)</owl:hasValue>
                     </owl:Restriction>
                 </owl:unionOf>
             </owl:Class>
@@ -687,6 +861,18 @@ Versión 1.0.</terms:source>
         <rdfs:label xml:lang="es">CarreteraNacional</rdfs:label>
         <rdfs:subClassOf rdf:resource="&ontology;Carretera"/>
         <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ontology;transportes.owl#categoriaVial"/>
+                <owl:hasValue rdf:datatype="&xsd;string">primer orden</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ontology;transportes.owl#tipoDeCompetenciaVial"/>
+                <owl:hasValue rdf:datatype="&xsd;string">estatal</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <owl:Restriction>
@@ -699,18 +885,6 @@ Versión 1.0.</terms:source>
                     </owl:Restriction>
                 </owl:unionOf>
             </owl:Class>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&ontology;transportes.owl#tipoDeCompetenciaVial"/>
-                <owl:hasValue rdf:datatype="&xsd;string">estatal</owl:hasValue>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&ontology;transportes.owl#categoriaVial"/>
-                <owl:hasValue rdf:datatype="&xsd;string">primer orden</owl:hasValue>
-            </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="es">Vía de comunicación dedicada al tráfico rodado, cuya competencia corresponde a la Administración Central del Estado, clasificada como carretera de primer orden por el Ministerio de Fomento (Red de Interés General del Estado).</rdfs:comment>
     </owl:Class>
@@ -737,6 +911,52 @@ Versión 1.0.</terms:source>
         </rdfs:subClassOf>
         <terms:source xml:lang="es">Anexo A: Catálogo de Objetos Geográficos de BTN100.</terms:source>
         <rdfs:comment xml:lang="es">Tramo que une dos vías de nombre distinto y permite el acceso de una a otra.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/transportes.owl#Ferrocarril -->
+
+    <owl:Class rdf:about="&ontology;transportes.owl#Ferrocarril">
+        <rdfs:label xml:lang="es">Ferrocarril</rdfs:label>
+        <rdfs:comment xml:lang="es">Camino con dos carriles de hierro paralelos, sobre los cuales ruedan los trenes.</rdfs:comment>
+        <terms:source xml:lang="es">Diccionario de la Real Academia Española</terms:source>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/transportes.owl#FerrocarrilConvencional -->
+
+    <owl:Class rdf:about="&ontology;transportes.owl#FerrocarrilConvencional">
+        <rdfs:label xml:lang="es">Tramo de vía convencional</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ontology;transportes.owl#Ferrocarril"/>
+        <terms:source xml:lang="es">Anexo A: Catálogo de Objetos Geográficos de BTN100.</terms:source>
+        <rdfs:comment xml:lang="es">Vía por la que circulan los trenes de RENFE que no pertenecen a la red AVE.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/transportes.owl#FerrocarrilDeAltaVelocidad -->
+
+    <owl:Class rdf:about="&ontology;transportes.owl#FerrocarrilDeAltaVelocidad">
+        <rdfs:label xml:lang="es">Tramo de vía de alta velocidad</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ontology;transportes.owl#Ferrocarril"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&ontology;transportes.owl#estado"/>
+                        <owl:hasValue rdf:datatype="&xsd;string">en construcción</owl:hasValue>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&ontology;transportes.owl#estado"/>
+                        <owl:hasValue rdf:datatype="&xsd;string">en uso</owl:hasValue>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <terms:source xml:lang="es">Anexo A: Catálogo de Objetos Geográficos de BTN100.</terms:source>
+        <rdfs:comment xml:lang="es">Tramo de vía por la que circula el Tren de alta velocidad de España (AVE).</rdfs:comment>
     </owl:Class>
     
 
