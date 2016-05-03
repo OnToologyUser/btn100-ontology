@@ -107,6 +107,79 @@
     
 
 
+    <!-- http://geo.linkeddata.es/ontology/supply-net-ontology.owl#CentralCicloCombinado -->
+
+    <owl:Class rdf:about="&supply-net-ontology;CentralCicloCombinado">
+        <rdfs:label xml:lang="es">CentralCicloCombinado</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&supply-net-ontology;CentralElectrica"/>
+        <rdfs:comment xml:lang="es"> La central térmica de ciclo combinado es aquella donde se genera electricidad mediante la utilización conjunta de dos turbinas:
+
+    Un turbogrupo de gas
+    Un turbogrupo de vapor
+</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/supply-net-ontology.owl#CentralElectrica -->
+
+    <owl:Class rdf:about="&supply-net-ontology;CentralElectrica">
+        <rdfs:label xml:lang="es">CentralElectrica</rdfs:label>
+        <rdfs:comment xml:lang="es">Conjunto de instalaciones utilizadas directa e indirectamente para la producción de energía eléctrica.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/supply-net-ontology.owl#CentralEolica -->
+
+    <owl:Class rdf:about="&supply-net-ontology;CentralEolica">
+        <rdfs:label xml:lang="es">CentralEolica</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&supply-net-ontology;CentralElectrica"/>
+        <rdfs:comment xml:lang="es">Instalacion industrial que constituye una agrupación de aerogeneradores que transforman la energía eólica en energía eléctrica.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/supply-net-ontology.owl#CentralHidraulica -->
+
+    <owl:Class rdf:about="&supply-net-ontology;CentralHidraulica">
+        <rdfs:label xml:lang="es">CentralHidraulica</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&supply-net-ontology;CentralElectrica"/>
+        <rdfs:comment xml:lang="es">Instalación empleada en la generación de energía eléctrica como resultado de la energía potencial gravitatoria que posee la masa de agua de un cauce natural en virtud de un desnivel, también conocido como «salto geodésico»</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/supply-net-ontology.owl#CentralNuclear -->
+
+    <owl:Class rdf:about="&supply-net-ontology;CentralNuclear">
+        <rdfs:label xml:lang="es">CentralNuclear</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&supply-net-ontology;CentralElectrica"/>
+        <rdfs:comment xml:lang="es">instalación industrial empleada para la generación de energía eléctrica a partir de energía nuclear. </rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/supply-net-ontology.owl#CentralSolar -->
+
+    <owl:Class rdf:about="&supply-net-ontology;CentralSolar">
+        <rdfs:label xml:lang="es">CentralSolar</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&supply-net-ontology;CentralElectrica"/>
+        <rdfs:comment xml:lang="es">Instalación industrial en la que, a partir del calentamiento de un fluido mediante radiación solar y su uso en un ciclo termodinámico convencional, se produce la potencia necesaria para mover un alternador para generación de energía eléctrica </rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/supply-net-ontology.owl#CentralTerminca -->
+
+    <owl:Class rdf:about="&supply-net-ontology;CentralTerminca">
+        <rdfs:label xml:lang="es">CentralTerminca</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&supply-net-ontology;CentralElectrica"/>
+        <rdfs:comment xml:lang="es"> instalación empleada en la generación de energía eléctrica a partir de la energía liberada en forma de calor, normalmente mediante la combustión de combustibles fósiles como petróleo, gas natural o carbón. Este calor es empleado por un ciclo termodinámico convencional para mover un alternador y producir energía eléctrica.</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://geo.linkeddata.es/ontology/supply-net-ontology.owl#ConduccionDeCombustible -->
 
     <owl:Class rdf:about="&supply-net-ontology;ConduccionDeCombustible">
@@ -124,6 +197,42 @@
         <rdfs:subClassOf rdf:resource="&supply-net-ontology;ConduccionDeCombustible"/>
         <terms:source xml:lang="es">Diccionario de la Real Academia Espannola</terms:source>
         <rdfs:comment xml:lang="es">Tubería de grueso calibre y gran longitud para conducir a distancia gas combustible, procedente por lo general de emanaciones naturales.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/supply-net-ontology.owl#LineaElectrica -->
+
+    <owl:Class rdf:about="&supply-net-ontology;LineaElectrica">
+        <rdfs:label xml:lang="es">LineaElectrica</rdfs:label>
+        <rdfs:comment xml:lang="es">Conjunto de hilos (o cables) y otras instalaciones con fines conducir energía eléctrica. Una Línea eléctrica está constituida tanto por el elemento conductor (usualmente cables de acero, cobre o aluminio) como por sus elementos de soporte (las torres de alta tensión).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/supply-net-ontology.owl#LineaElectricaAltaTension -->
+
+    <owl:Class rdf:about="&supply-net-ontology;LineaElectricaAltaTension">
+        <rdfs:label xml:lang="es">LineaElectricaAltaTension</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&supply-net-ontology;LineaElectrica"/>
+        <rdfs:comment xml:lang="es">Se considera instalación de alta tensión eléctrica aquella que genere, transporte, transforme, distribuya o utilice energía eléctrica con tensiones superiores a los siguientes límites:
+
+    Corriente alterna: Superior a 1000 voltios.
+    Corriente continua: Superior a 1500 voltios.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/supply-net-ontology.owl#LineaElectricaBajaTension -->
+
+    <owl:Class rdf:about="&supply-net-ontology;LineaElectricaBajaTension">
+        <rdfs:label xml:lang="es">LineaElectricaBajaTension</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&supply-net-ontology;LineaElectrica"/>
+        <rdfs:comment xml:lang="es"> se considera instalación de baja tensión eléctrica a aquella que distribuya o genere energía eléctrica para consumo propio y a las receptoras en los siguientes límites de tensiones nominales:
+
+    Tensión alterna: igual o inferior a 1000 voltios.
+    Tensión continua: igual o inferior a 1500 voltios.
+</rdfs:comment>
     </owl:Class>
     
 
