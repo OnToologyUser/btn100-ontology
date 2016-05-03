@@ -58,6 +58,38 @@
     
 
 
+    <!-- http://geo.linkeddata.es/ontology/supply-net-ontology.owl#componente -->
+
+    <owl:DatatypeProperty rdf:about="&supply-net-ontology;componente">
+        <rdfs:label xml:lang="es">componente</rdfs:label>
+        <rdfs:domain rdf:resource="&supply-net-ontology;EstacionDeTelecomunicacion"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first rdf:datatype="&xsd;string">desconocido</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first rdf:datatype="&xsd;string">emisor</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&rdf;List"/>
+                                        <rdf:first rdf:datatype="&xsd;string">repetidor</rdf:first>
+                                        <rdf:rest rdf:resource="&rdf;nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://geo.linkeddata.es/ontology/supply-net-ontology.owl#situacion -->
 
     <owl:DatatypeProperty rdf:about="&supply-net-ontology;situacion">
@@ -186,6 +218,42 @@
         <rdfs:label xml:lang="es">ConduccionDeCombustible</rdfs:label>
         <terms:source xml:lang="es">Anexo A: Catálogo de Objetos Geográficos de BTN100.</terms:source>
         <rdfs:comment xml:lang="es">Tubería e instalaciones conexas utilizadas para el transporte de combustibles.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/supply-net-ontology.owl#EstacionDeRadio -->
+
+    <owl:Class rdf:about="&supply-net-ontology;EstacionDeRadio">
+        <rdfs:label xml:lang="es">EstacionDeRadio</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&supply-net-ontology;EstacionDeTelecomunicacion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/supply-net-ontology.owl#EstacionDeTelecomunicacion -->
+
+    <owl:Class rdf:about="&supply-net-ontology;EstacionDeTelecomunicacion">
+        <rdfs:label xml:lang="es">EstacionDeTelecomunicacion</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/supply-net-ontology.owl#EstacionDeTelevision -->
+
+    <owl:Class rdf:about="&supply-net-ontology;EstacionDeTelevision">
+        <rdfs:label xml:lang="es">EstacionDeTelevision</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&supply-net-ontology;EstacionDeTelecomunicacion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/supply-net-ontology.owl#EstacionTelefonica -->
+
+    <owl:Class rdf:about="&supply-net-ontology;EstacionTelefonica">
+        <rdfs:label xml:lang="es">EstacionTelefonica</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&supply-net-ontology;EstacionDeTelecomunicacion"/>
     </owl:Class>
     
 
