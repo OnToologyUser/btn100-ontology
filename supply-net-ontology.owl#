@@ -245,6 +245,15 @@
         <terms:source xml:lang="es">Diccionario de la Real Academia Espannola</terms:source>
         <rdfs:comment xml:lang="es">Tubería provista de bombas y otros aparatos para conducir el petróleo a larga distancia.</rdfs:comment>
     </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/supply-net-ontology.owl#SubestacionElectrica -->
+
+    <owl:Class rdf:about="&supply-net-ontology;SubestacionElectrica">
+        <rdfs:label xml:lang="es">SubestacionElectrica</rdfs:label>
+        <rdfs:comment xml:lang="es">Conjunto de instalaciones utilizadas para la reducción de la tensión o el voltaje de las líneas eléctricas.</rdfs:comment>
+    </owl:Class>
 </rdf:RDF>
 
 
