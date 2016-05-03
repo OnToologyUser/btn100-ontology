@@ -24,6 +24,9 @@
      xmlns:ontology="http://geo.linkeddata.es/ontology/"
      xmlns:ontology2="http://dbpedia.org/ontology/">
     <owl:Ontology rdf:about="&ontology;transportes.owl">
+        <owl:imports rdf:resource="&ontology2;elevation"/>
+        <owl:imports rdf:resource="&ontology2;iataAirlineCode"/>
+        <owl:imports rdf:resource="&ontology2;icaoAirlineCode"/>
         <owl:imports rdf:resource="&ontology2;unloCode"/>
         <owl:imports rdf:resource="&ontology;top.owl"/>
     </owl:Ontology>
@@ -60,6 +63,36 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://dbpedia.org/ontology/elevation -->
+
+    <rdf:Description rdf:about="&ontology2;elevation">
+        <rdfs:domain rdf:resource="&ontology;Aerodromo"/>
+        <rdfs:domain rdf:resource="&ontology;Aeropuerto"/>
+        <rdfs:domain rdf:resource="&ontology;transportes.owl#Helipuerto"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://dbpedia.org/ontology/iataAirlineCode -->
+
+    <rdf:Description rdf:about="&ontology2;iataAirlineCode">
+        <rdfs:domain rdf:resource="&ontology;Aerodromo"/>
+        <rdfs:domain rdf:resource="&ontology;Aeropuerto"/>
+        <rdfs:domain rdf:resource="&ontology;transportes.owl#Helipuerto"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://dbpedia.org/ontology/icaoAirlineCode -->
+
+    <rdf:Description rdf:about="&ontology2;icaoAirlineCode">
+        <rdfs:domain rdf:resource="&ontology;Aerodromo"/>
+        <rdfs:domain rdf:resource="&ontology;Aeropuerto"/>
+        <rdfs:domain rdf:resource="&ontology;transportes.owl#Helipuerto"/>
+    </rdf:Description>
     
 
 
@@ -216,6 +249,41 @@
                         <xsd:length rdf:datatype="&xsd;integer">6</xsd:length>
                     </rdf:Description>
                 </owl:withRestrictions>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/transportes.owl#competenciaAeroporturaria -->
+
+    <owl:DatatypeProperty rdf:about="&ontology;transportes.owl#competenciaAeroporturaria">
+        <rdfs:label xml:lang="es">competencia aeroporturaria</rdfs:label>
+        <rdfs:comment xml:lang="es">Competencia de la explotación earoportuaria</rdfs:comment>
+        <rdfs:domain rdf:resource="&ontology;Aerodromo"/>
+        <rdfs:domain rdf:resource="&ontology;Aeropuerto"/>
+        <rdfs:domain rdf:resource="&ontology;transportes.owl#Helipuerto"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first rdf:datatype="&xsd;string">Aena</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first rdf:datatype="&xsd;string">Militar</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&rdf;List"/>
+                                        <rdf:first rdf:datatype="&xsd;string">Privado</rdf:first>
+                                        <rdf:rest rdf:resource="&rdf;nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
             </rdfs:Datatype>
         </rdfs:range>
     </owl:DatatypeProperty>
@@ -393,10 +461,13 @@ Tabla ITINERARIO EUROPEO</terms:source>
 Tabla TEN-T</terms:source>
         <rdfs:comment xml:lang="es">Indica si el tramo de vía pertenece a la Red Transeuropea de
 Transporte (TEN-T).</rdfs:comment>
+        <rdfs:domain rdf:resource="&ontology;Aerodromo"/>
+        <rdfs:domain rdf:resource="&ontology;Aeropuerto"/>
         <rdfs:domain rdf:resource="&ontology;Autopista"/>
         <rdfs:domain rdf:resource="&ontology;Carretera"/>
         <rdfs:domain rdf:resource="&ontology;transportes.owl#Autovia"/>
         <rdfs:domain rdf:resource="&ontology;transportes.owl#FerrocarrilConvencional"/>
+        <rdfs:domain rdf:resource="&ontology;transportes.owl#Helipuerto"/>
         <rdfs:range>
             <rdfs:Datatype>
                 <owl:oneOf>
@@ -1077,6 +1148,17 @@ Versión 1.0.</terms:source>
         </rdfs:subClassOf>
         <terms:source xml:lang="es">Anexo A: Catálogo de Objetos Geográficos de BTN100.</terms:source>
         <rdfs:comment xml:lang="es">Tramo de vía por la que circula el Tren de alta velocidad de España (AVE).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/transportes.owl#Helipuerto -->
+
+    <owl:Class rdf:about="&ontology;transportes.owl#Helipuerto">
+        <rdfs:label xml:lang="es">Helipuerto</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <terms:source xml:lang="es">Diccionario de la Real Academia Española</terms:source>
+        <rdfs:comment xml:lang="es">Pista destinada al aterrizaje y despegue de helicópteros.</rdfs:comment>
     </owl:Class>
     
 
