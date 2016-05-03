@@ -1059,6 +1059,36 @@ Versión 1.0.</terms:source>
     
 
 
+    <!-- http://geo.linkeddata.es/ontology/transportes.owl#Teleferico -->
+
+    <owl:Class rdf:about="&ontology;transportes.owl#Teleferico">
+        <rdfs:label xml:lang="es">Teleferico</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ontology;transportes.owl#TransporteSuspendido"/>
+        <rdfs:comment xml:lang="es">sistema de transporte aéreo constituido por cabinas colgadas de una serie de cables que se encargan de hacer avanzar a las unidades a través de las estaciones.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/transportes.owl#Telesilla -->
+
+    <owl:Class rdf:about="&ontology;transportes.owl#Telesilla">
+        <rdfs:label xml:lang="es">Telesilla</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ontology;transportes.owl#TransporteSuspendido"/>
+        <rdfs:comment xml:lang="es">Asiento suspendido de un cable de tracción, para el transporte de personas a la cumbre de una montaña o a un lugar elevado.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/transportes.owl#Telesqui -->
+
+    <owl:Class rdf:about="&ontology;transportes.owl#Telesqui">
+        <rdfs:label xml:lang="es">Telesqui</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ontology;transportes.owl#TransporteSuspendido"/>
+        <rdfs:comment xml:lang="es">sistema mecánico para transportar esquiadores montaña arriba, por la superficie de la pendiente. Por lo general es empleado en pendientes poco pronunciadas en grandes centros de esquí.</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://geo.linkeddata.es/ontology/transportes.owl#TerminalDeMercancia -->
 
     <owl:Class rdf:about="&ontology;transportes.owl#TerminalDeMercancia">
@@ -1066,6 +1096,16 @@ Versión 1.0.</terms:source>
         <rdfs:subClassOf rdf:resource="&ontology;transportes.owl#EnclaveFerroviario"/>
         <terms:source xml:lang="es">Administrador de Infraestructuras Ferroviarias (ADIF)</terms:source>
         <rdfs:comment xml:lang="es">Son estaciones que aparte de regular el tráfico, tienen como misión principal la prestación de servicios de mercancías. Disponen de todas las instalaciones necesarias para la recepción, clasificación y formación, y expedición de los trenes de mercancías convencionales, que circulan entre ellas y/o a otros destinos nacionales e internacionales.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/transportes.owl#TransporteSuspendido -->
+
+    <owl:Class rdf:about="&ontology;transportes.owl#TransporteSuspendido">
+        <rdfs:label xml:lang="es">TransporteSuspendido</rdfs:label>
+        <terms:source xml:lang="es">Anexo A: Catálogo de Objetos Geográficos de BTN100.</terms:source>
+        <rdfs:comment xml:lang="es">Sistema de transporte en el que los vehículos van suspendidos de un cable de tracción. Se emplea principalmente para salvar grandes diferencias de altitud.</rdfs:comment>
     </owl:Class>
     
 
