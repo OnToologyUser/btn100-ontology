@@ -257,6 +257,17 @@
     
 
 
+    <!-- http://geo.linkeddata.es/ontology/supply-net-ontology.owl#EstacionDepuradora -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/ontology/supply-net-ontology.owl#EstacionDepuradora">
+        <rdfs:label xml:lang="es">EstacionDepuradora</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <terms:source xml:lang="es">Anexo A: Catálogo de Objetos Geográficos de BTN100.</terms:source>
+        <rdfs:comment xml:lang="es">Construcción creada con fines de depurar o limpiar las aguas.</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://geo.linkeddata.es/ontology/supply-net-ontology.owl#EstacionTelefonica -->
 
     <owl:Class rdf:about="http://geo.linkeddata.es/ontology/supply-net-ontology.owl#EstacionTelefonica">
