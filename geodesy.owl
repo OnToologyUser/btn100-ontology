@@ -1,0 +1,238 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY terms "http://purl.org/dc/terms/" >
+    <!ENTITY foaf "http://xmlns.com/foaf/0.1/" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY geodesy "http://geo.linkeddata.es/ontology/geodesy.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://geo.linkeddata.es/ontology/geodesy.owl#"
+     xml:base="http://geo.linkeddata.es/ontology/geodesy.owl"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:geodesy="http://geo.linkeddata.es/ontology/geodesy.owl#">
+    <owl:Ontology rdf:about="http://geo.linkeddata.es/ontology/geodesy.owl">
+        <rdfs:comment xml:lang="es">Ontología global de dominio sobre Datos Geodesicos de España</rdfs:comment>
+        <dc:title xml:lang="es">geodesyOntology</dc:title>
+        <owl:imports rdf:resource="http://geo.linkeddata.es/ontology/top.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/geodesy.owl#altitudElipsoidal -->
+
+    <owl:DatatypeProperty rdf:about="&geodesy;altitudElipsoidal">
+        <rdfs:label xml:lang="es">altitudElipsoidal</rdfs:label>
+        <rdfs:domain rdf:resource="&geodesy;EstacionPermanenteGPS"/>
+        <rdfs:domain rdf:resource="&geodesy;VerticeGeodesico"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/geodesy.owl#altitudOrtometrica -->
+
+    <owl:DatatypeProperty rdf:about="&geodesy;altitudOrtometrica">
+        <rdfs:label xml:lang="es">altitudOrtometrica</rdfs:label>
+        <rdfs:domain rdf:resource="&geodesy;EstacionPermanenteGPS"/>
+        <rdfs:domain rdf:resource="&geodesy;VerticeGeodesico"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/geodesy.owl#codigo -->
+
+    <owl:DatatypeProperty rdf:about="&geodesy;codigo">
+        <rdfs:label xml:lang="es">codigo</rdfs:label>
+        <rdfs:comment xml:lang="es">Código de estación GPS</rdfs:comment>
+        <rdfs:domain rdf:resource="&geodesy;EstacionPermanenteGPS"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="&xsd;string"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:length rdf:datatype="&xsd;integer">4</xsd:length>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/geodesy.owl#huso -->
+
+    <owl:DatatypeProperty rdf:about="&geodesy;huso">
+        <rdfs:label xml:lang="es">huso</rdfs:label>
+        <rdfs:domain rdf:resource="&geodesy;EstacionPermanenteGPS"/>
+        <rdfs:domain rdf:resource="&geodesy;VerticeGeodesico"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/geodesy.owl#numero -->
+
+    <owl:DatatypeProperty rdf:about="&geodesy;numero">
+        <rdfs:label xml:lang="es">numero</rdfs:label>
+        <rdfs:domain rdf:resource="&geodesy;VerticeGeodesico"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/geodesy.owl#xETRS89 -->
+
+    <owl:DatatypeProperty rdf:about="&geodesy;xETRS89">
+        <rdfs:label xml:lang="es">xETRS89</rdfs:label>
+        <rdfs:comment xml:lang="es">Coordenada X en metros (ETRS89)</rdfs:comment>
+        <rdfs:domain rdf:resource="&geodesy;EstacionPermanenteGPS"/>
+        <rdfs:domain rdf:resource="&geodesy;VerticeGeodesico"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/geodesy.owl#yETRS89 -->
+
+    <owl:DatatypeProperty rdf:about="&geodesy;yETRS89">
+        <rdfs:label xml:lang="es">yETRS89</rdfs:label>
+        <rdfs:comment xml:lang="es">Coordenada Y en metros (ETRS89)</rdfs:comment>
+        <rdfs:domain rdf:resource="&geodesy;EstacionPermanenteGPS"/>
+        <rdfs:domain rdf:resource="&geodesy;VerticeGeodesico"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/geodesy.owl#EstacionPermanenteGPS -->
+
+    <owl:Class rdf:about="&geodesy;EstacionPermanenteGPS">
+        <rdfs:label xml:lang="es">EstacionPermanenteGPS</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <terms:source xml:lang="es">Anexo A: Catálogo de Objetos Geográficos de BTN100.</terms:source>
+        <rdfs:comment xml:lang="es">Vértices de la Red de Estaciones Permanentes de GPS, de la que se pueden obtener valores de observación para un día concreto y una hora determinada.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/geodesy.owl#VerticeGeodesico -->
+
+    <owl:Class rdf:about="&geodesy;VerticeGeodesico">
+        <rdfs:label xml:lang="es">VerticeGeodesico</rdfs:label>
+        <terms:source xml:lang="es">Anexo A: Catálogo de Objetos Geográficos de BTN100.</terms:source>
+        <rdfs:comment xml:lang="es">Vértice geodésico perteneciente a la Red de Primer Orden (NPRO) o a la Red de Orden Inferior (ROI) de España.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/geodesy.owl#VerticeGeodesicoDeOrdenInferior -->
+
+    <owl:Class rdf:about="&geodesy;VerticeGeodesicoDeOrdenInferior">
+        <rdfs:label xml:lang="es">VerticeGeodesicoDeOrdenInferior</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&geodesy;VerticeGeodesico"/>
+        <rdfs:comment xml:lang="es">Perteneciente a la Red de Orden Inferior</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/geodesy.owl#VerticeGeodesicoRegcan95 -->
+
+    <owl:Class rdf:about="&geodesy;VerticeGeodesicoRegcan95">
+        <rdfs:label xml:lang="es">VerticeGeodesicoRegcan95</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&geodesy;VerticeGeodesico"/>
+        <rdfs:comment xml:lang="es">Perteneciente a REGCAN95</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/geodesy.owl#VerticeGeodesicoRegente -->
+
+    <owl:Class rdf:about="&geodesy;VerticeGeodesicoRegente">
+        <rdfs:label xml:lang="es">VerticeGeodesicoRegente</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&geodesy;VerticeGeodesico"/>
+        <rdfs:comment xml:lang="es">Perteneciente a la Red de Regente</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&geodesy;VerticeGeodesicoDeOrdenInferior"/>
+            <rdf:Description rdf:about="&geodesy;VerticeGeodesicoRegcan95"/>
+            <rdf:Description rdf:about="&geodesy;VerticeGeodesicoRegente"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
+
