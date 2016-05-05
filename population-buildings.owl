@@ -1,0 +1,277 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY terms "http://purl.org/dc/terms/" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY population-buildings "http://geo.linkeddata.es/ontology/population-buildings.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://geo.linkeddata.es/ontology/population-buildings.owl#"
+     xml:base="http://geo.linkeddata.es/ontology/population-buildings.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:population-buildings="http://geo.linkeddata.es/ontology/population-buildings.owl#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://geo.linkeddata.es/ontology/population-buildings.owl">
+        <owl:imports rdf:resource="http://geo.linkeddata.es/ontology/top.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/population-buildings.owl#ineCode -->
+
+    <owl:DatatypeProperty rdf:about="&population-buildings;ineCode">
+        <rdfs:label xml:lang="en">ineCode</rdfs:label>
+        <rdfs:label xml:lang="es">codigo ine</rdfs:label>
+        <rdfs:domain rdf:resource="&population-buildings;DiseminadoPuntual"/>
+        <rdfs:domain rdf:resource="&population-buildings;DiseminadoSuperficial"/>
+        <rdfs:domain rdf:resource="&population-buildings;NucleoPoblacionalPuntual"/>
+        <rdfs:domain rdf:resource="&population-buildings;NucleoPoblacionalSuperficial"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="&xsd;string"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:length rdf:datatype="&xsd;integer">11</xsd:length>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/population-buildings.owl#poblacion -->
+
+    <owl:DatatypeProperty rdf:about="&population-buildings;poblacion">
+        <rdfs:label xml:lang="es">poblacion</rdfs:label>
+        <rdfs:domain rdf:resource="&population-buildings;NucleoPoblacionalPuntual"/>
+        <rdfs:domain rdf:resource="&population-buildings;NucleoPoblacionalSuperficial"/>
+        <rdfs:range rdf:resource="&xsd;nonNegativeInteger"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/population-buildings.owl#tipoDeCapital -->
+
+    <owl:DatatypeProperty rdf:about="&population-buildings;tipoDeCapital">
+        <rdfs:label xml:lang="es">tipoDeCapital</rdfs:label>
+        <rdfs:comment xml:lang="es">Especifica de qué administración oficial es capital</rdfs:comment>
+        <rdfs:domain rdf:resource="&population-buildings;DiseminadoPuntual"/>
+        <rdfs:domain rdf:resource="&population-buildings;DiseminadoSuperficial"/>
+        <rdfs:domain rdf:resource="&population-buildings;NucleoPoblacionalPuntual"/>
+        <rdfs:domain rdf:resource="&population-buildings;NucleoPoblacionalSuperficial"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first rdf:datatype="&xsd;string">capital de comunidad autónoma</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first rdf:datatype="&xsd;string">capital de comunidad autónoma pero no de provincia</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&rdf;List"/>
+                                        <rdf:first rdf:datatype="&xsd;string">capital de nación</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                <rdf:first rdf:datatype="&xsd;string">capital de provincia</rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="&rdf;List"/>
+                                                        <rdf:first rdf:datatype="&xsd;string">capital de un municipio</rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                                <rdf:first rdf:datatype="&xsd;string">no es capital</rdf:first>
+                                                                <rdf:rest rdf:resource="&rdf;nil"/>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/population-buildings.owl#Diseminado -->
+
+    <owl:Class rdf:about="&population-buildings;Diseminado">
+        <rdfs:label xml:lang="es">Diseminado</rdfs:label>
+        <owl:disjointWith rdf:resource="&population-buildings;NucleoPoblacional"/>
+        <terms:source xml:lang="es">Instituto nacional de estadística.</terms:source>
+        <rdfs:comment xml:lang="es">Las edificaciones o viviendas de una entidad singular de población que no pueden ser incluidas en el concepto de núcleo de población se consideran pertenecientes al diseminado, entendiendo así por diseminado aquellas casas aisladas que no están recogidas como núcleo de población por el INE.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/population-buildings.owl#DiseminadoPuntual -->
+
+    <owl:Class rdf:about="&population-buildings;DiseminadoPuntual">
+        <rdfs:label xml:lang="es">DiseminadoPuntual</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&population-buildings;Diseminado"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&population-buildings;tipoDeCapital"/>
+                        <owl:hasValue rdf:datatype="&xsd;string">capital de un municipio</owl:hasValue>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&population-buildings;tipoDeCapital"/>
+                        <owl:hasValue rdf:datatype="&xsd;string">no es capital</owl:hasValue>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="&population-buildings;DiseminadoSuperficial"/>
+        <terms:source xml:lang="es">Anexo A: Catálogo de Objetos Geográficos de BTN100.</terms:source>
+        <rdfs:comment xml:lang="es">Existen dos tipos de elementos que se engloban en el concepto de Diseminado puntual:
+
+* Edificación aislada: caseríos, cortijos, etc. en los que o bien existe una única edificación, o siendo un pequeño conjunto de edificaciones (dos, tres o cuatro...) están dispuestas de tal forma que entre ellas no existe una distancia superior a 100m sobre la imagen.
+
+* Edificación dispersa: es el caso de los diseminados comúnmente conocidos. Esto es, aquel conjunto considerable de edificaciones (cinco o más) que sin conformar un núcleo de población presentan características propias de estas (habitabilidad, comunicaciones, etc.).En este caso el objeto se representará por su centroide.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/population-buildings.owl#DiseminadoSuperficial -->
+
+    <owl:Class rdf:about="&population-buildings;DiseminadoSuperficial">
+        <rdfs:label xml:lang="es">DiseminadoSuperficial</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&population-buildings;Diseminado"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&population-buildings;tipoDeCapital"/>
+                        <owl:hasValue rdf:datatype="&xsd;string">capital de un municipio</owl:hasValue>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&population-buildings;tipoDeCapital"/>
+                        <owl:hasValue rdf:datatype="&xsd;string">no es capital</owl:hasValue>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="es">Agrupación de edificaciones que se extienden por una superficie considerable con estructura similar a un núcleo pero que no aparecen en el INE clasificado como tal. Es el caso de urbanizaciones, zonas residenciales u otras estructuras de población similar.</rdfs:comment>
+        <terms:source xml:lang="es">Anexo A: Catálogo de Objetos Geográficos de BTN100.</terms:source>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/population-buildings.owl#NucleoPoblacional -->
+
+    <owl:Class rdf:about="&population-buildings;NucleoPoblacional">
+        <rdfs:label xml:lang="es">NucleoPoblacional</rdfs:label>
+        <terms:source xml:lang="es">Anexo A: Catálogo de Objetos Geográficos de BTN100.</terms:source>
+        <rdfs:comment xml:lang="es">Se considera Núcleo de población a un conjunto de al menos diez edificaciones, que están formando calles, plazas y otras vías urbanas. Por excepción el número de edificaciones podrá ser inferior a 10, siempre que la población de derecho supere los 50 habitantes.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Se consideran núcleos de población (superficiales y puntuales) de BTN100 aquellas entidades que el INE considera núcleos de población en sus datos oficiales.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/population-buildings.owl#NucleoPoblacionalPuntual -->
+
+    <owl:Class rdf:about="&population-buildings;NucleoPoblacionalPuntual">
+        <rdfs:label xml:lang="es">NucleoPoblacionalPuntual</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&population-buildings;NucleoPoblacional"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&population-buildings;tipoDeCapital"/>
+                        <owl:hasValue rdf:datatype="&xsd;string">capital de un municipio</owl:hasValue>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&population-buildings;tipoDeCapital"/>
+                        <owl:hasValue rdf:datatype="&xsd;string">no es capital</owl:hasValue>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="&population-buildings;NucleoPoblacionalSuperficial"/>
+        <terms:source xml:lang="es">Anexo A: Catálogo de Objetos Geográficos de BTN100.</terms:source>
+        <rdfs:comment xml:lang="es">Pertenecerán a esta clase de entidad puntual sólo los núcleos de aquellas comunidades autónomas en las que la densidad de elementos impida su representación superficial a escala. Estas comunidades son Asturias, Galicia e Islas Canarias.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/population-buildings.owl#NucleoPoblacionalSuperficial -->
+
+    <owl:Class rdf:about="&population-buildings;NucleoPoblacionalSuperficial">
+        <rdfs:label xml:lang="es">NucleoPoblacionalSuperficial</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&population-buildings;NucleoPoblacional"/>
+        <terms:source xml:lang="es">Anexo A: Catálogo de Objetos Geográficos de BTN100.</terms:source>
+        <rdfs:comment xml:lang="es">Son todos los núcleos de población de España salvo excepciones los de aquellas comunidades autónomas en las que la densidad de elementos impida su
+representación superficial a escala. Estas comunidades son Asturias, Galicia e Islas Canarias.</rdfs:comment>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
+
