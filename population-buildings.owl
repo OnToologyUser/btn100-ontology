@@ -58,6 +58,17 @@
     
 
 
+    <!-- http://geo.linkeddata.es/ontology/population-buildings.owl#bicCode -->
+
+    <owl:DatatypeProperty rdf:about="&population-buildings;bicCode">
+        <rdfs:label xml:lang="es">bicCode</rdfs:label>
+        <rdfs:comment xml:lang="es">Se incluye el código BIC que define el bien. Caso de no ser un Lugar de interés BIC, se rellenará con el texto: NO PROCEDE.</rdfs:comment>
+        <rdfs:domain rdf:resource="&population-buildings;LugarDeInteres"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://geo.linkeddata.es/ontology/population-buildings.owl#ineCode -->
 
     <owl:DatatypeProperty rdf:about="&population-buildings;ineCode">
@@ -157,6 +168,24 @@
     
 
 
+    <!-- http://geo.linkeddata.es/ontology/population-buildings.owl#AreaDeServicio -->
+
+    <owl:Class rdf:about="&population-buildings;AreaDeServicio">
+        <rdfs:label xml:lang="es">AreaDeServicio</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&population-buildings;ZonaDeUsoCaracteristico"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/population-buildings.owl#Cementerio -->
+
+    <owl:Class rdf:about="&population-buildings;Cementerio">
+        <rdfs:label xml:lang="es">Cementerio</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&population-buildings;ZonaDeUsoCaracteristico"/>
+    </owl:Class>
+    
+
+
     <!-- http://geo.linkeddata.es/ontology/population-buildings.owl#Diseminado -->
 
     <owl:Class rdf:about="&population-buildings;Diseminado">
@@ -223,6 +252,23 @@
     
 
 
+    <!-- http://geo.linkeddata.es/ontology/population-buildings.owl#Invernadero -->
+
+    <owl:Class rdf:about="&population-buildings;Invernadero">
+        <rdfs:label xml:lang="es">Invernadero</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&population-buildings;ZonaDeUsoCaracteristico"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/population-buildings.owl#LugarDeInteres -->
+
+    <owl:Class rdf:about="&population-buildings;LugarDeInteres">
+        <rdfs:label xml:lang="es">LugarDeInteres</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://geo.linkeddata.es/ontology/population-buildings.owl#NucleoPoblacional -->
 
     <owl:Class rdf:about="&population-buildings;NucleoPoblacional">
@@ -268,6 +314,106 @@
         <terms:source xml:lang="es">Anexo A: Catálogo de Objetos Geográficos de BTN100.</terms:source>
         <rdfs:comment xml:lang="es">Son todos los núcleos de población de España salvo excepciones los de aquellas comunidades autónomas en las que la densidad de elementos impida su
 representación superficial a escala. Estas comunidades son Asturias, Galicia e Islas Canarias.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/population-buildings.owl#ZonaAeroportuaria -->
+
+    <owl:Class rdf:about="&population-buildings;ZonaAeroportuaria">
+        <rdfs:label xml:lang="es">ZonaAeroportuaria</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&population-buildings;ZonaDeUsoCaracteristico"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/population-buildings.owl#ZonaDeUsoCaracteristico -->
+
+    <owl:Class rdf:about="&population-buildings;ZonaDeUsoCaracteristico">
+        <rdfs:label xml:lang="es">ZonaDeUsoCaracteristico</rdfs:label>
+        <terms:source xml:lang="es">Anexo A: Catálogo de Objetos Geográficos de BTN100.</terms:source>
+        <rdfs:comment xml:lang="es">Superficie delimitada, empleada para desarrollar una actividad específica.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/population-buildings.owl#ZonaDeportiva -->
+
+    <owl:Class rdf:about="&population-buildings;ZonaDeportiva">
+        <rdfs:label xml:lang="es">ZonaDeportiva</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&population-buildings;ZonaDeUsoCaracteristico"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/population-buildings.owl#ZonaFerroviaria -->
+
+    <owl:Class rdf:about="&population-buildings;ZonaFerroviaria">
+        <rdfs:label xml:lang="es">ZonaFerroviaria</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&population-buildings;ZonaDeUsoCaracteristico"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/population-buildings.owl#ZonaIndustrial -->
+
+    <owl:Class rdf:about="&population-buildings;ZonaIndustrial">
+        <rdfs:label xml:lang="es">ZonaIndustrial</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&population-buildings;ZonaDeUsoCaracteristico"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/population-buildings.owl#ZonaMilitar -->
+
+    <owl:Class rdf:about="&population-buildings;ZonaMilitar">
+        <rdfs:label xml:lang="es">ZonaMilitar</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&population-buildings;ZonaDeUsoCaracteristico"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/population-buildings.owl#ZonaMonumental -->
+
+    <owl:Class rdf:about="&population-buildings;ZonaMonumental">
+        <rdfs:label xml:lang="es">ZonaMonumental</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&population-buildings;ZonaDeUsoCaracteristico"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/population-buildings.owl#ZonaPortuaria -->
+
+    <owl:Class rdf:about="&population-buildings;ZonaPortuaria">
+        <rdfs:label xml:lang="es">ZonaPortuaria</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&population-buildings;ZonaDeUsoCaracteristico"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/population-buildings.owl#ZonaRecreativa -->
+
+    <owl:Class rdf:about="&population-buildings;ZonaRecreativa">
+        <rdfs:label xml:lang="es">ZonaRecreativa</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&population-buildings;ZonaDeUsoCaracteristico"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/population-buildings.owl#ZonaUniversitaria -->
+
+    <owl:Class rdf:about="&population-buildings;ZonaUniversitaria">
+        <rdfs:label xml:lang="es">ZonaUniversitaria</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&population-buildings;ZonaDeUsoCaracteristico"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/population-buildings.owl#ZonaVerde -->
+
+    <owl:Class rdf:about="&population-buildings;ZonaVerde">
+        <rdfs:label xml:lang="es">ZonaVerde</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&population-buildings;ZonaDeUsoCaracteristico"/>
     </owl:Class>
 </rdf:RDF>
 
