@@ -81,18 +81,13 @@
     
 
 
-    <!-- http://geo.linkeddata.es/ontology/estado -->
-
-    <owl:DatatypeProperty rdf:about="http://geo.linkeddata.es/ontology/estado"/>
-    
-
-
     <!-- http://geo.linkeddata.es/ontology/estadoDeUso -->
 
     <owl:DatatypeProperty rdf:about="http://geo.linkeddata.es/ontology/estadoDeUso">
         <rdfs:label xml:lang="es">estado</rdfs:label>
         <terms:source xml:lang="es">Anexo A: Catálogo de Objetos Geográficos de BTN100.
 Tabla ESTADO</terms:source>
+        <rdfs:comment xml:lang="es">Estado de uso.</rdfs:comment>
         <rdfs:domain rdf:resource="http://geo.linkeddata.es/ontology/ExplotacionMinera"/>
         <rdfs:range>
             <rdfs:Datatype>
@@ -126,8 +121,7 @@ Tabla ESTADO</terms:source>
     <owl:DatatypeProperty rdf:about="http://geo.linkeddata.es/ontology/ineCode">
         <rdfs:label xml:lang="en">ineCode</rdfs:label>
         <rdfs:label xml:lang="es">codigo ine</rdfs:label>
-        <rdfs:domain rdf:resource="http://geo.linkeddata.es/ontology/Diseminado"/>
-        <rdfs:domain rdf:resource="http://geo.linkeddata.es/ontology/NucleoPoblacional"/>
+        <rdfs:comment xml:lang="es">Codificación asignada por el Nomenclátor INE.</rdfs:comment>
         <rdfs:range>
             <rdfs:Datatype>
                 <owl:onDatatype rdf:resource="&xsd;string"/>
@@ -138,6 +132,14 @@ Tabla ESTADO</terms:source>
                 </owl:withRestrictions>
             </rdfs:Datatype>
         </rdfs:range>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Diseminado"/>
+                    <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/NucleoPoblacional"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:DatatypeProperty>
     
 
@@ -146,6 +148,7 @@ Tabla ESTADO</terms:source>
 
     <owl:DatatypeProperty rdf:about="http://geo.linkeddata.es/ontology/poblacion">
         <rdfs:label xml:lang="es">poblacion</rdfs:label>
+        <rdfs:comment xml:lang="es">Número total de habitantes del núcleo según el nomenclátor del INE para el año que aparezca en los metadatos.</rdfs:comment>
         <rdfs:domain rdf:resource="http://geo.linkeddata.es/ontology/NucleoPoblacional"/>
         <rdfs:range rdf:resource="&xsd;nonNegativeInteger"/>
     </owl:DatatypeProperty>
@@ -157,14 +160,6 @@ Tabla ESTADO</terms:source>
     <owl:DatatypeProperty rdf:about="http://geo.linkeddata.es/ontology/tipoDeCapital">
         <rdfs:label xml:lang="es">tipoDeCapital</rdfs:label>
         <rdfs:comment xml:lang="es">Especifica de qué administración oficial es capital</rdfs:comment>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Diseminado"/>
-                    <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/NucleoPoblacional"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
         <rdfs:range>
             <rdfs:Datatype>
                 <owl:oneOf>
@@ -206,6 +201,14 @@ Tabla ESTADO</terms:source>
                 </owl:oneOf>
             </rdfs:Datatype>
         </rdfs:range>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Diseminado"/>
+                    <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/NucleoPoblacional"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:DatatypeProperty>
     
 
@@ -236,6 +239,7 @@ Tabla ESTADO</terms:source>
 
     <owl:Class rdf:about="http://geo.linkeddata.es/ontology/Alojamiento">
         <rdfs:label xml:lang="es">Alojamiento</rdfs:label>
+        <rdfs:comment xml:lang="es">Lugar donde una persona o un grupo de personas se aloja, se aposenta o acampa, o donde está algo.</rdfs:comment>
     </owl:Class>
     
 
@@ -424,20 +428,6 @@ Tabla ESTADO</terms:source>
 
     <owl:Class rdf:about="http://geo.linkeddata.es/ontology/ExplotacionMinera">
         <rdfs:label xml:lang="es">Explotación minera</rdfs:label>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://geo.linkeddata.es/ontology/estado"/>
-                        <owl:hasValue rdf:datatype="&xsd;string">abandonado</owl:hasValue>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://geo.linkeddata.es/ontology/estado"/>
-                        <owl:hasValue rdf:datatype="&xsd;string">en uso</owl:hasValue>
-                    </owl:Restriction>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
         <rdfs:comment xml:lang="es">Terreno dedicado a la explotación de minerales o piedra.</rdfs:comment>
     </owl:Class>
     
@@ -507,6 +497,7 @@ Tabla ESTADO</terms:source>
 
     <owl:Class rdf:about="http://geo.linkeddata.es/ontology/LugarDeOcio">
         <rdfs:label xml:lang="es">Lugar de ocio</rdfs:label>
+        <rdfs:comment xml:lang="es">Lugar donde se puede realizar una actividad de ocio.</rdfs:comment>
     </owl:Class>
     
 
@@ -516,6 +507,7 @@ Tabla ESTADO</terms:source>
     <owl:Class rdf:about="http://geo.linkeddata.es/ontology/Mina">
         <rdfs:label xml:lang="es">Mina</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/ExplotacionMinera"/>
+        <rdfs:comment xml:lang="es">Criadero de minerales de útil explotación.</rdfs:comment>
     </owl:Class>
     
 
