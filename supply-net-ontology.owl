@@ -75,6 +75,7 @@
 
     <owl:DatatypeProperty rdf:about="http://geo.linkeddata.es/ontology/componente">
         <rdfs:label xml:lang="es">componente</rdfs:label>
+        <rdfs:comment xml:lang="es">Componente de telecomunicaciones.</rdfs:comment>
         <rdfs:domain rdf:resource="http://geo.linkeddata.es/ontology/EstacionDeTelecomunicacion"/>
         <rdfs:range>
             <rdfs:Datatype>
@@ -106,7 +107,8 @@
     <!-- http://geo.linkeddata.es/ontology/situacion -->
 
     <owl:DatatypeProperty rdf:about="http://geo.linkeddata.es/ontology/situacion">
-        <rdfs:label xml:lang="es">situacion</rdfs:label>
+        <rdfs:label xml:lang="es">situación</rdfs:label>
+        <rdfs:comment xml:lang="es">Indica la disposición del tramo de vía sobre la superficie.</rdfs:comment>
         <rdfs:domain rdf:resource="http://geo.linkeddata.es/ontology/ConduccionDeCombustible"/>
         <rdfs:range>
             <rdfs:Datatype>
@@ -250,6 +252,7 @@
     <owl:Class rdf:about="http://geo.linkeddata.es/ontology/EstacionDeRadio">
         <rdfs:label xml:lang="es">Estación de radio</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/EstacionDeTelecomunicacion"/>
+        <rdfs:comment xml:lang="es">Centro que consta de todas las instalaciones necesarias para transmitir y recibir señales que aseguren un servicio de radio.</rdfs:comment>
     </owl:Class>
     
 
@@ -258,6 +261,7 @@
 
     <owl:Class rdf:about="http://geo.linkeddata.es/ontology/EstacionDeTelecomunicacion">
         <rdfs:label xml:lang="es">Estación de telecomunicación</rdfs:label>
+        <rdfs:comment xml:lang="es">Centro que consta de todas las instalaciones necesarias para transmitir y recibir señales que aseguren un servicio de radiotelecomunicación determinado.</rdfs:comment>
     </owl:Class>
     
 
@@ -267,6 +271,7 @@
     <owl:Class rdf:about="http://geo.linkeddata.es/ontology/EstacionDeTelevision">
         <rdfs:label xml:lang="es">Estación de televisión</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/EstacionDeTelecomunicacion"/>
+        <rdfs:comment xml:lang="es">Centro que consta de todas las instalaciones necesarias para transmitir y recibir señales que aseguren un servicio de televisión.</rdfs:comment>
     </owl:Class>
     
 
@@ -276,6 +281,7 @@
     <owl:Class rdf:about="http://geo.linkeddata.es/ontology/EstacionTelefonica">
         <rdfs:label xml:lang="es">Estación telefónica</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/EstacionDeTelecomunicacion"/>
+        <rdfs:comment xml:lang="es">Centro que consta de todas las instalaciones necesarias para transmitir y recibir señales que aseguren servicios telefónico.</rdfs:comment>
     </owl:Class>
     
 
@@ -305,6 +311,7 @@
     <owl:Class rdf:about="http://geo.linkeddata.es/ontology/LineaElectricaDeAltaTension">
         <rdfs:label xml:lang="es">Linea eléctrica de alta tensión</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/LineaElectrica"/>
+        <owl:disjointWith rdf:resource="http://geo.linkeddata.es/ontology/LineaElectricaDeBajaTension"/>
         <rdfs:comment xml:lang="es">Se considera instalación de alta tensión eléctrica aquella que genere, transporte, transforme, distribuya o utilice energía eléctrica con tensiones superiores a los siguientes límites:
 
     Corriente alterna: Superior a 1000 voltios.
