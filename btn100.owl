@@ -5,26 +5,30 @@
     <!ENTITY kos "http://geo.linkeddata.es/kos/" >
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY ontology "http://geo.linkeddata.es/ontology/" >
     <!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
     <!ENTITY btn100 "http://geo.linkeddata.es/kos/btn100/" >
+    <!ENTITY geosparql "http://www.opengis.net/ont/geosparql#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
 ]>
 
 
-<rdf:RDF xmlns="http://geo.linkeddata.es/ontology/btn100#"
-     xml:base="http://geo.linkeddata.es/ontology/btn100"
+<rdf:RDF xmlns="&ontology;btn100#"
+     xml:base="&ontology;btn100"
      xmlns:kos="http://geo.linkeddata.es/kos/"
+     xmlns:geosparql="http://www.opengis.net/ont/geosparql#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:btn100="&kos;btn100/"
+     xmlns:ontology="http://geo.linkeddata.es/ontology/"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#">
-    <owl:Ontology rdf:about="http://geo.linkeddata.es/ontology/btn100">
-        <owl:imports rdf:resource="http://geo.linkeddata.es/ontology/population-buildings.owl"/>
-        <owl:imports rdf:resource="http://geo.linkeddata.es/ontology/transportes.owl"/>
-        <owl:imports rdf:resource="http://geo.linkeddata.es/ontology/supply-net.owl#"/>
+    <owl:Ontology rdf:about="&ontology;btn100">
+        <owl:imports rdf:resource="&ontology;population-buildings.owl"/>
+        <owl:imports rdf:resource="&ontology;transportes.owl"/>
+        <owl:imports rdf:resource="&ontology;supply-net.owl#"/>
         <owl:imports rdf:resource="http://www.opengis.net/ont/geosparql"/>
     </owl:Ontology>
     
@@ -98,14 +102,14 @@
         <rdfs:subClassOf rdf:resource="&skos;Concept"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&skos;inScheme"/>
-                <owl:allValuesFrom rdf:resource="&kos;btn100"/>
+                <owl:onProperty rdf:resource="&skos;notation"/>
+                <owl:hasValue>03</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&skos;notation"/>
-                <owl:hasValue>03</owl:hasValue>
+                <owl:onProperty rdf:resource="&skos;inScheme"/>
+                <owl:allValuesFrom rdf:resource="&kos;btn100"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <skos:prefLabel xml:lang="es">Hidrografía</skos:prefLabel>
@@ -161,14 +165,14 @@
         <rdfs:subClassOf rdf:resource="&skos;Concept"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&skos;inScheme"/>
-                <owl:allValuesFrom rdf:resource="&kos;btn100"/>
+                <owl:onProperty rdf:resource="&skos;notation"/>
+                <owl:hasValue>02</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&skos;notation"/>
-                <owl:hasValue>02</owl:hasValue>
+                <owl:onProperty rdf:resource="&skos;inScheme"/>
+                <owl:allValuesFrom rdf:resource="&kos;btn100"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <skos:prefLabel xml:lang="es">Relieve</skos:prefLabel>
@@ -203,18 +207,274 @@
         <rdfs:subClassOf rdf:resource="&skos;Concept"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&skos;inScheme"/>
-                <owl:allValuesFrom rdf:resource="&kos;btn100"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&skos;notation"/>
                 <owl:hasValue>01</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&skos;inScheme"/>
+                <owl:allValuesFrom rdf:resource="&kos;btn100"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <skos:prefLabel xml:lang="es">Unidades adminstrativas y zonas protegidas</skos:prefLabel>
     </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/Aerodromo -->
+
+    <rdf:Description rdf:about="&ontology;Aerodromo">
+        <rdfs:subClassOf rdf:resource="&geosparql;Feature"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/Aeropuerto -->
+
+    <rdf:Description rdf:about="&ontology;Aeropuerto">
+        <rdfs:subClassOf rdf:resource="&geosparql;Feature"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/Alojamiento -->
+
+    <rdf:Description rdf:about="&ontology;Alojamiento">
+        <rdfs:subClassOf rdf:resource="&geosparql;Feature"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/Autopista -->
+
+    <rdf:Description rdf:about="&ontology;Autopista">
+        <rdfs:subClassOf rdf:resource="&geosparql;Feature"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/Autovia -->
+
+    <rdf:Description rdf:about="&ontology;Autovia">
+        <rdfs:subClassOf rdf:resource="&geosparql;Feature"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/Calle -->
+
+    <rdf:Description rdf:about="&ontology;Calle">
+        <rdfs:subClassOf rdf:resource="&geosparql;Feature"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/Carretera -->
+
+    <rdf:Description rdf:about="&ontology;Carretera">
+        <rdfs:subClassOf rdf:resource="&geosparql;Feature"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/CentralElectrica -->
+
+    <rdf:Description rdf:about="&ontology;CentralElectrica">
+        <rdfs:subClassOf rdf:resource="&geosparql;Feature"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/ConduccionDeCombustible -->
+
+    <rdf:Description rdf:about="&ontology;ConduccionDeCombustible">
+        <rdfs:subClassOf rdf:resource="&geosparql;Feature"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/DepositoDeCombustible -->
+
+    <rdf:Description rdf:about="&ontology;DepositoDeCombustible">
+        <rdfs:subClassOf rdf:resource="&geosparql;Feature"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/Diseminado -->
+
+    <rdf:Description rdf:about="&ontology;Diseminado">
+        <rdfs:subClassOf rdf:resource="&geosparql;Feature"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/Enlace -->
+
+    <rdf:Description rdf:about="&ontology;Enlace">
+        <rdfs:subClassOf rdf:resource="&geosparql;Feature"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/EstacionDeTelecomunicacion -->
+
+    <rdf:Description rdf:about="&ontology;EstacionDeTelecomunicacion">
+        <rdfs:subClassOf rdf:resource="&geosparql;Feature"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/ExplotacionMinera -->
+
+    <rdf:Description rdf:about="&ontology;ExplotacionMinera">
+        <rdfs:subClassOf rdf:resource="&geosparql;Feature"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/Faro -->
+
+    <rdf:Description rdf:about="&ontology;Faro">
+        <rdfs:subClassOf rdf:resource="&geosparql;Feature"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/Ferrocarril -->
+
+    <rdf:Description rdf:about="&ontology;Ferrocarril">
+        <rdfs:subClassOf rdf:resource="&geosparql;Feature"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/Helipuerto -->
+
+    <rdf:Description rdf:about="&ontology;Helipuerto">
+        <rdfs:subClassOf rdf:resource="&geosparql;Feature"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/Itinerario -->
+
+    <rdf:Description rdf:about="&ontology;Itinerario">
+        <rdfs:subClassOf rdf:resource="&geosparql;Feature"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/LineaElectrica -->
+
+    <rdf:Description rdf:about="&ontology;LineaElectrica">
+        <rdfs:subClassOf rdf:resource="&geosparql;Feature"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/LugarDeInteres -->
+
+    <rdf:Description rdf:about="&ontology;LugarDeInteres">
+        <rdfs:subClassOf rdf:resource="&geosparql;Feature"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/LugarDeOcio -->
+
+    <rdf:Description rdf:about="&ontology;LugarDeOcio">
+        <rdfs:subClassOf rdf:resource="&geosparql;Feature"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/Muralla -->
+
+    <rdf:Description rdf:about="&ontology;Muralla">
+        <rdfs:subClassOf rdf:resource="&geosparql;Feature"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/NucleoPoblacional -->
+
+    <rdf:Description rdf:about="&ontology;NucleoPoblacional">
+        <rdfs:subClassOf rdf:resource="&geosparql;Feature"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/PasoANivel -->
+
+    <rdf:Description rdf:about="&ontology;PasoANivel">
+        <rdfs:subClassOf rdf:resource="&geosparql;Feature"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/Pista -->
+
+    <rdf:Description rdf:about="&ontology;Pista">
+        <rdfs:subClassOf rdf:resource="&geosparql;Feature"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/PistaDeAterrizaje -->
+
+    <rdf:Description rdf:about="&ontology;PistaDeAterrizaje">
+        <rdfs:subClassOf rdf:resource="&geosparql;Feature"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/Puente -->
+
+    <rdf:Description rdf:about="&ontology;Puente">
+        <rdfs:subClassOf rdf:resource="&geosparql;Feature"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/Puerto -->
+
+    <rdf:Description rdf:about="&ontology;Puerto">
+        <rdfs:subClassOf rdf:resource="&geosparql;Feature"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/Ruta -->
+
+    <rdf:Description rdf:about="&ontology;Ruta">
+        <rdfs:subClassOf rdf:resource="&geosparql;Feature"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/SubestacionElectrica -->
+
+    <rdf:Description rdf:about="&ontology;SubestacionElectrica">
+        <rdfs:subClassOf rdf:resource="&geosparql;Feature"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/TransporteSuspendido -->
+
+    <rdf:Description rdf:about="&ontology;TransporteSuspendido">
+        <rdfs:subClassOf rdf:resource="&geosparql;Feature"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/ZonaDeUsoCaracteristico -->
+
+    <rdf:Description rdf:about="&ontology;ZonaDeUsoCaracteristico">
+        <rdfs:subClassOf rdf:resource="&geosparql;Feature"/>
+    </rdf:Description>
 </rdf:RDF>
 
 
