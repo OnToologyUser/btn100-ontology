@@ -22,6 +22,9 @@
      xmlns:btn100="&kos;btn100/"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#">
     <owl:Ontology rdf:about="http://geo.linkeddata.es/ontology/btn100">
+        <owl:imports rdf:resource="http://geo.linkeddata.es/ontology/population-buildings.owl"/>
+        <owl:imports rdf:resource="http://geo.linkeddata.es/ontology/transportes.owl"/>
+        <owl:imports rdf:resource="http://geo.linkeddata.es/ontology/supply-net.owl#"/>
         <owl:imports rdf:resource="http://www.opengis.net/ont/geosparql"/>
     </owl:Ontology>
     
@@ -95,14 +98,14 @@
         <rdfs:subClassOf rdf:resource="&skos;Concept"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&skos;notation"/>
-                <owl:hasValue>03</owl:hasValue>
+                <owl:onProperty rdf:resource="&skos;inScheme"/>
+                <owl:allValuesFrom rdf:resource="&kos;btn100"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&skos;inScheme"/>
-                <owl:allValuesFrom rdf:resource="&kos;btn100"/>
+                <owl:onProperty rdf:resource="&skos;notation"/>
+                <owl:hasValue>03</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <skos:prefLabel xml:lang="es">Hidrografía</skos:prefLabel>
@@ -116,14 +119,14 @@
         <rdfs:subClassOf rdf:resource="&skos;Concept"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&skos;inScheme"/>
-                <owl:allValuesFrom rdf:resource="&kos;btn100"/>
+                <owl:onProperty rdf:resource="&skos;notation"/>
+                <owl:hasValue>05</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&skos;notation"/>
-                <owl:hasValue>05</owl:hasValue>
+                <owl:onProperty rdf:resource="&skos;inScheme"/>
+                <owl:allValuesFrom rdf:resource="&kos;btn100"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <skos:prefLabel xml:lang="es">Poblaciones y construcciones</skos:prefLabel>
@@ -137,14 +140,14 @@
         <rdfs:subClassOf rdf:resource="&skos;Concept"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&skos;inScheme"/>
-                <owl:allValuesFrom rdf:resource="&kos;btn100"/>
+                <owl:onProperty rdf:resource="&skos;notation"/>
+                <owl:hasValue>10</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&skos;notation"/>
-                <owl:hasValue>10</owl:hasValue>
+                <owl:onProperty rdf:resource="&skos;inScheme"/>
+                <owl:allValuesFrom rdf:resource="&kos;btn100"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <skos:prefLabel xml:lang="es">Puntos de control</skos:prefLabel>
@@ -158,14 +161,14 @@
         <rdfs:subClassOf rdf:resource="&skos;Concept"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&skos;notation"/>
-                <owl:hasValue>02</owl:hasValue>
+                <owl:onProperty rdf:resource="&skos;inScheme"/>
+                <owl:allValuesFrom rdf:resource="&kos;btn100"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&skos;inScheme"/>
-                <owl:allValuesFrom rdf:resource="&kos;btn100"/>
+                <owl:onProperty rdf:resource="&skos;notation"/>
+                <owl:hasValue>02</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <skos:prefLabel xml:lang="es">Relieve</skos:prefLabel>
@@ -179,14 +182,14 @@
         <rdfs:subClassOf rdf:resource="&skos;Concept"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&skos;notation"/>
-                <owl:hasValue>06</owl:hasValue>
+                <owl:onProperty rdf:resource="&skos;inScheme"/>
+                <owl:allValuesFrom rdf:resource="&kos;btn100"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&skos;inScheme"/>
-                <owl:allValuesFrom rdf:resource="&kos;btn100"/>
+                <owl:onProperty rdf:resource="&skos;notation"/>
+                <owl:hasValue>06</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <skos:prefLabel xml:lang="es">Transportes</skos:prefLabel>
@@ -200,14 +203,14 @@
         <rdfs:subClassOf rdf:resource="&skos;Concept"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&skos;notation"/>
-                <owl:hasValue>01</owl:hasValue>
+                <owl:onProperty rdf:resource="&skos;inScheme"/>
+                <owl:allValuesFrom rdf:resource="&kos;btn100"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&skos;inScheme"/>
-                <owl:allValuesFrom rdf:resource="&kos;btn100"/>
+                <owl:onProperty rdf:resource="&skos;notation"/>
+                <owl:hasValue>01</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <skos:prefLabel xml:lang="es">Unidades adminstrativas y zonas protegidas</skos:prefLabel>
