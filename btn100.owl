@@ -1,0 +1,220 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY kos "http://geo.linkeddata.es/kos/" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
+    <!ENTITY btn100 "http://geo.linkeddata.es/kos/btn100/" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://geo.linkeddata.es/ontology/btn100#"
+     xml:base="http://geo.linkeddata.es/ontology/btn100"
+     xmlns:kos="http://geo.linkeddata.es/kos/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:btn100="&kos;btn100/"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+    <owl:Ontology rdf:about="http://geo.linkeddata.es/ontology/btn100">
+        <owl:imports rdf:resource="http://www.opengis.net/ont/geosparql"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://geo.linkeddata.es/kos/btn100 -->
+
+    <owl:Class rdf:about="&kos;btn100">
+        <rdfs:subClassOf rdf:resource="&skos;ConceptScheme"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/kos/btn100/conducciones-y-energia -->
+
+    <owl:Class rdf:about="&kos;btn100/conducciones-y-energia">
+        <rdfs:subClassOf rdf:resource="&skos;Concept"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&skos;inScheme"/>
+                <owl:allValuesFrom rdf:resource="&kos;btn100"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&skos;notation"/>
+                <owl:hasValue>07</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <skos:prefLabel xml:lang="es">Conducciones y energía</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/kos/btn100/hidrografia -->
+
+    <owl:Class rdf:about="&kos;btn100/hidrografia">
+        <rdfs:subClassOf rdf:resource="&skos;Concept"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&skos;notation"/>
+                <owl:hasValue>03</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&skos;inScheme"/>
+                <owl:allValuesFrom rdf:resource="&kos;btn100"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <skos:prefLabel xml:lang="es">Hidrografía</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/kos/btn100/poblaciones-y-construcciones -->
+
+    <owl:Class rdf:about="&kos;btn100/poblaciones-y-construcciones">
+        <rdfs:subClassOf rdf:resource="&skos;Concept"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&skos;inScheme"/>
+                <owl:allValuesFrom rdf:resource="&kos;btn100"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&skos;notation"/>
+                <owl:hasValue>05</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <skos:prefLabel xml:lang="es">Poblaciones y construcciones</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/kos/btn100/puntos-de-control -->
+
+    <owl:Class rdf:about="&kos;btn100/puntos-de-control">
+        <rdfs:subClassOf rdf:resource="&skos;Concept"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&skos;inScheme"/>
+                <owl:allValuesFrom rdf:resource="&kos;btn100"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&skos;notation"/>
+                <owl:hasValue>10</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <skos:prefLabel xml:lang="es">Puntos de control</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/kos/btn100/relieve -->
+
+    <owl:Class rdf:about="&kos;btn100/relieve">
+        <rdfs:subClassOf rdf:resource="&skos;Concept"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&skos;notation"/>
+                <owl:hasValue>02</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&skos;inScheme"/>
+                <owl:allValuesFrom rdf:resource="&kos;btn100"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <skos:prefLabel xml:lang="es">Relieve</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/kos/btn100/transportes -->
+
+    <owl:Class rdf:about="&kos;btn100/transportes">
+        <rdfs:subClassOf rdf:resource="&skos;Concept"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&skos;notation"/>
+                <owl:hasValue>06</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&skos;inScheme"/>
+                <owl:allValuesFrom rdf:resource="&kos;btn100"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <skos:prefLabel xml:lang="es">Transportes</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/kos/btn100/unidades-administrativas-y-zonas-protegidas -->
+
+    <owl:Class rdf:about="&kos;btn100/unidades-administrativas-y-zonas-protegidas">
+        <rdfs:subClassOf rdf:resource="&skos;Concept"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&skos;notation"/>
+                <owl:hasValue>01</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&skos;inScheme"/>
+                <owl:allValuesFrom rdf:resource="&kos;btn100"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <skos:prefLabel xml:lang="es">Unidades adminstrativas y zonas protegidas</skos:prefLabel>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
+
