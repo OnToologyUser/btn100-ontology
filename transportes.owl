@@ -1,0 +1,1199 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY terms "http://purl.org/dc/terms/" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://geo.linkeddata.es/ontology/"
+     xml:base="http://geo.linkeddata.es/ontology/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://geo.linkeddata.es/ontology/">
+        <owl:imports rdf:resource="http://geo.linkeddata.es/ontology/transportes.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/acceso -->
+
+    <owl:DatatypeProperty rdf:about="http://geo.linkeddata.es/ontology/acceso">
+        <rdfs:label xml:lang="es">acceso</rdfs:label>
+        <rdfs:comment xml:lang="es">Acceso libre o de peaje</rdfs:comment>
+        <rdfs:domain rdf:resource="http://geo.linkeddata.es/ontology/Autopista"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first rdf:datatype="&xsd;string">de peaje</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first rdf:datatype="&xsd;string">libre</rdf:first>
+                                <rdf:rest rdf:resource="&rdf;nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/altitud -->
+
+    <owl:DatatypeProperty rdf:about="http://geo.linkeddata.es/ontology/altitud">
+        <rdfs:label xml:lang="es">altitud</rdfs:label>
+        <rdfs:comment xml:lang="es">Altitud en metros</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;int"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Aerodromo"/>
+                    <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Aeropuerto"/>
+                    <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Helipuerto"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/anchoDeVia -->
+
+    <owl:DatatypeProperty rdf:about="http://geo.linkeddata.es/ontology/anchoDeVia">
+        <rdfs:label xml:lang="es">ancho de vía</rdfs:label>
+        <rdfs:comment>ancho de vía</rdfs:comment>
+        <rdfs:domain rdf:resource="http://geo.linkeddata.es/ontology/FerrocarrilConvencional"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first rdf:datatype="&xsd;string">desconocido</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first rdf:datatype="&xsd;string">ibérico</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&rdf;List"/>
+                                        <rdf:first rdf:datatype="&xsd;string">internacional</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                <rdf:first rdf:datatype="&xsd;string">mixto</rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="&rdf;List"/>
+                                                        <rdf:first rdf:datatype="&xsd;string">métrico</rdf:first>
+                                                        <rdf:rest rdf:resource="&rdf;nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/calzada -->
+
+    <owl:DatatypeProperty rdf:about="http://geo.linkeddata.es/ontology/calzada">
+        <rdfs:label xml:lang="es">calzada</rdfs:label>
+        <rdfs:comment xml:lang="es">Número de calzadas y sentido de circulación del tramo de vía.
+* Convencional.Única calzada con doble sentido de circulación.
+* Doble.Dos calzadas separadas y paralelas, con sentidos
+distintos.
+* sentido único. Calzada de sentido único no contigua a la del
+contrario.
+</rdfs:comment>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first rdf:datatype="&xsd;string">convencional</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first rdf:datatype="&xsd;string">doble</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&rdf;List"/>
+                                        <rdf:first rdf:datatype="&xsd;string">sentido único</rdf:first>
+                                        <rdf:rest rdf:resource="&rdf;nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Autopista"/>
+                    <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Autovia"/>
+                    <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Carretera"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/categoriaVial -->
+
+    <owl:DatatypeProperty rdf:about="http://geo.linkeddata.es/ontology/categoriaVial">
+        <rdfs:label xml:lang="es">categoria vial</rdfs:label>
+        <rdfs:comment xml:lang="es">Categoría según la importancia de la vía</rdfs:comment>
+        <rdfs:domain rdf:resource="http://geo.linkeddata.es/ontology/CarreteraAutonomica"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first rdf:datatype="&xsd;string">primer orden</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first rdf:datatype="&xsd;string">segundo orden</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&rdf;List"/>
+                                        <rdf:first rdf:datatype="&xsd;string">sin catalogar</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                <rdf:first rdf:datatype="&xsd;string">tercer orden</rdf:first>
+                                                <rdf:rest rdf:resource="&rdf;nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/codigoDeEstacion -->
+
+    <owl:DatatypeProperty rdf:about="http://geo.linkeddata.es/ontology/codigoDeEstacion">
+        <rdfs:label xml:lang="es">codigo de estacion</rdfs:label>
+        <rdfs:comment xml:lang="es">Código de la estación(según ADIF)</rdfs:comment>
+        <rdfs:domain rdf:resource="http://geo.linkeddata.es/ontology/EnclaveFerroviario"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="&xsd;string"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:length rdf:datatype="&xsd;integer">6</xsd:length>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/codigoDeVia -->
+
+    <owl:DatatypeProperty rdf:about="http://geo.linkeddata.es/ontology/codigoDeVia">
+        <rdfs:label xml:lang="es">codigo de vía</rdfs:label>
+        <rdfs:comment>Código de la vía (según ADIF)</rdfs:comment>
+        <rdfs:domain rdf:resource="http://geo.linkeddata.es/ontology/Ferrocarril"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="&xsd;string"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:length rdf:datatype="&xsd;integer">6</xsd:length>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/competenciaAeroportuaria -->
+
+    <owl:DatatypeProperty rdf:about="http://geo.linkeddata.es/ontology/competenciaAeroportuaria">
+        <rdfs:label xml:lang="es">competencia aeroportuaria</rdfs:label>
+        <rdfs:comment xml:lang="es">Competencia de la explotación earoportuaria</rdfs:comment>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Aerodromo"/>
+                    <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Aeropuerto"/>
+                    <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Helipuerto"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first rdf:datatype="&xsd;string">Aena</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first rdf:datatype="&xsd;string">Militar</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&rdf;List"/>
+                                        <rdf:first rdf:datatype="&xsd;string">Privado</rdf:first>
+                                        <rdf:rest rdf:resource="&rdf;nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/competenciaDeVia -->
+
+    <owl:DatatypeProperty rdf:about="http://geo.linkeddata.es/ontology/competenciaDeVia">
+        <rdfs:label xml:lang="es">competencia de la via</rdfs:label>
+        <rdfs:comment xml:lang="es">Compentecia de la vía
+
+* estatal. La competencia es del Estado
+* autonómica. La competencia es de la administración de las CCAA
+* provincial. La competencia es de la Diputación Provincial
+* local. La competencia es del Municipio</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first rdf:datatype="&xsd;string">autonómica</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first rdf:datatype="&xsd;string">estatal</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&rdf;List"/>
+                                        <rdf:first>local</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                <rdf:first rdf:datatype="&xsd;string">provicial</rdf:first>
+                                                <rdf:rest rdf:resource="&rdf;nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Autopista"/>
+                    <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Autovia"/>
+                    <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/CarreteraAutonomica"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/competenciaPortuaria -->
+
+    <owl:DatatypeProperty rdf:about="http://geo.linkeddata.es/ontology/competenciaPortuaria">
+        <rdfs:label xml:lang="es">competencia portuaria</rdfs:label>
+        <rdfs:comment xml:lang="es">Competencia de la explotación portuaria</rdfs:comment>
+        <rdfs:domain rdf:resource="http://geo.linkeddata.es/ontology/Puerto"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first rdf:datatype="&xsd;string">no definido</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first rdf:datatype="&xsd;string">puerto del estado</rdf:first>
+                                <rdf:rest rdf:resource="&rdf;nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/electrificacion -->
+
+    <owl:DatatypeProperty rdf:about="http://geo.linkeddata.es/ontology/electrificacion">
+        <rdfs:label xml:lang="es">electrificacion</rdfs:label>
+        <rdfs:domain rdf:resource="http://geo.linkeddata.es/ontology/FerrocarrilConvencional"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/estadoDeUso -->
+
+    <owl:DatatypeProperty rdf:about="http://geo.linkeddata.es/ontology/estadoDeUso">
+        <rdfs:label xml:lang="es">estado de uso</rdfs:label>
+        <rdfs:comment xml:lang="es">Estado de uso de una vía</rdfs:comment>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first rdf:datatype="&xsd;string">abandonado</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first rdf:datatype="&xsd;string">en construcción</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&rdf;List"/>
+                                        <rdf:first rdf:datatype="&xsd;string">en uso</rdf:first>
+                                        <rdf:rest rdf:resource="&rdf;nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Autopista"/>
+                    <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Autovia"/>
+                    <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Carretera"/>
+                    <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Enlace"/>
+                    <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Ferrocarril"/>
+                    <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Puerto"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/iataCode -->
+
+    <owl:DatatypeProperty rdf:about="http://geo.linkeddata.es/ontology/iataCode">
+        <rdfs:label xml:lang="es">código iata</rdfs:label>
+        <rdfs:comment xml:lang="en">iata code</rdfs:comment>
+        <rdfs:comment xml:lang="es">código iata</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Aerodromo"/>
+                    <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Aeropuerto"/>
+                    <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Helipuerto"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="&xsd;string"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:length rdf:datatype="&xsd;integer">3</xsd:length>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/icaoCode -->
+
+    <owl:DatatypeProperty rdf:about="http://geo.linkeddata.es/ontology/icaoCode">
+        <rdfs:label xml:lang="en">icao code</rdfs:label>
+        <rdfs:label xml:lang="es">código icao</rdfs:label>
+        <rdfs:comment xml:lang="es">Código ICAO</rdfs:comment>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="&xsd;string"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:length rdf:datatype="&xsd;integer">5</xsd:length>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Aerodromo"/>
+                    <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Aeropuerto"/>
+                    <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Helipuerto"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/itinerarioEuropeo -->
+
+    <owl:DatatypeProperty rdf:about="http://geo.linkeddata.es/ontology/itinerarioEuropeo">
+        <rdfs:label xml:lang="es">itinerario europeo</rdfs:label>
+        <rdfs:comment xml:lang="es">Indica si el tramo pertenece a la Red de Carreteras Europeas.</rdfs:comment>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Autopista"/>
+                    <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Autovia"/>
+                    <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Carretera"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first rdf:datatype="&xsd;string">itinerario europeo</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first rdf:datatype="&xsd;string">itinerario no europeo</rdf:first>
+                                <rdf:rest rdf:resource="&rdf;nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/numeroDeVias -->
+
+    <owl:DatatypeProperty rdf:about="http://geo.linkeddata.es/ontology/numeroDeVias">
+        <rdfs:label xml:lang="es">número de vías</rdfs:label>
+        <rdfs:comment>número de vías</rdfs:comment>
+        <rdfs:domain rdf:resource="http://geo.linkeddata.es/ontology/FerrocarrilConvencional"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first rdf:datatype="&xsd;string">desconocido</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first rdf:datatype="&xsd;string">doble (una via para cada sentido)</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&rdf;List"/>
+                                        <rdf:first rdf:datatype="&xsd;string">única (via de doble sentido)</rdf:first>
+                                        <rdf:rest rdf:resource="&rdf;nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/rutaTenT -->
+
+    <owl:DatatypeProperty rdf:about="http://geo.linkeddata.es/ontology/rutaTenT">
+        <rdfs:label xml:lang="es">rutaTenT</rdfs:label>
+        <rdfs:comment xml:lang="es">Indica si el tramo pertenece a la Red Transeuropea de Transporte (TEN-T)</rdfs:comment>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first rdf:datatype="&xsd;string">no pertenece a ruta TEN-T</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first rdf:datatype="&xsd;string">ruta TEN-T</rdf:first>
+                                <rdf:rest rdf:resource="&rdf;nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Aerodromo"/>
+                    <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Aeropuerto"/>
+                    <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Autopista"/>
+                    <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Autovia"/>
+                    <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Carretera"/>
+                    <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Ferrocarril"/>
+                    <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Helipuerto"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/situacion -->
+
+    <owl:DatatypeProperty rdf:about="http://geo.linkeddata.es/ontology/situacion">
+        <rdfs:label xml:lang="es">situación</rdfs:label>
+        <rdfs:comment xml:lang="es">Disposición del tramo de vía sobre la superficie</rdfs:comment>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Autopista"/>
+                    <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Carretera"/>
+                    <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Enlace"/>
+                    <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Ferrocarril"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first rdf:datatype="&xsd;string">elevado</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first rdf:datatype="&xsd;string">en superficie</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&rdf;List"/>
+                                        <rdf:first rdf:datatype="&xsd;string">sin clasificar</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                <rdf:first rdf:datatype="&xsd;string">subterraneo</rdf:first>
+                                                <rdf:rest rdf:resource="&rdf;nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/tipoDeTramo -->
+
+    <owl:DatatypeProperty rdf:about="http://geo.linkeddata.es/ontology/tipoDeTramo">
+        <rdfs:label xml:lang="es">tipo de tramo</rdfs:label>
+        <rdfs:comment xml:lang="es">Indica si el tramo de vía se desarrolla por el interior de núcles o diseminados superficiales.
+* interna. El tramo discurre por el interior de poblaciones o zonas de uso.
+* no interna. El tramo no discurre por el interior de poblaciones o zonas de uso.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Autopista"/>
+                    <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Autovia"/>
+                    <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Carretera"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first rdf:datatype="&xsd;string">interna</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first rdf:datatype="&xsd;string">no interna</rdf:first>
+                                <rdf:rest rdf:resource="&rdf;nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/trafico -->
+
+    <owl:DatatypeProperty rdf:about="http://geo.linkeddata.es/ontology/trafico">
+        <rdfs:label xml:lang="es">tráfico</rdfs:label>
+        <rdfs:comment xml:lang="es">Tipo de Tráfico</rdfs:comment>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/EnclaveFerroviario"/>
+                    <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/FerrocarrilConvencional"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first rdf:datatype="&xsd;string">desconocido</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first rdf:datatype="&xsd;string">mercancías</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&rdf;List"/>
+                                        <rdf:first rdf:datatype="&xsd;string">viajeros</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                <rdf:first rdf:datatype="&xsd;string">viajeros y mercancías</rdf:first>
+                                                <rdf:rest rdf:resource="&rdf;nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/unloCode -->
+
+    <owl:DatatypeProperty rdf:about="http://geo.linkeddata.es/ontology/unloCode">
+        <rdfs:label xml:lang="en">unlo code</rdfs:label>
+        <rdfs:comment xml:lang="en">UN/LOCODE, the United Nations Code for Trade and Transport Locations, is a geographic coding scheme developed and maintained by United Nations Economic Commission for Europe (UNECE), a unit of the United Nations. UN/LOCODE assigns codes to locations used in trade and transport  with functions such as seaports, rail and road terminals, airports, post offices and border crossing points.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Código de localización de Naciones Unidas (United Nations / Location CODE – UN/LOCODE)</rdfs:comment>
+        <rdfs:comment xml:lang="es">código unlo</rdfs:comment>
+        <rdfs:domain rdf:resource="http://geo.linkeddata.es/ontology/Puerto"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="&xsd;string"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:length rdf:datatype="&xsd;integer">3</xsd:length>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/Apartadero -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/ontology/Apartadero">
+        <rdfs:label xml:lang="es">Apartadero</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/EnclaveFerroviario"/>
+        <terms:source xml:lang="es">Administrador de Infraestructuras Ferroviarias (ADIF)</terms:source>
+        <rdfs:comment xml:lang="es">Son estaciones de poco tráfico de viajeros y cuyo objetivo fundamental es la regulación del tráfico ferroviario, posibilitando la realización de cruces de trenes, adelantamientos, etc.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Vía corta derivada de la principal, que sirve para apartar en ella trenes, coches, vagones, tranvías y/o locomotoras.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/Apeadero -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/ontology/Apeadero">
+        <rdfs:label xml:lang="es">Apeadero</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/EnclaveFerroviario"/>
+        <terms:source xml:lang="es">Administrador de Infraestructuras Ferroviarias (ADIF)</terms:source>
+        <rdfs:comment xml:lang="es">En los ferrocarriles, sitio de la vía preparado para el servicio público, pero sin apartadero ni los demás accesorios de una estación.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Son dependencias con servicio exclusivo para la subida y bajada de viajeros. Son muy habituales en los grandes núcleos de población, y no tienen personal.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/Autopista -->
+
+    <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Autopista">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://geo.linkeddata.es/ontology/calzada"/>
+                                <owl:hasValue rdf:datatype="&xsd;string">doble</owl:hasValue>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://geo.linkeddata.es/ontology/calzada"/>
+                                <owl:hasValue rdf:datatype="&xsd;string">sentido único</owl:hasValue>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://geo.linkeddata.es/ontology/estadoDeUso"/>
+                                <owl:hasValue rdf:datatype="&xsd;string">en construcción</owl:hasValue>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://geo.linkeddata.es/ontology/estadoDeUso"/>
+                                <owl:hasValue rdf:datatype="&xsd;string">en uso</owl:hasValue>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <terms:source xml:lang="es">Anexo A: Catálogo de Objetos Geográficos de BTN100.</terms:source>
+    </rdf:Description>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/Autovia -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/ontology/Autovia">
+        <rdfs:label xml:lang="es">Autovia</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://geo.linkeddata.es/ontology/calzada"/>
+                                <owl:hasValue rdf:datatype="&xsd;string">doble</owl:hasValue>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://geo.linkeddata.es/ontology/calzada"/>
+                                <owl:hasValue rdf:datatype="&xsd;string">sentido único</owl:hasValue>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://geo.linkeddata.es/ontology/estadoDeUso"/>
+                                <owl:hasValue rdf:datatype="&xsd;string">en construcción</owl:hasValue>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://geo.linkeddata.es/ontology/estadoDeUso"/>
+                                <owl:hasValue rdf:datatype="&xsd;string">en uso</owl:hasValue>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <terms:source xml:lang="es">Anexo A: Catálogo de Objetos Geográficos de BTN100.</terms:source>
+        <rdfs:comment xml:lang="es">Carretera con calzadas separadas para los dos sentidos de la circulación, cuyas entradas y salidas no se someten a las exigencias de seguridad de las autopistas.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/Calle -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/ontology/Calle">
+        <rdfs:label xml:lang="es">Calle</rdfs:label>
+        <terms:source xml:lang="es">Anexo A: Catálogo de Objetos Geográficos de BTN100.</terms:source>
+        <rdfs:comment xml:lang="es">Vía que se encuentra localizada dentro de un núcleo de población o Diseminado superficial, y que ayuda a identificar la estructura de manzanas de dicho núcleo/diseminado.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/Cargadero -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/ontology/Cargadero">
+        <rdfs:label xml:lang="es">Cargadero</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/EnclaveFerroviario"/>
+        <terms:source xml:lang="es">Administrador de Infraestructuras Ferroviarias (ADIF)</terms:source>
+        <rdfs:comment xml:lang="es">Instalación ferroviaria que permite el acceso de mercancías desde los trenes a los barcos. Se distingue de una estación en que no es parte de la gestión de la circulación, ni tiene que disponer de desvíos y señales.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/CarreteraAutonomica -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/ontology/CarreteraAutonomica">
+        <rdfs:label xml:lang="es">Carretera Autonómica</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Carretera"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://geo.linkeddata.es/ontology/calzada"/>
+                                <owl:hasValue rdf:datatype="&xsd;string">autonómica</owl:hasValue>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://geo.linkeddata.es/ontology/calzada"/>
+                                <owl:hasValue rdf:datatype="&xsd;string">sentido único</owl:hasValue>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://geo.linkeddata.es/ontology/competenciaDeVia"/>
+                                <owl:hasValue rdf:datatype="&xsd;string">autonómica</owl:hasValue>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://geo.linkeddata.es/ontology/competenciaDeVia"/>
+                                <owl:hasValue rdf:datatype="&xsd;string">local</owl:hasValue>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://geo.linkeddata.es/ontology/competenciaDeVia"/>
+                                <owl:hasValue rdf:datatype="&xsd;string">provicial</owl:hasValue>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="es">Tramo de carretera convencional de competencia autonómica o de cualquier otra administración inferior a ésta.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/CarreteraNacional -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/ontology/CarreteraNacional">
+        <rdfs:label xml:lang="es">Carretera Nacional</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Carretera"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://geo.linkeddata.es/ontology/calzada"/>
+                                <owl:hasValue rdf:datatype="&xsd;string">convencional</owl:hasValue>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://geo.linkeddata.es/ontology/calzada"/>
+                                <owl:hasValue rdf:datatype="&xsd;string">sentido único</owl:hasValue>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="es">Vía de comunicación dedicada al tráfico rodado, cuya competencia corresponde a la Administración Central del Estado, clasificada como carretera de primer orden por el Ministerio de Fomento (Red de Interés General del Estado).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/EnclaveFerroviario -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/ontology/EnclaveFerroviario">
+        <rdfs:label xml:lang="es">Enclave Ferroviario</rdfs:label>
+        <terms:source xml:lang="es">Administrador de Infraestructuras Ferroviarias (ADIF)</terms:source>
+        <rdfs:comment xml:lang="es">instalaciones necesarias para el  funcionamiento del ferrocarril en todas sus faceta.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/Enlace -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/ontology/Enlace">
+        <rdfs:label xml:lang="es">Enlace</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://geo.linkeddata.es/ontology/estadoDeUso"/>
+                        <owl:hasValue rdf:datatype="&xsd;string">en construcción</owl:hasValue>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://geo.linkeddata.es/ontology/estadoDeUso"/>
+                        <owl:hasValue rdf:datatype="&xsd;string">en uso</owl:hasValue>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <terms:source xml:lang="es">Anexo A: Catálogo de Objetos Geográficos de BTN100.</terms:source>
+        <rdfs:comment xml:lang="es">Tramo que une dos vías de nombre distinto y permite el acceso de una a otra.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/EstacionDeFerrocarril -->
+
+    <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/EstacionDeFerrocarril">
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/EnclaveFerroviario"/>
+        <terms:source xml:lang="es">Administrador de Infraestructuras Ferroviarias (ADIF)</terms:source>
+        <rdfs:comment xml:lang="es">Conjunto de instalaciones de vías y agujas desde las que se coordina el tráfico ferroviario, tanto de trenes de viajeros como de mercancías y maniobras, y da servicio comercial de todo tipo a los usuarios del ferrocarril.</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/Ferrocarril -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/ontology/Ferrocarril">
+        <rdfs:label xml:lang="es">Ferrocarril</rdfs:label>
+        <rdfs:comment xml:lang="es">Camino con dos carriles de hierro paralelos, sobre los cuales ruedan los trenes.</rdfs:comment>
+        <terms:source xml:lang="es">Diccionario de la Real Academia Española.</terms:source>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/FerrocarrilConvencional -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/ontology/FerrocarrilConvencional">
+        <rdfs:label xml:lang="es">Tramo de vía convencional</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/Ferrocarril"/>
+        <rdfs:comment xml:lang="es">Anexo A: Catálogo de Objetos Geográficos de BTN100.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Vía por la que circulan los trenes de RENFE que no pertenecen a la red AVE.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/FerrocarrilDeAltaVelocidad -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/ontology/FerrocarrilDeAltaVelocidad">
+        <rdfs:label xml:lang="es">Tramo de vía de alta velocidad</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Ferrocarril"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://geo.linkeddata.es/ontology/estadoDeUso"/>
+                                <owl:hasValue rdf:datatype="&xsd;string">en construcción</owl:hasValue>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://geo.linkeddata.es/ontology/estadoDeUso"/>
+                                <owl:hasValue rdf:datatype="&xsd;string">en uso</owl:hasValue>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="es">Anexo A: Catálogo de Objetos Geográficos de BTN100.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Tramo de vía por la que circula el Tren de alta velocidad de España (AVE).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/Helipuerto -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/ontology/Helipuerto">
+        <rdfs:label xml:lang="es">Helipuerto</rdfs:label>
+        <terms:source xml:lang="es">Diccionario de la Real Academia Española</terms:source>
+        <rdfs:comment xml:lang="es">Pista destinada al aterrizaje y despegue de helicópteros.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/Itinerario -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/ontology/Itinerario">
+        <rdfs:label xml:lang="es">Itinerario</rdfs:label>
+        <terms:source xml:lang="es">Anexo A: Catálogo de Objetos Geográficos de BTN100.</terms:source>
+        <rdfs:comment xml:lang="es">Tramo de vía perteneciente al Camino de Santiago o catalogada como Vía verde.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/ItinerarioDeCaminoDeSantiago -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/ontology/ItinerarioDeCaminoDeSantiago">
+        <rdfs:label xml:lang="es">ItinerarioDeCaminoDeSantiago</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/Itinerario"/>
+        <terms:source xml:lang="es">Anexo A: Catálogo de Objetos Geográficos de BTN100.</terms:source>
+        <rdfs:comment xml:lang="es">Itinerario perteneciente al Camino de Santiago</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/ItinerarionDeViaVerde -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/ontology/ItinerarionDeViaVerde">
+        <rdfs:label xml:lang="es">ItinerarionDeViaVerde</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/Itinerario"/>
+        <terms:source xml:lang="es">Anexo A: Catálogo de Objetos Geográficos de BTN100.</terms:source>
+        <rdfs:comment xml:lang="es">Itinerario catalogado como Vía Verde</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/PasoANivel -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/ontology/PasoANivel">
+        <rdfs:label xml:lang="es">Paso a nivel</rdfs:label>
+        <terms:source xml:lang="es">Anexo A: Catálogo de Objetos Geográficos de BTN100.</terms:source>
+        <rdfs:comment xml:lang="es">Cruce entre carretera y ferrocarril, que se produce al mismo nivel.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/Puerto -->
+
+    <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Puerto">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://geo.linkeddata.es/ontology/estadoDeUso"/>
+                        <owl:hasValue rdf:datatype="&xsd;string">en construcción</owl:hasValue>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://geo.linkeddata.es/ontology/estadoDeUso"/>
+                        <owl:hasValue rdf:datatype="&xsd;string">en uso</owl:hasValue>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/Suministro -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/ontology/Suministro">
+        <rdfs:label xml:lang="es">Suministro</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/EnclaveFerroviario"/>
+        <terms:source xml:lang="es">Administrador de Infraestructuras Ferroviarias (ADIF)</terms:source>
+        <rdfs:comment xml:lang="es">Son estaciones que aparte de regular el tráfico, tienen como misión principal la prestación de servicios de mercancías. Disponen de todas las instalaciones necesarias para la recepción, clasificación y formación, y expedición de los trenes de mercancías convencionales, que circulan entre ellas y/o a otros destinos nacionales e internacionales.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/Teleferico -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/ontology/Teleferico">
+        <rdfs:label xml:lang="es">Teleférico</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/TransporteSuspendido"/>
+        <terms:source xml:lang="es">Diccionario de la Real Academia Española.</terms:source>
+        <rdfs:comment xml:lang="es">Sistema de transporte en que los vehículos van suspendidos de un cable de tracción. Se emplea principalmente para salvar grandes diferencias de altitud.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/Telesilla -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/ontology/Telesilla">
+        <rdfs:label xml:lang="es">Telesilla</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/TransporteSuspendido"/>
+        <rdfs:comment xml:lang="es">Asiento suspendido de un cable de tracción, para el transporte de personas a la cumbre de una montaña o a un lugar elevado.</rdfs:comment>
+        <terms:source xml:lang="es">Diccionario de la Real Academia Española.</terms:source>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/Telesqui -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/ontology/Telesqui">
+        <rdfs:label xml:lang="es">Telesquí</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/TransporteSuspendido"/>
+        <rdfs:comment xml:lang="es"> Aparato que permite a los esquiadores subir hasta las pistas sobre sus esquís mediante un sistema de arrastre.</rdfs:comment>
+        <terms:source xml:lang="es">Diccionario de la Real Academia Española.</terms:source>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/TransporteSuspendido -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/ontology/TransporteSuspendido">
+        <rdfs:label xml:lang="es">TransporteSuspendido</rdfs:label>
+        <terms:source xml:lang="es">Anexo A: Catálogo de Objetos Geográficos de BTN100.</terms:source>
+        <rdfs:comment xml:lang="es">Sistema de transporte en el que los vehículos van suspendidos de un cable de tracción. Se emplea principalmente para salvar grandes diferencias de altitud.</rdfs:comment>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
+
