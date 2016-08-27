@@ -1,0 +1,442 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY terms "http://purl.org/dc/terms/" >
+    <!ENTITY foaf "http://xmlns.com/foaf/0.1/" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY geopolitical "http://aims.fao.org/aos/geopolitical.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY geodesy-ontology "http://geo.linkeddata.es/ontology/geodesy-ontology.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://geo.linkeddata.es/ontology/"
+     xml:base="http://geo.linkeddata.es/ontology/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:geodesy-ontology="http://geo.linkeddata.es/ontology/geodesy-ontology.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:geopolitical="http://aims.fao.org/aos/geopolitical.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://geo.linkeddata.es/ontology/geodesy.owl">
+        <dc:creator rdf:datatype="&xsd;string">Lissete Moscoso León</dc:creator>
+        <dc:title rdf:datatype="&xsd;string">geodesyOntology</dc:title>
+        <owl:versionInfo rdf:datatype="&xsd;string">v0.2</owl:versionInfo>
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <dc:publisher xml:lang="en">Ontology Engineering Group</dc:publisher>
+        <rdfs:comment xml:lang="es">Ontología global de dominio sobre fenómenos topográficos y geodesia</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:AnnotationProperty rdf:about="&terms;source"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/altitudElipsoidal -->
+
+    <owl:DatatypeProperty rdf:about="http://geo.linkeddata.es/ontology/altitudElipsoidal">
+        <rdfs:label xml:lang="es">altitudElipsoidal</rdfs:label>
+        <rdfs:comment xml:lang="es">Altitud Elipsoidal</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;float"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/EstacionPermanenteGPS"/>
+                    <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/VerticeGeodesico"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/altitudOrtometrica -->
+
+    <owl:DatatypeProperty rdf:about="http://geo.linkeddata.es/ontology/altitudOrtometrica">
+        <rdfs:label xml:lang="es">altitudOrtometrica</rdfs:label>
+        <rdfs:comment xml:lang="es">Altitud orotométrica</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;float"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/EstacionPermanenteGPS"/>
+                    <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/VerticeGeodesico"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/categoriaDeCurvaDeNivel -->
+
+    <owl:DatatypeProperty rdf:about="http://geo.linkeddata.es/ontology/categoriaDeCurvaDeNivel">
+        <rdfs:label xml:lang="es">categoria</rdfs:label>
+        <rdfs:comment xml:lang="es">Categoría asociada a cada tipología definida.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://geo.linkeddata.es/ontology/CurvaDeNivel"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first rdf:datatype="&xsd;string">depresion genérica (Curva que define una concavidad del terreno cada 20 m)</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first rdf:datatype="&xsd;string">depresion maestra (Curva que define una concavidad del terreno cada 100 m)</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&rdf;List"/>
+                                        <rdf:first rdf:datatype="&xsd;string">genérica (Curva de nivel con altitud cada 20 m)</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                <rdf:first rdf:datatype="&xsd;string">interpolada (Curva con altitud resultado de un algoritmo de cálculo y no de los
+datos del terreno)</rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="&rdf;List"/>
+                                                        <rdf:first rdf:datatype="&xsd;string">maestra (Curva de nivel con altitud múltiplo de 100 m)</rdf:first>
+                                                        <rdf:rest rdf:resource="&rdf;nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/codigo -->
+
+    <owl:DatatypeProperty rdf:about="http://geo.linkeddata.es/ontology/codigo">
+        <rdfs:label xml:lang="es">codigo</rdfs:label>
+        <rdfs:comment xml:lang="es">Código de estación GPS</rdfs:comment>
+        <rdfs:domain rdf:resource="http://geo.linkeddata.es/ontology/EstacionPermanenteGPS"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="&xsd;string"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:length rdf:datatype="&xsd;integer">4</xsd:length>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/cota -->
+
+    <owl:DatatypeProperty rdf:about="http://geo.linkeddata.es/ontology/cota">
+        <rdfs:label xml:lang="es">cota</rdfs:label>
+        <rdfs:comment xml:lang="es">Altitud expresada en metros</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;float"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/CurvaDeNivel"/>
+                    <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/PuntoAcotado"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/huso -->
+
+    <owl:DatatypeProperty rdf:about="http://geo.linkeddata.es/ontology/huso">
+        <rdfs:label xml:lang="es">huso</rdfs:label>
+        <rdfs:comment xml:lang="es">Huso UTM.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;int"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/EstacionPermanenteGPS"/>
+                    <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/VerticeGeodesico"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/numero -->
+
+    <owl:DatatypeProperty rdf:about="http://geo.linkeddata.es/ontology/numero">
+        <rdfs:label xml:lang="es">número</rdfs:label>
+        <rdfs:comment xml:lang="es">Numero del vértice</rdfs:comment>
+        <rdfs:domain rdf:resource="http://geo.linkeddata.es/ontology/VerticeGeodesico"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/xETRS89 -->
+
+    <owl:DatatypeProperty rdf:about="http://geo.linkeddata.es/ontology/xETRS89">
+        <rdfs:label xml:lang="es">xETRS89</rdfs:label>
+        <rdfs:comment xml:lang="es">Coordenada X en metros (ETRS89)</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;float"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/EstacionPermanenteGPS"/>
+                    <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/VerticeGeodesico"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/yETRS89 -->
+
+    <owl:DatatypeProperty rdf:about="http://geo.linkeddata.es/ontology/yETRS89">
+        <rdfs:label xml:lang="es">yETRS89</rdfs:label>
+        <rdfs:comment xml:lang="es">Coordenada Y en metros (ETRS89)</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;float"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/EstacionPermanenteGPS"/>
+                    <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/VerticeGeodesico"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/Cerro -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/ontology/Cerro">
+        <rdfs:label xml:lang="es">Cerro</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/PuntoAcotado"/>
+        <rdfs:comment xml:lang="es">Elevación de tierra aislada y de menor altura que el monte o la montaña.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/Collado -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/ontology/Collado">
+        <rdfs:label xml:lang="es">Collado</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/PuntoAcotado"/>
+        <rdfs:comment xml:lang="es">Paso o depresión suave por donde se puede atravesar con facilidad de un lado a otro una montaña o sierra.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/CotaMunicipal -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/ontology/CotaMunicipal">
+        <rdfs:label xml:lang="es">CotaMunicipal</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/PuntoAcotado"/>
+        <rdfs:comment xml:lang="es">Cota Municipal.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/CurvaDeNivel -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/ontology/CurvaDeNivel">
+        <rdfs:label xml:lang="es">CurvaDeNivel</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/FenomenoTopografico"/>
+        <rdfs:comment xml:lang="es">Se representan como curvas de nivel aquellas líneas que tienen la misma altitud sobre la superficie de referencia, siendo esta altitud un múltiplo de 40 o un múltiplo de 100 (para líneas interpoladas).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/CurvaDeNivelAltimetrica -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/ontology/CurvaDeNivelAltimetrica">
+        <rdfs:label xml:lang="es">CurvaDeNivelAltimetrica</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/CurvaDeNivel"/>
+        <rdfs:comment xml:lang="es">Curva de nivel en superficie.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/CurvaDeNivelBatimetrica -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/ontology/CurvaDeNivelBatimetrica">
+        <rdfs:label xml:lang="es">CurvaDeNivelBatimetrica</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/CurvaDeNivel"/>
+        <rdfs:comment xml:lang="es">Curva de nivel submarina.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/EstacionPermanenteGPS -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/ontology/EstacionPermanenteGPS">
+        <rdfs:label xml:lang="es">EstacionPermanenteGPS</rdfs:label>
+        <terms:source xml:lang="es">Anexo A: Catálogo de Objetos Geográficos de BTN100.</terms:source>
+        <rdfs:comment xml:lang="es">Vértices de la Red de Estaciones Permanentes de GPS, de la que se pueden obtener valores de observación para un día concreto y una hora determinada.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/FenomenoTopografico -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/ontology/FenomenoTopografico">
+        <rdfs:label xml:lang="es">Fenomeno Topográfico</rdfs:label>
+        <rdfs:comment xml:lang="es">Conjunto de particularidades que presenta un terreno en su configuración superficial.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/Pico -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/ontology/Pico">
+        <rdfs:label xml:lang="es">Pico</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/PuntoAcotado"/>
+        <rdfs:comment xml:lang="es">Montaña de cumbre puntiaguda</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/PuertoDeMontanna -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/ontology/PuertoDeMontanna">
+        <rdfs:label xml:lang="es">PuertoDeMontanna</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/PuntoAcotado"/>
+        <rdfs:comment xml:lang="es">Paso entre montañas.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/PuntoAcotado -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/ontology/PuntoAcotado">
+        <rdfs:label xml:lang="es">PuntoAcotado</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/FenomenoTopografico"/>
+        <rdfs:comment xml:lang="es">Se define como puntos acotados a aquellos puntos con cota que poseen una ubicación representativa del relieve y complementan la información facilitada por las curvas de nivel.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/VerticeGeodesico -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/ontology/VerticeGeodesico">
+        <rdfs:label xml:lang="es">VerticeGeodesico</rdfs:label>
+        <terms:source xml:lang="es">Anexo A: Catálogo de Objetos Geográficos de BTN100.</terms:source>
+        <rdfs:comment xml:lang="es">Vértice geodésico perteneciente a la Red de Primer Orden (NPRO) o a la Red de Orden Inferior (ROI) de España.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/VerticeGeodesicoDeOrdenInferior -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/ontology/VerticeGeodesicoDeOrdenInferior">
+        <rdfs:label xml:lang="es">VerticeGeodesicoDeOrdenInferior</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/VerticeGeodesico"/>
+        <rdfs:comment xml:lang="es">Perteneciente a la Red de Orden Inferior</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/VerticeGeodesicoRegcan95 -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/ontology/VerticeGeodesicoRegcan95">
+        <rdfs:label xml:lang="es">VerticeGeodesicoRegcan95</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/VerticeGeodesico"/>
+        <rdfs:comment xml:lang="es">Perteneciente a REGCAN95</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/VerticeGeodesicoRegente -->
+
+    <owl:Class rdf:about="http://geo.linkeddata.es/ontology/VerticeGeodesicoRegente">
+        <rdfs:label xml:lang="es">VerticeGeodesicoRegente</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/VerticeGeodesico"/>
+        <rdfs:comment xml:lang="es">Perteneciente a la Red de Regente</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/VerticeGeodesicoDeOrdenInferior"/>
+            <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/VerticeGeodesicoRegcan95"/>
+            <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/VerticeGeodesicoRegente"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
+
