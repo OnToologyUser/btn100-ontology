@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="Imports Wizard Entry" name="http://geo.linkeddata.es/ontology/hydro.owl" uri="hydro.owl.rdf"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1472312000777" name="duplicate:http://geo.linkeddata.es/ontology/" uri="population-buildings.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1472312000777" name="duplicate:http://geo.linkeddata.es/ontology/" uri="supply-net-ontology.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1472312000777" name="duplicate:http://geo.linkeddata.es/ontology/" uri="geodesy.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1472312000777" name="duplicate:http://geo.linkeddata.es/ontology/" uri="transportes.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1472312000777" name="http://geo.linkeddata.es/ontology/transportes.owl" uri="transportes.owl.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1472313158282" name="duplicate:http://geo.linkeddata.es/ontology/" uri="population-buildings.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1472313158282" name="duplicate:http://geo.linkeddata.es/ontology/" uri="supply-net-ontology.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1472313158282" name="duplicate:http://geo.linkeddata.es/ontology/" uri="hydro.owl.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1472313158282" name="duplicate:http://geo.linkeddata.es/ontology/" uri="geodesy.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1472313158282" name="duplicate:http://geo.linkeddata.es/ontology/" uri="transportes.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1472313158282" name="http://geo.linkeddata.es/ontology/transportes.owl" uri="transportes.owl.rdf"/>
     </group>
 </catalog>
