@@ -3,21 +3,343 @@
 
 <!DOCTYPE rdf:RDF [
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY ontology "http://geo.linkeddata.es/ontology/" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
 ]>
 
 
-<rdf:RDF xmlns="http://geo.linkeddata.es/ontology/hidrography.owl#"
-     xml:base="http://geo.linkeddata.es/ontology/hidrography.owl"
+<rdf:RDF xmlns="&ontology;hidrography.owl#"
+     xml:base="&ontology;hidrography.owl"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-    <owl:Ontology rdf:about="http://geo.linkeddata.es/ontology/hidrography.owl">
-        <owl:imports rdf:resource="http://geo.linkeddata.es/ontology/hydro.owl"/>
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:ontology="http://geo.linkeddata.es/ontology/">
+    <owl:Ontology rdf:about="&ontology;hidrography.owl">
+        <owl:imports rdf:resource="&ontology;hydro.owl"/>
     </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/categoriaDeIsla -->
+
+    <owl:DatatypeProperty rdf:about="&ontology;categoriaDeIsla">
+        <rdfs:label xml:lang="es">categoría de isla</rdfs:label>
+        <rdfs:domain rdf:resource="&ontology;Isla"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first rdf:datatype="&xsd;string">desconocida</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first rdf:datatype="&xsd;string">principal</rdf:first>
+                                <rdf:rest rdf:resource="&rdf;nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/categoriaDeRio -->
+
+    <owl:DatatypeProperty rdf:about="&ontology;categoriaDeRio">
+        <rdfs:label xml:lang="es">categoría de río</rdfs:label>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first rdf:datatype="&xsd;string">rio de interés terceario</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first rdf:datatype="&xsd;string">río de interés desconocido</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&rdf;List"/>
+                                        <rdf:first rdf:datatype="&xsd;string">río de interés principal</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                <rdf:first rdf:datatype="&xsd;string">río de interés segundario</rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="&rdf;List"/>
+                                                        <rdf:first rdf:datatype="&xsd;string">río de menor interés</rdf:first>
+                                                        <rdf:rest rdf:resource="&rdf;nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/producto -->
+
+    <owl:DatatypeProperty rdf:about="&ontology;producto">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&ontology;Cabo"/>
+                    <rdf:Description rdf:about="&ontology;Cala"/>
+                    <rdf:Description rdf:about="&ontology;Pennon"/>
+                    <rdf:Description rdf:about="&ontology;Playa"/>
+                    <rdf:Description rdf:about="&ontology;Punta"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first rdf:datatype="&xsd;string">MP200</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first rdf:datatype="&xsd;string">MP200 y SERIE C</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&rdf;List"/>
+                                        <rdf:first rdf:datatype="&xsd;string">SERIE C</rdf:first>
+                                        <rdf:rest rdf:resource="&rdf;nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/regimenDeLaguna -->
+
+    <owl:DatatypeProperty rdf:about="&ontology;regimenDeLaguna">
+        <rdfs:label xml:lang="es">régimen de laguna</rdfs:label>
+        <rdfs:comment xml:lang="es">Estacionalidad de las aguas</rdfs:comment>
+        <rdfs:domain rdf:resource="&ontology;Laguna"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first rdf:datatype="&xsd;string">no permanente</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first rdf:datatype="&xsd;string">permanente</rdf:first>
+                                <rdf:rest rdf:resource="&rdf;nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/Albufera -->
+
+    <rdf:Description rdf:about="&ontology;Albufera">
+        <rdfs:subClassOf rdf:resource="&ontology;ZonaHumeda"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/Balsa -->
+
+    <rdf:Description rdf:about="&ontology;Balsa">
+        <rdfs:subClassOf rdf:resource="&ontology;Alberca"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/Cabo -->
+
+    <owl:Class rdf:about="&ontology;Cabo">
+        <rdfs:label xml:lang="es">Cabo</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ontology;Morfologia"/>
+        <dc:source xml:lang="es">Diccionario de la Real Academia Española</dc:source>
+        <rdfs:comment xml:lang="es">Lengua de tierra que penetra en el mar.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/Cala -->
+
+    <owl:Class rdf:about="&ontology;Cala">
+        <rdfs:label xml:lang="es">Cala</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ontology;Morfologia"/>
+        <dc:source xml:lang="es">Diccionario de la Real Academia Española</dc:source>
+        <rdfs:comment xml:lang="es">Ensenada pequeña.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/Canyo -->
+
+    <rdf:Description rdf:about="&ontology;Canyo">
+        <rdfs:subClassOf rdf:resource="&ontology;ZonaHumeda"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/Esclusa -->
+
+    <owl:Class rdf:about="&ontology;Esclusa">
+        <rdfs:label xml:lang="es">Esclusa</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ontology;AguasCorrientesArtificiales"/>
+        <rdfs:comment xml:lang="es">Compartimento, con puertas de entrada y salida, que se construye en un canal de navegación para que los barcos puedan pasar de un tramo a otro de diferente nivel, para lo cual se llena de agua o se vacía el espacio comprendido entre dichas puertas.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/Estanque -->
+
+    <rdf:Description rdf:about="&ontology;Estanque">
+        <rdfs:subClassOf rdf:resource="&ontology;Alberca"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/Isla -->
+
+    <owl:Class rdf:about="&ontology;Isla">
+        <rdfs:subClassOf rdf:resource="&ontology;Morfologia"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/IslaFluvial -->
+
+    <rdf:Description rdf:about="&ontology;IslaFluvial">
+        <rdfs:subClassOf rdf:resource="&ontology;Isla"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/IslaMaritima -->
+
+    <owl:Class rdf:about="&ontology;IslaMaritima">
+        <rdfs:label xml:lang="es">Isla marítima</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ontology;Isla"/>
+        <dc:source xml:lang="es">Catálogo de Objetos Geográficos BTN100</dc:source>
+        <rdfs:comment xml:lang="es">Porción de tierra rodeada de agua del mar.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/Marisma -->
+
+    <rdf:Description rdf:about="&ontology;Marisma">
+        <rdfs:subClassOf rdf:resource="&ontology;ZonaHumeda"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/Pennon -->
+
+    <owl:Class rdf:about="&ontology;Pennon">
+        <rdfs:label xml:lang="es">Peñon</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ontology;Morfologia"/>
+        <dc:source xml:lang="es">Diccionario de la Real Academia Española</dc:source>
+        <rdfs:comment xml:lang="es">Monte peñascoso.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/Punta -->
+
+    <owl:Class rdf:about="&ontology;Punta">
+        <rdfs:label xml:lang="es">Punta</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ontology;Morfologia"/>
+        <dc:source xml:lang="es">Diccionario de la Real Academia Española</dc:source>
+        <rdfs:comment xml:lang="es">Lengua de tierra, generalmente baja y de poca extensión, que penetra en el mar.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/Rambla -->
+
+    <rdf:Description rdf:about="&ontology;Rambla">
+        <rdfs:subClassOf rdf:resource="&ontology;ZonaHumeda"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/Salina -->
+
+    <rdf:Description rdf:about="&ontology;Salina">
+        <rdfs:subClassOf rdf:resource="&ontology;ZonaHumeda"/>
+    </rdf:Description>
 </rdf:RDF>
 
 

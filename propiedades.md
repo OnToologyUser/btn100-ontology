@@ -103,3 +103,31 @@ datos del terreno)"^^string , "maestra (Curva de nivel con altitud múltiplo de 
 * latitud
  
 * longitud
+
+
+
+
+
+
+
+
+
+# Hidrografía
+* producto
+{"MP200"^^string , "MP200 y SERIE C"^^string , "SERIE C"^^string}
+
+
+
+
+* categoriaDeIsla
+
+{"principal"^^string, "desconocida"^^string}
+
+
+* regimenDeLaguna
+{"no permanente"^^string , "permanente"^^string}
+
+
+* categoriaDeRio
+{"rio de interés terceario"^^string , "río de interés principal"^^string , "río de interés segundario"^^string , "río de menor interés"^^string, "río de interés desconocido"^^string}
+
