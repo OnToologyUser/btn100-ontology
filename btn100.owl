@@ -114,14 +114,6 @@
     <!-- http://geo.linkeddata.es/ontology/alimenta_a -->
 
     <owl:ObjectProperty rdf:about="&ontology;alimenta_a">
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&ontology;AguasMarinas"/>
-                    <rdf:Description rdf:about="&ontology;AguasSuperficiales"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -133,6 +125,14 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&ontology;AguasMarinas"/>
+                    <rdf:Description rdf:about="&ontology;AguasSuperficiales"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:ObjectProperty>
     
 
@@ -141,14 +141,6 @@
 
     <owl:ObjectProperty rdf:about="&ontology;almacena">
         <owl:inverseOf rdf:resource="&ontology;es_almacenado_en"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&ontology;Aljibe"/>
-                    <rdf:Description rdf:about="&ontology;Embalse"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -158,6 +150,14 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&ontology;Aljibe"/>
+                    <rdf:Description rdf:about="&ontology;Embalse"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:ObjectProperty>
     
 
@@ -184,14 +184,6 @@
     <!-- http://geo.linkeddata.es/ontology/comunica_con -->
 
     <owl:ObjectProperty rdf:about="&ontology;comunica_con">
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&ontology;Canal"/>
-                    <rdf:Description rdf:about="&ontology;Sumidero"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -203,6 +195,14 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&ontology;Canal"/>
+                    <rdf:Description rdf:about="&ontology;Sumidero"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:ObjectProperty>
     
 
@@ -211,6 +211,14 @@
 
     <owl:ObjectProperty rdf:about="&ontology;conduce">
         <owl:inverseOf rdf:resource="&ontology;es_conducido_por"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&ontology;AguasContinentales"/>
+                    <rdf:Description rdf:about="&ontology;AguasMarinas"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -221,14 +229,6 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&ontology;AguasContinentales"/>
-                    <rdf:Description rdf:about="&ontology;AguasMarinas"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
     </owl:ObjectProperty>
     
 
@@ -261,6 +261,17 @@
 
     <owl:ObjectProperty rdf:about="&ontology;consta_de">
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&ontology;AguasDeTransicion"/>
+                    <rdf:Description rdf:about="&ontology;Corriente"/>
+                    <rdf:Description rdf:about="&ontology;Embalse"/>
+                    <rdf:Description rdf:about="&ontology;HidronimoPuntual"/>
+                    <rdf:Description rdf:about="&ontology;Morfologia"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -273,17 +284,6 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&ontology;AguasDeTransicion"/>
-                    <rdf:Description rdf:about="&ontology;Corriente"/>
-                    <rdf:Description rdf:about="&ontology;Embalse"/>
-                    <rdf:Description rdf:about="&ontology;HidronimoPuntual"/>
-                    <rdf:Description rdf:about="&ontology;Morfologia"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
     </owl:ObjectProperty>
     
 
@@ -403,14 +403,6 @@
 
     <owl:ObjectProperty rdf:about="&ontology;es_alimentada_por">
         <owl:inverseOf rdf:resource="&ontology;alimenta_a"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&ontology;AguasMarinas"/>
-                    <rdf:Description rdf:about="&ontology;AguasSuperficiales"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -422,6 +414,14 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&ontology;AguasMarinas"/>
+                    <rdf:Description rdf:about="&ontology;AguasSuperficiales"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
     </owl:ObjectProperty>
     
 
@@ -483,14 +483,6 @@
     <!-- http://geo.linkeddata.es/ontology/es_conducido_por -->
 
     <owl:ObjectProperty rdf:about="&ontology;es_conducido_por">
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&ontology;AguasMarinas"/>
-                    <rdf:Description rdf:about="&ontology;Aljibe"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -500,6 +492,14 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&ontology;AguasMarinas"/>
+                    <rdf:Description rdf:about="&ontology;Aljibe"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:ObjectProperty>
     
 
@@ -649,18 +649,6 @@
     <!-- http://geo.linkeddata.es/ontology/esta_proxima_a -->
 
     <owl:ObjectProperty rdf:about="&ontology;esta_proxima_a">
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&ontology;AguasMarinas"/>
-                    <rdf:Description rdf:about="&ontology;Arroyo"/>
-                    <rdf:Description rdf:about="&ontology;Desembocadura"/>
-                    <rdf:Description rdf:about="&ontology;Mar"/>
-                    <rdf:Description rdf:about="&ontology;Marisma"/>
-                    <rdf:Description rdf:about="&ontology;Rio"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -675,6 +663,18 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&ontology;AguasMarinas"/>
+                    <rdf:Description rdf:about="&ontology;Arroyo"/>
+                    <rdf:Description rdf:about="&ontology;Desembocadura"/>
+                    <rdf:Description rdf:about="&ontology;Mar"/>
+                    <rdf:Description rdf:about="&ontology;Marisma"/>
+                    <rdf:Description rdf:about="&ontology;Rio"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
     </owl:ObjectProperty>
     
 
@@ -698,6 +698,14 @@
     <!-- http://geo.linkeddata.es/ontology/inunda -->
 
     <owl:ObjectProperty rdf:about="&ontology;inunda">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&ontology;AguasCosteras"/>
+                    <rdf:Description rdf:about="&ontology;Rio"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -708,14 +716,6 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&ontology;AguasCosteras"/>
-                    <rdf:Description rdf:about="&ontology;Rio"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
     </owl:ObjectProperty>
     
 
@@ -734,6 +734,21 @@
 
     <owl:ObjectProperty rdf:about="&ontology;origina">
         <owl:inverseOf rdf:resource="&ontology;es_originado_por"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&ontology;CorrienteSubterranea"/>
+                    <rdf:Description rdf:about="&ontology;Glaciar"/>
+                    <rdf:Description rdf:about="&ontology;Manantial"/>
+                    <rdf:Description rdf:about="&ontology;Marisma"/>
+                    <rdf:Description rdf:about="&ontology;Nacimiento"/>
+                    <rdf:Description rdf:about="&ontology;Nevero"/>
+                    <rdf:Description rdf:about="&ontology;Ojo"/>
+                    <rdf:Description rdf:about="&ontology;Sumidero"/>
+                    <rdf:Description rdf:about="&ontology;Torrente"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -753,21 +768,6 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&ontology;CorrienteSubterranea"/>
-                    <rdf:Description rdf:about="&ontology;Glaciar"/>
-                    <rdf:Description rdf:about="&ontology;Manantial"/>
-                    <rdf:Description rdf:about="&ontology;Marisma"/>
-                    <rdf:Description rdf:about="&ontology;Nacimiento"/>
-                    <rdf:Description rdf:about="&ontology;Nevero"/>
-                    <rdf:Description rdf:about="&ontology;Ojo"/>
-                    <rdf:Description rdf:about="&ontology;Sumidero"/>
-                    <rdf:Description rdf:about="&ontology;Torrente"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
     </owl:ObjectProperty>
     
 
@@ -817,6 +817,14 @@
     <owl:ObjectProperty rdf:about="&ontology;precedeA">
         <rdfs:subPropertyOf rdf:resource="&ontology;esta_proxima_a"/>
         <owl:inverseOf rdf:resource="&ontology;sigueA"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&ontology;Desembocadura"/>
+                    <rdf:Description rdf:about="&ontology;Rio"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -826,14 +834,6 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&ontology;Desembocadura"/>
-                    <rdf:Description rdf:about="&ontology;Rio"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
     </owl:ObjectProperty>
     
 
@@ -2040,6 +2040,18 @@ Tabla ESTADO</terms:source>
         <rdfs:comment xml:lang="es">Estado de uso de una vía</rdfs:comment>
         <rdfs:comment xml:lang="es">Estado de uso.</rdfs:comment>
         <rdfs:domain rdf:resource="&ontology;ExplotacionMinera"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&ontology;Autopista"/>
+                    <rdf:Description rdf:about="&ontology;Autovia"/>
+                    <rdf:Description rdf:about="&ontology;Carretera"/>
+                    <rdf:Description rdf:about="&ontology;Enlace"/>
+                    <rdf:Description rdf:about="&ontology;Ferrocarril"/>
+                    <rdf:Description rdf:about="&ontology;Puerto"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range>
             <rdfs:Datatype>
                 <owl:oneOf>
@@ -2063,18 +2075,6 @@ Tabla ESTADO</terms:source>
                 </owl:oneOf>
             </rdfs:Datatype>
         </rdfs:range>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&ontology;Autopista"/>
-                    <rdf:Description rdf:about="&ontology;Autovia"/>
-                    <rdf:Description rdf:about="&ontology;Carretera"/>
-                    <rdf:Description rdf:about="&ontology;Enlace"/>
-                    <rdf:Description rdf:about="&ontology;Ferrocarril"/>
-                    <rdf:Description rdf:about="&ontology;Puerto"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
     </owl:DatatypeProperty>
     
 
@@ -2286,6 +2286,15 @@ http://www.estrucplan.com.ar/Producciones/entrega.asp?IdEntrega=1684</dc:source>
         <rdfs:comment xml:lang="en">iata code</rdfs:comment>
         <rdfs:comment xml:lang="es">código iata</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&ontology;Aerodromo"/>
+                    <rdf:Description rdf:about="&ontology;Aeropuerto"/>
+                    <rdf:Description rdf:about="&ontology;Helipuerto"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range>
             <rdfs:Datatype>
                 <owl:onDatatype rdf:resource="&xsd;string"/>
@@ -2296,15 +2305,6 @@ http://www.estrucplan.com.ar/Producciones/entrega.asp?IdEntrega=1684</dc:source>
                 </owl:withRestrictions>
             </rdfs:Datatype>
         </rdfs:range>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&ontology;Aerodromo"/>
-                    <rdf:Description rdf:about="&ontology;Aeropuerto"/>
-                    <rdf:Description rdf:about="&ontology;Helipuerto"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
     </owl:DatatypeProperty>
     
 
@@ -2315,6 +2315,15 @@ http://www.estrucplan.com.ar/Producciones/entrega.asp?IdEntrega=1684</dc:source>
         <rdfs:label xml:lang="en">icao code</rdfs:label>
         <rdfs:label xml:lang="es">código icao</rdfs:label>
         <rdfs:comment xml:lang="es">Código ICAO</rdfs:comment>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&ontology;Aerodromo"/>
+                    <rdf:Description rdf:about="&ontology;Aeropuerto"/>
+                    <rdf:Description rdf:about="&ontology;Helipuerto"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range>
             <rdfs:Datatype>
                 <owl:onDatatype rdf:resource="&xsd;string"/>
@@ -2325,15 +2334,6 @@ http://www.estrucplan.com.ar/Producciones/entrega.asp?IdEntrega=1684</dc:source>
                 </owl:withRestrictions>
             </rdfs:Datatype>
         </rdfs:range>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&ontology;Aerodromo"/>
-                    <rdf:Description rdf:about="&ontology;Aeropuerto"/>
-                    <rdf:Description rdf:about="&ontology;Helipuerto"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
     </owl:DatatypeProperty>
     
 
@@ -2381,15 +2381,6 @@ http://www.estrucplan.com.ar/Producciones/entrega.asp?IdEntrega=1684</dc:source>
     <owl:DatatypeProperty rdf:about="&ontology;itinerarioEuropeo">
         <rdfs:label xml:lang="es">itinerario europeo</rdfs:label>
         <rdfs:comment xml:lang="es">Indica si el tramo pertenece a la Red de Carreteras Europeas.</rdfs:comment>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&ontology;Autopista"/>
-                    <rdf:Description rdf:about="&ontology;Autovia"/>
-                    <rdf:Description rdf:about="&ontology;Carretera"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
         <rdfs:range>
             <rdfs:Datatype>
                 <owl:oneOf>
@@ -2407,6 +2398,15 @@ http://www.estrucplan.com.ar/Producciones/entrega.asp?IdEntrega=1684</dc:source>
                 </owl:oneOf>
             </rdfs:Datatype>
         </rdfs:range>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&ontology;Autopista"/>
+                    <rdf:Description rdf:about="&ontology;Autovia"/>
+                    <rdf:Description rdf:about="&ontology;Carretera"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:DatatypeProperty>
     
 
@@ -3051,6 +3051,19 @@ Aplicar tb a segmentoRio columna Regimen</rdfs:comment>
     <owl:DatatypeProperty rdf:about="&ontology;rutaTenT">
         <rdfs:label xml:lang="es">rutaTenT</rdfs:label>
         <rdfs:comment xml:lang="es">Indica si el tramo pertenece a la Red Transeuropea de Transporte (TEN-T)</rdfs:comment>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&ontology;Aerodromo"/>
+                    <rdf:Description rdf:about="&ontology;Aeropuerto"/>
+                    <rdf:Description rdf:about="&ontology;Autopista"/>
+                    <rdf:Description rdf:about="&ontology;Autovia"/>
+                    <rdf:Description rdf:about="&ontology;Carretera"/>
+                    <rdf:Description rdf:about="&ontology;Ferrocarril"/>
+                    <rdf:Description rdf:about="&ontology;Helipuerto"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range>
             <rdfs:Datatype>
                 <owl:oneOf>
@@ -3068,19 +3081,6 @@ Aplicar tb a segmentoRio columna Regimen</rdfs:comment>
                 </owl:oneOf>
             </rdfs:Datatype>
         </rdfs:range>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&ontology;Aerodromo"/>
-                    <rdf:Description rdf:about="&ontology;Aeropuerto"/>
-                    <rdf:Description rdf:about="&ontology;Autopista"/>
-                    <rdf:Description rdf:about="&ontology;Autovia"/>
-                    <rdf:Description rdf:about="&ontology;Carretera"/>
-                    <rdf:Description rdf:about="&ontology;Ferrocarril"/>
-                    <rdf:Description rdf:about="&ontology;Helipuerto"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
     </owl:DatatypeProperty>
     
 
@@ -3103,6 +3103,16 @@ Aplicar tb a segmentoRio columna Regimen</rdfs:comment>
         <rdfs:comment xml:lang="es">Indica la disposición del tramo de vía sobre la superficie.</rdfs:comment>
         <rdfs:domain rdf:resource="&ontology;AguasQuietasArtificiales"/>
         <rdfs:domain rdf:resource="&ontology;ConduccionDeCombustible"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&ontology;Autopista"/>
+                    <rdf:Description rdf:about="&ontology;Carretera"/>
+                    <rdf:Description rdf:about="&ontology;Enlace"/>
+                    <rdf:Description rdf:about="&ontology;Ferrocarril"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range>
             <rdfs:Datatype>
                 <owl:oneOf>
@@ -3132,16 +3142,6 @@ Aplicar tb a segmentoRio columna Regimen</rdfs:comment>
                 </owl:oneOf>
             </rdfs:Datatype>
         </rdfs:range>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&ontology;Autopista"/>
-                    <rdf:Description rdf:about="&ontology;Carretera"/>
-                    <rdf:Description rdf:about="&ontology;Enlace"/>
-                    <rdf:Description rdf:about="&ontology;Ferrocarril"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
     </owl:DatatypeProperty>
     
 
@@ -3246,15 +3246,6 @@ Aplicar tb a segmentoRio columna Regimen</rdfs:comment>
 * interna. El tramo discurre por el interior de poblaciones o zonas de uso.
 * no interna. El tramo no discurre por el interior de poblaciones o zonas de uso.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&ontology;Autopista"/>
-                    <rdf:Description rdf:about="&ontology;Autovia"/>
-                    <rdf:Description rdf:about="&ontology;Carretera"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
         <rdfs:range>
             <rdfs:Datatype>
                 <owl:oneOf>
@@ -3272,6 +3263,15 @@ Aplicar tb a segmentoRio columna Regimen</rdfs:comment>
                 </owl:oneOf>
             </rdfs:Datatype>
         </rdfs:range>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&ontology;Autopista"/>
+                    <rdf:Description rdf:about="&ontology;Autovia"/>
+                    <rdf:Description rdf:about="&ontology;Carretera"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:DatatypeProperty>
     
 
@@ -3778,17 +3778,6 @@ Aplicar tb a segmentoRio columna Regimen</rdfs:comment>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&ontology;Rio"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="&ontology;desagua_en"/>
-                        <owl:allValuesFrom rdf:resource="&ontology;Rio"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&ontology;es_afluente_de"/>
                         <owl:allValuesFrom rdf:resource="&ontology;AguasCorrientesNaturales"/>
@@ -3796,6 +3785,17 @@ Aplicar tb a segmentoRio columna Regimen</rdfs:comment>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&ontology;es_afluente_de"/>
                         <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&ontology;Rio"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&ontology;desagua_en"/>
+                        <owl:allValuesFrom rdf:resource="&ontology;Rio"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -3889,6 +3889,15 @@ Aplicar tb a segmentoRio columna Regimen</rdfs:comment>
         <rdfs:label xml:lang="es">Curso artificial de agua</rdfs:label>
         <owl:equivalentClass>
             <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&ontology;Acequia"/>
+                    <rdf:Description rdf:about="&ontology;Canal"/>
+                    <rdf:Description rdf:about="&ontology;Conducto"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&ontology;conduce"/>
@@ -3906,15 +3915,6 @@ Aplicar tb a segmentoRio columna Regimen</rdfs:comment>
                         <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
                     </owl:Restriction>
                 </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&ontology;Acequia"/>
-                    <rdf:Description rdf:about="&ontology;Canal"/>
-                    <rdf:Description rdf:about="&ontology;Conducto"/>
-                </owl:unionOf>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&ontology;AguasCorrientes"/>
@@ -3969,19 +3969,6 @@ Aplicar tb a segmentoRio columna Regimen</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&ontology;desagua_en"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&ontology;AguasCorrientes"/>
-                            <rdf:Description rdf:about="&ontology;AguasQuietas"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&ontology;es_alimentada_por"/>
                 <owl:allValuesFrom>
                     <owl:Class>
@@ -3990,6 +3977,19 @@ Aplicar tb a segmentoRio columna Regimen</rdfs:comment>
                             <rdf:Description rdf:about="&ontology;AguasQuietasNaturales"/>
                             <rdf:Description rdf:about="&ontology;Embalse"/>
                             <rdf:Description rdf:about="&ontology;Manantial"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ontology;desagua_en"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&ontology;AguasCorrientes"/>
+                            <rdf:Description rdf:about="&ontology;AguasQuietas"/>
                         </owl:unionOf>
                     </owl:Class>
                 </owl:allValuesFrom>
@@ -4036,6 +4036,16 @@ waters is measured, extending where appropriate up to the outer limit of transit
         <rdfs:label xml:lang="es">Aguas de transición</rdfs:label>
         <owl:equivalentClass>
             <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&ontology;Canyo"/>
+                    <rdf:Description rdf:about="&ontology;Estuario"/>
+                    <rdf:Description rdf:about="&ontology;Marisma"/>
+                    <rdf:Description rdf:about="&ontology;Ria"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&ontology;sometida_a_influencia_de"/>
@@ -4065,16 +4075,6 @@ waters is measured, extending where appropriate up to the outer limit of transit
                         <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">2</owl:cardinality>
                     </owl:Restriction>
                 </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&ontology;Canyo"/>
-                    <rdf:Description rdf:about="&ontology;Estuario"/>
-                    <rdf:Description rdf:about="&ontology;Marisma"/>
-                    <rdf:Description rdf:about="&ontology;Ria"/>
-                </owl:unionOf>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&ontology;AguasSuperficiales"/>
@@ -4116,12 +4116,6 @@ waters is measured, extending where appropriate up to the outer limit of transit
         <rdfs:label xml:lang="es">Masa de agua marina</rdfs:label>
         <rdfs:subClassOf rdf:resource="&ontology;AguasSaladas"/>
         <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&ontology;es_conducido_por"/>
-                <owl:someValuesFrom rdf:resource="&ontology;AguasCorrientesArtificiales"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
             <owl:Class>
                 <owl:complementOf rdf:resource="&ontology;AguasDulces"/>
             </owl:Class>
@@ -4137,6 +4131,12 @@ waters is measured, extending where appropriate up to the outer limit of transit
                         </owl:unionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ontology;es_conducido_por"/>
+                <owl:someValuesFrom rdf:resource="&ontology;AguasCorrientesArtificiales"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="&xsd;string">Agua de los oceanos y de los mares diferenciada del agua dulce por su salinidad y por su densidad mas fuerte resultante de contenido en sales disueltas. Tambien puede ser considerada como una zona arbitrariamente definida de aguas marinas con un conjunto de atributos constantes</rdfs:comment>
@@ -4272,6 +4272,12 @@ waters is measured, extending where appropriate up to the outer limit of transit
         <rdfs:subClassOf rdf:resource="&ontology;AguasContinentales"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="&ontology;descarga_en"/>
+                <owl:someValuesFrom rdf:resource="&ontology;ZonaHumeda"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="&ontology;es_alimentada_por"/>
                 <owl:allValuesFrom>
                     <owl:Class>
@@ -4289,12 +4295,6 @@ waters is measured, extending where appropriate up to the outer limit of transit
                         </owl:intersectionOf>
                     </owl:Class>
                 </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&ontology;descarga_en"/>
-                <owl:someValuesFrom rdf:resource="&ontology;ZonaHumeda"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <ontology:provenance rdf:datatype="&xsd;string">Agua subterranea - The Digital Geographic Information Exchange Standard (DIGEST). Digital Geographic Information Working Group (DGIWG)</ontology:provenance>
@@ -4325,12 +4325,6 @@ waters is measured, extending where appropriate up to the outer limit of transit
         <rdfs:subClassOf rdf:resource="&ontology;AguasContinentales"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&ontology;es_distribuida"/>
-                <owl:someValuesFrom rdf:resource="&ontology;Distribucion"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&ontology;es_transvasada"/>
                 <owl:someValuesFrom rdf:resource="&ontology;CanalAguasContinentales"/>
             </owl:Restriction>
@@ -4339,6 +4333,12 @@ waters is measured, extending where appropriate up to the outer limit of transit
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&ontology;es_distribuida"/>
                 <owl:someValuesFrom rdf:resource="&ontology;CanalAguasContinentales"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ontology;es_distribuida"/>
+                <owl:someValuesFrom rdf:resource="&ontology;Distribucion"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="&xsd;string">Aguas que incluyen las aguas continentales, excepto las aguas subterraneas; las aguas de transicion y las aguas costeras, y, en lo que se refiere al estado quimico, tambien las aguas territoriales</rdfs:comment>
@@ -4397,6 +4397,18 @@ waters is measured, extending where appropriate up to the outer limit of transit
         <rdfs:subClassOf rdf:resource="&ontology;Laguna"/>
         <rdfs:subClassOf rdf:resource="&ontology;ZonaHumeda"/>
         <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ontology;esta_proxima_a"/>
+                <owl:someValuesFrom rdf:resource="&ontology;AguasMarinas"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ontology;es_comunicada_por"/>
+                <owl:someValuesFrom rdf:resource="&ontology;Canyo"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
@@ -4409,18 +4421,6 @@ waters is measured, extending where appropriate up to the outer limit of transit
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&ontology;esta_proxima_a"/>
-                <owl:someValuesFrom rdf:resource="&ontology;AguasMarinas"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&ontology;es_comunicada_por"/>
-                <owl:someValuesFrom rdf:resource="&ontology;Canyo"/>
-            </owl:Restriction>
         </rdfs:subClassOf>
         <dc:source xml:lang="es">Diccionario de la Real Academia Española</dc:source>
         <rdfs:comment xml:lang="es">Laguna litoral, en costa baja, de agua salina o ligeramente salobre, separada del mar por una lengua o cordon de arenas</rdfs:comment>
@@ -4497,6 +4497,12 @@ waters is measured, extending where appropriate up to the outer limit of transit
         <rdfs:subClassOf rdf:resource="&ontology;Morfologia"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="&ontology;estaEn"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="&ontology;parte_de"/>
                 <owl:allValuesFrom>
                     <owl:Class>
@@ -4506,12 +4512,6 @@ waters is measured, extending where appropriate up to the outer limit of transit
                         </owl:unionOf>
                     </owl:Class>
                 </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&ontology;estaEn"/>
-                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -4568,17 +4568,18 @@ waters is measured, extending where appropriate up to the outer limit of transit
         <rdfs:label xml:lang="es">Curso de agua secundario</rdfs:label>
         <rdfs:subClassOf rdf:resource="&ontology;AguasCorrientesNaturales"/>
         <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&ontology;es_alimentada_por"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&ontology;Glaciar"/>
-                            <rdf:Description rdf:about="&ontology;MasaDeHielo"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&ontology;es_almacenado_en"/>
+                        <owl:someValuesFrom rdf:resource="&ontology;Embalse"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&ontology;es_almacenado_en"/>
+                        <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Class>
@@ -4603,18 +4604,17 @@ waters is measured, extending where appropriate up to the outer limit of transit
             </owl:Class>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="&ontology;es_almacenado_en"/>
-                        <owl:someValuesFrom rdf:resource="&ontology;Embalse"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="&ontology;es_almacenado_en"/>
-                        <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ontology;es_alimentada_por"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&ontology;Glaciar"/>
+                            <rdf:Description rdf:about="&ontology;MasaDeHielo"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -5577,14 +5577,14 @@ waters is measured, extending where appropriate up to the outer limit of transit
         <rdfs:subClassOf rdf:resource="&ontology;AguasCorrientesArtificiales"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&ontology;desagua_en"/>
-                <owl:someValuesFrom rdf:resource="&ontology;Aguas"/>
+                <owl:onProperty rdf:resource="&ontology;conduce"/>
+                <owl:someValuesFrom rdf:resource="&ontology;AguasSuperficiales"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&ontology;conduce"/>
-                <owl:someValuesFrom rdf:resource="&ontology;AguasSuperficiales"/>
+                <owl:onProperty rdf:resource="&ontology;desagua_en"/>
+                <owl:someValuesFrom rdf:resource="&ontology;Aguas"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="&xsd;string">Canal, con frecuencia cerrado, que tiene como objeto el transporte de productos liquidos</rdfs:comment>
@@ -5663,12 +5663,6 @@ waters is measured, extending where appropriate up to the outer limit of transit
         <rdfs:subClassOf rdf:resource="&ontology;AguasSubterraneas"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&ontology;es_originado_por"/>
-                <owl:someValuesFrom rdf:resource="&ontology;Sumidero"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&ontology;origina"/>
                 <owl:someValuesFrom>
                     <owl:Class>
@@ -5678,6 +5672,12 @@ waters is measured, extending where appropriate up to the outer limit of transit
                         </owl:unionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ontology;es_originado_por"/>
+                <owl:someValuesFrom rdf:resource="&ontology;Sumidero"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="&xsd;string">Aguas que se encuentran bajo la superficie del suelo en la zona de saturacion y en contacto directo con el suelo o el subsuelo que tienen o pueden tener un movimiento notable y continuo a traves de un cauce de origen natural o artificial.</rdfs:comment>
@@ -6257,20 +6257,6 @@ waters is measured, extending where appropriate up to the outer limit of transit
         <rdfs:label xml:lang="es">Estero</rdfs:label>
         <rdfs:subClassOf rdf:resource="&ontology;ZonaHumeda"/>
         <rdfs:subClassOf>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="&ontology;esta_proxima_a"/>
-                        <owl:someValuesFrom rdf:resource="&ontology;Desembocadura"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="&ontology;esta_proxima_a"/>
-                        <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&ontology;es_inundada_por"/>
                 <owl:allValuesFrom>
@@ -6283,6 +6269,20 @@ waters is measured, extending where appropriate up to the outer limit of transit
                     </owl:Class>
                 </owl:allValuesFrom>
             </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&ontology;esta_proxima_a"/>
+                        <owl:someValuesFrom rdf:resource="&ontology;Desembocadura"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&ontology;esta_proxima_a"/>
+                        <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
         </rdfs:subClassOf>
         <dc:source rdf:datatype="&xsd;string">Fontanillo, E. (1986) Diccionario de Geografia. Ed. Anaya. Madrid &amp; Diccionario de la Real Academia Espannola</dc:source>
         <rdfs:comment rdf:datatype="&xsd;string">Terreno bajo pantanoso que suele llenarse de agua por la filtracion de un rio o laguna cercana y que se inunda en la pleamar.</rdfs:comment>
@@ -7162,6 +7162,12 @@ waters is measured, extending where appropriate up to the outer limit of transit
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&ontology;origina"/>
+                <owl:someValuesFrom rdf:resource="&ontology;Chortal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ontology;origina"/>
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
@@ -7196,12 +7202,6 @@ waters is measured, extending where appropriate up to the outer limit of transit
                         </owl:unionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&ontology;origina"/>
-                <owl:someValuesFrom rdf:resource="&ontology;Chortal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="&xsd;string">Nacimiento de las aguas</rdfs:comment>
@@ -7295,6 +7295,12 @@ waters is measured, extending where appropriate up to the outer limit of transit
         <rdfs:subClassOf rdf:resource="&ontology;ZonaHumeda"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="&ontology;origina"/>
+                <owl:someValuesFrom rdf:resource="&ontology;Lucio"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="&ontology;es_inundada_por"/>
                 <owl:allValuesFrom>
                     <owl:Class>
@@ -7304,12 +7310,6 @@ waters is measured, extending where appropriate up to the outer limit of transit
                         </owl:unionOf>
                     </owl:Class>
                 </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&ontology;origina"/>
-                <owl:someValuesFrom rdf:resource="&ontology;Lucio"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <dc:source rdf:datatype="&xsd;string">Fontanillo, E. (1986) Diccionario de Geografia. Ed. Anaya. Madrid.</dc:source>
@@ -8059,6 +8059,22 @@ ciudad) que han sido nominados y confirmados para su inclusión en la lista mant
         <rdfs:label xml:lang="es">Curso fluvial</rdfs:label>
         <rdfs:label xml:lang="es">Río</rdfs:label>
         <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ontology;consta_de"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&ontology;AguasDeTransicion"/>
+                            <rdf:Description rdf:about="&ontology;Corriente"/>
+                            <rdf:Description rdf:about="&ontology;Embalse"/>
+                            <rdf:Description rdf:about="&ontology;HidronimoPuntual"/>
+                            <rdf:Description rdf:about="&ontology;Morfologia"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <owl:Class>
@@ -8087,27 +8103,11 @@ ciudad) que han sido nominados y confirmados para su inclusión en la lista mant
                 </owl:unionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&ontology;consta_de"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&ontology;AguasDeTransicion"/>
-                            <rdf:Description rdf:about="&ontology;Corriente"/>
-                            <rdf:Description rdf:about="&ontology;Embalse"/>
-                            <rdf:Description rdf:about="&ontology;HidronimoPuntual"/>
-                            <rdf:Description rdf:about="&ontology;Morfologia"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&ontology;AguasCorrientesNaturales"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&ontology;estaEn"/>
-                <owl:someValuesFrom rdf:resource="&ontology;Barranco"/>
+                <owl:onProperty rdf:resource="&ontology;tiene_afluente"/>
+                <owl:allValuesFrom rdf:resource="&ontology;AguasCorrientesNaturales"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -8120,6 +8120,12 @@ ciudad) que han sido nominados y confirmados para su inclusión en la lista mant
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&ontology;es_capturado"/>
                 <owl:allValuesFrom rdf:resource="&ontology;Captacion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ontology;es_almacenado_en"/>
+                <owl:someValuesFrom rdf:resource="&ontology;Embalse"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -8144,28 +8150,8 @@ ciudad) que han sido nominados y confirmados para su inclusión en la lista mant
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&ontology;tiene_afluente"/>
-                <owl:allValuesFrom rdf:resource="&ontology;AguasCorrientesNaturales"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&ontology;es_alimentada_por"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&ontology;Glaciar"/>
-                            <rdf:Description rdf:about="&ontology;Manantial"/>
-                            <rdf:Description rdf:about="&ontology;MasaDeHielo"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&ontology;es_almacenado_en"/>
-                <owl:someValuesFrom rdf:resource="&ontology;Embalse"/>
+                <owl:onProperty rdf:resource="&ontology;puede_fluir_como"/>
+                <owl:someValuesFrom rdf:resource="&ontology;CorrienteSubterranea"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -8184,8 +8170,22 @@ ciudad) que han sido nominados y confirmados para su inclusión en la lista mant
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&ontology;puede_fluir_como"/>
-                <owl:someValuesFrom rdf:resource="&ontology;CorrienteSubterranea"/>
+                <owl:onProperty rdf:resource="&ontology;es_alimentada_por"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&ontology;Glaciar"/>
+                            <rdf:Description rdf:about="&ontology;Manantial"/>
+                            <rdf:Description rdf:about="&ontology;MasaDeHielo"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ontology;estaEn"/>
+                <owl:someValuesFrom rdf:resource="&ontology;Barranco"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A body of inland water flowing for the most part on the surface of the land but which may flow underground for part of its course.</rdfs:comment>
@@ -8245,6 +8245,19 @@ ciudad) que han sido nominados y confirmados para su inclusión en la lista mant
         <rdfs:subClassOf rdf:resource="&ontology;Recinto"/>
         <rdfs:subClassOf rdf:resource="&ontology;ZonaHumeda"/>
         <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ontology;es_alimentada_por"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&ontology;AguasMarinas"/>
+                            <rdf:Description rdf:about="&ontology;Manantial"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
@@ -8257,19 +8270,6 @@ ciudad) que han sido nominados y confirmados para su inclusión en la lista mant
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&ontology;es_alimentada_por"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&ontology;AguasMarinas"/>
-                            <rdf:Description rdf:about="&ontology;Manantial"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
         </rdfs:subClassOf>
         <dc:source rdf:datatype="&xsd;string">Fontanillo, E. (1986) Diccionario de Geografia. Ed. Anaya. Madrid.</dc:source>
         <rdfs:comment rdf:datatype="&xsd;string">Terreno susceptible de recibir agua salada a voluntad, donde mediante una serie de estanques de evaporacion y cristalizacion se extraen las sales contenidas en ella. Las mas usuales son las construidas en la proximidad del mar, pero podemos encontrarlas tambien en puntos del interior de los continentes, construidas junto a fuentes de aguas salinas</rdfs:comment>
@@ -8343,6 +8343,18 @@ ciudad) que han sido nominados y confirmados para su inclusión en la lista mant
         <rdfs:subClassOf rdf:resource="&ontology;Morfologia"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="&ontology;origina"/>
+                <owl:someValuesFrom rdf:resource="&ontology;CorrienteSubterranea"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ontology;alimenta_a"/>
+                <owl:someValuesFrom rdf:resource="&ontology;Acuifero"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="&ontology;comunica_con"/>
                 <owl:someValuesFrom>
                     <owl:Class>
@@ -8352,18 +8364,6 @@ ciudad) que han sido nominados y confirmados para su inclusión en la lista mant
                         </owl:intersectionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&ontology;origina"/>
-                <owl:someValuesFrom rdf:resource="&ontology;CorrienteSubterranea"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&ontology;alimenta_a"/>
-                <owl:someValuesFrom rdf:resource="&ontology;Acuifero"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="&xsd;string">Agujero o abertura en el fondo o el costado de una depresion por la que una corriente de superficie o un lago, fluye parcial o totalmente hacia el sistema karstico subterraneo.</rdfs:comment>
@@ -8517,6 +8517,12 @@ ciudad) que han sido nominados y confirmados para su inclusión en la lista mant
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="&ontology;discurre_sobre"/>
+                <owl:someValuesFrom rdf:resource="&ontology;Rambla"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="&ontology;es_originado_por"/>
                 <owl:someValuesFrom>
                     <owl:Class>
@@ -8526,12 +8532,6 @@ ciudad) que han sido nominados y confirmados para su inclusión en la lista mant
                         </owl:unionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&ontology;discurre_sobre"/>
-                <owl:someValuesFrom rdf:resource="&ontology;Rambla"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="&xsd;string">Corriente o avenida impetuosa de aguas que sobreviene en tiempos de muchas lluvias o de rapidos deshielos</rdfs:comment>
@@ -8581,14 +8581,14 @@ ciudad) que han sido nominados y confirmados para su inclusión en la lista mant
         <rdfs:subClassOf rdf:resource="&ontology;Conducto"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&ontology;conduce"/>
-                <owl:someValuesFrom rdf:resource="&ontology;AguasContinentales"/>
+                <owl:onProperty rdf:resource="&ontology;alimenta_a"/>
+                <owl:someValuesFrom rdf:resource="&ontology;FuenteArtificial"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&ontology;alimenta_a"/>
-                <owl:someValuesFrom rdf:resource="&ontology;FuenteArtificial"/>
+                <owl:onProperty rdf:resource="&ontology;conduce"/>
+                <owl:someValuesFrom rdf:resource="&ontology;AguasContinentales"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A long tube made of metal or plastic that is used to carry water or oil or gas etc.</rdfs:comment>
