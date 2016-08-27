@@ -75,4 +75,16 @@ string 6
 * situacion
 
 
+## Buildings 
+
+* esCapitalDe
+{"capital de comunidad autónoma"^^string , "capital de comunidad autónoma pero no de provincia"^^string , "capital de nación"^^string , "capital de provincia"^^string , "capital de un municipio"^^string , "no es capital"^^string}
+
+
+* poblacion
+
+* bigCode
+
+
+* ineCode
 
