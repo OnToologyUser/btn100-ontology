@@ -61,3 +61,18 @@ string 6
 * competenciaAeroportuaria
 {"Aena"^^string , "Militar"^^string , "Privado"^^string}
 
+
+
+
+
+
+
+## supply net
+
+* componenteDeTelecomunicacion
+{"desconocido"^^string , "emisor"^^string , "repetidor"^^string}
+
+* situacion
+
+
+
