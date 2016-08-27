@@ -88,3 +88,18 @@ string 6
 
 * ineCode
 
+
+
+# geodeys
+
+* codigo 
+
+* categoriaDeCurvaDeNivel
+
+{"depresion genérica (Curva que define una concavidad del terreno cada 20 m)"^^string , "depresion maestra (Curva que define una concavidad del terreno cada 100 m)"^^string , "genérica (Curva de nivel con altitud cada 20 m)"^^string , "interpolada (Curva con altitud resultado de un algoritmo de cálculo y no de los
+datos del terreno)"^^string , "maestra (Curva de nivel con altitud múltiplo de 100 m)"^^string}
+
+
+* latitud
+ 
+* longitud
