@@ -1,0 +1,67 @@
+<http://geo.linkeddata.es/ontology/Camino> <http://www.w3.org/2000/01/rdf-schema#comment> "V\u00EDa que se construye para transitar."@es .
+<http://geo.linkeddata.es/ontology/Camino> <http://www.w3.org/2000/01/rdf-schema#label> "Camino"@es .
+<http://geo.linkeddata.es/ontology/Camino> <http://www.w3.org/2000/01/rdf-schema#label> "Way"@en .
+<http://geo.linkeddata.es/ontology/Camino> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://geo.linkeddata.es/ontology/Pista> <http://www.w3.org/2000/01/rdf-schema#comment> "V\u00EDa de comunicaci\u00F3n dedicada al tr\u00E1fico rodado sin recubrimiento asf\u00E1ltico."@es .
+<http://geo.linkeddata.es/ontology/Pista> <http://www.w3.org/2000/01/rdf-schema#label> "Pista"@es .
+<http://geo.linkeddata.es/ontology/Pista> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://geo.linkeddata.es/ontology/Aeroclub> <http://www.w3.org/2000/01/rdf-schema#comment> "Sociedad recreativa interesada por el deporte a\u00E9reo."@es .
+<http://geo.linkeddata.es/ontology/Aeroclub> <http://www.w3.org/2000/01/rdf-schema#label> "Aeroclub"@es .
+<http://geo.linkeddata.es/ontology/Aeroclub> <http://www.w3.org/2000/01/rdf-schema#label> "Aeroclub"@en .
+<http://geo.linkeddata.es/ontology/Aeroclub> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://geo.linkeddata.es/ontology/CintaTransportadora> <http://www.w3.org/2000/01/rdf-schema#comment> "Dispositivo mec\u00E1nico formado por una banda m\u00F3vil que traslada mercanc\u00EDas, equipajes, personas, etc."@es .
+<http://geo.linkeddata.es/ontology/CintaTransportadora> <http://www.w3.org/2000/01/rdf-schema#label> "Cinta transportadora"@es .
+<http://geo.linkeddata.es/ontology/CintaTransportadora> <http://www.w3.org/2000/01/rdf-schema#label> "Conveyor belt"@en .
+<http://geo.linkeddata.es/ontology/CintaTransportadora> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://geo.linkeddata.es/ontology/Glorieta> <http://www.w3.org/2000/01/rdf-schema#comment> "Plaza donde desembocan por lo com\u00FAn varias calles o alamedas."@es .
+<http://geo.linkeddata.es/ontology/Glorieta> <http://www.w3.org/2000/01/rdf-schema#label> "Glorieta"@es .
+<http://geo.linkeddata.es/ontology/Glorieta> <http://www.w3.org/2000/01/rdf-schema#label> "Roundabout"@en .
+<http://geo.linkeddata.es/ontology/Glorieta> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://geo.linkeddata.es/ontology/Autopista> <http://www.w3.org/2000/01/rdf-schema#comment> "Carretera con calzadas separadas para los dos sentidos de la circulaci\u00F3n, cada una de ellas con dos o m\u00E1s carriles, sin cruces a nivel."@es .
+<http://geo.linkeddata.es/ontology/Autopista> <http://www.w3.org/2000/01/rdf-schema#label> "Autopista"@es .
+<http://geo.linkeddata.es/ontology/Autopista> <http://www.w3.org/2000/01/rdf-schema#label> "Highway"@en .
+<http://geo.linkeddata.es/ontology/Autopista> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/2002/07/owl#Thing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://geo.linkeddata.es/ontology/Faro> <http://www.w3.org/2000/01/rdf-schema#comment> "Torre alta en las costas, con luz en su parte superior, para que durante la noche sirva de se\u00F1al a los navegantes."@es .
+<http://geo.linkeddata.es/ontology/Faro> <http://www.w3.org/2000/01/rdf-schema#label> "Faro"@es .
+<http://geo.linkeddata.es/ontology/Faro> <http://www.w3.org/2000/01/rdf-schema#label> "Lighthouse"@en .
+<http://geo.linkeddata.es/ontology/Faro> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://geo.linkeddata.es/ontology/Sendero> <http://www.w3.org/2000/01/rdf-schema#comment> "Camino m\u00E1s estrecho que la vereda, abierto principalmente por el tr\u00E1nsito de peatones y del ganado menor."@es .
+<http://geo.linkeddata.es/ontology/Sendero> <http://www.w3.org/2000/01/rdf-schema#label> "Sendero"@es .
+<http://geo.linkeddata.es/ontology/Sendero> <http://www.w3.org/2000/01/rdf-schema#label> "Path"@en .
+<http://geo.linkeddata.es/ontology/Sendero> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://geo.linkeddata.es/ontology/EstacionDeFerrocarril> <http://www.w3.org/2000/01/rdf-schema#label> "Estaci\u00F3n de ferrocarril"@es .
+<http://geo.linkeddata.es/ontology/EstacionDeFerrocarril> <http://www.w3.org/2000/01/rdf-schema#label> "Train station"@en .
+<http://geo.linkeddata.es/ontology/EstacionDeFerrocarril> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://geo.linkeddata.es/ontology/Carretera> <http://www.w3.org/2000/01/rdf-schema#comment> "Camino p\u00FAblico, ancho y espacioso, pavimentado y dispuesto para el tr\u00E1nsito de veh\u00EDculos."@es .
+<http://geo.linkeddata.es/ontology/Carretera> <http://www.w3.org/2000/01/rdf-schema#label> "Carretera"@es .
+<http://geo.linkeddata.es/ontology/Carretera> <http://www.w3.org/2000/01/rdf-schema#label> "Road"@en .
+<http://geo.linkeddata.es/ontology/Carretera> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://geo.linkeddata.es/ontology/Ruta> <http://www.w3.org/2000/01/rdf-schema#label> "Ruta"@es .
+<http://geo.linkeddata.es/ontology/Ruta> <http://www.w3.org/2000/01/rdf-schema#label> "Camino o direcci\u00F3n que se toma para un prop\u00F3sito."@es .
+<http://geo.linkeddata.es/ontology/Ruta> <http://www.w3.org/2000/01/rdf-schema#label> "Route"@en .
+<http://geo.linkeddata.es/ontology/Ruta> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://geo.linkeddata.es/ontology/Puerto> <http://www.w3.org/2000/01/rdf-schema#comment> "Lugar en la costa o en las orillas de un r\u00EDo que por sus caracter\u00EDsticas, naturales o artificiales, sirve para que las embarcaciones realicen operaciones de carga y descarga, embarque y desembarco, etc."@es .
+<http://geo.linkeddata.es/ontology/Puerto> <http://www.w3.org/2000/01/rdf-schema#label> "Puerto"@es .
+<http://geo.linkeddata.es/ontology/Puerto> <http://www.w3.org/2000/01/rdf-schema#label> "Port"@en .
+<http://geo.linkeddata.es/ontology/Puerto> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://geo.linkeddata.es/ontology/Travesia> <http://www.w3.org/2000/01/rdf-schema#comment> "Sitio o terreno por donde se atraviesa."@es .
+<http://geo.linkeddata.es/ontology/Travesia> <http://www.w3.org/2000/01/rdf-schema#label> "Traves\u00EDa"@es .
+<http://geo.linkeddata.es/ontology/Travesia> <http://www.w3.org/2000/01/rdf-schema#label> "Passage"@en .
+<http://geo.linkeddata.es/ontology/Travesia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://geo.linkeddata.es/ontology/EstacionDeAutobuses> <http://www.w3.org/2000/01/rdf-schema#label> "Estaci\u00F3n de autobuses "@es .
+<http://geo.linkeddata.es/ontology/EstacionDeAutobuses> <http://www.w3.org/2000/01/rdf-schema#label> "Bus station"@en .
+<http://geo.linkeddata.es/ontology/EstacionDeAutobuses> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://geo.linkeddata.es/ontology/BaseAerea> <http://www.w3.org/2000/01/rdf-schema#comment> "Aeropuerto militar donde las fuerzas a\u00E9reas, con el apoyo de instalaciones log\u00EDsticas adecuadas, se preparan para el vuelo y el combate."@es .
+<http://geo.linkeddata.es/ontology/BaseAerea> <http://www.w3.org/2000/01/rdf-schema#label> "Base a\u00E9rea"@es .
+<http://geo.linkeddata.es/ontology/BaseAerea> <http://www.w3.org/2000/01/rdf-schema#label> "Airbase"@en .
+<http://geo.linkeddata.es/ontology/BaseAerea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://geo.linkeddata.es/ontology/Aerodromo> <http://www.w3.org/2000/01/rdf-schema#comment> "Terreno llano provisto de pistas y dem\u00E1s instalaciones necesarias para el despegue y aterrizaje de aviones."@es .
+<http://geo.linkeddata.es/ontology/Aerodromo> <http://www.w3.org/2000/01/rdf-schema#label> "Aer\u00F3dromo"@es .
+<http://geo.linkeddata.es/ontology/Aerodromo> <http://www.w3.org/2000/01/rdf-schema#label> "Aerodrome"@en .
+<http://geo.linkeddata.es/ontology/Aerodromo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://geo.linkeddata.es/ontology/transportes.owl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://geo.linkeddata.es/ontology/Aeropuerto> <http://www.w3.org/2000/01/rdf-schema#comment> "Terreno llano provisto de un conjunto de pistas, instalaciones y servicios destinados al tr\u00E1fico regular de aviones."@es .
+<http://geo.linkeddata.es/ontology/Aeropuerto> <http://www.w3.org/2000/01/rdf-schema#label> "Aeropuerto"@es .
+<http://geo.linkeddata.es/ontology/Aeropuerto> <http://www.w3.org/2000/01/rdf-schema#label> "Airport"@en .
+<http://geo.linkeddata.es/ontology/Aeropuerto> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .

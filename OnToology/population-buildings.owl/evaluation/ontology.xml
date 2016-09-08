@@ -1,0 +1,603 @@
+<rdf:RDF
+    xmlns:geopolitical="http://aims.fao.org/aos/geopolitical.owl#"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:population-buildings="http://geo.linkeddata.es/kos/population-buildings/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:capital2="http://geo.linkeddata.es/kos/puntosDeInteres/capital/"
+    xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+    xmlns:estadoDeUso="http://geo.linkeddata.es/kos/population-buildings/estadoDeUso/"
+    xmlns="http://geo.linkeddata.es/ontology/"
+    xmlns:puntosDeInteres="http://geo.linkeddata.es/kos/puntosDeInteres/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:population-buildings-ontology="http://geo.linkeddata.es/ontology/population-buildings-ontology.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:terms="http://purl.org/dc/terms/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:capital="http://geo.linkeddata.es/kos/populatuon-buildings/capital/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" > 
+  <rdf:Description rdf:nodeID="A0">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="http://geo.linkeddata.es/ontology/NucleoPoblacional"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A1">
+    <rdf:rest rdf:nodeID="A2"/>
+    <rdf:first rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A3">
+    <owl:intersectionOf rdf:nodeID="A4"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/ZonaMilitar">
+    <rdfs:comment xml:lang="es">Zona reservada para fines de la defensa nacional o de las bases ofensivas que en cada territorio se instalen.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/ZonaDeUsoCaracteristico"/>
+    <rdfs:label xml:lang="es">Zona militar</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/kos/populatuon-buildings/capital/nacion">
+    <skos:inScheme rdf:resource="http://geo.linkeddata.es/kos/populatuon-buildings/capital/tipoDeCapital"/>
+    <skos:prefLabel xml:lang="es">capital de nación</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A5">
+    <rdf:rest rdf:nodeID="A6"/>
+    <rdf:first rdf:resource="http://geo.linkeddata.es/ontology/Alojamiento"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/ZonaPortuaria">
+    <rdfs:comment xml:lang="es">Espacio destinado y orientado especialmente al flujo de mercancías, personas, información o a dar abrigo y seguridad a aquellas embarcaciones o naves encargadas de llevar a cabo dichas tareas.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/ZonaDeUsoCaracteristico"/>
+    <rdfs:label xml:lang="es">Zona portuaria</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/AreaDeServicio">
+    <rdfs:comment xml:lang="es">En una autopista o autovía, lugar habilitado para el estacionamiento de los vehículos, en el que suele haber una gasolinera, un restaurante y otros servicios. </rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/ZonaDeUsoCaracteristico"/>
+    <rdfs:label xml:lang="es">Area de servicio</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/EdificioReligioso">
+    <rdfs:comment xml:lang="es">Templo destinado al culto religioso</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/LugarDeInteres"/>
+    <rdfs:label xml:lang="es">Edificio religioso</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A7">
+    <rdf:rest rdf:nodeID="A8"/>
+    <rdf:first rdf:resource="http://geo.linkeddata.es/ontology/Alojamiento"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/source">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/ZonaMonumental">
+    <rdfs:comment xml:lang="es">Espacio perteneciente o relativo a un monumento.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/ZonaDeUsoCaracteristico"/>
+    <rdfs:label xml:lang="es">Zona monumental</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/ExplotacionMinera">
+    <rdfs:comment xml:lang="es">Terreno dedicado a la explotación de minerales o piedra.</rdfs:comment>
+    <rdfs:label xml:lang="es">Explotación minera</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A9">
+    <owl:hasValue rdf:resource="http://geo.linkeddata.es/kos/populatuon-buildings/capital/tipoDeCapital"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/InstalacionDeportiva">
+    <rdfs:comment xml:lang="es">Recinto o construcción provista de los medios necesarios para el aprendizaje, la práctica y la competición de uno o más deportes. </rdfs:comment>
+    <rdfs:subClassOf rdf:nodeID="A10"/>
+    <rdfs:label xml:lang="es">Instalación deportiva</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A11">
+    <owl:withRestrictions rdf:nodeID="A12"/>
+    <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/kos/population-buildings/estadoDeUso/enUso">
+    <skos:inScheme rdf:resource="http://geo.linkeddata.es/kos/population-buildings/estadoDeUso"/>
+    <skos:prefLabel xml:lang="es">en uso</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A13">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="http://geo.linkeddata.es/ontology/LugarDeOcio"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Gasolinera">
+    <rdfs:comment xml:lang="es">Punto de venta de combustible para vehículos de motor.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/LugarDeInteres"/>
+    <rdfs:label xml:lang="es">Gasolinera</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A4">
+    <rdf:rest rdf:nodeID="A14"/>
+    <rdf:first rdf:resource="http://geo.linkeddata.es/ontology/Alojamiento"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A6">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="http://geo.linkeddata.es/ontology/LugarDeOcio"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A15">
+    <rdf:rest rdf:nodeID="A0"/>
+    <rdf:first rdf:resource="http://geo.linkeddata.es/ontology/Diseminado"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/LugarDeOcio">
+    <rdfs:comment xml:lang="es">Lugar donde se puede realizar una actividad de ocio.</rdfs:comment>
+    <rdfs:label xml:lang="es">Lugar de ocio</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Albergue">
+    <rdfs:comment xml:lang="es">Lugar que renta alojamiento, particularmente alentando las actividades al aire libre y el intercambio cultural entre jóvenes de distintos países.</rdfs:comment>
+    <rdfs:subClassOf rdf:nodeID="A16"/>
+    <rdfs:label xml:lang="es">Albergue</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Cueva">
+    <rdfs:comment xml:lang="es">Cavidad natural del terreno causada por algún tipo de erosión de corrientes de agua, hielo o lava, o una combinación de varios de estos factores.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/LugarDeInteres"/>
+    <rdfs:label xml:lang="es">Cueva</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Diseminado">
+    <rdfs:comment xml:lang="es">Las edificaciones o viviendas de una entidad singular de población que no pueden ser incluidas en el concepto de núcleo de población se consideran pertenecientes al diseminado, entendiendo así por diseminado aquellas casas aisladas que no están recogidas como núcleo de población por el INE.</rdfs:comment>
+    <terms:source xml:lang="es">Instituto nacional de estadística.</terms:source>
+    <owl:disjointWith rdf:resource="http://geo.linkeddata.es/ontology/NucleoPoblacional"/>
+    <rdfs:label xml:lang="es">Diseminado</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/ZonaRecreativa">
+    <rdfs:comment xml:lang="es">Espacio donde se encuentran lugares de ocio o entretenimiento de los ciudadanos.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/ZonaDeUsoCaracteristico"/>
+    <rdfs:label xml:lang="es">Zona recreativa</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A10">
+    <owl:intersectionOf rdf:nodeID="A7"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Camping">
+    <rdfs:comment xml:lang="es">Lugar al aire libre, especialmente dispuesto para albergar viajeros, turistas, personas en vacaciones, etc.</rdfs:comment>
+    <rdfs:subClassOf rdf:nodeID="A17"/>
+    <rdfs:label xml:lang="es">Camping</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Muralla">
+    <rdfs:comment xml:lang="es">Construcción realizada con fines defensivos.</rdfs:comment>
+    <rdfs:label xml:lang="es">Muralla</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A12">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A18"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A14">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="http://geo.linkeddata.es/ontology/LugarDeOcio"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A19">
+    <owl:unionOf rdf:nodeID="A15"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/NucleoPoblacionalPuntual">
+    <rdfs:comment xml:lang="es">Pertenecerán a esta clase de entidad puntual sólo los núcleos de aquellas comunidades autónomas en las que la densidad de elementos impida su representación superficial a escala. Estas comunidades son Asturias, Galicia e Islas Canarias.</rdfs:comment>
+    <terms:source xml:lang="es">Anexo A: Catálogo de Objetos Geográficos de BTN100.</terms:source>
+    <owl:disjointWith rdf:resource="http://geo.linkeddata.es/ontology/NucleoPoblacionalSuperficial"/>
+    <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/NucleoPoblacional"/>
+    <rdfs:label xml:lang="es">Nucleo poblacional puntual</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Balneario">
+    <rdfs:comment xml:lang="es">Lugar dedicado al reposo y la curación a través de la utilización de las aguas, sobre todo termales o minerales, con un edificio para el hospedaje. </rdfs:comment>
+    <rdfs:subClassOf rdf:nodeID="A3"/>
+    <rdfs:label xml:lang="es">Balneario</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A20">
+    <rdf:rest rdf:nodeID="A21"/>
+    <rdf:first rdf:resource="http://geo.linkeddata.es/ontology/Alojamiento"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A18">
+    <xsd:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</xsd:length>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/ZonaFerroviaria">
+    <rdfs:comment xml:lang="es">Instalaciones pertenecientes o destinadas para la explotación de la infraestructura del ferrocarril.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/ZonaDeUsoCaracteristico"/>
+    <rdfs:label xml:lang="es">Zona ferroviaria</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/kos/population-buildings/estadoDeUso/abandonado">
+    <skos:inScheme rdf:resource="http://geo.linkeddata.es/kos/population-buildings/estadoDeUso"/>
+    <skos:prefLabel xml:lang="es">abandonado</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A22">
+    <owl:intersectionOf rdf:nodeID="A1"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Hospital">
+    <rdfs:comment xml:lang="es">Establecimiento sanitario donde se atiende a los enfermos para proporcionar el diagnóstico y tratamiento que necesitan.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/LugarDeInteres"/>
+    <rdfs:label xml:lang="es">Hospital</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Castillo">
+    <rdfs:comment xml:lang="es">Lugar fuerte, cercado de murallas, baluartes, fosos y otras fortificaciones</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/LugarDeInteres"/>
+    <rdfs:label xml:lang="es">Castillo</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/ConjuntoHistoricoArtistico">
+    <rdfs:comment xml:lang="es">Es la agrupación de inmuebles que forman una unidad de asentamiento, continua o dispersa, condicionada por una estructura física representativa de la evolución de una comunidad humana por ser testimonio de su cultura o constituir un valor de uso y disfrute para la colectividad.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/LugarDeInteres"/>
+    <rdfs:label xml:lang="es">Conjunto histórico artístico</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A23">
+    <owl:intersectionOf rdf:nodeID="A5"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A17">
+    <owl:intersectionOf rdf:nodeID="A24"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/JardinHistorico">
+    <rdfs:comment xml:lang="es">Es el espacio delimitado, producto de la ordenación por el hombre de elementos naturales, a veces complementado con estructuras de fábrica, y estimado de interés en función de su origen o pasado histórico, o de sus valores estéticos, sensoriales o botánicos.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/LugarDeInteres"/>
+    <rdfs:label xml:lang="es">Jardin historico</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A25">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A26"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/ineCode">
+    <rdfs:range rdf:nodeID="A11"/>
+    <rdfs:domain rdf:nodeID="A19"/>
+    <rdfs:comment xml:lang="es">Codificación asignada por el Nomenclátor INE.</rdfs:comment>
+    <rdfs:label xml:lang="es">codigo ine</rdfs:label>
+    <rdfs:label xml:lang="en">ine code</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/kos/population-buildings/estadoDeUso">
+    <rdfs:comment xml:lang="es">indica el estado de uso. Puede tomar los valores:
+* http://geo.linkeddata.es/kos/population-buildings/estadoDeUso/enConstruccion
+* http://geo.linkeddata.es/kos/population-buildings/estadoDeUso/enUso
+* http://geo.linkeddata.es/kos/population-buildings/estadoDeUso/abandonado</rdfs:comment>
+    <skos:prefLabel xml:lang="es">estado de uso</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A16">
+    <owl:intersectionOf rdf:nodeID="A20"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/LugarDeInteres">
+    <rdfs:comment xml:lang="es">Edificación o Lugar de interés por el uso que se le da o su relación con la cultura. Aquí se incluyen los Bienes de Interés Cultural (BIC)</rdfs:comment>
+    <rdfs:label xml:lang="es">Lugar de interés</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A27">
+    <rdf:rest rdf:nodeID="A28"/>
+    <rdf:first rdf:resource="http://geo.linkeddata.es/ontology/Diseminado"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/kos/population-buildings/estadoDeUso/enConstruccion">
+    <skos:inScheme rdf:resource="http://geo.linkeddata.es/kos/population-buildings/estadoDeUso"/>
+    <rdfs:comment xml:lang="es">indica que está en construcción o en obras</rdfs:comment>
+    <skos:prefLabel xml:lang="es">en construcción</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/SitioHistorico">
+    <rdfs:comment xml:lang="es">Es el lugar o paraje natural, vinculado a acontecimientos o recuerdos del pasado, a tradiciones populares, creaciones culturales o de la naturaleza, y a obras del hombre, que poseen valor histórico, etnológico, paleontológico o antropológico.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/LugarDeInteres"/>
+    <rdfs:label xml:lang="es">Sitio histórico</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A24">
+    <rdf:rest rdf:nodeID="A29"/>
+    <rdf:first rdf:resource="http://geo.linkeddata.es/ontology/Alojamiento"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/ZonaAeroportuaria">
+    <rdfs:comment xml:lang="es">Estación o terminal situada en un terreno llano que cuenta con pistas, instalaciones y servicios destinados al tráfico de aviones.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/ZonaDeUsoCaracteristico"/>
+    <rdfs:label xml:lang="es">Zona aeroportuaria</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/EstacionInvernal">
+    <rdfs:comment xml:lang="es">Área preparada para el disfrute de la nieve. Dispone de pistas de esquí balizadas preparadas por máquinas especiales así como pistas de fondo, hoteles para el descanso de los usuarios, remontes para el transporte de los esquiadores a zonas altas y diferentes servicios que pueden ir desde zona para usar trineos hasta pistas de patinaje.</rdfs:comment>
+    <rdfs:subClassOf rdf:nodeID="A30"/>
+    <rdfs:label xml:lang="es">Estación invernal</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/ZonaArqueologica">
+    <rdfs:comment xml:lang="es">Es el lugar o paraje natural donde existen bienes muebles o inmuebles susceptibles de ser estudiados con metodología arqueológica, hayan sido o no
+extraídos y tanto si se encuentran en la superficie, en el subsuelo o bajo las aguas españolas.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/LugarDeInteres"/>
+    <rdfs:label xml:lang="es">Zona arqueológica</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/kos/populatuon-buildings/capital/noCapital">
+    <skos:inScheme rdf:resource="http://geo.linkeddata.es/kos/populatuon-buildings/capital/tipoDeCapital"/>
+    <skos:prefLabel xml:lang="es">no es capital</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/NucleoPoblacional">
+    <rdfs:comment xml:lang="es">Se consideran núcleos de población (superficiales y puntuales) de BTN100 aquellas entidades que el INE considera núcleos de población en sus datos oficiales.</rdfs:comment>
+    <rdfs:comment xml:lang="es">Se considera Núcleo de población a un conjunto de al menos diez edificaciones, que están formando calles, plazas y otras vías urbanas. Por excepción el número de edificaciones podrá ser inferior a 10, siempre que la población de derecho supere los 50 habitantes.</rdfs:comment>
+    <terms:source xml:lang="es">Anexo A: Catálogo de Objetos Geográficos de BTN100.</terms:source>
+    <owl:equivalentClass rdf:nodeID="A31"/>
+    <rdfs:label xml:lang="es">Nucleo poblacional</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A32">
+    <rdf:rest rdf:nodeID="A33"/>
+    <rdf:first rdf:resource="http://geo.linkeddata.es/kos/population-buildings/estadoDeUso/enConstruccion"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A34">
+    <rdf:rest rdf:nodeID="A25"/>
+    <rdf:first rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/population-buildings.owl">
+    <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+    <rdfs:comment xml:lang="es">Ontología global de dominio sobre  poblaciones y construcciones</rdfs:comment>
+    <dc:publisher xml:lang="en">Ontology Engineering Group</dc:publisher>
+    <rdfs:comment xml:lang="en"></rdfs:comment>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v0.2</owl:versionInfo>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">populationBuildingsOntology</dc:title>
+    <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lissete Moscoso</dc:creator>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/ZonaIndustrial">
+    <rdfs:comment xml:lang="es">Espacio territorial en el cual se agrupan una serie de actividades industriales, que pueden o no estar relacionadas entre sí.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/ZonaDeUsoCaracteristico"/>
+    <rdfs:label xml:lang="es">Zona industrial</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/kos/populatuon-buildings/capital/comunidadAutonomaNoDeProvincia">
+    <skos:inScheme rdf:resource="http://geo.linkeddata.es/kos/populatuon-buildings/capital/tipoDeCapital"/>
+    <skos:prefLabel xml:lang="es">capital de comunidad autónoma  y no de provincia</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A35">
+    <owl:unionOf rdf:nodeID="A27"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A36">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="http://geo.linkeddata.es/ontology/NucleoPoblacionalSuperficial"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/ParadorNacional">
+    <rdfs:comment xml:lang="es">Conjunto de hoteles de alta categoría distribuidos por toda España, localizados en edificios emblemáticos o emplazamientos destacables que han sido seleccionados por su interés histórico, artístico o cultural.</rdfs:comment>
+    <rdfs:subClassOf rdf:nodeID="A23"/>
+    <rdfs:label xml:lang="es">Parador nacional</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/ZonaDeUsoCaracteristico">
+    <rdfs:comment xml:lang="es">Superficie delimitada, empleada para desarrollar una actividad específica.</rdfs:comment>
+    <terms:source xml:lang="es">Anexo A: Catálogo de Objetos Geográficos de BTN100.</terms:source>
+    <rdfs:label xml:lang="es">Zona de uso característico</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Alojamiento">
+    <rdfs:comment xml:lang="es">Lugar donde una persona o un grupo de personas se aloja, se aposenta o acampa, o donde está algo.</rdfs:comment>
+    <rdfs:label xml:lang="es">Alojamiento</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/ZonaVerde">
+    <rdfs:comment xml:lang="es">Zona del terreno donde se cultivan especies vegetales, con posible añadidura de otros elementos como fuentes o esculturas.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/ZonaDeUsoCaracteristico"/>
+    <rdfs:label xml:lang="es">Zona verde</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/DiseminadoPuntual">
+    <rdfs:comment xml:lang="es">Existen dos tipos de elementos que se engloban en el concepto de Diseminado puntual:
+
+* Edificación aislada: caseríos, cortijos, etc. en los que o bien existe una única edificación, o siendo un pequeño conjunto de edificaciones (dos, tres o cuatro...) están dispuestas de tal forma que entre ellas no existe una distancia superior a 100m sobre la imagen.
+
+* Edificación dispersa: es el caso de los diseminados comúnmente conocidos. Esto es, aquel conjunto considerable de edificaciones (cinco o más) que sin conformar un núcleo de población presentan características propias de estas (habitabilidad, comunicaciones, etc.).En este caso el objeto se representará por su centroide.</rdfs:comment>
+    <terms:source xml:lang="es">Anexo A: Catálogo de Objetos Geográficos de BTN100.</terms:source>
+    <owl:disjointWith rdf:resource="http://geo.linkeddata.es/ontology/DiseminadoSuperficial"/>
+    <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/Diseminado"/>
+    <rdfs:label xml:lang="es">Diseminado puntual</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Puente">
+    <rdfs:comment xml:lang="es">Construcción realizada para paso a distinto nivel entre vías de comunicación o hidrografía.</rdfs:comment>
+    <rdfs:label xml:lang="es">Puente</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A33">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="http://geo.linkeddata.es/kos/population-buildings/estadoDeUso/enUso"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Invernadero">
+    <rdfs:comment xml:lang="es">Lugar preparado artificialmente para cultivar las plantas fuera de su ambiente y clima habituales.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/ZonaDeUsoCaracteristico"/>
+    <rdfs:label xml:lang="es">Invernadero</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/kos/populatuon-buildings/capital/comunidadAutonoma">
+    <skos:inScheme rdf:resource="http://geo.linkeddata.es/kos/populatuon-buildings/capital/tipoDeCapital"/>
+    <skos:prefLabel xml:lang="es">capital de comunida autónoma</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A26">
+    <owl:hasValue rdf:resource="http://geo.linkeddata.es/kos/population-buildings/estadoDeUso"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/NucleoPoblacionalSuperficial">
+    <rdfs:comment xml:lang="es">Son todos los núcleos de población de España salvo excepciones los de aquellas comunidades autónomas en las que la densidad de elementos impida su
+representación superficial a escala. Estas comunidades son Asturias, Galicia e Islas Canarias.</rdfs:comment>
+    <terms:source xml:lang="es">Anexo A: Catálogo de Objetos Geográficos de BTN100.</terms:source>
+    <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/NucleoPoblacional"/>
+    <rdfs:label xml:lang="es">Nucleo poblacional superficial</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A29">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="http://geo.linkeddata.es/ontology/LugarDeOcio"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Universidad">
+    <rdfs:comment xml:lang="es">Establecimiento o conjunto de unidades educativas de enseñanza superior e investigación</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/LugarDeInteres"/>
+    <rdfs:label xml:lang="es">Universidad</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Mina">
+    <rdfs:comment xml:lang="es">Criadero de minerales de útil explotación.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/ExplotacionMinera"/>
+    <rdfs:label xml:lang="es">Mina</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/EdificioSingular">
+    <rdfs:comment xml:lang="es">Comprende los edificios que deberán ser conservados íntegramente por su carácter singular y monumental, y por razones histórico-artísticas, preservando todas sus características arquitectónicas.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/LugarDeInteres"/>
+    <rdfs:label xml:lang="es">Edificio singular</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/VistaPanoramica">
+    <rdfs:comment xml:lang="es">Es la que muestra un panorama usualmente paisajístico o arquitectónico, y que se distingue por el amplio horizonte visual que cubre.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/LugarDeInteres"/>
+    <rdfs:label xml:lang="es">Vista panorámica</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A37">
+    <rdf:rest rdf:nodeID="A36"/>
+    <rdf:first rdf:resource="http://geo.linkeddata.es/ontology/NucleoPoblacionalPuntual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Cantera">
+    <rdfs:comment xml:lang="es"> Sitio de donde se saca piedra, greda u otra sustancia análoga para obras varias</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/ExplotacionMinera"/>
+    <rdfs:label xml:lang="es">Cantera</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/kos/populatuon-buildings/capital/provincia">
+    <skos:inScheme rdf:resource="http://geo.linkeddata.es/kos/populatuon-buildings/capital/tipoDeCapital"/>
+    <skos:prefLabel xml:lang="es">capital de provincia</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/esCapitalDe">
+    <rdfs:range rdf:nodeID="A22"/>
+    <rdfs:domain rdf:nodeID="A35"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A2">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A9"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/bicCode">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://geo.linkeddata.es/ontology/LugarDeInteres"/>
+    <rdfs:comment xml:lang="es">Se incluye el código BIC que define el bien. Caso de no ser un Lugar de interés BIC, se rellenará con el texto: NO PROCEDE.</rdfs:comment>
+    <rdfs:comment xml:lang="en">big code</rdfs:comment>
+    <rdfs:label xml:lang="es">código big</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/estadoDeUso">
+    <rdfs:range rdf:nodeID="A38"/>
+    <rdfs:domain rdf:resource="http://geo.linkeddata.es/ontology/ExplotacionMinera"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/PatrimonioDelaHumanidad">
+    <rdfs:comment xml:lang="es">Título conferido por la Unesco a sitios específicos del planeta (sean bosque, montaña, lago, cueva, desierto, edificación, complejo arquitectónico o
+ciudad) que han sido nominados y confirmados para su inclusión en la lista mantenida por el Programa Patrimonio de la Humanidad.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/LugarDeInteres"/>
+    <rdfs:label xml:lang="es">Patrimonio de la humanidad</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A39">
+    <owl:distinctMembers rdf:nodeID="A40"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/ZonaUniversitaria">
+    <rdfs:comment xml:lang="es">Conjunto de edificios situados en terreno acotado al efecto, destinados a la enseñanza superior, y más especialmente la que es propia de las universidades.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/ZonaDeUsoCaracteristico"/>
+    <rdfs:label xml:lang="es">Zona universitaria</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A31">
+    <owl:unionOf rdf:nodeID="A37"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Cementerio">
+    <rdfs:comment xml:lang="es">Lugar, generalmente cercado, destinado a enterrar los restos mortales o cadáveres de los difuntos. </rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/ZonaDeUsoCaracteristico"/>
+    <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/LugarDeInteres"/>
+    <rdfs:label xml:lang="es">Cementerio</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A30">
+    <owl:intersectionOf rdf:nodeID="A41"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A28">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="http://geo.linkeddata.es/ontology/NucleoPoblacional"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/poblacion">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+    <rdfs:domain rdf:resource="http://geo.linkeddata.es/ontology/NucleoPoblacional"/>
+    <rdfs:comment xml:lang="es">Número total de habitantes del núcleo según el nomenclátor del INE para el año que aparezca en los metadatos.</rdfs:comment>
+    <rdfs:label xml:lang="es">poblacion</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A38">
+    <owl:intersectionOf rdf:nodeID="A34"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A21">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="http://geo.linkeddata.es/ontology/LugarDeOcio"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A40">
+    <rdf:rest rdf:nodeID="A32"/>
+    <rdf:first rdf:resource="http://geo.linkeddata.es/kos/population-buildings/estadoDeUso/abandonado"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/kos/populatuon-buildings/capital/municipio">
+    <skos:inScheme rdf:resource="http://geo.linkeddata.es/kos/populatuon-buildings/capital/tipoDeCapital"/>
+    <skos:prefLabel xml:lang="es">capital de municipio</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/kos/populatuon-buildings/capital/tipoDeCapital">
+    <skos:prefLabel xml:lang="es">tipo de capital</skos:prefLabel>
+    <rdfs:comment xml:lang="es">Especifica de qué administración oficial es capital. Puede tomar los valores:
+* http://geo.linkeddata.es/kos/puntosDeInteres/tipoDeCapital/comunidadAutonoma
+* http://geo.linkeddata.es/kos/puntosDeInteres/tipoDeCapital/comunidadAutonomaNoDeProvincia
+* http://geo.linkeddata.es/kos/puntosDeInteres/tipoDeCapital/nacion
+* http://geo.linkeddata.es/kos/puntosDeInteres/tipoDeCapital/municipio
+* http://geo.linkeddata.es/kos/puntosDeInteres/tipoDeCapital/noCapital
+* http://geo.linkeddata.es/kos/puntosDeInteres/tipoDeCapital/provincia</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/DiseminadoSuperficial">
+    <terms:source xml:lang="es">Anexo A: Catálogo de Objetos Geográficos de BTN100.</terms:source>
+    <rdfs:comment xml:lang="es">Agrupación de edificaciones que se extienden por una superficie considerable con estructura similar a un núcleo pero que no aparecen en el INE clasificado como tal. Es el caso de urbanizaciones, zonas residenciales u otras estructuras de población similar.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/Diseminado"/>
+    <rdfs:label xml:lang="es">Diseminado superficial</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A8">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="http://geo.linkeddata.es/ontology/LugarDeOcio"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/ZonaDeportiva">
+    <rdfs:comment xml:lang="es">Áreas donde se realizan las actividades deportivas, los diferentes espacios complementarios y los de servicios auxiliares.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/ZonaDeUsoCaracteristico"/>
+    <rdfs:label xml:lang="es">Zona deportiva</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A41">
+    <rdf:rest rdf:nodeID="A13"/>
+    <rdf:first rdf:resource="http://geo.linkeddata.es/ontology/Alojamiento"/>
+  </rdf:Description>
+</rdf:RDF>

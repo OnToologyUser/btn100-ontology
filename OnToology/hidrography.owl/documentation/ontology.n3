@@ -1,0 +1,124 @@
+<http://geo.linkeddata.es/ontology/Albufera> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://geo.linkeddata.es/ontology/ZonaHumeda> .
+<http://geo.linkeddata.es/ontology/Canyo> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://geo.linkeddata.es/ontology/ZonaHumeda> .
+<http://geo.linkeddata.es/kos/hydrography/categoriaDeIsla/principal> <http://www.w3.org/2004/02/skos/core#inScheme> <http://geo.linkeddata.es/kos/hydrography/categoriaDeIsla> .
+<http://geo.linkeddata.es/kos/hydrography/categoriaDeIsla/principal> <http://www.w3.org/2004/02/skos/core#prefLabel> "principal"@es .
+<http://geo.linkeddata.es/kos/hydrography/categoriaDeIsla/principal> <http://www.w3.org/2000/01/rdf-schema#comment> "Indica que una isla es importante desde el punto de vista cartogr\u00E1fico"@es .
+<http://geo.linkeddata.es/kos/hydrography/categoriaDeIsla/principal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://geo.linkeddata.es/kos/hydrography/categoriaDeIsla/principal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://geo.linkeddata.es/ontology/regimenDeLaguna> <http://www.w3.org/2000/01/rdf-schema#range> _:AX2dX7c841e48X3aX1570a471e4aX3aXX2dX7ff4 .
+<http://geo.linkeddata.es/ontology/regimenDeLaguna> <http://www.w3.org/2000/01/rdf-schema#domain> <http://geo.linkeddata.es/ontology/Laguna> .
+<http://geo.linkeddata.es/ontology/regimenDeLaguna> <http://www.w3.org/2000/01/rdf-schema#comment> "indica la estacionalidad de las aguas"@es .
+<http://geo.linkeddata.es/ontology/regimenDeLaguna> <http://www.w3.org/2000/01/rdf-schema#label> "r\u00E9gimen de laguna"@es .
+<http://geo.linkeddata.es/ontology/regimenDeLaguna> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:AX2dX7c841e48X3aX1570a471e4aX3aXX2dX7ff4 <http://www.w3.org/2002/07/owl#intersectionOf> _:AX2dX7c841e48X3aX1570a471e4aX3aXX2dX7ff3 .
+_:AX2dX7c841e48X3aX1570a471e4aX3aXX2dX7ff4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://geo.linkeddata.es/ontology/Esclusa> <http://www.w3.org/2000/01/rdf-schema#comment> "Compartimento, con puertas de entrada y salida, que se construye en un canal de navegaci\u00F3n para que los barcos puedan pasar de un tramo a otro de diferente nivel, para lo cual se llena de agua o se vac\u00EDa el espacio comprendido entre dichas puertas."@es .
+<http://geo.linkeddata.es/ontology/Esclusa> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://geo.linkeddata.es/ontology/AguasCorrientesArtificiales> .
+<http://geo.linkeddata.es/ontology/Esclusa> <http://www.w3.org/2000/01/rdf-schema#label> "Esclusa"@es .
+<http://geo.linkeddata.es/ontology/Esclusa> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:AX2dX7c841e48X3aX1570a471e4aX3aXX2dX7ffa <http://www.w3.org/2002/07/owl#hasValue> <http://geo.linkeddata.es/kos/hydrography/categoriaDeIsla> .
+_:AX2dX7c841e48X3aX1570a471e4aX3aXX2dX7ffa <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:AX2dX7c841e48X3aX1570a471e4aX3aXX2dX7ffa <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://geo.linkeddata.es/kos/hydrography/categoriaDeRio/rioSecundario> <http://www.w3.org/2004/02/skos/core#inScheme> <http://geo.linkeddata.es/kos/hydrography/categoriaDeRio> .
+<http://geo.linkeddata.es/kos/hydrography/categoriaDeRio/rioSecundario> <http://www.w3.org/2004/02/skos/core#prefLabel> "r\u00EDo de inter\u00E9s secundario"@es .
+<http://geo.linkeddata.es/kos/hydrography/categoriaDeRio/rioSecundario> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://geo.linkeddata.es/kos/hydrography/categoriaDeRio/rioSecundario> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:AX2dX7c841e48X3aX1570a471e4aX3aXX2dX7ff9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:AX2dX7c841e48X3aX1570a471e4aX3aXX2dX7ff9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:AX2dX7c841e48X3aX1570a471e4aX3aXX2dX7ffa .
+<http://geo.linkeddata.es/ontology/Balsa> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://geo.linkeddata.es/ontology/Alberca> .
+<http://geo.linkeddata.es/ontology/categoriaDeIsla> <http://www.w3.org/2000/01/rdf-schema#range> _:AX2dX7c841e48X3aX1570a471e4aX3aXX2dX7ffc .
+<http://geo.linkeddata.es/ontology/categoriaDeIsla> <http://www.w3.org/2000/01/rdf-schema#domain> <http://geo.linkeddata.es/ontology/Isla> .
+<http://geo.linkeddata.es/ontology/categoriaDeIsla> <http://www.w3.org/2000/01/rdf-schema#comment> "Indica la categor\u00EDa de la isla"@es .
+<http://geo.linkeddata.es/ontology/categoriaDeIsla> <http://www.w3.org/2000/01/rdf-schema#label> "categor\u00EDa de isla"@es .
+<http://geo.linkeddata.es/ontology/categoriaDeIsla> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://geo.linkeddata.es/kos/hydrography/categoriaDeRio/rioTerceario> <http://www.w3.org/2004/02/skos/core#inScheme> <http://geo.linkeddata.es/kos/hydrography/categoriaDeRio> .
+<http://geo.linkeddata.es/kos/hydrography/categoriaDeRio/rioTerceario> <http://www.w3.org/2004/02/skos/core#prefLabel> "r\u00EDo de inter\u00E9s terceario"@es .
+<http://geo.linkeddata.es/kos/hydrography/categoriaDeRio/rioTerceario> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://geo.linkeddata.es/kos/hydrography/categoriaDeRio/rioTerceario> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:AX2dX7c841e48X3aX1570a471e4aX3aXX2dX7ff3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:AX2dX7c841e48X3aX1570a471e4aX3aXX2dX7ff1 .
+_:AX2dX7c841e48X3aX1570a471e4aX3aXX2dX7ff3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://geo.linkeddata.es/kos/hydrography/categoriaDeRio/rioDeMenorInteres> <http://www.w3.org/2004/02/skos/core#inScheme> <http://geo.linkeddata.es/kos/hydrography/categoriaDeRio> .
+<http://geo.linkeddata.es/kos/hydrography/categoriaDeRio/rioDeMenorInteres> <http://www.w3.org/2004/02/skos/core#prefLabel> "r\u00EDo de menor interes"@es .
+<http://geo.linkeddata.es/kos/hydrography/categoriaDeRio/rioDeMenorInteres> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://geo.linkeddata.es/kos/hydrography/categoriaDeRio/rioDeMenorInteres> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:AX2dX7c841e48X3aX1570a471e4aX3aXX2dX7ff8 <http://www.w3.org/2002/07/owl#intersectionOf> _:AX2dX7c841e48X3aX1570a471e4aX3aXX2dX7ff7 .
+_:AX2dX7c841e48X3aX1570a471e4aX3aXX2dX7ff8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://geo.linkeddata.es/kos/hydrography/regimenDeLaguna/permanente> <http://www.w3.org/2004/02/skos/core#inScheme> <http://geo.linkeddata.es/kos/hydrography/regimenDeLaguna> .
+<http://geo.linkeddata.es/kos/hydrography/regimenDeLaguna/permanente> <http://www.w3.org/2004/02/skos/core#prefLabel> "permanente"@es .
+<http://geo.linkeddata.es/kos/hydrography/regimenDeLaguna/permanente> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://geo.linkeddata.es/kos/hydrography/regimenDeLaguna/permanente> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://geo.linkeddata.es/kos/hydrography/regimenDeLaguna> <http://www.w3.org/2004/02/skos/core#prefLabel> "r\u00E9gimen de laguna"@es .
+<http://geo.linkeddata.es/kos/hydrography/regimenDeLaguna> <http://www.w3.org/2000/01/rdf-schema#comment> "puede tomar los valores:\n* http://geo.linkeddata.es/kos/hydrography/regimenDeLaguna/permanete\n* http://geo.linkeddata.es/kos/hydrography/regimenDeLaguna/noPermanente"@es .
+<http://geo.linkeddata.es/kos/hydrography/regimenDeLaguna> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://geo.linkeddata.es/kos/hydrography/regimenDeLaguna> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<http://geo.linkeddata.es/ontology/hidrography.owl> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/2004/02/skos/core> .
+<http://geo.linkeddata.es/ontology/hidrography.owl> <http://www.w3.org/2002/07/owl#imports> <http://geo.linkeddata.es/ontology/hydro.owl> .
+<http://geo.linkeddata.es/ontology/hidrography.owl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://geo.linkeddata.es/ontology/Pennon> <http://www.w3.org/2000/01/rdf-schema#comment> "Monte pe\u00F1ascoso."@es .
+<http://geo.linkeddata.es/ontology/Pennon> <http://purl.org/dc/elements/1.1/source> "Diccionario de la Real Academia Espa\u00F1ola"@es .
+<http://geo.linkeddata.es/ontology/Pennon> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://geo.linkeddata.es/ontology/Morfologia> .
+<http://geo.linkeddata.es/ontology/Pennon> <http://www.w3.org/2000/01/rdf-schema#label> "Pe\u00F1on"@es .
+<http://geo.linkeddata.es/ontology/Pennon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:AX2dX7c841e48X3aX1570a471e4aX3aXX2dX7ff2 <http://www.w3.org/2002/07/owl#hasValue> <http://geo.linkeddata.es/kos/hydrography/regimenDeLaguna> .
+_:AX2dX7c841e48X3aX1570a471e4aX3aXX2dX7ff2 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:AX2dX7c841e48X3aX1570a471e4aX3aXX2dX7ff2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://geo.linkeddata.es/ontology/categoriaDeRio> <http://www.w3.org/2000/01/rdf-schema#range> _:AX2dX7c841e48X3aX1570a471e4aX3aXX2dX7ff8 .
+<http://geo.linkeddata.es/ontology/categoriaDeRio> <http://www.w3.org/2000/01/rdf-schema#comment> "Indica el orden de inter\u00E9s de un r\u00EDo"@es .
+<http://geo.linkeddata.es/ontology/categoriaDeRio> <http://www.w3.org/2000/01/rdf-schema#label> "categor\u00EDa de r\u00EDo"@es .
+<http://geo.linkeddata.es/ontology/categoriaDeRio> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://geo.linkeddata.es/kos/hydrography/categoriaDeIsla> <http://www.w3.org/2004/02/skos/core#prefLabel> "categor\u00EDa de isla"@es .
+<http://geo.linkeddata.es/kos/hydrography/categoriaDeIsla> <http://www.w3.org/2000/01/rdf-schema#comment> "Puede tomar los valores:\n* http://geo.linkeddata.es/kos/hydrography/categoriaDeIsla/principal"@es .
+<http://geo.linkeddata.es/kos/hydrography/categoriaDeIsla> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://geo.linkeddata.es/kos/hydrography/categoriaDeIsla> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<http://geo.linkeddata.es/ontology/Estanque> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://geo.linkeddata.es/ontology/Alberca> .
+_:AX2dX7c841e48X3aX1570a471e4aX3aXX2dX7ff7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:AX2dX7c841e48X3aX1570a471e4aX3aXX2dX7ff5 .
+_:AX2dX7c841e48X3aX1570a471e4aX3aXX2dX7ff7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://geo.linkeddata.es/ontology/Salina> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://geo.linkeddata.es/ontology/ZonaHumeda> .
+_:AX2dX7c841e48X3aX1570a471e4aX3aXX2dX7ff1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:AX2dX7c841e48X3aX1570a471e4aX3aXX2dX7ff1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:AX2dX7c841e48X3aX1570a471e4aX3aXX2dX7ff2 .
+<http://geo.linkeddata.es/ontology/Isla> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://geo.linkeddata.es/ontology/Morfologia> .
+<http://geo.linkeddata.es/ontology/Isla> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://geo.linkeddata.es/ontology/Rambla> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://geo.linkeddata.es/ontology/ZonaHumeda> .
+<http://geo.linkeddata.es/ontology/Cala> <http://www.w3.org/2000/01/rdf-schema#comment> "Ensenada peque\u00F1a."@es .
+<http://geo.linkeddata.es/ontology/Cala> <http://purl.org/dc/elements/1.1/source> "Diccionario de la Real Academia Espa\u00F1ola"@es .
+<http://geo.linkeddata.es/ontology/Cala> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://geo.linkeddata.es/ontology/Morfologia> .
+<http://geo.linkeddata.es/ontology/Cala> <http://www.w3.org/2000/01/rdf-schema#label> "Cala"@es .
+<http://geo.linkeddata.es/ontology/Cala> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:AX2dX7c841e48X3aX1570a471e4aX3aXX2dX7ff6 <http://www.w3.org/2002/07/owl#hasValue> <http://geo.linkeddata.es/kos/hydrography/categoriaDeRio> .
+_:AX2dX7c841e48X3aX1570a471e4aX3aXX2dX7ff6 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:AX2dX7c841e48X3aX1570a471e4aX3aXX2dX7ff6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://geo.linkeddata.es/kos/hydrography/categoriaDeRio/rioPrincipal> <http://www.w3.org/2004/02/skos/core#inScheme> <http://geo.linkeddata.es/kos/hydrography/categoriaDeRio> .
+<http://geo.linkeddata.es/kos/hydrography/categoriaDeRio/rioPrincipal> <http://www.w3.org/2004/02/skos/core#prefLabel> "r\u00EDo de inter\u00E9s principal"@es .
+<http://geo.linkeddata.es/kos/hydrography/categoriaDeRio/rioPrincipal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://geo.linkeddata.es/kos/hydrography/categoriaDeRio/rioPrincipal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://geo.linkeddata.es/ontology/Marisma> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://geo.linkeddata.es/ontology/ZonaHumeda> .
+<http://geo.linkeddata.es/ontology/Cabo> <http://www.w3.org/2000/01/rdf-schema#comment> "Lengua de tierra que penetra en el mar."@es .
+<http://geo.linkeddata.es/ontology/Cabo> <http://purl.org/dc/elements/1.1/source> "Diccionario de la Real Academia Espa\u00F1ola"@es .
+<http://geo.linkeddata.es/ontology/Cabo> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://geo.linkeddata.es/ontology/Morfologia> .
+<http://geo.linkeddata.es/ontology/Cabo> <http://www.w3.org/2000/01/rdf-schema#label> "Cabo"@es .
+<http://geo.linkeddata.es/ontology/Cabo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:AX2dX7c841e48X3aX1570a471e4aX3aXX2dX7ffc <http://www.w3.org/2002/07/owl#intersectionOf> _:AX2dX7c841e48X3aX1570a471e4aX3aXX2dX7ffb .
+_:AX2dX7c841e48X3aX1570a471e4aX3aXX2dX7ffc <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://geo.linkeddata.es/ontology/Punta> <http://www.w3.org/2000/01/rdf-schema#comment> "Lengua de tierra, generalmente baja y de poca extensi\u00F3n, que penetra en el mar."@es .
+<http://geo.linkeddata.es/ontology/Punta> <http://purl.org/dc/elements/1.1/source> "Diccionario de la Real Academia Espa\u00F1ola"@es .
+<http://geo.linkeddata.es/ontology/Punta> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://geo.linkeddata.es/ontology/Morfologia> .
+<http://geo.linkeddata.es/ontology/Punta> <http://www.w3.org/2000/01/rdf-schema#label> "Punta"@es .
+<http://geo.linkeddata.es/ontology/Punta> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://geo.linkeddata.es/ontology/IslaFluvial> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://geo.linkeddata.es/ontology/Isla> .
+_:AX2dX7c841e48X3aX1570a471e4aX3aXX2dX7ff5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:AX2dX7c841e48X3aX1570a471e4aX3aXX2dX7ff5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:AX2dX7c841e48X3aX1570a471e4aX3aXX2dX7ff6 .
+<http://geo.linkeddata.es/kos/hydrography/categoriaDeRio> <http://www.w3.org/2004/02/skos/core#prefLabel> "categor\u00EDa de r\u00EDo"@es .
+<http://geo.linkeddata.es/kos/hydrography/categoriaDeRio> <http://www.w3.org/2000/01/rdf-schema#comment> "categorizaci\u00F3n de un r\u00EDo. Puede tomar los valores:\n* http://geo.linkeddata.es/kos/hydrography/vategoriaDeRio/rioPrincipal\n* http://geo.linkeddata.es/kos/hydrography/vategoriaDeRio/rioSecundario\n* http://geo.linkeddata.es/kos/hydrography/vategoriaDeRio/rioTerceario\n* http://geo.linkeddata.es/kos/hydrography/vategoriaDeRio/rioDeMenorInteres\n"@es .
+<http://geo.linkeddata.es/kos/hydrography/categoriaDeRio> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://geo.linkeddata.es/kos/hydrography/categoriaDeRio> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<http://geo.linkeddata.es/ontology/IslaMaritima> <http://www.w3.org/2000/01/rdf-schema#comment> "Porci\u00F3n de tierra rodeada de agua del mar."@es .
+<http://geo.linkeddata.es/ontology/IslaMaritima> <http://purl.org/dc/elements/1.1/source> "Cat\u00E1logo de Objetos Geogr\u00E1ficos BTN100"@es .
+<http://geo.linkeddata.es/ontology/IslaMaritima> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://geo.linkeddata.es/ontology/Isla> .
+<http://geo.linkeddata.es/ontology/IslaMaritima> <http://www.w3.org/2000/01/rdf-schema#label> "Isla mar\u00EDtima"@es .
+<http://geo.linkeddata.es/ontology/IslaMaritima> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://geo.linkeddata.es/kos/hydrography/regimenDeLaguna/noPermanente> <http://www.w3.org/2004/02/skos/core#inScheme> <http://geo.linkeddata.es/kos/hydrography/regimenDeLaguna> .
+<http://geo.linkeddata.es/kos/hydrography/regimenDeLaguna/noPermanente> <http://www.w3.org/2004/02/skos/core#prefLabel> "no permanente"@es .
+<http://geo.linkeddata.es/kos/hydrography/regimenDeLaguna/noPermanente> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://geo.linkeddata.es/kos/hydrography/regimenDeLaguna/noPermanente> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:AX2dX7c841e48X3aX1570a471e4aX3aXX2dX7ffb <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:AX2dX7c841e48X3aX1570a471e4aX3aXX2dX7ff9 .
+_:AX2dX7c841e48X3aX1570a471e4aX3aXX2dX7ffb <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .

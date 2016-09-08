@@ -1,0 +1,1630 @@
+<rdf:RDF
+    xmlns:competenciaDeVia="http://geo.linkeddata.es/kos/transports/competenciaDeVia/"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:categoriaVial="http://geo.linkeddata.es/kos/transports/categoriaVial/"
+    xmlns:estadoDeUso="http://geo.linkeddata.es/kos/transports/estadoDeUso/"
+    xmlns:rutaTenT="http://geo.linkeddata.es/kos/transports/rutaTenT/"
+    xmlns:numeroDeVias="http://geo.linkeddata.es/kos/transports/numeroDeVias/"
+    xmlns:competenciaPortuaria="http://geo.linkeddata.es/kos/transports/competenciaPortuaria/"
+    xmlns:transportes="http://geo.linkeddata.es/kos/transports/"
+    xmlns:tipoDeItinerario="http://geo.linkeddata.es/kos/transports/tipoDeItinerario/"
+    xmlns:tipoDeTrafico="http://geo.linkeddata.es/kos/transports/tipoDeTrafico/"
+    xmlns:competenciaAeroportuaria="http://geo.linkeddata.es/kos/transports/competenciaAeroportuaria/"
+    xmlns="http://geo.linkeddata.es/ontology/"
+    xmlns:anchoDeVia="http://geo.linkeddata.es/kos/transports/anchoDeVia/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:tipoDeCalzada="http://geo.linkeddata.es/kos/transports/tipoDeCalzada/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:terms="http://purl.org/dc/terms/"
+    xmlns:acceso="http://geo.linkeddata.es/kos/transports/acceso/"
+    xmlns:electrificacion="http://geo.linkeddata.es/kos/transports/electrificacion/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:geo="http://geo.linkeddata.es/"
+    xmlns:tipoDeTramo="http://geo.linkeddata.es/kos/transports/tipoDeTramo/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:situacionDeVia="http://geo.linkeddata.es/kos/transports/situacionDeVia/" > 
+  <rdf:Description rdf:nodeID="A0">
+    <rdf:rest rdf:nodeID="A1"/>
+    <rdf:first rdf:nodeID="A2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/altitud">
+    <rdfs:domain rdf:nodeID="A3"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:comment xml:lang="es">Altitud en metros</rdfs:comment>
+    <rdfs:label xml:lang="es">altitud</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/transports.owl">
+    <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+    <owl:imports rdf:resource="http://geo.linkeddata.es/ontology/transportes.owl"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/kos/transports/anchoDeVia/internacional">
+    <skos:inScheme rdf:resource="http://geo.linkeddata.es/kos/transports/anchoDeVia"/>
+    <skos:prefLabel xml:lang="es">ancho de vía internacional</skos:prefLabel>
+    <rdfs:comment xml:lang="es">acnho de via internacional (1.435 mm).</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A4">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A5"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A6">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A7"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A8">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A9"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A10">
+    <rdf:rest rdf:nodeID="A11"/>
+    <rdf:first rdf:resource="http://geo.linkeddata.es/kos/transports/situacionDeVia/elevado"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A12">
+    <xsd:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</xsd:length>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A13">
+    <rdf:rest rdf:nodeID="A14"/>
+    <rdf:first rdf:resource="http://geo.linkeddata.es/kos/transports/acceso/libre"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A15">
+    <owl:hasValue rdf:resource="http://geo.linkeddata.es/kos/transports/tipoDeCalzada/sentidoUnico"/>
+    <owl:onProperty rdf:resource="http://geo.linkeddata.es/ontology/calzada"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/kos/transports/rutaTenT">
+    <skos:prefLabel xml:lang="es">ruta TEN-T</skos:prefLabel>
+    <rdfs:comment xml:lang="es">Esquema de conceptos que indica si el tramo de vía pertenece a la Red Transeuropea de Transporte (TEN-T)
+puede tomar los valores:
+* http://geo.linkeddata.es/kos/transports/rutaTenT/rutaTranseuropea
+* http://geo.linkeddata.es/kos/transports/rutaTenT/rutaNoTranseuropea</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/kos/transports/situacionDeVia/superficial">
+    <skos:inScheme rdf:resource="http://geo.linkeddata.es/kos/transports/situacionDeVia"/>
+    <rdfs:comment xml:lang="es">vía superficial</rdfs:comment>
+    <skos:prefLabel xml:lang="es">superficial</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A16">
+    <xsd:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</xsd:length>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A17">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A18"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A19">
+    <owl:hasValue rdf:resource="http://geo.linkeddata.es/kos/transports/competenciaAeroportuaria"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/kos/transports/anchoDeVia/iberico">
+    <skos:inScheme rdf:resource="http://geo.linkeddata.es/kos/transports/anchoDeVia"/>
+    <skos:prefLabel xml:lang="es">ancho de vía ibérico</skos:prefLabel>
+    <rdfs:comment xml:lang="es"> ancho ibérico (1.668 mm)</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A20">
+    <owl:hasValue rdf:resource="http://geo.linkeddata.es/kos/transports/tipoDeCalzada/sentidoUnico"/>
+    <owl:onProperty rdf:resource="http://geo.linkeddata.es/ontology/calzada"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A21">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A22"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A23">
+    <owl:hasValue rdf:resource="http://geo.linkeddata.es/kos/transports/tipoDeItinerario"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A24">
+    <owl:distinctMembers rdf:nodeID="A25"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/calzada">
+    <rdfs:domain rdf:nodeID="A26"/>
+    <rdfs:range rdf:nodeID="A27"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A28">
+    <owl:intersectionOf rdf:nodeID="A29"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A30">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="http://geo.linkeddata.es/ontology/Helipuerto"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/CarreteraNacional">
+    <rdfs:comment xml:lang="es">Vía de comunicación dedicada al tráfico rodado, cuya competencia corresponde a la Administración Central del Estado, clasificada como carretera de primer orden por el Ministerio de Fomento (Red de Interés General del Estado).</rdfs:comment>
+    <rdfs:subClassOf rdf:nodeID="A31"/>
+    <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/Carretera"/>
+    <rdfs:label xml:lang="es">Carretera Nacional</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A32">
+    <owl:unionOf rdf:nodeID="A33"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A34">
+    <rdf:rest rdf:nodeID="A35"/>
+    <rdf:first rdf:resource="http://geo.linkeddata.es/ontology/Aerodromo"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/kos/transports/estadoDeUso/enConstruccion">
+    <skos:inScheme rdf:resource="http://geo.linkeddata.es/kos/transports/estadoDeUso"/>
+    <rdfs:comment xml:lang="es">indica que está en construcción o en obras</rdfs:comment>
+    <skos:prefLabel xml:lang="es">en construcción</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A36">
+    <owl:hasValue rdf:resource="http://geo.linkeddata.es/kos/transports/tipoDeCalzada"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A37">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A38"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A39">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A36"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A40">
+    <owl:hasValue rdf:resource="http://geo.linkeddata.es/kos/transports/estadoDeUso/enUso"/>
+    <owl:onProperty rdf:resource="http://geo.linkeddata.es/ontology/estadoDeUso"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/kos/transports/competenciaPortuaria">
+    <skos:prefLabel xml:lang="es">competencia portuaria</skos:prefLabel>
+    <rdfs:comment xml:lang="es">Esquema de conceptos para definir el tipo la competencia de explotación de un puerto
+puede tomar los valores:
+* http://geo.linkeddata.es/kos/transports/competenciaPortuaria/estatal</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/kos/transports/acceso/libre">
+    <skos:inScheme rdf:resource="http://geo.linkeddata.es/kos/transports/acceso"/>
+    <rdfs:comment xml:lang="es">indica si la via es de acceso libre</rdfs:comment>
+    <skos:prefLabel xml:lang="es">acceso libre</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A7">
+    <owl:hasValue rdf:resource="http://geo.linkeddata.es/kos/transports/categoriaVial"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A5">
+    <owl:hasValue rdf:resource="http://geo.linkeddata.es/kos/transports/tipoDeTramo"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A41">
+    <owl:withRestrictions rdf:nodeID="A42"/>
+    <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A14">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="http://geo.linkeddata.es/kos/transports/acceso/peaje"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A43">
+    <owl:distinctMembers rdf:nodeID="A10"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A9">
+    <owl:hasValue rdf:resource="http://geo.linkeddata.es/kos/transports/tipoDeCalzada/sentidoUnico"/>
+    <owl:onProperty rdf:resource="http://geo.linkeddata.es/ontology/calzada"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A44">
+    <owl:hasValue rdf:resource="http://geo.linkeddata.es/kos/transports/electrificacion"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A18">
+    <owl:hasValue rdf:resource="http://geo.linkeddata.es/kos/transports/situacionDeVia"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/tipoDeTrafico">
+    <rdfs:range rdf:nodeID="A45"/>
+    <rdfs:domain rdf:nodeID="A46"/>
+    <rdfs:comment xml:lang="es">indica el tipo de tráfico que puede llevar un ferrocarril, pueden ser:
+* mixto
+* mercancías
+* pasajeros</rdfs:comment>
+    <rdfs:label xml:lang="es">tipo de tráfico</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A47">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A15"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A48">
+    <owl:intersectionOf rdf:nodeID="A49"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/icaoCode">
+    <rdfs:range rdf:nodeID="A50"/>
+    <rdfs:domain rdf:nodeID="A51"/>
+    <rdfs:comment xml:lang="es">Código de designación de aeropuertos compuesto de cuatro caracteres alfanuméricos que sirve para identificar cada aeropuerto alrededor del mundo.</rdfs:comment>
+    <rdfs:label xml:lang="es">código icao</rdfs:label>
+    <rdfs:label xml:lang="en">icao code</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A25">
+    <rdf:rest rdf:nodeID="A52"/>
+    <rdf:first rdf:resource="http://geo.linkeddata.es/kos/transports/electrificacion/electrificado"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A53">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A23"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A22">
+    <owl:unionOf rdf:nodeID="A54"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/kos/transports/estadoDeUso">
+    <rdfs:comment xml:lang="es">indica el estado de uso. Puede tomar los valores:
+* http://geo.linkeddata.es/kos/transporters/estadoDeUso/enConstruccion
+* http://geo.linkeddata.es/kos/transporters/estadoDeUso/enUso
+* http://geo.linkeddata.es/kos/transporters/estadoDeUso/abandonado</rdfs:comment>
+    <skos:prefLabel xml:lang="es">estado de uso</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A55">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A20"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A56">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A19"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A57">
+    <owl:unionOf rdf:nodeID="A58"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A59">
+    <rdf:rest rdf:nodeID="A30"/>
+    <rdf:first rdf:resource="http://geo.linkeddata.es/ontology/Aeropuerto"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A60">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A44"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A61">
+    <owl:unionOf rdf:nodeID="A62"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A3">
+    <owl:unionOf rdf:nodeID="A34"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A2">
+    <owl:hasValue rdf:resource="http://geo.linkeddata.es/kos/transports/competenciaDeVia/local"/>
+    <owl:onProperty rdf:resource="http://geo.linkeddata.es/ontology/competenciaDeVia"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A63">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A40"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/kos/transports/electrificacion/electrificado">
+    <skos:inScheme rdf:resource="http://geo.linkeddata.es/kos/transports/electrificacion"/>
+    <skos:prefLabel xml:lang="es">electrificado</skos:prefLabel>
+    <rdfs:comment xml:lang="es">Indica que una vía está electrificada</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A64">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="http://geo.linkeddata.es/kos/transports/rutaTenT/rutaTranseuropea"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A65">
+    <rdf:rest rdf:nodeID="A8"/>
+    <rdf:first rdf:nodeID="A66"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A67">
+    <owl:distinctMembers rdf:nodeID="A68"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/FerrocarrilConvencional">
+    <rdfs:comment xml:lang="es">Vía por la que circulan los trenes de RENFE que no pertenecen a la red AVE.</rdfs:comment>
+    <rdfs:comment xml:lang="es">Anexo A: Catálogo de Objetos Geográficos de BTN100.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/Ferrocarril"/>
+    <rdfs:label xml:lang="es">Tramo de vía convencional</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A42">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A69"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A70">
+    <rdf:rest rdf:nodeID="A4"/>
+    <rdf:first rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/tipoDeTramo">
+    <rdfs:domain rdf:nodeID="A71"/>
+    <rdfs:range rdf:nodeID="A72"/>
+    <rdfs:comment xml:lang="es">Tramo de vía que se desarrollan por el interior de núcleos o diseminados superficiales</rdfs:comment>
+    <rdfs:label xml:lang="es">tipo de tramo</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A54">
+    <rdf:rest rdf:nodeID="A73"/>
+    <rdf:first rdf:nodeID="A74"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A75">
+    <rdf:rest rdf:nodeID="A76"/>
+    <rdf:first rdf:nodeID="A77"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A78">
+    <owl:unionOf rdf:nodeID="A79"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A80">
+    <owl:withRestrictions rdf:nodeID="A81"/>
+    <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A82">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A83"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A84">
+    <rdf:rest rdf:nodeID="A17"/>
+    <rdf:first rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/kos/transports/rutaTenT/rutaTranseuropea">
+    <skos:inScheme rdf:resource="http://geo.linkeddata.es/kos/transports/rutaTenT"/>
+    <skos:prefLabel xml:lang="es">ruta transeuropea</skos:prefLabel>
+    <rdfs:comment xml:lang="es">El tramo no forma parte de la Red Transeuropea de Transporte</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A85">
+    <rdf:rest rdf:nodeID="A60"/>
+    <rdf:first rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/unloCode">
+    <rdfs:range rdf:nodeID="A80"/>
+    <rdfs:domain rdf:resource="http://geo.linkeddata.es/ontology/Puerto"/>
+    <rdfs:comment xml:lang="es">código unlo</rdfs:comment>
+    <rdfs:comment xml:lang="es">Código de localización de Naciones Unidas (United Nations / Location CODE – UN/LOCODE)</rdfs:comment>
+    <rdfs:comment xml:lang="en">UN/LOCODE, the United Nations Code for Trade and Transport Locations, is a geographic coding scheme developed and maintained by United Nations Economic Commission for Europe (UNECE), a unit of the United Nations. UN/LOCODE assigns codes to locations used in trade and transport  with functions such as seaports, rail and road terminals, airports, post offices and border crossing points.</rdfs:comment>
+    <rdfs:label xml:lang="en">unlo code</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A46">
+    <owl:unionOf rdf:nodeID="A86"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/kos/transports/tipoDeTrafico/mixto">
+    <skos:inScheme rdf:resource="http://geo.linkeddata.es/kos/transports/tipoDeTrafico"/>
+    <skos:prefLabel xml:lang="es">tráfico mixto</skos:prefLabel>
+    <rdfs:comment xml:lang="es">puede llevar mercancías o pasajeros</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A87">
+    <owl:hasValue rdf:resource="http://geo.linkeddata.es/kos/transports/tipoDeCalzada/convencional"/>
+    <owl:onProperty rdf:resource="http://geo.linkeddata.es/ontology/calzada"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A88">
+    <rdf:rest rdf:nodeID="A37"/>
+    <rdf:first rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A89">
+    <owl:intersectionOf rdf:nodeID="A90"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A91">
+    <owl:intersectionOf rdf:nodeID="A92"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A93">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="http://geo.linkeddata.es/ontology/Carretera"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A94">
+    <rdf:rest rdf:nodeID="A0"/>
+    <rdf:first rdf:nodeID="A95"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Helipuerto">
+    <rdfs:comment xml:lang="es">Pista destinada al aterrizaje y despegue de helicópteros.</rdfs:comment>
+    <terms:source xml:lang="es">Diccionario de la Real Academia Española</terms:source>
+    <rdfs:label xml:lang="es">Helipuerto</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A96">
+    <rdf:rest rdf:nodeID="A97"/>
+    <rdf:first rdf:resource="http://geo.linkeddata.es/ontology/Aeropuerto"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A68">
+    <rdf:rest rdf:nodeID="A98"/>
+    <rdf:first rdf:resource="http://geo.linkeddata.es/kos/transports/estadoDeUso/abandonado"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Cargadero">
+    <rdfs:comment xml:lang="es">Instalación ferroviaria que permite el acceso de mercancías desde los trenes a los barcos. Se distingue de una estación en que no es parte de la gestión de la circulación, ni tiene que disponer de desvíos y señales.</rdfs:comment>
+    <terms:source xml:lang="es">Administrador de Infraestructuras Ferroviarias (ADIF)</terms:source>
+    <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/EnclaveFerroviario"/>
+    <rdfs:label xml:lang="es">Cargadero</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A72">
+    <owl:intersectionOf rdf:nodeID="A70"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/kos/transports/tipoDeCalzada/sentidoUnico">
+    <skos:inScheme rdf:resource="http://geo.linkeddata.es/kos/transports/tipoDeCalzada"/>
+    <skos:prefLabel xml:lang="es">calzada de sentido único</skos:prefLabel>
+    <rdfs:comment xml:lang="es">Calzada de sentido único no contigua a la del contrario.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A69">
+    <xsd:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</xsd:length>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A99">
+    <rdf:rest rdf:nodeID="A64"/>
+    <rdf:first rdf:resource="http://geo.linkeddata.es/kos/transports/rutaTenT/rutaNoTranseuropea"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Telesqui">
+    <terms:source xml:lang="es">Diccionario de la Real Academia Española.</terms:source>
+    <rdfs:comment xml:lang="es"> Aparato que permite a los esquiadores subir hasta las pistas sobre sus esquís mediante un sistema de arrastre.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/TransporteSuspendido"/>
+    <rdfs:label xml:lang="es">Telesquí</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A79">
+    <rdf:rest rdf:nodeID="A100"/>
+    <rdf:first rdf:resource="http://geo.linkeddata.es/ontology/Autopista"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A74">
+    <owl:hasValue rdf:resource="http://geo.linkeddata.es/kos/transports/estadoDeUso/enConstruccion"/>
+    <owl:onProperty rdf:resource="http://geo.linkeddata.es/ontology/estadoDeUso"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A101">
+    <rdf:rest rdf:nodeID="A47"/>
+    <rdf:first rdf:nodeID="A102"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A103">
+    <owl:intersectionOf rdf:nodeID="A85"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A104">
+    <owl:withRestrictions rdf:nodeID="A82"/>
+    <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A81">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A16"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A105">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="http://geo.linkeddata.es/kos/transports/tipoDeItinerario/itinerarioNoEuropeo"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A86">
+    <rdf:rest rdf:nodeID="A106"/>
+    <rdf:first rdf:resource="http://geo.linkeddata.es/ontology/EnclaveFerroviario"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A107">
+    <rdf:rest rdf:nodeID="A55"/>
+    <rdf:first rdf:nodeID="A87"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A38">
+    <owl:hasValue rdf:resource="http://geo.linkeddata.es/kos/transports/rutaTenT"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A108">
+    <rdf:rest rdf:nodeID="A39"/>
+    <rdf:first rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A109">
+    <rdf:rest rdf:nodeID="A93"/>
+    <rdf:first rdf:resource="http://geo.linkeddata.es/ontology/Autovia"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A95">
+    <owl:hasValue rdf:resource="http://geo.linkeddata.es/kos/transports/competenciaDeVia/autonomica"/>
+    <owl:onProperty rdf:resource="http://geo.linkeddata.es/ontology/competenciaDeVia"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A110">
+    <owl:unionOf rdf:nodeID="A111"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A98">
+    <rdf:rest rdf:nodeID="A112"/>
+    <rdf:first rdf:resource="http://geo.linkeddata.es/kos/transports/estadoDeUso/enConstruccion"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A66">
+    <owl:hasValue rdf:resource="http://geo.linkeddata.es/kos/transports/tipoDeCalzada/doble"/>
+    <owl:onProperty rdf:resource="http://geo.linkeddata.es/ontology/calzada"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/kos/transports/competenciaDeVia/provincial">
+    <skos:inScheme rdf:resource="http://geo.linkeddata.es/kos/transports/competenciaDeVia"/>
+    <rdfs:comment xml:lang="es">indica que la via es competencia de la Diputación Provincial</rdfs:comment>
+    <skos:prefLabel xml:lang="es">competencia de vía provincial</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A97">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="http://geo.linkeddata.es/ontology/Helipuerto"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A33">
+    <rdf:rest rdf:nodeID="A96"/>
+    <rdf:first rdf:resource="http://geo.linkeddata.es/ontology/Aerodromo"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/kos/transports/tipoDeCalzada">
+    <skos:prefLabel xml:lang="es">tipo de calzada</skos:prefLabel>
+    <rdfs:comment xml:lang="es">Esquema de conceptos para definir el número de calzadas y sentido de circulación del tramo de vía.
+puede tomar los valores:
+* http://geo.linkeddata.es/kos/transports/calzada/doble
+* http://geo.linkeddata.es/kos/transports/calzada/convencional
+* http://geo.linkeddata.es/kos/transports/calzada/sentidoUnico</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A113">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A114"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A51">
+    <owl:unionOf rdf:nodeID="A115"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/kos/transports/tipoDeTramo/noInterno">
+    <skos:inScheme rdf:resource="http://geo.linkeddata.es/kos/transports/tipoDeTramo"/>
+    <skos:prefLabel xml:lang="es">tramo no interno</skos:prefLabel>
+    <rdfs:comment xml:lang="es">El tramo no discurre por el interior de poblaciones o zonas de uso</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A116">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A117"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Enlace">
+    <rdfs:comment xml:lang="es">Tramo que une dos vías de nombre distinto y permite el acceso de una a otra.</rdfs:comment>
+    <terms:source xml:lang="es">Anexo A: Catálogo de Objetos Geográficos de BTN100.</terms:source>
+    <rdfs:subClassOf rdf:nodeID="A57"/>
+    <rdfs:label xml:lang="es">Enlace</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/kos/transports/tipoDeTramo/interno">
+    <skos:inScheme rdf:resource="http://geo.linkeddata.es/kos/transports/tipoDeTramo"/>
+    <skos:prefLabel xml:lang="es">tramo interno</skos:prefLabel>
+    <rdfs:comment xml:lang="es">El tramo no discurre por el interior de poblaciones o zonas de uso</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/TransporteSuspendido">
+    <rdfs:comment xml:lang="es">Sistema de transporte en el que los vehículos van suspendidos de un cable de tracción. Se emplea principalmente para salvar grandes diferencias de altitud.</rdfs:comment>
+    <terms:source xml:lang="es">Anexo A: Catálogo de Objetos Geográficos de BTN100.</terms:source>
+    <rdfs:label xml:lang="es">TransporteSuspendido</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Autovia">
+    <rdfs:comment xml:lang="es">Carretera con calzadas separadas para los dos sentidos de la circulación, cuyas entradas y salidas no se someten a las exigencias de seguridad de las autopistas.</rdfs:comment>
+    <terms:source xml:lang="es">Anexo A: Catálogo de Objetos Geográficos de BTN100.</terms:source>
+    <rdfs:subClassOf rdf:nodeID="A91"/>
+    <rdfs:label xml:lang="es">Autovia</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/rutaTenT">
+    <rdfs:range rdf:nodeID="A118"/>
+    <rdfs:domain rdf:nodeID="A119"/>
+    <rdfs:comment xml:lang="es">indica si el tramo de vía pertenece a la Red Transeuropea de Transporte (TEN-T)</rdfs:comment>
+    <rdfs:label xml:lang="es">ruta TEN-T</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A120">
+    <rdf:rest rdf:nodeID="A63"/>
+    <rdf:first rdf:nodeID="A121"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A122">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="http://geo.linkeddata.es/ontology/Carretera"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/kos/transports/competenciaAeroportuaria">
+    <skos:prefLabel xml:lang="es">competencia aeroportuaria</skos:prefLabel>
+    <rdfs:comment xml:lang="es">Esquema de conceptos para definir el tipo de cometencia de explotación aeroportuaria.
+puede tomar los valores:
+* http://geo.linkeddata.es/kos/transports/competenciaAeroportuaria/aena
+* http://geo.linkeddata.es/kos/transports/competenciaAeroportuaria/militar
+* http://geo.linkeddata.es/kos/transports/competenciaAeroportuaria/privada</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A123">
+    <rdf:rest rdf:nodeID="A105"/>
+    <rdf:first rdf:resource="http://geo.linkeddata.es/kos/transports/tipoDeItinerario/itinerarioEuropeo"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A124">
+    <rdf:rest rdf:nodeID="A109"/>
+    <rdf:first rdf:resource="http://geo.linkeddata.es/ontology/Autopista"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A76">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A125"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A92">
+    <rdf:rest rdf:nodeID="A126"/>
+    <rdf:first rdf:nodeID="A110"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/CarreteraAutonomica">
+    <rdfs:comment xml:lang="es">Tramo de carretera convencional de competencia autonómica o de cualquier otra administración inferior a ésta.</rdfs:comment>
+    <rdfs:subClassOf rdf:nodeID="A127"/>
+    <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/Carretera"/>
+    <rdfs:label xml:lang="es">Carretera Autonómica</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/kos/transports/anchoDeVia">
+    <skos:prefLabel xml:lang="es">ancho de vía</skos:prefLabel>
+    <rdfs:comment xml:lang="es">Esquema de conceptos para definir el ancho de una vía
+puede tomar los valores:
+* http://geo.linkeddata.es/kos/transports/anchoDeVia/iberico
+* http://geo.linkeddata.es/kos/transports/anchoDeVia/internacional
+* http://geo.linkeddata.es/kos/transports/anchoDeVia/mixto
+* http://geo.linkeddata.es/kos/transports/anchoDeVia/metrico</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A128">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A129"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A117">
+    <xsd:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</xsd:length>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A83">
+    <xsd:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</xsd:length>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/kos/transports/situacionDeVia">
+    <skos:prefLabel xml:lang="es">situación</skos:prefLabel>
+    <rdfs:comment xml:lang="es">Disposición del tramo de vía sobre la superficie.
+
+* http://geo.linkeddata.es/kos/transports/situacionDeVia/elevado
+* http://geo.linkeddata.es/kos/transports/situacionDeVia/subterraneo
+* http://geo.linkeddata.es/kos/transports/situacionDeVia/superficial</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A130">
+    <rdf:rest rdf:nodeID="A131"/>
+    <rdf:first rdf:resource="http://geo.linkeddata.es/ontology/Carretera"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A71">
+    <owl:unionOf rdf:nodeID="A124"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A121">
+    <owl:hasValue rdf:resource="http://geo.linkeddata.es/kos/transports/estadoDeUso/enConstruccion"/>
+    <owl:onProperty rdf:resource="http://geo.linkeddata.es/ontology/estadoDeUso"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/kos/transports/numeroDeVias/unica">
+    <skos:inScheme rdf:resource="http://geo.linkeddata.es/kos/transports/numeroDeVias"/>
+    <skos:prefLabel xml:lang="es">vía única</skos:prefLabel>
+    <rdfs:comment xml:lang="es">En la vía se verifica el movimiento de los trenes en ambos sentidos</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A132">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="http://geo.linkeddata.es/ontology/CarreteraAutonomica"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/situacionDeVia">
+    <rdfs:range rdf:nodeID="A133"/>
+    <rdfs:domain rdf:nodeID="A61"/>
+    <rdfs:comment xml:lang="es">Disposición del tramo de vía sobre la superficie</rdfs:comment>
+    <rdfs:label xml:lang="es">situación</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/kos/transports/tipoDeTramo">
+    <skos:prefLabel xml:lang="es">tipo de tramo</skos:prefLabel>
+    <rdfs:comment xml:lang="es">Esquema de conceptos que indica si el tramo de vía  se desarrolla por el interior de núcleos o diseminados superficiales
+puede tomar los valores:
+* http://geo.linkeddata.es/kos/transports/tipoDeTramo/interno
+* http://geo.linkeddata.es/kos/transports/tipoDeTramo/noInterno</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A134">
+    <owl:hasValue rdf:resource="http://geo.linkeddata.es/kos/transports/tipoDeCalzada/doble"/>
+    <owl:onProperty rdf:resource="http://geo.linkeddata.es/ontology/calzada"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A125">
+    <owl:unionOf rdf:nodeID="A94"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/kos/transports/tipoDeItinerario/itinerarioNoEuropeo">
+    <skos:inScheme rdf:resource="http://geo.linkeddata.es/kos/transports/tipoDeItinerario"/>
+    <skos:prefLabel xml:lang="es">itinerario no europeo</skos:prefLabel>
+    <rdfs:comment xml:lang="es">indica que el tramo de vía no pertenece a la Red de Carreteras Europeas</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A135">
+    <owl:distinctMembers rdf:nodeID="A123"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A136">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="http://geo.linkeddata.es/ontology/Carretera"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A118">
+    <owl:intersectionOf rdf:nodeID="A88"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A129">
+    <owl:hasValue rdf:resource="http://geo.linkeddata.es/kos/transports/estadoDeUso/enUso"/>
+    <owl:onProperty rdf:resource="http://geo.linkeddata.es/ontology/estadoDeUso"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/kos/transports/tipoDeTrafico/mercancias">
+    <skos:inScheme rdf:resource="http://geo.linkeddata.es/kos/transports/tipoDeTrafico"/>
+    <skos:prefLabel xml:lang="es">tráfico de mercancías</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A137">
+    <rdf:rest rdf:nodeID="A138"/>
+    <rdf:first rdf:resource="http://geo.linkeddata.es/ontology/Aeropuerto"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/kos/transports/estadoDeUso/enUso">
+    <skos:inScheme rdf:resource="http://geo.linkeddata.es/kos/transports/estadoDeUso"/>
+    <skos:prefLabel xml:lang="es">en uso</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/kos/transports/tipoDeTrafico/viajeros">
+    <skos:inScheme rdf:resource="http://geo.linkeddata.es/kos/transports/tipoDeTrafico"/>
+    <skos:prefLabel xml:lang="es">tráfico de viajeros</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A131">
+    <rdf:rest rdf:nodeID="A139"/>
+    <rdf:first rdf:resource="http://geo.linkeddata.es/ontology/Enlace"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A140">
+    <rdf:rest rdf:nodeID="A6"/>
+    <rdf:first rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A141">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A142"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Itinerario">
+    <rdfs:comment xml:lang="es">Tramo de vía perteneciente al Camino de Santiago o catalogada como Vía verde.</rdfs:comment>
+    <terms:source xml:lang="es">Anexo A: Catálogo de Objetos Geográficos de BTN100.</terms:source>
+    <rdfs:label xml:lang="es">Itinerario</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A143">
+    <rdf:rest rdf:nodeID="A144"/>
+    <rdf:first rdf:resource="http://geo.linkeddata.es/ontology/Aeropuerto"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/kos/transports/categoriaVial">
+    <skos:prefLabel xml:lang="es">categoría vial</skos:prefLabel>
+    <rdfs:comment xml:lang="es">Esquema de conceptos para definir el tipo de categoría de una vía
+según su importancia. Puede tomar los valores:
+* http://geo.linkeddata.es/kos/transports/categoriaVial/primerOrden
+* http://geo.linkeddata.es/kos/transports/categoriaVial/segundoOrden
+* http://geo.linkeddata.es/kos/transports/categoriaVial/tercerOrden</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/estadoDeUso">
+    <rdfs:domain rdf:nodeID="A145"/>
+    <rdfs:range rdf:nodeID="A146"/>
+    <rdfs:label xml:lang="es">estado de uso</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A147">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="http://geo.linkeddata.es/kos/transports/situacionDeVia/superficial"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/kos/transports/competenciaDeVia">
+    <skos:prefLabel xml:lang="es">competencia de vía</skos:prefLabel>
+    <rdfs:comment xml:lang="es">Esquema de conceptos para definir de quien es la competencia de una determinada vía
+puede tomar los valores:
+* http://geo.linkeddata.es/kos/transports/competenciaVia/estatal
+* http://geo.linkeddata.es/kos/transports/competenciaVia/local
+* http://geo.linkeddata.es/kos/transports/competenciaVia/provicial
+* http://geo.linkeddata.es/kos/transports/competenciaVia/autonomica</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A52">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="http://geo.linkeddata.es/kos/transports/electrificacion/noElectrificado"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A148">
+    <owl:intersectionOf rdf:nodeID="A149"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A150">
+    <rdf:rest rdf:nodeID="A21"/>
+    <rdf:first rdf:resource="http://geo.linkeddata.es/ontology/Ferrocarril"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A151">
+    <rdf:rest rdf:nodeID="A152"/>
+    <rdf:first rdf:resource="http://geo.linkeddata.es/kos/transports/competenciaAeroportuaria/aena"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/kos/transports/tipoDeItinerario/itinerarioEuropeo">
+    <skos:inScheme rdf:resource="http://geo.linkeddata.es/kos/transports/tipoDeItinerario"/>
+    <skos:prefLabel xml:lang="es">itinerario europeo</skos:prefLabel>
+    <rdfs:comment xml:lang="es">indica que el tramo de vía pertenece a la Red de Carreteras Europeas</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A115">
+    <rdf:rest rdf:nodeID="A137"/>
+    <rdf:first rdf:resource="http://geo.linkeddata.es/ontology/Aerodromo"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/kos/transports/competenciaDeVia/estatal">
+    <skos:inScheme rdf:resource="http://geo.linkeddata.es/kos/transports/competenciaDeVia"/>
+    <rdfs:comment xml:lang="es">indica que la via es competencia del Estado</rdfs:comment>
+    <skos:prefLabel xml:lang="es">competencia de vía estatal</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A139">
+    <rdf:rest rdf:nodeID="A153"/>
+    <rdf:first rdf:resource="http://geo.linkeddata.es/ontology/Ferrocarril"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A142">
+    <owl:unionOf rdf:nodeID="A120"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A11">
+    <rdf:rest rdf:nodeID="A147"/>
+    <rdf:first rdf:resource="http://geo.linkeddata.es/kos/transports/situacionDeVia/subterraneo"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A154">
+    <owl:distinctMembers rdf:nodeID="A13"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A155">
+    <owl:intersectionOf rdf:nodeID="A140"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/kos/transports/competenciaAeroportuaria/privada">
+    <skos:inScheme rdf:resource="http://geo.linkeddata.es/kos/transports/competenciaAeroportuaria"/>
+    <skos:prefLabel xml:lang="es">privada</skos:prefLabel>
+    <rdfs:comment xml:lang="es">competencia aeroportuaria de explotación privada</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/EnclaveFerroviario">
+    <rdfs:comment xml:lang="es">instalaciones necesarias para el  funcionamiento del ferrocarril en todas sus faceta.</rdfs:comment>
+    <terms:source xml:lang="es">Administrador de Infraestructuras Ferroviarias (ADIF)</terms:source>
+    <rdfs:label xml:lang="es">Enclave Ferroviario</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Teleferico">
+    <rdfs:comment xml:lang="es">Sistema de transporte en que los vehículos van suspendidos de un cable de tracción. Se emplea principalmente para salvar grandes diferencias de altitud.</rdfs:comment>
+    <terms:source xml:lang="es">Diccionario de la Real Academia Española.</terms:source>
+    <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/TransporteSuspendido"/>
+    <rdfs:label xml:lang="es">Teleférico</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A90">
+    <rdf:rest rdf:nodeID="A56"/>
+    <rdf:first rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A156">
+    <owl:intersectionOf rdf:nodeID="A150"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A149">
+    <rdf:rest rdf:nodeID="A53"/>
+    <rdf:first rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A157">
+    <owl:distinctMembers rdf:nodeID="A151"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/kos/transports/competenciaAeroportuaria/militar">
+    <skos:inScheme rdf:resource="http://geo.linkeddata.es/kos/transports/competenciaAeroportuaria"/>
+    <skos:prefLabel xml:lang="es">militar</skos:prefLabel>
+    <rdfs:comment xml:lang="es">competencia aeroportuaria de explotación militar</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/kos/transports/categoriaVial/segundoOrden">
+    <skos:inScheme rdf:resource="http://geo.linkeddata.es/kos/transports/categoriaVial"/>
+    <skos:prefLabel xml:lang="es">categoría vial de segundo orden</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Apeadero">
+    <rdfs:comment xml:lang="es">Son dependencias con servicio exclusivo para la subida y bajada de viajeros. Son muy habituales en los grandes núcleos de población, y no tienen personal.</rdfs:comment>
+    <rdfs:comment xml:lang="es">En los ferrocarriles, sitio de la vía preparado para el servicio público, pero sin apartadero ni los demás accesorios de una estación.</rdfs:comment>
+    <terms:source xml:lang="es">Administrador de Infraestructuras Ferroviarias (ADIF)</terms:source>
+    <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/EnclaveFerroviario"/>
+    <rdfs:label xml:lang="es">Apeadero</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A158">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A159"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A160">
+    <rdf:rest rdf:nodeID="A161"/>
+    <rdf:first rdf:resource="http://geo.linkeddata.es/ontology/Autovia"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/kos/transports/electrificacion/noElectrificado">
+    <skos:inScheme rdf:resource="http://geo.linkeddata.es/kos/transports/electrificacion"/>
+    <skos:prefLabel xml:lang="es">no electrificado</skos:prefLabel>
+    <rdfs:comment xml:lang="es">Indica que una vía no está electrificada</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Suministro">
+    <rdfs:comment xml:lang="es">Son estaciones que aparte de regular el tráfico, tienen como misión principal la prestación de servicios de mercancías. Disponen de todas las instalaciones necesarias para la recepción, clasificación y formación, y expedición de los trenes de mercancías convencionales, que circulan entre ellas y/o a otros destinos nacionales e internacionales.</rdfs:comment>
+    <terms:source xml:lang="es">Administrador de Infraestructuras Ferroviarias (ADIF)</terms:source>
+    <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/EnclaveFerroviario"/>
+    <rdfs:label xml:lang="es">Suministro</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/kos/transports/acceso">
+    <skos:prefLabel xml:lang="es">acceso</skos:prefLabel>
+    <rdfs:comment xml:lang="es">Esquema de conceptos para definir el tipo de acceso de una vía
+puede tomar los valores:
+* http://geo.linkeddata.es/kos/transports/acceso/libre
+* http://geo.linkeddata.es/kos/transports/acceso/peaje</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A162">
+    <owl:hasValue rdf:resource="http://geo.linkeddata.es/kos/transports/competenciaDeVia"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/source">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/kos/transports/acceso/peaje">
+    <skos:inScheme rdf:resource="http://geo.linkeddata.es/kos/transports/acceso"/>
+    <rdfs:comment xml:lang="es">indica que la vía es de pago.</rdfs:comment>
+    <skos:prefLabel xml:lang="es">acceso con peaje</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/kos/transports/competenciaDeVia/autonomica">
+    <skos:inScheme rdf:resource="http://geo.linkeddata.es/kos/transports/competenciaDeVia"/>
+    <rdfs:comment xml:lang="es">indica que la via es competencia de la administración de las CCAA</rdfs:comment>
+    <skos:prefLabel xml:lang="es">competencia de vía autonómica</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A50">
+    <owl:withRestrictions rdf:nodeID="A116"/>
+    <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/kos/transports/anchoDeVia/metrico">
+    <skos:inScheme rdf:resource="http://geo.linkeddata.es/kos/transports/anchoDeVia"/>
+    <rdfs:comment xml:lang="es">ancho métrico, 1.000  mm</rdfs:comment>
+    <skos:prefLabel xml:lang="es">ancho de vía métrico</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A153">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="http://geo.linkeddata.es/ontology/Puerto"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/categoriaVial">
+    <rdfs:range rdf:nodeID="A155"/>
+    <rdfs:domain rdf:resource="http://geo.linkeddata.es/ontology/CarreteraAutonomica"/>
+    <rdfs:comment xml:lang="es">Categoría de una vía según su importancia.</rdfs:comment>
+    <rdfs:label xml:lang="es">categoría vial</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Ferrocarril">
+    <terms:source xml:lang="es">Diccionario de la Real Academia Española.</terms:source>
+    <rdfs:comment xml:lang="es">Camino con dos carriles de hierro paralelos, sobre los cuales ruedan los trenes.</rdfs:comment>
+    <rdfs:label xml:lang="es">Ferrocarril</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/ItinerarioDeCaminoDeSantiago">
+    <rdfs:comment xml:lang="es">Itinerario perteneciente al Camino de Santiago</rdfs:comment>
+    <terms:source xml:lang="es">Anexo A: Catálogo de Objetos Geográficos de BTN100.</terms:source>
+    <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/Itinerario"/>
+    <rdfs:label xml:lang="es">ItinerarioDeCaminoDeSantiago</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/acceso">
+    <rdfs:range rdf:nodeID="A163"/>
+    <rdfs:domain rdf:resource="http://geo.linkeddata.es/ontology/Autopista"/>
+    <rdfs:label xml:lang="es">acceso</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A159">
+    <owl:hasValue rdf:resource="http://geo.linkeddata.es/kos/transports/estadoDeUso"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A144">
+    <rdf:rest rdf:nodeID="A160"/>
+    <rdf:first rdf:resource="http://geo.linkeddata.es/ontology/Autopista"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/codigoDeEstacion">
+    <rdfs:range rdf:nodeID="A164"/>
+    <rdfs:domain rdf:resource="http://geo.linkeddata.es/ontology/EnclaveFerroviario"/>
+    <rdfs:comment xml:lang="es">Código de la estación(según ADIF)</rdfs:comment>
+    <rdfs:label xml:lang="es">codigo de estacion</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A165">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A162"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/FerrocarrilDeAltaVelocidad">
+    <rdfs:comment xml:lang="es">Tramo de vía por la que circula el Tren de alta velocidad de España (AVE).</rdfs:comment>
+    <rdfs:comment xml:lang="es">Anexo A: Catálogo de Objetos Geográficos de BTN100.</rdfs:comment>
+    <rdfs:subClassOf rdf:nodeID="A156"/>
+    <rdfs:label xml:lang="es">Tramo de vía de alta velocidad</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/kos/transports/anchoDeVia/mixto">
+    <skos:inScheme rdf:resource="http://geo.linkeddata.es/kos/transports/anchoDeVia"/>
+    <skos:prefLabel xml:lang="es">ancho de vía mixto</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A166">
+    <owl:intersectionOf rdf:nodeID="A167"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/kos/transports/tipoDeTrafico">
+    <skos:prefLabel xml:lang="es">tipo de tráfico</skos:prefLabel>
+    <rdfs:comment xml:lang="es">kos que indica el tipo de tráfico que lleva un ferrocarril. Pueden ser
+* http://geo.linkeddata.es/kos/transporters/tipoDeTrafico/viajeros
+* http://geo.linkeddata.es/kos/transporters/tipoDeTrafico/mercancias
+* http://geo.linkeddata.es/kos/transporters/tipoDeTrafico/mixto</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A138">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="http://geo.linkeddata.es/ontology/Helipuerto"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A168">
+    <rdf:rest rdf:nodeID="A158"/>
+    <rdf:first rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A169">
+    <rdf:rest rdf:nodeID="A113"/>
+    <rdf:first rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/kos/transports/situacionDeVia/elevado">
+    <skos:inScheme rdf:resource="http://geo.linkeddata.es/kos/transports/situacionDeVia"/>
+    <rdfs:comment xml:lang="es">vía elevada</rdfs:comment>
+    <skos:prefLabel xml:lang="es">elevado</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/kos/transports/categoriaVial/tercerOrden">
+    <skos:inScheme rdf:resource="http://geo.linkeddata.es/kos/transports/categoriaVial"/>
+    <skos:prefLabel xml:lang="es">categoría vial de tercer orden</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A170">
+    <owl:hasValue rdf:resource="http://geo.linkeddata.es/kos/transports/estadoDeUso/enUso"/>
+    <owl:onProperty rdf:resource="http://geo.linkeddata.es/ontology/estadoDeUso"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/competenciaDeVia">
+    <rdfs:range rdf:nodeID="A171"/>
+    <rdfs:domain rdf:nodeID="A78"/>
+    <rdfs:comment xml:lang="es">competencia de la explotación de una vía</rdfs:comment>
+    <rdfs:label xml:lang="es">competencia de vía</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A172">
+    <rdf:rest rdf:nodeID="A173"/>
+    <rdf:first rdf:resource="http://geo.linkeddata.es/ontology/Ferrocarril"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A171">
+    <owl:intersectionOf rdf:nodeID="A174"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/kos/transports/electrificacion">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+    <rdfs:range rdf:nodeID="A103"/>
+    <rdfs:domain rdf:resource="http://geo.linkeddata.es/ontology/FerrocarrilConvencional"/>
+    <skos:prefLabel xml:lang="es">electrificación</skos:prefLabel>
+    <rdfs:comment xml:lang="es">Esquema de conceptos para definir el tipo de electrificación de una vía
+puede tomar los valores:
+* http://geo.linkeddata.es/kos/transports/electrificacion/electrificado
+* http://geo.linkeddata.es/kos/transports/electrificacion/noElectrificado</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/kos/transports/numeroDeVias">
+    <skos:prefLabel xml:lang="es">número de vías</skos:prefLabel>
+    <rdfs:comment xml:lang="es">Esquema de conceptos para definir el número de vias
+puede tomar los valores:
+* http://geo.linkeddata.es/kos/transports/numeroDeVias/doble
+* http://geo.linkeddata.es/kos/transports/numeroDeVias/unica</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A175">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A176"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/EstacionDeFerrocarril">
+    <rdfs:comment xml:lang="es">Conjunto de instalaciones de vías y agujas desde las que se coordina el tráfico ferroviario, tanto de trenes de viajeros como de mercancías y maniobras, y da servicio comercial de todo tipo a los usuarios del ferrocarril.</rdfs:comment>
+    <terms:source xml:lang="es">Administrador de Infraestructuras Ferroviarias (ADIF)</terms:source>
+    <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/EnclaveFerroviario"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A167">
+    <rdf:rest rdf:nodeID="A177"/>
+    <rdf:first rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/kos/transports/competenciaAeroportuaria/aena">
+    <skos:inScheme rdf:resource="http://geo.linkeddata.es/kos/transports/competenciaAeroportuaria"/>
+    <rdfs:comment xml:lang="es">competencia aeroportuaria de explotación por aena</rdfs:comment>
+    <skos:prefLabel xml:lang="es">aena</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A177">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A178"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A163">
+    <owl:intersectionOf rdf:nodeID="A169"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/kos/transports/situacionDeVia/subterraneo">
+    <skos:inScheme rdf:resource="http://geo.linkeddata.es/kos/transports/situacionDeVia"/>
+    <rdfs:comment xml:lang="es">vía subterránea</rdfs:comment>
+    <skos:prefLabel xml:lang="es">subterráneo</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A73">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A170"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A161">
+    <rdf:rest rdf:nodeID="A172"/>
+    <rdf:first rdf:resource="http://geo.linkeddata.es/ontology/Carretera"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/PasoANivel">
+    <rdfs:comment xml:lang="es">Cruce entre carretera y ferrocarril, que se produce al mismo nivel.</rdfs:comment>
+    <terms:source xml:lang="es">Anexo A: Catálogo de Objetos Geográficos de BTN100.</terms:source>
+    <rdfs:label xml:lang="es">Paso a nivel</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/kos/transports/competenciaPortuaria/estatal">
+    <skos:inScheme rdf:resource="http://geo.linkeddata.es/kos/transports/competenciaPortuaria"/>
+    <skos:prefLabel xml:lang="es">competencia portuaria estatal</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A174">
+    <rdf:rest rdf:nodeID="A165"/>
+    <rdf:first rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/tipoDeItinerario">
+    <rdfs:range rdf:nodeID="A148"/>
+    <rdfs:domain rdf:nodeID="A179"/>
+    <rdfs:comment xml:lang="es">indica si un tramo pertenece a la Red de Carreteras Europeas</rdfs:comment>
+    <rdfs:label xml:lang="es">tipo de itinerario</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A127">
+    <owl:intersectionOf rdf:nodeID="A75"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A178">
+    <owl:hasValue rdf:resource="http://geo.linkeddata.es/kos/transports/numeroDeVias"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Autopista">
+    <terms:source xml:lang="es">Anexo A: Catálogo de Objetos Geográficos de BTN100.</terms:source>
+    <rdfs:subClassOf rdf:nodeID="A48"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/kos/transports/tipoDeItinerario">
+    <skos:prefLabel xml:lang="es">tipo de itinerario</skos:prefLabel>
+    <rdfs:comment xml:lang="es">Esquema de conceptos para definir si el tramo de una vía pertenece a la red de carreteras europeas
+puede tomar los valores:
+
+* http://geo.linkeddata.es/kos/transports/tipoDeItinerario/itinerarioEuropeo
+* http://geo.linkeddata.es/kos/transports/tipoDeItinerario/itinerarioNoEuropeo</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A180">
+    <rdf:rest rdf:nodeID="A181"/>
+    <rdf:first rdf:resource="http://geo.linkeddata.es/ontology/Enlace"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/numeroDeVias">
+    <rdfs:range rdf:nodeID="A166"/>
+    <rdfs:domain rdf:resource="http://geo.linkeddata.es/ontology/FerrocarrilConvencional"/>
+    <rdfs:label xml:lang="es">número de vías</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A182">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A183"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A184">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A185"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A29">
+    <rdf:rest rdf:nodeID="A186"/>
+    <rdf:first rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Apartadero">
+    <rdfs:comment xml:lang="es">Vía corta derivada de la principal, que sirve para apartar en ella trenes, coches, vagones, tranvías y/o locomotoras.</rdfs:comment>
+    <rdfs:comment xml:lang="es">Son estaciones de poco tráfico de viajeros y cuyo objetivo fundamental es la regulación del tráfico ferroviario, posibilitando la realización de cruces de trenes, adelantamientos, etc.</rdfs:comment>
+    <terms:source xml:lang="es">Administrador de Infraestructuras Ferroviarias (ADIF)</terms:source>
+    <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/EnclaveFerroviario"/>
+    <rdfs:label xml:lang="es">Apartadero</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A119">
+    <owl:unionOf rdf:nodeID="A187"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A106">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="http://geo.linkeddata.es/ontology/FerrocarrilConvencional"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A188">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A12"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A189">
+    <owl:hasValue rdf:resource="http://geo.linkeddata.es/kos/transports/competenciaDeVia/provincial"/>
+    <owl:onProperty rdf:resource="http://geo.linkeddata.es/ontology/competenciaDeVia"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A77">
+    <owl:unionOf rdf:nodeID="A107"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/kos/transports/competenciaDeVia/local">
+    <skos:inScheme rdf:resource="http://geo.linkeddata.es/kos/transports/competenciaDeVia"/>
+    <rdfs:comment xml:lang="es">indica que la via es competencia del municipio</rdfs:comment>
+    <skos:prefLabel xml:lang="es">competencia de vía local</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Telesilla">
+    <terms:source xml:lang="es">Diccionario de la Real Academia Española.</terms:source>
+    <rdfs:comment xml:lang="es">Asiento suspendido de un cable de tracción, para el transporte de personas a la cumbre de una montaña o a un lugar elevado.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/TransporteSuspendido"/>
+    <rdfs:label xml:lang="es">Telesilla</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/kos/transports/tipoDeCalzada/doble">
+    <skos:inScheme rdf:resource="http://geo.linkeddata.es/kos/transports/tipoDeCalzada"/>
+    <skos:prefLabel xml:lang="es">calzada doble</skos:prefLabel>
+    <rdfs:comment xml:lang="es">Dos calzadas separadas y paralelas, con sentidos distintos. </rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A190">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="http://geo.linkeddata.es/kos/transports/competenciaAeroportuaria/privada"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A191">
+    <owl:unionOf rdf:nodeID="A192"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A193">
+    <owl:distinctMembers rdf:nodeID="A99"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A194">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A195"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A181">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="http://geo.linkeddata.es/ontology/Ferrocarril"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A196">
+    <rdf:rest rdf:nodeID="A175"/>
+    <rdf:first rdf:nodeID="A197"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A164">
+    <owl:withRestrictions rdf:nodeID="A188"/>
+    <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A198">
+    <owl:hasValue rdf:resource="http://geo.linkeddata.es/kos/transports/anchoDeVia"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/competenciaPortuaria">
+    <rdfs:range rdf:nodeID="A199"/>
+    <rdfs:domain rdf:resource="http://geo.linkeddata.es/ontology/Puerto"/>
+    <rdfs:comment xml:lang="es">Competencia de la explotación portuaria</rdfs:comment>
+    <rdfs:label xml:lang="es">competencia portuaria</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A200">
+    <owl:unionOf rdf:nodeID="A196"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/iataCode">
+    <rdfs:range rdf:nodeID="A104"/>
+    <rdfs:domain rdf:nodeID="A191"/>
+    <rdfs:comment xml:lang="es">El código de aeropuertos de IATA está formado por grupos de tres letras, que designan a cada aeropuerto del mundo, asignadas por la Asociación Internacional de Transporte Aéreo (International Air Transport Association, IATA).</rdfs:comment>
+    <rdfs:label xml:lang="es">código iata</rdfs:label>
+    <rdfs:label xml:lang="en">iata code</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A146">
+    <owl:intersectionOf rdf:nodeID="A168"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A187">
+    <rdf:rest rdf:nodeID="A143"/>
+    <rdf:first rdf:resource="http://geo.linkeddata.es/ontology/Aerodromo"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A114">
+    <owl:hasValue rdf:resource="http://geo.linkeddata.es/kos/transports/acceso"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A45">
+    <owl:intersectionOf rdf:nodeID="A201"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A201">
+    <rdf:rest rdf:nodeID="A194"/>
+    <rdf:first rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/kos/transports/rutaTenT/rutaNoTranseuropea">
+    <skos:inScheme rdf:resource="http://geo.linkeddata.es/kos/transports/rutaTenT"/>
+    <skos:prefLabel xml:lang="es">ruta no transeuropea</skos:prefLabel>
+    <rdfs:comment xml:lang="es">El tramo forma parte de la Red Transeuropea de Transporte</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A1">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A189"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A100">
+    <rdf:rest rdf:nodeID="A132"/>
+    <rdf:first rdf:resource="http://geo.linkeddata.es/ontology/Autovia"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A202">
+    <rdf:rest rdf:nodeID="A130"/>
+    <rdf:first rdf:resource="http://geo.linkeddata.es/ontology/Autovia"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Calle">
+    <rdfs:comment xml:lang="es">Vía que se encuentra localizada dentro de un núcleo de población o Diseminado superficial, y que ayuda a identificar la estructura de manzanas de dicho núcleo/diseminado.</rdfs:comment>
+    <terms:source xml:lang="es">Anexo A: Catálogo de Objetos Geográficos de BTN100.</terms:source>
+    <rdfs:label xml:lang="es">Calle</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A152">
+    <rdf:rest rdf:nodeID="A190"/>
+    <rdf:first rdf:resource="http://geo.linkeddata.es/kos/transports/competenciaAeroportuaria/militar"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A203">
+    <rdf:rest rdf:nodeID="A136"/>
+    <rdf:first rdf:resource="http://geo.linkeddata.es/ontology/Autovia"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A112">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="http://geo.linkeddata.es/kos/transports/estadoDeUso/enUso"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A192">
+    <rdf:rest rdf:nodeID="A59"/>
+    <rdf:first rdf:resource="http://geo.linkeddata.es/ontology/Aerodromo"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A195">
+    <owl:hasValue rdf:resource="http://geo.linkeddata.es/kos/transports/tipoDeTrafico"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/kos/transports/estadoDeUso/abandonado">
+    <skos:inScheme rdf:resource="http://geo.linkeddata.es/kos/transports/estadoDeUso"/>
+    <skos:prefLabel xml:lang="es">abandonado</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A176">
+    <owl:hasValue rdf:resource="http://geo.linkeddata.es/kos/transports/estadoDeUso/enUso"/>
+    <owl:onProperty rdf:resource="http://geo.linkeddata.es/ontology/estadoDeUso"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A133">
+    <owl:intersectionOf rdf:nodeID="A84"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A173">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="http://geo.linkeddata.es/ontology/Helipuerto"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A204">
+    <rdf:rest rdf:nodeID="A122"/>
+    <rdf:first rdf:resource="http://geo.linkeddata.es/ontology/Autovia"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A111">
+    <rdf:rest rdf:nodeID="A184"/>
+    <rdf:first rdf:nodeID="A134"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A205">
+    <rdf:rest rdf:nodeID="A182"/>
+    <rdf:first rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/anchoDeVia">
+    <rdfs:range rdf:nodeID="A28"/>
+    <rdfs:domain rdf:resource="http://geo.linkeddata.es/ontology/FerrocarrilConvencional"/>
+    <rdfs:label xml:lang="es">ancho de vía</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A206">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="http://geo.linkeddata.es/ontology/Helipuerto"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A186">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A198"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A62">
+    <rdf:rest rdf:nodeID="A207"/>
+    <rdf:first rdf:resource="http://geo.linkeddata.es/ontology/Autopista"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/ItinerarionDeViaVerde">
+    <rdfs:comment xml:lang="es">Itinerario catalogado como Vía Verde</rdfs:comment>
+    <terms:source xml:lang="es">Anexo A: Catálogo de Objetos Geográficos de BTN100.</terms:source>
+    <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/Itinerario"/>
+    <rdfs:label xml:lang="es">ItinerarionDeViaVerde</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A58">
+    <rdf:rest rdf:nodeID="A128"/>
+    <rdf:first rdf:nodeID="A208"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A209">
+    <owl:unionOf rdf:nodeID="A65"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/competenciaAeroportuaria">
+    <rdfs:range rdf:nodeID="A89"/>
+    <rdfs:domain rdf:nodeID="A32"/>
+    <rdfs:comment xml:lang="es">Competencia de la explotación earoportuaria</rdfs:comment>
+    <rdfs:label xml:lang="es">competencia aeroportuaria</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A210">
+    <rdf:rest rdf:nodeID="A203"/>
+    <rdf:first rdf:resource="http://geo.linkeddata.es/ontology/Autopista"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A211">
+    <rdf:rest rdf:nodeID="A202"/>
+    <rdf:first rdf:resource="http://geo.linkeddata.es/ontology/Autopista"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/kos/transports/numeroDeVias/doble">
+    <owl:sameAs rdf:resource="http://geo.linkeddata.es/kos/transports/numeroDeVias/unica"/>
+    <skos:inScheme rdf:resource="http://geo.linkeddata.es/kos/transports/numeroDeVias"/>
+    <skos:prefLabel xml:lang="es">vía doble</skos:prefLabel>
+    <rdfs:comment xml:lang="es">Cada vía se dedica para la marcha de los trenes en un sentido</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A31">
+    <owl:unionOf rdf:nodeID="A101"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/codigoDeVia">
+    <rdfs:range rdf:nodeID="A41"/>
+    <rdfs:domain rdf:resource="http://geo.linkeddata.es/ontology/Ferrocarril"/>
+    <rdfs:comment>Código de la vía (según ADIF)</rdfs:comment>
+    <rdfs:label xml:lang="es">codigo de vía</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A212">
+    <rdf:rest rdf:nodeID="A204"/>
+    <rdf:first rdf:resource="http://geo.linkeddata.es/ontology/Autopista"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A126">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A200"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A199">
+    <owl:intersectionOf rdf:nodeID="A205"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A183">
+    <owl:hasValue rdf:resource="http://geo.linkeddata.es/kos/transports/competenciaPortuaria"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A185">
+    <owl:hasValue rdf:resource="http://geo.linkeddata.es/kos/transports/tipoDeCalzada/sentidoUnico"/>
+    <owl:onProperty rdf:resource="http://geo.linkeddata.es/ontology/calzada"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A35">
+    <rdf:rest rdf:nodeID="A206"/>
+    <rdf:first rdf:resource="http://geo.linkeddata.es/ontology/Aeropuerto"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A27">
+    <owl:intersectionOf rdf:nodeID="A108"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A207">
+    <rdf:rest rdf:nodeID="A180"/>
+    <rdf:first rdf:resource="http://geo.linkeddata.es/ontology/Carretera"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A145">
+    <owl:unionOf rdf:nodeID="A211"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A49">
+    <rdf:rest rdf:nodeID="A141"/>
+    <rdf:first rdf:nodeID="A209"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A208">
+    <owl:hasValue rdf:resource="http://geo.linkeddata.es/kos/transports/estadoDeUso/enConstruccion"/>
+    <owl:onProperty rdf:resource="http://geo.linkeddata.es/ontology/estadoDeUso"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/kos/transports/categoriaVial/primerOrden">
+    <skos:inScheme rdf:resource="http://geo.linkeddata.es/kos/transports/categoriaVial"/>
+    <skos:prefLabel xml:lang="es">categoría vial de primer orden</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A102">
+    <owl:hasValue rdf:resource="http://geo.linkeddata.es/kos/transports/tipoDeCalzada/convencional"/>
+    <owl:onProperty rdf:resource="http://geo.linkeddata.es/ontology/calzada"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A179">
+    <owl:unionOf rdf:nodeID="A210"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/kos/transports/tipoDeCalzada/convencional">
+    <skos:inScheme rdf:resource="http://geo.linkeddata.es/kos/transports/tipoDeCalzada"/>
+    <rdfs:comment xml:lang="es">Única calzada con doble sentido de circulación.</rdfs:comment>
+    <skos:prefLabel xml:lang="es">calzada convencional</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A26">
+    <owl:unionOf rdf:nodeID="A212"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A197">
+    <owl:hasValue rdf:resource="http://geo.linkeddata.es/kos/transports/estadoDeUso/enConstruccion"/>
+    <owl:onProperty rdf:resource="http://geo.linkeddata.es/ontology/estadoDeUso"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+</rdf:RDF>

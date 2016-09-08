@@ -1,0 +1,46 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "60e5aa6b:1570a534cf5:-7fe8" "base:ZonaAeroportuaria" "base:ZonaVerde" "base:EdificioSingular" "base:Diseminado" "base:ConjuntoHistoricoArtistico" "base:LugarDeInteres" "base:Mina" "base:ZonaFerroviaria" "base:ZonaRecreativa" "base:ZonaMonumental" "base:NucleoPoblacionalSuperficial" "base:VistaPanoramica" "base:ParadorNacional" "base:ZonaPortuaria" "60e5aa6b:1570a534cf5:-7fe2" "base:EdificioReligioso" "base:Cementerio" "base:JardinHistorico" "base:ZonaUniversitaria" "base:NucleoPoblacional" "base:Castillo" "60e5aa6b:1570a534cf5:-7fe5" "base:ExplotacionMinera" "base:Camping" "base:SitioHistorico" "60e5aa6b:1570a534cf5:-7fd9" "base:DiseminadoSuperficial" "base:Gasolinera" "base:Cueva" "base:Universidad" "base:NucleoPoblacionalPuntual" "base:ZonaDeportiva" "base:PatrimonioDelaHumanidad" "60e5aa6b:1570a534cf5:-7fdf" "base:ZonaMilitar" "base:Balneario" "base:AreaDeServicio" "base:ZonaDeUsoCaracteristico" "base:Albergue" "base:InstalacionDeportiva" "60e5aa6b:1570a534cf5:-7feb" "base:Invernadero" "base:DiseminadoPuntual" "base:EstacionInvernal" "base:Cantera" "base:ZonaIndustrial" "base:Hospital" "base:ZonaArqueologica" "skos:OrderedCollection" "skos:Collection" ; /*classes style*/
+	"base:DiseminadoPuntual" -> "base:Diseminado" [ label = "rdfs:subClassOf" ];
+	"base:Gasolinera" -> "base:LugarDeInteres" [ label = "rdfs:subClassOf" ];
+	"base:Hospital" -> "base:LugarDeInteres" [ label = "rdfs:subClassOf" ];
+	"base:Universidad" -> "base:LugarDeInteres" [ label = "rdfs:subClassOf" ];
+	"base:PatrimonioDelaHumanidad" -> "base:LugarDeInteres" [ label = "rdfs:subClassOf" ];
+	"base:ZonaUniversitaria" -> "base:ZonaDeUsoCaracteristico" [ label = "rdfs:subClassOf" ];
+	"base:ZonaDeportiva" -> "base:ZonaDeUsoCaracteristico" [ label = "rdfs:subClassOf" ];
+	"base:ZonaIndustrial" -> "base:ZonaDeUsoCaracteristico" [ label = "rdfs:subClassOf" ];
+	"base:Cueva" -> "base:LugarDeInteres" [ label = "rdfs:subClassOf" ];
+	"base:Camping" -> "60e5aa6b:1570a534cf5:-7fe5" [ label = "rdfs:subClassOf" ];
+	"base:Cantera" -> "base:ExplotacionMinera" [ label = "rdfs:subClassOf" ];
+	"base:ZonaVerde" -> "base:ZonaDeUsoCaracteristico" [ label = "rdfs:subClassOf" ];
+	"base:Balneario" -> "60e5aa6b:1570a534cf5:-7fe8" [ label = "rdfs:subClassOf" ];
+	"base:AreaDeServicio" -> "base:ZonaDeUsoCaracteristico" [ label = "rdfs:subClassOf" ];
+	"base:ZonaRecreativa" -> "base:ZonaDeUsoCaracteristico" [ label = "rdfs:subClassOf" ];
+	"base:JardinHistorico" -> "base:LugarDeInteres" [ label = "rdfs:subClassOf" ];
+	"skos:OrderedCollection" -> "skos:Collection" [ label = "rdfs:subClassOf" ];
+	"base:VistaPanoramica" -> "base:LugarDeInteres" [ label = "rdfs:subClassOf" ];
+	"base:Castillo" -> "base:LugarDeInteres" [ label = "rdfs:subClassOf" ];
+	"base:ParadorNacional" -> "60e5aa6b:1570a534cf5:-7fd9" [ label = "rdfs:subClassOf" ];
+	"base:ZonaArqueologica" -> "base:LugarDeInteres" [ label = "rdfs:subClassOf" ];
+	"base:ZonaFerroviaria" -> "base:ZonaDeUsoCaracteristico" [ label = "rdfs:subClassOf" ];
+	"base:ZonaMonumental" -> "base:ZonaDeUsoCaracteristico" [ label = "rdfs:subClassOf" ];
+	"base:Albergue" -> "60e5aa6b:1570a534cf5:-7feb" [ label = "rdfs:subClassOf" ];
+	"base:Invernadero" -> "base:ZonaDeUsoCaracteristico" [ label = "rdfs:subClassOf" ];
+	"base:SitioHistorico" -> "base:LugarDeInteres" [ label = "rdfs:subClassOf" ];
+	"base:InstalacionDeportiva" -> "60e5aa6b:1570a534cf5:-7fdf" [ label = "rdfs:subClassOf" ];
+	"base:Mina" -> "base:ExplotacionMinera" [ label = "rdfs:subClassOf" ];
+	"base:EdificioReligioso" -> "base:LugarDeInteres" [ label = "rdfs:subClassOf" ];
+	"base:NucleoPoblacionalSuperficial" -> "base:NucleoPoblacional" [ label = "rdfs:subClassOf" ];
+	"base:DiseminadoSuperficial" -> "base:Diseminado" [ label = "rdfs:subClassOf" ];
+	"base:EdificioSingular" -> "base:LugarDeInteres" [ label = "rdfs:subClassOf" ];
+	"base:ZonaMilitar" -> "base:ZonaDeUsoCaracteristico" [ label = "rdfs:subClassOf" ];
+	"base:ConjuntoHistoricoArtistico" -> "base:LugarDeInteres" [ label = "rdfs:subClassOf" ];
+	"base:EstacionInvernal" -> "60e5aa6b:1570a534cf5:-7fe2" [ label = "rdfs:subClassOf" ];
+	"base:Cementerio" -> "base:ZonaDeUsoCaracteristico" [ label = "rdfs:subClassOf" ];
+	"base:Cementerio" -> "base:LugarDeInteres" [ label = "rdfs:subClassOf" ];
+	"base:ZonaPortuaria" -> "base:ZonaDeUsoCaracteristico" [ label = "rdfs:subClassOf" ];
+	"base:NucleoPoblacionalPuntual" -> "base:NucleoPoblacional" [ label = "rdfs:subClassOf" ];
+	"base:ZonaAeroportuaria" -> "base:ZonaDeUsoCaracteristico" [ label = "rdfs:subClassOf" ];
+
+}

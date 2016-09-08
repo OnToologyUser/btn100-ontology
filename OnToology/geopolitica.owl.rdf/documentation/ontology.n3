@@ -1,0 +1,31 @@
+<http://geo.linkeddata.es/ontology/geopolitica.owl> <http://www.w3.org/2002/07/owl#imports> <http://geo.linkeddata.es/ontology/top.owl> .
+<http://geo.linkeddata.es/ontology/geopolitica.owl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://geo.linkeddata.es/ontology/Municipio> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://aims.fao.org/aos/geopolitical.owl#territory> .
+<http://geo.linkeddata.es/ontology/Municipio> <http://www.w3.org/2000/01/rdf-schema#label> "Municipio"@es .
+<http://geo.linkeddata.es/ontology/Municipio> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://geo.linkeddata.es/ontology/ComunidadAutonoma> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://aims.fao.org/aos/geopolitical.owl#territory> .
+<http://geo.linkeddata.es/ontology/ComunidadAutonoma> <http://www.w3.org/2000/01/rdf-schema#label> "Comunidad Aut\u00F3noma"@es .
+<http://geo.linkeddata.es/ontology/ComunidadAutonoma> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://geo.linkeddata.es/ontology/Provincia> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://aims.fao.org/aos/geopolitical.owl#territory> .
+<http://geo.linkeddata.es/ontology/Provincia> <http://www.w3.org/2000/01/rdf-schema#label> "Provincia"@es .
+<http://geo.linkeddata.es/ontology/Provincia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://geo.linkeddata.es/ontology/Pais> <http://www.w3.org/2000/01/rdf-schema#comment> "Pa\u00EDs"@es .
+<http://geo.linkeddata.es/ontology/Pais> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://aims.fao.org/aos/geopolitical.owl#territory> .
+<http://geo.linkeddata.es/ontology/Pais> <http://www.w3.org/2000/01/rdf-schema#label> "Pa\u00EDs"@es .
+<http://geo.linkeddata.es/ontology/Pais> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://geo.linkeddata.es/ontology/tieneCapital> <http://www.w3.org/2000/01/rdf-schema#range> <http://geo.linkeddata.es/ontology/Municipio> .
+<http://geo.linkeddata.es/ontology/tieneCapital> <http://www.w3.org/2000/01/rdf-schema#domain> <http://aims.fao.org/aos/geopolitical.owl#territory> .
+<http://geo.linkeddata.es/ontology/tieneCapital> <http://www.w3.org/2000/01/rdf-schema#comment> "tiene Capital"@es .
+<http://geo.linkeddata.es/ontology/tieneCapital> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://geo.linkeddata.es/ontology/Capital> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:A279fae13X3aX1570a3a32e7X3aXX2dX7ffc .
+<http://geo.linkeddata.es/ontology/Capital> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://aims.fao.org/aos/geopolitical.owl#territory> .
+<http://geo.linkeddata.es/ontology/Capital> <http://www.w3.org/2000/01/rdf-schema#label> "Capital"@es .
+<http://geo.linkeddata.es/ontology/Capital> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://geo.linkeddata.es/ontology/esCapitalDe> <http://www.w3.org/2000/01/rdf-schema#domain> <http://geo.linkeddata.es/ontology/Municipio> .
+<http://geo.linkeddata.es/ontology/esCapitalDe> <http://www.w3.org/2000/01/rdf-schema#range> <http://aims.fao.org/aos/geopolitical.owl#territory> .
+<http://geo.linkeddata.es/ontology/esCapitalDe> <http://www.w3.org/2000/01/rdf-schema#comment> "es Capital de"@es .
+<http://geo.linkeddata.es/ontology/esCapitalDe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://aims.fao.org/aos/geopolitical.owl#territory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:A279fae13X3aX1570a3a32e7X3aXX2dX7ffc <http://www.w3.org/2002/07/owl#someValuesFrom> <http://aims.fao.org/aos/geopolitical.owl#territory> .
+_:A279fae13X3aX1570a3a32e7X3aXX2dX7ffc <http://www.w3.org/2002/07/owl#onProperty> <http://geo.linkeddata.es/ontology/esCapitalDe> .
+_:A279fae13X3aX1570a3a32e7X3aXX2dX7ffc <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .

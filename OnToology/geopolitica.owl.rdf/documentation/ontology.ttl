@@ -1,0 +1,58 @@
+@prefix :        <http://geo.linkeddata.es/ontology/geopolitica.owl#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl2xml:  <http://www.w3.org/2006/12/owl2-xml#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix geopolitical:  <http://aims.fao.org/aos/geopolitical.owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ontology:  <http://geo.linkeddata.es/ontology/> .
+
+ontology:tieneCapital
+      a       owl:ObjectProperty ;
+      rdfs:comment "tiene Capital"@es ;
+      rdfs:domain geopolitical:territory ;
+      rdfs:range ontology:Municipio .
+
+ontology:Pais
+      a       owl:Class ;
+      rdfs:comment "País"@es ;
+      rdfs:label "País"@es ;
+      rdfs:subClassOf geopolitical:territory .
+
+<http://geo.linkeddata.es/ontology/geopolitica.owl>
+      a       owl:Ontology ;
+      owl:imports <http://geo.linkeddata.es/ontology/top.owl> .
+
+ontology:Capital
+      a       owl:Class ;
+      rdfs:label "Capital"@es ;
+      rdfs:subClassOf geopolitical:territory ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty ontology:esCapitalDe ;
+                owl:someValuesFrom geopolitical:territory
+              ] .
+
+ontology:Provincia
+      a       owl:Class ;
+      rdfs:label "Provincia"@es ;
+      rdfs:subClassOf geopolitical:territory .
+
+geopolitical:territory
+      a       owl:Class .
+
+ontology:esCapitalDe
+      a       owl:ObjectProperty ;
+      rdfs:comment "es Capital de"@es ;
+      rdfs:domain ontology:Municipio ;
+      rdfs:range geopolitical:territory .
+
+ontology:ComunidadAutonoma
+      a       owl:Class ;
+      rdfs:label "Comunidad Autónoma"@es ;
+      rdfs:subClassOf geopolitical:territory .
+
+ontology:Municipio
+      a       owl:Class ;
+      rdfs:label "Municipio"@es ;
+      rdfs:subClassOf geopolitical:territory .

@@ -1,0 +1,148 @@
+_:A4336d49fX3aX15709f89691X3aXX2dX7ff1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:A4336d49fX3aX15709f89691X3aXX2dX7ff1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://geo.linkeddata.es/kos/supply-net/situacion/superficial> .
+<http://geo.linkeddata.es/kos/supply-net/situacion/subterraneo> <http://www.w3.org/2004/02/skos/core#inScheme> <http://geo.linkeddata.es/kos/supply-net/situacion> .
+<http://geo.linkeddata.es/kos/supply-net/situacion/subterraneo> <http://www.w3.org/2004/02/skos/core#prefLabel> "subterr\u00E1neo"@es .
+<http://geo.linkeddata.es/kos/supply-net/situacion/subterraneo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://geo.linkeddata.es/kos/supply-net/situacion/subterraneo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://geo.linkeddata.es/ontology/SubestacionElectrica> <http://www.w3.org/2000/01/rdf-schema#comment> "Conjunto de instalaciones utilizadas para la reducci\u00F3n de la tensi\u00F3n o el voltaje de las l\u00EDneas el\u00E9ctricas."@es .
+<http://geo.linkeddata.es/ontology/SubestacionElectrica> <http://www.w3.org/2000/01/rdf-schema#label> "Subestaci\u00F3n el\u00E9ctrica"@es .
+<http://geo.linkeddata.es/ontology/SubestacionElectrica> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://geo.linkeddata.es/kos/supply-net/situacion/elevado> <http://www.w3.org/2004/02/skos/core#inScheme> <http://geo.linkeddata.es/kos/supply-net/situacion> .
+<http://geo.linkeddata.es/kos/supply-net/situacion/elevado> <http://www.w3.org/2004/02/skos/core#prefLabel> "elevado"@es .
+<http://geo.linkeddata.es/kos/supply-net/situacion/elevado> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://geo.linkeddata.es/kos/supply-net/situacion/elevado> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://geo.linkeddata.es/ontology/CentralTerminca> <http://www.w3.org/2000/01/rdf-schema#comment> " instalaci\u00F3n empleada en la generaci\u00F3n de energ\u00EDa el\u00E9ctrica a partir de la energ\u00EDa liberada en forma de calor, normalmente mediante la combusti\u00F3n de combustibles f\u00F3siles como petr\u00F3leo, gas natural o carb\u00F3n. Este calor es empleado por un ciclo termodin\u00E1mico convencional para mover un alternador y producir energ\u00EDa el\u00E9ctrica."@es .
+<http://geo.linkeddata.es/ontology/CentralTerminca> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://geo.linkeddata.es/ontology/CentralElectrica> .
+<http://geo.linkeddata.es/ontology/CentralTerminca> <http://www.w3.org/2000/01/rdf-schema#label> "Central t\u00E9rminca"@es .
+<http://geo.linkeddata.es/ontology/CentralTerminca> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://geo.linkeddata.es/ontology/CentralHidraulica> <http://www.w3.org/2000/01/rdf-schema#comment> "Instalaci\u00F3n empleada en la generaci\u00F3n de energ\u00EDa el\u00E9ctrica como resultado de la energ\u00EDa potencial gravitatoria que posee la masa de agua de un cauce natural en virtud de un desnivel, tambi\u00E9n conocido como \u00ABsalto geod\u00E9sico\u00BB"@es .
+<http://geo.linkeddata.es/ontology/CentralHidraulica> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://geo.linkeddata.es/ontology/CentralElectrica> .
+<http://geo.linkeddata.es/ontology/CentralHidraulica> <http://www.w3.org/2000/01/rdf-schema#label> "Central hidr\u00E1ulica"@es .
+<http://geo.linkeddata.es/ontology/CentralHidraulica> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://geo.linkeddata.es/ontology/EstacionDeTelevision> <http://www.w3.org/2000/01/rdf-schema#comment> "Centro que consta de todas las instalaciones necesarias para transmitir y recibir se\u00F1ales que aseguren un servicio de televisi\u00F3n."@es .
+<http://geo.linkeddata.es/ontology/EstacionDeTelevision> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://geo.linkeddata.es/ontology/EstacionDeTelecomunicacion> .
+<http://geo.linkeddata.es/ontology/EstacionDeTelevision> <http://www.w3.org/2000/01/rdf-schema#label> "Estaci\u00F3n de televisi\u00F3n"@es .
+<http://geo.linkeddata.es/ontology/EstacionDeTelevision> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:A4336d49fX3aX15709f89691X3aXX2dX7ff6 <http://www.w3.org/2002/07/owl#hasValue> <http://geo.linkeddata.es/kos/supply-net/situacion> .
+_:A4336d49fX3aX15709f89691X3aXX2dX7ff6 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:A4336d49fX3aX15709f89691X3aXX2dX7ff6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://geo.linkeddata.es/ontology/EstacionDeRadio> <http://www.w3.org/2000/01/rdf-schema#comment> "Centro que consta de todas las instalaciones necesarias para transmitir y recibir se\u00F1ales que aseguren un servicio de radio."@es .
+<http://geo.linkeddata.es/ontology/EstacionDeRadio> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://geo.linkeddata.es/ontology/EstacionDeTelecomunicacion> .
+<http://geo.linkeddata.es/ontology/EstacionDeRadio> <http://www.w3.org/2000/01/rdf-schema#label> "Estaci\u00F3n de radio"@es .
+<http://geo.linkeddata.es/ontology/EstacionDeRadio> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/dc/terms/source> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://geo.linkeddata.es/ontology/EstacionTelefonica> <http://www.w3.org/2000/01/rdf-schema#comment> "Centro que consta de todas las instalaciones necesarias para transmitir y recibir se\u00F1ales que aseguren servicios telef\u00F3nico."@es .
+<http://geo.linkeddata.es/ontology/EstacionTelefonica> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://geo.linkeddata.es/ontology/EstacionDeTelecomunicacion> .
+<http://geo.linkeddata.es/ontology/EstacionTelefonica> <http://www.w3.org/2000/01/rdf-schema#label> "Estaci\u00F3n telef\u00F3nica"@es .
+<http://geo.linkeddata.es/ontology/EstacionTelefonica> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://geo.linkeddata.es/kos/supply-net/situacion/superficial> <http://www.w3.org/2004/02/skos/core#inScheme> <http://geo.linkeddata.es/kos/supply-net/situacion> .
+<http://geo.linkeddata.es/kos/supply-net/situacion/superficial> <http://www.w3.org/2004/02/skos/core#prefLabel> "superficial"@es .
+<http://geo.linkeddata.es/kos/supply-net/situacion/superficial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://geo.linkeddata.es/kos/supply-net/situacion/superficial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://geo.linkeddata.es/ontology/LineaElectricaDeBajaTension> <http://www.w3.org/2000/01/rdf-schema#comment> " se considera instalaci\u00F3n de baja tensi\u00F3n el\u00E9ctrica a aquella que distribuya o genere energ\u00EDa el\u00E9ctrica para consumo propio y a las receptoras en los siguientes l\u00EDmites de tensiones nominales:\n\n    Tensi\u00F3n alterna: igual o inferior a 1000 voltios.\n    Tensi\u00F3n continua: igual o inferior a 1500 voltios.\n"@es .
+<http://geo.linkeddata.es/ontology/LineaElectricaDeBajaTension> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://geo.linkeddata.es/ontology/LineaElectrica> .
+<http://geo.linkeddata.es/ontology/LineaElectricaDeBajaTension> <http://www.w3.org/2000/01/rdf-schema#label> "Linea el\u00E9ctrica de baja tensi\u00F3n"@es .
+<http://geo.linkeddata.es/ontology/LineaElectricaDeBajaTension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:A4336d49fX3aX15709f89691X3aXX2dX7ffc <http://www.w3.org/2002/07/owl#intersectionOf> _:A4336d49fX3aX15709f89691X3aXX2dX7ffb .
+_:A4336d49fX3aX15709f89691X3aXX2dX7ffc <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://geo.linkeddata.es/ontology/situacion> <http://www.w3.org/2000/01/rdf-schema#range> _:A4336d49fX3aX15709f89691X3aXX2dX7ff8 .
+<http://geo.linkeddata.es/ontology/situacion> <http://www.w3.org/2000/01/rdf-schema#domain> <http://geo.linkeddata.es/ontology/ConduccionDeCombustible> .
+<http://geo.linkeddata.es/ontology/situacion> <http://www.w3.org/2000/01/rdf-schema#comment> "indica la posici\u00F3n del tramo sobre la superficie"@es .
+<http://geo.linkeddata.es/ontology/situacion> <http://www.w3.org/2000/01/rdf-schema#label> "situaci\u00F3n"@es .
+<http://geo.linkeddata.es/ontology/situacion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:A4336d49fX3aX15709f89691X3aXX2dX7ff5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:A4336d49fX3aX15709f89691X3aXX2dX7ff5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:A4336d49fX3aX15709f89691X3aXX2dX7ff6 .
+<http://geo.linkeddata.es/ontology/DepositoDeCombustible> <http://www.w3.org/2000/01/rdf-schema#comment> "Contenedor seguro destinado al almacenamiento de l\u00EDquidos o gases inflamables para su posterior distribuci\u00F3n en algunos casos por medio de oleoductos o gaseoductos."@es .
+<http://geo.linkeddata.es/ontology/DepositoDeCombustible> <http://purl.org/dc/terms/source> "Anexo A: Cat\u00E1logo de Objetos Geogr\u00E1ficos de BTN100."@es .
+<http://geo.linkeddata.es/ontology/DepositoDeCombustible> <http://www.w3.org/2000/01/rdf-schema#label> "Dep\u00F3sito de combustible"@es .
+<http://geo.linkeddata.es/ontology/DepositoDeCombustible> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://geo.linkeddata.es/ontology/Oleoducto> <http://www.w3.org/2000/01/rdf-schema#comment> "Tuber\u00EDa provista de bombas y otros aparatos para conducir el petr\u00F3leo a larga distancia."@es .
+<http://geo.linkeddata.es/ontology/Oleoducto> <http://purl.org/dc/terms/source> "Diccionario de la Real Academia Espannola"@es .
+<http://geo.linkeddata.es/ontology/Oleoducto> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://geo.linkeddata.es/ontology/ConduccionDeCombustible> .
+<http://geo.linkeddata.es/ontology/Oleoducto> <http://www.w3.org/2000/01/rdf-schema#label> "Oleoducto"@es .
+<http://geo.linkeddata.es/ontology/Oleoducto> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://geo.linkeddata.es/kos/supply-net/tipoDeComponente/emisor> <http://www.w3.org/2004/02/skos/core#inScheme> <http://geo.linkeddata.es/kos/supply-net/tipoDeComponente> .
+<http://geo.linkeddata.es/kos/supply-net/tipoDeComponente/emisor> <http://www.w3.org/2004/02/skos/core#prefLabel> "emisor"@es .
+<http://geo.linkeddata.es/kos/supply-net/tipoDeComponente/emisor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://geo.linkeddata.es/kos/supply-net/tipoDeComponente/emisor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://geo.linkeddata.es/ontology/EstacionDeTelecomunicacion> <http://www.w3.org/2000/01/rdf-schema#comment> "Centro que consta de todas las instalaciones necesarias para transmitir y recibir se\u00F1ales que aseguren un servicio de radiotelecomunicaci\u00F3n determinado."@es .
+<http://geo.linkeddata.es/ontology/EstacionDeTelecomunicacion> <http://www.w3.org/2000/01/rdf-schema#label> "Estaci\u00F3n de telecomunicaci\u00F3n"@es .
+<http://geo.linkeddata.es/ontology/EstacionDeTelecomunicacion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:A4336d49fX3aX15709f89691X3aXX2dX7ffb <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:A4336d49fX3aX15709f89691X3aXX2dX7ff9 .
+_:A4336d49fX3aX15709f89691X3aXX2dX7ffb <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:A4336d49fX3aX15709f89691X3aXX2dX7ff4 <http://www.w3.org/2002/07/owl#distinctMembers> _:A4336d49fX3aX15709f89691X3aXX2dX7ff3 .
+_:A4336d49fX3aX15709f89691X3aXX2dX7ff4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDifferent> .
+<http://geo.linkeddata.es/ontology/CentralSolar> <http://www.w3.org/2000/01/rdf-schema#comment> "Instalaci\u00F3n industrial en la que, a partir del calentamiento de un fluido mediante radiaci\u00F3n solar y su uso en un ciclo termodin\u00E1mico convencional, se produce la potencia necesaria para mover un alternador para generaci\u00F3n de energ\u00EDa el\u00E9ctrica "@es .
+<http://geo.linkeddata.es/ontology/CentralSolar> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://geo.linkeddata.es/ontology/CentralElectrica> .
+<http://geo.linkeddata.es/ontology/CentralSolar> <http://www.w3.org/2000/01/rdf-schema#label> "Central solar"@es .
+<http://geo.linkeddata.es/ontology/CentralSolar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://geo.linkeddata.es/ontology/componenteDeTelecomunicacion> <http://www.w3.org/2000/01/rdf-schema#range> _:A4336d49fX3aX15709f89691X3aXX2dX7ffc .
+<http://geo.linkeddata.es/ontology/componenteDeTelecomunicacion> <http://www.w3.org/2000/01/rdf-schema#domain> <http://geo.linkeddata.es/ontology/EstacionDeTelecomunicacion> .
+<http://geo.linkeddata.es/ontology/componenteDeTelecomunicacion> <http://www.w3.org/2000/01/rdf-schema#label> "componente de telecomunicaci\u00F3n"@es .
+<http://geo.linkeddata.es/ontology/componenteDeTelecomunicacion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:A4336d49fX3aX15709f89691X3aXX2dX7ffa <http://www.w3.org/2002/07/owl#hasValue> <http://geo.linkeddata.es/kos/supply-net/tipoDeComponente> .
+_:A4336d49fX3aX15709f89691X3aXX2dX7ffa <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:A4336d49fX3aX15709f89691X3aXX2dX7ffa <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://geo.linkeddata.es/ontology/CentralNuclear> <http://www.w3.org/2000/01/rdf-schema#comment> "instalaci\u00F3n industrial empleada para la generaci\u00F3n de energ\u00EDa el\u00E9ctrica a partir de energ\u00EDa nuclear. "@es .
+<http://geo.linkeddata.es/ontology/CentralNuclear> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://geo.linkeddata.es/ontology/CentralElectrica> .
+<http://geo.linkeddata.es/ontology/CentralNuclear> <http://www.w3.org/2000/01/rdf-schema#label> "Central nuclear"@es .
+<http://geo.linkeddata.es/ontology/CentralNuclear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://geo.linkeddata.es/ontology/LineaElectrica> <http://www.w3.org/2000/01/rdf-schema#comment> "Conjunto de hilos (o cables) y otras instalaciones con fines conducir energ\u00EDa el\u00E9ctrica. Una L\u00EDnea el\u00E9ctrica est\u00E1 constituida tanto por el elemento conductor (usualmente cables de acero, cobre o aluminio) como por sus elementos de soporte (las torres de alta tensi\u00F3n)."@es .
+<http://geo.linkeddata.es/ontology/LineaElectrica> <http://www.w3.org/2000/01/rdf-schema#label> "Linea el\u00E9ctrica"@es .
+<http://geo.linkeddata.es/ontology/LineaElectrica> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:A4336d49fX3aX15709f89691X3aXX2dX7ff9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:A4336d49fX3aX15709f89691X3aXX2dX7ff9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:A4336d49fX3aX15709f89691X3aXX2dX7ffa .
+<http://geo.linkeddata.es/ontology/ConduccionDeCombustible> <http://www.w3.org/2000/01/rdf-schema#comment> "Tuber\u00EDa e instalaciones conexas utilizadas para el transporte de combustibles."@es .
+<http://geo.linkeddata.es/ontology/ConduccionDeCombustible> <http://purl.org/dc/terms/source> "Anexo A: Cat\u00E1logo de Objetos Geogr\u00E1ficos de BTN100."@es .
+<http://geo.linkeddata.es/ontology/ConduccionDeCombustible> <http://www.w3.org/2000/01/rdf-schema#label> "Conducci\u00F3n de combustible"@es .
+<http://geo.linkeddata.es/ontology/ConduccionDeCombustible> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:A4336d49fX3aX15709f89691X3aXX2dX7ff3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:A4336d49fX3aX15709f89691X3aXX2dX7ff2 .
+_:A4336d49fX3aX15709f89691X3aXX2dX7ff3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://geo.linkeddata.es/kos/supply-net/situacion/elevado> .
+<http://geo.linkeddata.es/ontology/CentralElectrica> <http://www.w3.org/2000/01/rdf-schema#comment> "Conjunto de instalaciones utilizadas directa e indirectamente para la producci\u00F3n de energ\u00EDa el\u00E9ctrica."@es .
+<http://geo.linkeddata.es/ontology/CentralElectrica> <http://www.w3.org/2000/01/rdf-schema#label> "Central el\u00E9ctrica"@es .
+<http://geo.linkeddata.es/ontology/CentralElectrica> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://geo.linkeddata.es/ontology/CentralEolica> <http://www.w3.org/2000/01/rdf-schema#comment> "Instalacion industrial que constituye una agrupaci\u00F3n de aerogeneradores que transforman la energ\u00EDa e\u00F3lica en energ\u00EDa el\u00E9ctrica."@es .
+<http://geo.linkeddata.es/ontology/CentralEolica> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://geo.linkeddata.es/ontology/CentralElectrica> .
+<http://geo.linkeddata.es/ontology/CentralEolica> <http://www.w3.org/2000/01/rdf-schema#label> "Central e\u00F3lica"@es .
+<http://geo.linkeddata.es/ontology/CentralEolica> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://geo.linkeddata.es/kos/supply-net/tipoDeComponente> <http://www.w3.org/2004/02/skos/core#prefLabel> "tipo de componente"@es .
+<http://geo.linkeddata.es/kos/supply-net/tipoDeComponente> <http://www.w3.org/2000/01/rdf-schema#comment> "Indica el tipo de componente de telecomunicaciones.\nPuede tomar los valores:\n* http://geo.linkeddata.es/kos/supply-net/tipoDeComponente/emisor\n* http://geo.linkeddata.es/kos/supply-net/tipoDeComponente/repetidor"@es .
+<http://geo.linkeddata.es/kos/supply-net/tipoDeComponente> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://geo.linkeddata.es/kos/supply-net/tipoDeComponente> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<http://geo.linkeddata.es/ontology/Gaseoducto> <http://www.w3.org/2000/01/rdf-schema#comment> "Tuber\u00EDa de grueso calibre y gran longitud para conducir a distancia gas combustible, procedente por lo general de emanaciones naturales."@es .
+<http://geo.linkeddata.es/ontology/Gaseoducto> <http://purl.org/dc/terms/source> "Diccionario de la Real Academia Espannola"@es .
+<http://geo.linkeddata.es/ontology/Gaseoducto> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://geo.linkeddata.es/ontology/ConduccionDeCombustible> .
+<http://geo.linkeddata.es/ontology/Gaseoducto> <http://www.w3.org/2000/01/rdf-schema#label> "Gaseoducto"@es .
+<http://geo.linkeddata.es/ontology/Gaseoducto> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:A4336d49fX3aX15709f89691X3aXX2dX7ff8 <http://www.w3.org/2002/07/owl#intersectionOf> _:A4336d49fX3aX15709f89691X3aXX2dX7ff7 .
+_:A4336d49fX3aX15709f89691X3aXX2dX7ff8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://geo.linkeddata.es/ontology/CentralCicloCombinado> <http://www.w3.org/2000/01/rdf-schema#comment> " La central t\u00E9rmica de ciclo combinado es aquella donde se genera electricidad mediante la utilizaci\u00F3n conjunta de dos turbinas:\n\n    Un turbogrupo de gas\n    Un turbogrupo de vapor\n"@es .
+<http://geo.linkeddata.es/ontology/CentralCicloCombinado> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://geo.linkeddata.es/ontology/CentralElectrica> .
+<http://geo.linkeddata.es/ontology/CentralCicloCombinado> <http://www.w3.org/2000/01/rdf-schema#label> "Central de ciclo combinado"@es .
+<http://geo.linkeddata.es/ontology/CentralCicloCombinado> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:A4336d49fX3aX15709f89691X3aXX2dX7ff2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:A4336d49fX3aX15709f89691X3aXX2dX7ff1 .
+_:A4336d49fX3aX15709f89691X3aXX2dX7ff2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://geo.linkeddata.es/kos/supply-net/situacion/subterraneo> .
+<http://geo.linkeddata.es/ontology/LineaElectricaDeAltaTension> <http://www.w3.org/2000/01/rdf-schema#comment> "Se considera instalaci\u00F3n de alta tensi\u00F3n el\u00E9ctrica aquella que genere, transporte, transforme, distribuya o utilice energ\u00EDa el\u00E9ctrica con tensiones superiores a los siguientes l\u00EDmites:\n\n    Corriente alterna: Superior a 1000 voltios.\n    Corriente continua: Superior a 1500 voltios."@es .
+<http://geo.linkeddata.es/ontology/LineaElectricaDeAltaTension> <http://www.w3.org/2002/07/owl#disjointWith> <http://geo.linkeddata.es/ontology/LineaElectricaDeBajaTension> .
+<http://geo.linkeddata.es/ontology/LineaElectricaDeAltaTension> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://geo.linkeddata.es/ontology/LineaElectrica> .
+<http://geo.linkeddata.es/ontology/LineaElectricaDeAltaTension> <http://www.w3.org/2000/01/rdf-schema#label> "Linea el\u00E9ctrica de alta tensi\u00F3n"@es .
+<http://geo.linkeddata.es/ontology/LineaElectricaDeAltaTension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://geo.linkeddata.es/kos/supply-net/tipoDeComponente/repetidor> <http://www.w3.org/2004/02/skos/core#inScheme> <http://geo.linkeddata.es/kos/supply-net/tipoDeComponente> .
+<http://geo.linkeddata.es/kos/supply-net/tipoDeComponente/repetidor> <http://www.w3.org/2004/02/skos/core#prefLabel> "repetidor"@es .
+<http://geo.linkeddata.es/kos/supply-net/tipoDeComponente/repetidor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://geo.linkeddata.es/kos/supply-net/tipoDeComponente/repetidor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:A4336d49fX3aX15709f89691X3aXX2dX7ff7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:A4336d49fX3aX15709f89691X3aXX2dX7ff5 .
+_:A4336d49fX3aX15709f89691X3aXX2dX7ff7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://geo.linkeddata.es/ontology/supply-net.owl#> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/2004/02/skos/core> .
+<http://geo.linkeddata.es/ontology/supply-net.owl#> <http://www.w3.org/2000/01/rdf-schema#comment> "ontolog\u00EDa globlal de dominio de redes de suministro de energ\u00EDa. "@es .
+<http://geo.linkeddata.es/ontology/supply-net.owl#> <http://www.w3.org/2000/01/rdf-schema#comment> "Ontolog\u00EDa global de dominio sobre redes de conducciones y energ\u00EDa"@es .
+<http://geo.linkeddata.es/ontology/supply-net.owl#> <http://purl.org/dc/elements/1.1/publisher> "Ontology Engineering Group"@en .
+<http://geo.linkeddata.es/ontology/supply-net.owl#> <http://www.w3.org/2000/01/rdf-schema#comment> ""@en .
+<http://geo.linkeddata.es/ontology/supply-net.owl#> <http://www.w3.org/2002/07/owl#versionInfo> "v0.2"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://geo.linkeddata.es/ontology/supply-net.owl#> <http://purl.org/dc/elements/1.1/title> "suply-netOntology"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://geo.linkeddata.es/ontology/supply-net.owl#> <http://purl.org/dc/elements/1.1/creator> "Lissete Moscoso Le\u00F3n"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://geo.linkeddata.es/ontology/supply-net.owl#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://geo.linkeddata.es/kos/supply-net/situacion> <http://www.w3.org/2004/02/skos/core#prefLabel> "situaci\u00F3n"@es .
+<http://geo.linkeddata.es/kos/supply-net/situacion> <http://www.w3.org/2000/01/rdf-schema#comment> "Puede tomar los valores:\nhttp://geo.linkeddata.es/kos/supply-net/situacion/elevado\nhttp://geo.linkeddata.es/kos/supply-net/situacion/subterraneo\nhttp://geo.linkeddata.es/kos/supply-net/situacion/superficial"@es .
+<http://geo.linkeddata.es/kos/supply-net/situacion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://geo.linkeddata.es/kos/supply-net/situacion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .

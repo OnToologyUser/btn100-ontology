@@ -1,0 +1,228 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:categoriaDeIsla="http://geo.linkeddata.es/kos/hydrography/categoriaDeIsla/"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:categoriaDeRio="http://geo.linkeddata.es/kos/hydrography/categoriaDeRio/"
+    xmlns="http://geo.linkeddata.es/ontology/hidrography.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:regimenDeLaguna="http://geo.linkeddata.es/kos/hydrography/regimenDeLaguna/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:hydro="http://geo.linkeddata.es/kos/hydrography/"
+    xmlns:ontology="http://geo.linkeddata.es/ontology/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" > 
+  <rdf:Description rdf:about="http://geo.linkeddata.es/kos/hydrography/categoriaDeRio/rioTerceario">
+    <skos:inScheme rdf:resource="http://geo.linkeddata.es/kos/hydrography/categoriaDeRio"/>
+    <skos:prefLabel xml:lang="es">río de interés terceario</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/kos/hydrography/regimenDeLaguna/noPermanente">
+    <skos:inScheme rdf:resource="http://geo.linkeddata.es/kos/hydrography/regimenDeLaguna"/>
+    <skos:prefLabel xml:lang="es">no permanente</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/hidrography.owl">
+    <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+    <owl:imports rdf:resource="http://geo.linkeddata.es/ontology/hydro.owl"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Punta">
+    <rdfs:comment xml:lang="es">Lengua de tierra, generalmente baja y de poca extensión, que penetra en el mar.</rdfs:comment>
+    <dc:source xml:lang="es">Diccionario de la Real Academia Española</dc:source>
+    <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/Morfologia"/>
+    <rdfs:label xml:lang="es">Punta</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Rambla">
+    <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/ZonaHumeda"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Cabo">
+    <rdfs:comment xml:lang="es">Lengua de tierra que penetra en el mar.</rdfs:comment>
+    <dc:source xml:lang="es">Diccionario de la Real Academia Española</dc:source>
+    <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/Morfologia"/>
+    <rdfs:label xml:lang="es">Cabo</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/kos/hydrography/regimenDeLaguna">
+    <skos:prefLabel xml:lang="es">régimen de laguna</skos:prefLabel>
+    <rdfs:comment xml:lang="es">puede tomar los valores:
+* http://geo.linkeddata.es/kos/hydrography/regimenDeLaguna/permanete
+* http://geo.linkeddata.es/kos/hydrography/regimenDeLaguna/noPermanente</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A0">
+    <owl:hasValue rdf:resource="http://geo.linkeddata.es/kos/hydrography/categoriaDeRio"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A1">
+    <owl:intersectionOf rdf:nodeID="A2"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Estanque">
+    <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/Alberca"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/kos/hydrography/categoriaDeRio">
+    <skos:prefLabel xml:lang="es">categoría de río</skos:prefLabel>
+    <rdfs:comment xml:lang="es">categorización de un río. Puede tomar los valores:
+* http://geo.linkeddata.es/kos/hydrography/vategoriaDeRio/rioPrincipal
+* http://geo.linkeddata.es/kos/hydrography/vategoriaDeRio/rioSecundario
+* http://geo.linkeddata.es/kos/hydrography/vategoriaDeRio/rioTerceario
+* http://geo.linkeddata.es/kos/hydrography/vategoriaDeRio/rioDeMenorInteres
+</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/categoriaDeIsla">
+    <rdfs:range rdf:nodeID="A1"/>
+    <rdfs:domain rdf:resource="http://geo.linkeddata.es/ontology/Isla"/>
+    <rdfs:comment xml:lang="es">Indica la categoría de la isla</rdfs:comment>
+    <rdfs:label xml:lang="es">categoría de isla</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A3">
+    <owl:hasValue rdf:resource="http://geo.linkeddata.es/kos/hydrography/categoriaDeIsla"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A4">
+    <owl:intersectionOf rdf:nodeID="A5"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A6">
+    <owl:hasValue rdf:resource="http://geo.linkeddata.es/kos/hydrography/regimenDeLaguna"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A7">
+    <owl:intersectionOf rdf:nodeID="A8"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Albufera">
+    <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/ZonaHumeda"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Cala">
+    <rdfs:comment xml:lang="es">Ensenada pequeña.</rdfs:comment>
+    <dc:source xml:lang="es">Diccionario de la Real Academia Española</dc:source>
+    <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/Morfologia"/>
+    <rdfs:label xml:lang="es">Cala</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/IslaFluvial">
+    <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/Isla"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/regimenDeLaguna">
+    <rdfs:range rdf:nodeID="A4"/>
+    <rdfs:domain rdf:resource="http://geo.linkeddata.es/ontology/Laguna"/>
+    <rdfs:comment xml:lang="es">indica la estacionalidad de las aguas</rdfs:comment>
+    <rdfs:label xml:lang="es">régimen de laguna</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Canyo">
+    <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/ZonaHumeda"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/IslaMaritima">
+    <rdfs:comment xml:lang="es">Porción de tierra rodeada de agua del mar.</rdfs:comment>
+    <dc:source xml:lang="es">Catálogo de Objetos Geográficos BTN100</dc:source>
+    <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/Isla"/>
+    <rdfs:label xml:lang="es">Isla marítima</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/categoriaDeRio">
+    <rdfs:range rdf:nodeID="A7"/>
+    <rdfs:comment xml:lang="es">Indica el orden de interés de un río</rdfs:comment>
+    <rdfs:label xml:lang="es">categoría de río</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/kos/hydrography/regimenDeLaguna/permanente">
+    <skos:inScheme rdf:resource="http://geo.linkeddata.es/kos/hydrography/regimenDeLaguna"/>
+    <skos:prefLabel xml:lang="es">permanente</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/kos/hydrography/categoriaDeRio/rioDeMenorInteres">
+    <skos:inScheme rdf:resource="http://geo.linkeddata.es/kos/hydrography/categoriaDeRio"/>
+    <skos:prefLabel xml:lang="es">río de menor interes</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Marisma">
+    <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/ZonaHumeda"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/kos/hydrography/categoriaDeRio/rioPrincipal">
+    <skos:inScheme rdf:resource="http://geo.linkeddata.es/kos/hydrography/categoriaDeRio"/>
+    <skos:prefLabel xml:lang="es">río de interés principal</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/kos/hydrography/categoriaDeRio/rioSecundario">
+    <skos:inScheme rdf:resource="http://geo.linkeddata.es/kos/hydrography/categoriaDeRio"/>
+    <skos:prefLabel xml:lang="es">río de interés secundario</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Salina">
+    <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/ZonaHumeda"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A8">
+    <rdf:rest rdf:nodeID="A9"/>
+    <rdf:first rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Balsa">
+    <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/Alberca"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A10">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A6"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A11">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A3"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Isla">
+    <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/Morfologia"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A2">
+    <rdf:rest rdf:nodeID="A11"/>
+    <rdf:first rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A5">
+    <rdf:rest rdf:nodeID="A10"/>
+    <rdf:first rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/kos/hydrography/categoriaDeIsla">
+    <skos:prefLabel xml:lang="es">categoría de isla</skos:prefLabel>
+    <rdfs:comment xml:lang="es">Puede tomar los valores:
+* http://geo.linkeddata.es/kos/hydrography/categoriaDeIsla/principal</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A9">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A0"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Esclusa">
+    <rdfs:comment xml:lang="es">Compartimento, con puertas de entrada y salida, que se construye en un canal de navegación para que los barcos puedan pasar de un tramo a otro de diferente nivel, para lo cual se llena de agua o se vacía el espacio comprendido entre dichas puertas.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/AguasCorrientesArtificiales"/>
+    <rdfs:label xml:lang="es">Esclusa</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/kos/hydrography/categoriaDeIsla/principal">
+    <skos:inScheme rdf:resource="http://geo.linkeddata.es/kos/hydrography/categoriaDeIsla"/>
+    <skos:prefLabel xml:lang="es">principal</skos:prefLabel>
+    <rdfs:comment xml:lang="es">Indica que una isla es importante desde el punto de vista cartográfico</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Pennon">
+    <rdfs:comment xml:lang="es">Monte peñascoso.</rdfs:comment>
+    <dc:source xml:lang="es">Diccionario de la Real Academia Española</dc:source>
+    <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/Morfologia"/>
+    <rdfs:label xml:lang="es">Peñon</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+</rdf:RDF>

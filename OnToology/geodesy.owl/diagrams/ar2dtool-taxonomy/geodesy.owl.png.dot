@@ -1,0 +1,20 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "base:VerticeGeodesico" "base:FenomenoTopografico" "base:PuertoDeMontanna" "base:CurvaDeNivel" "base:VerticeGeodesicoRegcan95" "wgs84_pos:SpatialThing" "base:PuntoAcotado" "base:Pico" "base:VerticeGeodesicoDeOrdenInferior" "base:Collado" "base:Cerro" "wgs84_pos:Point" "base:VerticeGeodesicoRegente" "base:CurvaDeNivelAltimetrica" "base:CurvaDeNivelBatimetrica" "base:CotaMunicipal" "skos:OrderedCollection" "skos:Collection" ; /*classes style*/
+	"base:Collado" -> "base:PuntoAcotado" [ label = "rdfs:subClassOf" ];
+	"wgs84_pos:Point" -> "wgs84_pos:SpatialThing" [ label = "rdfs:subClassOf" ];
+	"base:Cerro" -> "base:PuntoAcotado" [ label = "rdfs:subClassOf" ];
+	"base:VerticeGeodesicoDeOrdenInferior" -> "base:VerticeGeodesico" [ label = "rdfs:subClassOf" ];
+	"base:CurvaDeNivelBatimetrica" -> "base:CurvaDeNivel" [ label = "rdfs:subClassOf" ];
+	"base:CotaMunicipal" -> "base:PuntoAcotado" [ label = "rdfs:subClassOf" ];
+	"base:Pico" -> "base:PuntoAcotado" [ label = "rdfs:subClassOf" ];
+	"base:PuertoDeMontanna" -> "base:PuntoAcotado" [ label = "rdfs:subClassOf" ];
+	"base:CurvaDeNivel" -> "base:FenomenoTopografico" [ label = "rdfs:subClassOf" ];
+	"base:CurvaDeNivelAltimetrica" -> "base:CurvaDeNivel" [ label = "rdfs:subClassOf" ];
+	"skos:OrderedCollection" -> "skos:Collection" [ label = "rdfs:subClassOf" ];
+	"base:VerticeGeodesicoRegcan95" -> "base:VerticeGeodesico" [ label = "rdfs:subClassOf" ];
+	"base:PuntoAcotado" -> "base:FenomenoTopografico" [ label = "rdfs:subClassOf" ];
+	"base:VerticeGeodesicoRegente" -> "base:VerticeGeodesico" [ label = "rdfs:subClassOf" ];
+
+}

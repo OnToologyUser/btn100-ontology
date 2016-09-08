@@ -1,0 +1,944 @@
+@prefix :        <http://geo.linkeddata.es/ontology/> .
+@prefix numeroDeVias:  <http://geo.linkeddata.es/kos/transports/numeroDeVias/> .
+@prefix terms:   <http://purl.org/dc/terms/> .
+@prefix situacionDeVia:  <http://geo.linkeddata.es/kos/transports/situacionDeVia/> .
+@prefix tipoDeTramo:  <http://geo.linkeddata.es/kos/transports/tipoDeTramo/> .
+@prefix anchoDeVia:  <http://geo.linkeddata.es/kos/transports/anchoDeVia/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix tipoDeItinerario:  <http://geo.linkeddata.es/kos/transports/tipoDeItinerario/> .
+@prefix estadoDeUso:  <http://geo.linkeddata.es/kos/transports/estadoDeUso/> .
+@prefix transportes:  <http://geo.linkeddata.es/kos/transports/> .
+@prefix geo:     <http://geo.linkeddata.es/> .
+@prefix competenciaDeVia:  <http://geo.linkeddata.es/kos/transports/competenciaDeVia/> .
+@prefix acceso:  <http://geo.linkeddata.es/kos/transports/acceso/> .
+@prefix rutaTenT:  <http://geo.linkeddata.es/kos/transports/rutaTenT/> .
+@prefix categoriaVial:  <http://geo.linkeddata.es/kos/transports/categoriaVial/> .
+@prefix electrificacion:  <http://geo.linkeddata.es/kos/transports/electrificacion/> .
+@prefix competenciaPortuaria:  <http://geo.linkeddata.es/kos/transports/competenciaPortuaria/> .
+@prefix competenciaAeroportuaria:  <http://geo.linkeddata.es/kos/transports/competenciaAeroportuaria/> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix tipoDeCalzada:  <http://geo.linkeddata.es/kos/transports/tipoDeCalzada/> .
+@prefix tipoDeTrafico:  <http://geo.linkeddata.es/kos/transports/tipoDeTrafico/> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+
+:altitud
+      a       owl:DatatypeProperty ;
+      rdfs:comment "Altitud en metros"@es ;
+      rdfs:domain
+              [ a       owl:Class ;
+                owl:unionOf (:Aerodromo :Aeropuerto :Helipuerto)
+              ] ;
+      rdfs:label "altitud"@es ;
+      rdfs:range xsd:int .
+
+<http://geo.linkeddata.es/ontology/transports.owl>
+      a       owl:Ontology ;
+      owl:imports <http://geo.linkeddata.es/ontology/transportes.owl> , <http://www.w3.org/2004/02/skos/core> .
+
+anchoDeVia:internacional
+      a       owl:NamedIndividual , skos:Concept ;
+      rdfs:comment "acnho de via internacional (1.435 mm)."@es ;
+      skos:inScheme transportes:anchoDeVia ;
+      skos:prefLabel "ancho de vía internacional"@es .
+
+transportes:rutaTenT
+      a       owl:NamedIndividual , skos:ConceptScheme ;
+      rdfs:comment """Esquema de conceptos que indica si el tramo de vía pertenece a la Red Transeuropea de Transporte (TEN-T)
+puede tomar los valores:
+* http://geo.linkeddata.es/kos/transports/rutaTenT/rutaTranseuropea
+* http://geo.linkeddata.es/kos/transports/rutaTenT/rutaNoTranseuropea"""@es ;
+      skos:prefLabel "ruta TEN-T"@es .
+
+situacionDeVia:superficial
+      a       owl:NamedIndividual , skos:Concept ;
+      rdfs:comment "vía superficial"@es ;
+      skos:inScheme transportes:situacionDeVia ;
+      skos:prefLabel "superficial"@es .
+
+anchoDeVia:iberico
+      a       owl:NamedIndividual , skos:Concept ;
+      rdfs:comment " ancho ibérico (1.668 mm)"@es ;
+      skos:inScheme transportes:anchoDeVia ;
+      skos:prefLabel "ancho de vía ibérico"@es .
+
+[]    a       owl:AllDifferent ;
+      owl:distinctMembers (electrificacion:electrificado electrificacion:noElectrificado) .
+
+:calzada
+      a       owl:ObjectProperty ;
+      rdfs:domain
+              [ a       owl:Class ;
+                owl:unionOf (:Autopista :Autovia :Carretera)
+              ] ;
+      rdfs:range
+              [ a       owl:Class ;
+                owl:intersectionOf (skos:Concept [ a       owl:Restriction ;
+                            owl:hasValue transportes:tipoDeCalzada ;
+                            owl:onProperty skos:inScheme
+                          ])
+              ] .
+
+:CarreteraNacional
+      a       owl:Class ;
+      rdfs:comment "Vía de comunicación dedicada al tráfico rodado, cuya competencia corresponde a la Administración Central del Estado, clasificada como carretera de primer orden por el Ministerio de Fomento (Red de Interés General del Estado)."@es ;
+      rdfs:label "Carretera Nacional"@es ;
+      rdfs:subClassOf :Carretera ;
+      rdfs:subClassOf
+              [ a       owl:Class ;
+                owl:unionOf ([ a       owl:Restriction ;
+                            owl:hasValue tipoDeCalzada:convencional ;
+                            owl:onProperty :calzada
+                          ] [ a       owl:Restriction ;
+                            owl:hasValue tipoDeCalzada:sentidoUnico ;
+                            owl:onProperty :calzada
+                          ])
+              ] .
+
+estadoDeUso:enConstruccion
+      a       owl:NamedIndividual , skos:Concept ;
+      rdfs:comment "indica que está en construcción o en obras"@es ;
+      skos:inScheme transportes:estadoDeUso ;
+      skos:prefLabel "en construcción"@es .
+
+transportes:competenciaPortuaria
+      a       owl:NamedIndividual , skos:ConceptScheme ;
+      rdfs:comment """Esquema de conceptos para definir el tipo la competencia de explotación de un puerto
+puede tomar los valores:
+* http://geo.linkeddata.es/kos/transports/competenciaPortuaria/estatal"""@es ;
+      skos:prefLabel "competencia portuaria"@es .
+
+acceso:libre
+      a       owl:NamedIndividual , skos:Concept ;
+      rdfs:comment "indica si la via es de acceso libre"@es ;
+      skos:inScheme transportes:acceso ;
+      skos:prefLabel "acceso libre"@es .
+
+[]    a       owl:AllDifferent ;
+      owl:distinctMembers (situacionDeVia:elevado situacionDeVia:subterraneo situacionDeVia:superficial) .
+
+:tipoDeTrafico
+      a       owl:ObjectProperty ;
+      rdfs:comment """indica el tipo de tráfico que puede llevar un ferrocarril, pueden ser:
+* mixto
+* mercancías
+* pasajeros"""@es ;
+      rdfs:domain
+              [ a       owl:Class ;
+                owl:unionOf (:EnclaveFerroviario :FerrocarrilConvencional)
+              ] ;
+      rdfs:label "tipo de tráfico"@es ;
+      rdfs:range
+              [ a       owl:Class ;
+                owl:intersectionOf (skos:Concept [ a       owl:Restriction ;
+                            owl:hasValue transportes:tipoDeTrafico ;
+                            owl:onProperty skos:inScheme
+                          ])
+              ] .
+
+:icaoCode
+      a       owl:DatatypeProperty ;
+      rdfs:comment "Código de designación de aeropuertos compuesto de cuatro caracteres alfanuméricos que sirve para identificar cada aeropuerto alrededor del mundo."@es ;
+      rdfs:domain
+              [ a       owl:Class ;
+                owl:unionOf (:Aerodromo :Aeropuerto :Helipuerto)
+              ] ;
+      rdfs:label "icao code"@en , "código icao"@es ;
+      rdfs:range
+              [ a       rdfs:Datatype ;
+                owl:onDatatype xsd:string ;
+                owl:withRestrictions
+                        ([ xsd:length 4
+                          ])
+              ] .
+
+transportes:estadoDeUso
+      a       owl:NamedIndividual , skos:ConceptScheme ;
+      rdfs:comment """indica el estado de uso. Puede tomar los valores:
+* http://geo.linkeddata.es/kos/transporters/estadoDeUso/enConstruccion
+* http://geo.linkeddata.es/kos/transporters/estadoDeUso/enUso
+* http://geo.linkeddata.es/kos/transporters/estadoDeUso/abandonado"""@es ;
+      skos:prefLabel "estado de uso"@es .
+
+electrificacion:electrificado
+      a       owl:NamedIndividual , skos:Concept ;
+      rdfs:comment "Indica que una vía está electrificada"@es ;
+      skos:inScheme transportes:electrificacion ;
+      skos:prefLabel "electrificado"@es .
+
+[]    a       owl:AllDifferent ;
+      owl:distinctMembers (estadoDeUso:abandonado estadoDeUso:enConstruccion estadoDeUso:enUso) .
+
+:FerrocarrilConvencional
+      a       owl:Class ;
+      rdfs:comment "Anexo A: Catálogo de Objetos Geográficos de BTN100."@es , "Vía por la que circulan los trenes de RENFE que no pertenecen a la red AVE."@es ;
+      rdfs:label "Tramo de vía convencional"@es ;
+      rdfs:subClassOf :Ferrocarril .
+
+:tipoDeTramo
+      a       owl:ObjectProperty ;
+      rdfs:comment "Tramo de vía que se desarrollan por el interior de núcleos o diseminados superficiales"@es ;
+      rdfs:domain
+              [ a       owl:Class ;
+                owl:unionOf (:Autopista :Autovia :Carretera)
+              ] ;
+      rdfs:label "tipo de tramo"@es ;
+      rdfs:range
+              [ a       owl:Class ;
+                owl:intersectionOf (skos:Concept [ a       owl:Restriction ;
+                            owl:hasValue transportes:tipoDeTramo ;
+                            owl:onProperty skos:inScheme
+                          ])
+              ] .
+
+rutaTenT:rutaTranseuropea
+      a       owl:NamedIndividual , skos:Concept ;
+      rdfs:comment "El tramo no forma parte de la Red Transeuropea de Transporte"@es ;
+      skos:inScheme transportes:rutaTenT ;
+      skos:prefLabel "ruta transeuropea"@es .
+
+:unloCode
+      a       owl:DatatypeProperty ;
+      rdfs:comment "Código de localización de Naciones Unidas (United Nations / Location CODE – UN/LOCODE)"@es , "código unlo"@es , "UN/LOCODE, the United Nations Code for Trade and Transport Locations, is a geographic coding scheme developed and maintained by United Nations Economic Commission for Europe (UNECE), a unit of the United Nations. UN/LOCODE assigns codes to locations used in trade and transport  with functions such as seaports, rail and road terminals, airports, post offices and border crossing points."@en ;
+      rdfs:domain :Puerto ;
+      rdfs:label "unlo code"@en ;
+      rdfs:range
+              [ a       rdfs:Datatype ;
+                owl:onDatatype xsd:string ;
+                owl:withRestrictions
+                        ([ xsd:length 3
+                          ])
+              ] .
+
+tipoDeTrafico:mixto
+      a       owl:NamedIndividual , skos:Concept ;
+      rdfs:comment "puede llevar mercancías o pasajeros"@es ;
+      skos:inScheme transportes:tipoDeTrafico ;
+      skos:prefLabel "tráfico mixto"@es .
+
+:Helipuerto
+      a       owl:Class ;
+      rdfs:comment "Pista destinada al aterrizaje y despegue de helicópteros."@es ;
+      rdfs:label "Helipuerto"@es ;
+      terms:source "Diccionario de la Real Academia Española"@es .
+
+:Cargadero
+      a       owl:Class ;
+      rdfs:comment "Instalación ferroviaria que permite el acceso de mercancías desde los trenes a los barcos. Se distingue de una estación en que no es parte de la gestión de la circulación, ni tiene que disponer de desvíos y señales."@es ;
+      rdfs:label "Cargadero"@es ;
+      rdfs:subClassOf :EnclaveFerroviario ;
+      terms:source "Administrador de Infraestructuras Ferroviarias (ADIF)"@es .
+
+tipoDeCalzada:sentidoUnico
+      a       owl:NamedIndividual , skos:Concept ;
+      rdfs:comment "Calzada de sentido único no contigua a la del contrario."@es ;
+      skos:inScheme transportes:tipoDeCalzada ;
+      skos:prefLabel "calzada de sentido único"@es .
+
+:Telesqui
+      a       owl:Class ;
+      rdfs:comment " Aparato que permite a los esquiadores subir hasta las pistas sobre sus esquís mediante un sistema de arrastre."@es ;
+      rdfs:label "Telesquí"@es ;
+      rdfs:subClassOf :TransporteSuspendido ;
+      terms:source "Diccionario de la Real Academia Española."@es .
+
+competenciaDeVia:provincial
+      a       owl:NamedIndividual , skos:Concept ;
+      rdfs:comment "indica que la via es competencia de la Diputación Provincial"@es ;
+      skos:inScheme transportes:competenciaDeVia ;
+      skos:prefLabel "competencia de vía provincial"@es .
+
+transportes:tipoDeCalzada
+      a       owl:NamedIndividual , skos:ConceptScheme ;
+      rdfs:comment """Esquema de conceptos para definir el número de calzadas y sentido de circulación del tramo de vía.
+puede tomar los valores:
+* http://geo.linkeddata.es/kos/transports/calzada/doble
+* http://geo.linkeddata.es/kos/transports/calzada/convencional
+* http://geo.linkeddata.es/kos/transports/calzada/sentidoUnico"""@es ;
+      skos:prefLabel "tipo de calzada"@es .
+
+tipoDeTramo:noInterno
+      a       owl:NamedIndividual , skos:Concept ;
+      rdfs:comment "El tramo no discurre por el interior de poblaciones o zonas de uso"@es ;
+      skos:inScheme transportes:tipoDeTramo ;
+      skos:prefLabel "tramo no interno"@es .
+
+:Enlace
+      a       owl:Class ;
+      rdfs:comment "Tramo que une dos vías de nombre distinto y permite el acceso de una a otra."@es ;
+      rdfs:label "Enlace"@es ;
+      rdfs:subClassOf
+              [ a       owl:Class ;
+                owl:unionOf ([ a       owl:Restriction ;
+                            owl:hasValue estadoDeUso:enConstruccion ;
+                            owl:onProperty :estadoDeUso
+                          ] [ a       owl:Restriction ;
+                            owl:hasValue estadoDeUso:enUso ;
+                            owl:onProperty :estadoDeUso
+                          ])
+              ] ;
+      terms:source "Anexo A: Catálogo de Objetos Geográficos de BTN100."@es .
+
+tipoDeTramo:interno
+      a       owl:NamedIndividual , skos:Concept ;
+      rdfs:comment "El tramo no discurre por el interior de poblaciones o zonas de uso"@es ;
+      skos:inScheme transportes:tipoDeTramo ;
+      skos:prefLabel "tramo interno"@es .
+
+:TransporteSuspendido
+      a       owl:Class ;
+      rdfs:comment "Sistema de transporte en el que los vehículos van suspendidos de un cable de tracción. Se emplea principalmente para salvar grandes diferencias de altitud."@es ;
+      rdfs:label "TransporteSuspendido"@es ;
+      terms:source "Anexo A: Catálogo de Objetos Geográficos de BTN100."@es .
+
+:Autovia
+      a       owl:Class ;
+      rdfs:comment "Carretera con calzadas separadas para los dos sentidos de la circulación, cuyas entradas y salidas no se someten a las exigencias de seguridad de las autopistas."@es ;
+      rdfs:label "Autovia"@es ;
+      rdfs:subClassOf
+              [ a       owl:Class ;
+                owl:intersectionOf ([ a       owl:Class ;
+                            owl:unionOf ([ a       owl:Restriction ;
+                                        owl:hasValue tipoDeCalzada:doble ;
+                                        owl:onProperty :calzada
+                                      ] [ a       owl:Restriction ;
+                                        owl:hasValue tipoDeCalzada:sentidoUnico ;
+                                        owl:onProperty :calzada
+                                      ])
+                          ] [ a       owl:Class ;
+                            owl:unionOf ([ a       owl:Restriction ;
+                                        owl:hasValue estadoDeUso:enConstruccion ;
+                                        owl:onProperty :estadoDeUso
+                                      ] [ a       owl:Restriction ;
+                                        owl:hasValue estadoDeUso:enUso ;
+                                        owl:onProperty :estadoDeUso
+                                      ])
+                          ])
+              ] ;
+      terms:source "Anexo A: Catálogo de Objetos Geográficos de BTN100."@es .
+
+:rutaTenT
+      a       owl:ObjectProperty ;
+      rdfs:comment "indica si el tramo de vía pertenece a la Red Transeuropea de Transporte (TEN-T)"@es ;
+      rdfs:domain
+              [ a       owl:Class ;
+                owl:unionOf (:Aerodromo :Aeropuerto :Autopista :Autovia :Carretera :Ferrocarril :Helipuerto)
+              ] ;
+      rdfs:label "ruta TEN-T"@es ;
+      rdfs:range
+              [ a       owl:Class ;
+                owl:intersectionOf (skos:Concept [ a       owl:Restriction ;
+                            owl:hasValue transportes:rutaTenT ;
+                            owl:onProperty skos:inScheme
+                          ])
+              ] .
+
+transportes:competenciaAeroportuaria
+      a       owl:NamedIndividual , skos:ConceptScheme ;
+      rdfs:comment """Esquema de conceptos para definir el tipo de cometencia de explotación aeroportuaria.
+puede tomar los valores:
+* http://geo.linkeddata.es/kos/transports/competenciaAeroportuaria/aena
+* http://geo.linkeddata.es/kos/transports/competenciaAeroportuaria/militar
+* http://geo.linkeddata.es/kos/transports/competenciaAeroportuaria/privada"""@es ;
+      skos:prefLabel "competencia aeroportuaria"@es .
+
+:CarreteraAutonomica
+      a       owl:Class ;
+      rdfs:comment "Tramo de carretera convencional de competencia autonómica o de cualquier otra administración inferior a ésta."@es ;
+      rdfs:label "Carretera Autonómica"@es ;
+      rdfs:subClassOf :Carretera ;
+      rdfs:subClassOf
+              [ a       owl:Class ;
+                owl:intersectionOf ([ a       owl:Class ;
+                            owl:unionOf ([ a       owl:Restriction ;
+                                        owl:hasValue tipoDeCalzada:convencional ;
+                                        owl:onProperty :calzada
+                                      ] [ a       owl:Restriction ;
+                                        owl:hasValue tipoDeCalzada:sentidoUnico ;
+                                        owl:onProperty :calzada
+                                      ])
+                          ] [ a       owl:Class ;
+                            owl:unionOf ([ a       owl:Restriction ;
+                                        owl:hasValue competenciaDeVia:autonomica ;
+                                        owl:onProperty :competenciaDeVia
+                                      ] [ a       owl:Restriction ;
+                                        owl:hasValue competenciaDeVia:local ;
+                                        owl:onProperty :competenciaDeVia
+                                      ] [ a       owl:Restriction ;
+                                        owl:hasValue competenciaDeVia:provincial ;
+                                        owl:onProperty :competenciaDeVia
+                                      ])
+                          ])
+              ] .
+
+transportes:anchoDeVia
+      a       owl:NamedIndividual , skos:ConceptScheme ;
+      rdfs:comment """Esquema de conceptos para definir el ancho de una vía
+puede tomar los valores:
+* http://geo.linkeddata.es/kos/transports/anchoDeVia/iberico
+* http://geo.linkeddata.es/kos/transports/anchoDeVia/internacional
+* http://geo.linkeddata.es/kos/transports/anchoDeVia/mixto
+* http://geo.linkeddata.es/kos/transports/anchoDeVia/metrico"""@es ;
+      skos:prefLabel "ancho de vía"@es .
+
+transportes:situacionDeVia
+      a       owl:NamedIndividual , skos:ConceptScheme ;
+      rdfs:comment """Disposición del tramo de vía sobre la superficie.
+
+* http://geo.linkeddata.es/kos/transports/situacionDeVia/elevado
+* http://geo.linkeddata.es/kos/transports/situacionDeVia/subterraneo
+* http://geo.linkeddata.es/kos/transports/situacionDeVia/superficial"""@es ;
+      skos:prefLabel "situación"@es .
+
+numeroDeVias:unica
+      a       owl:NamedIndividual , skos:Concept ;
+      rdfs:comment "En la vía se verifica el movimiento de los trenes en ambos sentidos"@es ;
+      skos:inScheme transportes:numeroDeVias ;
+      skos:prefLabel "vía única"@es .
+
+:situacionDeVia
+      a       owl:ObjectProperty ;
+      rdfs:comment "Disposición del tramo de vía sobre la superficie"@es ;
+      rdfs:domain
+              [ a       owl:Class ;
+                owl:unionOf (:Autopista :Carretera :Enlace :Ferrocarril)
+              ] ;
+      rdfs:label "situación"@es ;
+      rdfs:range
+              [ a       owl:Class ;
+                owl:intersectionOf (skos:Concept [ a       owl:Restriction ;
+                            owl:hasValue transportes:situacionDeVia ;
+                            owl:onProperty skos:inScheme
+                          ])
+              ] .
+
+transportes:tipoDeTramo
+      a       owl:NamedIndividual , skos:ConceptScheme ;
+      rdfs:comment """Esquema de conceptos que indica si el tramo de vía  se desarrolla por el interior de núcleos o diseminados superficiales
+puede tomar los valores:
+* http://geo.linkeddata.es/kos/transports/tipoDeTramo/interno
+* http://geo.linkeddata.es/kos/transports/tipoDeTramo/noInterno"""@es ;
+      skos:prefLabel "tipo de tramo"@es .
+
+tipoDeItinerario:itinerarioNoEuropeo
+      a       owl:NamedIndividual , skos:Concept ;
+      rdfs:comment "indica que el tramo de vía no pertenece a la Red de Carreteras Europeas"@es ;
+      skos:inScheme transportes:tipoDeItinerario ;
+      skos:prefLabel "itinerario no europeo"@es .
+
+[]    a       owl:AllDifferent ;
+      owl:distinctMembers (tipoDeItinerario:itinerarioEuropeo tipoDeItinerario:itinerarioNoEuropeo) .
+
+tipoDeTrafico:mercancias
+      a       owl:NamedIndividual , skos:Concept ;
+      skos:inScheme transportes:tipoDeTrafico ;
+      skos:prefLabel "tráfico de mercancías"@es .
+
+estadoDeUso:enUso
+      a       owl:NamedIndividual , skos:Concept ;
+      skos:inScheme transportes:estadoDeUso ;
+      skos:prefLabel "en uso"@es .
+
+tipoDeTrafico:viajeros
+      a       owl:NamedIndividual , skos:Concept ;
+      skos:inScheme transportes:tipoDeTrafico ;
+      skos:prefLabel "tráfico de viajeros"@es .
+
+:Itinerario
+      a       owl:Class ;
+      rdfs:comment "Tramo de vía perteneciente al Camino de Santiago o catalogada como Vía verde."@es ;
+      rdfs:label "Itinerario"@es ;
+      terms:source "Anexo A: Catálogo de Objetos Geográficos de BTN100."@es .
+
+transportes:categoriaVial
+      a       owl:NamedIndividual , skos:ConceptScheme ;
+      rdfs:comment """Esquema de conceptos para definir el tipo de categoría de una vía
+según su importancia. Puede tomar los valores:
+* http://geo.linkeddata.es/kos/transports/categoriaVial/primerOrden
+* http://geo.linkeddata.es/kos/transports/categoriaVial/segundoOrden
+* http://geo.linkeddata.es/kos/transports/categoriaVial/tercerOrden"""@es ;
+      skos:prefLabel "categoría vial"@es .
+
+:estadoDeUso
+      a       owl:ObjectProperty ;
+      rdfs:domain
+              [ a       owl:Class ;
+                owl:unionOf (:Autopista :Autovia :Carretera :Enlace :Ferrocarril :Puerto)
+              ] ;
+      rdfs:label "estado de uso"@es ;
+      rdfs:range
+              [ a       owl:Class ;
+                owl:intersectionOf (skos:Concept [ a       owl:Restriction ;
+                            owl:hasValue transportes:estadoDeUso ;
+                            owl:onProperty skos:inScheme
+                          ])
+              ] .
+
+transportes:competenciaDeVia
+      a       owl:NamedIndividual , skos:ConceptScheme ;
+      rdfs:comment """Esquema de conceptos para definir de quien es la competencia de una determinada vía
+puede tomar los valores:
+* http://geo.linkeddata.es/kos/transports/competenciaVia/estatal
+* http://geo.linkeddata.es/kos/transports/competenciaVia/local
+* http://geo.linkeddata.es/kos/transports/competenciaVia/provicial
+* http://geo.linkeddata.es/kos/transports/competenciaVia/autonomica"""@es ;
+      skos:prefLabel "competencia de vía"@es .
+
+tipoDeItinerario:itinerarioEuropeo
+      a       owl:NamedIndividual , skos:Concept ;
+      rdfs:comment "indica que el tramo de vía pertenece a la Red de Carreteras Europeas"@es ;
+      skos:inScheme transportes:tipoDeItinerario ;
+      skos:prefLabel "itinerario europeo"@es .
+
+competenciaDeVia:estatal
+      a       owl:NamedIndividual , skos:Concept ;
+      rdfs:comment "indica que la via es competencia del Estado"@es ;
+      skos:inScheme transportes:competenciaDeVia ;
+      skos:prefLabel "competencia de vía estatal"@es .
+
+[]    a       owl:AllDifferent ;
+      owl:distinctMembers (acceso:libre acceso:peaje) .
+
+competenciaAeroportuaria:privada
+      a       owl:NamedIndividual , skos:Concept ;
+      rdfs:comment "competencia aeroportuaria de explotación privada"@es ;
+      skos:inScheme transportes:competenciaAeroportuaria ;
+      skos:prefLabel "privada"@es .
+
+:EnclaveFerroviario
+      a       owl:Class ;
+      rdfs:comment "instalaciones necesarias para el  funcionamiento del ferrocarril en todas sus faceta."@es ;
+      rdfs:label "Enclave Ferroviario"@es ;
+      terms:source "Administrador de Infraestructuras Ferroviarias (ADIF)"@es .
+
+:Teleferico
+      a       owl:Class ;
+      rdfs:comment "Sistema de transporte en que los vehículos van suspendidos de un cable de tracción. Se emplea principalmente para salvar grandes diferencias de altitud."@es ;
+      rdfs:label "Teleférico"@es ;
+      rdfs:subClassOf :TransporteSuspendido ;
+      terms:source "Diccionario de la Real Academia Española."@es .
+
+[]    a       owl:AllDifferent ;
+      owl:distinctMembers (competenciaAeroportuaria:aena competenciaAeroportuaria:militar competenciaAeroportuaria:privada) .
+
+competenciaAeroportuaria:militar
+      a       owl:NamedIndividual , skos:Concept ;
+      rdfs:comment "competencia aeroportuaria de explotación militar"@es ;
+      skos:inScheme transportes:competenciaAeroportuaria ;
+      skos:prefLabel "militar"@es .
+
+categoriaVial:segundoOrden
+      a       owl:NamedIndividual , skos:Concept ;
+      skos:inScheme transportes:categoriaVial ;
+      skos:prefLabel "categoría vial de segundo orden"@es .
+
+:Apeadero
+      a       owl:Class ;
+      rdfs:comment "Son dependencias con servicio exclusivo para la subida y bajada de viajeros. Son muy habituales en los grandes núcleos de población, y no tienen personal."@es , "En los ferrocarriles, sitio de la vía preparado para el servicio público, pero sin apartadero ni los demás accesorios de una estación."@es ;
+      rdfs:label "Apeadero"@es ;
+      rdfs:subClassOf :EnclaveFerroviario ;
+      terms:source "Administrador de Infraestructuras Ferroviarias (ADIF)"@es .
+
+electrificacion:noElectrificado
+      a       owl:NamedIndividual , skos:Concept ;
+      rdfs:comment "Indica que una vía no está electrificada"@es ;
+      skos:inScheme transportes:electrificacion ;
+      skos:prefLabel "no electrificado"@es .
+
+:Suministro
+      a       owl:Class ;
+      rdfs:comment "Son estaciones que aparte de regular el tráfico, tienen como misión principal la prestación de servicios de mercancías. Disponen de todas las instalaciones necesarias para la recepción, clasificación y formación, y expedición de los trenes de mercancías convencionales, que circulan entre ellas y/o a otros destinos nacionales e internacionales."@es ;
+      rdfs:label "Suministro"@es ;
+      rdfs:subClassOf :EnclaveFerroviario ;
+      terms:source "Administrador de Infraestructuras Ferroviarias (ADIF)"@es .
+
+transportes:acceso
+      a       owl:NamedIndividual , skos:ConceptScheme ;
+      rdfs:comment """Esquema de conceptos para definir el tipo de acceso de una vía
+puede tomar los valores:
+* http://geo.linkeddata.es/kos/transports/acceso/libre
+* http://geo.linkeddata.es/kos/transports/acceso/peaje"""@es ;
+      skos:prefLabel "acceso"@es .
+
+terms:source
+      a       owl:AnnotationProperty .
+
+acceso:peaje
+      a       owl:NamedIndividual , skos:Concept ;
+      rdfs:comment "indica que la vía es de pago."@es ;
+      skos:inScheme transportes:acceso ;
+      skos:prefLabel "acceso con peaje"@es .
+
+competenciaDeVia:autonomica
+      a       owl:NamedIndividual , skos:Concept ;
+      rdfs:comment "indica que la via es competencia de la administración de las CCAA"@es ;
+      skos:inScheme transportes:competenciaDeVia ;
+      skos:prefLabel "competencia de vía autonómica"@es .
+
+anchoDeVia:metrico
+      a       owl:NamedIndividual , skos:Concept ;
+      rdfs:comment "ancho métrico, 1.000  mm"@es ;
+      skos:inScheme transportes:anchoDeVia ;
+      skos:prefLabel "ancho de vía métrico"@es .
+
+:categoriaVial
+      a       owl:ObjectProperty ;
+      rdfs:comment "Categoría de una vía según su importancia."@es ;
+      rdfs:domain :CarreteraAutonomica ;
+      rdfs:label "categoría vial"@es ;
+      rdfs:range
+              [ a       owl:Class ;
+                owl:intersectionOf (skos:Concept [ a       owl:Restriction ;
+                            owl:hasValue transportes:categoriaVial ;
+                            owl:onProperty skos:inScheme
+                          ])
+              ] .
+
+:Ferrocarril
+      a       owl:Class ;
+      rdfs:comment "Camino con dos carriles de hierro paralelos, sobre los cuales ruedan los trenes."@es ;
+      rdfs:label "Ferrocarril"@es ;
+      terms:source "Diccionario de la Real Academia Española."@es .
+
+:ItinerarioDeCaminoDeSantiago
+      a       owl:Class ;
+      rdfs:comment "Itinerario perteneciente al Camino de Santiago"@es ;
+      rdfs:label "ItinerarioDeCaminoDeSantiago"@es ;
+      rdfs:subClassOf :Itinerario ;
+      terms:source "Anexo A: Catálogo de Objetos Geográficos de BTN100."@es .
+
+geo:acceso
+      a       owl:ObjectProperty ;
+      rdfs:domain :Autopista ;
+      rdfs:label "acceso"@es ;
+      rdfs:range
+              [ a       owl:Class ;
+                owl:intersectionOf (skos:Concept [ a       owl:Restriction ;
+                            owl:hasValue transportes:acceso ;
+                            owl:onProperty skos:inScheme
+                          ])
+              ] .
+
+:codigoDeEstacion
+      a       owl:DatatypeProperty ;
+      rdfs:comment "Código de la estación(según ADIF)"@es ;
+      rdfs:domain :EnclaveFerroviario ;
+      rdfs:label "codigo de estacion"@es ;
+      rdfs:range
+              [ a       rdfs:Datatype ;
+                owl:onDatatype xsd:string ;
+                owl:withRestrictions
+                        ([ xsd:length 6
+                          ])
+              ] .
+
+:FerrocarrilDeAltaVelocidad
+      a       owl:Class ;
+      rdfs:comment "Anexo A: Catálogo de Objetos Geográficos de BTN100."@es , "Tramo de vía por la que circula el Tren de alta velocidad de España (AVE)."@es ;
+      rdfs:label "Tramo de vía de alta velocidad"@es ;
+      rdfs:subClassOf
+              [ a       owl:Class ;
+                owl:intersectionOf (:Ferrocarril [ a       owl:Class ;
+                            owl:unionOf ([ a       owl:Restriction ;
+                                        owl:hasValue estadoDeUso:enConstruccion ;
+                                        owl:onProperty :estadoDeUso
+                                      ] [ a       owl:Restriction ;
+                                        owl:hasValue estadoDeUso:enUso ;
+                                        owl:onProperty :estadoDeUso
+                                      ])
+                          ])
+              ] .
+
+anchoDeVia:mixto
+      a       owl:NamedIndividual , skos:Concept ;
+      skos:inScheme transportes:anchoDeVia ;
+      skos:prefLabel "ancho de vía mixto"@es .
+
+transportes:tipoDeTrafico
+      a       owl:NamedIndividual , skos:ConceptScheme ;
+      rdfs:comment """kos que indica el tipo de tráfico que lleva un ferrocarril. Pueden ser
+* http://geo.linkeddata.es/kos/transporters/tipoDeTrafico/viajeros
+* http://geo.linkeddata.es/kos/transporters/tipoDeTrafico/mercancias
+* http://geo.linkeddata.es/kos/transporters/tipoDeTrafico/mixto"""@es ;
+      skos:prefLabel "tipo de tráfico"@es .
+
+situacionDeVia:elevado
+      a       owl:NamedIndividual , skos:Concept ;
+      rdfs:comment "vía elevada"@es ;
+      skos:inScheme transportes:situacionDeVia ;
+      skos:prefLabel "elevado"@es .
+
+categoriaVial:tercerOrden
+      a       owl:NamedIndividual , skos:Concept ;
+      skos:inScheme transportes:categoriaVial ;
+      skos:prefLabel "categoría vial de tercer orden"@es .
+
+:competenciaDeVia
+      a       owl:ObjectProperty ;
+      rdfs:comment "competencia de la explotación de una vía"@es ;
+      rdfs:domain
+              [ a       owl:Class ;
+                owl:unionOf (:Autopista :Autovia :CarreteraAutonomica)
+              ] ;
+      rdfs:label "competencia de vía"@es ;
+      rdfs:range
+              [ a       owl:Class ;
+                owl:intersectionOf (skos:Concept [ a       owl:Restriction ;
+                            owl:hasValue transportes:competenciaDeVia ;
+                            owl:onProperty skos:inScheme
+                          ])
+              ] .
+
+transportes:electrificacion
+      a       owl:NamedIndividual , owl:ObjectProperty , skos:ConceptScheme ;
+      rdfs:comment """Esquema de conceptos para definir el tipo de electrificación de una vía
+puede tomar los valores:
+* http://geo.linkeddata.es/kos/transports/electrificacion/electrificado
+* http://geo.linkeddata.es/kos/transports/electrificacion/noElectrificado"""@es ;
+      rdfs:domain :FerrocarrilConvencional ;
+      rdfs:range
+              [ a       owl:Class ;
+                owl:intersectionOf (skos:Concept [ a       owl:Restriction ;
+                            owl:hasValue transportes:electrificacion ;
+                            owl:onProperty skos:inScheme
+                          ])
+              ] ;
+      skos:prefLabel "electrificación"@es .
+
+transportes:numeroDeVias
+      a       owl:NamedIndividual , skos:ConceptScheme ;
+      rdfs:comment """Esquema de conceptos para definir el número de vias
+puede tomar los valores:
+* http://geo.linkeddata.es/kos/transports/numeroDeVias/doble
+* http://geo.linkeddata.es/kos/transports/numeroDeVias/unica"""@es ;
+      skos:prefLabel "número de vías"@es .
+
+:EstacionDeFerrocarril
+      rdfs:comment "Conjunto de instalaciones de vías y agujas desde las que se coordina el tráfico ferroviario, tanto de trenes de viajeros como de mercancías y maniobras, y da servicio comercial de todo tipo a los usuarios del ferrocarril."@es ;
+      rdfs:subClassOf :EnclaveFerroviario ;
+      terms:source "Administrador de Infraestructuras Ferroviarias (ADIF)"@es .
+
+competenciaAeroportuaria:aena
+      a       owl:NamedIndividual , skos:Concept ;
+      rdfs:comment "competencia aeroportuaria de explotación por aena"@es ;
+      skos:inScheme transportes:competenciaAeroportuaria ;
+      skos:prefLabel "aena"@es .
+
+situacionDeVia:subterraneo
+      a       owl:NamedIndividual , skos:Concept ;
+      rdfs:comment "vía subterránea"@es ;
+      skos:inScheme transportes:situacionDeVia ;
+      skos:prefLabel "subterráneo"@es .
+
+:PasoANivel
+      a       owl:Class ;
+      rdfs:comment "Cruce entre carretera y ferrocarril, que se produce al mismo nivel."@es ;
+      rdfs:label "Paso a nivel"@es ;
+      terms:source "Anexo A: Catálogo de Objetos Geográficos de BTN100."@es .
+
+competenciaPortuaria:estatal
+      a       owl:NamedIndividual , skos:Concept ;
+      skos:inScheme transportes:competenciaPortuaria ;
+      skos:prefLabel "competencia portuaria estatal"@es .
+
+:tipoDeItinerario
+      a       owl:ObjectProperty ;
+      rdfs:comment "indica si un tramo pertenece a la Red de Carreteras Europeas"@es ;
+      rdfs:domain
+              [ a       owl:Class ;
+                owl:unionOf (:Autopista :Autovia :Carretera)
+              ] ;
+      rdfs:label "tipo de itinerario"@es ;
+      rdfs:range
+              [ a       owl:Class ;
+                owl:intersectionOf (skos:Concept [ a       owl:Restriction ;
+                            owl:hasValue transportes:tipoDeItinerario ;
+                            owl:onProperty skos:inScheme
+                          ])
+              ] .
+
+:Autopista
+      rdfs:subClassOf
+              [ a       owl:Class ;
+                owl:intersectionOf ([ a       owl:Class ;
+                            owl:unionOf ([ a       owl:Restriction ;
+                                        owl:hasValue tipoDeCalzada:doble ;
+                                        owl:onProperty :calzada
+                                      ] [ a       owl:Restriction ;
+                                        owl:hasValue tipoDeCalzada:sentidoUnico ;
+                                        owl:onProperty :calzada
+                                      ])
+                          ] [ a       owl:Class ;
+                            owl:unionOf ([ a       owl:Restriction ;
+                                        owl:hasValue estadoDeUso:enConstruccion ;
+                                        owl:onProperty :estadoDeUso
+                                      ] [ a       owl:Restriction ;
+                                        owl:hasValue estadoDeUso:enUso ;
+                                        owl:onProperty :estadoDeUso
+                                      ])
+                          ])
+              ] ;
+      terms:source "Anexo A: Catálogo de Objetos Geográficos de BTN100."@es .
+
+transportes:tipoDeItinerario
+      a       owl:NamedIndividual , skos:ConceptScheme ;
+      rdfs:comment """Esquema de conceptos para definir si el tramo de una vía pertenece a la red de carreteras europeas
+puede tomar los valores:
+
+* http://geo.linkeddata.es/kos/transports/tipoDeItinerario/itinerarioEuropeo
+* http://geo.linkeddata.es/kos/transports/tipoDeItinerario/itinerarioNoEuropeo"""@es ;
+      skos:prefLabel "tipo de itinerario"@es .
+
+:numeroDeVias
+      a       owl:ObjectProperty ;
+      rdfs:domain :FerrocarrilConvencional ;
+      rdfs:label "número de vías"@es ;
+      rdfs:range
+              [ a       owl:Class ;
+                owl:intersectionOf (skos:Concept [ a       owl:Restriction ;
+                            owl:hasValue transportes:numeroDeVias ;
+                            owl:onProperty skos:inScheme
+                          ])
+              ] .
+
+:Apartadero
+      a       owl:Class ;
+      rdfs:comment "Vía corta derivada de la principal, que sirve para apartar en ella trenes, coches, vagones, tranvías y/o locomotoras."@es , "Son estaciones de poco tráfico de viajeros y cuyo objetivo fundamental es la regulación del tráfico ferroviario, posibilitando la realización de cruces de trenes, adelantamientos, etc."@es ;
+      rdfs:label "Apartadero"@es ;
+      rdfs:subClassOf :EnclaveFerroviario ;
+      terms:source "Administrador de Infraestructuras Ferroviarias (ADIF)"@es .
+
+competenciaDeVia:local
+      a       owl:NamedIndividual , skos:Concept ;
+      rdfs:comment "indica que la via es competencia del municipio"@es ;
+      skos:inScheme transportes:competenciaDeVia ;
+      skos:prefLabel "competencia de vía local"@es .
+
+:Telesilla
+      a       owl:Class ;
+      rdfs:comment "Asiento suspendido de un cable de tracción, para el transporte de personas a la cumbre de una montaña o a un lugar elevado."@es ;
+      rdfs:label "Telesilla"@es ;
+      rdfs:subClassOf :TransporteSuspendido ;
+      terms:source "Diccionario de la Real Academia Española."@es .
+
+tipoDeCalzada:doble
+      a       owl:NamedIndividual , skos:Concept ;
+      rdfs:comment "Dos calzadas separadas y paralelas, con sentidos distintos. "@es ;
+      skos:inScheme transportes:tipoDeCalzada ;
+      skos:prefLabel "calzada doble"@es .
+
+[]    a       owl:AllDifferent ;
+      owl:distinctMembers (rutaTenT:rutaNoTranseuropea rutaTenT:rutaTranseuropea) .
+
+:competenciaPortuaria
+      a       owl:ObjectProperty ;
+      rdfs:comment "Competencia de la explotación portuaria"@es ;
+      rdfs:domain :Puerto ;
+      rdfs:label "competencia portuaria"@es ;
+      rdfs:range
+              [ a       owl:Class ;
+                owl:intersectionOf (skos:Concept [ a       owl:Restriction ;
+                            owl:hasValue transportes:competenciaPortuaria ;
+                            owl:onProperty skos:inScheme
+                          ])
+              ] .
+
+:iataCode
+      a       owl:DatatypeProperty ;
+      rdfs:comment "El código de aeropuertos de IATA está formado por grupos de tres letras, que designan a cada aeropuerto del mundo, asignadas por la Asociación Internacional de Transporte Aéreo (International Air Transport Association, IATA)."@es ;
+      rdfs:domain
+              [ a       owl:Class ;
+                owl:unionOf (:Aerodromo :Aeropuerto :Helipuerto)
+              ] ;
+      rdfs:label "código iata"@es , "iata code"@en ;
+      rdfs:range
+              [ a       rdfs:Datatype ;
+                owl:onDatatype xsd:string ;
+                owl:withRestrictions
+                        ([ xsd:length 3
+                          ])
+              ] .
+
+rutaTenT:rutaNoTranseuropea
+      a       owl:NamedIndividual , skos:Concept ;
+      rdfs:comment "El tramo forma parte de la Red Transeuropea de Transporte"@es ;
+      skos:inScheme transportes:rutaTenT ;
+      skos:prefLabel "ruta no transeuropea"@es .
+
+:Calle
+      a       owl:Class ;
+      rdfs:comment "Vía que se encuentra localizada dentro de un núcleo de población o Diseminado superficial, y que ayuda a identificar la estructura de manzanas de dicho núcleo/diseminado."@es ;
+      rdfs:label "Calle"@es ;
+      terms:source "Anexo A: Catálogo de Objetos Geográficos de BTN100."@es .
+
+estadoDeUso:abandonado
+      a       owl:NamedIndividual , skos:Concept ;
+      skos:inScheme transportes:estadoDeUso ;
+      skos:prefLabel "abandonado"@es .
+
+:anchoDeVia
+      a       owl:ObjectProperty ;
+      rdfs:domain :FerrocarrilConvencional ;
+      rdfs:label "ancho de vía"@es ;
+      rdfs:range
+              [ a       owl:Class ;
+                owl:intersectionOf (skos:Concept [ a       owl:Restriction ;
+                            owl:hasValue transportes:anchoDeVia ;
+                            owl:onProperty skos:inScheme
+                          ])
+              ] .
+
+:ItinerarionDeViaVerde
+      a       owl:Class ;
+      rdfs:comment "Itinerario catalogado como Vía Verde"@es ;
+      rdfs:label "ItinerarionDeViaVerde"@es ;
+      rdfs:subClassOf :Itinerario ;
+      terms:source "Anexo A: Catálogo de Objetos Geográficos de BTN100."@es .
+
+:competenciaAeroportuaria
+      a       owl:ObjectProperty ;
+      rdfs:comment "Competencia de la explotación earoportuaria"@es ;
+      rdfs:domain
+              [ a       owl:Class ;
+                owl:unionOf (:Aerodromo :Aeropuerto :Helipuerto)
+              ] ;
+      rdfs:label "competencia aeroportuaria"@es ;
+      rdfs:range
+              [ a       owl:Class ;
+                owl:intersectionOf (skos:Concept [ a       owl:Restriction ;
+                            owl:hasValue transportes:competenciaAeroportuaria ;
+                            owl:onProperty skos:inScheme
+                          ])
+              ] .
+
+numeroDeVias:doble
+      a       owl:NamedIndividual , skos:Concept ;
+      rdfs:comment "Cada vía se dedica para la marcha de los trenes en un sentido"@es ;
+      owl:sameAs numeroDeVias:unica ;
+      skos:inScheme transportes:numeroDeVias ;
+      skos:prefLabel "vía doble"@es .
+
+:codigoDeVia
+      a       owl:DatatypeProperty ;
+      rdfs:comment "Código de la vía (según ADIF)" ;
+      rdfs:domain :Ferrocarril ;
+      rdfs:label "codigo de vía"@es ;
+      rdfs:range
+              [ a       rdfs:Datatype ;
+                owl:onDatatype xsd:string ;
+                owl:withRestrictions
+                        ([ xsd:length 6
+                          ])
+              ] .
+
+categoriaVial:primerOrden
+      a       owl:NamedIndividual , skos:Concept ;
+      skos:inScheme transportes:categoriaVial ;
+      skos:prefLabel "categoría vial de primer orden"@es .
+
+tipoDeCalzada:convencional
+      a       owl:NamedIndividual , skos:Concept ;
+      rdfs:comment "Única calzada con doble sentido de circulación."@es ;
+      skos:inScheme transportes:tipoDeCalzada ;
+      skos:prefLabel "calzada convencional"@es .

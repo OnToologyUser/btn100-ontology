@@ -1,0 +1,265 @@
+<rdf:RDF
+    xmlns:suply-net-ontology="http://geo.linkeddata.es/ontology/suply-net-ontology.owl#"
+    xmlns:geopolitical="http://aims.fao.org/aos/geopolitical.owl#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:supply-net="http://geo.linkeddata.es/kos/supply-net/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:terms="http://purl.org/dc/terms/"
+    xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:situacion="http://geo.linkeddata.es/kos/supply-net/situacion/"
+    xmlns="http://geo.linkeddata.es/ontology/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:tipoDeComponente="http://geo.linkeddata.es/kos/supply-net/tipoDeComponente/" > 
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/LineaElectrica">
+    <rdfs:comment xml:lang="es">Conjunto de hilos (o cables) y otras instalaciones con fines conducir energía eléctrica. Una Línea eléctrica está constituida tanto por el elemento conductor (usualmente cables de acero, cobre o aluminio) como por sus elementos de soporte (las torres de alta tensión).</rdfs:comment>
+    <rdfs:label xml:lang="es">Linea eléctrica</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A0">
+    <owl:intersectionOf rdf:nodeID="A1"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/CentralTerminca">
+    <rdfs:comment xml:lang="es"> instalación empleada en la generación de energía eléctrica a partir de la energía liberada en forma de calor, normalmente mediante la combustión de combustibles fósiles como petróleo, gas natural o carbón. Este calor es empleado por un ciclo termodinámico convencional para mover un alternador y producir energía eléctrica.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/CentralElectrica"/>
+    <rdfs:label xml:lang="es">Central términca</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A2">
+    <owl:hasValue rdf:resource="http://geo.linkeddata.es/kos/supply-net/situacion"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/kos/supply-net/situacion/superficial">
+    <skos:inScheme rdf:resource="http://geo.linkeddata.es/kos/supply-net/situacion"/>
+    <skos:prefLabel xml:lang="es">superficial</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/LineaElectricaDeBajaTension">
+    <rdfs:comment xml:lang="es"> se considera instalación de baja tensión eléctrica a aquella que distribuya o genere energía eléctrica para consumo propio y a las receptoras en los siguientes límites de tensiones nominales:
+
+    Tensión alterna: igual o inferior a 1000 voltios.
+    Tensión continua: igual o inferior a 1500 voltios.
+</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/LineaElectrica"/>
+    <rdfs:label xml:lang="es">Linea eléctrica de baja tensión</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/EstacionDeTelecomunicacion">
+    <rdfs:comment xml:lang="es">Centro que consta de todas las instalaciones necesarias para transmitir y recibir señales que aseguren un servicio de radiotelecomunicación determinado.</rdfs:comment>
+    <rdfs:label xml:lang="es">Estación de telecomunicación</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A3">
+    <rdf:rest rdf:nodeID="A4"/>
+    <rdf:first rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/CentralElectrica">
+    <rdfs:comment xml:lang="es">Conjunto de instalaciones utilizadas directa e indirectamente para la producción de energía eléctrica.</rdfs:comment>
+    <rdfs:label xml:lang="es">Central eléctrica</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/kos/supply-net/tipoDeComponente/emisor">
+    <skos:inScheme rdf:resource="http://geo.linkeddata.es/kos/supply-net/tipoDeComponente"/>
+    <skos:prefLabel xml:lang="es">emisor</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/kos/supply-net/tipoDeComponente/repetidor">
+    <skos:inScheme rdf:resource="http://geo.linkeddata.es/kos/supply-net/tipoDeComponente"/>
+    <skos:prefLabel xml:lang="es">repetidor</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/kos/supply-net/situacion">
+    <skos:prefLabel xml:lang="es">situación</skos:prefLabel>
+    <rdfs:comment xml:lang="es">Puede tomar los valores:
+http://geo.linkeddata.es/kos/supply-net/situacion/elevado
+http://geo.linkeddata.es/kos/supply-net/situacion/subterraneo
+http://geo.linkeddata.es/kos/supply-net/situacion/superficial</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/CentralEolica">
+    <rdfs:comment xml:lang="es">Instalacion industrial que constituye una agrupación de aerogeneradores que transforman la energía eólica en energía eléctrica.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/CentralElectrica"/>
+    <rdfs:label xml:lang="es">Central eólica</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/CentralCicloCombinado">
+    <rdfs:comment xml:lang="es"> La central térmica de ciclo combinado es aquella donde se genera electricidad mediante la utilización conjunta de dos turbinas:
+
+    Un turbogrupo de gas
+    Un turbogrupo de vapor
+</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/CentralElectrica"/>
+    <rdfs:label xml:lang="es">Central de ciclo combinado</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A5">
+    <rdf:rest rdf:nodeID="A6"/>
+    <rdf:first rdf:resource="http://geo.linkeddata.es/kos/supply-net/situacion/subterraneo"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/source">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/EstacionDeTelevision">
+    <rdfs:comment xml:lang="es">Centro que consta de todas las instalaciones necesarias para transmitir y recibir señales que aseguren un servicio de televisión.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/EstacionDeTelecomunicacion"/>
+    <rdfs:label xml:lang="es">Estación de televisión</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/CentralSolar">
+    <rdfs:comment xml:lang="es">Instalación industrial en la que, a partir del calentamiento de un fluido mediante radiación solar y su uso en un ciclo termodinámico convencional, se produce la potencia necesaria para mover un alternador para generación de energía eléctrica </rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/CentralElectrica"/>
+    <rdfs:label xml:lang="es">Central solar</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/situacion">
+    <rdfs:range rdf:nodeID="A0"/>
+    <rdfs:domain rdf:resource="http://geo.linkeddata.es/ontology/ConduccionDeCombustible"/>
+    <rdfs:comment xml:lang="es">indica la posición del tramo sobre la superficie</rdfs:comment>
+    <rdfs:label xml:lang="es">situación</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A7">
+    <owl:distinctMembers rdf:nodeID="A8"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A4">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A9"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/DepositoDeCombustible">
+    <rdfs:comment xml:lang="es">Contenedor seguro destinado al almacenamiento de líquidos o gases inflamables para su posterior distribución en algunos casos por medio de oleoductos o gaseoductos.</rdfs:comment>
+    <terms:source xml:lang="es">Anexo A: Catálogo de Objetos Geográficos de BTN100.</terms:source>
+    <rdfs:label xml:lang="es">Depósito de combustible</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/kos/supply-net/tipoDeComponente">
+    <skos:prefLabel xml:lang="es">tipo de componente</skos:prefLabel>
+    <rdfs:comment xml:lang="es">Indica el tipo de componente de telecomunicaciones.
+Puede tomar los valores:
+* http://geo.linkeddata.es/kos/supply-net/tipoDeComponente/emisor
+* http://geo.linkeddata.es/kos/supply-net/tipoDeComponente/repetidor</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A9">
+    <owl:hasValue rdf:resource="http://geo.linkeddata.es/kos/supply-net/tipoDeComponente"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/EstacionTelefonica">
+    <rdfs:comment xml:lang="es">Centro que consta de todas las instalaciones necesarias para transmitir y recibir señales que aseguren servicios telefónico.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/EstacionDeTelecomunicacion"/>
+    <rdfs:label xml:lang="es">Estación telefónica</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/SubestacionElectrica">
+    <rdfs:comment xml:lang="es">Conjunto de instalaciones utilizadas para la reducción de la tensión o el voltaje de las líneas eléctricas.</rdfs:comment>
+    <rdfs:label xml:lang="es">Subestación eléctrica</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/CentralNuclear">
+    <rdfs:comment xml:lang="es">instalación industrial empleada para la generación de energía eléctrica a partir de energía nuclear. </rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/CentralElectrica"/>
+    <rdfs:label xml:lang="es">Central nuclear</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/CentralHidraulica">
+    <rdfs:comment xml:lang="es">Instalación empleada en la generación de energía eléctrica como resultado de la energía potencial gravitatoria que posee la masa de agua de un cauce natural en virtud de un desnivel, también conocido como «salto geodésico»</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/CentralElectrica"/>
+    <rdfs:label xml:lang="es">Central hidráulica</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A10">
+    <owl:intersectionOf rdf:nodeID="A3"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/EstacionDeRadio">
+    <rdfs:comment xml:lang="es">Centro que consta de todas las instalaciones necesarias para transmitir y recibir señales que aseguren un servicio de radio.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/EstacionDeTelecomunicacion"/>
+    <rdfs:label xml:lang="es">Estación de radio</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A1">
+    <rdf:rest rdf:nodeID="A11"/>
+    <rdf:first rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/componenteDeTelecomunicacion">
+    <rdfs:range rdf:nodeID="A10"/>
+    <rdfs:domain rdf:resource="http://geo.linkeddata.es/ontology/EstacionDeTelecomunicacion"/>
+    <rdfs:label xml:lang="es">componente de telecomunicación</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/kos/supply-net/situacion/elevado">
+    <skos:inScheme rdf:resource="http://geo.linkeddata.es/kos/supply-net/situacion"/>
+    <skos:prefLabel xml:lang="es">elevado</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/LineaElectricaDeAltaTension">
+    <rdfs:comment xml:lang="es">Se considera instalación de alta tensión eléctrica aquella que genere, transporte, transforme, distribuya o utilice energía eléctrica con tensiones superiores a los siguientes límites:
+
+    Corriente alterna: Superior a 1000 voltios.
+    Corriente continua: Superior a 1500 voltios.</rdfs:comment>
+    <owl:disjointWith rdf:resource="http://geo.linkeddata.es/ontology/LineaElectricaDeBajaTension"/>
+    <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/LineaElectrica"/>
+    <rdfs:label xml:lang="es">Linea eléctrica de alta tensión</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Gaseoducto">
+    <rdfs:comment xml:lang="es">Tubería de grueso calibre y gran longitud para conducir a distancia gas combustible, procedente por lo general de emanaciones naturales.</rdfs:comment>
+    <terms:source xml:lang="es">Diccionario de la Real Academia Espannola</terms:source>
+    <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/ConduccionDeCombustible"/>
+    <rdfs:label xml:lang="es">Gaseoducto</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Oleoducto">
+    <rdfs:comment xml:lang="es">Tubería provista de bombas y otros aparatos para conducir el petróleo a larga distancia.</rdfs:comment>
+    <terms:source xml:lang="es">Diccionario de la Real Academia Espannola</terms:source>
+    <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/ConduccionDeCombustible"/>
+    <rdfs:label xml:lang="es">Oleoducto</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/kos/supply-net/situacion/subterraneo">
+    <skos:inScheme rdf:resource="http://geo.linkeddata.es/kos/supply-net/situacion"/>
+    <skos:prefLabel xml:lang="es">subterráneo</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A8">
+    <rdf:rest rdf:nodeID="A5"/>
+    <rdf:first rdf:resource="http://geo.linkeddata.es/kos/supply-net/situacion/elevado"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/ConduccionDeCombustible">
+    <rdfs:comment xml:lang="es">Tubería e instalaciones conexas utilizadas para el transporte de combustibles.</rdfs:comment>
+    <terms:source xml:lang="es">Anexo A: Catálogo de Objetos Geográficos de BTN100.</terms:source>
+    <rdfs:label xml:lang="es">Conducción de combustible</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A6">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="http://geo.linkeddata.es/kos/supply-net/situacion/superficial"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A11">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/supply-net.owl#">
+    <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+    <rdfs:comment xml:lang="es">ontología globlal de dominio de redes de suministro de energía. </rdfs:comment>
+    <rdfs:comment xml:lang="es">Ontología global de dominio sobre redes de conducciones y energía</rdfs:comment>
+    <dc:publisher xml:lang="en">Ontology Engineering Group</dc:publisher>
+    <rdfs:comment xml:lang="en"></rdfs:comment>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v0.2</owl:versionInfo>
+    <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">suply-netOntology</dc:title>
+    <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lissete Moscoso León</dc:creator>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+</rdf:RDF>

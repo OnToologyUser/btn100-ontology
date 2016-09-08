@@ -1,0 +1,198 @@
+{
+  "@context" : {
+    "Alojamiento" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Alojamiento"
+    },
+    "ineCode" : {
+      "@id" : "http://geo.linkeddata.es/ontology/ineCode"
+    },
+    "versionInfo" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
+    },
+    "esCapitalDe" : {
+      "@id" : "http://geo.linkeddata.es/ontology/esCapitalDe",
+      "@type" : "@id"
+    },
+    "NucleoPoblacionalPuntual" : {
+      "@id" : "http://geo.linkeddata.es/ontology/NucleoPoblacionalPuntual"
+    },
+    "poblacion" : {
+      "@id" : "http://geo.linkeddata.es/ontology/poblacion",
+      "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+    },
+    "LugarDeInteres" : {
+      "@id" : "http://geo.linkeddata.es/ontology/LugarDeInteres"
+    },
+    "Castillo" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Castillo"
+    },
+    "Cantera" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Cantera"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "Concept" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "LugarDeOcio" : {
+      "@id" : "http://geo.linkeddata.es/ontology/LugarDeOcio"
+    },
+    "Gasolinera" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Gasolinera"
+    },
+    "SitioHistorico" : {
+      "@id" : "http://geo.linkeddata.es/ontology/SitioHistorico"
+    },
+    "Invernadero" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Invernadero"
+    },
+    "Puente" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Puente"
+    },
+    "Camping" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Camping"
+    },
+    "ParadorNacional" : {
+      "@id" : "http://geo.linkeddata.es/ontology/ParadorNacional"
+    },
+    "ZonaMilitar" : {
+      "@id" : "http://geo.linkeddata.es/ontology/ZonaMilitar"
+    },
+    "DiseminadoSuperficial" : {
+      "@id" : "http://geo.linkeddata.es/ontology/DiseminadoSuperficial"
+    },
+    "Balneario" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Balneario"
+    },
+    "JardinHistorico" : {
+      "@id" : "http://geo.linkeddata.es/ontology/JardinHistorico"
+    },
+    "ZonaDeUsoCaracteristico" : {
+      "@id" : "http://geo.linkeddata.es/ontology/ZonaDeUsoCaracteristico"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/elements/1.1/creator"
+    },
+    "ZonaPortuaria" : {
+      "@id" : "http://geo.linkeddata.es/ontology/ZonaPortuaria"
+    },
+    "Mina" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Mina"
+    },
+    "Albergue" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Albergue"
+    },
+    "ZonaUniversitaria" : {
+      "@id" : "http://geo.linkeddata.es/ontology/ZonaUniversitaria"
+    },
+    "ZonaVerde" : {
+      "@id" : "http://geo.linkeddata.es/ontology/ZonaVerde"
+    },
+    "ZonaRecreativa" : {
+      "@id" : "http://geo.linkeddata.es/ontology/ZonaRecreativa"
+    },
+    "PatrimonioDelaHumanidad" : {
+      "@id" : "http://geo.linkeddata.es/ontology/PatrimonioDelaHumanidad"
+    },
+    "VistaPanoramica" : {
+      "@id" : "http://geo.linkeddata.es/ontology/VistaPanoramica"
+    },
+    "estadoDeUso" : {
+      "@id" : "http://geo.linkeddata.es/ontology/estadoDeUso",
+      "@type" : "@id"
+    },
+    "Muralla" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Muralla"
+    },
+    "ConjuntoHistoricoArtistico" : {
+      "@id" : "http://geo.linkeddata.es/ontology/ConjuntoHistoricoArtistico"
+    },
+    "EdificioReligioso" : {
+      "@id" : "http://geo.linkeddata.es/ontology/EdificioReligioso"
+    },
+    "EdificioSingular" : {
+      "@id" : "http://geo.linkeddata.es/ontology/EdificioSingular"
+    },
+    "ConceptScheme" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme"
+    },
+    "Universidad" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Universidad"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/elements/1.1/title"
+    },
+    "ZonaMonumental" : {
+      "@id" : "http://geo.linkeddata.es/ontology/ZonaMonumental"
+    },
+    "AreaDeServicio" : {
+      "@id" : "http://geo.linkeddata.es/ontology/AreaDeServicio"
+    },
+    "source" : {
+      "@id" : "http://purl.org/dc/terms/source"
+    },
+    "publisher" : {
+      "@id" : "http://purl.org/dc/elements/1.1/publisher"
+    },
+    "EstacionInvernal" : {
+      "@id" : "http://geo.linkeddata.es/ontology/EstacionInvernal"
+    },
+    "Cementerio" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Cementerio"
+    },
+    "Hospital" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Hospital"
+    },
+    "Diseminado" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Diseminado"
+    },
+    "NucleoPoblacionalSuperficial" : {
+      "@id" : "http://geo.linkeddata.es/ontology/NucleoPoblacionalSuperficial"
+    },
+    "NucleoPoblacional" : {
+      "@id" : "http://geo.linkeddata.es/ontology/NucleoPoblacional"
+    },
+    "ZonaAeroportuaria" : {
+      "@id" : "http://geo.linkeddata.es/ontology/ZonaAeroportuaria"
+    },
+    "ZonaFerroviaria" : {
+      "@id" : "http://geo.linkeddata.es/ontology/ZonaFerroviaria"
+    },
+    "DiseminadoPuntual" : {
+      "@id" : "http://geo.linkeddata.es/ontology/DiseminadoPuntual"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "Cueva" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Cueva"
+    },
+    "ExplotacionMinera" : {
+      "@id" : "http://geo.linkeddata.es/ontology/ExplotacionMinera"
+    },
+    "ZonaIndustrial" : {
+      "@id" : "http://geo.linkeddata.es/ontology/ZonaIndustrial"
+    },
+    "ZonaDeportiva" : {
+      "@id" : "http://geo.linkeddata.es/ontology/ZonaDeportiva"
+    },
+    "bicCode" : {
+      "@id" : "http://geo.linkeddata.es/ontology/bicCode",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "prefLabel" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#prefLabel"
+    },
+    "inScheme" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#inScheme",
+      "@type" : "@id"
+    },
+    "InstalacionDeportiva" : {
+      "@id" : "http://geo.linkeddata.es/ontology/InstalacionDeportiva"
+    },
+    "ZonaArqueologica" : {
+      "@id" : "http://geo.linkeddata.es/ontology/ZonaArqueologica"
+    }
+  }
+}

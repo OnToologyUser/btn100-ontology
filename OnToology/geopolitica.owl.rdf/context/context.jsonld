@@ -1,0 +1,36 @@
+{
+  "@context" : {
+    "esCapitalDe" : {
+      "@id" : "http://geo.linkeddata.es/ontology/esCapitalDe",
+      "@type" : "@id"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "Provincia" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Provincia"
+    },
+    "Municipio" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Municipio"
+    },
+    "Pais" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Pais"
+    },
+    "ComunidadAutonoma" : {
+      "@id" : "http://geo.linkeddata.es/ontology/ComunidadAutonoma"
+    },
+    "territory" : {
+      "@id" : "http://aims.fao.org/aos/geopolitical.owl#territory"
+    },
+    "Capital" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Capital"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "tieneCapital" : {
+      "@id" : "http://geo.linkeddata.es/ontology/tieneCapital",
+      "@type" : "@id"
+    }
+  }
+}

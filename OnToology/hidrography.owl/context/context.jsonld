@@ -1,0 +1,98 @@
+{
+  "@context" : {
+    "Cabo" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Cabo"
+    },
+    "Albufera" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Albufera"
+    },
+    "categoriaDeRio" : {
+      "@id" : "http://geo.linkeddata.es/ontology/categoriaDeRio",
+      "@type" : "@id"
+    },
+    "Rambla" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Rambla"
+    },
+    "Cala" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Cala"
+    },
+    "Alberca" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Alberca"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "Laguna" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Laguna"
+    },
+    "Concept" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Estanque" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Estanque"
+    },
+    "AguasCorrientesArtificiales" : {
+      "@id" : "http://geo.linkeddata.es/ontology/AguasCorrientesArtificiales"
+    },
+    "Canyo" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Canyo"
+    },
+    "Isla" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Isla"
+    },
+    "regimenDeLaguna" : {
+      "@id" : "http://geo.linkeddata.es/ontology/regimenDeLaguna",
+      "@type" : "@id"
+    },
+    "ZonaHumeda" : {
+      "@id" : "http://geo.linkeddata.es/ontology/ZonaHumeda"
+    },
+    "Salina" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Salina"
+    },
+    "Marisma" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Marisma"
+    },
+    "categoriaDeIsla" : {
+      "@id" : "http://geo.linkeddata.es/ontology/categoriaDeIsla",
+      "@type" : "@id"
+    },
+    "ConceptScheme" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme"
+    },
+    "IslaMaritima" : {
+      "@id" : "http://geo.linkeddata.es/ontology/IslaMaritima"
+    },
+    "source" : {
+      "@id" : "http://purl.org/dc/elements/1.1/source"
+    },
+    "IslaFluvial" : {
+      "@id" : "http://geo.linkeddata.es/ontology/IslaFluvial"
+    },
+    "Esclusa" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Esclusa"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "Balsa" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Balsa"
+    },
+    "Morfologia" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Morfologia"
+    },
+    "Punta" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Punta"
+    },
+    "Pennon" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Pennon"
+    },
+    "prefLabel" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#prefLabel"
+    },
+    "inScheme" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#inScheme",
+      "@type" : "@id"
+    }
+  }
+}

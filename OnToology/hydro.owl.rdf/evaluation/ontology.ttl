@@ -1,0 +1,3609 @@
+@prefix :        <http://geo.linkeddata.es/ontology/> .
+@prefix dc:      <http://purl.org/dc/elements/1.1/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl2xml:  <http://www.w3.org/2006/12/owl2-xml#> .
+@prefix hydro-ontology:  <http://geo.linkeddata.es/ontology/hydro-ontology.owl#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix geopolitical:  <http://aims.fao.org/aos/geopolitical.owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+:Canalillo
+      a       owl:Class ;
+      rdfs:comment "Canal pequenno de conduccion de aguas"^^xsd:string ;
+      rdfs:label "Canalillo"@es ;
+      rdfs:subClassOf :CanalAguasContinentales ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty :conduce ;
+                owl:someValuesFrom :AguasSuperficiales
+              ] ;
+      dc:source "Moliner, Maria. Diccionario de uso del espannol. Madrid: Editorial Gredos. 1984. p. 1590. ISBN: 84-249-1344-2"^^xsd:string .
+
+:superficie_confinada
+      a       owl:DatatypeProperty ;
+      rdfs:domain :AguasSubterraneas , :AguasQuietas ;
+      rdfs:range xsd:float .
+
+:Regato
+      a       owl:Class ;
+      rdfs:comment "Arroyo muy pequeño"@es ;
+      rdfs:label "Regato"@es ;
+      rdfs:subClassOf :Arroyo ;
+      dc:source "Moliner, Maria. (1984) Diccionario de uso del espannol. Madrid: Editorial Gredos. pp. 1590. ISBN: 84-249-1344-2"^^xsd:string .
+
+:CapaDeHielo
+      a       owl:Class ;
+      rdfs:comment "Hielo en la superficie libre de una masa de agua, por ejemplo un lago o un rio"^^xsd:string ;
+      rdfs:label "Campo de hielo"@es ;
+      rdfs:subClassOf :Nevero ;
+      :provenance "Glosario Hidrologico Internacional - UNESCO"^^xsd:string ;
+      dc:source "Glosario Hidrologico Internacional - UNESCO"^^xsd:string .
+
+:fondo
+      a       owl:DatatypeProperty ;
+      rdfs:domain :AguasSubterraneas ;
+      rdfs:range xsd:string .
+
+:Ria  a       owl:Class ;
+      rdfs:comment "Parte del rio proxima a su desembocadura donde las aguas dulces se mezclan con las marinas durante la marea"^^xsd:string ;
+      rdfs:label "Ría"@es , "Ria"@en ;
+      rdfs:subClassOf :AguasDeTransicion ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty :es_comunicada_por ;
+                owl:someValuesFrom :Gola
+              ] ;
+      dc:source "Vazquez Maure F.; Martin Lopez J. (1987) Vocabulario de terminos geograficos. Ed. Ministerio de Obras Publicas y Urbanismo. Instituto Geografico Nacional. Madrid. ISBN: 84-505-4929-9."^^xsd:string .
+
+:curvatura
+      a       owl:DatatypeProperty ;
+      rdfs:domain :Meandro ;
+      rdfs:range xsd:string .
+
+:AltaMar
+      a       owl:Class ;
+      rdfs:comment "Todas aquellas partes del mar que no forman parte del mar territorial o de las aguas interiores, que aparecen situadas fuera de las doscientas millas."^^xsd:string ;
+      rdfs:label "Alta mar"@es , "Aguas Internacionales"@es ;
+      rdfs:subClassOf :AguasMarinas ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty :parte_de ;
+                owl:someValuesFrom :Mar
+              ] ;
+      dc:source "Diez de Velasco, Manuel (1999) Instituciones de derecho internacional publico. Duodecima edicion. Madrid: Tecnos. 924 p. ISBN: 84-309-3446-4"^^xsd:string .
+
+:CapaDeNieve
+      a       owl:Class ;
+      rdfs:comment "Nieve acumulada en el terreno."^^xsd:string ;
+      rdfs:label "Campo de nieve"@es ;
+      rdfs:subClassOf :Nevero ;
+      :provenance "Glosario Hidrologico Internacional - UNESCO"^^xsd:string ;
+      dc:source "Glosario Hidrologico Internacional - UNESCO"^^xsd:string .
+
+:Corriente
+      a       owl:Class ;
+      rdfs:comment "Aguas de un rio en movimiento"@es ;
+      rdfs:label "Corriente"@es ;
+      rdfs:subClassOf :AguasCorrientes ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom
+                        [ a       owl:Class ;
+                          owl:unionOf (:Lago :Rio)
+                        ] ;
+                owl:onProperty :parte_de
+              ] ;
+      :provenance "Getty Thesaurus of Geographic Names"@en ;
+      dc:source "Vazquez Maure F.; Martin Lopez J. (1987) Vocabulario de terminos geograficos. Ed. Ministerio de Obras Publicas y Urbanismo. Instituto Geografico Nacional. Madrid. ISBN: 84-505-4929-9 & Elaboracion propia"@es .
+
+:sometido_a_descarga_por
+      a       owl:ObjectProperty ;
+      rdfs:domain :Humedal ;
+      rdfs:range :AguasSubterraneas ;
+      rdfs:subPropertyOf :sometido .
+
+:Regajo
+      a       owl:Class ;
+      rdfs:comment "Arroyo pequeño"@es ;
+      rdfs:label "Regajo"@es ;
+      rdfs:subClassOf :Arroyo ;
+      dc:source "Diccionario de la Real Academia Espannola"^^xsd:string .
+
+:regimen
+      a       owl:DatatypeProperty ;
+      rdfs:comment """tabla segmentoLago columna HidroPeriodo_Cedex & Hidroperiodo
+Aplicar tb a segmentoRio columna Regimen"""^^xsd:string ;
+      rdfs:domain :AguasCorrientes , :AguasQuietas ;
+      rdfs:range
+              [ a       rdfs:Datatype ;
+                owl:oneOf
+                        [ a       rdf:List ;
+                          rdf:first "desconocido"^^xsd:string ;
+                          rdf:rest
+                                  [ a       rdf:List ;
+                                    rdf:first "permanente no fluctuante"^^xsd:string ;
+                                    rdf:rest
+                                            [ a       rdf:List ;
+                                              rdf:first "permantene fluctuante"^^xsd:string ;
+                                              rdf:rest
+                                                      [ a       rdf:List ;
+                                                        rdf:first "sin catalogar"^^xsd:string ;
+                                                        rdf:rest
+                                                                [ a       rdf:List ;
+                                                                  rdf:first "temporal erratico"^^xsd:string ;
+                                                                  rdf:rest
+                                                                          [ a       rdf:List ;
+                                                                            rdf:first "temporal estacional"^^xsd:string ;
+                                                                            rdf:rest ()
+                                                                          ]
+                                                                ]
+                                                      ]
+                                            ]
+                                  ]
+                        ]
+              ] .
+
+:AguasCorrientes
+      a       owl:Class ;
+      rdfs:comment "Aguas continentales situadas en la superficie del suelo que tienen o pueden tener un movimiento notable y continuo a traves de un cauce de origen natural o artificial."^^xsd:string ;
+      rdfs:label "Aguas corrientes"@es , "Curso fluvial"@es , "Flowing waters"@en , "Curso de agua"@es , "Cauce"@es , "Flujo fluvial"@es , "Corriente de agua"@es ;
+      rdfs:subClassOf :AguasSuperficiales ;
+      :provenance "Corriente de agua - Glosario Hidrologico Internacional - UNESCO"^^xsd:string , "Curso de agua - Data Specification. INSPIRE"^^xsd:string , "Flujo fluvial - Glosario Hidrologico Internacional. UNESCO"^^xsd:string ;
+      owl:equivalentClass
+              [ a       owl:Class ;
+                owl:unionOf (:AguasCorrientesArtificiales :AguasCorrientesNaturales)
+              ] .
+
+:Aguazal
+      a       owl:Class ;
+      rdfs:comment "Espacio al que fluye o confluye agua y tiene caracter pantanoso, generalmente con vegetacion palustre"^^xsd:string ;
+      rdfs:label "Aguazal"@es ;
+      rdfs:subClassOf :Cienaga ;
+      dc:source "Fontanillo, E. (1986) Diccionario de Geografia. Ed. Anaya. Madrid."^^xsd:string .
+
+:AguasDulces
+      a       owl:Class ;
+      rdfs:comment "Aguas que, independientemente de ser o no potable, tiene un contenido de sales tal que no llega a darle sabor"@es ;
+      rdfs:label "Aguas dulces"@es ;
+      dc:source "Diccionario de la Real Academia Española"@es ;
+      owl:equivalentClass
+              [ a       owl:Class ;
+                owl:intersectionOf (:Aguas [ a       owl:Class ;
+                            owl:complementOf :AguasSaladas
+                          ])
+              ] .
+
+:ZonaContigua
+      a       owl:Class ;
+      rdfs:comment "Zona de alta mar contigua al mar territorial que no puede extenderse mas alla de veinticuatro millas marinas contadas desde las lineas de base a, a partir de las cuales se mide la anchura del mar territorial."^^xsd:string ;
+      rdfs:label "Zona contigua"@es ;
+      rdfs:subClassOf :AguasMarinas ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty :parte_de ;
+                owl:someValuesFrom :Mar
+              ] ;
+      dc:source "Diez de Velasco, Manuel (1999) Instituciones de derecho internacional publico. Duodecima edicion. Madrid: Tecnos. 924 p. ISBN: 84-309-3446-4"^^xsd:string .
+
+geopolitical:territory
+      a       owl:Class .
+
+:Canyo
+      a       owl:Class ;
+      rdfs:comment "Corriente de agua salada. Puede ser un cauce maritimo angosto que se interna en tierra, una comunicacion entre una albufera y el mar, o un cauce despejado entre una marisma"^^xsd:string ;
+      rdfs:label "Caño"@es ;
+      rdfs:subClassOf :CanalAguasMarinas ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty :comunica_con ;
+                owl:someValuesFrom
+                        [ a       owl:Class ;
+                          owl:intersectionOf (:Albufera :Mar :Marisma)
+                        ]
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty :estaEn ;
+                owl:someValuesFrom :Marisma
+              ] ;
+      dc:source "Vazquez Maure F.; Martin Lopez J. (1987) Vocabulario de terminos geograficos. Ed. Ministerio de Obras Publicas y Urbanismo. Instituto Geografico Nacional. Madrid. ISBN: 84-505-4929-9."^^xsd:string .
+
+:eutrofizacion
+      a       owl:DatatypeProperty ;
+      rdfs:domain :Embalse ;
+      rdfs:range xsd:float .
+
+dc:creator
+      a       owl:AnnotationProperty .
+
+:Saladar
+      a       owl:Class ;
+      rdfs:comment "Lagunazo en que se cuaja la sal en las marismas"@es ;
+      rdfs:label "Saladar"@es ;
+      rdfs:subClassOf :Salina ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty :esta_proxima_a ;
+                owl:someValuesFrom :Marisma
+              ] ;
+      :provenance "Getty Thesaurus of Geographic Names"@en ;
+      dc:source "Diccionario de la Real Academia Española"^^xsd:string .
+
+:desembocaEn
+      a       owl:ObjectProperty ;
+      rdfs:comment "Dicho de unas aguas corrientes que vierten sus aguas al mar"@es ;
+      rdfs:domain
+              [ a       owl:Class ;
+                owl:unionOf (:CanalMarino :Rio)
+              ] ;
+      rdfs:range :AguasMarinas ;
+      rdfs:subPropertyOf :desagua_en .
+
+:coordenadas
+      a       owl:DatatypeProperty ;
+      rdfs:domain :FenomenoHidrografico , :Morfologia , :CuencaHidrografica .
+
+:Venaje
+      a       owl:Class ;
+      rdfs:comment "Conjunto de venas de agua y manantiales que dan origen a un río"@es ;
+      rdfs:label "Venaje"@es ;
+      rdfs:subClassOf :SurgenciaNatural ;
+      dc:source "Diccionario de la Real Academia Española"@es .
+
+:Laguna
+      a       owl:Class ;
+      rdfs:comment "Deposito natural de agua generalmente dulce, que hace referencia o a lagos de poca extension, o a otros que aunque de mayores dimensiones superficiales son de poca profundidad"^^xsd:string ;
+      rdfs:label "Lagoon"@en , "Laguna"@es ;
+      rdfs:subClassOf :AguasQuietasNaturales ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty :es_originado_por ;
+                owl:someValuesFrom
+                        [ a       owl:Class ;
+                          owl:unionOf (:Glaciar :Rio)
+                        ]
+              ] ;
+      dc:source "Fontanillo, E. (1986) Diccionario de Geografia. Ed. Anaya. Madrid & Diccionario de la Real Academia Espannola"^^xsd:string .
+
+:parte_de
+      a       owl:ObjectProperty ;
+      rdfs:domain
+              [ a       owl:Class ;
+                owl:unionOf (:AguasDeTransicion :Corriente :Embalse :HidronimoPuntual :Morfologia)
+              ] ;
+      rdfs:range
+              [ a       owl:Class ;
+                owl:unionOf (:AguasMarinas :Arroyo :Embalse :Lago :Laguna :Rio)
+              ] ;
+      owl:inverseOf :consta_de .
+
+:estado
+      a       owl:DatatypeProperty ;
+      rdfs:domain :Aguas ;
+      rdfs:range
+              [ a       rdfs:Datatype ;
+                owl:oneOf
+                        [ a       rdf:List ;
+                          rdf:first "liquido"^^xsd:string ;
+                          rdf:rest
+                                  [ a       rdf:List ;
+                                    rdf:first "solido"^^xsd:string ;
+                                    rdf:rest ()
+                                  ]
+                        ]
+              ] .
+
+:nivel_de_explotacion
+      a       owl:DatatypeProperty ;
+      rdfs:domain :AguasSubterraneas ;
+      rdfs:range xsd:string .
+
+:deposita_en
+      a       owl:ObjectProperty ;
+      rdfs:domain :AguasCorrientesNaturales ;
+      rdfs:range :Aluvion .
+
+:Manantial
+      a       owl:Class ;
+      rdfs:comment "Nacimiento de las aguas"^^xsd:string ;
+      rdfs:label "Spring"@en , "Manantial"@es ;
+      rdfs:subClassOf :SurgenciaNatural ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty :alimenta_a ;
+                owl:someValuesFrom :AguasCorrientesNaturales
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty :origina ;
+                owl:someValuesFrom :Chortal
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty :origina ;
+                owl:someValuesFrom
+                        [ a       owl:Class ;
+                          owl:unionOf ([ a       owl:Class ;
+                                      owl:intersectionOf (:AguasCorrientesNaturales [ a       owl:Class ;
+                                                  owl:complementOf :Glaciar
+                                                ])
+                                    ] [ a       owl:Class ;
+                                      owl:intersectionOf (:AguasQuietasNaturales [ a       owl:Class ;
+                                                  owl:complementOf :Bodon
+                                                ] [ a       owl:Class ;
+                                                  owl:complementOf :Ibon
+                                                ] [ a       owl:Class ;
+                                                  owl:complementOf :Lavajo
+                                                ] [ a       owl:Class ;
+                                                  owl:complementOf :Lucio
+                                                ] [ a       owl:Class ;
+                                                  owl:complementOf :MasaDeHielo
+                                                ])
+                                    ])
+                        ]
+              ] ;
+      dc:source "Vazquez Maure F.; Martin Lopez J. (1987) Vocabulario de terminos geograficos. Ed. Ministerio de Obras Publicas y Urbanismo. Instituto Geografico Nacional. Madrid. ISBN: 84-505-4929-9"^^xsd:string .
+
+:almacena
+      a       owl:ObjectProperty ;
+      rdfs:domain
+              [ a       owl:Class ;
+                owl:unionOf (:Aljibe :Embalse)
+              ] ;
+      rdfs:range
+              [ a       owl:Class ;
+                owl:unionOf (:Arroyo :Manantial :Rio)
+              ] ;
+      owl:inverseOf :es_almacenado_en .
+
+:FuenteSalada
+      a       owl:Class ;
+      rdfs:label "Fuente salada"@es ;
+      rdfs:subClassOf
+              [ a       owl:Class ;
+                owl:intersectionOf (:AguasContinentales :AguasSaladas)
+              ] .
+
+:transmite
+      a       owl:ObjectProperty ;
+      rdfs:domain :Acuitardo ;
+      rdfs:range :AguasSubterraneas ;
+      rdfs:subPropertyOf :permite .
+
+:EstanqueSalado
+      a       owl:Class ;
+      rdfs:label "Estanque salado"@es ;
+      rdfs:subClassOf
+              [ a       owl:Class ;
+                owl:intersectionOf (:AguasContinentales :AguasSaladas)
+              ] .
+
+:discurre_sobre
+      a       owl:ObjectProperty ;
+      rdfs:comment ""^^xsd:string ;
+      rdfs:domain :AguasCorrientesNaturales ;
+      rdfs:range :AguasCorrientesNaturales .
+
+:Lago
+      a       owl:Class ;
+      rdfs:comment "Gran masa permanente de agua depositada en una depresion del terreno, aunque puede haber casos en los que el lago dispone de un rio emisario que le conecta con otro lago o con el mar."^^xsd:string ;
+      rdfs:label "Lago"@es , "Lake"@en ;
+      rdfs:subClassOf :AguasQuietasNaturales ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty :dispone_de_emisario ;
+                owl:someValuesFrom :Rio
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom
+                        [ a       owl:Class ;
+                          owl:intersectionOf ([ a       owl:Class ;
+                                      owl:unionOf (:Glaciar :Rio)
+                                    ] [ a       owl:Class ;
+                                      owl:complementOf :Manantial
+                                    ])
+                        ] ;
+                owl:onProperty :es_originado_por
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty :es_conectado_con ;
+                owl:someValuesFrom
+                        [ a       owl:Class ;
+                          owl:unionOf (:Mar :Rio)
+                        ]
+              ] ;
+      dc:source "Fontanillo, E. (1986) Diccionario de Geografia. Ed. Anaya. Madrid & Diccionario de la Real Academia Espannola"^^xsd:string .
+
+:sometida_a_influencia_de
+      a       owl:ObjectProperty ;
+      rdfs:domain :AguasDeTransicion ;
+      rdfs:range
+              [ a       owl:Class ;
+                owl:unionOf (:AguasDulces :AguasSaladas)
+              ] ;
+      rdfs:subPropertyOf :sometido .
+
+:Acequia
+      a       owl:Class ;
+      rdfs:comment "Zanja o canal por donde son conducidas las aguas para el riego o para otros usos."^^xsd:string ;
+      rdfs:label "Irrigation ditch"@en , "Acequia"@es ;
+      rdfs:subClassOf :AguasCorrientesArtificiales ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :AguasCorrientesNaturales ;
+                owl:onProperty :conduce
+              ] ;
+      dc:source "Vazquez Maure F.; Martin Lopez J. Vocabulario de terminos geograficos. Madrid: Ministerio de Obras Publicas y Urbanismo. Instituto Geografico Nacional. 1987. 89 p. ISBN: 84-505-4929-9."^^xsd:string .
+
+:Recinto
+      a       owl:Class ;
+      rdfs:comment "Espacio que ha sido cercado con el proposito de contener agua"@es , "A space that has been enclosed for some purpose"@en ;
+      rdfs:label "Recinto"@es ;
+      rdfs:subClassOf :AguasQuietasArtificiales ;
+      dc:source "WordNet"@en .
+
+:descarga_en
+      a       owl:ObjectProperty ;
+      rdfs:domain :AguasSubterraneas ;
+      rdfs:range :ZonaHumeda ;
+      owl:inverseOf :sufre_descarga_de .
+
+:FuenteVauclusiana
+      a       owl:Class ;
+      rdfs:comment "Surgencia en regiones karsticas controlada por un sifon natural y que fluye de forma intermitente."^^xsd:string ;
+      rdfs:label "Fuente vauclusiana"@es ;
+      rdfs:subClassOf :FuenteNatural ;
+      :provenance "Glosario Hidrologico Internacional - UNESCO"^^xsd:string ;
+      dc:source "Glosario Hidrologico Internacional - UNESCO"^^xsd:string .
+
+:consta_de
+      a       owl:TransitiveProperty , owl:ObjectProperty ;
+      rdfs:domain
+              [ a       owl:Class ;
+                owl:unionOf (:AguasMarinas :Arroyo :Embalse :Lago :Laguna :Rio)
+              ] ;
+      rdfs:range
+              [ a       owl:Class ;
+                owl:unionOf (:AguasDeTransicion :Corriente :Embalse :HidronimoPuntual :Morfologia)
+              ] .
+
+:ZonaHumeda
+      a       owl:Class ;
+      rdfs:comment "Terreno sometido a una descarga difusa de agua subterranea sin que se manifieste forzosamente un flujo copioso de agua liquida, aunque suele ser inundable y estar generalmente cubierto de vegetacion freatofitica tipo soto o juncal"^^xsd:string ;
+      rdfs:label "Zona húmeda"@es ;
+      dc:source "Gonzalez Bernaldez, Fernando. (1992) Los paisajes del agua. Terminologia popular de los humedales. Madrid: J.M. Reyero Editor. 257 p. ISBN: 84-604-3756-6."^^xsd:string ;
+      owl:equivalentClass
+              [ a       owl:Class ;
+                owl:intersectionOf (:Humedal [ a       owl:Class ;
+                            owl:unionOf ([ a       owl:Class ;
+                                        owl:intersectionOf ([ a       owl:Restriction ;
+                                                    owl:allValuesFrom :AguasSuperficiales ;
+                                                    owl:onProperty :es_inundada_por
+                                                  ] [ a       owl:Restriction ;
+                                                    owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+                                                    owl:onProperty :es_inundada_por
+                                                  ])
+                                      ] [ a       owl:Restriction ;
+                                        owl:allValuesFrom :AguasSubterraneas ;
+                                        owl:onProperty :sufre_descarga_de
+                                      ])
+                          ])
+              ] .
+
+:naturaleza_quimica
+      a       owl:DatatypeProperty ;
+      rdfs:domain :AguasSubterraneas ;
+      rdfs:range xsd:string .
+
+:Piscina
+      a       owl:Class ;
+      rdfs:comment "Lugar descubierto para el almacenamiento de agua para la practica de la natacion"^^xsd:string ;
+      rdfs:label "Swimming pool"@en , "Piscina"@es ;
+      rdfs:subClassOf :Recinto ;
+      dc:source "Diccionario de la Real Academia Espannola & Elaboracion propia"^^xsd:string .
+
+:Desembocadura
+      a       owl:Class ;
+      rdfs:comment "Punto en el que finaliza el trazado de un curso fluvial. La desembocadura puede ser en otro curso fluvial, en un lago, en el mar, etc."@es ;
+      rdfs:label "Mouth"@en , "Desembocadura"@es ;
+      rdfs:subClassOf :HidronimoPuntual ;
+      rdfs:subClassOf
+              [ a       owl:Class ;
+                owl:intersectionOf ([ a       owl:Restriction ;
+                            owl:allValuesFrom :AguasMarinas ;
+                            owl:onProperty :precedeA
+                          ] [ a       owl:Restriction ;
+                            owl:allValuesFrom :Rio ;
+                            owl:onProperty :sigueA
+                          ] [ a       owl:Restriction ;
+                            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onProperty :precedeA
+                          ] [ a       owl:Restriction ;
+                            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onProperty :sigueA
+                          ])
+              ] ;
+      dc:source "Diccionario de la Real Academia Española & Elaboracion propia"@es .
+
+:AguasSuperficiales
+      a       owl:Class ;
+      rdfs:comment "Inland waters, except groundwater; transitional waters and coastal waters, except in respect of chemical status for which it shall also include territorial waters."^^xsd:string , "Aguas que incluyen las aguas continentales, excepto las aguas subterraneas; las aguas de transicion y las aguas costeras, y, en lo que se refiere al estado quimico, tambien las aguas territoriales"^^xsd:string ;
+      rdfs:label "Masa de agua superficial"@es , "Aguas Superficiales"@es , "Surface water"@en ;
+      rdfs:subClassOf :AguasContinentales ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty :es_distribuida ;
+                owl:someValuesFrom :Distribucion
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty :es_transvasada ;
+                owl:someValuesFrom :CanalAguasContinentales
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty :es_distribuida ;
+                owl:someValuesFrom :CanalAguasContinentales
+              ] ;
+      :provenance "Directiva Marco del Agua. Union Europea"^^xsd:string ;
+      dc:source "Directiva Marco del Agua. Union Europea"^^xsd:string , "European Parliament and the Council of the European Union. DIRECTIVE 2000/60/EC OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL for establishing a framework for Community action in the field of water policy. Brussels, 23 October 2000. p 72."^^xsd:string ;
+      owl:equivalentClass
+              [ a       owl:Class ;
+                owl:unionOf (:AguasCorrientes :AguasDeTransicion :AguasQuietas :Surgencia)
+              ] .
+
+:Desague
+      a       owl:Class ;
+      rdfs:comment "Conducto o canal por donde se da salida a las aguas hacia el mar, otro rio o un lago"^^xsd:string ;
+      rdfs:label "Drainpipe"@en , "Desaguadero"@es , "Desagüe"@es ;
+      rdfs:subClassOf :Tuberia ;
+      dc:source "Diccionario de la Real Academia Espannola & Fontanillo, E. (1986) Diccionario de Geografia. Ed. Anaya. Madrid."^^xsd:string ;
+      owl:equivalentClass
+              [ a       owl:Class ;
+                owl:intersectionOf ([ a       owl:Restriction ;
+                            owl:allValuesFrom
+                                    [ a       owl:Class ;
+                                      owl:unionOf (:AguasMarinas :AguasQuietas :Arroyo :Rio)
+                                    ] ;
+                            owl:onProperty :vierte_en
+                          ] [ a       owl:Restriction ;
+                            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onProperty :vierte_en
+                          ])
+              ] .
+
+:Fuente
+      a       owl:Class ;
+      rdfs:comment "Obra de fabrica en la que se hace brotar el agua por conduccion"^^xsd:string ;
+      rdfs:label "Fuente"@es ;
+      rdfs:subClassOf :Recinto ;
+      dc:source "Vazquez Maure F.; Martin Lopez J. (1987) Vocabulario de terminos geograficos. Ed. Ministerio de Obras Publicas y Urbanismo. Instituto Geografico"^^xsd:string .
+
+:Aluvion
+      a       owl:Class ;
+      rdfs:comment "Suelo formado por acumulacion de detritos, tales como lodos, gravas, guijarros y arenas, depositados por las aguas en desembocaduras y cauces de los rios y arroyos"@es ;
+      rdfs:label "Aluvión"@es ;
+      rdfs:subClassOf :Morfologia ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty :estaEn ;
+                owl:someValuesFrom :Desembocadura
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom
+                        [ a       owl:Class ;
+                          owl:unionOf (:Arroyo :Rio)
+                        ] ;
+                owl:onProperty :parte_de
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty :estaEn
+              ] ;
+      dc:source "Vazquez Maure F.; Martin Lopez J. (1987) Vocabulario de terminos geograficos. Ed. Ministerio de Obras Publicas y Urbanismo. Instituto Geografico Nacional. Madrid. ISBN: 84-505-4929-9."@es .
+
+:Embalse
+      a       owl:Class ;
+      rdfs:comment "Gran deposito que se forma artificialmente, por lo comun cerrando la boca de un valle mediante un dique o presa, y en el que se almacenan las aguas de un rio o arroyo, a fin de utilizarlas en el riego de terrenos, en el abastecimiento de poblaciones, en la produccion de energia electrica, etc."^^xsd:string ;
+      rdfs:label "Pantano"@es , "Reservoir"@en , "Embalse"@es ;
+      rdfs:subClassOf :Deposito ;
+      dc:source "Diccionario de la Real Academia Española"@es ;
+      owl:equivalentClass
+              [ a       owl:Class ;
+                owl:intersectionOf ([ a       owl:Restriction ;
+                            owl:allValuesFrom
+                                    [ a       owl:Class ;
+                                      owl:unionOf (:Arroyo :Rio)
+                                    ] ;
+                            owl:onProperty :almacena
+                          ] [ a       owl:Restriction ;
+                            owl:allValuesFrom :Rio ;
+                            owl:onProperty :parte_de
+                          ] [ a       owl:Restriction ;
+                            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onProperty :almacena
+                          ])
+              ] .
+
+:AguasContinentales
+      a       owl:Class ;
+      rdfs:comment "All standing or flowing water on the surface of the land, and all groundwater on the landward side of the baseline from which the breadth of territorial waters is measured."^^xsd:string , "Todas las aguas quietas o corrientes en la superficie del suelo y todas las aguas subterraneas situadas hacia tierra desde la linea que sirve de base para medir la anchura de las aguas territoriales."^^xsd:string ;
+      rdfs:label "Inland water"@en , "Masa de agua continental"@es , "Aguas continentales"@es ;
+      rdfs:subClassOf :Aguas ;
+      :provenance "Masa de agua continental - Nomenclator Conciso. Instituto Geografico Nacional"^^xsd:string ;
+      dc:source "European Parliament and the Council of the European Union. DIRECTIVE 2000/60/EC OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL for establishing a framework for Community action in the field of water policy. Brussels, 23 October 2000. p 72."^^xsd:string ;
+      owl:equivalentClass
+              [ a       owl:Class ;
+                owl:unionOf (:AguasSubterraneas :AguasSuperficiales)
+              ] .
+
+:CanalAguasMarinas
+      a       owl:Class ;
+      rdfs:comment "Brazos de mar, mas largos que anchos, que comunican dos mares. Dicese tambien de los pasos naturales entre islas o bajios."@es , "A relatively narrow body of water linking two larger bodies"@en ;
+      rdfs:label "Canal de aguas marinas"@es ;
+      dc:source "Fontanillo, E. (1986) Diccionario de Geografia. Ed. Anaya. Madrid."^^xsd:string , "WordNet"@en ;
+      owl:equivalentClass
+              [ a       owl:Class ;
+                owl:intersectionOf (:Canal [ a       owl:Restriction ;
+                            owl:allValuesFrom :AguasMarinas ;
+                            owl:onProperty :comunica_con
+                          ] [ a       owl:Restriction ;
+                            owl:allValuesFrom :AguasMarinas ;
+                            owl:onProperty :conduce
+                          ])
+              ] .
+
+:cuenca
+      a       owl:DatatypeProperty ;
+      rdfs:domain :AguasCorrientesNaturales .
+
+:Paul
+      a       owl:Class ;
+      rdfs:label "Paúl"@es ;
+      rdfs:subClassOf :Cienaga .
+
+:limites_geograficos
+      a       owl:DatatypeProperty ;
+      rdfs:domain :AguasSubterraneas ;
+      rdfs:range xsd:string .
+
+:Captacion
+      a       owl:Class ;
+      rdfs:comment "Acción y efecto de apoderarse un rio de las aguas de otro inmediato, cuando, por hallarse mas bajo o tener mayor fuerza excavadora el primero, uno de sus afluentes alcanza por su cabeza a otro del rio capturado y sirve de comunicacion o emisario entre los dos. Se conoce el fenomeno de captura por el codo brusco que presenta la unión del río capturador con el capturado"@es ;
+      rdfs:label "Captación"@es ;
+      rdfs:subClassOf :HidronimoPuntual ;
+      rdfs:subClassOf
+              [ a       owl:Class ;
+                owl:intersectionOf ([ a       owl:Restriction ;
+                            owl:onProperty :captura ;
+                            owl:someValuesFrom :Rio
+                          ] [ a       owl:Restriction ;
+                            owl:cardinality "2"^^xsd:nonNegativeInteger ;
+                            owl:onProperty :captura
+                          ])
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty :actua_de_emisario_de ;
+                owl:someValuesFrom :Rio
+              ] ;
+      dc:source "Novo, P.; Chicarro, F. (1957) Diccionario de Geologia y Ciencias afines. Tomo 1. Ed. Labor, S.A. Barcelona"@es .
+
+:Riacho
+      a       owl:Class ;
+      rdfs:comment "Río pequeño y de poco caudal"@es ;
+      rdfs:label "Riacho"@es ;
+      rdfs:subClassOf :Arroyo ;
+      dc:source "Diccionario de la Real Academia Española"@es .
+
+:Oceano
+      a       owl:Class ;
+      rdfs:comment "Grande y dilatado mar que cubre la mayor parte de la superficie terrestre"^^xsd:string ;
+      rdfs:label "Ocean"@en , "Océano"@es ;
+      rdfs:subClassOf :Mar ;
+      :provenance "Oceanographic geographical features - Data Specification of INSPIRE"^^xsd:string ;
+      dc:source "Diccionario de la Real Academia Espannola"^^xsd:string .
+
+:CorrienteSubterranea
+      a       owl:Class ;
+      rdfs:comment "Aguas que se encuentran bajo la superficie del suelo en la zona de saturacion y en contacto directo con el suelo o el subsuelo que tienen o pueden tener un movimiento notable y continuo a traves de un cauce de origen natural o artificial."^^xsd:string ;
+      rdfs:label "Corriente subterránea"@es , "Rio subterraneo"@es , "Subterranean stream"@en , "Corriente Bajo Tierra"@es ;
+      rdfs:subClassOf :AguasSubterraneas ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty :origina ;
+                owl:someValuesFrom
+                        [ a       owl:Class ;
+                          owl:unionOf (:Acuifero :Acuitardo)
+                        ]
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty :es_originado_por ;
+                owl:someValuesFrom :Sumidero
+              ] ;
+      :provenance "Glosario Hidrologico Internacional - UNESCO"^^xsd:string .
+
+:geologia
+      a       owl:DatatypeProperty ;
+      rdfs:domain :AguasQuietas ;
+      rdfs:range
+              [ a       rdfs:Datatype ;
+                owl:oneOf
+                        [ a       rdf:List ;
+                          rdf:first "agua"^^xsd:string ;
+                          rdf:rest
+                                  [ a       rdf:List ;
+                                    rdf:first "desconocido"^^xsd:string ;
+                                    rdf:rest
+                                            [ a       rdf:List ;
+                                              rdf:first "rocas carbonatadas"^^xsd:string ;
+                                              rdf:rest
+                                                      [ a       rdf:List ;
+                                                        rdf:first "rocas evaporiticas"^^xsd:string ;
+                                                        rdf:rest
+                                                                [ a       rdf:List ;
+                                                                  rdf:first "rocas mixtas carbonatado-evaporiticas"^^xsd:string ;
+                                                                  rdf:rest
+                                                                          [ a       rdf:List ;
+                                                                            rdf:first "rocas mixtas siliceo-carbonatadas"^^xsd:string ;
+                                                                            rdf:rest
+                                                                                    [ a       rdf:List ;
+                                                                                      rdf:first "rocas mixtas siliceo-carbonatado-evaporiticas"^^xsd:string ;
+                                                                                      rdf:rest
+                                                                                              [ a       rdf:List ;
+                                                                                                rdf:first "rocas siliceas"^^xsd:string ;
+                                                                                                rdf:rest ()
+                                                                                              ]
+                                                                                    ]
+                                                                          ]
+                                                                ]
+                                                      ]
+                                            ]
+                                  ]
+                        ]
+              ] .
+
+:volumen_de_extraccion
+      a       owl:DatatypeProperty ;
+      rdfs:domain :Acuifero ;
+      rdfs:range xsd:float .
+
+:drenaje
+      a       owl:DatatypeProperty ;
+      rdfs:domain :AguasQuietas ;
+      rdfs:range
+              [ a       rdfs:Datatype ;
+                owl:oneOf
+                        [ a       rdf:List ;
+                          rdf:first "abierto mixto"^^xsd:string ;
+                          rdf:rest
+                                  [ a       rdf:List ;
+                                    rdf:first "abierto subterraneo"^^xsd:string ;
+                                    rdf:rest
+                                            [ a       rdf:List ;
+                                              rdf:first "abierto superficial"^^xsd:string ;
+                                              rdf:rest
+                                                      [ a       rdf:List ;
+                                                        rdf:first "cerrado"^^xsd:string ;
+                                                        rdf:rest
+                                                                [ a       rdf:List ;
+                                                                  rdf:first "desconocido"^^xsd:string ;
+                                                                  rdf:rest
+                                                                          [ a       rdf:List ;
+                                                                            rdf:first "mixto"^^xsd:string ;
+                                                                            rdf:rest
+                                                                                    [ a       rdf:List ;
+                                                                                      rdf:first "sin catalogar"^^xsd:string ;
+                                                                                      rdf:rest ()
+                                                                                    ]
+                                                                          ]
+                                                                ]
+                                                      ]
+                                            ]
+                                  ]
+                        ]
+              ] .
+
+:se_extrae
+      a       owl:ObjectProperty ;
+      rdfs:domain
+              [ a       owl:Class ;
+                owl:unionOf (:FuenteArtesana :FuenteArtificial :Pozo)
+              ] ;
+      rdfs:range :Acuifero ;
+      rdfs:subPropertyOf :es_alimentada_por .
+
+:AguasCorrientesNaturales
+      a       owl:Class ;
+      rdfs:comment "Aguas continentales situadas en la superficie del suelo que tienen o pueden tener un movimiento notable y continuo a traves de un cauce de origen natural"^^xsd:string ;
+      rdfs:label "Aguas corrientes naturales"@es , "Corriente fluvial"@es , "Cursos de agua naturales"@es , "Aguas naturales"@es , "Curso natural de agua"@es , "Corriente de agua"@es , "Natural flowing water"@en ;
+      rdfs:subClassOf :AguasCorrientes ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty :es_originado_por ;
+                owl:someValuesFrom
+                        [ a       owl:Class ;
+                          owl:unionOf (:Glaciar :Manantial :MasaDeHielo :Nacimiento)
+                        ]
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom
+                        [ a       owl:Class ;
+                          owl:unionOf (:AguasCorrientes :AguasQuietasNaturales :Embalse :Manantial)
+                        ] ;
+                owl:onProperty :es_alimentada_por
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom
+                        [ a       owl:Class ;
+                          owl:unionOf (:AguasCorrientes :AguasQuietas)
+                        ] ;
+                owl:onProperty :desagua_en
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty :deposita_en ;
+                owl:someValuesFrom :Aluvion
+              ] ;
+      :provenance "Aguas naturales - Catalogo de entidades para el Nomenclator de Base Topografica Nacional 1:25000 (BTN25). Instituto Geografico Nacional"^^xsd:string , "Corriente de agua - Glosario Hidrologico Internacional - UNESCO"^^xsd:string ;
+      owl:equivalentClass
+              [ a       owl:Class ;
+                owl:unionOf (:Arroyo :Glaciar :Rambla :Rio)
+              ] .
+
+:Dren
+      a       owl:Class ;
+      rdfs:comment "Conducto o pequenno canal por el que se evacua por gravedad el agua del suelo o de un acuifero para controlar el nivel de agua."^^xsd:string ;
+      rdfs:label "Dren"@es ;
+      rdfs:subClassOf :Conducto ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty :evacua_de ;
+                owl:someValuesFrom
+                        [ a       owl:Class ;
+                          owl:unionOf (:Acuifero :ZonaEncharcable)
+                        ]
+              ] ;
+      :provenance "Glosario Hidrologico Internacional - UNESCO"^^xsd:string ;
+      dc:source "Glosario Hidrologico Internacional - UNESCO"^^xsd:string ;
+      owl:equivalentClass
+              [ a       owl:Class ;
+                owl:intersectionOf (:Conducto [ a       owl:Restriction ;
+                            owl:onProperty :evacua_de ;
+                            owl:someValuesFrom
+                                    [ a       owl:Class ;
+                                      owl:unionOf (:Acuifero :ZonaEncharcable)
+                                    ]
+                          ])
+              ] .
+
+:Estuario
+      a       owl:Class ;
+      rdfs:comment "Ancha boca de rio, donde la depresion del cauce permite la entrada de las aguas marinas en la marea, por ello, se produce mezcla de agua dulce y salada"^^xsd:string , "The wide part of a river where it nears the sea; fresh and salt water mix"^^xsd:string ;
+      rdfs:label "Estuario"@es ;
+      rdfs:subClassOf :AguasDeTransicion ;
+      dc:source "Vazquez Maure F.; Martin Lopez J. (1987) Vocabulario de terminos geograficos. Ed. Ministerio de Obras Publicas y Urbanismo. Instituto Geografico Nacional. Madrid. ISBN: 84-505-4929-9 & WordNet"^^xsd:string .
+
+:FuenteArtificial
+      a       owl:Class ;
+      rdfs:comment "Obra de fabrica en la que se hace brotar el agua por conduccion"^^xsd:string ;
+      rdfs:label "Fuente"@es , "Fuente artificial"@es ;
+      rdfs:subClassOf :SurgenciaArtificial ;
+      rdfs:subClassOf
+              [ a       owl:Class ;
+                owl:intersectionOf ([ a       owl:Restriction ;
+                            owl:allValuesFrom :Tuberia ;
+                            owl:onProperty :es_alimentada_por
+                          ] [ a       owl:Restriction ;
+                            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onProperty :es_alimentada_por
+                          ])
+              ] ;
+      dc:source "Vazquez Maure F.; Martin Lopez J. (1987) Vocabulario de terminos geograficos. Ed. Ministerio de Obras Publicas y Urbanismo. Instituto Geografico Nacional. Madrid. ISBN: 84-505-4929-9"^^xsd:string .
+
+:se_extrae_para
+      a       owl:ObjectProperty ;
+      rdfs:domain :Acuifero ;
+      rdfs:range
+              [ a       owl:Class ;
+                owl:unionOf (:FuenteArtesana :FuenteArtificial :Pozo)
+              ] ;
+      rdfs:subPropertyOf :alimenta_a ;
+      owl:inverseOf :se_extrae .
+
+<http://geo.linkeddata.es/ontology/hydro.owl>
+      a       owl:Ontology ;
+      rdfs:comment ""@en , "Ontología global de dominio sobre fenómenos hidrográficos"@es ;
+      dc:creator "Luis Manuel Vilches-Blázquez"^^xsd:string ;
+      dc:publisher "Ontology Engineering Group"@en ;
+      dc:title "hydrOntology"^^xsd:string ;
+      owl:versionInfo "v0.2"^^xsd:string .
+
+:AguasQuietasArtificiales
+      a       owl:Class ;
+      rdfs:comment "Aguas continentales situadas en la superficie del suelo que no tienen un movimiento notable y continuo debido al flujo de agua a traves de un cauce de origen artificial"^^xsd:string ;
+      rdfs:label "Artificial standing water"@en , "Aguas artificiales"@es , "Almacenamiento de agua"@es , "Embalsamiento de agua"@es , "Masa de agua embalsada"@es , "Aguas quietas artificiales"@es ;
+      rdfs:subClassOf :AguasQuietas ;
+      :provenance "Masa de agua embalsada - Nomenclator Conciso. Instituto Geografico Nacional"^^xsd:string , "Almacenamiento de agua - Catalogo de fenomenos de la Base Topografica Nacional (BTN). Instituto Geografico Nacional"^^xsd:string , "Aguas artificiales - Catalogo de entidades para el Nomenclator de la Base Topografica Nacional 1:25000 (BTN25). Instituto Geografico Nacional"^^xsd:string ;
+      dc:source "Elaboracion propia"^^xsd:string ;
+      owl:equivalentClass
+              [ a       owl:Class ;
+                owl:unionOf (:Deposito :Recinto)
+              ] .
+
+:CuencaHidrografica
+      a       owl:Class ;
+      rdfs:comment "Todo el espacio que drena las aguas que van a parar a un determinado rio y que estos vierten a un mismo mar u oceano"^^xsd:string ;
+      rdfs:label "Cuenca fluvial"@es , "Cuenca hidrográfica"@es ;
+      dc:source "Cuenca fluvial - Glosario Hidrologico Internacional. UNESCO"^^xsd:string , "Fontanillo, E. (1986) Diccionario de Geografia. Ed. Anaya. Madrid."^^xsd:string .
+
+:tipologia_de_surgencia
+      a       owl:DatatypeProperty ;
+      rdfs:domain :Surgencia ;
+      rdfs:range
+              [ a       rdfs:Datatype ;
+                owl:oneOf
+                        [ a       rdf:List ;
+                          rdf:first "difusa"^^xsd:string ;
+                          rdf:rest
+                                  [ a       rdf:List ;
+                                    rdf:first "puntual"^^xsd:string ;
+                                    rdf:rest ()
+                                  ]
+                        ]
+              ] .
+
+:riesgo_quimico
+      a       owl:DatatypeProperty ;
+      rdfs:comment "tabla MasaSubterranea_Riesgo Quimico columna sustancia"^^xsd:string ;
+      rdfs:domain :AguasSubterraneas ;
+      rdfs:range xsd:string .
+
+:geometria
+      a       owl:DatatypeProperty ;
+      rdfs:domain :FenomenoHidrografico , :Morfologia , :CuencaHidrografica .
+
+:Riachuelo
+      a       owl:Class ;
+      rdfs:comment "A natural stream of water smaller than a river (and often a tributary of a river)"@en , "Río pequeño y de poco caudal que con frecuencia es afluente de un río"@es ;
+      rdfs:label "Riachuelo"@es ;
+      rdfs:subClassOf :Arroyo ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty :es_afluente_de ;
+                owl:someValuesFrom :Rio
+              ] ;
+      dc:source "Novo, P.; Chicarro, F. (1957) Diccionario de Geologia y Ciencias afines. Tomo 1. Ed. Labor, S.A. Barcelona & Diccionario de la Real Academia Española"@es , "WordNet"@en .
+
+:inunda
+      a       owl:ObjectProperty ;
+      rdfs:domain
+              [ a       owl:Class ;
+                owl:unionOf (:AguasCosteras :Rio)
+              ] ;
+      rdfs:range
+              [ a       owl:Class ;
+                owl:unionOf (:Estero :Marisma :ZonaEncharcable :ZonaHumeda)
+              ] .
+
+:grado_de_intervencion
+      a       owl:DatatypeProperty ;
+      rdfs:domain :AguasQuietas ;
+      rdfs:range
+              [ a       rdfs:Datatype ;
+                owl:oneOf
+                        [ a       rdf:List ;
+                          rdf:first "alto, esencial en la funcionalidad actual"^^xsd:string ;
+                          rdf:rest
+                                  [ a       rdf:List ;
+                                    rdf:first "bajo, no afecta a la funcionalidad"^^xsd:string ;
+                                    rdf:rest
+                                            [ a       rdf:List ;
+                                              rdf:first "desconocido"^^xsd:string ;
+                                              rdf:rest
+                                                      [ a       rdf:List ;
+                                                        rdf:first "medio, afecta algo"^^xsd:string ;
+                                                        rdf:rest
+                                                                [ a       rdf:List ;
+                                                                  rdf:first "sin catalogar"^^xsd:string ;
+                                                                  rdf:rest ()
+                                                                ]
+                                                      ]
+                                            ]
+                                  ]
+                        ]
+              ] .
+
+:Rio  a       owl:Class ;
+      rdfs:comment "A body of inland water flowing for the most part on the surface of the land but which may flow underground for part of its course."@en , "Masa de agua continental que fluye en su mayor parte sobre la superficie del suelo, pero que puede fluir bajo tierra en parte de su curso"@es ;
+      rdfs:label "Curso fluvial"@es , "Curso de agua principal"@es , "River"@en , "Río"@es ;
+      rdfs:subClassOf :AguasCorrientesNaturales ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty :es_alimentada_por ;
+                owl:someValuesFrom
+                        [ a       owl:Class ;
+                          owl:unionOf (:Glaciar :Manantial :MasaDeHielo)
+                        ]
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Class ;
+                owl:intersectionOf ([ a       owl:Restriction ;
+                            owl:allValuesFrom :Nacimiento ;
+                            owl:onProperty :es_originado_por
+                          ] [ a       owl:Restriction ;
+                            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onProperty :es_originado_por
+                          ])
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom
+                        [ a       owl:Class ;
+                          owl:unionOf (:Marisma :ZonaEncharcable :ZonaHumeda)
+                        ] ;
+                owl:onProperty :inunda
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty :puede_fluir_como ;
+                owl:someValuesFrom :CorrienteSubterranea
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty :conecta_con ;
+                owl:someValuesFrom :Lago
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :AguasCorrientesNaturales ;
+                owl:onProperty :tiene_afluente
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty :estaEn ;
+                owl:someValuesFrom :Barranco
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty :actua_de_emisario_de ;
+                owl:someValuesFrom :Lago
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :Captacion ;
+                owl:onProperty :es_capturado
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty :es_almacenado_en ;
+                owl:someValuesFrom :Embalse
+              ] ;
+      :provenance "Curso de agua principal - Catalogo de fenomenos. Proyecto GEOALEX"@es , "Río - Directiva Marco del Agua. Union Europea"@es , "River - Water Framework Directive. European Union"@en ;
+      dc:source "Water Framework Directive. European Union"@en ;
+      owl:equivalentClass
+              [ a       owl:Class ;
+                owl:unionOf ([ a       owl:Class ;
+                            owl:intersectionOf ([ a       owl:Restriction ;
+                                        owl:allValuesFrom :AguasMarinas ;
+                                        owl:onProperty :desembocaEn
+                                      ] [ a       owl:Restriction ;
+                                        owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                                        owl:onProperty :desembocaEn
+                                      ])
+                          ] [ a       owl:Restriction ;
+                            owl:allValuesFrom
+                                    [ a       owl:Class ;
+                                      owl:unionOf (:Lago :Rio)
+                                    ] ;
+                            owl:onProperty :desagua_en
+                          ])
+              ] ;
+      owl:equivalentClass
+              [ a       owl:Restriction ;
+                owl:onProperty :consta_de ;
+                owl:someValuesFrom
+                        [ a       owl:Class ;
+                          owl:unionOf (:AguasDeTransicion :Corriente :Embalse :HidronimoPuntual :Morfologia)
+                        ]
+              ] .
+
+:evacua_de
+      a       owl:ObjectProperty ;
+      rdfs:domain :Dren ;
+      rdfs:range
+              [ a       owl:Class ;
+                owl:unionOf (:Acuifero :ZonaEncharcable)
+              ] .
+
+:pendiente
+      a       owl:DatatypeProperty ;
+      rdfs:domain :Rapido ;
+      rdfs:range xsd:float .
+
+dc:title
+      a       owl:AnnotationProperty .
+
+:Reguero
+      a       owl:Class ;
+      rdfs:comment "Corriente, a modo de chorro o de arroyo pequenno, que se hace de un liquido."^^xsd:string ;
+      rdfs:label "Reguero"@es ;
+      rdfs:subClassOf :Arroyo ;
+      dc:source "Diccionario de la Real Academia Española de la Lengua"@es .
+
+:LagoSubterraneo
+      a       owl:Class ;
+      rdfs:label "Lago subterráneo"@es , "Subterranean lake"@en ;
+      rdfs:subClassOf :AguasSubterraneas ;
+      :provenance "GeoNames"^^xsd:string .
+
+:Salina
+      a       owl:Class ;
+      rdfs:comment "Terreno susceptible de recibir agua salada a voluntad, donde mediante una serie de estanques de evaporacion y cristalizacion se extraen las sales contenidas en ella. Las mas usuales son las construidas en la proximidad del mar, pero podemos encontrarlas tambien en puntos del interior de los continentes, construidas junto a fuentes de aguas salinas"^^xsd:string ;
+      rdfs:label "Salina"@es ;
+      rdfs:subClassOf :Recinto ;
+      rdfs:subClassOf
+              [ a       owl:Class ;
+                owl:intersectionOf ([ a       owl:Restriction ;
+                            owl:onProperty :esta_proxima_a ;
+                            owl:someValuesFrom :AguasMarinas
+                          ] [ a       owl:Restriction ;
+                            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onProperty :esta_proxima_a
+                          ])
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty :es_alimentada_por ;
+                owl:someValuesFrom
+                        [ a       owl:Class ;
+                          owl:unionOf (:AguasMarinas :Manantial)
+                        ]
+              ] ;
+      dc:source "Fontanillo, E. (1986) Diccionario de Geografia. Ed. Anaya. Madrid."^^xsd:string .
+
+:provenance
+      a       owl:AnnotationProperty .
+
+:LagunaSalada
+      a       owl:Class ;
+      rdfs:comment "Deposito natural de agua salobre y con dimensiones reducidas"@es ;
+      rdfs:label "Laguna salada"@es ;
+      rdfs:subClassOf :Laguna , :AguasSaladas ;
+      rdfs:subClassOf
+              [ a       owl:Class ;
+                owl:intersectionOf ([ a       owl:Restriction ;
+                            owl:onProperty :es_alimentada_por ;
+                            owl:someValuesFrom :AguasMarinas
+                          ] [ a       owl:Restriction ;
+                            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onProperty :es_alimentada_por
+                          ])
+              ] ;
+      dc:source "Diccionario de la Real Academia Española & Elaboracion propia"@es .
+
+:Lucio
+      a       owl:Class ;
+      rdfs:comment "Laguna formada en el interior de una marisma"@es ;
+      rdfs:label "Lucio"@es ;
+      rdfs:subClassOf :Charca ;
+      dc:source "Vazquez Maure F.; Martin Lopez J. (1987) Vocabulario de terminos geograficos. Ed. Ministerio de Obras Publicas y Urbanismo. Instituto Geografico Nacional. Madrid. ISBN: 84-505-4929-9."^^xsd:string ;
+      owl:equivalentClass
+              [ a       owl:Class ;
+                owl:intersectionOf ([ a       owl:Restriction ;
+                            owl:allValuesFrom :Marisma ;
+                            owl:onProperty :es_originado_por
+                          ] [ a       owl:Restriction ;
+                            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onProperty :es_originado_por
+                          ])
+              ] .
+
+:es_conectado_con
+      a       owl:ObjectProperty ;
+      rdfs:domain
+              [ a       owl:Class ;
+                owl:unionOf (:Lago :Rio)
+              ] ;
+      rdfs:range
+              [ a       owl:Class ;
+                owl:unionOf (:Confluencia :Mar :Rio)
+              ] ;
+      owl:inverseOf :conecta_con .
+
+:Rambla
+      a       owl:Class ;
+      rdfs:comment "Rio de lecho muy ancho, pero casi permanentemente seco, por donde solo discurren aguas durante avenidas torrenciales"^^xsd:string ;
+      rdfs:label "Rambla"@es ;
+      rdfs:subClassOf :Rio ;
+      dc:source "Vazquez Maure F.; Martin Lopez J. (1987) Vocabulario de terminos geograficos. Ed. Ministerio de Obras Publicas y Urbanismo. Instituto Geografico Nacional. Madrid. ISBN: 84-505-4929-9."^^xsd:string ;
+      owl:equivalentClass
+              [ a       owl:Class ;
+                owl:intersectionOf ([ a       owl:Class ;
+                            owl:intersectionOf ([ a       owl:Restriction ;
+                                        owl:onProperty :es_originado_por ;
+                                        owl:someValuesFrom :Torrente
+                                      ] [ a       owl:Restriction ;
+                                        owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+                                        owl:onProperty :es_originado_por
+                                      ])
+                          ] [ a       owl:Restriction ;
+                            owl:allValuesFrom :Barranco ;
+                            owl:onProperty :estaEn
+                          ] [ a       owl:Restriction ;
+                            owl:allValuesFrom :AguasCorrientesNaturales ;
+                            owl:onProperty :tiene_afluente
+                          ])
+              ] .
+
+:tipologia_fluvial
+      a       owl:DatatypeProperty ;
+      rdfs:comment "Tabla SegmentoRio columna Tipologia OJO!! En esta tabla aparece el codigo 80 que esta referido a Embalses"^^xsd:string ;
+      rdfs:domain :Rio ;
+      rdfs:range
+              [ a       rdfs:Datatype ;
+                owl:oneOf
+                        [ a       rdf:List ;
+                          rdf:first "ejes mediterraneo - continentales mineralizados (grandes rios mineralizados)"^^xsd:string ;
+                          rdf:rest
+                                  [ a       rdf:List ;
+                                    rdf:first "ejes mediterraneo - continentales poco mineralizados (grandes rios poco mineralizados)"^^xsd:string ;
+                                    rdf:rest
+                                            [ a       rdf:List ;
+                                              rdf:first "grandes ejes en ambiente mediterraneo (grandes ejes mediterraneos)"^^xsd:string ;
+                                              rdf:rest
+                                                      [ a       rdf:List ;
+                                                        rdf:first "rios de alta montanna (alta montanna)"^^xsd:string ;
+                                                        rdf:rest
+                                                                [ a       rdf:List ;
+                                                                  rdf:first "rios de montanna humeda calcarea (montanna humeda)"^^xsd:string ;
+                                                                  rdf:rest
+                                                                          [ a       rdf:List ;
+                                                                            rdf:first "rios de montanna mediterranea calcarea (montanna calcarea)"^^xsd:string ;
+                                                                            rdf:rest
+                                                                                    [ a       rdf:List ;
+                                                                                      rdf:first "rios de montanna mediterranea silicea (montanna silicea)"^^xsd:string ;
+                                                                                      rdf:rest
+                                                                                              [ a       rdf:List ;
+                                                                                                rdf:first "rios mineralizados de baja montanna mediterranea (depresion)"^^xsd:string ;
+                                                                                                rdf:rest ()
+                                                                                              ]
+                                                                                    ]
+                                                                          ]
+                                                                ]
+                                                      ]
+                                            ]
+                                  ]
+                        ]
+              ] .
+
+:Deposito
+      a       owl:Class ;
+      rdfs:comment "Lugar donde se almacena algo; en los mapas suelen referirse a agua"^^xsd:string ;
+      rdfs:label "Depósito"@es , "Water tank"@en , "Almacenamiento de agua"@es , "Embalsamiento de agua"@es ;
+      rdfs:subClassOf :AguasQuietasArtificiales ;
+      dc:source "Vazquez Maure F.; Martin Lopez J. (1987) Vocabulario de terminos geograficos. Ed. Ministerio de Obras Publicas y Urbanismo. Instituto Geografico"^^xsd:string .
+
+:es_alimentada_por
+      a       owl:ObjectProperty ;
+      rdfs:domain
+              [ a       owl:Class ;
+                owl:unionOf (:AguasCorrientesNaturales :AguasQuietasNaturales :AguasSubterraneas :FuenteArtificial :Salina)
+              ] ;
+      rdfs:range
+              [ a       owl:Class ;
+                owl:unionOf (:AguasMarinas :AguasSuperficiales)
+              ] ;
+      owl:inverseOf :alimenta_a .
+
+:Charca
+      a       owl:Class ;
+      rdfs:comment "Laguna pequenna y poco profunda"^^xsd:string ;
+      rdfs:label "Pool"@en , "Charca"@es ;
+      rdfs:subClassOf :AguasQuietasNaturales ;
+      rdfs:subClassOf
+              [ a       owl:Class ;
+                owl:intersectionOf ([ a       owl:Restriction ;
+                            owl:onProperty :es_originado_por ;
+                            owl:someValuesFrom
+                                    [ a       owl:Class ;
+                                      owl:unionOf (:Arroyo :Glaciar :Manantial :Marisma :MasaDeHielo)
+                                    ]
+                          ] [ a       owl:Restriction ;
+                            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onProperty :es_originado_por
+                          ])
+              ] ;
+      dc:source "Seco, Manuel. Diccionario del espannol actual. Madrid: Editorial Aguilar. 1999 & Elaboracion propia"^^xsd:string .
+
+:es_transvasada
+      a       owl:ObjectProperty ;
+      rdfs:domain :AguasSuperficiales ;
+      rdfs:range :CanalAguasContinentales ;
+      rdfs:subPropertyOf :es_conducido_por .
+
+:tipologia
+      a       owl:DatatypeProperty ;
+      rdfs:comment "tabla SegmentoLago columna Tipo"^^xsd:string ;
+      rdfs:domain :AguasSubterraneas , :AguasQuietas ;
+      rdfs:seeAlso "Aguas_Quietas: {\"alta montanna, dimictico, aguas acidas\", \"alta montanna, dimictico, aguas alcalinas\", \"alta montanna, monomictico frio, aguas acidas\", \"interior en cuenca de sedimentacion no carstico, permanente, somero, no salino\", \"interior en cuenca de sedimentacion, carstico, aportacion mixta\", \"interior en cuenca de sedimentacion, carstico, hipogenico grande\", \"interior en cuenca de sedimentacion, carstico, hipogenico, pequenno\", \"interior en cuenca de sedimentacion, no carstico, permanente profundo, salino\", \"interior en cuenca de sedimentacion, no carstico, permanente, profundo, no salino\", \"interior en cuenca de sedimentacion, no carstico, permanente, somero, salino\", \"interior en cuenca de sedimentacion, no carstico, temporal, no salino, aguas acidas\", \"interior en cuenca de sedimentacion, no carstico, temporal, no salino, aguas alcalinas\", \"interior en cuenca de sedimentacion, no carstico, temporal, salino\", \"litoral en complejos dunares\", \"litoral tipo marjal\", \"media montanna, monomictico calido, aguas acidas\", \"media montanna, monomictico calido, aguas alcalinas\", \"media montanna, monomictico frio, aguas alcalinas\"}"@es .
+
+:Confluencia
+      a       owl:Class ;
+      rdfs:comment "Union de dos corrientes fluviales"@es ;
+      rdfs:label "Confluencia"@es ;
+      rdfs:subClassOf :HidronimoPuntual ;
+      rdfs:subClassOf
+              [ a       owl:Class ;
+                owl:intersectionOf ([ a       owl:Restriction ;
+                            owl:onProperty :conecta_con ;
+                            owl:someValuesFrom :Rio
+                          ] [ a       owl:Restriction ;
+                            owl:cardinality "2"^^xsd:nonNegativeInteger ;
+                            owl:onProperty :conecta_con
+                          ])
+              ] ;
+      dc:source "Vazquez Maure F.; Martin Lopez J. (1987) Vocabulario de terminos geograficos. Ed. Ministerio de Obras Publicas y Urbanismo. Instituto Geografico Nacional. Madrid. ISBN: 84-505-4929-9."@es .
+
+:Toma
+      a       owl:Class ;
+      rdfs:comment "Nacimiento, renacimiento o sumidero"^^xsd:string ;
+      rdfs:label "Irrigation channel"@en , "Toma"@es , "Boca"@es ;
+      rdfs:subClassOf :SurgenciaArtificial ;
+      dc:source "Elaboracion propia"^^xsd:string .
+
+:Galacho
+      a       owl:Class ;
+      rdfs:comment "Barranco que excavan las aguas al correr por las pendientes del terreno"^^xsd:string ;
+      rdfs:label "Galacho"@es ;
+      rdfs:subClassOf :Barranco ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :Rio ;
+                owl:onProperty :parte_de
+              ] ;
+      dc:source "Vazquez Maure F.; Martin Lopez J. (1987) Vocabulario de terminos geograficos. Ed. Ministerio de Obras Publicas y Urbanismo. Instituto Geografico Nacional. Madrid. ISBN: 84-505-4929-9."^^xsd:string .
+
+:mezcla
+      a       owl:DatatypeProperty ;
+      rdfs:domain :AguasQuietas ;
+      rdfs:range
+              [ a       rdfs:Datatype ;
+                owl:oneOf
+                        [ a       rdf:List ;
+                          rdf:first "dimictico"^^xsd:string ;
+                          rdf:rest
+                                  [ a       rdf:List ;
+                                    rdf:first "monomictico calido"^^xsd:string ;
+                                    rdf:rest
+                                            [ a       rdf:List ;
+                                              rdf:first "monomictico frio"^^xsd:string ;
+                                              rdf:rest
+                                                      [ a       rdf:List ;
+                                                        rdf:first "otros"^^xsd:string ;
+                                                        rdf:rest
+                                                                [ a       rdf:List ;
+                                                                  rdf:first "polimictico"^^xsd:string ;
+                                                                  rdf:rest ()
+                                                                ]
+                                                      ]
+                                            ]
+                                  ]
+                        ]
+              ] .
+
+:localizadoEn
+      a       owl:ObjectProperty ;
+      rdfs:comment "localizado en"@es ;
+      rdfs:domain :FenomenoHidrografico ;
+      rdfs:range geopolitical:territory .
+
+:lat  a       owl:DatatypeProperty ;
+      rdfs:domain :FenomenoHidrografico , :Morfologia , :CuencaHidrografica ;
+      rdfs:subPropertyOf :coordenadas .
+
+:Abrevadero
+      a       owl:Class ;
+      rdfs:comment "Lugar descubierto para el almacenamiento de agua para el abastecimiento del ganado"^^xsd:string ;
+      rdfs:label "Abrevadero"@es ;
+      rdfs:subClassOf :Deposito ;
+      dc:source "Elaboración propia"@es .
+
+:MarTerritorial
+      a       owl:Class ;
+      rdfs:comment "Zona maritima adyacente a la costa, que posee una anchura de doce millas medida desde la linea de bajamar"^^xsd:string ;
+      rdfs:label "Aguas Jurisdiccionales"@es , "Aguas Territoriales"@es , "Mar territorial"@es ;
+      rdfs:subClassOf :AguasMarinas ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty :parte_de ;
+                owl:someValuesFrom :Mar
+              ] ;
+      :provenance "Catalogo de objetos de Colombia"^^xsd:string ;
+      dc:source "Decreto Ley 2324/84 Convenio Internacional sobre derecho del mar \"CONVEMAR\". 1992 & Diez de Velasco, Manuel (1999) Instituciones de derecho internacional publico. Duodecima edicion. Madrid: Tecnos. 924 p. ISBN: 84-309-3446-4"^^xsd:string .
+
+:Bodon
+      a       owl:Class ;
+      rdfs:comment "Charca o laguna invernal que se seca en verano"^^xsd:string ;
+      rdfs:label "Bodón"@es ;
+      rdfs:subClassOf :Charca ;
+      dc:source "Diccionario de la Real Academia Espannola"^^xsd:string .
+
+:Canal
+      a       owl:Class ;
+      rdfs:comment "Cauce artificial para conduccion de agua"^^xsd:string ;
+      rdfs:label "Channel"@en , "Canal"@en , "Canal"@es ;
+      rdfs:subClassOf :AguasCorrientesArtificiales ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty :desagua_en ;
+                owl:someValuesFrom :Aguas
+              ] ;
+      dc:source "Vazquez Maure F.; Martin Lopez J. Vocabulario de terminos geograficos. Madrid: Ministerio de Obras Publicas y Urbanismo. Instituto Geografico Nacional. 1987. 89 p. ISBN: 84-505-4929-9.."^^xsd:string ;
+      owl:equivalentClass
+              [ a       owl:Class ;
+                owl:unionOf (:CanalAguasContinentales :CanalAguasMarinas)
+              ] .
+
+:Ramal
+      a       owl:Class ;
+      rdfs:comment "Derivacion de una acequia"^^xsd:string ;
+      rdfs:label "Ramal"@es ;
+      rdfs:subClassOf :Acequia ;
+      dc:source "Vazquez Maure F.; Martin Lopez J. Vocabulario de terminos geograficos. Madrid: Ministerio de Obras Publicas y Urbanismo. Instituto Geografico Nacional. 1987. 89 p. ISBN: 84-505-4929-9."^^xsd:string .
+
+:LagunaArtificial
+      a       owl:Class ;
+      rdfs:comment "Deposito de agua realizado por el hombre donde se acumula generalmente agua dulce"^^xsd:string , "Diccionario de la Real Academia Espannola & Elaboracion propia"^^xsd:string ;
+      rdfs:label "Laguna artificial"@es ;
+      rdfs:subClassOf :Recinto .
+
+:Arroyo
+      a       owl:Class ;
+      rdfs:comment "Corriente de agua de pequenna longitud y caudal continuo pero irregular."^^xsd:string ;
+      rdfs:label "Curso de agua secundario"@es , "Stream"@en , "Arroyo"@es ;
+      rdfs:subClassOf :AguasCorrientesNaturales ;
+      rdfs:subClassOf
+              [ a       owl:Class ;
+                owl:intersectionOf ([ a       owl:Restriction ;
+                            owl:onProperty :es_originado_por ;
+                            owl:someValuesFrom
+                                    [ a       owl:Class ;
+                                      owl:unionOf (:Glaciar :MasaDeHielo :Nacimiento)
+                                    ]
+                          ] [ a       owl:Restriction ;
+                            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onProperty :es_originado_por
+                          ])
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty :es_alimentada_por ;
+                owl:someValuesFrom
+                        [ a       owl:Class ;
+                          owl:unionOf (:Glaciar :MasaDeHielo)
+                        ]
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Class ;
+                owl:intersectionOf ([ a       owl:Restriction ;
+                            owl:onProperty :es_almacenado_en ;
+                            owl:someValuesFrom :Embalse
+                          ] [ a       owl:Restriction ;
+                            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onProperty :es_almacenado_en
+                          ])
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :AguasCorrientesNaturales ;
+                owl:onProperty :tiene_afluente
+              ] ;
+      :provenance "Curso de agua secundario - Catalogo de fenomenos. Proyecto GEOALEX"^^xsd:string ;
+      dc:source "Vazquez Maure F.; Martin Lopez J. (1987) Vocabulario de terminos geograficos. Ed. Ministerio de Obras Publicas y Urbanismo. Instituto Geografico Nacional. Madrid. ISBN: 84-505-4929-9."^^xsd:string .
+
+:AguasSubterraneas
+      a       owl:Class ;
+      rdfs:comment "Todas las aguas que se encuentran bajo la superficie del suelo en la zona de saturacion y en contacto directo con el suelo o el subsuelo."^^xsd:string , "All water which is below the surface of the ground in the saturation zone and in direct contact with the ground or subsoil."^^xsd:string ;
+      rdfs:label "Aguas subterraneas"@es , "Groundwater"@en , "Agua freatica"@es , "Agua subterranea"@es , "Masa de agua subterranea"@es ;
+      rdfs:subClassOf :AguasContinentales ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom
+                        [ a       owl:Class ;
+                          owl:intersectionOf (:AguasSuperficiales [ a       owl:Class ;
+                                      owl:complementOf :AguasDeTransicion
+                                    ] [ a       owl:Class ;
+                                      owl:complementOf :AguasQuietasArtificiales
+                                    ] [ a       owl:Class ;
+                                      owl:complementOf :SurgenciaArtificial
+                                    ])
+                        ] ;
+                owl:onProperty :es_alimentada_por
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty :descarga_en ;
+                owl:someValuesFrom :ZonaHumeda
+              ] ;
+      :provenance "Agua subterranea - The Digital Geographic Information Exchange Standard (DIGEST). Digital Geographic Information Working Group (DGIWG)"^^xsd:string , "Parlamento Europeo y Consejo de la Union Europea. (2000) Directiva 2000/60/CE del Parlmento Europeo y del Consejo por la que se establece un marco comunitario de actuacion en el ambito de la politica de aguas. pp 72"^^xsd:string ;
+      dc:source "Parlamento Europeo y Consejo de la Union Europea. (2000) Directiva 2000/60/CE del Parlmento Europeo y del Consejo por la que se establece un marco comunitario de actuacion en el ambito de la politica de aguas. pp 72"^^xsd:string .
+
+:conexion
+      a       owl:DatatypeProperty ;
+      rdfs:comment "en tabla masaSubterranea_intrinsecas correspondiente con columnas Conexion CursoAgua y Conexion Lago"^^xsd:string ;
+      rdfs:domain :AguasSubterraneas ;
+      rdfs:range xsd:string .
+
+:capacidad
+      a       owl:DatatypeProperty ;
+      rdfs:domain :Embalse ;
+      rdfs:range xsd:float .
+
+:Drenaje
+      a       owl:Class ;
+      rdfs:comment "Construccion destinada a la recogida, colecta y eliminacion de las aguas de cualquier espacio de inundacion."^^xsd:string ;
+      rdfs:label "Drenaje"@es ;
+      rdfs:subClassOf :Conducto ;
+      :provenance "Catalogo de fenomenos de la Base Cartografica Numerica 1:25.000 (BCN25)"^^xsd:string ;
+      dc:source "Fontanillo, E. (1986) Diccionario de Geografia. Ed. Anaya. Madrid & George, P. (1991) Diccionario de Geografia. Madrid: Akal."^^xsd:string .
+
+:nombre_alternativo
+      a       owl:DatatypeProperty ;
+      rdfs:domain :FenomenoHidrografico , :Morfologia , :CuencaHidrografica ;
+      rdfs:range xsd:string ;
+      rdfs:subPropertyOf :nombre .
+
+:CanalAguasContinentales
+      a       owl:Class ;
+      rdfs:comment "En general, cauce construido para el transvase de agua. Si la dimension lo permite pueden aprovecharse para la navegacion interior, habiendo casos en los que se construye con este fin exclusivamente."^^xsd:string ;
+      rdfs:label "Canal de aguas continentales"@es ;
+      dc:source "Fontanillo, E. (1986) Diccionario de Geografia. Ed. Anaya. Madrid."^^xsd:string ;
+      owl:equivalentClass
+              [ a       owl:Class ;
+                owl:intersectionOf (:Canal [ a       owl:Restriction ;
+                            owl:onProperty :distribuye ;
+                            owl:someValuesFrom :AguasSuperficiales
+                          ] [ a       owl:Restriction ;
+                            owl:onProperty :transvasa ;
+                            owl:someValuesFrom :AguasSuperficiales
+                          ])
+              ] .
+
+:Morfologia
+      a       owl:Class ;
+      rdfs:comment "Agrupa objetos que muestran los cambios que sufren los cuerpos de agua, por la dinamica de flujo de agua y sus propias caracteristicas como la pendiente y la topografia"@es ;
+      rdfs:label "Fluvial morphology"@en , "Morfología"@es , "Morfologia fluvial"@es ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom
+                        [ a       owl:Class ;
+                          owl:unionOf (:AguasMarinas :Arroyo :Embalse :Lago :Laguna :Rio)
+                        ] ;
+                owl:onProperty :parte_de
+              ] ;
+      :provenance "Glosario Hidrologico Internacional - UNESCO"^^xsd:string , "Catalogo de objetos de Colombia"@es .
+
+:Humedal
+      a       owl:Class ;
+      rdfs:comment "Terreno sometido a una descarga difusa de agua subterranea sin que se manifieste forzosamente un flujo copioso de agua liquida, aunque suele ser inundable y estar generalmente cubierto de vegetacion freatofitica tipo soto o juncal"^^xsd:string ;
+      rdfs:label "Wetland"@en , "Humedal"@es ;
+      rdfs:subClassOf :SurgenciaNatural ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty :sometido_a_descarga_por ;
+                owl:someValuesFrom :AguasSubterraneas
+              ] ;
+      dc:source "Gonzalez Bernaldez, Fernando. (1992) Los paisajes del agua. Terminologia popular de los humedales. Madrid: J.M. Reyero Editor. 257 p. ISBN: 84-604-3756-6."^^xsd:string .
+
+:es_capturado
+      a       owl:ObjectProperty ;
+      rdfs:domain :Rio ;
+      rdfs:range :Captacion ;
+      rdfs:subPropertyOf :es_conectado_con ;
+      owl:inverseOf :captura .
+
+:FuenteNatural
+      a       owl:Class ;
+      rdfs:comment "Manantial perenne de agua"^^xsd:string ;
+      rdfs:label "Fuente natural"@es , "Nacedero"@es , "Spring"@en ;
+      rdfs:subClassOf :Manantial ;
+      dc:source "Vazquez Maure F.; Martin Lopez J. (1987) Vocabulario de terminos geograficos. Ed. Ministerio de Obras Publicas y Urbanismo. Instituto Geografico Nacional. Madrid. ISBN: 84-505-4929-9 & Elaboracion propia"^^xsd:string .
+
+:AguasCorrientesArtificiales
+      a       owl:Class ;
+      rdfs:comment "Aguas continentales situadas en la superficie del suelo que tienen o pueden tener un movimiento notable y continuo a traves de un cauce de origen artificial.Aguas continentales situadas en la superficie del suelo que tienen o pueden tener un movimiento notable y continuo a traves de un cauce de origen artificial."^^xsd:string ;
+      rdfs:label "Aguas artificiales"@es , "Curso artificial de agua"@es , "Aguas corrientes artificiales"@es , "Artificial flowing water"@en , "Cauce artificial"@es ;
+      rdfs:subClassOf :AguasCorrientes ;
+      dc:source "Cauce artificial - Catalogo de fenomenos de la Base Topografica Nacional 1:25000 (BTN25). Instituto Geografico Nacional"^^xsd:string , "Aguas artificiales - Catalogo de entidades para el Nomenclator de la Base Topografica Nacional 1:25000 (BTN25). Instituto Geografico Nacional"^^xsd:string ;
+      owl:equivalentClass
+              [ a       owl:Class ;
+                owl:unionOf (:Acequia :Canal :Conducto)
+              ] ;
+      owl:equivalentClass
+              [ a       owl:Class ;
+                owl:intersectionOf ([ a       owl:Restriction ;
+                            owl:allValuesFrom
+                                    [ a       owl:Class ;
+                                      owl:unionOf (:AguasMarinas :AguasSuperficiales)
+                                    ] ;
+                            owl:onProperty :conduce
+                          ] [ a       owl:Restriction ;
+                            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onProperty :conduce
+                          ])
+              ] .
+
+:origina
+      a       owl:ObjectProperty ;
+      rdfs:domain
+              [ a       owl:Class ;
+                owl:unionOf (:CorrienteSubterranea :Glaciar :Manantial :Marisma :Nacimiento :Nevero :Ojo :Sumidero :Torrente)
+              ] ;
+      rdfs:range
+              [ a       owl:Class ;
+                owl:unionOf (:Acuifero :Acuitardo :AguasQuietasNaturales :Arroyo :Charca :Chortal :CorrienteSubterranea :Ibon :Lago :Laguna :Lucio :Rambla :Rio)
+              ] ;
+      owl:inverseOf :es_originado_por .
+
+:AguasQuietasNaturales
+      a       owl:Class ;
+      rdfs:comment "Aguas continentales situadas en la superficie del suelo que no tienen un movimiento notable y continuo debido al flujo de agua a traves de un cauce de origen natural"^^xsd:string ;
+      rdfs:label "Natural standing water"@en , "Aguas quietas naturales"@es ;
+      rdfs:subClassOf :AguasQuietas ;
+      rdfs:subClassOf
+              [ a       owl:Class ;
+                owl:intersectionOf ([ a       owl:Restriction ;
+                            owl:onProperty :es_originado_por ;
+                            owl:someValuesFrom
+                                    [ a       owl:Class ;
+                                      owl:unionOf (:Arroyo :Glaciar :Manantial :Marisma :MasaDeHielo :Rio)
+                                    ]
+                          ] [ a       owl:Restriction ;
+                            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onProperty :es_originado_por
+                          ])
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :AguasCorrientesNaturales ;
+                owl:onProperty :es_alimentada_por
+              ] ;
+      dc:source "Elaboracion propia"^^xsd:string ;
+      owl:equivalentClass
+              [ a       owl:Class ;
+                owl:unionOf (:Charca :Lago :Laguna :MasaDeHielo)
+              ] .
+
+dc:publisher
+      a       owl:AnnotationProperty .
+
+:alimenta_a
+      a       owl:ObjectProperty ;
+      rdfs:domain
+              [ a       owl:Class ;
+                owl:unionOf (:AguasMarinas :AguasSuperficiales)
+              ] ;
+      rdfs:range
+              [ a       owl:Class ;
+                owl:unionOf (:AguasCorrientesNaturales :AguasQuietasNaturales :AguasSubterraneas :FuenteArtificial :Salina)
+              ] .
+
+owl:Thing
+      a       owl:Class .
+
+:es_originado_por
+      a       owl:ObjectProperty ;
+      rdfs:domain
+              [ a       owl:Class ;
+                owl:unionOf (:AguasCorrientesNaturales :AguasQuietasNaturales :Chortal :CorrienteSubterranea :Ibon :Lucio)
+              ] ;
+      rdfs:range
+              [ a       owl:Class ;
+                owl:unionOf (:AguasCorrientesNaturales :Manantial :Marisma :MasaDeHielo :Nacimiento :Sumidero)
+              ] .
+
+:cota
+      a       owl:DatatypeProperty ;
+      rdfs:domain :FenomenoHidrografico , :Embalse ;
+      rdfs:range xsd:float .
+
+:AguasSaladas
+      a       owl:Class ;
+      rdfs:comment "Aguas que contienen sales en mayor proporcion que las aguas normalmente destinadas a usos domesticos, agricolas o industriales"^^xsd:string ;
+      rdfs:label "Aguas saladas"@es ;
+      rdfs:subClassOf :Aguas ;
+      dc:source "Diccionario de la Real Academia Espannola"^^xsd:string .
+
+:vertiente
+      a       owl:DatatypeProperty ;
+      rdfs:domain :Aguas .
+
+:AguasMarinas
+      a       owl:Class ;
+      rdfs:comment "Agua de los oceanos y de los mares diferenciada del agua dulce por su salinidad y por su densidad mas fuerte resultante de contenido en sales disueltas. Tambien puede ser considerada como una zona arbitrariamente definida de aguas marinas con un conjunto de atributos constantes"^^xsd:string ;
+      rdfs:label "Masa de agua marina"@es , "Hidrografia maritima"@es , "Aguas oceánicas"@es , "Aguas marinas"@es , "Sea regions"@en ;
+      rdfs:subClassOf :AguasSaladas ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty :es_conducido_por ;
+                owl:someValuesFrom :AguasCorrientesArtificiales
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Class ;
+                owl:complementOf :AguasDulces
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty :alimenta_a ;
+                owl:someValuesFrom
+                        [ a       owl:Class ;
+                          owl:unionOf (:Albufera :LagunaSalada)
+                        ]
+              ] ;
+      :provenance "Hidrografia maritima - Catalogo de entidades para el Nomenclator de la Base Topografica Nacional 1:25.000 (BTN25). Instituto Geografico Nacional"^^xsd:string , "Aguas oceanicas - Instituto Espannol de Oceanografia"^^xsd:string , "George, P. (1991) Diccionario de Geografia. Madrid: Akal & Elaboracion propia"^^xsd:string , "Sea regions - Data Specification of INSPIRE"^^xsd:string .
+
+:LlanuraDeInundacion
+      a       owl:Class ;
+      rdfs:label "Llanura de inundación"@es ;
+      rdfs:subClassOf :ZonaEncharcable ;
+      dc:source "Getty Thesaurus of Geographic Names"@en .
+
+:es_inundada_por
+      a       owl:ObjectProperty ;
+      rdfs:domain
+              [ a       owl:Class ;
+                owl:unionOf (:Estero :Marisma :ZonaEncharcable :ZonaHumeda)
+              ] ;
+      rdfs:range
+              [ a       owl:Class ;
+                owl:unionOf (:AguasCorrientesNaturales :AguasCosteras :AguasMarinas :AguasQuietasNaturales :AguasSubterraneas :AguasSuperficiales :Embalse :Laguna :Rio)
+              ] ;
+      owl:inverseOf :inunda .
+
+:Rapido
+      a       owl:Class ;
+      rdfs:comment "Corriente del rio en los lugares donde por la estrechez o inclinacion del cauce se hace muy violenta e impetuosa"^^xsd:string ;
+      rdfs:label "Rapids"@en , "Rápida"@es , "Raudal"@es , "Rápido"@es , "Rabión"@es ;
+      rdfs:subClassOf :Corriente ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :Rio ;
+                owl:onProperty :parte_de
+              ] ;
+      dc:source "Diccionario de la Real Academia Espannola"^^xsd:string .
+
+:altitud
+      a       owl:DatatypeProperty ;
+      rdfs:comment "tabla segmentoLago columna Altitud_CEDEX"^^xsd:string ;
+      rdfs:domain :Cascada ;
+      rdfs:range xsd:float .
+
+:Mar  a       owl:Class ;
+      rdfs:comment "Masa de agua salada de gran extension, con denominacion propia y limites relativamente definidos"^^xsd:string ;
+      rdfs:label "Mar"@es , "Sea"@en ;
+      rdfs:subClassOf :AguasMarinas ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty :alimenta_a ;
+                owl:someValuesFrom :Albufera
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty :es_comunicada_por ;
+                owl:someValuesFrom :CanalMarino
+              ] ;
+      dc:source "Vazquez Maure F.; Martin Lopez J. (1987) Vocabulario de terminos geograficos. Ed. Ministerio de Obras Publicas y Urbanismo. Instituto Geografico Nacional. Madrid. ISBN: 84-505-4929-9."^^xsd:string ;
+      owl:equivalentClass
+              [ a       owl:Restriction ;
+                owl:onProperty :consta_de ;
+                owl:someValuesFrom
+                        [ a       owl:Class ;
+                          owl:unionOf (:AguasCosteras :AltaMar :MarTerritorial :ZonaContigua :ZonaEconomicaExclusiva)
+                        ]
+              ] .
+
+:transvasa
+      a       owl:ObjectProperty ;
+      rdfs:domain :CanalAguasContinentales ;
+      rdfs:range :AguasSuperficiales ;
+      rdfs:subPropertyOf :conduce .
+
+:nombre
+      a       owl:DatatypeProperty ;
+      rdfs:domain :FenomenoHidrografico , :Morfologia , :CuencaHidrografica ;
+      rdfs:range xsd:string .
+
+:Delta
+      a       owl:Class ;
+      rdfs:comment "Terreno comprendido entre los brazos de un rio en su desembocadura"@es ;
+      rdfs:label "Delta"@es ;
+      rdfs:subClassOf :Morfologia ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :Rio ;
+                owl:onProperty :parte_de
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Class ;
+                owl:intersectionOf ([ a       owl:Restriction ;
+                            owl:allValuesFrom :Desembocadura ;
+                            owl:onProperty :esta_proxima_a
+                          ] [ a       owl:Restriction ;
+                            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onProperty :esta_proxima_a
+                          ])
+              ] ;
+      :provenance "Alexandria Digital Library (ADL) Feature Type Thesaurus"@en ;
+      dc:source "Diccionario de la Real Academia Española"@es .
+
+:volumen
+      a       owl:DatatypeProperty ;
+      rdfs:domain :Aguas .
+
+:idioma
+      a       owl:DatatypeProperty ;
+      rdfs:domain :FenomenoHidrografico , :Morfologia , :CuencaHidrografica .
+
+:MasaDeAguaArtificial
+      a       owl:Class ;
+      rdfs:comment "Una masa de agua superficial creada por la actividad humana."^^xsd:string , "A body of surface water created by human activity."^^xsd:string ;
+      rdfs:label "Masa de agua artificial"@es , "Artificial water body"@en ;
+      rdfs:subClassOf :AguasSuperficiales ;
+      owl:equivalentClass
+              [ a       owl:Class ;
+                owl:unionOf (:AguasCorrientesArtificiales :AguasQuietasArtificiales)
+              ] .
+
+:es_conducido_por
+      a       owl:ObjectProperty ;
+      rdfs:domain
+              [ a       owl:Class ;
+                owl:unionOf (:AguasMarinas :Aljibe)
+              ] ;
+      rdfs:range
+              [ a       owl:Class ;
+                owl:unionOf (:AguasCorrientesArtificiales :Manantial :Rio)
+              ] .
+
+:categoria
+      a       owl:DatatypeProperty ;
+      rdfs:domain :AguasSubterraneas ;
+      rdfs:range
+              [ a       rdfs:Datatype ;
+                owl:oneOf
+                        [ a       rdf:List ;
+                          rdf:first "confinado"^^xsd:string ;
+                          rdf:rest
+                                  [ a       rdf:List ;
+                                    rdf:first "desconocido"^^xsd:string ;
+                                    rdf:rest
+                                            [ a       rdf:List ;
+                                              rdf:first "libre"^^xsd:string ;
+                                              rdf:rest
+                                                      [ a       rdf:List ;
+                                                        rdf:first "predominantemente confinado"^^xsd:string ;
+                                                        rdf:rest
+                                                                [ a       rdf:List ;
+                                                                  rdf:first "predominantemente libre"^^xsd:string ;
+                                                                  rdf:rest ()
+                                                                ]
+                                                      ]
+                                            ]
+                                  ]
+                        ]
+              ] .
+
+:Pozo
+      a       owl:Class ;
+      rdfs:comment "Lugar donde se realiza una perforación de escasa profundidad en el terreno destinada a la extracción de agua subterránea y que pueden venir acompañadas de una obra de fábrica en superficie."@es ;
+      rdfs:label "Pozo"@es , "Well"@en ;
+      rdfs:subClassOf :SurgenciaArtificial ;
+      dc:source "Descripción de Entidades Geográficas BTN25. Instituto Geográfico Nacional"@es ;
+      owl:equivalentClass
+              [ a       owl:Class ;
+                owl:intersectionOf ([ a       owl:Restriction ;
+                            owl:allValuesFrom :AguasSubterraneas ;
+                            owl:onProperty :se_extrae
+                          ] [ a       owl:Restriction ;
+                            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onProperty :se_extrae
+                          ])
+              ] .
+
+:Barranquillo
+      a       owl:Class ;
+      rdfs:label "Barranquillo"@es ;
+      rdfs:subClassOf :Barranco .
+
+:situacion_hidroquimica
+      a       owl:DatatypeProperty ;
+      rdfs:domain :AguasSubterraneas ;
+      rdfs:range xsd:string .
+
+:superficie
+      a       owl:DatatypeProperty ;
+      rdfs:comment "tabla Rio tiene columnan SupCuenca"^^xsd:string ;
+      rdfs:domain :Aguas , :CuencaHidrografica ;
+      rdfs:range xsd:float .
+
+:riesgo
+      a       owl:DatatypeProperty ;
+      rdfs:comment "Tabla Masa superficial columna riesgo"^^xsd:string ;
+      rdfs:domain :AguasSubterraneas , :AguasSuperficiales ;
+      rdfs:range
+              [ a       rdfs:Datatype ;
+                owl:oneOf
+                        [ a       rdf:List ;
+                          rdf:first "en estudio"^^xsd:string ;
+                          rdf:rest
+                                  [ a       rdf:List ;
+                                    rdf:first "nulo"^^xsd:string ;
+                                    rdf:rest
+                                            [ a       rdf:List ;
+                                              rdf:first "riesgo seguro"^^xsd:string ;
+                                              rdf:rest
+                                                      [ a       rdf:List ;
+                                                        rdf:first "sin riesgo"^^xsd:string ;
+                                                        rdf:rest ()
+                                                      ]
+                                            ]
+                                  ]
+                        ]
+              ] .
+
+:Chorrera
+      a       owl:Class ;
+      rdfs:comment "Cascada"^^xsd:string ;
+      rdfs:label "Chorrera"@es ;
+      rdfs:subClassOf :Corriente ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :Rio ;
+                owl:onProperty :parte_de
+              ] ;
+      :provenance "Catalogo de fenomenos del Instituto Cartografico de Andalucia"^^xsd:string ;
+      dc:source "Diccionario de la Real Academia Española"@es .
+
+:horizonte
+      a       owl:DatatypeProperty ;
+      rdfs:comment "a specific layer or stratum of soil or subsoil in a vertical cross section of land)"^^xsd:string , "capa del suelo mas o menos paralela a la superficie con caracteristicas especificas con respecto a las situadas encima y debajo: espesor, color, caracteristicas quimicas, biologicas y mineralogicas. El conjunto de horizontes constituye el perfil del suelo."^^xsd:string ;
+      rdfs:domain :AguasSubterraneas ;
+      rdfs:label "horizon"@es ;
+      rdfs:range
+              [ a       rdfs:Datatype ;
+                owl:oneOf
+                        [ a       rdf:List ;
+                          rdf:first "A"^^xsd:string ;
+                          rdf:rest
+                                  [ a       rdf:List ;
+                                    rdf:first "B"^^xsd:string ;
+                                    rdf:rest ()
+                                  ]
+                        ]
+              ] ;
+      dc:source "Wordnet http://wordnet.princeton.edu/perl/webwn?o2=&o0=1&o7=&o5=&o1=1&o6=&o4=&o3=&s=horizon&i=2&h=0000#c"^^xsd:string , """Diccionario Geologico
+http://www.estrucplan.com.ar/Producciones/entrega.asp?IdEntrega=1684"""^^xsd:string .
+
+:sufre_descarga_de
+      a       owl:ObjectProperty ;
+      rdfs:domain :ZonaHumeda ;
+      rdfs:range :AguasSubterraneas .
+
+:Nevero
+      a       owl:Class ;
+      rdfs:comment "Masa de nieve acumulada y compacta permanente"^^xsd:string ;
+      rdfs:label "Campo de Nieve"@es , "Nevero"@es , "Ice land"@en ;
+      rdfs:subClassOf :MasaDeHielo ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty :origina ;
+                owl:someValuesFrom :Ibon
+              ] ;
+      dc:source "Vazquez Maure F.; Martin Lopez J. (1987) Vocabulario de terminos geograficos. Ed. Ministerio de Obras Publicas y Urbanismo. Instituto Geografico Nacional. Madrid. ISBN: 84-505-4929-9."^^xsd:string .
+
+:situacion
+      a       owl:DatatypeProperty ;
+      rdfs:domain :AguasQuietasArtificiales ;
+      rdfs:range
+              [ a       rdfs:Datatype ;
+                owl:oneOf
+                        [ a       rdf:List ;
+                          rdf:first "elevado"^^xsd:string ;
+                          rdf:rest
+                                  [ a       rdf:List ;
+                                    rdf:first "en superficie"^^xsd:string ;
+                                    rdf:rest
+                                            [ a       rdf:List ;
+                                              rdf:first "sin clasificar"^^xsd:string ;
+                                              rdf:rest
+                                                      [ a       rdf:List ;
+                                                        rdf:first "subterraneo"^^xsd:string ;
+                                                        rdf:rest ()
+                                                      ]
+                                            ]
+                                  ]
+                        ]
+              ] .
+
+:Vado
+      a       owl:Class ;
+      rdfs:comment "Lugar de un río con fondo firme, llano y poco profundo, por donde se puede pasar andando, cabalgando o en algun vehiculo"@es ;
+      rdfs:label "Vado"@es ;
+      rdfs:subClassOf :Morfologia ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :Rio ;
+                owl:onProperty :parte_de
+              ] ;
+      dc:source "Diccionario de la Real Academia Española"@es .
+
+:tasa_de_renovacion
+      a       owl:DatatypeProperty ;
+      rdfs:domain :AguasQuietas ;
+      rdfs:range
+              [ a       rdfs:Datatype ;
+                owl:oneOf
+                        [ a       rdf:List ;
+                          rdf:first "alta (< 1 mes)"^^xsd:string ;
+                          rdf:rest
+                                  [ a       rdf:List ;
+                                    rdf:first "baja (> 1 anno)"^^xsd:string ;
+                                    rdf:rest
+                                            [ a       rdf:List ;
+                                              rdf:first "desconocida"^^xsd:string ;
+                                              rdf:rest
+                                                      [ a       rdf:List ;
+                                                        rdf:first "media"^^xsd:string ;
+                                                        rdf:rest
+                                                                [ a       rdf:List ;
+                                                                  rdf:first "sin catalogar"^^xsd:string ;
+                                                                  rdf:rest ()
+                                                                ]
+                                                      ]
+                                            ]
+                                  ]
+                        ]
+              ] .
+
+:Marjal
+      a       owl:Class ;
+      rdfs:comment "Terreno bajo y pantanoso."@es ;
+      rdfs:label "Marjal"@es ;
+      rdfs:subClassOf :Cienaga ;
+      :provenance "The Digital Geographic Information Exchange Standard (DIGEST). Digital Geographic Information Working Group (DGIWG)"@en ;
+      dc:source "Diccionario de la Real Academia Española de la Lengua"@es .
+
+:profundidad
+      a       owl:DatatypeProperty ;
+      rdfs:domain :Poza , :Pozo , :AguasQuietas , :AguasSuperficiales ;
+      rdfs:range xsd:float .
+
+:origen_del_agua
+      a       owl:DatatypeProperty ;
+      rdfs:domain :AguasQuietas ;
+      rdfs:range
+              [ a       rdfs:Datatype ;
+                owl:oneOf
+                        [ a       rdf:List ;
+                          rdf:first "desconocido"^^xsd:string ;
+                          rdf:rest
+                                  [ a       rdf:List ;
+                                    rdf:first "epigenico"^^xsd:string ;
+                                    rdf:rest
+                                            [ a       rdf:List ;
+                                              rdf:first "hipogenico de acuifero confinado"^^xsd:string ;
+                                              rdf:rest
+                                                      [ a       rdf:List ;
+                                                        rdf:first "hipogenico de acuifero libre"^^xsd:string ;
+                                                        rdf:rest
+                                                                [ a       rdf:List ;
+                                                                  rdf:first "hipogenico de acuifero mixto"^^xsd:string ;
+                                                                  rdf:rest
+                                                                          [ a       rdf:List ;
+                                                                            rdf:first "mixto"^^xsd:string ;
+                                                                            rdf:rest
+                                                                                    [ a       rdf:List ;
+                                                                                      rdf:first "sin catalogar"^^xsd:string ;
+                                                                                      rdf:rest ()
+                                                                                    ]
+                                                                          ]
+                                                                ]
+                                                      ]
+                                            ]
+                                  ]
+                        ]
+              ] .
+
+:tipologia_de_cobertura
+      a       owl:DatatypeProperty ;
+      rdfs:domain :AguasCorrientesArtificiales , :AguasQuietasArtificiales ;
+      rdfs:range
+              [ a       rdfs:Datatype ;
+                owl:oneOf
+                        [ a       rdf:List ;
+                          rdf:first "cubierto"^^xsd:string ;
+                          rdf:rest
+                                  [ a       rdf:List ;
+                                    rdf:first "descubierto"^^xsd:string ;
+                                    rdf:rest
+                                            [ a       rdf:List ;
+                                              rdf:first "sin clasificar"^^xsd:string ;
+                                              rdf:rest ()
+                                            ]
+                                  ]
+                        ]
+              ] .
+
+:ocupacion
+      a       owl:DatatypeProperty ;
+      rdfs:domain :AguasSubterraneas ;
+      rdfs:range
+              [ a       rdfs:Datatype ;
+                owl:oneOf
+                        [ a       rdf:List ;
+                          rdf:first "agricola"^^xsd:string ;
+                          rdf:rest
+                                  [ a       rdf:List ;
+                                    rdf:first "agua"^^xsd:string ;
+                                    rdf:rest
+                                            [ a       rdf:List ;
+                                              rdf:first "artificial"^^xsd:string ;
+                                              rdf:rest
+                                                      [ a       rdf:List ;
+                                                        rdf:first "forestal"^^xsd:string ;
+                                                        rdf:rest ()
+                                                      ]
+                                            ]
+                                  ]
+                        ]
+              ] .
+
+:origen_formacion
+      a       owl:DatatypeProperty ;
+      rdfs:domain :AguasQuietas ;
+      rdfs:range
+              [ a       rdfs:Datatype ;
+                owl:oneOf
+                        [ a       rdf:List ;
+                          rdf:first "Glaciar"^^xsd:string ;
+                          rdf:rest
+                                  [ a       rdf:List ;
+                                    rdf:first "Karstico"^^xsd:string ;
+                                    rdf:rest
+                                            [ a       rdf:List ;
+                                              rdf:first "Otros"^^xsd:string ;
+                                              rdf:rest ()
+                                            ]
+                                  ]
+                        ]
+              ] .
+
+:Sifon
+      a       owl:Class ;
+      rdfs:comment "Canal cerrado o tuberia que sirve para que una conduccion atraviese un barranco, una via de comunicacion u otro obstaculo"^^xsd:string , "Fontanillo, E. (1986) Diccionario de Geografia. Ed. Anaya. Madrid & Vazquez Maure F.; Martin Lopez J. (1987) Vocabulario de terminos geograficos. Madrid: Ministerio de Obras Publicas y Urbanismo. Instituto Geografico Nacional. 89 p. ISBN: 84-505-4929-9."^^xsd:string ;
+      rdfs:label "Sifón"@es , "Siphon"@en ;
+      rdfs:subClassOf :Tuberia .
+
+:FuenteArtesana
+      a       owl:Class ;
+      rdfs:comment "Fuente cuya agua proviene de un acuifero artesiano, generalmente a traves de alguna fisura u otro tipo de abertura del lecho confinante que cubre el acuifero."^^xsd:string ;
+      rdfs:label "Fuente artesana"@es ;
+      rdfs:subClassOf :FuenteNatural ;
+      rdfs:subClassOf
+              [ a       owl:Class ;
+                owl:intersectionOf ([ a       owl:Restriction ;
+                            owl:allValuesFrom :Acuifero ;
+                            owl:onProperty :se_extrae
+                          ] [ a       owl:Restriction ;
+                            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onProperty :se_extrae
+                          ])
+              ] ;
+      :provenance "Glosario Hidrologico Internacional - UNESCO"^^xsd:string ;
+      dc:source "Glosario Hidrologico Internacional - UNESCO"^^xsd:string .
+
+:Cascada
+      a       owl:Class ;
+      rdfs:comment "Caida desde cierta altura del agua de un rio u otra corriente por brusco desnivel del cauce"@es ;
+      rdfs:label "Waterfall"@en , "Salto"@es , "Catarata"@es , "Cascada"@es ;
+      rdfs:subClassOf :Corriente ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :Rio ;
+                owl:onProperty :parte_de
+              ] ;
+      dc:source "Diccionario de la Real Academia Española"@es .
+
+:Lavajo
+      a       owl:Class ;
+      rdfs:comment "Charca de agua llovediza que rara vez se seca"@es ;
+      rdfs:label "Navajo"@es , "Lavajo"@es ;
+      rdfs:subClassOf :Charca ;
+      dc:source "Vazquez Maure F.; Martin Lopez J. (1987) Vocabulario de terminos geograficos. Ed. Ministerio de Obras Publicas y Urbanismo. Instituto Geografico Nacional. Madrid. ISBN: 84-505-4929-9 & Diccionario de la Real Academia Espannola"@es .
+
+:Marisma
+      a       owl:Class ;
+      rdfs:comment "Terreno un poco por debajo del nivel del mar que se inunda con las aguas de la creciente marina y de los rios, o de ambas a la vez"^^xsd:string ;
+      rdfs:label "Marsh"@en , "Marisma"@es ;
+      rdfs:subClassOf :AguasDeTransicion ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom
+                        [ a       owl:Class ;
+                          owl:unionOf (:AguasMarinas :Rio)
+                        ] ;
+                owl:onProperty :es_inundada_por
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty :origina ;
+                owl:someValuesFrom :Lucio
+              ] ;
+      dc:source "Fontanillo, E. (1986) Diccionario de Geografia. Ed. Anaya. Madrid."^^xsd:string .
+
+:Nava
+      a       owl:Class ;
+      rdfs:comment "Tierra sin arboles y llana, a veces pantanosa, situada entre montannas o al pie de ellas"^^xsd:string ;
+      rdfs:label "Nava"@es ;
+      rdfs:subClassOf :Cienaga ;
+      dc:source "Vazquez Maure F.; Martin Lopez J. (1987) Vocabulario de terminos geograficos. Ed. Ministerio de Obras Publicas y Urbanismo. Instituto Geografico Nacional. Madrid. ISBN: 84-505-4929-9 & Diccionario de la Real Academia Espannola"^^xsd:string .
+
+:Acuitardo
+      a       owl:Class ;
+      rdfs:comment "Formacion geologica de naturaleza algo impermeable y semiconfinada, que transmite agua en proporcion muy pequenna en comparacion con un acuifero."^^xsd:string ;
+      rdfs:label "Acuitardo"@es , "Aquitard"@en ;
+      rdfs:subClassOf :AguasSubterraneas ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :AguasSubterraneas ;
+                owl:onProperty :transmite
+              ] ;
+      :provenance "Glosario Hidrologico Internacional - UNESCO"^^xsd:string ;
+      dc:source "Glosario Hidrologico Internacional - UNESCO"^^xsd:string .
+
+:Madre
+      a       owl:Class ;
+      rdfs:comment "Acequia principal de la que parten o donde desaguan las hijuelas"^^xsd:string ;
+      rdfs:label "Madre"@es ;
+      rdfs:subClassOf :Acequia ;
+      dc:source "Diccionario de la Real Academia Espannola"^^xsd:string .
+
+:Estanque
+      a       owl:Class ;
+      rdfs:comment "Balsa descubierta destinada al almacenamiento de agua con fines ornamentales"@es ;
+      rdfs:label "Pond"@en , "Estanque"@es ;
+      rdfs:subClassOf :Recinto ;
+      dc:source "Diccionario de la Real Academia Española"@es .
+
+:Caz  a       owl:Class ;
+      rdfs:comment "Canal para tomar el agua y conducirla a donde es aprovechada"^^xsd:string ;
+      rdfs:label "Caz"@es ;
+      rdfs:subClassOf :Acequia ;
+      dc:source "Diccionario de la Real Academia Espannola"^^xsd:string .
+
+:zona_de_descarga
+      a       owl:DatatypeProperty ;
+      rdfs:domain :Acuifero ;
+      rdfs:range xsd:string .
+
+:Distribucion
+      a       owl:Class ;
+      rdfs:comment "Cauce utilizado para distribuir las aguas"^^xsd:string ;
+      rdfs:label "Distribución"@es ;
+      rdfs:subClassOf :CanalAguasContinentales ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty :distribuye ;
+                owl:someValuesFrom :AguasSuperficiales
+              ] ;
+      dc:source "Moliner, Maria. Diccionario de uso del espannol. Madrid: Editorial Gredos. 1984. p. 1590. ISBN: 84-249-1344-2"^^xsd:string .
+
+:conecta_con
+      a       owl:ObjectProperty ;
+      rdfs:domain
+              [ a       owl:Class ;
+                owl:unionOf (:Confluencia :Mar :Rio)
+              ] ;
+      rdfs:range
+              [ a       owl:Class ;
+                owl:unionOf (:Lago :Rio)
+              ] .
+
+:permeabilidad
+      a       owl:DatatypeProperty ;
+      rdfs:comment "Tabla CodTipologiaSubt"^^xsd:string ;
+      rdfs:domain :AguasSubterraneas ;
+      rdfs:range
+              [ a       rdfs:Datatype ;
+                owl:oneOf
+                        [ a       rdf:List ;
+                          rdf:first "aluvial"^^xsd:string ;
+                          rdf:rest
+                                  [ a       rdf:List ;
+                                    rdf:first "carbonatado"^^xsd:string ;
+                                    rdf:rest
+                                            [ a       rdf:List ;
+                                              rdf:first "desconocido"^^xsd:string ;
+                                              rdf:rest
+                                                      [ a       rdf:List ;
+                                                        rdf:first "detritico"^^xsd:string ;
+                                                        rdf:rest
+                                                                [ a       rdf:List ;
+                                                                  rdf:first "impermeable"^^xsd:string ;
+                                                                  rdf:rest
+                                                                          [ a       rdf:List ;
+                                                                            rdf:first "otros"^^xsd:string ;
+                                                                            rdf:rest ()
+                                                                          ]
+                                                                ]
+                                                      ]
+                                            ]
+                                  ]
+                        ]
+              ] .
+
+:PlayaFluvial
+      a       owl:Class ;
+      rdfs:comment "Ribera de un río grande, formada de arenales en superficie casi plana"@es ;
+      rdfs:label "Playa Fluvial"@es , "River Beach"@en ;
+      rdfs:subClassOf :Ribera ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty :estaEn ;
+                owl:someValuesFrom :Rio
+              ] .
+
+:concentracion_de_sal
+      a       owl:DatatypeProperty ;
+      rdfs:comment "tabla segmentoLago columna Salinidad"^^xsd:string ;
+      rdfs:domain :AguasMarinas , :AguasSaladas ;
+      rdfs:range
+              [ a       rdfs:Datatype ;
+                owl:oneOf
+                        [ a       rdf:List ;
+                          rdf:first "constante alta (> 8000 microsiemens/cm)"^^xsd:string ;
+                          rdf:rest
+                                  [ a       rdf:List ;
+                                    rdf:first "constante baja (< 800 microsiemens/cm)"^^xsd:string ;
+                                    rdf:rest
+                                            [ a       rdf:List ;
+                                              rdf:first "constante media"^^xsd:string ;
+                                              rdf:rest
+                                                      [ a       rdf:List ;
+                                                        rdf:first "desconocido"^^xsd:string ;
+                                                        rdf:rest
+                                                                [ a       rdf:List ;
+                                                                  rdf:first "sin catalogar"^^xsd:string ;
+                                                                  rdf:rest
+                                                                          [ a       rdf:List ;
+                                                                            rdf:first "variable"^^xsd:string ;
+                                                                            rdf:rest ()
+                                                                          ]
+                                                                ]
+                                                      ]
+                                            ]
+                                  ]
+                        ]
+              ] .
+
+:Colector
+      a       owl:Class ;
+      rdfs:comment "Caño o canal que recoge todas las aguas procedentes de un avenamiento o las sobrantes del riego"@es ;
+      rdfs:label "Colector"@es ;
+      rdfs:subClassOf :Conducto ;
+      dc:source "Diccionario de la Real Academia Española"@es .
+
+:Reguera
+      a       owl:Class ;
+      rdfs:comment "Canal o acequia para el riego"^^xsd:string ;
+      rdfs:label "Reguera"@es , "Drain"@en , "Regata"@es ;
+      rdfs:subClassOf :Acequia ;
+      dc:source "Vazquez Maure F.; Martin Lopez J. Vocabulario de terminos geograficos. Madrid: Ministerio de Obras Publicas y Urbanismo. Instituto Geografico Nacional. 1987. 89 p. ISBN: 84-505-4929-9."^^xsd:string .
+
+:ZonaEconomicaExclusiva
+      a       owl:Class ;
+      rdfs:comment "Área situada fuera del mar territorial y adyacente a este, que esta sujeta a un regimen juridico especifico y en donde terceros Estados tienen tambien determinados derechos y libertades. Para la medicion de la anchura de la zona economica se parte tambien de las lineas de base a partir de las cuales se mide la anchura del mar territorial. Son doscientas millas marinas, anchura maxima aceptada, comprenden tanto el mar territorial como la zona economica. Pero se habla generalmente de “zona adyacente al mar territorial” y, por tanto, situada fuera de este."^^xsd:string ;
+      rdfs:label "Zona economica exclusiva"@es ;
+      rdfs:subClassOf :AguasMarinas ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty :parte_de ;
+                owl:someValuesFrom :Mar
+              ] ;
+      dc:source "Diez de Velasco, Manuel (1999) Instituciones de derecho internacional publico. Duodecima edicion. Madrid: Tecnos. 924 p. ISBN: 84-309-3446-4"^^xsd:string .
+
+:estaEn
+      a       owl:ObjectProperty ;
+      rdfs:domain
+              [ a       owl:Class ;
+                owl:unionOf (:Aluvion :Canyo :Rambla :Rio)
+              ] ;
+      rdfs:range
+              [ a       owl:Class ;
+                owl:unionOf (:Barranco :Desembocadura :Marisma)
+              ] .
+
+:Acuifero
+      a       owl:Class ;
+      rdfs:comment "Dit de la formació geològica en la qual s'emmagatzema i circula aigua subterrània, aprofitant la porositat del terreny que l'acull i el gradient hidràulic allà present."@cat , "Couche de terrain ou une roche, suffisamment poreuse (qui peut stocker de l'eau) et perméable (où l'eau circule librement), pour contenir une nappe d'eau souterraine."@fr , "A subsurface layer or layers of rock or other geological strata of sufficient porosity and permeability to allow either a significant flow of groundwater or the abstraction of significant quantities of groundwater."@en , "Una o mas capas subterraneas de roca o de otros estratos geologicos que tienen la suficiente porosidad y permeabilidad para permitir ya sea un flujo significativo de aguas subterraneas o la extraccion de cantidades significativas de aguas subterraneas"@es ;
+      rdfs:label "Embalse de agua subterranea"@es , "Aquifer"@en , "Aquifère"@fr , "Aqüífer"@cat , "Acuífero"@es ;
+      rdfs:subClassOf :AguasSubterraneas ;
+      :provenance "Directiva Marco del Agua. Union Europea"^^xsd:string , "Water Framework Directive. European Union"^^xsd:string ;
+      dc:source "Embalse de agua subterranea - Glosario Hidrologico Internacional. UNESCO"^^xsd:string ;
+      owl:equivalentClass
+              [ a       owl:Restriction ;
+                owl:onProperty :se_extrae_para ;
+                owl:someValuesFrom
+                        [ a       owl:Class ;
+                          owl:unionOf (:FuenteArtificial :Pozo)
+                        ]
+              ] ;
+      owl:equivalentClass
+              [ a       owl:Class ;
+                owl:intersectionOf ([ a       owl:Restriction ;
+                            owl:allValuesFrom :CorrienteSubterranea ;
+                            owl:onProperty :permite
+                          ] [ a       owl:Restriction ;
+                            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onProperty :permite
+                          ])
+              ] .
+
+:salinidad
+      a       owl:DatatypeProperty ;
+      rdfs:domain :AguasDeTransicion , :AguasSaladas ;
+      rdfs:seeAlso "{\"alto\", \"bajo\"}"@es .
+
+:Gotera
+      a       owl:Class ;
+      rdfs:label "Gotera"@es ;
+      rdfs:subClassOf :Cienaga .
+
+:Ribera
+      a       owl:Class ;
+      rdfs:comment "Margen y orilla del mar o rio."@es ;
+      rdfs:label "riverbank"@en , "Ribera"@es , "River bank"@en , "riverside"@en ;
+      rdfs:subClassOf :Morfologia ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom
+                        [ a       owl:Class ;
+                          owl:unionOf (:AguasMarinas :Rio)
+                        ] ;
+                owl:onProperty :parte_de
+              ] ;
+      dc:source "Diccionario de la Real Academia Española"@es .
+
+:dispone_de_emisario
+      a       owl:ObjectProperty ;
+      rdfs:domain :Lago ;
+      rdfs:range :Rio ;
+      owl:inverseOf :actua_de_emisario_de .
+
+:BalsaDeHielo
+      a       owl:Class ;
+      rdfs:label "Balsa de hielo"@es ;
+      rdfs:subClassOf :MasaDeHielo ;
+      :provenance "The DIgital Geographic Information Exchange STandard (DIGEST) - Feature Attribute Coding Catalogue (FACC) Data Dictionary"@en .
+
+:Shuga
+      a       owl:Class ;
+      rdfs:comment "Acumulacion de conglomerados de hielo blanco esponjoso, de unos pocos centimetros de diametro, formados por hielo pastoso o grasoso, y  a veces por hielo de fondo que emerge a la superficie"^^xsd:string ;
+      rdfs:label "Shuga"@en , "Hielo esponjoso"@es , "Hielo pastoso"@es ;
+      rdfs:subClassOf :MasaDeHielo ;
+      :provenance "Glosario Hidrologico Internacional - UNESCO"^^xsd:string ;
+      dc:source "Glosario Hidrologico Internacional - UNESCO"^^xsd:string .
+
+:Estero
+      a       owl:Class ;
+      rdfs:comment "Terreno bajo pantanoso que suele llenarse de agua por la filtracion de un rio o laguna cercana y que se inunda en la pleamar."^^xsd:string ;
+      rdfs:label "Swamp"@en , "Estero"@es ;
+      rdfs:subClassOf :ZonaHumeda ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom
+                        [ a       owl:Class ;
+                          owl:unionOf (:AguasMarinas :Laguna :Rio)
+                        ] ;
+                owl:onProperty :es_inundada_por
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Class ;
+                owl:intersectionOf ([ a       owl:Restriction ;
+                            owl:onProperty :esta_proxima_a ;
+                            owl:someValuesFrom :Desembocadura
+                          ] [ a       owl:Restriction ;
+                            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onProperty :esta_proxima_a
+                          ])
+              ] ;
+      dc:source "Fontanillo, E. (1986) Diccionario de Geografia. Ed. Anaya. Madrid & Diccionario de la Real Academia Espannola"^^xsd:string .
+
+:Chortal
+      a       owl:Class ;
+      rdfs:comment "Lagunilla formada por un manantial poco abundante que brota en el fondo de ella"^^xsd:string ;
+      rdfs:label "Chortal"@es ;
+      rdfs:subClassOf :Charca ;
+      rdfs:subClassOf
+              [ a       owl:Class ;
+                owl:intersectionOf ([ a       owl:Restriction ;
+                            owl:allValuesFrom :Manantial ;
+                            owl:onProperty :es_originado_por
+                          ] [ a       owl:Restriction ;
+                            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onProperty :es_originado_por
+                          ])
+              ] ;
+      dc:source "Diccionario de la Real Academia Espannola"^^xsd:string .
+
+:Tuberia
+      a       owl:Class ;
+      rdfs:comment "A long tube made of metal or plastic that is used to carry water or oil or gas etc."@en , "Conducto formado por tubos de metal o plastico utilizado para el transporte de agua."@es ;
+      rdfs:label "Pipe"@en , "Tubería"@es ;
+      rdfs:subClassOf :Conducto ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty :alimenta_a ;
+                owl:someValuesFrom :FuenteArtificial
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty :conduce ;
+                owl:someValuesFrom :AguasContinentales
+              ] ;
+      dc:source "WordNet"@en , "Diccionario de la Real Academia Española"@es .
+
+:Sumidero
+      a       owl:Class ;
+      rdfs:comment "Agujero o abertura en el fondo o el costado de una depresion por la que una corriente de superficie o un lago, fluye parcial o totalmente hacia el sistema karstico subterraneo."^^xsd:string ;
+      rdfs:label "Sumidero"@es , "Ponor"@es , "Drain"@en ;
+      rdfs:subClassOf :Morfologia ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty :origina ;
+                owl:someValuesFrom :CorrienteSubterranea
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty :alimenta_a ;
+                owl:someValuesFrom :Acuifero
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty :comunica_con ;
+                owl:someValuesFrom
+                        [ a       owl:Class ;
+                          owl:intersectionOf (:AguasSubterraneas :AguasSuperficiales)
+                        ]
+              ] ;
+      :provenance "Glosario Hidrologico Internacional - UNESCO"^^xsd:string ;
+      dc:source "Glosario Hidrologico Internacional - UNESCO"^^xsd:string .
+
+:recarga_natural
+      a       owl:DatatypeProperty ;
+      rdfs:domain :AguasSubterraneas ;
+      rdfs:range xsd:string .
+
+:tiene_afluente
+      a       owl:ObjectProperty ;
+      rdfs:domain :AguasCorrientesNaturales ;
+      rdfs:range :AguasCorrientesNaturales .
+
+:SurgenciaArtificial
+      a       owl:Class ;
+      rdfs:comment "Salida de agua a la superficie terrestre construida por el hombre."^^xsd:string ;
+      rdfs:label "Surgencia artificial"@es ;
+      rdfs:subClassOf :Surgencia ;
+      dc:source "Lopez Marinas, Juan Manuel; Perron, Mariano (2002) Glosario y Vocabulario espannol, ingles y frances de terminos habituales en geologia aplicada a la ingenieria civil. Madrid: CIE Inversiones Editoriales Dossat 2000. 237 p. ISBN: 84-95312-55-7 & Elaboracion propia"^^xsd:string ;
+      owl:equivalentClass
+              [ a       owl:Class ;
+                owl:unionOf (:FuenteArtificial :Pozo :Toma)
+              ] .
+
+:ManantialSalado
+      a       owl:Class ;
+      rdfs:label "Manantial salado"@es ;
+      rdfs:subClassOf
+              [ a       owl:Class ;
+                owl:intersectionOf (:AguasContinentales :AguasSaladas)
+              ] .
+
+:vierte_en
+      a       owl:ObjectProperty ;
+      rdfs:domain :Desague ;
+      rdfs:range
+              [ a       owl:Class ;
+                owl:unionOf (:AguasMarinas :AguasQuietas :Arroyo :Rio)
+              ] .
+
+:actua_de_emisario_de
+      a       owl:ObjectProperty ;
+      rdfs:domain
+              [ a       owl:Class ;
+                owl:unionOf (:Captacion :Rio)
+              ] ;
+      rdfs:range
+              [ a       owl:Class ;
+                owl:unionOf (:Lago :Rio)
+              ] .
+
+:Aguas
+      a       owl:Class ;
+      rdfs:comment "Sustancia cuyas moleculas estan formadas por la combinacion de un atomo de oxigeno y dos de hidrogeno en estado liquido o solido."^^xsd:string ;
+      rdfs:label "Masa de agua"@es , "Waters"@en , "Aguas"@es ;
+      rdfs:subClassOf :FenomenoHidrografico ;
+      dc:source "Diccionario de la Real Academia Espannola"^^xsd:string ;
+      owl:equivalentClass
+              [ a       owl:Class ;
+                owl:unionOf (:AguasContinentales :AguasDulces :AguasSaladas)
+              ] .
+
+:ZonaEncharcable
+      a       owl:Class ;
+      rdfs:comment "Área susceptible de ser anegada eventualmente debido a las crecidas de rios, embalses o lagos."@es ;
+      rdfs:label "Terreno inundable"@es , "Encharcamiento"@es , "Zona encharcable"@es ;
+      rdfs:subClassOf :Morfologia ;
+      :provenance "Terreno inundable - Catalogo de fenomenos. Proyecto GEOALEX"@es ;
+      dc:source "Elaboracion propia"@es ;
+      owl:equivalentClass
+              [ a       owl:Restriction ;
+                owl:allValuesFrom
+                        [ a       owl:Class ;
+                          owl:unionOf (:AguasCorrientesNaturales :AguasQuietasNaturales :Embalse)
+                        ] ;
+                owl:onProperty :es_inundada_por
+              ] .
+
+:AguasCosteras
+      a       owl:Class ;
+      rdfs:comment """Surface water on the landward side of a line, every point of which is at a distance of one nautical mile on the seaward side from the nearest point of the baseline from which the breadth of territorial
+waters is measured, extending where appropriate up to the outer limit of transitional waters."""^^xsd:string , "Las aguas superficiales situadas hacia tierra desde una linea cuya totalidad de puntos se encuentra a una distancia de una milla nautica mar adentro desde el punto mas proximo de la linea de base que sirve para medir la anchura de las aguas territoriales y que se extienden, en su caso, hasta el limite exterior de las aguas de transicion."^^xsd:string ;
+      rdfs:label "Coastal water"@en , "Aguas costeras"@es ;
+      rdfs:subClassOf :AguasMarinas ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty :parte_de ;
+                owl:someValuesFrom :Mar
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty :inunda ;
+                owl:someValuesFrom :Estero
+              ] ;
+      dc:source "European Parliament and the Council of the European Union (2000) Directive 2000/60/EC of the European Parliament and of the Council for establishing a framework for Community action in the field of water policy. Brussels, p 72."^^xsd:string , "Parlamento Europeo y Consejo de la Union Europea. (2000) Directiva 2000/60/CE del Parlmento Europeo y del Consejo por la que se establece un marco comunitario de actuacion en el ambito de la politica de aguas. pp 72"^^xsd:string .
+
+:comunica_con
+      a       owl:ObjectProperty ;
+      rdfs:domain
+              [ a       owl:Class ;
+                owl:unionOf (:Canal :Sumidero)
+              ] ;
+      rdfs:range
+              [ a       owl:Class ;
+                owl:unionOf (:AguasMarinas :AguasSubterraneas :AguasSuperficiales :Marisma :Ria)
+              ] .
+
+:caudal
+      a       owl:DatatypeProperty ;
+      rdfs:domain :AguasCorrientesNaturales , :CorrienteSubterranea ;
+      rdfs:range xsd:float .
+
+:BancoDeNieve
+      a       owl:Class ;
+      rdfs:comment "Zona aislada de nieve, por encima o debajo de la linea de nieve regional, que puede durar a lo largo de todo el verano"^^xsd:string ;
+      rdfs:label "Banco de nieve"@es ;
+      rdfs:subClassOf :MasaDeHielo ;
+      :provenance "Glosario Hidrologico Internacional - UNESCO"^^xsd:string ;
+      dc:source "Glosario Hidrologico Internacional - UNESCO"^^xsd:string .
+
+:tamanyo
+      a       owl:DatatypeProperty ;
+      rdfs:comment "tabla segmentoLago columna Tamanno CEDEX"^^xsd:string ;
+      rdfs:domain :AguasQuietas ;
+      rdfs:range xsd:float .
+
+:tipologia_de_material
+      a       owl:DatatypeProperty ;
+      rdfs:domain :Aluvion ;
+      rdfs:range xsd:string .
+
+:destino
+      a       owl:DatatypeProperty ;
+      rdfs:domain :AguasQuietas ;
+      rdfs:range xsd:string .
+
+:AguasQuietas
+      a       owl:Class ;
+      rdfs:comment "Aguas continentales situadas en la superficie del suelo que no tienen un movimiento notable y continuo debido al flujo de agua a traves de un cauce de origen natural o artificial"^^xsd:string ;
+      rdfs:label "Standing water"@en , "Aguas quietas"@es , "Superficies acuáticas"@es ;
+      rdfs:subClassOf :AguasSuperficiales ;
+      :provenance "Superficies aquaticas - Catalogo de fenomenos. Proyecto GEOALEX"^^xsd:string ;
+      dc:source "Elaboracion propia"^^xsd:string ;
+      owl:equivalentClass
+              [ a       owl:Class ;
+                owl:unionOf (:AguasQuietasArtificiales :AguasQuietasNaturales)
+              ] .
+
+:estacion_de_aforo
+      a       owl:DatatypeProperty ;
+      rdfs:domain :Rio ;
+      rdfs:range xsd:string .
+
+:Ibon
+      a       owl:Class ;
+      rdfs:comment "Laguna alimentada por la fusion de las nieves"^^xsd:string ;
+      rdfs:label "Ibón"@es ;
+      rdfs:subClassOf :Charca ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom
+                        [ a       owl:Class ;
+                          owl:unionOf (:Glaciar :MasaDeHielo)
+                        ] ;
+                owl:onProperty :es_originado_por
+              ] ;
+      dc:source "Vazquez Maure F.; Martin Lopez J. (1987) Vocabulario de terminos geograficos. Ed. Ministerio de Obras Publicas y Urbanismo. Instituto Geografico Nacional. Madrid. ISBN: 84-505-4929-9."^^xsd:string .
+
+:es_almacenado_en
+      a       owl:ObjectProperty ;
+      rdfs:domain
+              [ a       owl:Class ;
+                owl:unionOf (:Arroyo :Rio)
+              ] ;
+      rdfs:range :Embalse .
+
+:Playa
+      a       owl:Class ;
+      rdfs:comment "Ribera del mar formada de arenales en superficie casi plana"@es ;
+      rdfs:label "Beach"@en , "Playa"@es ;
+      rdfs:subClassOf :Ribera ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty :estaEn ;
+                owl:someValuesFrom :Mar
+              ] .
+
+:desagua_en
+      a       owl:ObjectProperty ;
+      rdfs:comment "Dicho de un río que vierte sus agua a otro río"@es ;
+      rdfs:domain
+              [ a       owl:Class ;
+                owl:unionOf (:AguasCorrientesNaturales :AguasDeTransicion :AguasQuietasArtificiales :Desembocadura)
+              ] ;
+      rdfs:range :Aguas .
+
+:Afluente
+      a       owl:Class ;
+      rdfs:comment "Arroyo o rio secundario que desemboca o desagua en otro principal."^^xsd:string ;
+      rdfs:label "Afluente"@es , "Tributary"@en ;
+      :provenance "Base Cartografica Numerica 1:25000 (BCN25) del Instituto Geografico Nacional (IGN)"^^xsd:string ;
+      dc:source "Diccionario de la Real Academia Espannola"^^xsd:string ;
+      owl:equivalentClass
+              [ a       owl:Class ;
+                owl:intersectionOf ([ a       owl:Restriction ;
+                            owl:allValuesFrom :AguasCorrientesNaturales ;
+                            owl:onProperty :es_afluente_de
+                          ] [ a       owl:Restriction ;
+                            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onProperty :es_afluente_de
+                          ])
+              ] ;
+      owl:equivalentClass
+              [ a       owl:Class ;
+                owl:intersectionOf (:Rio [ a       owl:Restriction ;
+                            owl:allValuesFrom :Rio ;
+                            owl:onProperty :desagua_en
+                          ])
+              ] .
+
+:distribuye
+      a       owl:ObjectProperty ;
+      rdfs:domain
+              [ a       owl:Class ;
+                owl:unionOf (:CanalAguasContinentales :Distribucion)
+              ] ;
+      rdfs:range :AguasSuperficiales ;
+      rdfs:subPropertyOf :conduce .
+
+:puede_fluir_como
+      a       owl:ObjectProperty ;
+      rdfs:domain :AguasCorrientesNaturales ;
+      rdfs:range :CorrienteSubterranea .
+
+:diametro
+      a       owl:DatatypeProperty ;
+      rdfs:domain :Conducto ;
+      rdfs:range xsd:float .
+
+:densidad
+      a       owl:DatatypeProperty ;
+      rdfs:domain :AguasMarinas ;
+      rdfs:range xsd:float .
+
+:Garganta
+      a       owl:Class ;
+      rdfs:comment "Cauce estrecho y profundo, abierto por un rio, cuyas paredes son casi verticales"^^xsd:string ;
+      rdfs:label "Garganta"@es ;
+      rdfs:subClassOf :Morfologia ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :Rio ;
+                owl:onProperty :parte_de
+              ] ;
+      dc:source "Vazquez Maure, F., Martin Lopez, J. (1987) Vocabulario de terminos geograficos. Ministerio de Obras Publicas y Urbanismo. Instituto Geografico Nacional"^^xsd:string .
+
+:permite
+      a       owl:ObjectProperty ;
+      rdfs:domain :Acuifero ;
+      rdfs:range :CorrienteSubterranea .
+
+:esta_proxima_a
+      a       owl:ObjectProperty ;
+      rdfs:domain
+              [ a       owl:Class ;
+                owl:unionOf (:AguasDeTransicion :Albufera :Basines :Delta :Desembocadura :Estero :Saladar :Salina)
+              ] ;
+      rdfs:range
+              [ a       owl:Class ;
+                owl:unionOf (:AguasMarinas :Arroyo :Desembocadura :Mar :Marisma :Rio)
+              ] .
+
+:Aljibe
+      a       owl:Class ;
+      rdfs:comment "Depósito subterráneo donde se recoge y conserva el agua llovediza o la que se lleva de algún río o manantial"@es ;
+      rdfs:label "Cisterna"@es , "Cistern"@en , "Aljibe"@es ;
+      rdfs:subClassOf :Deposito ;
+      rdfs:subClassOf
+              [ a       owl:Class ;
+                owl:intersectionOf ([ a       owl:Restriction ;
+                            owl:onProperty :almacena ;
+                            owl:someValuesFrom
+                                    [ a       owl:Class ;
+                                      owl:unionOf (:Manantial :Rio)
+                                    ]
+                          ] [ a       owl:Restriction ;
+                            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onProperty :almacena
+                          ])
+              ] ;
+      dc:source "Diccionario de la Real Academia Espannola"^^xsd:string .
+
+:Brazo
+      a       owl:Class ;
+      rdfs:comment "Canal ancho y largo del mar, que penetra tierra adentro, sin tener en cuenta sus dimensiones absolutas."^^xsd:string ;
+      rdfs:label "Branch, Channel"@en , "Brazo"@es ;
+      rdfs:subClassOf :CanalAguasMarinas ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty :parte_de ;
+                owl:someValuesFrom :Mar
+              ] ;
+      dc:source "Vazquez Maure F.; Martin Lopez J. Vocabulario de terminos geograficos. Madrid: Ministerio de Obras Publicas y Urbanismo. Instituto Geografico Nacional. 1987. 89 p. ISBN: 84-505-4929-9."^^xsd:string .
+
+:IslaFluvial
+      a       owl:Class ;
+      rdfs:comment "Porcion de tierra rodeada por las aguas de un río, laguna o embalse"@es ;
+      rdfs:label "River island"@en , "Isla fluvial"@es ;
+      rdfs:subClassOf :Morfologia ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom
+                        [ a       owl:Class ;
+                          owl:unionOf (:Embalse :Lago :Laguna :Rio)
+                        ] ;
+                owl:onProperty :parte_de
+              ] ;
+      dc:source "Diccionario de la Real Academia Española & Elaboración propia"@es .
+
+:SurgenciaNatural
+      a       owl:Class ;
+      rdfs:comment "Salida natural de agua a la superficie terrestre"^^xsd:string ;
+      rdfs:label "Surgencia natural"@es ;
+      rdfs:subClassOf :Surgencia ;
+      dc:source "Lopez Marinas, Juan Manuel; Perron, Mariano (2002) Glosario y Vocabulario espannol, ingles y frances de terminos habituales en geologia aplicada a la ingenieria civil. Madrid: CIE Inversiones Editoriales Dossat 2000. 237 p. ISBN: 84-95312-55-7 & Elaboracion propia"^^xsd:string .
+
+:CanalDeLago
+      a       owl:Class ;
+      rdfs:label "Canal de lago"@es ;
+      rdfs:subClassOf :CanalAguasContinentales ;
+      rdfs:subClassOf
+              [ a       owl:Class ;
+                owl:intersectionOf ([ a       owl:Restriction ;
+                            owl:onProperty :comunica_con ;
+                            owl:someValuesFrom
+                                    [ a       owl:Class ;
+                                      owl:unionOf (:Lago :Laguna)
+                                    ]
+                          ] [ a       owl:Restriction ;
+                            owl:maxCardinality "2"^^xsd:nonNegativeInteger ;
+                            owl:onProperty :comunica_con
+                          ])
+              ] ;
+      :provenance "GeoNames"^^xsd:string .
+
+:long
+      a       owl:DatatypeProperty ;
+      rdfs:domain :FenomenoHidrografico , :Morfologia , :CuencaHidrografica ;
+      rdfs:subPropertyOf :coordenadas .
+
+:Balsa
+      a       owl:Class ;
+      rdfs:comment "Masa estable de agua acumulada en una depresion del terreno y utilizada especialmente con fines de regadio"^^xsd:string ;
+      rdfs:label "Pool"@en , "Balsa"@es , "Balsa artificial"@es ;
+      rdfs:subClassOf :Deposito ;
+      dc:source "Seco, Manuel. Diccionario del espannol actual. Madrid: Editorial Aguilar. 1999"^^xsd:string .
+
+:obtencion_de_energia
+      a       owl:DatatypeProperty ;
+      rdfs:domain :Cascada , :Embalse ;
+      rdfs:range xsd:boolean .
+
+:Terma
+      a       owl:Class ;
+      rdfs:comment "Fuente cuya agua brota a una temperatura superior a la temperatura media anual del lugar en el que esta localizada"^^xsd:string ;
+      rdfs:label "Fuente termal"@es , "Hot spring"@en , "Fuente termomineral"@es , "Aguas termales"@es , "Fenomenos termales"@es , "Terma"@es ;
+      rdfs:subClassOf :Manantial ;
+      :provenance "Glosario Hidrologico Internacional - UNESCO"^^xsd:string , "Fuente termomineral - Glosario Hidrologico Internacional. UNESCO"^^xsd:string , "Fenomenos termales - Alexandria Digital Library (ADL) Feature Type Thesaurus"^^xsd:string , "Aguas termales - EuroRegionalMap (ERM)"^^xsd:string , "Aguas termales - EuroGlobalMap (EGM)"^^xsd:string , "Fuente termal - Glosario Hidrologico Internacional. UNESCO"^^xsd:string ;
+      dc:source "Glosario Hidrologico Internacional - UNESCO"^^xsd:string .
+
+:zona_de_recarga
+      a       owl:DatatypeProperty ;
+      rdfs:domain :Acuifero ;
+      rdfs:range xsd:string .
+
+:LagoSalado
+      a       owl:Class ;
+      rdfs:label "Lago salado"@es ;
+      rdfs:subClassOf
+              [ a       owl:Class ;
+                owl:intersectionOf (:AguasContinentales :AguasSaladas)
+              ] .
+
+:Albufera
+      a       owl:Class ;
+      rdfs:comment "Laguna litoral, en costa baja, de agua salina o ligeramente salobre, separada del mar por una lengua o cordon de arenas"@es ;
+      rdfs:label "Albufera"@es ;
+      rdfs:subClassOf :Laguna , :AguasSaladas ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty :es_comunicada_por ;
+                owl:someValuesFrom :Canyo
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Class ;
+                owl:intersectionOf ([ a       owl:Restriction ;
+                            owl:allValuesFrom :AguasMarinas ;
+                            owl:onProperty :es_alimentada_por
+                          ] [ a       owl:Restriction ;
+                            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onProperty :es_alimentada_por
+                          ])
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty :esta_proxima_a ;
+                owl:someValuesFrom :AguasMarinas
+              ] ;
+      dc:source "Diccionario de la Real Academia Española"@es .
+
+:tipologia_de_cauce
+      a       owl:DatatypeProperty ;
+      rdfs:domain :CorrienteSubterranea ;
+      rdfs:range
+              [ a       rdfs:Datatype ;
+                owl:oneOf
+                        [ a       rdf:List ;
+                          rdf:first "Artificial"^^xsd:string ;
+                          rdf:rest
+                                  [ a       rdf:List ;
+                                    rdf:first "Natural"^^xsd:string ;
+                                    rdf:rest ()
+                                  ]
+                        ]
+              ] .
+
+:cauce
+      a       owl:DatatypeProperty ;
+      rdfs:comment "Tabla SegmentoRio columna tipoCauce"^^xsd:string ;
+      rdfs:domain :AguasCorrientesNaturales ;
+      rdfs:range
+              [ a       rdfs:Datatype ;
+                owl:oneOf
+                        [ a       rdf:List ;
+                          rdf:first "alterado o no clasificable"^^xsd:string ;
+                          rdf:rest
+                                  [ a       rdf:List ;
+                                    rdf:first "anastomosado"^^xsd:string ;
+                                    rdf:rest
+                                            [ a       rdf:List ;
+                                              rdf:first "meandriforme de pendiente baja"^^xsd:string ;
+                                              rdf:rest
+                                                      [ a       rdf:List ;
+                                                        rdf:first "meandriforme de pendiente media"^^xsd:string ;
+                                                        rdf:rest
+                                                                [ a       rdf:List ;
+                                                                  rdf:first "pendiente"^^xsd:string ;
+                                                                  rdf:rest
+                                                                          [ a       rdf:List ;
+                                                                            rdf:first "recto"^^xsd:string ;
+                                                                            rdf:rest
+                                                                                    [ a       rdf:List ;
+                                                                                      rdf:first "sinuoso de pendiente alta"^^xsd:string ;
+                                                                                      rdf:rest
+                                                                                              [ a       rdf:List ;
+                                                                                                rdf:first "sinuoso de pendiente media y baja"^^xsd:string ;
+                                                                                                rdf:rest
+                                                                                                        [ a       rdf:List ;
+                                                                                                          rdf:first "trenzado de pendiente alta"^^xsd:string ;
+                                                                                                          rdf:rest
+                                                                                                                  [ a       rdf:List ;
+                                                                                                                    rdf:first "trenzado de pendiente baja"^^xsd:string ;
+                                                                                                                    rdf:rest ()
+                                                                                                                  ]
+                                                                                                        ]
+                                                                                              ]
+                                                                                    ]
+                                                                          ]
+                                                                ]
+                                                      ]
+                                            ]
+                                  ]
+                        ]
+              ] .
+
+:Tremedal
+      a       owl:Class ;
+      rdfs:comment "Terreno pantanoso, abundante en turba, cubierto de cesped, y que por su escasa consistencia retiembla cuando se anda sobre el"@es ;
+      rdfs:label "Tremedal"@es ;
+      rdfs:subClassOf :Cienaga ;
+      dc:source "Diccionario de la Real Academia Española"@es .
+
+:Poza
+      a       owl:Class ;
+      rdfs:comment "Concavidad en que hay agua detenida"^^xsd:string ;
+      rdfs:label "Poza"@es ;
+      rdfs:subClassOf :Morfologia ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :Rio ;
+                owl:onProperty :parte_de
+              ] ;
+      dc:source "Diccionario de la Real Academia Española"@es .
+
+:Geiser
+      a       owl:Class ;
+      rdfs:comment "Fuente termal intermitente que lanza periodicamente una columna de agua caliente."^^xsd:string ;
+      rdfs:label "Géiser"@es ;
+      rdfs:subClassOf :FuenteNatural ;
+      :provenance "Glosario Hidrologico Internacional - UNESCO"^^xsd:string , "GeoNames"^^xsd:string ;
+      dc:source "Glosario Hidrologico Internacional - UNESCO"^^xsd:string .
+
+:explotacion
+      a       owl:DatatypeProperty ;
+      rdfs:comment "tabla MasaSubterranea_Presiones columna Explotacion"^^xsd:string ;
+      rdfs:domain :Acuifero .
+
+:es_afluente_de
+      a       owl:ObjectProperty ;
+      owl:inverseOf :tiene_afluente .
+
+:AguasDeTransicion
+      a       owl:Class ;
+      rdfs:comment "Masas de agua superficial proximas a la desembocadura de los rios que son parcialmente salinas como consecuencia de su proximidad a las aguas costeras, pero que reciben una notable influencia de flujos de agua dulce."^^xsd:string , "Bodies of surface water in the vicinity of river mouths which are partly saline in character as a result of their proximity to coastal waters but which are substantially influenced by freshwater flows."^^xsd:string ;
+      rdfs:label "Transitional waters"@en , "Aguas de transición"@es ;
+      rdfs:subClassOf :AguasSuperficiales ;
+      dc:source "Directiva Marco del Agua. Union Europea"^^xsd:string , "European Parliament and the Council of the European Union. DIRECTIVE 2000/60/EC OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL for establishing a framework for Community action in the field of water policy. Brussels, 23 October 2000. p 72."^^xsd:string ;
+      owl:equivalentClass
+              [ a       owl:Class ;
+                owl:intersectionOf ([ a       owl:Restriction ;
+                            owl:onProperty :sometida_a_influencia_de ;
+                            owl:someValuesFrom :AguasDulces
+                          ] [ a       owl:Restriction ;
+                            owl:onProperty :sometida_a_influencia_de ;
+                            owl:someValuesFrom :AguasSaladas
+                          ] [ a       owl:Restriction ;
+                            owl:allValuesFrom
+                                    [ a       owl:Class ;
+                                      owl:unionOf (:AguasDulces :AguasSaladas)
+                                    ] ;
+                            owl:onProperty :sometida_a_influencia_de
+                          ] [ a       owl:Restriction ;
+                            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onProperty :parte_de
+                          ] [ a       owl:Restriction ;
+                            owl:cardinality "2"^^xsd:nonNegativeInteger ;
+                            owl:onProperty :sometida_a_influencia_de
+                          ])
+              ] ;
+      owl:equivalentClass
+              [ a       owl:Class ;
+                owl:unionOf (:Canyo :Estuario :Marisma :Ria)
+              ] .
+
+:Idioma_alternativo
+      a       owl:DatatypeProperty ;
+      rdfs:domain :FenomenoHidrografico , :Morfologia , :CuencaHidrografica ;
+      rdfs:range xsd:string ;
+      rdfs:subPropertyOf :idioma .
+
+:Basines
+      a       owl:Class ;
+      rdfs:comment "Áreas localizadas cerca de un curso de agua y/o al mar y hace parte de la llanura de inundacion, en las cuales debido a la forma concaba que presenta, se constituye en una zona de estancamiento de agua."@es ;
+      rdfs:label "Basines"@es ;
+      rdfs:subClassOf :ZonaEncharcable ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty :esta_proxima_a ;
+                owl:someValuesFrom
+                        [ a       owl:Class ;
+                          owl:unionOf (:AguasMarinas :Arroyo :Rio)
+                        ]
+              ] ;
+      :provenance "Catalogo de objetos de Colombia"@es ;
+      dc:source "Villota, H. Geomorfologia aplicada a levantamientos edafologicos y zonificacion fisica de las tierras. IGAC. Santafe de Bogota. D.C. 1997"@es .
+
+:MasaDeHielo
+      a       owl:Class ;
+      rdfs:label "Masa de hielo"@es ;
+      rdfs:subClassOf :AguasQuietasNaturales ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom
+                        [ a       owl:Class ;
+                          owl:unionOf (:AguasCorrientesNaturales :Charca :Lago :Laguna)
+                        ] ;
+                owl:onProperty :alimenta_a
+              ] ;
+      :provenance "Alexandria Digital Library (ADL) Feature Type Thesaurus"@en .
+
+:sometido
+      a       owl:ObjectProperty .
+
+:grado_de_contaminacion
+      a       owl:DatatypeProperty ;
+      rdfs:comment "tabla MasaSubterranea_Presiones columna Contaminacion Putnaul"^^xsd:string ;
+      rdfs:domain :AguasSubterraneas ;
+      rdfs:range xsd:string .
+
+:captura
+      a       owl:ObjectProperty ;
+      rdfs:domain :Captacion ;
+      rdfs:range :Rio ;
+      rdfs:subPropertyOf :conecta_con .
+
+:Efluente
+      a       owl:Class ;
+      rdfs:comment "Derivacion de un curso de agua principal o de un lago."^^xsd:string ;
+      rdfs:label "Efluente"@es ;
+      rdfs:subClassOf :Corriente ;
+      :provenance "Glosario Hidrologico Internacional - UNESCO"^^xsd:string ;
+      dc:source "Glosario Hidrologico Internacional - UNESCO"^^xsd:string .
+
+:FenomenoHidrografico
+      a       owl:Class ;
+      rdfs:comment "Abstraccion de un ente que forma parte del conjunto de las aguas de un pais o region o que configura su estructura."^^xsd:string ;
+      rdfs:label "Fenomeno hidrográfico"@es , "Accidente hidrografico"@es , "Hydrographical feature"@en , "Elemento hidrografico"@es ;
+      dc:source "Diccionario de la Real Academia Espannola & International Organization for Standardization. ISO 19101:2002 Geographic information - Reference model."^^xsd:string .
+
+:sigueA
+      a       owl:ObjectProperty ;
+      rdfs:domain
+              [ a       owl:Class ;
+                owl:unionOf (:AguasMarinas :Desembocadura :Rio)
+              ] ;
+      rdfs:range
+              [ a       owl:Class ;
+                owl:unionOf (:Desembocadura :Rio)
+              ] ;
+      rdfs:subPropertyOf :esta_proxima_a .
+
+:uso  a       owl:DatatypeProperty ;
+      rdfs:domain :AguasSubterraneas , :AguasSuperficiales ;
+      rdfs:seeAlso "{\"Abastecimientos urbanos\", \"Acuicultura\", \"Agricola y/o ganadero\", \"Almacenaje\", \"Caudales y volumenes de compensacion\", \"Desconocido\", \"Navegacion y transporte acuatico\", \"No se usa\", \"Ornamental\", \"Otros usos\", \"Otros usos industriales\", \"Regadios y usos agrarios\", \"Usos industriales para la produccion de energia\", \"Usos recreativos\"}" .
+
+:Azarbe
+      a       owl:Class ;
+      rdfs:comment "Cauce adonde van a parar por las azarbetas los sobrantes o filtraciones de los riegos."^^xsd:string ;
+      rdfs:label "Azarbe"@es ;
+      rdfs:subClassOf :Acequia ;
+      dc:source "Diccionario de la Real Academia Espannola de la Lengua"^^xsd:string .
+
+:ejercen_influencia
+      a       owl:ObjectProperty ;
+      rdfs:domain :Aguas ;
+      rdfs:range :AguasDeTransicion ;
+      owl:inverseOf :sometida_a_influencia_de .
+
+dc:source
+      a       owl:AnnotationProperty .
+
+:conduce
+      a       owl:ObjectProperty ;
+      rdfs:domain
+              [ a       owl:Class ;
+                owl:unionOf (:AguasCorrientesArtificiales :CanalAguasMarinas :CanalMarino :Canalillo)
+              ] ;
+      rdfs:range
+              [ a       owl:Class ;
+                owl:unionOf (:AguasContinentales :AguasMarinas)
+              ] ;
+      owl:inverseOf :es_conducido_por .
+
+:longitud
+      a       owl:DatatypeProperty ;
+      rdfs:domain :Aguas ;
+      rdfs:range xsd:float .
+
+:perimetro
+      a       owl:DatatypeProperty ;
+      rdfs:domain :FenomenoHidrografico , :Morfologia , :CuencaHidrografica .
+
+:Torrente
+      a       owl:Class ;
+      rdfs:comment "Corriente o avenida impetuosa de aguas que sobreviene en tiempos de muchas lluvias o de rapidos deshielos"^^xsd:string ;
+      rdfs:label "Torrent"@en , "Torrente"@es ;
+      rdfs:subClassOf :AguasCorrientesNaturales ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty :es_originado_por ;
+                owl:someValuesFrom
+                        [ a       owl:Class ;
+                          owl:unionOf (:Glaciar :MasaDeHielo)
+                        ]
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty :origina ;
+                owl:someValuesFrom :Rambla
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty :discurre_sobre ;
+                owl:someValuesFrom :Rambla
+              ] ;
+      dc:source "Diccionario de la Real Academia Espannola"^^xsd:string .
+
+:distancia
+      a       owl:DatatypeProperty ;
+      rdfs:domain :AguasMarinas ;
+      rdfs:range
+              [ a       rdfs:Datatype ;
+                owl:oneOf
+                        [ a       rdf:List ;
+                          rdf:first "1 milla"^^xsd:string ;
+                          rdf:rest
+                                  [ a       rdf:List ;
+                                    rdf:first "12 millas"^^xsd:string ;
+                                    rdf:rest
+                                            [ a       rdf:List ;
+                                              rdf:first "200 millas"^^xsd:string ;
+                                              rdf:rest
+                                                      [ a       rdf:List ;
+                                                        rdf:first "24 millas"^^xsd:string ;
+                                                        rdf:rest
+                                                                [ a       rdf:List ;
+                                                                  rdf:first "mas de 200 millas"^^xsd:string ;
+                                                                  rdf:rest ()
+                                                                ]
+                                                      ]
+                                            ]
+                                  ]
+                        ]
+              ] .
+
+:Nacimiento
+      a       owl:Class ;
+      rdfs:comment "Punto perteneciente al recorrido de un curso fluvial en el que se inicia su trazado"^^xsd:string ;
+      rdfs:label "Nacimiento"@es , "Source"@en ;
+      rdfs:subClassOf :Manantial ;
+      dc:source "Vazquez Maure F.; Martin Lopez J. (1987) Vocabulario de terminos geograficos. Ed. Ministerio de Obras Publicas y Urbanismo. Instituto Geografico Nacional. Madrid. ISBN: 84-505-4929-9"^^xsd:string ;
+      owl:equivalentClass
+              [ a       owl:Class ;
+                owl:intersectionOf ([ a       owl:Restriction ;
+                            owl:allValuesFrom
+                                    [ a       owl:Class ;
+                                      owl:unionOf (:Arroyo :Rio)
+                                    ] ;
+                            owl:onProperty :origina
+                          ] [ a       owl:Restriction ;
+                            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onProperty :origina
+                          ])
+              ] .
+
+:es_comunicada_por
+      a       owl:ObjectProperty ;
+      rdfs:domain
+              [ a       owl:Class ;
+                owl:unionOf (:AguasMarinas :AguasSubterraneas :AguasSuperficiales :Marisma :Ria)
+              ] ;
+      rdfs:range
+              [ a       owl:Class ;
+                owl:unionOf (:Canal :Sumidero)
+              ] ;
+      owl:inverseOf :comunica_con .
+
+:Conducto
+      a       owl:Class ;
+      rdfs:comment "Canal, con frecuencia cerrado, que tiene como objeto el transporte de productos liquidos"^^xsd:string ;
+      rdfs:label "Conducto"@es , "Conduccion de agua"@es ;
+      rdfs:subClassOf :AguasCorrientesArtificiales ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty :desagua_en ;
+                owl:someValuesFrom :Aguas
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty :conduce ;
+                owl:someValuesFrom :AguasSuperficiales
+              ] ;
+      dc:source "Fontanillo, E. (1986) Diccionario de Geografia. Ed. Anaya. Madrid."^^xsd:string .
+
+:Surgencia
+      a       owl:Class ;
+      rdfs:comment "Salida de agua a la superficie terrestre"^^xsd:string ;
+      rdfs:label "Surgencia"@es , "Source"@en ;
+      rdfs:subClassOf :AguasSuperficiales ;
+      dc:source "Lopez Marinas, Juan Manuel; Perron, Mariano (2002) Glosario y Vocabulario espannol, ingles y frances de terminos habituales en geologia aplicada a la ingenieria civil. Madrid: CIE Inversiones Editoriales Dossat 2000. 237 p. ISBN: 84-95312-55-7 & Elaboracion propia."^^xsd:string ;
+      owl:equivalentClass
+              [ a       owl:Class ;
+                owl:unionOf (:SurgenciaArtificial :SurgenciaNatural)
+              ] .
+
+:Glaciar
+      a       owl:Class ;
+      rdfs:comment "Masa de hielo acumulada en las zonas de las cordilleras por encima del limite de las nieves perpetuas y cuya parte inferior se desliza muy lentamente, como si fuese un rio de hielo"@es ;
+      rdfs:label "Glaciar"@es ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty :alimenta_a ;
+                owl:someValuesFrom
+                        [ a       owl:Class ;
+                          owl:unionOf (:Arroyo :Rio)
+                        ]
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty :origina ;
+                owl:someValuesFrom
+                        [ a       owl:Class ;
+                          owl:unionOf (:Ibon :Lago :Laguna)
+                        ]
+              ] ;
+      dc:source "Diccionario de la Real Academia Española"@es ;
+      owl:equivalentClass
+              [ a       owl:Class ;
+                owl:intersectionOf (:AguasCorrientesNaturales [ a       owl:Restriction ;
+                            owl:onProperty :es_alimentada_por ;
+                            owl:someValuesFrom :MasaDeHielo
+                          ] [ a       owl:Restriction ;
+                            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onProperty :es_alimentada_por
+                          ])
+              ] .
+
+:es_distribuida
+      a       owl:ObjectProperty ;
+      rdfs:domain :AguasSuperficiales ;
+      rdfs:range
+              [ a       owl:Class ;
+                owl:unionOf (:CanalAguasContinentales :Distribucion)
+              ] ;
+      rdfs:subPropertyOf :es_conducido_por .
+
+:aportacion
+      a       owl:DatatypeProperty ;
+      rdfs:domain :AguasCorrientes , :AguasQuietas ;
+      rdfs:seeAlso "{\"epigenico\", \"hipogenico\", \"mixto\", \"otros\"}" .
+
+:Barranco
+      a       owl:Class ;
+      rdfs:comment "Quiebra profunda que hacen en la tierra las corrientes de agua"@es ;
+      rdfs:label "Barranco"@es , "Gully, Ravine"@en ;
+      rdfs:subClassOf :Morfologia ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom
+                        [ a       owl:Class ;
+                          owl:unionOf (:Arroyo :Rio)
+                        ] ;
+                owl:onProperty :parte_de
+              ] ;
+      dc:source "Vazquez Maure F.; Martin Lopez J. (1987) Vocabulario de terminos geograficos. Ed. Ministerio de Obras Publicas y Urbanismo. Instituto Geografico Nacional. Madrid. ISBN: 84-505-4929-9."@es .
+
+:tasa_de_recarga
+      a       owl:DatatypeProperty ;
+      rdfs:domain :Acuifero ;
+      rdfs:range xsd:float .
+
+:CanalMarino
+      a       owl:Class ;
+      rdfs:label "Canal marino"@es , "Sea channel"@en ;
+      :provenance "GeoNames"^^xsd:string ;
+      owl:equivalentClass
+              [ a       owl:Class ;
+                owl:intersectionOf (:CanalAguasMarinas [ a       owl:Restriction ;
+                            owl:onProperty :comunica_con ;
+                            owl:someValuesFrom :Mar
+                          ] [ a       owl:Restriction ;
+                            owl:cardinality "2"^^xsd:nonNegativeInteger ;
+                            owl:onProperty :comunica_con
+                          ])
+              ] .
+
+:Alberca
+      a       owl:Class ;
+      rdfs:comment "Deposito artificial de agua, con muros de fabrica, destinado al riego"^^xsd:string ;
+      rdfs:label "Alberca"@es ;
+      rdfs:subClassOf :Deposito ;
+      dc:source "Seco, Manuel. Diccionario del espannol actual. Madrid: Editorial Aguilar. 1999"^^xsd:string .
+
+:HidronimoPuntual
+      a       owl:Class ;
+      rdfs:label "Hydrographic point"@en , "Otros elementos hidrograficos"@es , "Hydrographical feature"@en , "Hidrónimo puntual"@es ;
+      rdfs:subClassOf :FenomenoHidrografico ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :Rio ;
+                owl:onProperty :parte_de
+              ] ;
+      :provenance "EuroRegionalMap"^^xsd:string , "Otros elementos hidrograficos - Catalogo de entidades para el Nomenclator de la Base Topografica Nacional 1:25.000 (BTN25). Instituto Geografico Nacional"^^xsd:string , "EuroGlobalMap"^^xsd:string .
+
+:Guadi
+      a       owl:Class ;
+      rdfs:comment "Arroyo intermitente en el desierto"^^xsd:string ;
+      rdfs:label "Guadi"@es , "Wadi"@en , "Uadi"@es ;
+      rdfs:subClassOf :Rio ;
+      dc:source "Novo, P.; Chicarro, F. (1957) Diccionario de geologia y ciencias afines. Tomo 1. Ed. Labor, S.A. Barcelona"^^xsd:string .
+
+:Cienaga
+      a       owl:Class ;
+      rdfs:comment "Terreno donde abundan charcos y cenagales"^^xsd:string ;
+      rdfs:label "Ciénaga"@es , "Zona pantanosa"@es ;
+      rdfs:subClassOf :ZonaHumeda ;
+      dc:source "Elaboracion propia"^^xsd:string .
+
+:Rivera
+      a       owl:Class ;
+      rdfs:comment "Arroyo, pequeño caudal de agua continua que corre por la tierra."@es ;
+      rdfs:label "Rivera"@es ;
+      rdfs:subClassOf :Arroyo ;
+      dc:source "Diccionario de la Real Academia Española"@es .
+
+:Meandro
+      a       owl:Class ;
+      rdfs:comment "Curva en el curso de un ríoo, formada por la erosion y sedimentacion que causan las aguas"@es ;
+      rdfs:label "Meandro"@es ;
+      rdfs:subClassOf :Morfologia ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :Rio ;
+                owl:onProperty :parte_de
+              ] ;
+      :provenance "Glosario Hidrologico Internacional - UNESCO"^^xsd:string ;
+      dc:source "Vazquez Maure F.; Martin Lopez J. (1987) Vocabulario de terminos geograficos. Ed. Ministerio de Obras Publicas y Urbanismo. Instituto Geografico Nacional. Madrid. ISBN: 84-505-4929-9."^^xsd:string .
+
+:Gola
+      a       owl:Class ;
+      rdfs:comment "Canal por donde entran los buques en ciertos puertos o rias."@es ;
+      rdfs:label "Gola"@es ;
+      dc:source "Diccionario de la Real Academia Española"@es ;
+      owl:equivalentClass
+              [ a       owl:Class ;
+                owl:intersectionOf (:CanalAguasMarinas [ a       owl:Restriction ;
+                            owl:onProperty :comunica_con ;
+                            owl:someValuesFrom :Ria
+                          ])
+              ] .
+
+:tipo_margen
+      a       owl:DatatypeProperty ;
+      rdfs:domain :AguasCorrientesNaturales ;
+      rdfs:range
+              [ a       rdfs:Datatype ;
+                owl:oneOf
+                        [ a       rdf:List ;
+                          rdf:first "defendida"^^xsd:string ;
+                          rdf:rest
+                                  [ a       rdf:List ;
+                                    rdf:first "natural"^^xsd:string ;
+                                    rdf:rest ()
+                                  ]
+                        ]
+              ] .
+
+:navegable
+      a       owl:DatatypeProperty ;
+      rdfs:domain :Aguas ;
+      rdfs:range
+              [ a       rdfs:Datatype ;
+                owl:oneOf
+                        [ a       rdf:List ;
+                          rdf:first "desconocido"^^xsd:string ;
+                          rdf:rest
+                                  [ a       rdf:List ;
+                                    rdf:first "no"^^xsd:string ;
+                                    rdf:rest
+                                            [ a       rdf:List ;
+                                              rdf:first "si"^^xsd:string ;
+                                              rdf:rest ()
+                                            ]
+                                  ]
+                        ]
+              ] .
+
+:autoridad_competente
+      a       owl:DatatypeProperty ;
+      rdfs:domain :Aguas ;
+      rdfs:range xsd:string .
+
+:recarga_artificial
+      a       owl:DatatypeProperty ;
+      rdfs:domain :AguasSubterraneas ;
+      rdfs:range xsd:boolean .
+
+:Ojo  a       owl:Class ;
+      rdfs:comment "Manantial potente que forma una pequenna charca"@es ;
+      rdfs:label "Ojo"@es ;
+      rdfs:subClassOf :Manantial ;
+      rdfs:subClassOf
+              [ a       owl:Class ;
+                owl:intersectionOf ([ a       owl:Restriction ;
+                            owl:allValuesFrom :Charca ;
+                            owl:onProperty :origina
+                          ] [ a       owl:Restriction ;
+                            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onProperty :origina
+                          ])
+              ] ;
+      dc:source "Vazquez Maure F.; Martin Lopez J. (1987) Vocabulario de terminos geograficos. Ed. Ministerio de Obras Publicas y Urbanismo. Instituto Geografico Nacional. Madrid. ISBN: 84-505-4929-9 & Elaboracion propia"@es .
+
+:Vertiente
+      a       owl:Class ;
+      rdfs:comment "Pendiente por donde corre o puede correr el agua."@es ;
+      rdfs:label "Vertiente"@es ;
+      rdfs:subClassOf :Morfologia ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom
+                        [ a       owl:Class ;
+                          owl:unionOf (:Arroyo :Rio)
+                        ] ;
+                owl:onProperty :parte_de
+              ] ;
+      dc:source "Vazquez Maure F.; Martin Lopez J. (1987) Vocabulario de terminos geograficos. Ed. Ministerio de Obras Publicas y Urbanismo. Instituto Geografico Nacional. Madrid. ISBN: 84-505-4929-9 & Diccionario de la Real Academia Española"@es .
+
+:afloramiento
+      a       owl:DatatypeProperty ;
+      rdfs:domain :AguasSubterraneas ;
+      rdfs:range xsd:float .
+
+:Canyada
+      a       owl:Class ;
+      rdfs:comment "Corriente de agua de poco caudal que suele no ser permanente."^^xsd:string ;
+      rdfs:label "Cañada"@es ;
+      rdfs:subClassOf :Arroyo ;
+      dc:source "Diccionario de la Real Academia de la Lengua"^^xsd:string .
+
+:precedeA
+      a       owl:ObjectProperty ;
+      rdfs:domain
+              [ a       owl:Class ;
+                owl:unionOf (:Desembocadura :Rio)
+              ] ;
+      rdfs:range
+              [ a       owl:Class ;
+                owl:unionOf (:AguasMarinas :Desembocadura :Rio)
+              ] ;
+      rdfs:subPropertyOf :esta_proxima_a ;
+      owl:inverseOf :sigueA .

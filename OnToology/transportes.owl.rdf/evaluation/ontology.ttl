@@ -1,0 +1,95 @@
+@prefix :        <http://geo.linkeddata.es/ontology/transportes.owl#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl2xml:  <http://www.w3.org/2006/12/owl2-xml#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ontology:  <http://geo.linkeddata.es/ontology/> .
+
+ontology:Carretera
+      a       owl:Class ;
+      rdfs:comment "Camino público, ancho y espacioso, pavimentado y dispuesto para el tránsito de vehículos."@es ;
+      rdfs:label "Carretera"@es , "Road"@en .
+
+ontology:Faro
+      a       owl:Class ;
+      rdfs:comment "Torre alta en las costas, con luz en su parte superior, para que durante la noche sirva de señal a los navegantes."@es ;
+      rdfs:label "Faro"@es , "Lighthouse"@en .
+
+ontology:Aeroclub
+      a       owl:Class ;
+      rdfs:comment "Sociedad recreativa interesada por el deporte aéreo."@es ;
+      rdfs:label "Aeroclub"@en , "Aeroclub"@es .
+
+ontology:EstacionDeAutobuses
+      a       owl:Class ;
+      rdfs:label "Estación de autobuses "@es , "Bus station"@en .
+
+ontology:Travesia
+      a       owl:Class ;
+      rdfs:comment "Sitio o terreno por donde se atraviesa."@es ;
+      rdfs:label "Travesía"@es , "Passage"@en .
+
+ontology:Sendero
+      a       owl:Class ;
+      rdfs:comment "Camino más estrecho que la vereda, abierto principalmente por el tránsito de peatones y del ganado menor."@es ;
+      rdfs:label "Path"@en , "Sendero"@es .
+
+<http://geo.linkeddata.es/ontology/transportes.owl>
+      a       owl:Ontology .
+
+owl:Thing
+      a       owl:Class .
+
+ontology:EstacionDeFerrocarril
+      a       owl:Class ;
+      rdfs:label "Train station"@en , "Estación de ferrocarril"@es .
+
+ontology:Glorieta
+      a       owl:Class ;
+      rdfs:comment "Plaza donde desembocan por lo común varias calles o alamedas."@es ;
+      rdfs:label "Glorieta"@es , "Roundabout"@en .
+
+ontology:Aerodromo
+      a       owl:Class ;
+      rdfs:comment "Terreno llano provisto de pistas y demás instalaciones necesarias para el despegue y aterrizaje de aviones."@es ;
+      rdfs:label "Aerodrome"@en , "Aeródromo"@es .
+
+ontology:BaseAerea
+      a       owl:Class ;
+      rdfs:comment "Aeropuerto militar donde las fuerzas aéreas, con el apoyo de instalaciones logísticas adecuadas, se preparan para el vuelo y el combate."@es ;
+      rdfs:label "Airbase"@en , "Base aérea"@es .
+
+ontology:CintaTransportadora
+      a       owl:Class ;
+      rdfs:comment "Dispositivo mecánico formado por una banda móvil que traslada mercancías, equipajes, personas, etc."@es ;
+      rdfs:label "Conveyor belt"@en , "Cinta transportadora"@es .
+
+ontology:Ruta
+      a       owl:Class ;
+      rdfs:label "Camino o dirección que se toma para un propósito."@es , "Ruta"@es , "Route"@en .
+
+ontology:Pista
+      a       owl:Class ;
+      rdfs:comment "Vía de comunicación dedicada al tráfico rodado sin recubrimiento asfáltico."@es ;
+      rdfs:label "Pista"@es .
+
+ontology:Aeropuerto
+      a       owl:Class ;
+      rdfs:comment "Terreno llano provisto de un conjunto de pistas, instalaciones y servicios destinados al tráfico regular de aviones."@es ;
+      rdfs:label "Airport"@en , "Aeropuerto"@es .
+
+ontology:Autopista
+      a       owl:Class ;
+      rdfs:comment "Carretera con calzadas separadas para los dos sentidos de la circulación, cada una de ellas con dos o más carriles, sin cruces a nivel."@es ;
+      rdfs:label "Highway"@en , "Autopista"@es .
+
+ontology:Puerto
+      a       owl:Class ;
+      rdfs:comment "Lugar en la costa o en las orillas de un río que por sus características, naturales o artificiales, sirve para que las embarcaciones realicen operaciones de carga y descarga, embarque y desembarco, etc."@es ;
+      rdfs:label "Puerto"@es , "Port"@en .
+
+ontology:Camino
+      a       owl:Class ;
+      rdfs:comment "Vía que se construye para transitar."@es ;
+      rdfs:label "Way"@en , "Camino"@es .

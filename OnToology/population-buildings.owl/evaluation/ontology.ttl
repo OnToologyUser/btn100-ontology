@@ -1,0 +1,463 @@
+@prefix dc:      <http://purl.org/dc/elements/1.1/> .
+@prefix population-buildings-ontology:  <http://geo.linkeddata.es/ontology/population-buildings-ontology.owl#> .
+@prefix :        <http://geo.linkeddata.es/ontology/> .
+@prefix population-buildings:  <http://geo.linkeddata.es/kos/population-buildings/> .
+@prefix terms:   <http://purl.org/dc/terms/> .
+@prefix capital:  <http://geo.linkeddata.es/kos/populatuon-buildings/capital/> .
+@prefix puntosDeInteres:  <http://geo.linkeddata.es/kos/puntosDeInteres/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix capital2:  <http://geo.linkeddata.es/kos/puntosDeInteres/capital/> .
+@prefix owl2xml:  <http://www.w3.org/2006/12/owl2-xml#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix geopolitical:  <http://aims.fao.org/aos/geopolitical.owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix estadoDeUso:  <http://geo.linkeddata.es/kos/population-buildings/estadoDeUso/> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+
+:ZonaMilitar
+      a       owl:Class ;
+      rdfs:comment "Zona reservada para fines de la defensa nacional o de las bases ofensivas que en cada territorio se instalen."@es ;
+      rdfs:label "Zona militar"@es ;
+      rdfs:subClassOf :ZonaDeUsoCaracteristico .
+
+capital:nacion
+      a       owl:NamedIndividual , skos:Concept ;
+      skos:inScheme capital:tipoDeCapital ;
+      skos:prefLabel "capital de nación"@es .
+
+:ZonaPortuaria
+      a       owl:Class ;
+      rdfs:comment "Espacio destinado y orientado especialmente al flujo de mercancías, personas, información o a dar abrigo y seguridad a aquellas embarcaciones o naves encargadas de llevar a cabo dichas tareas."@es ;
+      rdfs:label "Zona portuaria"@es ;
+      rdfs:subClassOf :ZonaDeUsoCaracteristico .
+
+:AreaDeServicio
+      a       owl:Class ;
+      rdfs:comment "En una autopista o autovía, lugar habilitado para el estacionamiento de los vehículos, en el que suele haber una gasolinera, un restaurante y otros servicios. "@es ;
+      rdfs:label "Area de servicio"@es ;
+      rdfs:subClassOf :ZonaDeUsoCaracteristico .
+
+:EdificioReligioso
+      a       owl:Class ;
+      rdfs:comment "Templo destinado al culto religioso"@es ;
+      rdfs:label "Edificio religioso"@es ;
+      rdfs:subClassOf :LugarDeInteres .
+
+terms:source
+      a       owl:AnnotationProperty .
+
+:ZonaMonumental
+      a       owl:Class ;
+      rdfs:comment "Espacio perteneciente o relativo a un monumento."@es ;
+      rdfs:label "Zona monumental"@es ;
+      rdfs:subClassOf :ZonaDeUsoCaracteristico .
+
+:ExplotacionMinera
+      a       owl:Class ;
+      rdfs:comment "Terreno dedicado a la explotación de minerales o piedra."@es ;
+      rdfs:label "Explotación minera"@es .
+
+:InstalacionDeportiva
+      a       owl:Class ;
+      rdfs:comment "Recinto o construcción provista de los medios necesarios para el aprendizaje, la práctica y la competición de uno o más deportes. "@es ;
+      rdfs:label "Instalación deportiva"@es ;
+      rdfs:subClassOf
+              [ a       owl:Class ;
+                owl:intersectionOf (:Alojamiento :LugarDeOcio)
+              ] .
+
+estadoDeUso:enUso
+      a       owl:NamedIndividual , skos:Concept ;
+      skos:inScheme population-buildings:estadoDeUso ;
+      skos:prefLabel "en uso"@es .
+
+:Gasolinera
+      a       owl:Class ;
+      rdfs:comment "Punto de venta de combustible para vehículos de motor."@es ;
+      rdfs:label "Gasolinera"@es ;
+      rdfs:subClassOf :LugarDeInteres .
+
+:LugarDeOcio
+      a       owl:Class ;
+      rdfs:comment "Lugar donde se puede realizar una actividad de ocio."@es ;
+      rdfs:label "Lugar de ocio"@es .
+
+:Albergue
+      a       owl:Class ;
+      rdfs:comment "Lugar que renta alojamiento, particularmente alentando las actividades al aire libre y el intercambio cultural entre jóvenes de distintos países."@es ;
+      rdfs:label "Albergue"@es ;
+      rdfs:subClassOf
+              [ a       owl:Class ;
+                owl:intersectionOf (:Alojamiento :LugarDeOcio)
+              ] .
+
+:Cueva
+      a       owl:Class ;
+      rdfs:comment "Cavidad natural del terreno causada por algún tipo de erosión de corrientes de agua, hielo o lava, o una combinación de varios de estos factores."@es ;
+      rdfs:label "Cueva"@es ;
+      rdfs:subClassOf :LugarDeInteres .
+
+:Diseminado
+      a       owl:Class ;
+      rdfs:comment "Las edificaciones o viviendas de una entidad singular de población que no pueden ser incluidas en el concepto de núcleo de población se consideran pertenecientes al diseminado, entendiendo así por diseminado aquellas casas aisladas que no están recogidas como núcleo de población por el INE."@es ;
+      rdfs:label "Diseminado"@es ;
+      terms:source "Instituto nacional de estadística."@es ;
+      owl:disjointWith :NucleoPoblacional .
+
+:ZonaRecreativa
+      a       owl:Class ;
+      rdfs:comment "Espacio donde se encuentran lugares de ocio o entretenimiento de los ciudadanos."@es ;
+      rdfs:label "Zona recreativa"@es ;
+      rdfs:subClassOf :ZonaDeUsoCaracteristico .
+
+:Camping
+      a       owl:Class ;
+      rdfs:comment "Lugar al aire libre, especialmente dispuesto para albergar viajeros, turistas, personas en vacaciones, etc."@es ;
+      rdfs:label "Camping"@es ;
+      rdfs:subClassOf
+              [ a       owl:Class ;
+                owl:intersectionOf (:Alojamiento :LugarDeOcio)
+              ] .
+
+:Muralla
+      a       owl:Class ;
+      rdfs:comment "Construcción realizada con fines defensivos."@es ;
+      rdfs:label "Muralla"@es .
+
+:NucleoPoblacionalPuntual
+      a       owl:Class ;
+      rdfs:comment "Pertenecerán a esta clase de entidad puntual sólo los núcleos de aquellas comunidades autónomas en las que la densidad de elementos impida su representación superficial a escala. Estas comunidades son Asturias, Galicia e Islas Canarias."@es ;
+      rdfs:label "Nucleo poblacional puntual"@es ;
+      rdfs:subClassOf :NucleoPoblacional ;
+      terms:source "Anexo A: Catálogo de Objetos Geográficos de BTN100."@es ;
+      owl:disjointWith :NucleoPoblacionalSuperficial .
+
+:Balneario
+      a       owl:Class ;
+      rdfs:comment "Lugar dedicado al reposo y la curación a través de la utilización de las aguas, sobre todo termales o minerales, con un edificio para el hospedaje. "@es ;
+      rdfs:label "Balneario"@es ;
+      rdfs:subClassOf
+              [ a       owl:Class ;
+                owl:intersectionOf (:Alojamiento :LugarDeOcio)
+              ] .
+
+:ZonaFerroviaria
+      a       owl:Class ;
+      rdfs:comment "Instalaciones pertenecientes o destinadas para la explotación de la infraestructura del ferrocarril."@es ;
+      rdfs:label "Zona ferroviaria"@es ;
+      rdfs:subClassOf :ZonaDeUsoCaracteristico .
+
+estadoDeUso:abandonado
+      a       owl:NamedIndividual , skos:Concept ;
+      skos:inScheme population-buildings:estadoDeUso ;
+      skos:prefLabel "abandonado"@es .
+
+:Hospital
+      a       owl:Class ;
+      rdfs:comment "Establecimiento sanitario donde se atiende a los enfermos para proporcionar el diagnóstico y tratamiento que necesitan."@es ;
+      rdfs:label "Hospital"@es ;
+      rdfs:subClassOf :LugarDeInteres .
+
+:Castillo
+      a       owl:Class ;
+      rdfs:comment "Lugar fuerte, cercado de murallas, baluartes, fosos y otras fortificaciones"@es ;
+      rdfs:label "Castillo"@es ;
+      rdfs:subClassOf :LugarDeInteres .
+
+:ConjuntoHistoricoArtistico
+      a       owl:Class ;
+      rdfs:comment "Es la agrupación de inmuebles que forman una unidad de asentamiento, continua o dispersa, condicionada por una estructura física representativa de la evolución de una comunidad humana por ser testimonio de su cultura o constituir un valor de uso y disfrute para la colectividad."@es ;
+      rdfs:label "Conjunto histórico artístico"@es ;
+      rdfs:subClassOf :LugarDeInteres .
+
+:JardinHistorico
+      a       owl:Class ;
+      rdfs:comment "Es el espacio delimitado, producto de la ordenación por el hombre de elementos naturales, a veces complementado con estructuras de fábrica, y estimado de interés en función de su origen o pasado histórico, o de sus valores estéticos, sensoriales o botánicos."@es ;
+      rdfs:label "Jardin historico"@es ;
+      rdfs:subClassOf :LugarDeInteres .
+
+:ineCode
+      a       owl:DatatypeProperty ;
+      rdfs:comment "Codificación asignada por el Nomenclátor INE."@es ;
+      rdfs:domain
+              [ a       owl:Class ;
+                owl:unionOf (:Diseminado :NucleoPoblacional)
+              ] ;
+      rdfs:label "ine code"@en , "codigo ine"@es ;
+      rdfs:range
+              [ a       rdfs:Datatype ;
+                owl:onDatatype xsd:string ;
+                owl:withRestrictions
+                        ([ xsd:length 11
+                          ])
+              ] .
+
+population-buildings:estadoDeUso
+      a       owl:NamedIndividual , skos:ConceptScheme ;
+      rdfs:comment """indica el estado de uso. Puede tomar los valores:
+* http://geo.linkeddata.es/kos/population-buildings/estadoDeUso/enConstruccion
+* http://geo.linkeddata.es/kos/population-buildings/estadoDeUso/enUso
+* http://geo.linkeddata.es/kos/population-buildings/estadoDeUso/abandonado"""@es ;
+      skos:prefLabel "estado de uso"@es .
+
+:LugarDeInteres
+      a       owl:Class ;
+      rdfs:comment "Edificación o Lugar de interés por el uso que se le da o su relación con la cultura. Aquí se incluyen los Bienes de Interés Cultural (BIC)"@es ;
+      rdfs:label "Lugar de interés"@es .
+
+estadoDeUso:enConstruccion
+      a       owl:NamedIndividual , skos:Concept ;
+      rdfs:comment "indica que está en construcción o en obras"@es ;
+      skos:inScheme population-buildings:estadoDeUso ;
+      skos:prefLabel "en construcción"@es .
+
+:SitioHistorico
+      a       owl:Class ;
+      rdfs:comment "Es el lugar o paraje natural, vinculado a acontecimientos o recuerdos del pasado, a tradiciones populares, creaciones culturales o de la naturaleza, y a obras del hombre, que poseen valor histórico, etnológico, paleontológico o antropológico."@es ;
+      rdfs:label "Sitio histórico"@es ;
+      rdfs:subClassOf :LugarDeInteres .
+
+:ZonaAeroportuaria
+      a       owl:Class ;
+      rdfs:comment "Estación o terminal situada en un terreno llano que cuenta con pistas, instalaciones y servicios destinados al tráfico de aviones."@es ;
+      rdfs:label "Zona aeroportuaria"@es ;
+      rdfs:subClassOf :ZonaDeUsoCaracteristico .
+
+:EstacionInvernal
+      a       owl:Class ;
+      rdfs:comment "Área preparada para el disfrute de la nieve. Dispone de pistas de esquí balizadas preparadas por máquinas especiales así como pistas de fondo, hoteles para el descanso de los usuarios, remontes para el transporte de los esquiadores a zonas altas y diferentes servicios que pueden ir desde zona para usar trineos hasta pistas de patinaje."@es ;
+      rdfs:label "Estación invernal"@es ;
+      rdfs:subClassOf
+              [ a       owl:Class ;
+                owl:intersectionOf (:Alojamiento :LugarDeOcio)
+              ] .
+
+:ZonaArqueologica
+      a       owl:Class ;
+      rdfs:comment """Es el lugar o paraje natural donde existen bienes muebles o inmuebles susceptibles de ser estudiados con metodología arqueológica, hayan sido o no
+extraídos y tanto si se encuentran en la superficie, en el subsuelo o bajo las aguas españolas."""@es ;
+      rdfs:label "Zona arqueológica"@es ;
+      rdfs:subClassOf :LugarDeInteres .
+
+capital:noCapital
+      a       owl:NamedIndividual , skos:Concept ;
+      skos:inScheme capital:tipoDeCapital ;
+      skos:prefLabel "no es capital"@es .
+
+:NucleoPoblacional
+      a       owl:Class ;
+      rdfs:comment "Se considera Núcleo de población a un conjunto de al menos diez edificaciones, que están formando calles, plazas y otras vías urbanas. Por excepción el número de edificaciones podrá ser inferior a 10, siempre que la población de derecho supere los 50 habitantes."@es , "Se consideran núcleos de población (superficiales y puntuales) de BTN100 aquellas entidades que el INE considera núcleos de población en sus datos oficiales."@es ;
+      rdfs:label "Nucleo poblacional"@es ;
+      terms:source "Anexo A: Catálogo de Objetos Geográficos de BTN100."@es ;
+      owl:equivalentClass
+              [ a       owl:Class ;
+                owl:unionOf (:NucleoPoblacionalPuntual :NucleoPoblacionalSuperficial)
+              ] .
+
+<http://geo.linkeddata.es/ontology/population-buildings.owl>
+      a       owl:Ontology ;
+      rdfs:comment ""@en , "Ontología global de dominio sobre  poblaciones y construcciones"@es ;
+      dc:creator "Lissete Moscoso"^^xsd:string ;
+      dc:publisher "Ontology Engineering Group"@en ;
+      dc:title "populationBuildingsOntology"^^xsd:string ;
+      owl:imports <http://www.w3.org/2004/02/skos/core> ;
+      owl:versionInfo "v0.2"^^xsd:string .
+
+:ZonaIndustrial
+      a       owl:Class ;
+      rdfs:comment "Espacio territorial en el cual se agrupan una serie de actividades industriales, que pueden o no estar relacionadas entre sí."@es ;
+      rdfs:label "Zona industrial"@es ;
+      rdfs:subClassOf :ZonaDeUsoCaracteristico .
+
+capital:comunidadAutonomaNoDeProvincia
+      a       owl:NamedIndividual , skos:Concept ;
+      skos:inScheme capital:tipoDeCapital ;
+      skos:prefLabel "capital de comunidad autónoma  y no de provincia"@es .
+
+:ParadorNacional
+      a       owl:Class ;
+      rdfs:comment "Conjunto de hoteles de alta categoría distribuidos por toda España, localizados en edificios emblemáticos o emplazamientos destacables que han sido seleccionados por su interés histórico, artístico o cultural."@es ;
+      rdfs:label "Parador nacional"@es ;
+      rdfs:subClassOf
+              [ a       owl:Class ;
+                owl:intersectionOf (:Alojamiento :LugarDeOcio)
+              ] .
+
+:ZonaDeUsoCaracteristico
+      a       owl:Class ;
+      rdfs:comment "Superficie delimitada, empleada para desarrollar una actividad específica."@es ;
+      rdfs:label "Zona de uso característico"@es ;
+      terms:source "Anexo A: Catálogo de Objetos Geográficos de BTN100."@es .
+
+:Alojamiento
+      a       owl:Class ;
+      rdfs:comment "Lugar donde una persona o un grupo de personas se aloja, se aposenta o acampa, o donde está algo."@es ;
+      rdfs:label "Alojamiento"@es .
+
+:ZonaVerde
+      a       owl:Class ;
+      rdfs:comment "Zona del terreno donde se cultivan especies vegetales, con posible añadidura de otros elementos como fuentes o esculturas."@es ;
+      rdfs:label "Zona verde"@es ;
+      rdfs:subClassOf :ZonaDeUsoCaracteristico .
+
+:DiseminadoPuntual
+      a       owl:Class ;
+      rdfs:comment """Existen dos tipos de elementos que se engloban en el concepto de Diseminado puntual:
+
+* Edificación aislada: caseríos, cortijos, etc. en los que o bien existe una única edificación, o siendo un pequeño conjunto de edificaciones (dos, tres o cuatro...) están dispuestas de tal forma que entre ellas no existe una distancia superior a 100m sobre la imagen.
+
+* Edificación dispersa: es el caso de los diseminados comúnmente conocidos. Esto es, aquel conjunto considerable de edificaciones (cinco o más) que sin conformar un núcleo de población presentan características propias de estas (habitabilidad, comunicaciones, etc.).En este caso el objeto se representará por su centroide."""@es ;
+      rdfs:label "Diseminado puntual"@es ;
+      rdfs:subClassOf :Diseminado ;
+      terms:source "Anexo A: Catálogo de Objetos Geográficos de BTN100."@es ;
+      owl:disjointWith :DiseminadoSuperficial .
+
+:Puente
+      a       owl:Class ;
+      rdfs:comment "Construcción realizada para paso a distinto nivel entre vías de comunicación o hidrografía."@es ;
+      rdfs:label "Puente"@es .
+
+:Invernadero
+      a       owl:Class ;
+      rdfs:comment "Lugar preparado artificialmente para cultivar las plantas fuera de su ambiente y clima habituales."@es ;
+      rdfs:label "Invernadero"@es ;
+      rdfs:subClassOf :ZonaDeUsoCaracteristico .
+
+capital:comunidadAutonoma
+      a       owl:NamedIndividual , skos:Concept ;
+      skos:inScheme capital:tipoDeCapital ;
+      skos:prefLabel "capital de comunida autónoma"@es .
+
+:NucleoPoblacionalSuperficial
+      a       owl:Class ;
+      rdfs:comment """Son todos los núcleos de población de España salvo excepciones los de aquellas comunidades autónomas en las que la densidad de elementos impida su
+representación superficial a escala. Estas comunidades son Asturias, Galicia e Islas Canarias."""@es ;
+      rdfs:label "Nucleo poblacional superficial"@es ;
+      rdfs:subClassOf :NucleoPoblacional ;
+      terms:source "Anexo A: Catálogo de Objetos Geográficos de BTN100."@es .
+
+:Universidad
+      a       owl:Class ;
+      rdfs:comment "Establecimiento o conjunto de unidades educativas de enseñanza superior e investigación"@es ;
+      rdfs:label "Universidad"@es ;
+      rdfs:subClassOf :LugarDeInteres .
+
+:Mina
+      a       owl:Class ;
+      rdfs:comment "Criadero de minerales de útil explotación."@es ;
+      rdfs:label "Mina"@es ;
+      rdfs:subClassOf :ExplotacionMinera .
+
+:EdificioSingular
+      a       owl:Class ;
+      rdfs:comment "Comprende los edificios que deberán ser conservados íntegramente por su carácter singular y monumental, y por razones histórico-artísticas, preservando todas sus características arquitectónicas."@es ;
+      rdfs:label "Edificio singular"@es ;
+      rdfs:subClassOf :LugarDeInteres .
+
+:VistaPanoramica
+      a       owl:Class ;
+      rdfs:comment "Es la que muestra un panorama usualmente paisajístico o arquitectónico, y que se distingue por el amplio horizonte visual que cubre."@es ;
+      rdfs:label "Vista panorámica"@es ;
+      rdfs:subClassOf :LugarDeInteres .
+
+:Cantera
+      a       owl:Class ;
+      rdfs:comment " Sitio de donde se saca piedra, greda u otra sustancia análoga para obras varias"@es ;
+      rdfs:label "Cantera"@es ;
+      rdfs:subClassOf :ExplotacionMinera .
+
+capital:provincia
+      a       owl:NamedIndividual , skos:Concept ;
+      skos:inScheme capital:tipoDeCapital ;
+      skos:prefLabel "capital de provincia"@es .
+
+:esCapitalDe
+      a       owl:ObjectProperty ;
+      rdfs:domain
+              [ a       owl:Class ;
+                owl:unionOf (:Diseminado :NucleoPoblacional)
+              ] ;
+      rdfs:range
+              [ a       owl:Class ;
+                owl:intersectionOf (skos:Concept [ a       owl:Restriction ;
+                            owl:hasValue capital:tipoDeCapital ;
+                            owl:onProperty skos:inScheme
+                          ])
+              ] .
+
+:bicCode
+      a       owl:DatatypeProperty ;
+      rdfs:comment "big code"@en , "Se incluye el código BIC que define el bien. Caso de no ser un Lugar de interés BIC, se rellenará con el texto: NO PROCEDE."@es ;
+      rdfs:domain :LugarDeInteres ;
+      rdfs:label "código big"@es ;
+      rdfs:range xsd:string .
+
+:estadoDeUso
+      a       owl:ObjectProperty ;
+      rdfs:domain :ExplotacionMinera ;
+      rdfs:range
+              [ a       owl:Class ;
+                owl:intersectionOf (skos:Concept [ a       owl:Restriction ;
+                            owl:hasValue population-buildings:estadoDeUso ;
+                            owl:onProperty skos:inScheme
+                          ])
+              ] .
+
+:PatrimonioDelaHumanidad
+      a       owl:Class ;
+      rdfs:comment """Título conferido por la Unesco a sitios específicos del planeta (sean bosque, montaña, lago, cueva, desierto, edificación, complejo arquitectónico o
+ciudad) que han sido nominados y confirmados para su inclusión en la lista mantenida por el Programa Patrimonio de la Humanidad."""@es ;
+      rdfs:label "Patrimonio de la humanidad"@es ;
+      rdfs:subClassOf :LugarDeInteres .
+
+[]    a       owl:AllDifferent ;
+      owl:distinctMembers (estadoDeUso:abandonado estadoDeUso:enConstruccion estadoDeUso:enUso) .
+
+:ZonaUniversitaria
+      a       owl:Class ;
+      rdfs:comment "Conjunto de edificios situados en terreno acotado al efecto, destinados a la enseñanza superior, y más especialmente la que es propia de las universidades."@es ;
+      rdfs:label "Zona universitaria"@es ;
+      rdfs:subClassOf :ZonaDeUsoCaracteristico .
+
+:Cementerio
+      a       owl:Class ;
+      rdfs:comment "Lugar, generalmente cercado, destinado a enterrar los restos mortales o cadáveres de los difuntos. "@es ;
+      rdfs:label "Cementerio"@es ;
+      rdfs:subClassOf :ZonaDeUsoCaracteristico , :LugarDeInteres .
+
+:poblacion
+      a       owl:DatatypeProperty ;
+      rdfs:comment "Número total de habitantes del núcleo según el nomenclátor del INE para el año que aparezca en los metadatos."@es ;
+      rdfs:domain :NucleoPoblacional ;
+      rdfs:label "poblacion"@es ;
+      rdfs:range xsd:nonNegativeInteger .
+
+capital:municipio
+      a       owl:NamedIndividual , skos:Concept ;
+      skos:inScheme capital:tipoDeCapital ;
+      skos:prefLabel "capital de municipio"@es .
+
+capital:tipoDeCapital
+      a       owl:NamedIndividual , skos:ConceptScheme ;
+      rdfs:comment """Especifica de qué administración oficial es capital. Puede tomar los valores:
+* http://geo.linkeddata.es/kos/puntosDeInteres/tipoDeCapital/comunidadAutonoma
+* http://geo.linkeddata.es/kos/puntosDeInteres/tipoDeCapital/comunidadAutonomaNoDeProvincia
+* http://geo.linkeddata.es/kos/puntosDeInteres/tipoDeCapital/nacion
+* http://geo.linkeddata.es/kos/puntosDeInteres/tipoDeCapital/municipio
+* http://geo.linkeddata.es/kos/puntosDeInteres/tipoDeCapital/noCapital
+* http://geo.linkeddata.es/kos/puntosDeInteres/tipoDeCapital/provincia"""@es ;
+      skos:prefLabel "tipo de capital"@es .
+
+:DiseminadoSuperficial
+      a       owl:Class ;
+      rdfs:comment "Agrupación de edificaciones que se extienden por una superficie considerable con estructura similar a un núcleo pero que no aparecen en el INE clasificado como tal. Es el caso de urbanizaciones, zonas residenciales u otras estructuras de población similar."@es ;
+      rdfs:label "Diseminado superficial"@es ;
+      rdfs:subClassOf :Diseminado ;
+      terms:source "Anexo A: Catálogo de Objetos Geográficos de BTN100."@es .
+
+:ZonaDeportiva
+      a       owl:Class ;
+      rdfs:comment "Áreas donde se realizan las actividades deportivas, los diferentes espacios complementarios y los de servicios auxiliares."@es ;
+      rdfs:label "Zona deportiva"@es ;
+      rdfs:subClassOf :ZonaDeUsoCaracteristico .

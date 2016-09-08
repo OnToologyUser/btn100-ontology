@@ -1,0 +1,258 @@
+_:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7fdb <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7fda .
+_:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7fdb <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://geo.linkeddata.es/ontology/VerticeGeodesicoRegcan95> .
+_:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7ff5 <http://www.w3.org/2002/07/owl#unionOf> _:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7ff4 .
+_:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7ff5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://geo.linkeddata.es/ontology/CurvaDeNivelAltimetrica> <http://www.w3.org/2000/01/rdf-schema#comment> "Curva de nivel en superficie."@es .
+<http://geo.linkeddata.es/ontology/CurvaDeNivelAltimetrica> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://geo.linkeddata.es/ontology/CurvaDeNivel> .
+<http://geo.linkeddata.es/ontology/CurvaDeNivelAltimetrica> <http://www.w3.org/2000/01/rdf-schema#label> "CurvaDeNivelAltimetrica"@es .
+<http://geo.linkeddata.es/ontology/CurvaDeNivelAltimetrica> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7fee <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7fed .
+_:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7fee <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://geo.linkeddata.es/ontology/CurvaDeNivel> .
+<http://geo.linkeddata.es/kos/geodesy/categoriaDeCurvaDeNivel/curvaDeNivelMaestra> <http://www.w3.org/2004/02/skos/core#inScheme> <http://geo.linkeddata.es/kos/geodesy/categoriaDeCurvaDeNivel> .
+<http://geo.linkeddata.es/kos/geodesy/categoriaDeCurvaDeNivel/curvaDeNivelMaestra> <http://www.w3.org/2000/01/rdf-schema#comment> "Curva de nivel con altitud m\u00FAltiplo de 100 m."@es .
+<http://geo.linkeddata.es/kos/geodesy/categoriaDeCurvaDeNivel/curvaDeNivelMaestra> <http://www.w3.org/2000/01/rdf-schema#label> "curva de nivel maestra"@es .
+<http://geo.linkeddata.es/kos/geodesy/categoriaDeCurvaDeNivel/curvaDeNivelMaestra> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://geo.linkeddata.es/kos/geodesy/categoriaDeCurvaDeNivel/curvaDeNivelMaestra> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://geo.linkeddata.es/ontology/VerticeGeodesico> <http://www.w3.org/2000/01/rdf-schema#comment> "V\u00E9rtice geod\u00E9sico perteneciente a la Red de Primer Orden (NPRO) o a la Red de Orden Inferior (ROI) de Espa\u00F1a."@es .
+<http://geo.linkeddata.es/ontology/VerticeGeodesico> <http://purl.org/dc/terms/source> "Anexo A: Cat\u00E1logo de Objetos Geogr\u00E1ficos de BTN100."@es .
+<http://geo.linkeddata.es/ontology/VerticeGeodesico> <http://www.w3.org/2000/01/rdf-schema#label> "VerticeGeodesico"@es .
+<http://geo.linkeddata.es/ontology/VerticeGeodesico> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://geo.linkeddata.es/ontology/Collado> <http://www.w3.org/2000/01/rdf-schema#comment> "Paso o depresi\u00F3n suave por donde se puede atravesar con facilidad de un lado a otro una monta\u00F1a o sierra."@es .
+<http://geo.linkeddata.es/ontology/Collado> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://geo.linkeddata.es/ontology/PuntoAcotado> .
+<http://geo.linkeddata.es/ontology/Collado> <http://www.w3.org/2000/01/rdf-schema#label> "Collado"@es .
+<http://geo.linkeddata.es/ontology/Collado> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7ffb <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7ff9 .
+_:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7ffb <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7fe7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7fe7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://geo.linkeddata.es/ontology/VerticeGeodesico> .
+<http://purl.org/dc/terms/source> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://geo.linkeddata.es/ontology/categoriaDeCurvaDeNivel> <http://www.w3.org/2000/01/rdf-schema#range> _:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7ffc .
+<http://geo.linkeddata.es/ontology/categoriaDeCurvaDeNivel> <http://www.w3.org/2000/01/rdf-schema#domain> <http://geo.linkeddata.es/ontology/CurvaDeNivel> .
+<http://geo.linkeddata.es/ontology/categoriaDeCurvaDeNivel> <http://www.w3.org/2000/01/rdf-schema#comment> "Categor\u00EDa asociada a cada tipolog\u00EDa definida."@es .
+<http://geo.linkeddata.es/ontology/categoriaDeCurvaDeNivel> <http://www.w3.org/2000/01/rdf-schema#label> "categor\u00EDa de curva de nivel"@es .
+<http://geo.linkeddata.es/ontology/categoriaDeCurvaDeNivel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7fe1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7fe1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://geo.linkeddata.es/ontology/VerticeGeodesico> .
+_:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7fda <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7fda <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://geo.linkeddata.es/ontology/VerticeGeodesicoRegente> .
+_:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7ff4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7ff3 .
+_:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7ff4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://geo.linkeddata.es/ontology/EstacionPermanenteGPS> .
+<http://geo.linkeddata.es/ontology/VerticeGeodesicoDeOrdenInferior> <http://www.w3.org/2000/01/rdf-schema#comment> "Perteneciente a la Red de Orden Inferior"@es .
+<http://geo.linkeddata.es/ontology/VerticeGeodesicoDeOrdenInferior> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://geo.linkeddata.es/ontology/VerticeGeodesico> .
+<http://geo.linkeddata.es/ontology/VerticeGeodesicoDeOrdenInferior> <http://www.w3.org/2000/01/rdf-schema#label> "VerticeGeodesicoDeOrdenInferior"@es .
+<http://geo.linkeddata.es/ontology/VerticeGeodesicoDeOrdenInferior> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7fed <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7fed <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://geo.linkeddata.es/ontology/PuntoAcotado> .
+<http://geo.linkeddata.es/ontology/altitudElipsoidal> <http://www.w3.org/2000/01/rdf-schema#domain> _:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7ff8 .
+<http://geo.linkeddata.es/ontology/altitudElipsoidal> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<http://geo.linkeddata.es/ontology/altitudElipsoidal> <http://www.w3.org/2000/01/rdf-schema#comment> "Altitud Elipsoidal"@es .
+<http://geo.linkeddata.es/ontology/altitudElipsoidal> <http://www.w3.org/2000/01/rdf-schema#label> "altitudElipsoidal"@es .
+<http://geo.linkeddata.es/ontology/altitudElipsoidal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#lat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#lat> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#lat> <http://www.w3.org/2000/01/rdf-schema#comment> "The WGS84 latitude of a SpatialThing (decimal degrees)." .
+<http://www.w3.org/2003/01/geo/wgs84_pos#lat> <http://www.w3.org/2000/01/rdf-schema#label> "latitude" .
+<http://www.w3.org/2003/01/geo/wgs84_pos#lat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#Point> <http://www.w3.org/2000/01/rdf-schema#comment> " \nUniquely identified by lat/long/alt. i.e.\n\nspaciallyIntersects(P1, P2) :- lat(P1, LAT), long(P1, LONG), alt(P1, ALT),\n  lat(P2, LAT), long(P2, LONG), alt(P2, ALT).\n\nsameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P2).\n  " .
+<http://www.w3.org/2003/01/geo/wgs84_pos#Point> <http://www.w3.org/2000/01/rdf-schema#comment> "A point, typically described using a coordinate system relative to Earth, such as WGS84.\n  " .
+<http://www.w3.org/2003/01/geo/wgs84_pos#Point> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#Point> <http://www.w3.org/2000/01/rdf-schema#label> "point" .
+<http://www.w3.org/2003/01/geo/wgs84_pos#Point> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7ffa <http://www.w3.org/2002/07/owl#hasValue> <http://geo.linkeddata.es/kos/geodesy/categoriaDeCurvaDeNivel> .
+_:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7ffa <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7ffa <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7fe6 <http://www.w3.org/2002/07/owl#unionOf> _:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7fe5 .
+_:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7fe6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7fdf <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7fde .
+_:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7fdf <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://geo.linkeddata.es/ontology/EstacionPermanenteGPS> .
+<http://geo.linkeddata.es/ontology/codigo> <http://www.w3.org/2000/01/rdf-schema#range> _:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7ff2 .
+<http://geo.linkeddata.es/ontology/codigo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://geo.linkeddata.es/ontology/EstacionPermanenteGPS> .
+<http://geo.linkeddata.es/ontology/codigo> <http://www.w3.org/2000/01/rdf-schema#comment> "C\u00F3digo de estaci\u00F3n GPS"@es .
+<http://geo.linkeddata.es/ontology/codigo> <http://www.w3.org/2000/01/rdf-schema#label> "codigo"@es .
+<http://geo.linkeddata.es/ontology/codigo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+_:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7ff9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7ff9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7ffa .
+<http://www.w3.org/2003/01/geo/wgs84_pos#location> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#location> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#location> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://xmlns.com/foaf/0.1/based_near> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#location> <http://www.w3.org/2000/01/rdf-schema#comment> "The relation between something and the point, \n or other geometrical thing in space, where it is.  For example, the realtionship between\n a radio tower and a Point with a given lat and long.\n Or a relationship between a park and its outline as a closed arc of points, or a road and\n its location as a arc (a sequence of points).\n Clearly in practice there will be limit to the accuracy of any such statement, but one would expect\n an accuracy appropriate for the size of the object and uses such as mapping .\n " .
+<http://www.w3.org/2003/01/geo/wgs84_pos#location> <http://www.w3.org/2000/01/rdf-schema#label> "location" .
+<http://www.w3.org/2003/01/geo/wgs84_pos#location> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/elements/1.1/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+_:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7fe0 <http://www.w3.org/2002/07/owl#unionOf> _:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7fdf .
+_:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7fe0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7ff3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7ff3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://geo.linkeddata.es/ontology/VerticeGeodesico> .
+<http://geo.linkeddata.es/ontology/FenomenoTopografico> <http://www.w3.org/2000/01/rdf-schema#comment> "Conjunto de particularidades que presenta un terreno en su configuraci\u00F3n superficial."@es .
+<http://geo.linkeddata.es/ontology/FenomenoTopografico> <http://www.w3.org/2000/01/rdf-schema#label> "Fenomeno Topogr\u00E1fico"@es .
+<http://geo.linkeddata.es/ontology/FenomenoTopografico> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7fec <http://www.w3.org/2002/07/owl#unionOf> _:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7feb .
+_:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7fec <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://geo.linkeddata.es/kos/geodesy/categoriaDeCurvaDeNivel/curvaDeNivelGenerica> <http://www.w3.org/2004/02/skos/core#inScheme> <http://geo.linkeddata.es/kos/geodesy/categoriaDeCurvaDeNivel> .
+<http://geo.linkeddata.es/kos/geodesy/categoriaDeCurvaDeNivel/curvaDeNivelGenerica> <http://www.w3.org/2000/01/rdf-schema#comment> "Curva de nivel con altitud cada 20 m."@es .
+<http://geo.linkeddata.es/kos/geodesy/categoriaDeCurvaDeNivel/curvaDeNivelGenerica> <http://www.w3.org/2000/01/rdf-schema#label> "curva de nivel gen\u00E9rica"@es .
+<http://geo.linkeddata.es/kos/geodesy/categoriaDeCurvaDeNivel/curvaDeNivelGenerica> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://geo.linkeddata.es/kos/geodesy/categoriaDeCurvaDeNivel/curvaDeNivelGenerica> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://geo.linkeddata.es/ontology/VerticeGeodesicoRegcan95> <http://www.w3.org/2000/01/rdf-schema#comment> "Perteneciente a REGCAN95"@es .
+<http://geo.linkeddata.es/ontology/VerticeGeodesicoRegcan95> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://geo.linkeddata.es/ontology/VerticeGeodesico> .
+<http://geo.linkeddata.es/ontology/VerticeGeodesicoRegcan95> <http://www.w3.org/2000/01/rdf-schema#label> "VerticeGeodesicoRegcan95"@es .
+<http://geo.linkeddata.es/ontology/VerticeGeodesicoRegcan95> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://geo.linkeddata.es/ontology/CotaMunicipal> <http://www.w3.org/2000/01/rdf-schema#comment> "Cota Municipal."@es .
+<http://geo.linkeddata.es/ontology/CotaMunicipal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://geo.linkeddata.es/ontology/PuntoAcotado> .
+<http://geo.linkeddata.es/ontology/CotaMunicipal> <http://www.w3.org/2000/01/rdf-schema#label> "CotaMunicipal"@es .
+<http://geo.linkeddata.es/ontology/CotaMunicipal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://geo.linkeddata.es/ontology/numero> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://geo.linkeddata.es/ontology/numero> <http://www.w3.org/2000/01/rdf-schema#domain> <http://geo.linkeddata.es/ontology/VerticeGeodesico> .
+<http://geo.linkeddata.es/ontology/numero> <http://www.w3.org/2000/01/rdf-schema#comment> "Numero del v\u00E9rtice"@es .
+<http://geo.linkeddata.es/ontology/numero> <http://www.w3.org/2000/01/rdf-schema#label> "n\u00FAmero"@es .
+<http://geo.linkeddata.es/ontology/numero> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://geo.linkeddata.es/ontology/xETRS89> <http://www.w3.org/2000/01/rdf-schema#domain> _:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7fe3 .
+<http://geo.linkeddata.es/ontology/xETRS89> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<http://geo.linkeddata.es/ontology/xETRS89> <http://www.w3.org/2000/01/rdf-schema#comment> "Coordenada X en metros (ETRS89)"@es .
+<http://geo.linkeddata.es/ontology/xETRS89> <http://www.w3.org/2000/01/rdf-schema#label> "xETRS89"@es .
+<http://geo.linkeddata.es/ontology/xETRS89> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+_:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7fe5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7fe4 .
+_:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7fe5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://geo.linkeddata.es/ontology/EstacionPermanenteGPS> .
+_:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7fde <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7fde <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://geo.linkeddata.es/ontology/VerticeGeodesico> .
+_:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7ff8 <http://www.w3.org/2002/07/owl#unionOf> _:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7ff7 .
+_:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7ff8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#long> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#long> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#long> <http://www.w3.org/2000/01/rdf-schema#comment> "The WGS84 longitude of a SpatialThing (decimal degrees)." .
+<http://www.w3.org/2003/01/geo/wgs84_pos#long> <http://www.w3.org/2000/01/rdf-schema#label> "longitude" .
+<http://www.w3.org/2003/01/geo/wgs84_pos#long> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://geo.linkeddata.es/kos/geodesy/categoriaDeCurvaDeNivel> <http://www.w3.org/2000/01/rdf-schema#comment> "skos para categoria de curva de nivel.\nPuede tomar los valores:\n* http://geo.linkeddata.es/kos/geodesy/categoriaDeCurvaDeNivel/curvaDeNivelGenerica\n* http://geo.linkeddata.es/kos/geodesy/categoriaDeCurvaDeNivel/CurvaDeNivelInterpolada\n* http://geo.linkeddata.es/kos/geodesy/categoriaDeCurvaDeNivel/CurvaDeNivelMaestra\n* http://geo.linkeddata.es/kos/geodesy/categoriaDeCurvaDeNivel/depresionGenerica\n* http://geo.linkeddata.es/kos/geodesy/categoriaDeCurvaDeNivel/depresionMaestra\n"@es .
+<http://geo.linkeddata.es/kos/geodesy/categoriaDeCurvaDeNivel> <http://www.w3.org/2004/02/skos/core#prefLabel> "categor\u00EDa de curva de nivel"@es .
+<http://geo.linkeddata.es/kos/geodesy/categoriaDeCurvaDeNivel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://geo.linkeddata.es/kos/geodesy/categoriaDeCurvaDeNivel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<htthttp://geo.linkeddata.es/kos/geodesy/categoriaDeCurvaDeNivel/depresionGenerica> <http://www.w3.org/2004/02/skos/core#inScheme> <http://geo.linkeddata.es/kos/geodesy/categoriaDeCurvaDeNivel> .
+<htthttp://geo.linkeddata.es/kos/geodesy/categoriaDeCurvaDeNivel/depresionGenerica> <http://www.w3.org/2000/01/rdf-schema#comment> "Curva que define una concavidad del terreno cada 20 m."@es .
+<htthttp://geo.linkeddata.es/kos/geodesy/categoriaDeCurvaDeNivel/depresionGenerica> <http://www.w3.org/2000/01/rdf-schema#label> "depresi\u00F3n gen\u00E9rica"@es .
+<htthttp://geo.linkeddata.es/kos/geodesy/categoriaDeCurvaDeNivel/depresionGenerica> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<htthttp://geo.linkeddata.es/kos/geodesy/categoriaDeCurvaDeNivel/depresionGenerica> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://geo.linkeddata.es/ontology/cota> <http://www.w3.org/2000/01/rdf-schema#domain> _:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7fef .
+<http://geo.linkeddata.es/ontology/cota> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<http://geo.linkeddata.es/ontology/cota> <http://www.w3.org/2000/01/rdf-schema#comment> "Altitud expresada en metros"@es .
+<http://geo.linkeddata.es/ontology/cota> <http://www.w3.org/2000/01/rdf-schema#label> "cota"@es .
+<http://geo.linkeddata.es/ontology/cota> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+_:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7ff2 <http://www.w3.org/2002/07/owl#withRestrictions> _:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7ff1 .
+_:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7ff2 <http://www.w3.org/2002/07/owl#onDatatype> <http://www.w3.org/2001/XMLSchema#string> .
+_:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7ff2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+_:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7feb <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7fea .
+_:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7feb <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://geo.linkeddata.es/ontology/EstacionPermanenteGPS> .
+<http://geo.linkeddata.es/ontology/PuertoDeMontanna> <http://www.w3.org/2000/01/rdf-schema#comment> "Paso entre monta\u00F1as."@es .
+<http://geo.linkeddata.es/ontology/PuertoDeMontanna> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://geo.linkeddata.es/ontology/PuntoAcotado> .
+<http://geo.linkeddata.es/ontology/PuertoDeMontanna> <http://www.w3.org/2000/01/rdf-schema#label> "PuertoDeMontanna"@es .
+<http://geo.linkeddata.es/ontology/PuertoDeMontanna> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://geo.linkeddata.es/ontology/Cerro> <http://www.w3.org/2000/01/rdf-schema#comment> "Elevaci\u00F3n de tierra aislada y de menor altura que el monte o la monta\u00F1a."@es .
+<http://geo.linkeddata.es/ontology/Cerro> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://geo.linkeddata.es/ontology/PuntoAcotado> .
+<http://geo.linkeddata.es/ontology/Cerro> <http://www.w3.org/2000/01/rdf-schema#label> "Cerro"@es .
+<http://geo.linkeddata.es/ontology/Cerro> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7fe4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7fe4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://geo.linkeddata.es/ontology/VerticeGeodesico> .
+<http://geo.linkeddata.es/ontology/PuntoAcotado> <http://www.w3.org/2000/01/rdf-schema#comment> "Se define como puntos acotados a aquellos puntos con cota que poseen una ubicaci\u00F3n representativa del relieve y complementan la informaci\u00F3n facilitada por las curvas de nivel."@es .
+<http://geo.linkeddata.es/ontology/PuntoAcotado> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://geo.linkeddata.es/ontology/FenomenoTopografico> .
+<http://geo.linkeddata.es/ontology/PuntoAcotado> <http://www.w3.org/2000/01/rdf-schema#label> "PuntoAcotado"@es .
+<http://geo.linkeddata.es/ontology/PuntoAcotado> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7fdd <http://www.w3.org/2002/07/owl#members> _:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7fdc .
+_:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7fdd <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#> <http://purl.org/dc/elements/1.1/title> "WGS84 Geo Positioning: an RDF vocabulary" .
+<http://www.w3.org/2003/01/geo/wgs84_pos#> <http://purl.org/dc/elements/1.1/date> "$Date: 2009/04/20 15:00:30 $" .
+<http://www.w3.org/2003/01/geo/wgs84_pos#> <http://www.w3.org/2000/01/rdf-schema#comment> "\nRecent changes to this namespace:\n$Log: wgs84_pos.rdf,v $\nRevision 1.22  2009/04/20 15:00:30  timbl\nRemove the time bits which have been deal with elsewhere eg in iCal.\n\nRevision 1.21  2009/04/20 12:52:47  timbl\ntry again\n\nRevision 1.20  2009/04/20 12:42:11  timbl\nAdd Event (edited ages ago and never checked in), and location (following discussion http://chatlogs.planetrdf.com/swig/2009-04-20#T12-36-09)\n\nRevision 1.19  2009/04/20 12:36:31  timbl\nAdd Event (edited ages ago and never checked in), and location (following discussion http://chatlogs.planetrdf.com/swig/2009-04-20#T12-36-09)\n\nRevision 1.18  2006/02/01 22:01:04  danbri\nClarified that lat and long are decimal degrees, and that alt is decimal metres about local reference ellipsoid\n\nRevision 1.17  2004/02/06 17:38:12  danbri\nFixed a bad commit screwup\n\nRevision 1.15  2003/04/19 11:24:08  danbri\nFixed the typo even more.\n\nRevision 1.14  2003/04/19 11:16:56  danbri\nfixed a typo\n\nRevision 1.13  2003/02/19 22:27:27  connolly\nrelaxed domain constraints on lat/long/alt from Point to SpatialThing\n\nRevision 1.12  2003/01/12 01:41:41  danbri\nTrying local copy of XSLT doc.\n\nRevision 1.11  2003/01/12 01:20:18  danbri\nadded a link to morten's xslt rdfs viewer.\n\nRevision 1.10  2003/01/11 18:56:49  danbri\nRemoved datatype range from lat and long properties, since they would\nhave required each occurance of the property to mention the datatype.\n\nRevision 1.9  2003/01/11 11:41:31  danbri\nAnother typo; repaired rdfs:Property to rdf:Property x4\n\nRevision 1.8  2003/01/11 11:05:02  danbri\nAdded an rdfs:range for each lat/long/alt property,\nhttp://www.w3.org/2001/XMLSchema#float\n\nRevision 1.7  2003/01/10 20:25:16  danbri\nLonger rdfs:comment for Point, trying to be Earth-centric and neutral about\ncoordinate system(s) at the same time. Feedback welcomed.\n\nRevision 1.6  2003/01/10 20:18:30  danbri\nAdded CVS log comments into the RDF/XML as an rdfs:comment property of the\nvocabulary. Note that this is not common practice (but seems both harmless\nand potentially useful).\n\n\nrevision 1.5\ndate: 2003/01/10 20:14:31;  author: danbri;  state: Exp;  lines: +16 -5\nUpdated schema:\nAdded a dc:date, added url for more info. Changed the rdfs:label of the\nnamespace from gp to geo. Added a class Point, set as the rdfs:domain of\neach property. Added XML comment on the lat_long property suggesting that\nwe might not need it (based on #rdfig commentary from implementors).\n\nrevision 1.4\ndate: 2003/01/10 20:01:07;  author: danbri;  state: Exp;  lines: +6 -5\nFixed typo; several rdfs:about attributes are now rdf:about. Thanks to MortenF in\n#rdfig for catching this error.\n\nrevision 1.3\ndate: 2003/01/10 11:59:03;  author: danbri;  state: Exp;  lines: +4 -3\nfixed buglet in vocab, added more wgs links\n\nrevision 1.2\ndate: 2003/01/10 11:01:11;  author: danbri;  state: Exp;  lines: +4 -4\nRemoved alt from the as-a-flat-string property, and switched from\nspace separated to comma separated.\n\nrevision 1.1\ndate: 2003/01/10 10:53:23;  author: danbri;  state: Exp;\nbasic geo vocab\n\n" .
+<http://www.w3.org/2003/01/geo/wgs84_pos#> <http://purl.org/dc/elements/1.1/description> "A vocabulary for representing latitude, longitude and \n altitude information in the WGS84 geodetic reference datum. \n Version $Id: wgs84_pos.rdf,v 1.22 2009/04/20 15:00:30 timbl Exp $. See http://www.w3.org/2003/01/geo/ for more details." .
+<http://www.w3.org/2003/01/geo/wgs84_pos#> <http://www.w3.org/2000/01/rdf-schema#label> "geo" .
+<http://www.w3.org/2003/01/geo/wgs84_pos#alt> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#alt> <http://www.w3.org/2000/01/rdf-schema#comment> "The WGS84 altitude of a SpatialThing (decimal meters \nabove the local reference ellipsoid)." .
+<http://www.w3.org/2003/01/geo/wgs84_pos#alt> <http://www.w3.org/2000/01/rdf-schema#label> "altitude" .
+<http://www.w3.org/2003/01/geo/wgs84_pos#alt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+_:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7ff7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7ff6 .
+_:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7ff7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://geo.linkeddata.es/ontology/EstacionPermanenteGPS> .
+<http://geo.linkeddata.es/kos/geodesy/categoriaDeCurvaDeNivel/curvaDeNivelInterpolada> <http://www.w3.org/2004/02/skos/core#inScheme> <http://geo.linkeddata.es/kos/geodesy/categoriaDeCurvaDeNivel> .
+<http://geo.linkeddata.es/kos/geodesy/categoriaDeCurvaDeNivel/curvaDeNivelInterpolada> <http://www.w3.org/2000/01/rdf-schema#comment> "Curva con altitud resultado de un algoritmo de c\u00E1lculo y no de los\ndatos del terreno."@es .
+<http://geo.linkeddata.es/kos/geodesy/categoriaDeCurvaDeNivel/curvaDeNivelInterpolada> <http://www.w3.org/2000/01/rdf-schema#label> "curva de nivel interpolada"@es .
+<http://geo.linkeddata.es/kos/geodesy/categoriaDeCurvaDeNivel/curvaDeNivelInterpolada> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://geo.linkeddata.es/kos/geodesy/categoriaDeCurvaDeNivel/curvaDeNivelInterpolada> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> <http://www.w3.org/2000/01/rdf-schema#comment> "Anything with spatial extent, i.e. size, shape, or position.\n e.g. people, places, bowling balls, as well as abstract areas like cubes.\n" .
+<http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> <http://www.w3.org/2000/01/rdf-schema#label> "SpatialThing" .
+<http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://geo.linkeddata.es/ontology/EstacionPermanenteGPS> <http://www.w3.org/2000/01/rdf-schema#comment> "V\u00E9rtices de la Red de Estaciones Permanentes de GPS, de la que se pueden obtener valores de observaci\u00F3n para un d\u00EDa concreto y una hora determinada."@es .
+<http://geo.linkeddata.es/ontology/EstacionPermanenteGPS> <http://purl.org/dc/terms/source> "Anexo A: Cat\u00E1logo de Objetos Geogr\u00E1ficos de BTN100."@es .
+<http://geo.linkeddata.es/ontology/EstacionPermanenteGPS> <http://www.w3.org/2000/01/rdf-schema#label> "EstacionPermanenteGPS"@es .
+<http://geo.linkeddata.es/ontology/EstacionPermanenteGPS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://geo.linkeddata.es/ontology/CurvaDeNivelBatimetrica> <http://www.w3.org/2000/01/rdf-schema#comment> "Curva de nivel submarina."@es .
+<http://geo.linkeddata.es/ontology/CurvaDeNivelBatimetrica> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://geo.linkeddata.es/ontology/CurvaDeNivel> .
+<http://geo.linkeddata.es/ontology/CurvaDeNivelBatimetrica> <http://www.w3.org/2000/01/rdf-schema#label> "CurvaDeNivelBatimetrica"@es .
+<http://geo.linkeddata.es/ontology/CurvaDeNivelBatimetrica> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/dc/elements/1.1/date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+_:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7ff1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7ff1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7ff0 .
+_:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7fea <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7fea <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://geo.linkeddata.es/ontology/VerticeGeodesico> .
+<http://geo.linkeddata.es/ontology/huso> <http://www.w3.org/2000/01/rdf-schema#domain> _:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7fec .
+<http://geo.linkeddata.es/ontology/huso> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+<http://geo.linkeddata.es/ontology/huso> <http://www.w3.org/2000/01/rdf-schema#comment> "Huso UTM."@es .
+<http://geo.linkeddata.es/ontology/huso> <http://www.w3.org/2000/01/rdf-schema#label> "huso"@es .
+<http://geo.linkeddata.es/ontology/huso> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+_:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7fe9 <http://www.w3.org/2002/07/owl#unionOf> _:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7fe8 .
+_:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7fe9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://geo.linkeddata.es/ontology/geodesy.owl> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/2004/02/skos/core> .
+<http://geo.linkeddata.es/ontology/geodesy.owl> <http://www.w3.org/2000/01/rdf-schema#comment> "Ontolog\u00EDa global de dominio sobre fen\u00F3menos topogr\u00E1ficos y geodesia"@es .
+<http://geo.linkeddata.es/ontology/geodesy.owl> <http://purl.org/dc/elements/1.1/publisher> "Ontology Engineering Group"@en .
+<http://geo.linkeddata.es/ontology/geodesy.owl> <http://www.w3.org/2000/01/rdf-schema#comment> ""@en .
+<http://geo.linkeddata.es/ontology/geodesy.owl> <http://www.w3.org/2002/07/owl#versionInfo> "v0.2"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://geo.linkeddata.es/ontology/geodesy.owl> <http://purl.org/dc/elements/1.1/title> "geodesyOntology"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://geo.linkeddata.es/ontology/geodesy.owl> <http://purl.org/dc/elements/1.1/creator> "Lissete Moscoso Le\u00F3n"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://geo.linkeddata.es/ontology/geodesy.owl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://geo.linkeddata.es/ontology/yETRS89> <http://www.w3.org/2000/01/rdf-schema#domain> _:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7fe0 .
+<http://geo.linkeddata.es/ontology/yETRS89> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<http://geo.linkeddata.es/ontology/yETRS89> <http://www.w3.org/2000/01/rdf-schema#comment> "Coordenada Y en metros (ETRS89)"@es .
+<http://geo.linkeddata.es/ontology/yETRS89> <http://www.w3.org/2000/01/rdf-schema#label> "yETRS89"@es .
+<http://geo.linkeddata.es/ontology/yETRS89> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://geo.linkeddata.es/ontology/longitud> <http://www.w3.org/2000/01/rdf-schema#domain> _:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7fe6 .
+<http://geo.linkeddata.es/ontology/longitud> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.w3.org/2003/01/geo/wgs84_pos#long> .
+<http://geo.linkeddata.es/ontology/longitud> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+_:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7fe3 <http://www.w3.org/2002/07/owl#unionOf> _:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7fe2 .
+_:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7fe3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7fdc <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7fdb .
+_:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7fdc <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://geo.linkeddata.es/ontology/VerticeGeodesicoDeOrdenInferior> .
+<http://geo.linkeddata.es/ontology/Pico> <http://www.w3.org/2000/01/rdf-schema#comment> "Monta\u00F1a de cumbre puntiaguda"@es .
+<http://geo.linkeddata.es/ontology/Pico> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://geo.linkeddata.es/ontology/PuntoAcotado> .
+<http://geo.linkeddata.es/ontology/Pico> <http://www.w3.org/2000/01/rdf-schema#label> "Pico"@es .
+<http://geo.linkeddata.es/ontology/Pico> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7ff6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7ff6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://geo.linkeddata.es/ontology/VerticeGeodesico> .
+_:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7fef <http://www.w3.org/2002/07/owl#unionOf> _:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7fee .
+_:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7fef <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://xmlns.com/foaf/0.1/based_near> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://geo.linkeddata.es/ontology/altitudOrtometrica> <http://www.w3.org/2000/01/rdf-schema#domain> _:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7ff5 .
+<http://geo.linkeddata.es/ontology/altitudOrtometrica> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<http://geo.linkeddata.es/ontology/altitudOrtometrica> <http://www.w3.org/2000/01/rdf-schema#comment> "Altitud orotom\u00E9trica"@es .
+<http://geo.linkeddata.es/ontology/altitudOrtometrica> <http://www.w3.org/2000/01/rdf-schema#label> "altitudOrtometrica"@es .
+<http://geo.linkeddata.es/ontology/altitudOrtometrica> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://geo.linkeddata.es/ontology/VerticeGeodesicoRegente> <http://www.w3.org/2000/01/rdf-schema#comment> "Perteneciente a la Red de Regente"@es .
+<http://geo.linkeddata.es/ontology/VerticeGeodesicoRegente> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://geo.linkeddata.es/ontology/VerticeGeodesico> .
+<http://geo.linkeddata.es/ontology/VerticeGeodesicoRegente> <http://www.w3.org/2000/01/rdf-schema#label> "VerticeGeodesicoRegente"@es .
+<http://geo.linkeddata.es/ontology/VerticeGeodesicoRegente> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7ff0 <http://www.w3.org/2001/XMLSchema#length> "4"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://geo.linkeddata.es/ontology/CurvaDeNivel> <http://www.w3.org/2000/01/rdf-schema#comment> "Se representan como curvas de nivel aquellas l\u00EDneas que tienen la misma altitud sobre la superficie de referencia, siendo esta altitud un m\u00FAltiplo de 40 o un m\u00FAltiplo de 100 (para l\u00EDneas interpoladas)."@es .
+<http://geo.linkeddata.es/ontology/CurvaDeNivel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://geo.linkeddata.es/ontology/FenomenoTopografico> .
+<http://geo.linkeddata.es/ontology/CurvaDeNivel> <http://www.w3.org/2000/01/rdf-schema#label> "CurvaDeNivel"@es .
+<http://geo.linkeddata.es/ontology/CurvaDeNivel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#lat_long> <http://www.w3.org/2000/01/rdf-schema#comment> "A comma-separated representation of a latitude, longitude coordinate." .
+<http://www.w3.org/2003/01/geo/wgs84_pos#lat_long> <http://www.w3.org/2000/01/rdf-schema#label> "lat/long" .
+_:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7ffc <http://www.w3.org/2002/07/owl#intersectionOf> _:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7ffb .
+_:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7ffc <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://geo.linkeddata.es/ontology/latitud> <http://www.w3.org/2000/01/rdf-schema#domain> _:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7fe9 .
+<http://geo.linkeddata.es/ontology/latitud> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> .
+<http://geo.linkeddata.es/ontology/latitud> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+_:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7fe8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7fe7 .
+_:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7fe8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://geo.linkeddata.es/ontology/EstacionPermanenteGPS> .
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://geo.linkeddata.es/kos/geodesy/categoriaDeCurvaDeNivel/depresionMaestra> <http://www.w3.org/2004/02/skos/core#inScheme> <http://geo.linkeddata.es/kos/geodesy/categoriaDeCurvaDeNivel> .
+<http://geo.linkeddata.es/kos/geodesy/categoriaDeCurvaDeNivel/depresionMaestra> <http://www.w3.org/2000/01/rdf-schema#comment> "Curva que define una concavidad del terreno cada 100 m."@es .
+<http://geo.linkeddata.es/kos/geodesy/categoriaDeCurvaDeNivel/depresionMaestra> <http://www.w3.org/2000/01/rdf-schema#label> "depresi\u00F3n maestra"@es .
+<http://geo.linkeddata.es/kos/geodesy/categoriaDeCurvaDeNivel/depresionMaestra> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://geo.linkeddata.es/kos/geodesy/categoriaDeCurvaDeNivel/depresionMaestra> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7fe2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7fe1 .
+_:AX2dX70e8dfa0X3aX1570a5300bbX3aXX2dX7fe2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://geo.linkeddata.es/ontology/EstacionPermanenteGPS> .
