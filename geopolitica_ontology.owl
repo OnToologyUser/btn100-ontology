@@ -1,0 +1,212 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY geo "http://geo.linkeddata.es/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY ontology "http://geo.linkeddata.es/ontology/" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY geopolitical "http://aims.fao.org/aos/geopolitical.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="&geo;ontology/"
+     xml:base="&geo;ontology/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:geo="http://geo.linkeddata.es/"
+     xmlns:geopolitical="http://aims.fao.org/aos/geopolitical.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:ontology="http://geo.linkeddata.es/ontology/">
+    <owl:Ontology rdf:about="&ontology;geopolitical_ontology.owl">
+        <owl:imports rdf:resource="&ontology;top.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/esCapitalDe -->
+
+    <owl:ObjectProperty rdf:about="&ontology;esCapitalDe">
+        <rdfs:comment xml:lang="es">es Capital de</rdfs:comment>
+        <rdfs:range rdf:resource="&geopolitical;territory"/>
+        <rdfs:domain rdf:resource="&ontology;Municipio"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/tieneCapital -->
+
+    <owl:ObjectProperty rdf:about="&ontology;tieneCapital">
+        <rdfs:comment xml:lang="es">tiene Capital</rdfs:comment>
+        <rdfs:domain rdf:resource="&geopolitical;territory"/>
+        <rdfs:range rdf:resource="&ontology;Municipio"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://aims.fao.org/aos/geopolitical.owl#territory -->
+
+    <owl:Class rdf:about="&geopolitical;territory"/>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/Capital -->
+
+    <owl:Class rdf:about="&ontology;Capital">
+        <rdfs:label xml:lang="es">Capital</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&geopolitical;territory"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ontology;esCapitalDe"/>
+                <owl:someValuesFrom rdf:resource="&geopolitical;territory"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/CiudadAutonoma -->
+
+    <owl:Class rdf:about="&ontology;CiudadAutonoma">
+        <rdfs:subClassOf rdf:resource="&geopolitical;territory"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/ComunidadAutonoma -->
+
+    <owl:Class rdf:about="&ontology;ComunidadAutonoma">
+        <rdfs:label xml:lang="es">Comunidad Autónoma</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&geopolitical;territory"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/ComunidadJurisdiccional -->
+
+    <owl:Class rdf:about="&ontology;ComunidadJurisdiccional">
+        <rdfs:subClassOf rdf:resource="&geopolitical;territory"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/LIC -->
+
+    <owl:Class rdf:about="&ontology;LIC">
+        <rdfs:subClassOf rdf:resource="&ontology;ZonaProtegida"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/Municipio -->
+
+    <owl:Class rdf:about="&ontology;Municipio">
+        <rdfs:label xml:lang="es">Municipio</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&geopolitical;territory"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/Nacion -->
+
+    <owl:Class rdf:about="&ontology;Nacion">
+        <rdfs:subClassOf rdf:resource="&geopolitical;territory"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/Pais -->
+
+    <owl:Class rdf:about="&ontology;Pais">
+        <rdfs:label xml:lang="es">País</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&geopolitical;territory"/>
+        <rdfs:comment xml:lang="es">País</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/ParqueNacional -->
+
+    <owl:Class rdf:about="&ontology;ParqueNacional">
+        <rdfs:subClassOf rdf:resource="&ontology;ZonaProtegida"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/ParqueNatural -->
+
+    <owl:Class rdf:about="&ontology;ParqueNatural">
+        <rdfs:subClassOf rdf:resource="&ontology;ZonaProtegida"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/Provincia -->
+
+    <owl:Class rdf:about="&ontology;Provincia">
+        <rdfs:label xml:lang="es">Provincia</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&geopolitical;territory"/>
+    </owl:Class>
+    
+
+
+    <!-- http://geo.linkeddata.es/ontology/ZonaProtegida -->
+
+    <owl:Class rdf:about="&ontology;ZonaProtegida">
+        <rdfs:subClassOf rdf:resource="&geopolitical;special_group"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
+
