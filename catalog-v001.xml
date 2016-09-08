@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
-    <uri id="Imports Wizard Entry" name="http://geo.linkeddata.es/ontology/supply-net.owl#" uri="supply-net-ontology.owl"/>
-    <uri id="Imports Wizard Entry" name="http://geo.linkeddata.es/ontology/population-buildings.owl" uri="population-buildings.owl"/>
-    <uri id="Imports Wizard Entry" name="http://geo.linkeddata.es/ontology/geodesy.owl" uri="geodesy.owl"/>
     <uri id="Imports Wizard Entry" name="http://geo.linkeddata.es/ontology/hydro.owl" uri="hydro.owl.rdf"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1472326943668" name="duplicate:http://geo.linkeddata.es/ontology/" uri="population-buildings.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1472326943668" name="duplicate:http://geo.linkeddata.es/ontology/" uri="supply-net-ontology.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1472326943668" name="duplicate:http://geo.linkeddata.es/ontology/" uri="hydro.owl.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1472326943668" name="duplicate:http://geo.linkeddata.es/ontology/" uri="geodesy.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1472326943668" name="http://geo.linkeddata.es/ontology/btn100.owl" uri="btn100.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1472326943668" name="http://geo.linkeddata.es/ontology/transportes.owl" uri="transportes.owl.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1473335439853" name="duplicate:http://geo.linkeddata.es/ontology/" uri="geopolitica_ontology.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1473335439853" name="duplicate:http://geo.linkeddata.es/ontology/" uri="population-buildings.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1473335439853" name="duplicate:http://geo.linkeddata.es/ontology/" uri="transports.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1473335439853" name="duplicate:http://geo.linkeddata.es/ontology/" uri="supply-net-ontology.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1473335439853" name="duplicate:http://geo.linkeddata.es/ontology/" uri="geodesy.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1473335439853" name="http://geo.linkeddata.es/ontology/btn100.owl" uri="btn100.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1473335439853" name="http://geo.linkeddata.es/ontology/geopolitica.owl" uri="geopolitica.owl.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1473335439853" name="http://geo.linkeddata.es/ontology/hidrography.owl" uri="hidrography.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1473335439853" name="http://geo.linkeddata.es/ontology/hydro.owl.rdf" uri="hydro.owl.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1473335439853" name="http://geo.linkeddata.es/ontology/transportes.owl" uri="transportes.owl.rdf"/>
     </group>
 </catalog>

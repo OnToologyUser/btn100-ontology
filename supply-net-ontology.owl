@@ -7,24 +7,32 @@
     <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
     <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY supply-net "http://geo.linkeddata.es/kos/supply-net/" >
     <!ENTITY geopolitical "http://aims.fao.org/aos/geopolitical.owl#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY situacion "http://geo.linkeddata.es/kos/supply-net/situacion/" >
     <!ENTITY suply-net-ontology "http://geo.linkeddata.es/ontology/suply-net-ontology.owl#" >
+    <!ENTITY tipoDeComponente "http://geo.linkeddata.es/kos/supply-net/tipoDeComponente/" >
 ]>
 
 
 <rdf:RDF xmlns="http://geo.linkeddata.es/ontology/"
      xml:base="http://geo.linkeddata.es/ontology/"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:terms="http://purl.org/dc/terms/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:suply-net-ontology="http://geo.linkeddata.es/ontology/suply-net-ontology.owl#"
      xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
-     xmlns:terms="http://purl.org/dc/terms/"
-     xmlns:geopolitical="http://aims.fao.org/aos/geopolitical.owl#"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:situacion="&supply-net;situacion/"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:geopolitical="http://aims.fao.org/aos/geopolitical.owl#"
+     xmlns:supply-net="http://geo.linkeddata.es/kos/supply-net/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:tipoDeComponente="&supply-net;tipoDeComponente/">
     <owl:Ontology rdf:about="http://geo.linkeddata.es/ontology/supply-net.owl#">
         <dc:creator rdf:datatype="&xsd;string">Lissete Moscoso León</dc:creator>
         <dc:title rdf:datatype="&xsd;string">suply-netOntology</dc:title>
@@ -33,6 +41,7 @@
         <dc:publisher xml:lang="en">Ontology Engineering Group</dc:publisher>
         <rdfs:comment xml:lang="es">Ontología global de dominio sobre redes de conducciones y energía</rdfs:comment>
         <rdfs:comment xml:lang="es">ontología globlal de dominio de redes de suministro de energía. </rdfs:comment>
+        <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
     </owl:Ontology>
     
 
@@ -63,7 +72,7 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
-    // Data properties
+    // Object Properties
     //
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
@@ -73,73 +82,42 @@
 
     <!-- http://geo.linkeddata.es/ontology/componenteDeTelecomunicacion -->
 
-    <owl:DatatypeProperty rdf:about="http://geo.linkeddata.es/ontology/componenteDeTelecomunicacion">
-        <rdfs:label xml:lang="es">componente</rdfs:label>
-        <rdfs:comment xml:lang="es">Componente de telecomunicaciones.</rdfs:comment>
+    <owl:ObjectProperty rdf:about="http://geo.linkeddata.es/ontology/componenteDeTelecomunicacion">
+        <rdfs:label xml:lang="es">componente de telecomunicación</rdfs:label>
         <rdfs:domain rdf:resource="http://geo.linkeddata.es/ontology/EstacionDeTelecomunicacion"/>
         <rdfs:range>
-            <rdfs:Datatype>
-                <owl:oneOf>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&rdf;List"/>
-                        <rdf:first rdf:datatype="&xsd;string">desconocido</rdf:first>
-                        <rdf:rest>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="&rdf;List"/>
-                                <rdf:first rdf:datatype="&xsd;string">emisor</rdf:first>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="&rdf;List"/>
-                                        <rdf:first rdf:datatype="&xsd;string">repetidor</rdf:first>
-                                        <rdf:rest rdf:resource="&rdf;nil"/>
-                                    </rdf:Description>
-                                </rdf:rest>
-                            </rdf:Description>
-                        </rdf:rest>
-                    </rdf:Description>
-                </owl:oneOf>
-            </rdfs:Datatype>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&skos;Concept"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&skos;inScheme"/>
+                        <owl:hasValue rdf:resource="&supply-net;tipoDeComponente"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
         </rdfs:range>
-    </owl:DatatypeProperty>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://geo.linkeddata.es/ontology/situacion -->
 
-    <owl:DatatypeProperty rdf:about="http://geo.linkeddata.es/ontology/situacion">
+    <owl:ObjectProperty rdf:about="http://geo.linkeddata.es/ontology/situacion">
         <rdfs:label xml:lang="es">situación</rdfs:label>
-        <rdfs:comment xml:lang="es">Indica la disposición del tramo de vía sobre la superficie.</rdfs:comment>
+        <rdfs:comment xml:lang="es">indica la posición del tramo sobre la superficie</rdfs:comment>
         <rdfs:domain rdf:resource="http://geo.linkeddata.es/ontology/ConduccionDeCombustible"/>
         <rdfs:range>
-            <rdfs:Datatype>
-                <owl:oneOf>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="&rdf;List"/>
-                        <rdf:first rdf:datatype="&xsd;string">elevado</rdf:first>
-                        <rdf:rest>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="&rdf;List"/>
-                                <rdf:first rdf:datatype="&xsd;string">en superficie</rdf:first>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="&rdf;List"/>
-                                        <rdf:first rdf:datatype="&xsd;string">sin clasificar</rdf:first>
-                                        <rdf:rest>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="&rdf;List"/>
-                                                <rdf:first rdf:datatype="&xsd;string">subterraneo</rdf:first>
-                                                <rdf:rest rdf:resource="&rdf;nil"/>
-                                            </rdf:Description>
-                                        </rdf:rest>
-                                    </rdf:Description>
-                                </rdf:rest>
-                            </rdf:Description>
-                        </rdf:rest>
-                    </rdf:Description>
-                </owl:oneOf>
-            </rdfs:Datatype>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&skos;Concept"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&skos;inScheme"/>
+                        <owl:hasValue rdf:resource="&supply-net;situacion"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
         </rdfs:range>
-    </owl:DatatypeProperty>
+    </owl:ObjectProperty>
     
 
 
@@ -351,6 +329,112 @@
         <rdfs:label xml:lang="es">Subestación eléctrica</rdfs:label>
         <rdfs:comment xml:lang="es">Conjunto de instalaciones utilizadas para la reducción de la tensión o el voltaje de las líneas eléctricas.</rdfs:comment>
     </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://geo.linkeddata.es/kos/supply-net/situacion -->
+
+    <skos:ConceptScheme rdf:about="&supply-net;situacion">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <rdfs:comment xml:lang="es">Puede tomar los valores:
+http://geo.linkeddata.es/kos/supply-net/situacion/elevado
+http://geo.linkeddata.es/kos/supply-net/situacion/subterraneo
+http://geo.linkeddata.es/kos/supply-net/situacion/superficial</rdfs:comment>
+        <skos:prefLabel xml:lang="es">situación</skos:prefLabel>
+    </skos:ConceptScheme>
+    
+
+
+    <!-- http://geo.linkeddata.es/kos/supply-net/tipoDeComponente -->
+
+    <skos:ConceptScheme rdf:about="&supply-net;tipoDeComponente">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <rdfs:comment xml:lang="es">Indica el tipo de componente de telecomunicaciones.
+Puede tomar los valores:
+* http://geo.linkeddata.es/kos/supply-net/tipoDeComponente/emisor
+* http://geo.linkeddata.es/kos/supply-net/tipoDeComponente/repetidor</rdfs:comment>
+        <skos:prefLabel xml:lang="es">tipo de componente</skos:prefLabel>
+    </skos:ConceptScheme>
+    
+
+
+    <!-- http://geo.linkeddata.es/kos/supply-net/situacion/elevado -->
+
+    <skos:Concept rdf:about="&supply-net;situacion/elevado">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <skos:prefLabel xml:lang="es">elevado</skos:prefLabel>
+        <skos:inScheme rdf:resource="&supply-net;situacion"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://geo.linkeddata.es/kos/supply-net/situacion/subterraneo -->
+
+    <skos:Concept rdf:about="&supply-net;situacion/subterraneo">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <skos:prefLabel xml:lang="es">subterráneo</skos:prefLabel>
+        <skos:inScheme rdf:resource="&supply-net;situacion"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://geo.linkeddata.es/kos/supply-net/situacion/superficial -->
+
+    <skos:Concept rdf:about="&supply-net;situacion/superficial">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <skos:prefLabel xml:lang="es">superficial</skos:prefLabel>
+        <skos:inScheme rdf:resource="&supply-net;situacion"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://geo.linkeddata.es/kos/supply-net/tipoDeComponente/emisor -->
+
+    <skos:Concept rdf:about="&supply-net;tipoDeComponente/emisor">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <skos:prefLabel xml:lang="es">emisor</skos:prefLabel>
+        <skos:inScheme rdf:resource="&supply-net;tipoDeComponente"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://geo.linkeddata.es/kos/supply-net/tipoDeComponente/repetidor -->
+
+    <skos:Concept rdf:about="&supply-net;tipoDeComponente/repetidor">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <skos:prefLabel xml:lang="es">repetidor</skos:prefLabel>
+        <skos:inScheme rdf:resource="&supply-net;tipoDeComponente"/>
+    </skos:Concept>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&supply-net;situacion/elevado"/>
+            <rdf:Description rdf:about="&supply-net;situacion/subterraneo"/>
+            <rdf:Description rdf:about="&supply-net;situacion/superficial"/>
+        </owl:distinctMembers>
+    </rdf:Description>
 </rdf:RDF>
 
 
