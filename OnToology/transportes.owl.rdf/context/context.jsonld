@@ -1,0 +1,64 @@
+{
+  "@context" : {
+    "EstacionDeFerrocarril" : {
+      "@id" : "http://geo.linkeddata.es/ontology/EstacionDeFerrocarril"
+    },
+    "Aeropuerto" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Aeropuerto"
+    },
+    "Thing" : {
+      "@id" : "http://www.w3.org/2002/07/owl#Thing"
+    },
+    "Travesia" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Travesia"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "Camino" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Camino"
+    },
+    "Aeroclub" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Aeroclub"
+    },
+    "Faro" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Faro"
+    },
+    "Pista" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Pista"
+    },
+    "Aerodromo" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Aerodromo"
+    },
+    "EstacionDeAutobuses" : {
+      "@id" : "http://geo.linkeddata.es/ontology/EstacionDeAutobuses"
+    },
+    "Ruta" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Ruta"
+    },
+    "Autopista" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Autopista"
+    },
+    "Glorieta" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Glorieta"
+    },
+    "Puerto" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Puerto"
+    },
+    "Sendero" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Sendero"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "CintaTransportadora" : {
+      "@id" : "http://geo.linkeddata.es/ontology/CintaTransportadora"
+    },
+    "BaseAerea" : {
+      "@id" : "http://geo.linkeddata.es/ontology/BaseAerea"
+    },
+    "Carretera" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Carretera"
+    }
+  }
+}

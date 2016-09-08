@@ -1,0 +1,355 @@
+<http://geo.linkeddata.es/ontology/ineCode> <http://www.w3.org/2000/01/rdf-schema#range> _:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7fee .
+<http://geo.linkeddata.es/ontology/ineCode> <http://www.w3.org/2000/01/rdf-schema#domain> _:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7ff1 .
+<http://geo.linkeddata.es/ontology/ineCode> <http://www.w3.org/2000/01/rdf-schema#comment> "Codificaci\u00F3n asignada por el Nomencl\u00E1tor INE."@es .
+<http://geo.linkeddata.es/ontology/ineCode> <http://www.w3.org/2000/01/rdf-schema#label> "codigo ine"@es .
+<http://geo.linkeddata.es/ontology/ineCode> <http://www.w3.org/2000/01/rdf-schema#label> "ine code"@en .
+<http://geo.linkeddata.es/ontology/ineCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+_:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7fe3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7fe3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://geo.linkeddata.es/ontology/LugarDeOcio> .
+<http://geo.linkeddata.es/kos/population-buildings/estadoDeUso> <http://www.w3.org/2000/01/rdf-schema#comment> "indica el estado de uso. Puede tomar los valores:\n* http://geo.linkeddata.es/kos/population-buildings/estadoDeUso/enConstruccion\n* http://geo.linkeddata.es/kos/population-buildings/estadoDeUso/enUso\n* http://geo.linkeddata.es/kos/population-buildings/estadoDeUso/abandonado"@es .
+<http://geo.linkeddata.es/kos/population-buildings/estadoDeUso> <http://www.w3.org/2004/02/skos/core#prefLabel> "estado de uso"@es .
+<http://geo.linkeddata.es/kos/population-buildings/estadoDeUso> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://geo.linkeddata.es/kos/population-buildings/estadoDeUso> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+_:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7fdc <http://www.w3.org/2002/07/owl#unionOf> _:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7fdb .
+_:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7fdc <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7ff6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7ff6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7ff7 .
+<http://geo.linkeddata.es/ontology/DiseminadoPuntual> <http://www.w3.org/2000/01/rdf-schema#comment> "Existen dos tipos de elementos que se engloban en el concepto de Diseminado puntual:\n\n* Edificaci\u00F3n aislada: caser\u00EDos, cortijos, etc. en los que o bien existe una \u00FAnica edificaci\u00F3n, o siendo un peque\u00F1o conjunto de edificaciones (dos, tres o cuatro...) est\u00E1n dispuestas de tal forma que entre ellas no existe una distancia superior a 100m sobre la imagen.\n\n* Edificaci\u00F3n dispersa: es el caso de los diseminados com\u00FAnmente conocidos. Esto es, aquel conjunto considerable de edificaciones (cinco o m\u00E1s) que sin conformar un n\u00FAcleo de poblaci\u00F3n presentan caracter\u00EDsticas propias de estas (habitabilidad, comunicaciones, etc.).En este caso el objeto se representar\u00E1 por su centroide."@es .
+<http://geo.linkeddata.es/ontology/DiseminadoPuntual> <http://purl.org/dc/terms/source> "Anexo A: Cat\u00E1logo de Objetos Geogr\u00E1ficos de BTN100."@es .
+<http://geo.linkeddata.es/ontology/DiseminadoPuntual> <http://www.w3.org/2002/07/owl#disjointWith> <http://geo.linkeddata.es/ontology/DiseminadoSuperficial> .
+<http://geo.linkeddata.es/ontology/DiseminadoPuntual> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://geo.linkeddata.es/ontology/Diseminado> .
+<http://geo.linkeddata.es/ontology/DiseminadoPuntual> <http://www.w3.org/2000/01/rdf-schema#label> "Diseminado puntual"@es .
+<http://geo.linkeddata.es/ontology/DiseminadoPuntual> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7fef <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7fef <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://geo.linkeddata.es/ontology/NucleoPoblacional> .
+<http://geo.linkeddata.es/ontology/Gasolinera> <http://www.w3.org/2000/01/rdf-schema#comment> "Punto de venta de combustible para veh\u00EDculos de motor."@es .
+<http://geo.linkeddata.es/ontology/Gasolinera> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://geo.linkeddata.es/ontology/LugarDeInteres> .
+<http://geo.linkeddata.es/ontology/Gasolinera> <http://www.w3.org/2000/01/rdf-schema#label> "Gasolinera"@es .
+<http://geo.linkeddata.es/ontology/Gasolinera> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://geo.linkeddata.es/ontology/Hospital> <http://www.w3.org/2000/01/rdf-schema#comment> "Establecimiento sanitario donde se atiende a los enfermos para proporcionar el diagn\u00F3stico y tratamiento que necesitan."@es .
+<http://geo.linkeddata.es/ontology/Hospital> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://geo.linkeddata.es/ontology/LugarDeInteres> .
+<http://geo.linkeddata.es/ontology/Hospital> <http://www.w3.org/2000/01/rdf-schema#label> "Hospital"@es .
+<http://geo.linkeddata.es/ontology/Hospital> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://geo.linkeddata.es/ontology/Universidad> <http://www.w3.org/2000/01/rdf-schema#comment> "Establecimiento o conjunto de unidades educativas de ense\u00F1anza superior e investigaci\u00F3n"@es .
+<http://geo.linkeddata.es/ontology/Universidad> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://geo.linkeddata.es/ontology/LugarDeInteres> .
+<http://geo.linkeddata.es/ontology/Universidad> <http://www.w3.org/2000/01/rdf-schema#label> "Universidad"@es .
+<http://geo.linkeddata.es/ontology/Universidad> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://geo.linkeddata.es/ontology/PatrimonioDelaHumanidad> <http://www.w3.org/2000/01/rdf-schema#comment> "T\u00EDtulo conferido por la Unesco a sitios espec\u00EDficos del planeta (sean bosque, monta\u00F1a, lago, cueva, desierto, edificaci\u00F3n, complejo arquitect\u00F3nico o\nciudad) que han sido nominados y confirmados para su inclusi\u00F3n en la lista mantenida por el Programa Patrimonio de la Humanidad."@es .
+<http://geo.linkeddata.es/ontology/PatrimonioDelaHumanidad> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://geo.linkeddata.es/ontology/LugarDeInteres> .
+<http://geo.linkeddata.es/ontology/PatrimonioDelaHumanidad> <http://www.w3.org/2000/01/rdf-schema#label> "Patrimonio de la humanidad"@es .
+<http://geo.linkeddata.es/ontology/PatrimonioDelaHumanidad> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7ff0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7fef .
+_:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7ff0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://geo.linkeddata.es/ontology/Diseminado> .
+<http://geo.linkeddata.es/kos/populatuon-buildings/capital/comunidadAutonomaNoDeProvincia> <http://www.w3.org/2004/02/skos/core#inScheme> <http://geo.linkeddata.es/kos/populatuon-buildings/capital/tipoDeCapital> .
+<http://geo.linkeddata.es/kos/populatuon-buildings/capital/comunidadAutonomaNoDeProvincia> <http://www.w3.org/2004/02/skos/core#prefLabel> "capital de comunidad aut\u00F3noma  y no de provincia"@es .
+<http://geo.linkeddata.es/kos/populatuon-buildings/capital/comunidadAutonomaNoDeProvincia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://geo.linkeddata.es/kos/populatuon-buildings/capital/comunidadAutonomaNoDeProvincia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7fd5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7fd4 .
+_:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7fd5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://geo.linkeddata.es/kos/population-buildings/estadoDeUso/abandonado> .
+_:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7ffc <http://www.w3.org/2002/07/owl#unionOf> _:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7ffb .
+_:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7ffc <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://geo.linkeddata.es/ontology/ZonaUniversitaria> <http://www.w3.org/2000/01/rdf-schema#comment> "Conjunto de edificios situados en terreno acotado al efecto, destinados a la ense\u00F1anza superior, y m\u00E1s especialmente la que es propia de las universidades."@es .
+<http://geo.linkeddata.es/ontology/ZonaUniversitaria> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://geo.linkeddata.es/ontology/ZonaDeUsoCaracteristico> .
+<http://geo.linkeddata.es/ontology/ZonaUniversitaria> <http://www.w3.org/2000/01/rdf-schema#label> "Zona universitaria"@es .
+<http://geo.linkeddata.es/ontology/ZonaUniversitaria> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/dc/terms/source> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+_:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7fe8 <http://www.w3.org/2002/07/owl#intersectionOf> _:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7fe7 .
+_:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7fe8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://geo.linkeddata.es/ontology/esCapitalDe> <http://www.w3.org/2000/01/rdf-schema#range> _:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7ff9 .
+<http://geo.linkeddata.es/ontology/esCapitalDe> <http://www.w3.org/2000/01/rdf-schema#domain> _:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7ffc .
+<http://geo.linkeddata.es/ontology/esCapitalDe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://geo.linkeddata.es/ontology/bicCode> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://geo.linkeddata.es/ontology/bicCode> <http://www.w3.org/2000/01/rdf-schema#domain> <http://geo.linkeddata.es/ontology/LugarDeInteres> .
+<http://geo.linkeddata.es/ontology/bicCode> <http://www.w3.org/2000/01/rdf-schema#comment> "Se incluye el c\u00F3digo BIC que define el bien. Caso de no ser un Lugar de inter\u00E9s BIC, se rellenar\u00E1 con el texto: NO PROCEDE."@es .
+<http://geo.linkeddata.es/ontology/bicCode> <http://www.w3.org/2000/01/rdf-schema#comment> "big code"@en .
+<http://geo.linkeddata.es/ontology/bicCode> <http://www.w3.org/2000/01/rdf-schema#label> "c\u00F3digo big"@es .
+<http://geo.linkeddata.es/ontology/bicCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://geo.linkeddata.es/ontology/ZonaDeportiva> <http://www.w3.org/2000/01/rdf-schema#comment> "\u00C1reas donde se realizan las actividades deportivas, los diferentes espacios complementarios y los de servicios auxiliares."@es .
+<http://geo.linkeddata.es/ontology/ZonaDeportiva> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://geo.linkeddata.es/ontology/ZonaDeUsoCaracteristico> .
+<http://geo.linkeddata.es/ontology/ZonaDeportiva> <http://www.w3.org/2000/01/rdf-schema#label> "Zona deportiva"@es .
+<http://geo.linkeddata.es/ontology/ZonaDeportiva> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://geo.linkeddata.es/ontology/ZonaIndustrial> <http://www.w3.org/2000/01/rdf-schema#comment> "Espacio territorial en el cual se agrupan una serie de actividades industriales, que pueden o no estar relacionadas entre s\u00ED."@es .
+<http://geo.linkeddata.es/ontology/ZonaIndustrial> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://geo.linkeddata.es/ontology/ZonaDeUsoCaracteristico> .
+<http://geo.linkeddata.es/ontology/ZonaIndustrial> <http://www.w3.org/2000/01/rdf-schema#label> "Zona industrial"@es .
+<http://geo.linkeddata.es/ontology/ZonaIndustrial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7fe2 <http://www.w3.org/2002/07/owl#intersectionOf> _:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7fe1 .
+_:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7fe2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://geo.linkeddata.es/ontology/Cueva> <http://www.w3.org/2000/01/rdf-schema#comment> "Cavidad natural del terreno causada por alg\u00FAn tipo de erosi\u00F3n de corrientes de agua, hielo o lava, o una combinaci\u00F3n de varios de estos factores."@es .
+<http://geo.linkeddata.es/ontology/Cueva> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://geo.linkeddata.es/ontology/LugarDeInteres> .
+<http://geo.linkeddata.es/ontology/Cueva> <http://www.w3.org/2000/01/rdf-schema#label> "Cueva"@es .
+<http://geo.linkeddata.es/ontology/Cueva> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://geo.linkeddata.es/ontology/Camping> <http://www.w3.org/2000/01/rdf-schema#comment> "Lugar al aire libre, especialmente dispuesto para albergar viajeros, turistas, personas en vacaciones, etc."@es .
+<http://geo.linkeddata.es/ontology/Camping> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7fe5 .
+<http://geo.linkeddata.es/ontology/Camping> <http://www.w3.org/2000/01/rdf-schema#label> "Camping"@es .
+<http://geo.linkeddata.es/ontology/Camping> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7fdb <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7fda .
+_:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7fdb <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://geo.linkeddata.es/ontology/NucleoPoblacionalPuntual> .
+_:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7ff5 <http://www.w3.org/2002/07/owl#intersectionOf> _:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7ff4 .
+_:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7ff5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7fee <http://www.w3.org/2002/07/owl#withRestrictions> _:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7fed .
+_:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7fee <http://www.w3.org/2002/07/owl#onDatatype> <http://www.w3.org/2001/XMLSchema#string> .
+_:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7fee <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+<http://geo.linkeddata.es/ontology/Cantera> <http://www.w3.org/2000/01/rdf-schema#comment> " Sitio de donde se saca piedra, greda u otra sustancia an\u00E1loga para obras varias"@es .
+<http://geo.linkeddata.es/ontology/Cantera> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://geo.linkeddata.es/ontology/ExplotacionMinera> .
+<http://geo.linkeddata.es/ontology/Cantera> <http://www.w3.org/2000/01/rdf-schema#label> "Cantera"@es .
+<http://geo.linkeddata.es/ontology/Cantera> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://geo.linkeddata.es/kos/population-buildings/estadoDeUso/enConstruccion> <http://www.w3.org/2004/02/skos/core#inScheme> <http://geo.linkeddata.es/kos/population-buildings/estadoDeUso> .
+<http://geo.linkeddata.es/kos/population-buildings/estadoDeUso/enConstruccion> <http://www.w3.org/2000/01/rdf-schema#comment> "indica que est\u00E1 en construcci\u00F3n o en obras"@es .
+<http://geo.linkeddata.es/kos/population-buildings/estadoDeUso/enConstruccion> <http://www.w3.org/2004/02/skos/core#prefLabel> "en construcci\u00F3n"@es .
+<http://geo.linkeddata.es/kos/population-buildings/estadoDeUso/enConstruccion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://geo.linkeddata.es/kos/population-buildings/estadoDeUso/enConstruccion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://geo.linkeddata.es/kos/population-buildings/estadoDeUso/enUso> <http://www.w3.org/2004/02/skos/core#inScheme> <http://geo.linkeddata.es/kos/population-buildings/estadoDeUso> .
+<http://geo.linkeddata.es/kos/population-buildings/estadoDeUso/enUso> <http://www.w3.org/2004/02/skos/core#prefLabel> "en uso"@es .
+<http://geo.linkeddata.es/kos/population-buildings/estadoDeUso/enUso> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://geo.linkeddata.es/kos/population-buildings/estadoDeUso/enUso> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7fd4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7fd3 .
+_:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7fd4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://geo.linkeddata.es/kos/population-buildings/estadoDeUso/enConstruccion> .
+<http://geo.linkeddata.es/ontology/ZonaVerde> <http://www.w3.org/2000/01/rdf-schema#comment> "Zona del terreno donde se cultivan especies vegetales, con posible a\u00F1adidura de otros elementos como fuentes o esculturas."@es .
+<http://geo.linkeddata.es/ontology/ZonaVerde> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://geo.linkeddata.es/ontology/ZonaDeUsoCaracteristico> .
+<http://geo.linkeddata.es/ontology/ZonaVerde> <http://www.w3.org/2000/01/rdf-schema#label> "Zona verde"@es .
+<http://geo.linkeddata.es/ontology/ZonaVerde> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7ffb <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7ffa .
+_:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7ffb <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://geo.linkeddata.es/ontology/Diseminado> .
+_:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7fe7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7fe6 .
+_:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7fe7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://geo.linkeddata.es/ontology/Alojamiento> .
+<http://geo.linkeddata.es/kos/populatuon-buildings/capital/comunidadAutonoma> <http://www.w3.org/2004/02/skos/core#inScheme> <http://geo.linkeddata.es/kos/populatuon-buildings/capital/tipoDeCapital> .
+<http://geo.linkeddata.es/kos/populatuon-buildings/capital/comunidadAutonoma> <http://www.w3.org/2004/02/skos/core#prefLabel> "capital de comunida aut\u00F3noma"@es .
+<http://geo.linkeddata.es/kos/populatuon-buildings/capital/comunidadAutonoma> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://geo.linkeddata.es/kos/populatuon-buildings/capital/comunidadAutonoma> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://geo.linkeddata.es/ontology/Balneario> <http://www.w3.org/2000/01/rdf-schema#comment> "Lugar dedicado al reposo y la curaci\u00F3n a trav\u00E9s de la utilizaci\u00F3n de las aguas, sobre todo termales o minerales, con un edificio para el hospedaje. "@es .
+<http://geo.linkeddata.es/ontology/Balneario> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7fe8 .
+<http://geo.linkeddata.es/ontology/Balneario> <http://www.w3.org/2000/01/rdf-schema#label> "Balneario"@es .
+<http://geo.linkeddata.es/ontology/Balneario> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://geo.linkeddata.es/ontology/AreaDeServicio> <http://www.w3.org/2000/01/rdf-schema#comment> "En una autopista o autov\u00EDa, lugar habilitado para el estacionamiento de los veh\u00EDculos, en el que suele haber una gasolinera, un restaurante y otros servicios. "@es .
+<http://geo.linkeddata.es/ontology/AreaDeServicio> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://geo.linkeddata.es/ontology/ZonaDeUsoCaracteristico> .
+<http://geo.linkeddata.es/ontology/AreaDeServicio> <http://www.w3.org/2000/01/rdf-schema#label> "Area de servicio"@es .
+<http://geo.linkeddata.es/ontology/AreaDeServicio> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://geo.linkeddata.es/ontology/ZonaRecreativa> <http://www.w3.org/2000/01/rdf-schema#comment> "Espacio donde se encuentran lugares de ocio o entretenimiento de los ciudadanos."@es .
+<http://geo.linkeddata.es/ontology/ZonaRecreativa> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://geo.linkeddata.es/ontology/ZonaDeUsoCaracteristico> .
+<http://geo.linkeddata.es/ontology/ZonaRecreativa> <http://www.w3.org/2000/01/rdf-schema#label> "Zona recreativa"@es .
+<http://geo.linkeddata.es/ontology/ZonaRecreativa> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://geo.linkeddata.es/ontology/JardinHistorico> <http://www.w3.org/2000/01/rdf-schema#comment> "Es el espacio delimitado, producto de la ordenaci\u00F3n por el hombre de elementos naturales, a veces complementado con estructuras de f\u00E1brica, y estimado de inter\u00E9s en funci\u00F3n de su origen o pasado hist\u00F3rico, o de sus valores est\u00E9ticos, sensoriales o bot\u00E1nicos."@es .
+<http://geo.linkeddata.es/ontology/JardinHistorico> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://geo.linkeddata.es/ontology/LugarDeInteres> .
+<http://geo.linkeddata.es/ontology/JardinHistorico> <http://www.w3.org/2000/01/rdf-schema#label> "Jardin historico"@es .
+<http://geo.linkeddata.es/ontology/JardinHistorico> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7fe1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7fe0 .
+_:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7fe1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://geo.linkeddata.es/ontology/Alojamiento> .
+_:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7fda <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7fda <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://geo.linkeddata.es/ontology/NucleoPoblacionalSuperficial> .
+_:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7ff4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7ff2 .
+_:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7ff4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7fed <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7fed <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7fec .
+_:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7fd9 <http://www.w3.org/2002/07/owl#intersectionOf> _:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7fd8 .
+_:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7fd9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://geo.linkeddata.es/ontology/ZonaDeUsoCaracteristico> <http://www.w3.org/2000/01/rdf-schema#comment> "Superficie delimitada, empleada para desarrollar una actividad espec\u00EDfica."@es .
+<http://geo.linkeddata.es/ontology/ZonaDeUsoCaracteristico> <http://purl.org/dc/terms/source> "Anexo A: Cat\u00E1logo de Objetos Geogr\u00E1ficos de BTN100."@es .
+<http://geo.linkeddata.es/ontology/ZonaDeUsoCaracteristico> <http://www.w3.org/2000/01/rdf-schema#label> "Zona de uso caracter\u00EDstico"@es .
+<http://geo.linkeddata.es/ontology/ZonaDeUsoCaracteristico> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://geo.linkeddata.es/ontology/VistaPanoramica> <http://www.w3.org/2000/01/rdf-schema#comment> "Es la que muestra un panorama usualmente paisaj\u00EDstico o arquitect\u00F3nico, y que se distingue por el amplio horizonte visual que cubre."@es .
+<http://geo.linkeddata.es/ontology/VistaPanoramica> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://geo.linkeddata.es/ontology/LugarDeInteres> .
+<http://geo.linkeddata.es/ontology/VistaPanoramica> <http://www.w3.org/2000/01/rdf-schema#label> "Vista panor\u00E1mica"@es .
+<http://geo.linkeddata.es/ontology/VistaPanoramica> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://geo.linkeddata.es/ontology/ZonaArqueologica> <http://www.w3.org/2000/01/rdf-schema#comment> "Es el lugar o paraje natural donde existen bienes muebles o inmuebles susceptibles de ser estudiados con metodolog\u00EDa arqueol\u00F3gica, hayan sido o no\nextra\u00EDdos y tanto si se encuentran en la superficie, en el subsuelo o bajo las aguas espa\u00F1olas."@es .
+<http://geo.linkeddata.es/ontology/ZonaArqueologica> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://geo.linkeddata.es/ontology/LugarDeInteres> .
+<http://geo.linkeddata.es/ontology/ZonaArqueologica> <http://www.w3.org/2000/01/rdf-schema#label> "Zona arqueol\u00F3gica"@es .
+<http://geo.linkeddata.es/ontology/ZonaArqueologica> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://geo.linkeddata.es/ontology/Castillo> <http://www.w3.org/2000/01/rdf-schema#comment> "Lugar fuerte, cercado de murallas, baluartes, fosos y otras fortificaciones"@es .
+<http://geo.linkeddata.es/ontology/Castillo> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://geo.linkeddata.es/ontology/LugarDeInteres> .
+<http://geo.linkeddata.es/ontology/Castillo> <http://www.w3.org/2000/01/rdf-schema#label> "Castillo"@es .
+<http://geo.linkeddata.es/ontology/Castillo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://geo.linkeddata.es/ontology/ParadorNacional> <http://www.w3.org/2000/01/rdf-schema#comment> "Conjunto de hoteles de alta categor\u00EDa distribuidos por toda Espa\u00F1a, localizados en edificios emblem\u00E1ticos o emplazamientos destacables que han sido seleccionados por su inter\u00E9s hist\u00F3rico, art\u00EDstico o cultural."@es .
+<http://geo.linkeddata.es/ontology/ParadorNacional> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7fd9 .
+<http://geo.linkeddata.es/ontology/ParadorNacional> <http://www.w3.org/2000/01/rdf-schema#label> "Parador nacional"@es .
+<http://geo.linkeddata.es/ontology/ParadorNacional> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://geo.linkeddata.es/ontology/Puente> <http://www.w3.org/2000/01/rdf-schema#comment> "Construcci\u00F3n realizada para paso a distinto nivel entre v\u00EDas de comunicaci\u00F3n o hidrograf\u00EDa."@es .
+<http://geo.linkeddata.es/ontology/Puente> <http://www.w3.org/2000/01/rdf-schema#label> "Puente"@es .
+<http://geo.linkeddata.es/ontology/Puente> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7fd3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7fd3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://geo.linkeddata.es/kos/population-buildings/estadoDeUso/enUso> .
+_:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7ffa <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7ffa <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://geo.linkeddata.es/ontology/NucleoPoblacional> .
+<http://geo.linkeddata.es/ontology/ZonaFerroviaria> <http://www.w3.org/2000/01/rdf-schema#comment> "Instalaciones pertenecientes o destinadas para la explotaci\u00F3n de la infraestructura del ferrocarril."@es .
+<http://geo.linkeddata.es/ontology/ZonaFerroviaria> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://geo.linkeddata.es/ontology/ZonaDeUsoCaracteristico> .
+<http://geo.linkeddata.es/ontology/ZonaFerroviaria> <http://www.w3.org/2000/01/rdf-schema#label> "Zona ferroviaria"@es .
+<http://geo.linkeddata.es/ontology/ZonaFerroviaria> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://geo.linkeddata.es/ontology/estadoDeUso> <http://www.w3.org/2000/01/rdf-schema#range> _:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7ff5 .
+<http://geo.linkeddata.es/ontology/estadoDeUso> <http://www.w3.org/2000/01/rdf-schema#domain> <http://geo.linkeddata.es/ontology/ExplotacionMinera> .
+<http://geo.linkeddata.es/ontology/estadoDeUso> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://geo.linkeddata.es/ontology/ExplotacionMinera> <http://www.w3.org/2000/01/rdf-schema#comment> "Terreno dedicado a la explotaci\u00F3n de minerales o piedra."@es .
+<http://geo.linkeddata.es/ontology/ExplotacionMinera> <http://www.w3.org/2000/01/rdf-schema#label> "Explotaci\u00F3n minera"@es .
+<http://geo.linkeddata.es/ontology/ExplotacionMinera> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7fe6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7fe6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://geo.linkeddata.es/ontology/LugarDeOcio> .
+<http://geo.linkeddata.es/ontology/LugarDeInteres> <http://www.w3.org/2000/01/rdf-schema#comment> "Edificaci\u00F3n o Lugar de inter\u00E9s por el uso que se le da o su relaci\u00F3n con la cultura. Aqu\u00ED se incluyen los Bienes de Inter\u00E9s Cultural (BIC)"@es .
+<http://geo.linkeddata.es/ontology/LugarDeInteres> <http://www.w3.org/2000/01/rdf-schema#label> "Lugar de inter\u00E9s"@es .
+<http://geo.linkeddata.es/ontology/LugarDeInteres> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7fdf <http://www.w3.org/2002/07/owl#intersectionOf> _:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7fde .
+_:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7fdf <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://geo.linkeddata.es/ontology/population-buildings.owl> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/2004/02/skos/core> .
+<http://geo.linkeddata.es/ontology/population-buildings.owl> <http://www.w3.org/2000/01/rdf-schema#comment> "Ontolog\u00EDa global de dominio sobre  poblaciones y construcciones"@es .
+<http://geo.linkeddata.es/ontology/population-buildings.owl> <http://purl.org/dc/elements/1.1/publisher> "Ontology Engineering Group"@en .
+<http://geo.linkeddata.es/ontology/population-buildings.owl> <http://www.w3.org/2000/01/rdf-schema#comment> ""@en .
+<http://geo.linkeddata.es/ontology/population-buildings.owl> <http://www.w3.org/2002/07/owl#versionInfo> "v0.2"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://geo.linkeddata.es/ontology/population-buildings.owl> <http://purl.org/dc/elements/1.1/title> "populationBuildingsOntology"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://geo.linkeddata.es/ontology/population-buildings.owl> <http://purl.org/dc/elements/1.1/creator> "Lissete Moscoso"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://geo.linkeddata.es/ontology/population-buildings.owl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+_:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7ff9 <http://www.w3.org/2002/07/owl#intersectionOf> _:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7ff8 .
+_:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7ff9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://geo.linkeddata.es/ontology/ZonaMonumental> <http://www.w3.org/2000/01/rdf-schema#comment> "Espacio perteneciente o relativo a un monumento."@es .
+<http://geo.linkeddata.es/ontology/ZonaMonumental> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://geo.linkeddata.es/ontology/ZonaDeUsoCaracteristico> .
+<http://geo.linkeddata.es/ontology/ZonaMonumental> <http://www.w3.org/2000/01/rdf-schema#label> "Zona monumental"@es .
+<http://geo.linkeddata.es/ontology/ZonaMonumental> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://geo.linkeddata.es/ontology/Albergue> <http://www.w3.org/2000/01/rdf-schema#comment> "Lugar que renta alojamiento, particularmente alentando las actividades al aire libre y el intercambio cultural entre j\u00F3venes de distintos pa\u00EDses."@es .
+<http://geo.linkeddata.es/ontology/Albergue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7feb .
+<http://geo.linkeddata.es/ontology/Albergue> <http://www.w3.org/2000/01/rdf-schema#label> "Albergue"@es .
+<http://geo.linkeddata.es/ontology/Albergue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7fe0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7fe0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://geo.linkeddata.es/ontology/LugarDeOcio> .
+<http://geo.linkeddata.es/ontology/Invernadero> <http://www.w3.org/2000/01/rdf-schema#comment> "Lugar preparado artificialmente para cultivar las plantas fuera de su ambiente y clima habituales."@es .
+<http://geo.linkeddata.es/ontology/Invernadero> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://geo.linkeddata.es/ontology/ZonaDeUsoCaracteristico> .
+<http://geo.linkeddata.es/ontology/Invernadero> <http://www.w3.org/2000/01/rdf-schema#label> "Invernadero"@es .
+<http://geo.linkeddata.es/ontology/Invernadero> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7ff3 <http://www.w3.org/2002/07/owl#hasValue> <http://geo.linkeddata.es/kos/population-buildings/estadoDeUso> .
+_:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7ff3 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7ff3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://geo.linkeddata.es/ontology/SitioHistorico> <http://www.w3.org/2000/01/rdf-schema#comment> "Es el lugar o paraje natural, vinculado a acontecimientos o recuerdos del pasado, a tradiciones populares, creaciones culturales o de la naturaleza, y a obras del hombre, que poseen valor hist\u00F3rico, etnol\u00F3gico, paleontol\u00F3gico o antropol\u00F3gico."@es .
+<http://geo.linkeddata.es/ontology/SitioHistorico> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://geo.linkeddata.es/ontology/LugarDeInteres> .
+<http://geo.linkeddata.es/ontology/SitioHistorico> <http://www.w3.org/2000/01/rdf-schema#label> "Sitio hist\u00F3rico"@es .
+<http://geo.linkeddata.es/ontology/SitioHistorico> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7fec <http://www.w3.org/2001/XMLSchema#length> "11"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7fd8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7fd7 .
+_:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7fd8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://geo.linkeddata.es/ontology/Alojamiento> .
+<http://geo.linkeddata.es/ontology/InstalacionDeportiva> <http://www.w3.org/2000/01/rdf-schema#comment> "Recinto o construcci\u00F3n provista de los medios necesarios para el aprendizaje, la pr\u00E1ctica y la competici\u00F3n de uno o m\u00E1s deportes. "@es .
+<http://geo.linkeddata.es/ontology/InstalacionDeportiva> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7fdf .
+<http://geo.linkeddata.es/ontology/InstalacionDeportiva> <http://www.w3.org/2000/01/rdf-schema#label> "Instalaci\u00F3n deportiva"@es .
+<http://geo.linkeddata.es/ontology/InstalacionDeportiva> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://geo.linkeddata.es/ontology/poblacion> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://geo.linkeddata.es/ontology/poblacion> <http://www.w3.org/2000/01/rdf-schema#domain> <http://geo.linkeddata.es/ontology/NucleoPoblacional> .
+<http://geo.linkeddata.es/ontology/poblacion> <http://www.w3.org/2000/01/rdf-schema#comment> "N\u00FAmero total de habitantes del n\u00FAcleo seg\u00FAn el nomencl\u00E1tor del INE para el a\u00F1o que aparezca en los metadatos."@es .
+<http://geo.linkeddata.es/ontology/poblacion> <http://www.w3.org/2000/01/rdf-schema#label> "poblacion"@es .
+<http://geo.linkeddata.es/ontology/poblacion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://geo.linkeddata.es/ontology/Mina> <http://www.w3.org/2000/01/rdf-schema#comment> "Criadero de minerales de \u00FAtil explotaci\u00F3n."@es .
+<http://geo.linkeddata.es/ontology/Mina> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://geo.linkeddata.es/ontology/ExplotacionMinera> .
+<http://geo.linkeddata.es/ontology/Mina> <http://www.w3.org/2000/01/rdf-schema#label> "Mina"@es .
+<http://geo.linkeddata.es/ontology/Mina> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://geo.linkeddata.es/ontology/Diseminado> <http://www.w3.org/2000/01/rdf-schema#comment> "Las edificaciones o viviendas de una entidad singular de poblaci\u00F3n que no pueden ser incluidas en el concepto de n\u00FAcleo de poblaci\u00F3n se consideran pertenecientes al diseminado, entendiendo as\u00ED por diseminado aquellas casas aisladas que no est\u00E1n recogidas como n\u00FAcleo de poblaci\u00F3n por el INE."@es .
+<http://geo.linkeddata.es/ontology/Diseminado> <http://purl.org/dc/terms/source> "Instituto nacional de estad\u00EDstica."@es .
+<http://geo.linkeddata.es/ontology/Diseminado> <http://www.w3.org/2002/07/owl#disjointWith> <http://geo.linkeddata.es/ontology/NucleoPoblacional> .
+<http://geo.linkeddata.es/ontology/Diseminado> <http://www.w3.org/2000/01/rdf-schema#label> "Diseminado"@es .
+<http://geo.linkeddata.es/ontology/Diseminado> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://geo.linkeddata.es/ontology/Muralla> <http://www.w3.org/2000/01/rdf-schema#comment> "Construcci\u00F3n realizada con fines defensivos."@es .
+<http://geo.linkeddata.es/ontology/Muralla> <http://www.w3.org/2000/01/rdf-schema#label> "Muralla"@es .
+<http://geo.linkeddata.es/ontology/Muralla> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7fe5 <http://www.w3.org/2002/07/owl#intersectionOf> _:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7fe4 .
+_:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7fe5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7fde <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7fdd .
+_:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7fde <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://geo.linkeddata.es/ontology/Alojamiento> .
+<http://geo.linkeddata.es/ontology/NucleoPoblacionalSuperficial> <http://www.w3.org/2000/01/rdf-schema#comment> "Son todos los n\u00FAcleos de poblaci\u00F3n de Espa\u00F1a salvo excepciones los de aquellas comunidades aut\u00F3nomas en las que la densidad de elementos impida su\nrepresentaci\u00F3n superficial a escala. Estas comunidades son Asturias, Galicia e Islas Canarias."@es .
+<http://geo.linkeddata.es/ontology/NucleoPoblacionalSuperficial> <http://purl.org/dc/terms/source> "Anexo A: Cat\u00E1logo de Objetos Geogr\u00E1ficos de BTN100."@es .
+<http://geo.linkeddata.es/ontology/NucleoPoblacionalSuperficial> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://geo.linkeddata.es/ontology/NucleoPoblacional> .
+<http://geo.linkeddata.es/ontology/NucleoPoblacionalSuperficial> <http://www.w3.org/2000/01/rdf-schema#label> "Nucleo poblacional superficial"@es .
+<http://geo.linkeddata.es/ontology/NucleoPoblacionalSuperficial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7ff8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7ff6 .
+_:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7ff8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://geo.linkeddata.es/ontology/EdificioReligioso> <http://www.w3.org/2000/01/rdf-schema#comment> "Templo destinado al culto religioso"@es .
+<http://geo.linkeddata.es/ontology/EdificioReligioso> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://geo.linkeddata.es/ontology/LugarDeInteres> .
+<http://geo.linkeddata.es/ontology/EdificioReligioso> <http://www.w3.org/2000/01/rdf-schema#label> "Edificio religioso"@es .
+<http://geo.linkeddata.es/ontology/EdificioReligioso> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://geo.linkeddata.es/ontology/DiseminadoSuperficial> <http://purl.org/dc/terms/source> "Anexo A: Cat\u00E1logo de Objetos Geogr\u00E1ficos de BTN100."@es .
+<http://geo.linkeddata.es/ontology/DiseminadoSuperficial> <http://www.w3.org/2000/01/rdf-schema#comment> "Agrupaci\u00F3n de edificaciones que se extienden por una superficie considerable con estructura similar a un n\u00FAcleo pero que no aparecen en el INE clasificado como tal. Es el caso de urbanizaciones, zonas residenciales u otras estructuras de poblaci\u00F3n similar."@es .
+<http://geo.linkeddata.es/ontology/DiseminadoSuperficial> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://geo.linkeddata.es/ontology/Diseminado> .
+<http://geo.linkeddata.es/ontology/DiseminadoSuperficial> <http://www.w3.org/2000/01/rdf-schema#label> "Diseminado superficial"@es .
+<http://geo.linkeddata.es/ontology/DiseminadoSuperficial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://geo.linkeddata.es/kos/populatuon-buildings/capital/municipio> <http://www.w3.org/2004/02/skos/core#inScheme> <http://geo.linkeddata.es/kos/populatuon-buildings/capital/tipoDeCapital> .
+<http://geo.linkeddata.es/kos/populatuon-buildings/capital/municipio> <http://www.w3.org/2004/02/skos/core#prefLabel> "capital de municipio"@es .
+<http://geo.linkeddata.es/kos/populatuon-buildings/capital/municipio> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://geo.linkeddata.es/kos/populatuon-buildings/capital/municipio> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://geo.linkeddata.es/kos/populatuon-buildings/capital/noCapital> <http://www.w3.org/2004/02/skos/core#inScheme> <http://geo.linkeddata.es/kos/populatuon-buildings/capital/tipoDeCapital> .
+<http://geo.linkeddata.es/kos/populatuon-buildings/capital/noCapital> <http://www.w3.org/2004/02/skos/core#prefLabel> "no es capital"@es .
+<http://geo.linkeddata.es/kos/populatuon-buildings/capital/noCapital> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://geo.linkeddata.es/kos/populatuon-buildings/capital/noCapital> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://geo.linkeddata.es/ontology/EdificioSingular> <http://www.w3.org/2000/01/rdf-schema#comment> "Comprende los edificios que deber\u00E1n ser conservados \u00EDntegramente por su car\u00E1cter singular y monumental, y por razones hist\u00F3rico-art\u00EDsticas, preservando todas sus caracter\u00EDsticas arquitect\u00F3nicas."@es .
+<http://geo.linkeddata.es/ontology/EdificioSingular> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://geo.linkeddata.es/ontology/LugarDeInteres> .
+<http://geo.linkeddata.es/ontology/EdificioSingular> <http://www.w3.org/2000/01/rdf-schema#label> "Edificio singular"@es .
+<http://geo.linkeddata.es/ontology/EdificioSingular> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://geo.linkeddata.es/kos/populatuon-buildings/capital/tipoDeCapital> <http://www.w3.org/2004/02/skos/core#prefLabel> "tipo de capital"@es .
+<http://geo.linkeddata.es/kos/populatuon-buildings/capital/tipoDeCapital> <http://www.w3.org/2000/01/rdf-schema#comment> "Especifica de qu\u00E9 administraci\u00F3n oficial es capital. Puede tomar los valores:\n* http://geo.linkeddata.es/kos/puntosDeInteres/tipoDeCapital/comunidadAutonoma\n* http://geo.linkeddata.es/kos/puntosDeInteres/tipoDeCapital/comunidadAutonomaNoDeProvincia\n* http://geo.linkeddata.es/kos/puntosDeInteres/tipoDeCapital/nacion\n* http://geo.linkeddata.es/kos/puntosDeInteres/tipoDeCapital/municipio\n* http://geo.linkeddata.es/kos/puntosDeInteres/tipoDeCapital/noCapital\n* http://geo.linkeddata.es/kos/puntosDeInteres/tipoDeCapital/provincia"@es .
+<http://geo.linkeddata.es/kos/populatuon-buildings/capital/tipoDeCapital> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://geo.linkeddata.es/kos/populatuon-buildings/capital/tipoDeCapital> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+_:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7ff2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7ff2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7ff3 .
+_:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7feb <http://www.w3.org/2002/07/owl#intersectionOf> _:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7fea .
+_:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7feb <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://geo.linkeddata.es/ontology/ZonaMilitar> <http://www.w3.org/2000/01/rdf-schema#comment> "Zona reservada para fines de la defensa nacional o de las bases ofensivas que en cada territorio se instalen."@es .
+<http://geo.linkeddata.es/ontology/ZonaMilitar> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://geo.linkeddata.es/ontology/ZonaDeUsoCaracteristico> .
+<http://geo.linkeddata.es/ontology/ZonaMilitar> <http://www.w3.org/2000/01/rdf-schema#label> "Zona militar"@es .
+<http://geo.linkeddata.es/ontology/ZonaMilitar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7fd7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7fd7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://geo.linkeddata.es/ontology/LugarDeOcio> .
+<http://geo.linkeddata.es/ontology/Alojamiento> <http://www.w3.org/2000/01/rdf-schema#comment> "Lugar donde una persona o un grupo de personas se aloja, se aposenta o acampa, o donde est\u00E1 algo."@es .
+<http://geo.linkeddata.es/ontology/Alojamiento> <http://www.w3.org/2000/01/rdf-schema#label> "Alojamiento"@es .
+<http://geo.linkeddata.es/ontology/Alojamiento> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://geo.linkeddata.es/kos/populatuon-buildings/capital/provincia> <http://www.w3.org/2004/02/skos/core#inScheme> <http://geo.linkeddata.es/kos/populatuon-buildings/capital/tipoDeCapital> .
+<http://geo.linkeddata.es/kos/populatuon-buildings/capital/provincia> <http://www.w3.org/2004/02/skos/core#prefLabel> "capital de provincia"@es .
+<http://geo.linkeddata.es/kos/populatuon-buildings/capital/provincia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://geo.linkeddata.es/kos/populatuon-buildings/capital/provincia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://geo.linkeddata.es/ontology/EstacionInvernal> <http://www.w3.org/2000/01/rdf-schema#comment> "\u00C1rea preparada para el disfrute de la nieve. Dispone de pistas de esqu\u00ED balizadas preparadas por m\u00E1quinas especiales as\u00ED como pistas de fondo, hoteles para el descanso de los usuarios, remontes para el transporte de los esquiadores a zonas altas y diferentes servicios que pueden ir desde zona para usar trineos hasta pistas de patinaje."@es .
+<http://geo.linkeddata.es/ontology/EstacionInvernal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7fe2 .
+<http://geo.linkeddata.es/ontology/EstacionInvernal> <http://www.w3.org/2000/01/rdf-schema#label> "Estaci\u00F3n invernal"@es .
+<http://geo.linkeddata.es/ontology/EstacionInvernal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://geo.linkeddata.es/ontology/ConjuntoHistoricoArtistico> <http://www.w3.org/2000/01/rdf-schema#comment> "Es la agrupaci\u00F3n de inmuebles que forman una unidad de asentamiento, continua o dispersa, condicionada por una estructura f\u00EDsica representativa de la evoluci\u00F3n de una comunidad humana por ser testimonio de su cultura o constituir un valor de uso y disfrute para la colectividad."@es .
+<http://geo.linkeddata.es/ontology/ConjuntoHistoricoArtistico> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://geo.linkeddata.es/ontology/LugarDeInteres> .
+<http://geo.linkeddata.es/ontology/ConjuntoHistoricoArtistico> <http://www.w3.org/2000/01/rdf-schema#label> "Conjunto hist\u00F3rico art\u00EDstico"@es .
+<http://geo.linkeddata.es/ontology/ConjuntoHistoricoArtistico> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://geo.linkeddata.es/kos/populatuon-buildings/capital/nacion> <http://www.w3.org/2004/02/skos/core#inScheme> <http://geo.linkeddata.es/kos/populatuon-buildings/capital/tipoDeCapital> .
+<http://geo.linkeddata.es/kos/populatuon-buildings/capital/nacion> <http://www.w3.org/2004/02/skos/core#prefLabel> "capital de naci\u00F3n"@es .
+<http://geo.linkeddata.es/kos/populatuon-buildings/capital/nacion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://geo.linkeddata.es/kos/populatuon-buildings/capital/nacion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7fe4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7fe3 .
+_:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7fe4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://geo.linkeddata.es/ontology/Alojamiento> .
+_:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7fdd <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7fdd <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://geo.linkeddata.es/ontology/LugarDeOcio> .
+<http://geo.linkeddata.es/ontology/NucleoPoblacional> <http://www.w3.org/2000/01/rdf-schema#comment> "Se consideran n\u00FAcleos de poblaci\u00F3n (superficiales y puntuales) de BTN100 aquellas entidades que el INE considera n\u00FAcleos de poblaci\u00F3n en sus datos oficiales."@es .
+<http://geo.linkeddata.es/ontology/NucleoPoblacional> <http://www.w3.org/2000/01/rdf-schema#comment> "Se considera N\u00FAcleo de poblaci\u00F3n a un conjunto de al menos diez edificaciones, que est\u00E1n formando calles, plazas y otras v\u00EDas urbanas. Por excepci\u00F3n el n\u00FAmero de edificaciones podr\u00E1 ser inferior a 10, siempre que la poblaci\u00F3n de derecho supere los 50 habitantes."@es .
+<http://geo.linkeddata.es/ontology/NucleoPoblacional> <http://purl.org/dc/terms/source> "Anexo A: Cat\u00E1logo de Objetos Geogr\u00E1ficos de BTN100."@es .
+<http://geo.linkeddata.es/ontology/NucleoPoblacional> <http://www.w3.org/2002/07/owl#equivalentClass> _:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7fdc .
+<http://geo.linkeddata.es/ontology/NucleoPoblacional> <http://www.w3.org/2000/01/rdf-schema#label> "Nucleo poblacional"@es .
+<http://geo.linkeddata.es/ontology/NucleoPoblacional> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7ff7 <http://www.w3.org/2002/07/owl#hasValue> <http://geo.linkeddata.es/kos/populatuon-buildings/capital/tipoDeCapital> .
+_:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7ff7 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7ff7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://geo.linkeddata.es/ontology/Cementerio> <http://www.w3.org/2000/01/rdf-schema#comment> "Lugar, generalmente cercado, destinado a enterrar los restos mortales o cad\u00E1veres de los difuntos. "@es .
+<http://geo.linkeddata.es/ontology/Cementerio> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://geo.linkeddata.es/ontology/ZonaDeUsoCaracteristico> .
+<http://geo.linkeddata.es/ontology/Cementerio> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://geo.linkeddata.es/ontology/LugarDeInteres> .
+<http://geo.linkeddata.es/ontology/Cementerio> <http://www.w3.org/2000/01/rdf-schema#label> "Cementerio"@es .
+<http://geo.linkeddata.es/ontology/Cementerio> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://geo.linkeddata.es/kos/population-buildings/estadoDeUso/abandonado> <http://www.w3.org/2004/02/skos/core#inScheme> <http://geo.linkeddata.es/kos/population-buildings/estadoDeUso> .
+<http://geo.linkeddata.es/kos/population-buildings/estadoDeUso/abandonado> <http://www.w3.org/2004/02/skos/core#prefLabel> "abandonado"@es .
+<http://geo.linkeddata.es/kos/population-buildings/estadoDeUso/abandonado> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://geo.linkeddata.es/kos/population-buildings/estadoDeUso/abandonado> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7ff1 <http://www.w3.org/2002/07/owl#unionOf> _:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7ff0 .
+_:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7ff1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7fea <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7fe9 .
+_:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7fea <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://geo.linkeddata.es/ontology/Alojamiento> .
+_:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7fd6 <http://www.w3.org/2002/07/owl#distinctMembers> _:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7fd5 .
+_:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7fd6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDifferent> .
+<http://geo.linkeddata.es/ontology/ZonaPortuaria> <http://www.w3.org/2000/01/rdf-schema#comment> "Espacio destinado y orientado especialmente al flujo de mercanc\u00EDas, personas, informaci\u00F3n o a dar abrigo y seguridad a aquellas embarcaciones o naves encargadas de llevar a cabo dichas tareas."@es .
+<http://geo.linkeddata.es/ontology/ZonaPortuaria> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://geo.linkeddata.es/ontology/ZonaDeUsoCaracteristico> .
+<http://geo.linkeddata.es/ontology/ZonaPortuaria> <http://www.w3.org/2000/01/rdf-schema#label> "Zona portuaria"@es .
+<http://geo.linkeddata.es/ontology/ZonaPortuaria> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7fe9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:AX2dX233573b6X3aX15709ef2b9fX3aXX2dX7fe9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://geo.linkeddata.es/ontology/LugarDeOcio> .
+<http://geo.linkeddata.es/ontology/NucleoPoblacionalPuntual> <http://www.w3.org/2000/01/rdf-schema#comment> "Pertenecer\u00E1n a esta clase de entidad puntual s\u00F3lo los n\u00FAcleos de aquellas comunidades aut\u00F3nomas en las que la densidad de elementos impida su representaci\u00F3n superficial a escala. Estas comunidades son Asturias, Galicia e Islas Canarias."@es .
+<http://geo.linkeddata.es/ontology/NucleoPoblacionalPuntual> <http://purl.org/dc/terms/source> "Anexo A: Cat\u00E1logo de Objetos Geogr\u00E1ficos de BTN100."@es .
+<http://geo.linkeddata.es/ontology/NucleoPoblacionalPuntual> <http://www.w3.org/2002/07/owl#disjointWith> <http://geo.linkeddata.es/ontology/NucleoPoblacionalSuperficial> .
+<http://geo.linkeddata.es/ontology/NucleoPoblacionalPuntual> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://geo.linkeddata.es/ontology/NucleoPoblacional> .
+<http://geo.linkeddata.es/ontology/NucleoPoblacionalPuntual> <http://www.w3.org/2000/01/rdf-schema#label> "Nucleo poblacional puntual"@es .
+<http://geo.linkeddata.es/ontology/NucleoPoblacionalPuntual> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://geo.linkeddata.es/ontology/ZonaAeroportuaria> <http://www.w3.org/2000/01/rdf-schema#comment> "Estaci\u00F3n o terminal situada en un terreno llano que cuenta con pistas, instalaciones y servicios destinados al tr\u00E1fico de aviones."@es .
+<http://geo.linkeddata.es/ontology/ZonaAeroportuaria> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://geo.linkeddata.es/ontology/ZonaDeUsoCaracteristico> .
+<http://geo.linkeddata.es/ontology/ZonaAeroportuaria> <http://www.w3.org/2000/01/rdf-schema#label> "Zona aeroportuaria"@es .
+<http://geo.linkeddata.es/ontology/ZonaAeroportuaria> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://geo.linkeddata.es/ontology/LugarDeOcio> <http://www.w3.org/2000/01/rdf-schema#comment> "Lugar donde se puede realizar una actividad de ocio."@es .
+<http://geo.linkeddata.es/ontology/LugarDeOcio> <http://www.w3.org/2000/01/rdf-schema#label> "Lugar de ocio"@es .
+<http://geo.linkeddata.es/ontology/LugarDeOcio> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .

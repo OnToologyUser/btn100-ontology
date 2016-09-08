@@ -1,0 +1,40 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "ontology:LIC" "ontology:CiudadAutonoma" "ontology:ParqueNacional" "ontology:ComunidadAutonoma" "ontology:ComunidadJurisdiccional" "geopolitical:territory" "ontology:Pais" "ontology:ZonaProtegida" "ontology:Municipio" "ontology:Provincia" "ontology:Capital" "ontology:ParqueNatural" "ontology:Nacion" "foaf:Organization" "time:DurationDescription" "wgs84_pos:SpatialThing" "scovo:Dimension" "http://geo.linkeddata.es/ontology/Organizaci%C3%B3n" "http://geo.linkeddata.es/ontology/A%C3%B1o" "geopolitical:area" "time:DateTimeInterval" "time:January" "time:ProperInterval" "time:Interval" "time:TemporalEntity" "time:Year" "time:DateTimeDescription" "time:Instant" "geopolitical:disputed" "geopolitical:special_group" "geopolitical:group" "geopolitical:geographical_region" "geopolitical:other" "geopolitical:economic_region" "geopolitical:self_governing" "geopolitical:non_self_governing" "geopolitical:organization" ; /*classes style*/
+	"ontology:Provincia" -> "geopolitical:territory" [ label = "rdfs:subClassOf" ];
+	"ontology:ParqueNatural" -> "ontology:ZonaProtegida" [ label = "rdfs:subClassOf" ];
+	"ontology:Capital" -> "geopolitical:territory" [ label = "rdfs:subClassOf" ];
+	"geopolitical:geographical_region" -> "geopolitical:group" [ label = "rdfs:subClassOf" ];
+	"ontology:ComunidadJurisdiccional" -> "geopolitical:territory" [ label = "rdfs:subClassOf" ];
+	"time:DateTimeInterval" -> "time:ProperInterval" [ label = "rdfs:subClassOf" ];
+	"geopolitical:area" -> "scovo:Dimension" [ label = "rdfs:subClassOf" ];
+	"geopolitical:area" -> "owl:Thing" [ label = "rdfs:subClassOf" ];
+	"geopolitical:special_group" -> "geopolitical:group" [ label = "rdfs:subClassOf" ];
+	"geopolitical:group" -> "geopolitical:area" [ label = "rdfs:subClassOf" ];
+	"ontology:Pais" -> "geopolitical:territory" [ label = "rdfs:subClassOf" ];
+	"time:Year" -> "time:DurationDescription" [ label = "rdfs:subClassOf" ];
+	"time:Interval" -> "time:TemporalEntity" [ label = "rdfs:subClassOf" ];
+	"http://geo.linkeddata.es/ontology/A%C3%B1o" -> "time:DurationDescription" [ label = "rdfs:subClassOf" ];
+	"ontology:Municipio" -> "geopolitical:territory" [ label = "rdfs:subClassOf" ];
+	"geopolitical:organization" -> "geopolitical:group" [ label = "rdfs:subClassOf" ];
+	"wgs84_pos:Point" -> "wgs84_pos:SpatialThing" [ label = "rdfs:subClassOf" ];
+	"ontology:Nacion" -> "geopolitical:territory" [ label = "rdfs:subClassOf" ];
+	"time:DurationDescription" -> "scovo:Dimension" [ label = "rdfs:subClassOf" ];
+	"geopolitical:territory" -> "geopolitical:area" [ label = "rdfs:subClassOf" ];
+	"time:January" -> "time:DateTimeDescription" [ label = "rdfs:subClassOf" ];
+	"ontology:LIC" -> "ontology:ZonaProtegida" [ label = "rdfs:subClassOf" ];
+	"time:ProperInterval" -> "time:Interval" [ label = "rdfs:subClassOf" ];
+	"geopolitical:non_self_governing" -> "geopolitical:territory" [ label = "rdfs:subClassOf" ];
+	"time:Instant" -> "time:TemporalEntity" [ label = "rdfs:subClassOf" ];
+	"ontology:CiudadAutonoma" -> "geopolitical:territory" [ label = "rdfs:subClassOf" ];
+	"geopolitical:self_governing" -> "geopolitical:territory" [ label = "rdfs:subClassOf" ];
+	"http://geo.linkeddata.es/ontology/Organizaci%C3%B3n" -> "foaf:Organization" [ label = "rdfs:subClassOf" ];
+	"ontology:ComunidadAutonoma" -> "geopolitical:territory" [ label = "rdfs:subClassOf" ];
+	"geopolitical:economic_region" -> "geopolitical:group" [ label = "rdfs:subClassOf" ];
+	"ontology:ParqueNacional" -> "ontology:ZonaProtegida" [ label = "rdfs:subClassOf" ];
+	"ontology:ZonaProtegida" -> "geopolitical:special_group" [ label = "rdfs:subClassOf" ];
+	"geopolitical:disputed" -> "geopolitical:territory" [ label = "rdfs:subClassOf" ];
+	"geopolitical:other" -> "geopolitical:territory" [ label = "rdfs:subClassOf" ];
+
+}

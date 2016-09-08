@@ -1,0 +1,50 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "ontology:Apartadero" "-39c9edb1:1570a49960a:-7f60" "ontology:Teleferico" "ontology:Telesilla" "-39c9edb1:1570a49960a:-7f47" "ontology:FerrocarrilDeAltaVelocidad" "ontology:Apeadero" "ontology:Autovia" "-39c9edb1:1570a49960a:-7f6d" "ontology:EnclaveFerroviario" "ontology:TransporteSuspendido" "ontology:ItinerarionDeViaVerde" "ontology:Itinerario" "ontology:Ferrocarril" "ontology:CarreteraAutonomica" "-39c9edb1:1570a49960a:-7f51" "ontology:FerrocarrilConvencional" "ontology:ItinerarioDeCaminoDeSantiago" "ontology:Cargadero" "-39c9edb1:1570a49960a:-7f7a" "ontology:Enlace" "ontology:CarreteraNacional" "ontology:Telesqui" "ontology:Suministro" "-39c9edb1:1570a49960a:-7f4c" "ontology:Carretera" "ontology:EstacionDeFerrocarril" "ontology:Aerodromo" "owl:Thing" "ontology:Autopista" "ontology:Aeropuerto" "skos:OrderedCollection" "skos:Collection" "foaf:Organization" "time:DurationDescription" "wgs84_pos:SpatialThing" "scovo:Dimension" "http://geo.linkeddata.es/ontology/Organizaci%C3%B3n" "http://geo.linkeddata.es/ontology/A%C3%B1o" "geopolitical:territory" "geopolitical:area" "time:DateTimeInterval" "time:January" "time:ProperInterval" "time:Interval" "time:TemporalEntity" "time:Year" "time:DateTimeDescription" "time:Instant" "geopolitical:disputed" "geopolitical:special_group" "geopolitical:group" "geopolitical:geographical_region" "geopolitical:other" "geopolitical:economic_region" "geopolitical:self_governing" "geopolitical:non_self_governing" "geopolitical:organization" ; /*classes style*/
+	"geopolitical:special_group" -> "geopolitical:group" [ label = "rdfs:subClassOf" ];
+	"ontology:ItinerarioDeCaminoDeSantiago" -> "ontology:Itinerario" [ label = "rdfs:subClassOf" ];
+	"time:Instant" -> "time:TemporalEntity" [ label = "rdfs:subClassOf" ];
+	"ontology:EstacionDeFerrocarril" -> "ontology:EnclaveFerroviario" [ label = "rdfs:subClassOf" ];
+	"ontology:Autovia" -> "-39c9edb1:1570a49960a:-7f6d" [ label = "rdfs:subClassOf" ];
+	"geopolitical:area" -> "scovo:Dimension" [ label = "rdfs:subClassOf" ];
+	"geopolitical:area" -> "owl:Thing" [ label = "rdfs:subClassOf" ];
+	"ontology:Apartadero" -> "ontology:EnclaveFerroviario" [ label = "rdfs:subClassOf" ];
+	"geopolitical:organization" -> "geopolitical:group" [ label = "rdfs:subClassOf" ];
+	"time:ProperInterval" -> "time:Interval" [ label = "rdfs:subClassOf" ];
+	"ontology:FerrocarrilConvencional" -> "ontology:Ferrocarril" [ label = "rdfs:subClassOf" ];
+	"wgs84_pos:Point" -> "wgs84_pos:SpatialThing" [ label = "rdfs:subClassOf" ];
+	"geopolitical:group" -> "geopolitical:area" [ label = "rdfs:subClassOf" ];
+	"geopolitical:disputed" -> "geopolitical:territory" [ label = "rdfs:subClassOf" ];
+	"http://geo.linkeddata.es/ontology/A%C3%B1o" -> "time:DurationDescription" [ label = "rdfs:subClassOf" ];
+	"geopolitical:other" -> "geopolitical:territory" [ label = "rdfs:subClassOf" ];
+	"ontology:Enlace" -> "-39c9edb1:1570a49960a:-7f4c" [ label = "rdfs:subClassOf" ];
+	"ontology:Autopista" -> "-39c9edb1:1570a49960a:-7f7a" [ label = "rdfs:subClassOf" ];
+	"geopolitical:non_self_governing" -> "geopolitical:territory" [ label = "rdfs:subClassOf" ];
+	"geopolitical:geographical_region" -> "geopolitical:group" [ label = "rdfs:subClassOf" ];
+	"ontology:Teleferico" -> "ontology:TransporteSuspendido" [ label = "rdfs:subClassOf" ];
+	"ontology:Telesqui" -> "ontology:TransporteSuspendido" [ label = "rdfs:subClassOf" ];
+	"ontology:Apeadero" -> "ontology:EnclaveFerroviario" [ label = "rdfs:subClassOf" ];
+	"skos:OrderedCollection" -> "skos:Collection" [ label = "rdfs:subClassOf" ];
+	"geopolitical:self_governing" -> "geopolitical:territory" [ label = "rdfs:subClassOf" ];
+	"ontology:Aerodromo" -> "owl:Thing" [ label = "rdfs:subClassOf" ];
+	"geopolitical:territory" -> "geopolitical:area" [ label = "rdfs:subClassOf" ];
+	"ontology:CarreteraAutonomica" -> "-39c9edb1:1570a49960a:-7f60" [ label = "rdfs:subClassOf" ];
+	"ontology:CarreteraAutonomica" -> "ontology:Carretera" [ label = "rdfs:subClassOf" ];
+	"ontology:FerrocarrilDeAltaVelocidad" -> "-39c9edb1:1570a49960a:-7f47" [ label = "rdfs:subClassOf" ];
+	"http://geo.linkeddata.es/ontology/Organizaci%C3%B3n" -> "foaf:Organization" [ label = "rdfs:subClassOf" ];
+	"ontology:Telesilla" -> "ontology:TransporteSuspendido" [ label = "rdfs:subClassOf" ];
+	"ontology:ItinerarionDeViaVerde" -> "ontology:Itinerario" [ label = "rdfs:subClassOf" ];
+	"ontology:Aeropuerto" -> "owl:Thing" [ label = "rdfs:subClassOf" ];
+	"time:DateTimeInterval" -> "time:ProperInterval" [ label = "rdfs:subClassOf" ];
+	"ontology:Cargadero" -> "ontology:EnclaveFerroviario" [ label = "rdfs:subClassOf" ];
+	"ontology:Suministro" -> "ontology:EnclaveFerroviario" [ label = "rdfs:subClassOf" ];
+	"time:Interval" -> "time:TemporalEntity" [ label = "rdfs:subClassOf" ];
+	"time:January" -> "time:DateTimeDescription" [ label = "rdfs:subClassOf" ];
+	"ontology:CarreteraNacional" -> "-39c9edb1:1570a49960a:-7f51" [ label = "rdfs:subClassOf" ];
+	"ontology:CarreteraNacional" -> "ontology:Carretera" [ label = "rdfs:subClassOf" ];
+	"time:Year" -> "time:DurationDescription" [ label = "rdfs:subClassOf" ];
+	"time:DurationDescription" -> "scovo:Dimension" [ label = "rdfs:subClassOf" ];
+	"geopolitical:economic_region" -> "geopolitical:group" [ label = "rdfs:subClassOf" ];
+
+}

@@ -1,0 +1,189 @@
+{
+  "@context" : {
+    "Calle" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Calle"
+    },
+    "tipoDeTramo" : {
+      "@id" : "http://geo.linkeddata.es/ontology/tipoDeTramo",
+      "@type" : "@id"
+    },
+    "categoriaVial" : {
+      "@id" : "http://geo.linkeddata.es/ontology/categoriaVial",
+      "@type" : "@id"
+    },
+    "EstacionDeFerrocarril" : {
+      "@id" : "http://geo.linkeddata.es/ontology/EstacionDeFerrocarril"
+    },
+    "Aeropuerto" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Aeropuerto"
+    },
+    "ItinerarioDeCaminoDeSantiago" : {
+      "@id" : "http://geo.linkeddata.es/ontology/ItinerarioDeCaminoDeSantiago"
+    },
+    "competenciaDeVia" : {
+      "@id" : "http://geo.linkeddata.es/ontology/competenciaDeVia",
+      "@type" : "@id"
+    },
+    "Autovia" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Autovia"
+    },
+    "TransporteSuspendido" : {
+      "@id" : "http://geo.linkeddata.es/ontology/TransporteSuspendido"
+    },
+    "situacionDeVia" : {
+      "@id" : "http://geo.linkeddata.es/ontology/situacionDeVia",
+      "@type" : "@id"
+    },
+    "unloCode" : {
+      "@id" : "http://geo.linkeddata.es/ontology/unloCode"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "Concept" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "codigoDeVia" : {
+      "@id" : "http://geo.linkeddata.es/ontology/codigoDeVia"
+    },
+    "FerrocarrilDeAltaVelocidad" : {
+      "@id" : "http://geo.linkeddata.es/ontology/FerrocarrilDeAltaVelocidad"
+    },
+    "Enlace" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Enlace"
+    },
+    "altitud" : {
+      "@id" : "http://geo.linkeddata.es/ontology/altitud",
+      "@type" : "http://www.w3.org/2001/XMLSchema#int"
+    },
+    "Cargadero" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Cargadero"
+    },
+    "competenciaPortuaria" : {
+      "@id" : "http://geo.linkeddata.es/ontology/competenciaPortuaria",
+      "@type" : "@id"
+    },
+    "electrificacion" : {
+      "@id" : "http://geo.linkeddata.es/kos/transports/electrificacion",
+      "@type" : "@id"
+    },
+    "Aerodromo" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Aerodromo"
+    },
+    "tipoDeTrafico" : {
+      "@id" : "http://geo.linkeddata.es/ontology/tipoDeTrafico",
+      "@type" : "@id"
+    },
+    "codigoDeEstacion" : {
+      "@id" : "http://geo.linkeddata.es/ontology/codigoDeEstacion"
+    },
+    "Autopista" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Autopista"
+    },
+    "CarreteraNacional" : {
+      "@id" : "http://geo.linkeddata.es/ontology/CarreteraNacional"
+    },
+    "estadoDeUso" : {
+      "@id" : "http://geo.linkeddata.es/ontology/estadoDeUso",
+      "@type" : "@id"
+    },
+    "Ferrocarril" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Ferrocarril"
+    },
+    "Puerto" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Puerto"
+    },
+    "CarreteraAutonomica" : {
+      "@id" : "http://geo.linkeddata.es/ontology/CarreteraAutonomica"
+    },
+    "numeroDeVias" : {
+      "@id" : "http://geo.linkeddata.es/ontology/numeroDeVias",
+      "@type" : "@id"
+    },
+    "competenciaAeroportuaria" : {
+      "@id" : "http://geo.linkeddata.es/ontology/competenciaAeroportuaria",
+      "@type" : "@id"
+    },
+    "anchoDeVia" : {
+      "@id" : "http://geo.linkeddata.es/ontology/anchoDeVia",
+      "@type" : "@id"
+    },
+    "iataCode" : {
+      "@id" : "http://geo.linkeddata.es/ontology/iataCode"
+    },
+    "ConceptScheme" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme"
+    },
+    "Itinerario" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Itinerario"
+    },
+    "Apartadero" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Apartadero"
+    },
+    "source" : {
+      "@id" : "http://purl.org/dc/terms/source"
+    },
+    "Telesilla" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Telesilla"
+    },
+    "tipoDeItinerario" : {
+      "@id" : "http://geo.linkeddata.es/ontology/tipoDeItinerario",
+      "@type" : "@id"
+    },
+    "EnclaveFerroviario" : {
+      "@id" : "http://geo.linkeddata.es/ontology/EnclaveFerroviario"
+    },
+    "Teleferico" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Teleferico"
+    },
+    "acceso" : {
+      "@id" : "http://geo.linkeddata.es/acceso",
+      "@type" : "@id"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "Apeadero" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Apeadero"
+    },
+    "PasoANivel" : {
+      "@id" : "http://geo.linkeddata.es/ontology/PasoANivel"
+    },
+    "icaoCode" : {
+      "@id" : "http://geo.linkeddata.es/ontology/icaoCode"
+    },
+    "FerrocarrilConvencional" : {
+      "@id" : "http://geo.linkeddata.es/ontology/FerrocarrilConvencional"
+    },
+    "Telesqui" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Telesqui"
+    },
+    "Helipuerto" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Helipuerto"
+    },
+    "prefLabel" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#prefLabel"
+    },
+    "Carretera" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Carretera"
+    },
+    "inScheme" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#inScheme",
+      "@type" : "@id"
+    },
+    "calzada" : {
+      "@id" : "http://geo.linkeddata.es/ontology/calzada",
+      "@type" : "@id"
+    },
+    "rutaTenT" : {
+      "@id" : "http://geo.linkeddata.es/ontology/rutaTenT",
+      "@type" : "@id"
+    },
+    "ItinerarionDeViaVerde" : {
+      "@id" : "http://geo.linkeddata.es/ontology/ItinerarionDeViaVerde"
+    },
+    "Suministro" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Suministro"
+    }
+  }
+}

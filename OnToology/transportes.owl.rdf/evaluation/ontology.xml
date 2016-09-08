@@ -1,0 +1,114 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns="http://geo.linkeddata.es/ontology/transportes.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:ontology="http://geo.linkeddata.es/ontology/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" > 
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Carretera">
+    <rdfs:comment xml:lang="es">Camino público, ancho y espacioso, pavimentado y dispuesto para el tránsito de vehículos.</rdfs:comment>
+    <rdfs:label xml:lang="es">Carretera</rdfs:label>
+    <rdfs:label xml:lang="en">Road</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Faro">
+    <rdfs:comment xml:lang="es">Torre alta en las costas, con luz en su parte superior, para que durante la noche sirva de señal a los navegantes.</rdfs:comment>
+    <rdfs:label xml:lang="es">Faro</rdfs:label>
+    <rdfs:label xml:lang="en">Lighthouse</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Aeroclub">
+    <rdfs:comment xml:lang="es">Sociedad recreativa interesada por el deporte aéreo.</rdfs:comment>
+    <rdfs:label xml:lang="es">Aeroclub</rdfs:label>
+    <rdfs:label xml:lang="en">Aeroclub</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/EstacionDeAutobuses">
+    <rdfs:label xml:lang="es">Estación de autobuses </rdfs:label>
+    <rdfs:label xml:lang="en">Bus station</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Travesia">
+    <rdfs:comment xml:lang="es">Sitio o terreno por donde se atraviesa.</rdfs:comment>
+    <rdfs:label xml:lang="es">Travesía</rdfs:label>
+    <rdfs:label xml:lang="en">Passage</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Sendero">
+    <rdfs:comment xml:lang="es">Camino más estrecho que la vereda, abierto principalmente por el tránsito de peatones y del ganado menor.</rdfs:comment>
+    <rdfs:label xml:lang="es">Sendero</rdfs:label>
+    <rdfs:label xml:lang="en">Path</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/transportes.owl">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/EstacionDeFerrocarril">
+    <rdfs:label xml:lang="es">Estación de ferrocarril</rdfs:label>
+    <rdfs:label xml:lang="en">Train station</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Glorieta">
+    <rdfs:comment xml:lang="es">Plaza donde desembocan por lo común varias calles o alamedas.</rdfs:comment>
+    <rdfs:label xml:lang="es">Glorieta</rdfs:label>
+    <rdfs:label xml:lang="en">Roundabout</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Aerodromo">
+    <rdfs:comment xml:lang="es">Terreno llano provisto de pistas y demás instalaciones necesarias para el despegue y aterrizaje de aviones.</rdfs:comment>
+    <rdfs:label xml:lang="es">Aeródromo</rdfs:label>
+    <rdfs:label xml:lang="en">Aerodrome</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/BaseAerea">
+    <rdfs:comment xml:lang="es">Aeropuerto militar donde las fuerzas aéreas, con el apoyo de instalaciones logísticas adecuadas, se preparan para el vuelo y el combate.</rdfs:comment>
+    <rdfs:label xml:lang="es">Base aérea</rdfs:label>
+    <rdfs:label xml:lang="en">Airbase</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/CintaTransportadora">
+    <rdfs:comment xml:lang="es">Dispositivo mecánico formado por una banda móvil que traslada mercancías, equipajes, personas, etc.</rdfs:comment>
+    <rdfs:label xml:lang="es">Cinta transportadora</rdfs:label>
+    <rdfs:label xml:lang="en">Conveyor belt</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Ruta">
+    <rdfs:label xml:lang="es">Ruta</rdfs:label>
+    <rdfs:label xml:lang="es">Camino o dirección que se toma para un propósito.</rdfs:label>
+    <rdfs:label xml:lang="en">Route</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Pista">
+    <rdfs:comment xml:lang="es">Vía de comunicación dedicada al tráfico rodado sin recubrimiento asfáltico.</rdfs:comment>
+    <rdfs:label xml:lang="es">Pista</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Aeropuerto">
+    <rdfs:comment xml:lang="es">Terreno llano provisto de un conjunto de pistas, instalaciones y servicios destinados al tráfico regular de aviones.</rdfs:comment>
+    <rdfs:label xml:lang="es">Aeropuerto</rdfs:label>
+    <rdfs:label xml:lang="en">Airport</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Autopista">
+    <rdfs:comment xml:lang="es">Carretera con calzadas separadas para los dos sentidos de la circulación, cada una de ellas con dos o más carriles, sin cruces a nivel.</rdfs:comment>
+    <rdfs:label xml:lang="es">Autopista</rdfs:label>
+    <rdfs:label xml:lang="en">Highway</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Puerto">
+    <rdfs:comment xml:lang="es">Lugar en la costa o en las orillas de un río que por sus características, naturales o artificiales, sirve para que las embarcaciones realicen operaciones de carga y descarga, embarque y desembarco, etc.</rdfs:comment>
+    <rdfs:label xml:lang="es">Puerto</rdfs:label>
+    <rdfs:label xml:lang="en">Port</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Camino">
+    <rdfs:comment xml:lang="es">Vía que se construye para transitar.</rdfs:comment>
+    <rdfs:label xml:lang="es">Camino</rdfs:label>
+    <rdfs:label xml:lang="en">Way</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+</rdf:RDF>

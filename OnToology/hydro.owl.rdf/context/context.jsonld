@@ -1,0 +1,956 @@
+{
+  "@context" : {
+    "puede_fluir_como" : {
+      "@id" : "http://geo.linkeddata.es/ontology/puede_fluir_como",
+      "@type" : "@id"
+    },
+    "distribuye" : {
+      "@id" : "http://geo.linkeddata.es/ontology/distribuye",
+      "@type" : "@id"
+    },
+    "es_alimentada_por" : {
+      "@id" : "http://geo.linkeddata.es/ontology/es_alimentada_por",
+      "@type" : "@id"
+    },
+    "diametro" : {
+      "@id" : "http://geo.linkeddata.es/ontology/diametro",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "Terma" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Terma"
+    },
+    "Humedal" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Humedal"
+    },
+    "Shuga" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Shuga"
+    },
+    "estaEn" : {
+      "@id" : "http://geo.linkeddata.es/ontology/estaEn",
+      "@type" : "@id"
+    },
+    "recarga_natural" : {
+      "@id" : "http://geo.linkeddata.es/ontology/recarga_natural",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Rio" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Rio"
+    },
+    "sometido_a_descarga_por" : {
+      "@id" : "http://geo.linkeddata.es/ontology/sometido_a_descarga_por",
+      "@type" : "@id"
+    },
+    "Albufera" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Albufera"
+    },
+    "origen_formacion" : {
+      "@id" : "http://geo.linkeddata.es/ontology/origen_formacion"
+    },
+    "AguasSuperficiales" : {
+      "@id" : "http://geo.linkeddata.es/ontology/AguasSuperficiales"
+    },
+    "descarga_en" : {
+      "@id" : "http://geo.linkeddata.es/ontology/descarga_en",
+      "@type" : "@id"
+    },
+    "Surgencia" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Surgencia"
+    },
+    "idioma" : {
+      "@id" : "http://geo.linkeddata.es/ontology/idioma"
+    },
+    "Nava" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Nava"
+    },
+    "tipologia_de_cauce" : {
+      "@id" : "http://geo.linkeddata.es/ontology/tipologia_de_cauce"
+    },
+    "tamanyo" : {
+      "@id" : "http://geo.linkeddata.es/ontology/tamanyo",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "evacua_de" : {
+      "@id" : "http://geo.linkeddata.es/ontology/evacua_de",
+      "@type" : "@id"
+    },
+    "es_originado_por" : {
+      "@id" : "http://geo.linkeddata.es/ontology/es_originado_por",
+      "@type" : "@id"
+    },
+    "Ojo" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Ojo"
+    },
+    "versionInfo" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
+    },
+    "categoria" : {
+      "@id" : "http://geo.linkeddata.es/ontology/categoria"
+    },
+    "tasa_de_recarga" : {
+      "@id" : "http://geo.linkeddata.es/ontology/tasa_de_recarga",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "grado_de_contaminacion" : {
+      "@id" : "http://geo.linkeddata.es/ontology/grado_de_contaminacion",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "cota" : {
+      "@id" : "http://geo.linkeddata.es/ontology/cota",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "Poza" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Poza"
+    },
+    "Riachuelo" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Riachuelo"
+    },
+    "es_transvasada" : {
+      "@id" : "http://geo.linkeddata.es/ontology/es_transvasada",
+      "@type" : "@id"
+    },
+    "Regajo" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Regajo"
+    },
+    "Recinto" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Recinto"
+    },
+    "Riacho" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Riacho"
+    },
+    "Deposito" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Deposito"
+    },
+    "Lago" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Lago"
+    },
+    "Chortal" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Chortal"
+    },
+    "Gotera" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Gotera"
+    },
+    "AguasMarinas" : {
+      "@id" : "http://geo.linkeddata.es/ontology/AguasMarinas"
+    },
+    "Fuente" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Fuente"
+    },
+    "inunda" : {
+      "@id" : "http://geo.linkeddata.es/ontology/inunda",
+      "@type" : "@id"
+    },
+    "afloramiento" : {
+      "@id" : "http://geo.linkeddata.es/ontology/afloramiento",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "Sumidero" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Sumidero"
+    },
+    "FuenteArtesana" : {
+      "@id" : "http://geo.linkeddata.es/ontology/FuenteArtesana"
+    },
+    "Brazo" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Brazo"
+    },
+    "Marjal" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Marjal"
+    },
+    "Rambla" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Rambla"
+    },
+    "Thing" : {
+      "@id" : "http://www.w3.org/2002/07/owl#Thing"
+    },
+    "FenomenoHidrografico" : {
+      "@id" : "http://geo.linkeddata.es/ontology/FenomenoHidrografico"
+    },
+    "AguasDulces" : {
+      "@id" : "http://geo.linkeddata.es/ontology/AguasDulces"
+    },
+    "Toma" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Toma"
+    },
+    "localizadoEn" : {
+      "@id" : "http://geo.linkeddata.es/ontology/localizadoEn",
+      "@type" : "@id"
+    },
+    "Acuitardo" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Acuitardo"
+    },
+    "Gola" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Gola"
+    },
+    "naturaleza_quimica" : {
+      "@id" : "http://geo.linkeddata.es/ontology/naturaleza_quimica",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Colector" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Colector"
+    },
+    "longitud" : {
+      "@id" : "http://geo.linkeddata.es/ontology/longitud",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "Caz" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Caz"
+    },
+    "EstanqueSalado" : {
+      "@id" : "http://geo.linkeddata.es/ontology/EstanqueSalado"
+    },
+    "Regato" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Regato"
+    },
+    "zona_de_recarga" : {
+      "@id" : "http://geo.linkeddata.es/ontology/zona_de_recarga",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "nombre_alternativo" : {
+      "@id" : "http://geo.linkeddata.es/ontology/nombre_alternativo",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "nivel_de_explotacion" : {
+      "@id" : "http://geo.linkeddata.es/ontology/nivel_de_explotacion",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "ManantialSalado" : {
+      "@id" : "http://geo.linkeddata.es/ontology/ManantialSalado"
+    },
+    "FuenteNatural" : {
+      "@id" : "http://geo.linkeddata.es/ontology/FuenteNatural"
+    },
+    "Alberca" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Alberca"
+    },
+    "FuenteVauclusiana" : {
+      "@id" : "http://geo.linkeddata.es/ontology/FuenteVauclusiana"
+    },
+    "BancoDeNieve" : {
+      "@id" : "http://geo.linkeddata.es/ontology/BancoDeNieve"
+    },
+    "nombre" : {
+      "@id" : "http://geo.linkeddata.es/ontology/nombre",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "long" : {
+      "@id" : "http://geo.linkeddata.es/ontology/long"
+    },
+    "cauce" : {
+      "@id" : "http://geo.linkeddata.es/ontology/cauce"
+    },
+    "almacena" : {
+      "@id" : "http://geo.linkeddata.es/ontology/almacena",
+      "@type" : "@id"
+    },
+    "Estero" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Estero"
+    },
+    "permite" : {
+      "@id" : "http://geo.linkeddata.es/ontology/permite",
+      "@type" : "@id"
+    },
+    "CanalAguasMarinas" : {
+      "@id" : "http://geo.linkeddata.es/ontology/CanalAguasMarinas"
+    },
+    "Geiser" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Geiser"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "Lucio" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Lucio"
+    },
+    "Bodon" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Bodon"
+    },
+    "tipologia_de_material" : {
+      "@id" : "http://geo.linkeddata.es/ontology/tipologia_de_material",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "CanalAguasContinentales" : {
+      "@id" : "http://geo.linkeddata.es/ontology/CanalAguasContinentales"
+    },
+    "Abrevadero" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Abrevadero"
+    },
+    "Laguna" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Laguna"
+    },
+    "Sifon" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Sifon"
+    },
+    "Acequia" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Acequia"
+    },
+    "Madre" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Madre"
+    },
+    "Ibon" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Ibon"
+    },
+    "es_capturado" : {
+      "@id" : "http://geo.linkeddata.es/ontology/es_capturado",
+      "@type" : "@id"
+    },
+    "densidad" : {
+      "@id" : "http://geo.linkeddata.es/ontology/densidad",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "Estanque" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Estanque"
+    },
+    "tipo_margen" : {
+      "@id" : "http://geo.linkeddata.es/ontology/tipo_margen"
+    },
+    "es_conducido_por" : {
+      "@id" : "http://geo.linkeddata.es/ontology/es_conducido_por",
+      "@type" : "@id"
+    },
+    "dispone_de_emisario" : {
+      "@id" : "http://geo.linkeddata.es/ontology/dispone_de_emisario",
+      "@type" : "@id"
+    },
+    "Charca" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Charca"
+    },
+    "Cienaga" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Cienaga"
+    },
+    "obtencion_de_energia" : {
+      "@id" : "http://geo.linkeddata.es/ontology/obtencion_de_energia",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "grado_de_intervencion" : {
+      "@id" : "http://geo.linkeddata.es/ontology/grado_de_intervencion"
+    },
+    "AguasQuietasArtificiales" : {
+      "@id" : "http://geo.linkeddata.es/ontology/AguasQuietasArtificiales"
+    },
+    "AguasCorrientesArtificiales" : {
+      "@id" : "http://geo.linkeddata.es/ontology/AguasCorrientesArtificiales"
+    },
+    "AguasContinentales" : {
+      "@id" : "http://geo.linkeddata.es/ontology/AguasContinentales"
+    },
+    "Rivera" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Rivera"
+    },
+    "limites_geograficos" : {
+      "@id" : "http://geo.linkeddata.es/ontology/limites_geograficos",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Canyo" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Canyo"
+    },
+    "cuenca" : {
+      "@id" : "http://geo.linkeddata.es/ontology/cuenca"
+    },
+    "capacidad" : {
+      "@id" : "http://geo.linkeddata.es/ontology/capacidad",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "tipologia_de_cobertura" : {
+      "@id" : "http://geo.linkeddata.es/ontology/tipologia_de_cobertura"
+    },
+    "AguasCorrientes" : {
+      "@id" : "http://geo.linkeddata.es/ontology/AguasCorrientes"
+    },
+    "Vertiente" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Vertiente"
+    },
+    "Delta" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Delta"
+    },
+    "altitud" : {
+      "@id" : "http://geo.linkeddata.es/ontology/altitud",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "conecta_con" : {
+      "@id" : "http://geo.linkeddata.es/ontology/conecta_con",
+      "@type" : "@id"
+    },
+    "superficie" : {
+      "@id" : "http://geo.linkeddata.es/ontology/superficie",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "coordenadas" : {
+      "@id" : "http://geo.linkeddata.es/ontology/coordenadas"
+    },
+    "Ribera" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Ribera"
+    },
+    "Desembocadura" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Desembocadura"
+    },
+    "AguasQuietasNaturales" : {
+      "@id" : "http://geo.linkeddata.es/ontology/AguasQuietasNaturales"
+    },
+    "Conducto" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Conducto"
+    },
+    "Aljibe" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Aljibe"
+    },
+    "Canalillo" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Canalillo"
+    },
+    "ZonaHumeda" : {
+      "@id" : "http://geo.linkeddata.es/ontology/ZonaHumeda"
+    },
+    "parte_de" : {
+      "@id" : "http://geo.linkeddata.es/ontology/parte_de",
+      "@type" : "@id"
+    },
+    "estado" : {
+      "@id" : "http://geo.linkeddata.es/ontology/estado"
+    },
+    "Mar" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Mar"
+    },
+    "Distribucion" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Distribucion"
+    },
+    "alimenta_a" : {
+      "@id" : "http://geo.linkeddata.es/ontology/alimenta_a",
+      "@type" : "@id"
+    },
+    "tasa_de_renovacion" : {
+      "@id" : "http://geo.linkeddata.es/ontology/tasa_de_renovacion"
+    },
+    "Estuario" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Estuario"
+    },
+    "origen_del_agua" : {
+      "@id" : "http://geo.linkeddata.es/ontology/origen_del_agua"
+    },
+    "CapaDeNieve" : {
+      "@id" : "http://geo.linkeddata.es/ontology/CapaDeNieve"
+    },
+    "conexion" : {
+      "@id" : "http://geo.linkeddata.es/ontology/conexion",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "uso" : {
+      "@id" : "http://geo.linkeddata.es/ontology/uso"
+    },
+    "navegable" : {
+      "@id" : "http://geo.linkeddata.es/ontology/navegable"
+    },
+    "transvasa" : {
+      "@id" : "http://geo.linkeddata.es/ontology/transvasa",
+      "@type" : "@id"
+    },
+    "es_inundada_por" : {
+      "@id" : "http://geo.linkeddata.es/ontology/es_inundada_por",
+      "@type" : "@id"
+    },
+    "distancia" : {
+      "@id" : "http://geo.linkeddata.es/ontology/distancia"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/elements/1.1/creator"
+    },
+    "MasaDeHielo" : {
+      "@id" : "http://geo.linkeddata.es/ontology/MasaDeHielo"
+    },
+    "Salina" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Salina"
+    },
+    "Marisma" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Marisma"
+    },
+    "vierte_en" : {
+      "@id" : "http://geo.linkeddata.es/ontology/vierte_en",
+      "@type" : "@id"
+    },
+    "actua_de_emisario_de" : {
+      "@id" : "http://geo.linkeddata.es/ontology/actua_de_emisario_de",
+      "@type" : "@id"
+    },
+    "discurre_sobre" : {
+      "@id" : "http://geo.linkeddata.es/ontology/discurre_sobre",
+      "@type" : "@id"
+    },
+    "conduce" : {
+      "@id" : "http://geo.linkeddata.es/ontology/conduce",
+      "@type" : "@id"
+    },
+    "curvatura" : {
+      "@id" : "http://geo.linkeddata.es/ontology/curvatura",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "SurgenciaNatural" : {
+      "@id" : "http://geo.linkeddata.es/ontology/SurgenciaNatural"
+    },
+    "origina" : {
+      "@id" : "http://geo.linkeddata.es/ontology/origina",
+      "@type" : "@id"
+    },
+    "concentracion_de_sal" : {
+      "@id" : "http://geo.linkeddata.es/ontology/concentracion_de_sal"
+    },
+    "Embalse" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Embalse"
+    },
+    "AguasSubterraneas" : {
+      "@id" : "http://geo.linkeddata.es/ontology/AguasSubterraneas"
+    },
+    "Corriente" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Corriente"
+    },
+    "riesgo_quimico" : {
+      "@id" : "http://geo.linkeddata.es/ontology/riesgo_quimico",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "es_almacenado_en" : {
+      "@id" : "http://geo.linkeddata.es/ontology/es_almacenado_en",
+      "@type" : "@id"
+    },
+    "Basines" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Basines"
+    },
+    "Ria" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Ria"
+    },
+    "BalsaDeHielo" : {
+      "@id" : "http://geo.linkeddata.es/ontology/BalsaDeHielo"
+    },
+    "profundidad" : {
+      "@id" : "http://geo.linkeddata.es/ontology/profundidad",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "caudal" : {
+      "@id" : "http://geo.linkeddata.es/ontology/caudal",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "Canal" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Canal"
+    },
+    "ZonaEncharcable" : {
+      "@id" : "http://geo.linkeddata.es/ontology/ZonaEncharcable"
+    },
+    "AltaMar" : {
+      "@id" : "http://geo.linkeddata.es/ontology/AltaMar"
+    },
+    "Aluvion" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Aluvion"
+    },
+    "AguasCorrientesNaturales" : {
+      "@id" : "http://geo.linkeddata.es/ontology/AguasCorrientesNaturales"
+    },
+    "Rapido" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Rapido"
+    },
+    "se_extrae" : {
+      "@id" : "http://geo.linkeddata.es/ontology/se_extrae",
+      "@type" : "@id"
+    },
+    "LagunaSalada" : {
+      "@id" : "http://geo.linkeddata.es/ontology/LagunaSalada"
+    },
+    "CuencaHidrografica" : {
+      "@id" : "http://geo.linkeddata.es/ontology/CuencaHidrografica"
+    },
+    "tipologia_fluvial" : {
+      "@id" : "http://geo.linkeddata.es/ontology/tipologia_fluvial"
+    },
+    "Meandro" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Meandro"
+    },
+    "desembocaEn" : {
+      "@id" : "http://geo.linkeddata.es/ontology/desembocaEn",
+      "@type" : "@id"
+    },
+    "FuenteArtificial" : {
+      "@id" : "http://geo.linkeddata.es/ontology/FuenteArtificial"
+    },
+    "fondo" : {
+      "@id" : "http://geo.linkeddata.es/ontology/fondo",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "perimetro" : {
+      "@id" : "http://geo.linkeddata.es/ontology/perimetro"
+    },
+    "Barranco" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Barranco"
+    },
+    "ZonaContigua" : {
+      "@id" : "http://geo.linkeddata.es/ontology/ZonaContigua"
+    },
+    "Glaciar" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Glaciar"
+    },
+    "recarga_artificial" : {
+      "@id" : "http://geo.linkeddata.es/ontology/recarga_artificial",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "deposita_en" : {
+      "@id" : "http://geo.linkeddata.es/ontology/deposita_en",
+      "@type" : "@id"
+    },
+    "horizonte" : {
+      "@id" : "http://geo.linkeddata.es/ontology/horizonte"
+    },
+    "territory" : {
+      "@id" : "http://aims.fao.org/aos/geopolitical.owl#territory"
+    },
+    "Idioma_alternativo" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Idioma_alternativo",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "geometria" : {
+      "@id" : "http://geo.linkeddata.es/ontology/geometria"
+    },
+    "Oceano" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Oceano"
+    },
+    "Tremedal" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Tremedal"
+    },
+    "AguasDeTransicion" : {
+      "@id" : "http://geo.linkeddata.es/ontology/AguasDeTransicion"
+    },
+    "Captacion" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Captacion"
+    },
+    "PlayaFluvial" : {
+      "@id" : "http://geo.linkeddata.es/ontology/PlayaFluvial"
+    },
+    "Venaje" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Venaje"
+    },
+    "Confluencia" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Confluencia"
+    },
+    "Nevero" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Nevero"
+    },
+    "situacion" : {
+      "@id" : "http://geo.linkeddata.es/ontology/situacion"
+    },
+    "estacion_de_aforo" : {
+      "@id" : "http://geo.linkeddata.es/ontology/estacion_de_aforo",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "LagoSubterraneo" : {
+      "@id" : "http://geo.linkeddata.es/ontology/LagoSubterraneo"
+    },
+    "tiene_afluente" : {
+      "@id" : "http://geo.linkeddata.es/ontology/tiene_afluente",
+      "@type" : "@id"
+    },
+    "Reguero" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Reguero"
+    },
+    "es_distribuida" : {
+      "@id" : "http://geo.linkeddata.es/ontology/es_distribuida",
+      "@type" : "@id"
+    },
+    "AguasQuietas" : {
+      "@id" : "http://geo.linkeddata.es/ontology/AguasQuietas"
+    },
+    "Canyada" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Canyada"
+    },
+    "Drenaje" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Drenaje"
+    },
+    "captura" : {
+      "@id" : "http://geo.linkeddata.es/ontology/captura",
+      "@type" : "@id"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/elements/1.1/title"
+    },
+    "CanalDeLago" : {
+      "@id" : "http://geo.linkeddata.es/ontology/CanalDeLago"
+    },
+    "source" : {
+      "@id" : "http://purl.org/dc/elements/1.1/source"
+    },
+    "CapaDeHielo" : {
+      "@id" : "http://geo.linkeddata.es/ontology/CapaDeHielo"
+    },
+    "MasaDeAguaArtificial" : {
+      "@id" : "http://geo.linkeddata.es/ontology/MasaDeAguaArtificial"
+    },
+    "Barranquillo" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Barranquillo"
+    },
+    "Efluente" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Efluente"
+    },
+    "publisher" : {
+      "@id" : "http://purl.org/dc/elements/1.1/publisher"
+    },
+    "vertiente" : {
+      "@id" : "http://geo.linkeddata.es/ontology/vertiente"
+    },
+    "sigueA" : {
+      "@id" : "http://geo.linkeddata.es/ontology/sigueA",
+      "@type" : "@id"
+    },
+    "lat" : {
+      "@id" : "http://geo.linkeddata.es/ontology/lat"
+    },
+    "Acuifero" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Acuifero"
+    },
+    "tipologia_de_surgencia" : {
+      "@id" : "http://geo.linkeddata.es/ontology/tipologia_de_surgencia"
+    },
+    "transmite" : {
+      "@id" : "http://geo.linkeddata.es/ontology/transmite",
+      "@type" : "@id"
+    },
+    "Vado" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Vado"
+    },
+    "Dren" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Dren"
+    },
+    "Reguera" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Reguera"
+    },
+    "provenance" : {
+      "@id" : "http://geo.linkeddata.es/ontology/provenance"
+    },
+    "destino" : {
+      "@id" : "http://geo.linkeddata.es/ontology/destino",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "aportacion" : {
+      "@id" : "http://geo.linkeddata.es/ontology/aportacion"
+    },
+    "Piscina" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Piscina"
+    },
+    "Saladar" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Saladar"
+    },
+    "es_afluente_de" : {
+      "@id" : "http://geo.linkeddata.es/ontology/es_afluente_de",
+      "@type" : "@id"
+    },
+    "HidronimoPuntual" : {
+      "@id" : "http://geo.linkeddata.es/ontology/HidronimoPuntual"
+    },
+    "volumen" : {
+      "@id" : "http://geo.linkeddata.es/ontology/volumen"
+    },
+    "Nacimiento" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Nacimiento"
+    },
+    "es_conectado_con" : {
+      "@id" : "http://geo.linkeddata.es/ontology/es_conectado_con",
+      "@type" : "@id"
+    },
+    "LagoSalado" : {
+      "@id" : "http://geo.linkeddata.es/ontology/LagoSalado"
+    },
+    "Ramal" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Ramal"
+    },
+    "seeAlso" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso"
+    },
+    "es_comunicada_por" : {
+      "@id" : "http://geo.linkeddata.es/ontology/es_comunicada_por",
+      "@type" : "@id"
+    },
+    "Playa" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Playa"
+    },
+    "situacion_hidroquimica" : {
+      "@id" : "http://geo.linkeddata.es/ontology/situacion_hidroquimica",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "sometido" : {
+      "@id" : "http://geo.linkeddata.es/ontology/sometido",
+      "@type" : "@id"
+    },
+    "ocupacion" : {
+      "@id" : "http://geo.linkeddata.es/ontology/ocupacion"
+    },
+    "pendiente" : {
+      "@id" : "http://geo.linkeddata.es/ontology/pendiente",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "Pozo" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Pozo"
+    },
+    "CanalMarino" : {
+      "@id" : "http://geo.linkeddata.es/ontology/CanalMarino"
+    },
+    "esta_proxima_a" : {
+      "@id" : "http://geo.linkeddata.es/ontology/esta_proxima_a",
+      "@type" : "@id"
+    },
+    "riesgo" : {
+      "@id" : "http://geo.linkeddata.es/ontology/riesgo"
+    },
+    "mezcla" : {
+      "@id" : "http://geo.linkeddata.es/ontology/mezcla"
+    },
+    "salinidad" : {
+      "@id" : "http://geo.linkeddata.es/ontology/salinidad"
+    },
+    "IslaFluvial" : {
+      "@id" : "http://geo.linkeddata.es/ontology/IslaFluvial"
+    },
+    "precedeA" : {
+      "@id" : "http://geo.linkeddata.es/ontology/precedeA",
+      "@type" : "@id"
+    },
+    "LlanuraDeInundacion" : {
+      "@id" : "http://geo.linkeddata.es/ontology/LlanuraDeInundacion"
+    },
+    "AguasCosteras" : {
+      "@id" : "http://geo.linkeddata.es/ontology/AguasCosteras"
+    },
+    "FuenteSalada" : {
+      "@id" : "http://geo.linkeddata.es/ontology/FuenteSalada"
+    },
+    "Azarbe" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Azarbe"
+    },
+    "explotacion" : {
+      "@id" : "http://geo.linkeddata.es/ontology/explotacion"
+    },
+    "SurgenciaArtificial" : {
+      "@id" : "http://geo.linkeddata.es/ontology/SurgenciaArtificial"
+    },
+    "Arroyo" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Arroyo"
+    },
+    "permeabilidad" : {
+      "@id" : "http://geo.linkeddata.es/ontology/permeabilidad"
+    },
+    "superficie_confinada" : {
+      "@id" : "http://geo.linkeddata.es/ontology/superficie_confinada",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "desagua_en" : {
+      "@id" : "http://geo.linkeddata.es/ontology/desagua_en",
+      "@type" : "@id"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "volumen_de_extraccion" : {
+      "@id" : "http://geo.linkeddata.es/ontology/volumen_de_extraccion",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "Afluente" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Afluente"
+    },
+    "drenaje" : {
+      "@id" : "http://geo.linkeddata.es/ontology/drenaje"
+    },
+    "Balsa" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Balsa"
+    },
+    "CorrienteSubterranea" : {
+      "@id" : "http://geo.linkeddata.es/ontology/CorrienteSubterranea"
+    },
+    "Morfologia" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Morfologia"
+    },
+    "regimen" : {
+      "@id" : "http://geo.linkeddata.es/ontology/regimen"
+    },
+    "Aguazal" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Aguazal"
+    },
+    "AguasSaladas" : {
+      "@id" : "http://geo.linkeddata.es/ontology/AguasSaladas"
+    },
+    "LagunaArtificial" : {
+      "@id" : "http://geo.linkeddata.es/ontology/LagunaArtificial"
+    },
+    "ZonaEconomicaExclusiva" : {
+      "@id" : "http://geo.linkeddata.es/ontology/ZonaEconomicaExclusiva"
+    },
+    "ejercen_influencia" : {
+      "@id" : "http://geo.linkeddata.es/ontology/ejercen_influencia",
+      "@type" : "@id"
+    },
+    "tipologia" : {
+      "@id" : "http://geo.linkeddata.es/ontology/tipologia"
+    },
+    "sufre_descarga_de" : {
+      "@id" : "http://geo.linkeddata.es/ontology/sufre_descarga_de",
+      "@type" : "@id"
+    },
+    "geologia" : {
+      "@id" : "http://geo.linkeddata.es/ontology/geologia"
+    },
+    "Galacho" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Galacho"
+    },
+    "sometida_a_influencia_de" : {
+      "@id" : "http://geo.linkeddata.es/ontology/sometida_a_influencia_de",
+      "@type" : "@id"
+    },
+    "Aguas" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Aguas"
+    },
+    "Paul" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Paul"
+    },
+    "zona_de_descarga" : {
+      "@id" : "http://geo.linkeddata.es/ontology/zona_de_descarga",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Garganta" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Garganta"
+    },
+    "Manantial" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Manantial"
+    },
+    "Cascada" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Cascada"
+    },
+    "se_extrae_para" : {
+      "@id" : "http://geo.linkeddata.es/ontology/se_extrae_para",
+      "@type" : "@id"
+    },
+    "MarTerritorial" : {
+      "@id" : "http://geo.linkeddata.es/ontology/MarTerritorial"
+    },
+    "autoridad_competente" : {
+      "@id" : "http://geo.linkeddata.es/ontology/autoridad_competente",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Guadi" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Guadi"
+    },
+    "Lavajo" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Lavajo"
+    },
+    "consta_de" : {
+      "@id" : "http://geo.linkeddata.es/ontology/consta_de",
+      "@type" : "@id"
+    },
+    "Desague" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Desague"
+    },
+    "Torrente" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Torrente"
+    },
+    "eutrofizacion" : {
+      "@id" : "http://geo.linkeddata.es/ontology/eutrofizacion",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "Chorrera" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Chorrera"
+    },
+    "comunica_con" : {
+      "@id" : "http://geo.linkeddata.es/ontology/comunica_con",
+      "@type" : "@id"
+    },
+    "Tuberia" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Tuberia"
+    }
+  }
+}

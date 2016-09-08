@@ -1,0 +1,152 @@
+{
+  "@context" : {
+    "VerticeGeodesicoRegcan95" : {
+      "@id" : "http://geo.linkeddata.es/ontology/VerticeGeodesicoRegcan95"
+    },
+    "versionInfo" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
+    },
+    "huso" : {
+      "@id" : "http://geo.linkeddata.es/ontology/huso",
+      "@type" : "http://www.w3.org/2001/XMLSchema#int"
+    },
+    "cota" : {
+      "@id" : "http://geo.linkeddata.es/ontology/cota",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "VerticeGeodesicoDeOrdenInferior" : {
+      "@id" : "http://geo.linkeddata.es/ontology/VerticeGeodesicoDeOrdenInferior"
+    },
+    "categoriaDeCurvaDeNivel" : {
+      "@id" : "http://geo.linkeddata.es/ontology/categoriaDeCurvaDeNivel",
+      "@type" : "@id"
+    },
+    "Pico" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Pico"
+    },
+    "altitudElipsoidal" : {
+      "@id" : "http://geo.linkeddata.es/ontology/altitudElipsoidal",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "longitud" : {
+      "@id" : "http://geo.linkeddata.es/ontology/longitud"
+    },
+    "long" : {
+      "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#long"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "PuntoAcotado" : {
+      "@id" : "http://geo.linkeddata.es/ontology/PuntoAcotado"
+    },
+    "Concept" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "VerticeGeodesico" : {
+      "@id" : "http://geo.linkeddata.es/ontology/VerticeGeodesico"
+    },
+    "xETRS89" : {
+      "@id" : "http://geo.linkeddata.es/ontology/xETRS89",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "based_near" : {
+      "@id" : "http://xmlns.com/foaf/0.1/based_near"
+    },
+    "CurvaDeNivelBatimetrica" : {
+      "@id" : "http://geo.linkeddata.es/ontology/CurvaDeNivelBatimetrica"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/elements/1.1/creator"
+    },
+    "Collado" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Collado"
+    },
+    "location" : {
+      "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#location",
+      "@type" : "@id"
+    },
+    "CotaMunicipal" : {
+      "@id" : "http://geo.linkeddata.es/ontology/CotaMunicipal"
+    },
+    "Cerro" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Cerro"
+    },
+    "alt" : {
+      "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#alt"
+    },
+    "latitud" : {
+      "@id" : "http://geo.linkeddata.es/ontology/latitud"
+    },
+    "yETRS89" : {
+      "@id" : "http://geo.linkeddata.es/ontology/yETRS89",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "Point" : {
+      "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#Point"
+    },
+    "ConceptScheme" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/elements/1.1/title"
+    },
+    "source" : {
+      "@id" : "http://purl.org/dc/terms/source"
+    },
+    "publisher" : {
+      "@id" : "http://purl.org/dc/elements/1.1/publisher"
+    },
+    "lat" : {
+      "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#lat"
+    },
+    "date" : {
+      "@id" : "http://purl.org/dc/elements/1.1/date"
+    },
+    "EstacionPermanenteGPS" : {
+      "@id" : "http://geo.linkeddata.es/ontology/EstacionPermanenteGPS"
+    },
+    "FenomenoTopografico" : {
+      "@id" : "http://geo.linkeddata.es/ontology/FenomenoTopografico"
+    },
+    "SpatialThing" : {
+      "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "VerticeGeodesicoRegente" : {
+      "@id" : "http://geo.linkeddata.es/ontology/VerticeGeodesicoRegente"
+    },
+    "numero" : {
+      "@id" : "http://geo.linkeddata.es/ontology/numero",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "altitudOrtometrica" : {
+      "@id" : "http://geo.linkeddata.es/ontology/altitudOrtometrica",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "CurvaDeNivel" : {
+      "@id" : "http://geo.linkeddata.es/ontology/CurvaDeNivel"
+    },
+    "codigo" : {
+      "@id" : "http://geo.linkeddata.es/ontology/codigo"
+    },
+    "prefLabel" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#prefLabel"
+    },
+    "PuertoDeMontanna" : {
+      "@id" : "http://geo.linkeddata.es/ontology/PuertoDeMontanna"
+    },
+    "inScheme" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#inScheme",
+      "@type" : "@id"
+    },
+    "description" : {
+      "@id" : "http://purl.org/dc/elements/1.1/description"
+    },
+    "CurvaDeNivelAltimetrica" : {
+      "@id" : "http://geo.linkeddata.es/ontology/CurvaDeNivelAltimetrica"
+    }
+  }
+}

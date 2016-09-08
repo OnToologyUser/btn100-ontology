@@ -1,0 +1,60 @@
+{
+  "@context" : {
+    "esCapitalDe" : {
+      "@id" : "http://geo.linkeddata.es/ontology/esCapitalDe",
+      "@type" : "@id"
+    },
+    "LIC" : {
+      "@id" : "http://geo.linkeddata.es/ontology/LIC"
+    },
+    "ParqueNacional" : {
+      "@id" : "http://geo.linkeddata.es/ontology/ParqueNacional"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "Provincia" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Provincia"
+    },
+    "Municipio" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Municipio"
+    },
+    "Pais" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Pais"
+    },
+    "ZonaProtegida" : {
+      "@id" : "http://geo.linkeddata.es/ontology/ZonaProtegida"
+    },
+    "special_group" : {
+      "@id" : "http://aims.fao.org/aos/geopolitical.owl#special_group"
+    },
+    "CiudadAutonoma" : {
+      "@id" : "http://geo.linkeddata.es/ontology/CiudadAutonoma"
+    },
+    "ComunidadJurisdiccional" : {
+      "@id" : "http://geo.linkeddata.es/ontology/ComunidadJurisdiccional"
+    },
+    "ComunidadAutonoma" : {
+      "@id" : "http://geo.linkeddata.es/ontology/ComunidadAutonoma"
+    },
+    "territory" : {
+      "@id" : "http://aims.fao.org/aos/geopolitical.owl#territory"
+    },
+    "ParqueNatural" : {
+      "@id" : "http://geo.linkeddata.es/ontology/ParqueNatural"
+    },
+    "Nacion" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Nacion"
+    },
+    "Capital" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Capital"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "tieneCapital" : {
+      "@id" : "http://geo.linkeddata.es/ontology/tieneCapital",
+      "@type" : "@id"
+    }
+  }
+}
