@@ -13,8 +13,7 @@
     <!ENTITY geopolitical "http://aims.fao.org/aos/geopolitical.owl#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
     <!ENTITY situacion "http://geo.linkeddata.es/kos/supply-net/situacion/" >
-    <!ENTITY suply-net-ontology "http://geo.linkeddata.es/ontology/suply-net-ontology.owl#" >
-    <!ENTITY tipoDeComponente "http://geo.linkeddata.es/kos/supply-net/tipoDeComponente/" >
+    <!ENTITY tipo-de-componente "http://geo.linkeddata.es/kos/supply-net/tipo-de-componente/" >
 ]>
 
 
@@ -23,7 +22,6 @@
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:suply-net-ontology="http://geo.linkeddata.es/ontology/suply-net-ontology.owl#"
      xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
      xmlns:situacion="&supply-net;situacion/"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
@@ -32,10 +30,10 @@
      xmlns:supply-net="http://geo.linkeddata.es/kos/supply-net/"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-     xmlns:tipoDeComponente="&supply-net;tipoDeComponente/">
+     xmlns:tipo-de-componente="&supply-net;tipo-de-componente/">
     <owl:Ontology rdf:about="http://geo.linkeddata.es/ontology/supply-net.owl#">
         <dc:creator rdf:datatype="&xsd;string">Lissete Moscoso León</dc:creator>
-        <dc:title rdf:datatype="&xsd;string">suply-netOntology</dc:title>
+        <dc:title rdf:datatype="&xsd;string">supply-netOntology</dc:title>
         <owl:versionInfo rdf:datatype="&xsd;string">v0.2</owl:versionInfo>
         <rdfs:comment xml:lang="en"></rdfs:comment>
         <dc:publisher xml:lang="en">Ontology Engineering Group</dc:publisher>
@@ -91,7 +89,7 @@
                     <rdf:Description rdf:about="&skos;Concept"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&skos;inScheme"/>
-                        <owl:hasValue rdf:resource="&supply-net;tipoDeComponente"/>
+                        <owl:hasValue rdf:resource="&supply-net;tipo-de-componente"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -356,14 +354,14 @@ http://geo.linkeddata.es/kos/supply-net/situacion/superficial</rdfs:comment>
     
 
 
-    <!-- http://geo.linkeddata.es/kos/supply-net/tipoDeComponente -->
+    <!-- http://geo.linkeddata.es/kos/supply-net/tipo-de-componente -->
 
-    <skos:ConceptScheme rdf:about="&supply-net;tipoDeComponente">
+    <skos:ConceptScheme rdf:about="&supply-net;tipo-de-componente">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
         <rdfs:comment xml:lang="es">Indica el tipo de componente de telecomunicaciones.
 Puede tomar los valores:
-* http://geo.linkeddata.es/kos/supply-net/tipoDeComponente/emisor
-* http://geo.linkeddata.es/kos/supply-net/tipoDeComponente/repetidor</rdfs:comment>
+* http://geo.linkeddata.es/kos/supply-net/tipo-de-componente/emisor
+* http://geo.linkeddata.es/kos/supply-net/tipo-de-componente/repetidor</rdfs:comment>
         <skos:prefLabel xml:lang="es">tipo de componente</skos:prefLabel>
     </skos:ConceptScheme>
     
@@ -399,22 +397,22 @@ Puede tomar los valores:
     
 
 
-    <!-- http://geo.linkeddata.es/kos/supply-net/tipoDeComponente/emisor -->
+    <!-- http://geo.linkeddata.es/kos/supply-net/tipo-de-componente/emisor -->
 
-    <skos:Concept rdf:about="&supply-net;tipoDeComponente/emisor">
+    <skos:Concept rdf:about="&supply-net;tipo-de-componente/emisor">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
         <skos:prefLabel xml:lang="es">emisor</skos:prefLabel>
-        <skos:inScheme rdf:resource="&supply-net;tipoDeComponente"/>
+        <skos:inScheme rdf:resource="&supply-net;tipo-de-componente"/>
     </skos:Concept>
     
 
 
-    <!-- http://geo.linkeddata.es/kos/supply-net/tipoDeComponente/repetidor -->
+    <!-- http://geo.linkeddata.es/kos/supply-net/tipo-de-componente/repetidor -->
 
-    <skos:Concept rdf:about="&supply-net;tipoDeComponente/repetidor">
+    <skos:Concept rdf:about="&supply-net;tipo-de-componente/repetidor">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
         <skos:prefLabel xml:lang="es">repetidor</skos:prefLabel>
-        <skos:inScheme rdf:resource="&supply-net;tipoDeComponente"/>
+        <skos:inScheme rdf:resource="&supply-net;tipo-de-componente"/>
     </skos:Concept>
     
 
