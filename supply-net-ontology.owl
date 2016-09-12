@@ -3,6 +3,7 @@
 
 <!DOCTYPE rdf:RDF [
     <!ENTITY terms "http://purl.org/dc/terms/" >
+    <!ENTITY geo "http://geo.linkeddata.es/" >
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
     <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
@@ -12,7 +13,6 @@
     <!ENTITY supply-net "http://geo.linkeddata.es/kos/supply-net/" >
     <!ENTITY geopolitical "http://aims.fao.org/aos/geopolitical.owl#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
-    <!ENTITY situacion "http://geo.linkeddata.es/kos/supply-net/situacion/" >
     <!ENTITY tipo-de-componente "http://geo.linkeddata.es/kos/supply-net/tipo-de-componente/" >
 ]>
 
@@ -23,9 +23,9 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
-     xmlns:situacion="&supply-net;situacion/"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:geo="http://geo.linkeddata.es/"
      xmlns:geopolitical="http://aims.fao.org/aos/geopolitical.owl#"
      xmlns:supply-net="http://geo.linkeddata.es/kos/supply-net/"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -98,11 +98,11 @@
     
 
 
-    <!-- http://geo.linkeddata.es/ontology/situacion -->
+    <!-- http://geo.linkeddata.es/ontology/situacionDeVia -->
 
-    <owl:ObjectProperty rdf:about="http://geo.linkeddata.es/ontology/situacion">
+    <owl:ObjectProperty rdf:about="&geo;ontology/situacionDeVia">
         <rdfs:label xml:lang="es">situación</rdfs:label>
-        <rdfs:comment xml:lang="es">indica la posición del tramo sobre la superficie</rdfs:comment>
+        <rdfs:comment xml:lang="es">Disposición del tramo de vía sobre la superficie</rdfs:comment>
         <rdfs:domain rdf:resource="http://geo.linkeddata.es/ontology/ConduccionDeCombustible"/>
         <rdfs:range>
             <owl:Class>
@@ -110,7 +110,7 @@
                     <rdf:Description rdf:about="&skos;Concept"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&skos;inScheme"/>
-                        <owl:hasValue rdf:resource="&supply-net;situacion"/>
+                        <owl:hasValue rdf:resource="&geo;kos/transportes/situacion-de-via"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -341,17 +341,18 @@
     
 
 
-    <!-- http://geo.linkeddata.es/kos/supply-net/situacion -->
 
-    <skos:ConceptScheme rdf:about="&supply-net;situacion">
+        <!-- http://geo.linkeddata.es/kos/transportes/situacion-de-via -->
+
+    <skos:ConceptScheme rdf:about="&geo;kos/transportes/situacion-de-via">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
-        <rdfs:comment xml:lang="es">Puede tomar los valores:
-http://geo.linkeddata.es/kos/supply-net/situacion/elevado
-http://geo.linkeddata.es/kos/supply-net/situacion/subterraneo
-http://geo.linkeddata.es/kos/supply-net/situacion/superficial</rdfs:comment>
+        <rdfs:comment xml:lang="es">Disposición del tramo de vía sobre la superficie.
+
+* http://geo.linkeddata.es/kos/transportes/situacion-de-via/elevado
+* http://geo.linkeddata.es/kos/transportes/situacion-de-via/subterraneo
+* http://geo.linkeddata.es/kos/transportes/situacion-de-via/superficial</rdfs:comment>
         <skos:prefLabel xml:lang="es">situación</skos:prefLabel>
     </skos:ConceptScheme>
-    
 
 
     <!-- http://geo.linkeddata.es/kos/supply-net/tipo-de-componente -->
@@ -367,32 +368,35 @@ Puede tomar los valores:
     
 
 
-    <!-- http://geo.linkeddata.es/kos/supply-net/situacion/elevado -->
+    <!-- http://geo.linkeddata.es/kos/transportes/situacion-de-via/elevado -->
 
-    <skos:Concept rdf:about="&supply-net;situacion/elevado">
+    <skos:Concept rdf:about="&geo;kos/transportes/situacion-de-via/elevado">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
         <skos:prefLabel xml:lang="es">elevado</skos:prefLabel>
-        <skos:inScheme rdf:resource="&supply-net;situacion"/>
+        <rdfs:comment xml:lang="es">vía elevada</rdfs:comment>
+        <skos:inScheme rdf:resource="&geo;kos/transportes/situacion-de-via"/>
     </skos:Concept>
-    
 
 
-    <!-- http://geo.linkeddata.es/kos/supply-net/situacion/subterraneo -->
 
-    <skos:Concept rdf:about="&supply-net;situacion/subterraneo">
+    <!-- http://geo.linkeddata.es/kos/transportes/situacion-de-via/subterraneo -->
+
+    <skos:Concept rdf:about="&geo;kos/transportes/situacion-de-via/subterraneo">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
         <skos:prefLabel xml:lang="es">subterráneo</skos:prefLabel>
-        <skos:inScheme rdf:resource="&supply-net;situacion"/>
+        <rdfs:comment xml:lang="es">vía subterránea</rdfs:comment>
+        <skos:inScheme rdf:resource="&geo;kos/transportes/situacion-de-via"/>
     </skos:Concept>
-    
 
 
-    <!-- http://geo.linkeddata.es/kos/supply-net/situacion/superficial -->
 
-    <skos:Concept rdf:about="&supply-net;situacion/superficial">
+    <!-- http://geo.linkeddata.es/kos/transportes/situacion-de-via/superficial -->
+
+    <skos:Concept rdf:about="&geo;kos/transportes/situacion-de-via/superficial">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
         <skos:prefLabel xml:lang="es">superficial</skos:prefLabel>
-        <skos:inScheme rdf:resource="&supply-net;situacion"/>
+        <rdfs:comment xml:lang="es">vía superficial</rdfs:comment>
+        <skos:inScheme rdf:resource="&geo;kos/transportes/situacion-de-via"/>
     </skos:Concept>
     
 
@@ -428,9 +432,9 @@ Puede tomar los valores:
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&supply-net;situacion/elevado"/>
-            <rdf:Description rdf:about="&supply-net;situacion/subterraneo"/>
-            <rdf:Description rdf:about="&supply-net;situacion/superficial"/>
+            <rdf:Description rdf:about="&geo;kos/transportes/situacion-de-via/elevado"/>
+            <rdf:Description rdf:about="&geo;kos/transportes/situacion-de-via/subterraneo"/>
+            <rdf:Description rdf:about="&geo;kos/transportes/situacion-de-via/superficial"/>
         </owl:distinctMembers>
     </rdf:Description>
 </rdf:RDF>
