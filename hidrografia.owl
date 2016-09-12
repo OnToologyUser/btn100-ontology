@@ -30,7 +30,7 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#">
-    <owl:Ontology rdf:about="&geo;ontology/hidrography.owl">
+    <owl:Ontology rdf:about="&geo;ontology/hidrografia.owl">
         <owl:imports rdf:resource="&geo;ontology/hydro.owl"/>
         <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
     </owl:Ontology>
