@@ -18,20 +18,11 @@
     <rdfs:label xml:lang="es">Linea eléctrica</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A0">
-    <owl:intersectionOf rdf:nodeID="A1"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/CentralTerminca">
     <rdfs:comment xml:lang="es"> instalación empleada en la generación de energía eléctrica a partir de la energía liberada en forma de calor, normalmente mediante la combustión de combustibles fósiles como petróleo, gas natural o carbón. Este calor es empleado por un ciclo termodinámico convencional para mover un alternador y producir energía eléctrica.</rdfs:comment>
     <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/CentralElectrica"/>
     <rdfs:label xml:lang="es">Central términca</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A2">
-    <owl:hasValue rdf:resource="http://geo.linkeddata.es/kos/supply-net/situacion"/>
-    <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://geo.linkeddata.es/kos/supply-net/situacion/superficial">
     <skos:inScheme rdf:resource="http://geo.linkeddata.es/kos/supply-net/situacion"/>
@@ -49,19 +40,24 @@
     <rdfs:label xml:lang="es">Linea eléctrica de baja tensión</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
+  <rdf:Description rdf:nodeID="A0">
+    <rdf:rest rdf:nodeID="A1"/>
+    <rdf:first rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/EstacionDeTelecomunicacion">
     <rdfs:comment xml:lang="es">Centro que consta de todas las instalaciones necesarias para transmitir y recibir señales que aseguren un servicio de radiotelecomunicación determinado.</rdfs:comment>
     <rdfs:label xml:lang="es">Estación de telecomunicación</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A3">
-    <rdf:rest rdf:nodeID="A4"/>
-    <rdf:first rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/CentralElectrica">
     <rdfs:comment xml:lang="es">Conjunto de instalaciones utilizadas directa e indirectamente para la producción de energía eléctrica.</rdfs:comment>
     <rdfs:label xml:lang="es">Central eléctrica</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A2">
+    <owl:hasValue rdf:resource="http://geo.linkeddata.es/kos/supply-net/situacion"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://geo.linkeddata.es/kos/supply-net/tipoDeComponente/emisor">
     <skos:inScheme rdf:resource="http://geo.linkeddata.es/kos/supply-net/tipoDeComponente"/>
@@ -90,6 +86,14 @@ http://geo.linkeddata.es/kos/supply-net/situacion/superficial</rdfs:comment>
     <rdfs:label xml:lang="es">Central eólica</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
+  <rdf:Description rdf:nodeID="A3">
+    <owl:distinctMembers rdf:nodeID="A4"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A5">
+    <owl:intersectionOf rdf:nodeID="A6"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/CentralCicloCombinado">
     <rdfs:comment xml:lang="es"> La central térmica de ciclo combinado es aquella donde se genera electricidad mediante la utilización conjunta de dos turbinas:
 
@@ -99,10 +103,6 @@ http://geo.linkeddata.es/kos/supply-net/situacion/superficial</rdfs:comment>
     <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/CentralElectrica"/>
     <rdfs:label xml:lang="es">Central de ciclo combinado</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A5">
-    <rdf:rest rdf:nodeID="A6"/>
-    <rdf:first rdf:resource="http://geo.linkeddata.es/kos/supply-net/situacion/subterraneo"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/dc/terms/source">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
@@ -119,20 +119,20 @@ http://geo.linkeddata.es/kos/supply-net/situacion/superficial</rdfs:comment>
     <rdfs:label xml:lang="es">Central solar</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
+  <rdf:Description rdf:nodeID="A7">
+    <rdf:rest rdf:nodeID="A8"/>
+    <rdf:first rdf:resource="http://geo.linkeddata.es/kos/supply-net/situacion/subterraneo"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/situacion">
-    <rdfs:range rdf:nodeID="A0"/>
+    <rdfs:range rdf:nodeID="A5"/>
     <rdfs:domain rdf:resource="http://geo.linkeddata.es/ontology/ConduccionDeCombustible"/>
     <rdfs:comment xml:lang="es">indica la posición del tramo sobre la superficie</rdfs:comment>
     <rdfs:label xml:lang="es">situación</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A7">
-    <owl:distinctMembers rdf:nodeID="A8"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A4">
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:first rdf:nodeID="A9"/>
+  <rdf:Description rdf:nodeID="A9">
+    <owl:intersectionOf rdf:nodeID="A0"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/DepositoDeCombustible">
     <rdfs:comment xml:lang="es">Contenedor seguro destinado al almacenamiento de líquidos o gases inflamables para su posterior distribución en algunos casos por medio de oleoductos o gaseoductos.</rdfs:comment>
@@ -149,11 +149,6 @@ Puede tomar los valores:
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A9">
-    <owl:hasValue rdf:resource="http://geo.linkeddata.es/kos/supply-net/tipoDeComponente"/>
-    <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/EstacionTelefonica">
     <rdfs:comment xml:lang="es">Centro que consta de todas las instalaciones necesarias para transmitir y recibir señales que aseguren servicios telefónico.</rdfs:comment>
     <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/EstacionDeTelecomunicacion"/>
@@ -164,6 +159,11 @@ Puede tomar los valores:
     <rdfs:comment xml:lang="es">Conjunto de instalaciones utilizadas para la reducción de la tensión o el voltaje de las líneas eléctricas.</rdfs:comment>
     <rdfs:label xml:lang="es">Subestación eléctrica</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A10">
+    <owl:hasValue rdf:resource="http://geo.linkeddata.es/kos/supply-net/tipoDeComponente"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/CentralNuclear">
     <rdfs:comment xml:lang="es">instalación industrial empleada para la generación de energía eléctrica a partir de energía nuclear. </rdfs:comment>
@@ -177,25 +177,21 @@ Puede tomar los valores:
     <rdfs:label xml:lang="es">Central hidráulica</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A10">
-    <owl:intersectionOf rdf:nodeID="A3"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/EstacionDeRadio">
     <rdfs:comment xml:lang="es">Centro que consta de todas las instalaciones necesarias para transmitir y recibir señales que aseguren un servicio de radio.</rdfs:comment>
     <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/EstacionDeTelecomunicacion"/>
     <rdfs:label xml:lang="es">Estación de radio</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A1">
-    <rdf:rest rdf:nodeID="A11"/>
-    <rdf:first rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/componenteDeTelecomunicacion">
-    <rdfs:range rdf:nodeID="A10"/>
+    <rdfs:range rdf:nodeID="A9"/>
     <rdfs:domain rdf:resource="http://geo.linkeddata.es/ontology/EstacionDeTelecomunicacion"/>
     <rdfs:label xml:lang="es">componente de telecomunicación</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A11">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A2"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://geo.linkeddata.es/kos/supply-net/situacion/elevado">
     <skos:inScheme rdf:resource="http://geo.linkeddata.es/kos/supply-net/situacion"/>
@@ -213,12 +209,20 @@ Puede tomar los valores:
     <rdfs:label xml:lang="es">Linea eléctrica de alta tensión</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
+  <rdf:Description rdf:nodeID="A4">
+    <rdf:rest rdf:nodeID="A7"/>
+    <rdf:first rdf:resource="http://geo.linkeddata.es/kos/supply-net/situacion/elevado"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Gaseoducto">
     <rdfs:comment xml:lang="es">Tubería de grueso calibre y gran longitud para conducir a distancia gas combustible, procedente por lo general de emanaciones naturales.</rdfs:comment>
     <terms:source xml:lang="es">Diccionario de la Real Academia Espannola</terms:source>
     <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/ConduccionDeCombustible"/>
     <rdfs:label xml:lang="es">Gaseoducto</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A6">
+    <rdf:rest rdf:nodeID="A11"/>
+    <rdf:first rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/Oleoducto">
     <rdfs:comment xml:lang="es">Tubería provista de bombas y otros aparatos para conducir el petróleo a larga distancia.</rdfs:comment>
@@ -227,15 +231,15 @@ Puede tomar los valores:
     <rdfs:label xml:lang="es">Oleoducto</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
+  <rdf:Description rdf:nodeID="A1">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A10"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://geo.linkeddata.es/kos/supply-net/situacion/subterraneo">
     <skos:inScheme rdf:resource="http://geo.linkeddata.es/kos/supply-net/situacion"/>
     <skos:prefLabel xml:lang="es">subterráneo</skos:prefLabel>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A8">
-    <rdf:rest rdf:nodeID="A5"/>
-    <rdf:first rdf:resource="http://geo.linkeddata.es/kos/supply-net/situacion/elevado"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/ConduccionDeCombustible">
     <rdfs:comment xml:lang="es">Tubería e instalaciones conexas utilizadas para el transporte de combustibles.</rdfs:comment>
@@ -243,13 +247,9 @@ Puede tomar los valores:
     <rdfs:label xml:lang="es">Conducción de combustible</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A6">
+  <rdf:Description rdf:nodeID="A8">
     <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
     <rdf:first rdf:resource="http://geo.linkeddata.es/kos/supply-net/situacion/superficial"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A11">
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:first rdf:nodeID="A2"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://geo.linkeddata.es/ontology/supply-net.owl#">
     <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>

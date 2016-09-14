@@ -1,7 +1,7 @@
 digraph ar2dtool_diagram { 
 rankdir=LR;
 size="1501"
-node [shape = rectangle, color="orange"]; "base:EstacionDeTelecomunicacion" "base:LineaElectricaDeBajaTension" "4a7d03ef:1570a53c2e2:-7ffc" "base:ConduccionDeCombustible" "4a7d03ef:1570a53c2e2:-7ff8" "base:LineaElectricaDeAltaTension" "4a7d03ef:1570a53c2e2:-7ff0" "skos:OrderedCollection" "skos:Collection" "skos:ConceptScheme" "skos:Concept" ; /*classes style*/
+node [shape = rectangle, color="orange"]; "base:EstacionDeTelecomunicacion" "70d9e904:15729f90315:-7ffc" "base:LineaElectricaDeBajaTension" "base:ConduccionDeCombustible" "70d9e904:15729f90315:-7ff8" "base:LineaElectricaDeAltaTension" "70d9e904:15729f90315:-7ff0" "skos:OrderedCollection" "skos:Collection" "skos:ConceptScheme" "skos:Concept" ; /*classes style*/
 	"situacion:subterraneo" -> "supply-net:situacion" [ label = "skos:inScheme" ];
 	"skos:definition" -> "skos:note" [ label = "rdfs:subPropertyOf" ];
 	"situacion:elevado" -> "supply-net:situacion" [ label = "skos:inScheme" ];
@@ -23,22 +23,22 @@ node [shape = rectangle, color="orange"]; "base:EstacionDeTelecomunicacion" "bas
 	"http://www.w3.org/2004/02/skos/core" -> "http://www.w3.org/TR/skos-reference/" [ label = "rdfs:seeAlso" ];
 	"skos:narrowerTransitive" -> "skos:semanticRelation" [ label = "rdfs:subPropertyOf" ];
 	"NULL" -> "situacion:superficial" [ label = "rdf:first" ];
+	"NULL" -> "70d9e904:15729f90315:-7ff1" [ label = "rdf:rest" ];
 	"NULL" -> "situacion:elevado" [ label = "rdf:first" ];
-	"NULL" -> "4a7d03ef:1570a53c2e2:-7ff9" [ label = "rdf:rest" ];
-	"NULL" -> "4a7d03ef:1570a53c2e2:-7ff3" [ label = "owl:distinctMembers" ];
+	"NULL" -> "70d9e904:15729f90315:-7fee" [ label = "rdf:rest" ];
 	"NULL" -> "situacion:subterraneo" [ label = "rdf:first" ];
-	"NULL" -> "4a7d03ef:1570a53c2e2:-7ff5" [ label = "rdf:rest" ];
+	"NULL" -> "70d9e904:15729f90315:-7ffb" [ label = "owl:intersectionOf" ];
+	"NULL" -> "70d9e904:15729f90315:-7fef" [ label = "owl:unionOf" ];
+	"NULL" -> "70d9e904:15729f90315:-7ff7" [ label = "owl:intersectionOf" ];
+	"NULL" -> "70d9e904:15729f90315:-7ff9" [ label = "rdf:rest" ];
 	"NULL" -> "skos:Concept" [ label = "rdf:first" ];
 	"NULL" -> "supply-net:situacion" [ label = "owl:hasValue" ];
-	"NULL" -> "4a7d03ef:1570a53c2e2:-7ff2" [ label = "rdf:rest" ];
 	"NULL" -> "rdf:nil" [ label = "rdf:rest" ];
-	"NULL" -> "4a7d03ef:1570a53c2e2:-7fef" [ label = "owl:unionOf" ];
+	"NULL" -> "70d9e904:15729f90315:-7ff5" [ label = "rdf:rest" ];
 	"NULL" -> "supply-net:tipoDeComponente" [ label = "owl:hasValue" ];
-	"NULL" -> "4a7d03ef:1570a53c2e2:-7ff7" [ label = "owl:intersectionOf" ];
-	"NULL" -> "4a7d03ef:1570a53c2e2:-7ffb" [ label = "owl:intersectionOf" ];
-	"NULL" -> "4a7d03ef:1570a53c2e2:-7ff1" [ label = "rdf:rest" ];
+	"NULL" -> "70d9e904:15729f90315:-7ff2" [ label = "rdf:rest" ];
+	"NULL" -> "70d9e904:15729f90315:-7ff3" [ label = "owl:distinctMembers" ];
 	"NULL" -> "skos:Collection" [ label = "rdf:first" ];
-	"NULL" -> "4a7d03ef:1570a53c2e2:-7fee" [ label = "rdf:rest" ];
 	"NULL" -> "skos:inScheme" [ label = "owl:onProperty" ];
 	"skos:prefLabel" -> "rdfs:label" [ label = "rdfs:subPropertyOf" ];
 	"skos:narrowMatch" -> "skos:narrower" [ label = "rdfs:subPropertyOf" ];
@@ -57,11 +57,11 @@ node [shape = rectangle, color="orange"]; "base:EstacionDeTelecomunicacion" "bas
 	"skos:scopeNote" -> "skos:note" [ label = "rdfs:subPropertyOf" ];
 	"skos:OrderedCollection" -> "rdf:List" [ label = "skos:memberList" ];
 	"skos:ConceptScheme" -> "skos:Concept" [ label = "skos:hasTopConcept" ];
-	"base:EstacionDeTelecomunicacion" -> "4a7d03ef:1570a53c2e2:-7ffc" [ label = "base:componenteDeTelecomunicacion" ];
+	"base:EstacionDeTelecomunicacion" -> "70d9e904:15729f90315:-7ffc" [ label = "base:componenteDeTelecomunicacion" ];
 	"skos:Concept" -> "skos:Concept" [ label = "skos:semanticRelation" ];
 	"skos:Concept" -> "skos:ConceptScheme" [ label = "skos:topConceptOf" ];
-	"skos:Collection" -> "4a7d03ef:1570a53c2e2:-7ff0" [ label = "skos:member" ];
-	"base:ConduccionDeCombustible" -> "4a7d03ef:1570a53c2e2:-7ff8" [ label = "base:situacion" ];
+	"skos:Collection" -> "70d9e904:15729f90315:-7ff0" [ label = "skos:member" ];
+	"base:ConduccionDeCombustible" -> "70d9e904:15729f90315:-7ff8" [ label = "base:situacion" ];
 	"owl:Thing" -> "skos:ConceptScheme" [ label = "skos:inScheme" ];
 
 }

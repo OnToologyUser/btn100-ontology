@@ -257,16 +257,16 @@ ontology:Canyo
       rdfs:subClassOf ontology:CanalAguasMarinas , ontology:ZonaHumeda ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:onProperty ontology:estaEn ;
-                owl:someValuesFrom ontology:Marisma
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
                 owl:onProperty ontology:comunica_con ;
                 owl:someValuesFrom
                         [ a       owl:Class ;
                           owl:intersectionOf (ontology:Albufera ontology:Mar ontology:Marisma)
                         ]
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty ontology:estaEn ;
+                owl:someValuesFrom ontology:Marisma
               ] ;
       dc:source "Vazquez Maure F.; Martin Lopez J. (1987) Vocabulario de terminos geograficos. Ed. Ministerio de Obras Publicas y Urbanismo. Instituto Geografico Nacional. Madrid. ISBN: 84-505-4929-9."^^xsd:string .
 
@@ -351,6 +351,9 @@ competenciaAeroportuaria:militar
       rdfs:comment "competencia aeroportuaria de explotación militar"@es ;
       skos:inScheme transportes:competenciaAeroportuaria ;
       skos:prefLabel "militar"@es .
+
+[]    a       owl:AllDifferent ;
+      owl:distinctMembers (situacionDeVia:elevado situacionDeVia:subterraneo situacionDeVia:superficial) .
 
 ontology:almacena
       a       owl:ObjectProperty ;
@@ -481,11 +484,19 @@ ontology:competenciaDeVia
                           ])
               ] .
 
+[]    a       owl:AllDifferent ;
+      owl:distinctMembers (electrificacion:electrificado electrificacion:noElectrificado) .
+
 ontology:AguasSuperficiales
       a       owl:Class ;
       rdfs:comment "Inland waters, except groundwater; transitional waters and coastal waters, except in respect of chemical status for which it shall also include territorial waters."^^xsd:string , "Aguas que incluyen las aguas continentales, excepto las aguas subterraneas; las aguas de transicion y las aguas costeras, y, en lo que se refiere al estado quimico, tambien las aguas territoriales"^^xsd:string ;
       rdfs:label "Masa de agua superficial"@es , "Aguas Superficiales"@es , "Surface water"@en ;
       rdfs:subClassOf ontology:AguasContinentales ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty ontology:es_distribuida ;
+                owl:someValuesFrom ontology:Distribucion
+              ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:onProperty ontology:es_transvasada ;
@@ -495,11 +506,6 @@ ontology:AguasSuperficiales
               [ a       owl:Restriction ;
                 owl:onProperty ontology:es_distribuida ;
                 owl:someValuesFrom ontology:CanalAguasContinentales
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:onProperty ontology:es_distribuida ;
-                owl:someValuesFrom ontology:Distribucion
               ] ;
       ontology:provenance "Directiva Marco del Agua. Union Europea"^^xsd:string ;
       dc:source "Directiva Marco del Agua. Union Europea"^^xsd:string , "European Parliament and the Council of the European Union. DIRECTIVE 2000/60/EC OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL for establishing a framework for Community action in the field of water policy. Brussels, 23 October 2000. p 72."^^xsd:string ;
@@ -662,16 +668,16 @@ ontology:CorrienteSubterranea
       rdfs:subClassOf ontology:AguasSubterraneas ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
+                owl:onProperty ontology:es_originado_por ;
+                owl:someValuesFrom ontology:Sumidero
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
                 owl:onProperty ontology:origina ;
                 owl:someValuesFrom
                         [ a       owl:Class ;
                           owl:unionOf (ontology:Acuifero ontology:Acuitardo)
                         ]
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:onProperty ontology:es_originado_por ;
-                owl:someValuesFrom ontology:Sumidero
               ] ;
       ontology:provenance "Glosario Hidrologico Internacional - UNESCO"^^xsd:string .
 
@@ -804,15 +810,15 @@ ontology:Dren
                           ])
               ] .
 
-[]    a       owl:AllDifferent ;
-      owl:distinctMembers (competenciaAeroportuaria:aena competenciaAeroportuaria:militar competenciaAeroportuaria:privada) .
-
 ontology:Estuario
       a       owl:Class ;
       rdfs:comment "Ancha boca de rio, donde la depresion del cauce permite la entrada de las aguas marinas en la marea, por ello, se produce mezcla de agua dulce y salada"^^xsd:string , "The wide part of a river where it nears the sea; fresh and salt water mix"^^xsd:string ;
       rdfs:label "Estuario"@es ;
       rdfs:subClassOf ontology:AguasDeTransicion ;
       dc:source "Vazquez Maure F.; Martin Lopez J. (1987) Vocabulario de terminos geograficos. Ed. Ministerio de Obras Publicas y Urbanismo. Instituto Geografico Nacional. Madrid. ISBN: 84-505-4929-9 & WordNet"^^xsd:string .
+
+[]    a       owl:AllDifferent ;
+      owl:distinctMembers (estadoDeUso2:abandonado estadoDeUso2:enConstruccion estadoDeUso2:enUso) .
 
 anchoDeVia:iberico
       a       owl:NamedIndividual , skos:Concept ;
@@ -890,9 +896,6 @@ ontology:inunda
                 owl:unionOf (ontology:Estero ontology:Marisma ontology:ZonaEncharcable ontology:ZonaHumeda)
               ] .
 
-[]    a       owl:AllDifferent ;
-      owl:distinctMembers (estadoDeUso:abandonado estadoDeUso:enConstruccion estadoDeUso:enUso) .
-
 ontology:Rio
       a       owl:Class ;
       rdfs:comment "A body of inland water flowing for the most part on the surface of the land but which may flow underground for part of its course."@en , "Masa de agua continental que fluye en su mayor parte sobre la superficie del suelo, pero que puede fluir bajo tierra en parte de su curso"@es ;
@@ -900,18 +903,16 @@ ontology:Rio
       rdfs:subClassOf ontology:AguasCorrientesNaturales ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom ontology:Captacion ;
-                owl:onProperty ontology:es_capturado
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
                 owl:onProperty ontology:es_almacenado_en ;
                 owl:someValuesFrom ontology:Embalse
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:onProperty ontology:puede_fluir_como ;
-                owl:someValuesFrom ontology:CorrienteSubterranea
+                owl:allValuesFrom
+                        [ a       owl:Class ;
+                          owl:unionOf (ontology:Marisma ontology:ZonaEncharcable ontology:ZonaHumeda)
+                        ] ;
+                owl:onProperty ontology:inunda
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
@@ -930,14 +931,6 @@ ontology:Rio
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom
-                        [ a       owl:Class ;
-                          owl:unionOf (ontology:Marisma ontology:ZonaEncharcable ontology:ZonaHumeda)
-                        ] ;
-                owl:onProperty ontology:inunda
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
                 owl:onProperty ontology:actua_de_emisario_de ;
                 owl:someValuesFrom ontology:Lago
               ] ;
@@ -951,13 +944,23 @@ ontology:Rio
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:onProperty ontology:estaEn ;
-                owl:someValuesFrom ontology:Barranco
+                owl:allValuesFrom ontology:AguasCorrientesNaturales ;
+                owl:onProperty ontology:tiene_afluente
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom ontology:AguasCorrientesNaturales ;
-                owl:onProperty ontology:tiene_afluente
+                owl:allValuesFrom ontology:Captacion ;
+                owl:onProperty ontology:es_capturado
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty ontology:puede_fluir_como ;
+                owl:someValuesFrom ontology:CorrienteSubterranea
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty ontology:estaEn ;
+                owl:someValuesFrom ontology:Barranco
               ] ;
       ontology:provenance "Curso de agua principal - Catalogo de fenomenos. Proyecto GEOALEX"@es , "Río - Directiva Marco del Agua. Union Europea"@es , "River - Water Framework Directive. European Union"@en ;
       dc:source "Water Framework Directive. European Union"@en ;
@@ -1053,6 +1056,14 @@ ontology:Salina
       rdfs:label "Salina"@es ;
       rdfs:subClassOf ontology:Recinto , ontology:ZonaHumeda ;
       rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty ontology:es_alimentada_por ;
+                owl:someValuesFrom
+                        [ a       owl:Class ;
+                          owl:unionOf (ontology:AguasMarinas ontology:Manantial)
+                        ]
+              ] ;
+      rdfs:subClassOf
               [ a       owl:Class ;
                 owl:intersectionOf ([ a       owl:Restriction ;
                             owl:onProperty ontology:esta_proxima_a ;
@@ -1061,14 +1072,6 @@ ontology:Salina
                             owl:cardinality "1"^^xsd:nonNegativeInteger ;
                             owl:onProperty ontology:esta_proxima_a
                           ])
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:onProperty ontology:es_alimentada_por ;
-                owl:someValuesFrom
-                        [ a       owl:Class ;
-                          owl:unionOf (ontology:AguasMarinas ontology:Manantial)
-                        ]
               ] ;
       dc:source "Fontanillo, E. (1986) Diccionario de Geografia. Ed. Anaya. Madrid."^^xsd:string .
 
@@ -1093,6 +1096,9 @@ situacion:superficial
       a       owl:NamedIndividual , skos:Concept ;
       skos:inScheme supply-net:situacion ;
       skos:prefLabel "superficial"@es .
+
+[]    a       owl:AllDifferent ;
+      owl:distinctMembers (acceso:libre acceso:peaje) .
 
 ontology:es_alimentada_por
       a       owl:ObjectProperty ;
@@ -1239,8 +1245,11 @@ ontology:Arroyo
       rdfs:subClassOf ontology:AguasCorrientesNaturales ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom ontology:AguasCorrientesNaturales ;
-                owl:onProperty ontology:tiene_afluente
+                owl:onProperty ontology:es_alimentada_por ;
+                owl:someValuesFrom
+                        [ a       owl:Class ;
+                          owl:unionOf (ontology:Glaciar ontology:MasaDeHielo)
+                        ]
               ] ;
       rdfs:subClassOf
               [ a       owl:Class ;
@@ -1251,6 +1260,11 @@ ontology:Arroyo
                             owl:cardinality "1"^^xsd:nonNegativeInteger ;
                             owl:onProperty ontology:es_almacenado_en
                           ])
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom ontology:AguasCorrientesNaturales ;
+                owl:onProperty ontology:tiene_afluente
               ] ;
       rdfs:subClassOf
               [ a       owl:Class ;
@@ -1264,14 +1278,6 @@ ontology:Arroyo
                             owl:cardinality "1"^^xsd:nonNegativeInteger ;
                             owl:onProperty ontology:es_originado_por
                           ])
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:onProperty ontology:es_alimentada_por ;
-                owl:someValuesFrom
-                        [ a       owl:Class ;
-                          owl:unionOf (ontology:Glaciar ontology:MasaDeHielo)
-                        ]
               ] ;
       ontology:provenance "Curso de agua secundario - Catalogo de fenomenos. Proyecto GEOALEX"^^xsd:string ;
       dc:source "Vazquez Maure F.; Martin Lopez J. (1987) Vocabulario de terminos geograficos. Ed. Ministerio de Obras Publicas y Urbanismo. Instituto Geografico Nacional. Madrid. ISBN: 84-505-4929-9."^^xsd:string .
@@ -1351,9 +1357,6 @@ ontology:Humedal
               ] ;
       dc:source "Gonzalez Bernaldez, Fernando. (1992) Los paisajes del agua. Terminologia popular de los humedales. Madrid: J.M. Reyero Editor. 257 p. ISBN: 84-604-3756-6."^^xsd:string .
 
-[]    a       owl:AllDifferent ;
-      owl:distinctMembers (rutaTenT:rutaNoTranseuropea rutaTenT:rutaTranseuropea) .
-
 ontology:PasoANivel
       a       owl:Class ;
       rdfs:comment "Cruce entre carretera y ferrocarril, que se produce al mismo nivel."@es ;
@@ -1418,11 +1421,6 @@ ontology:AguasQuietasNaturales
       rdfs:label "Natural standing water"@en , "Aguas quietas naturales"@es ;
       rdfs:subClassOf ontology:AguasQuietas ;
       rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom ontology:AguasCorrientesNaturales ;
-                owl:onProperty ontology:es_alimentada_por
-              ] ;
-      rdfs:subClassOf
               [ a       owl:Class ;
                 owl:intersectionOf ([ a       owl:Restriction ;
                             owl:onProperty ontology:es_originado_por ;
@@ -1434,6 +1432,11 @@ ontology:AguasQuietasNaturales
                             owl:cardinality "1"^^xsd:nonNegativeInteger ;
                             owl:onProperty ontology:es_originado_por
                           ])
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom ontology:AguasCorrientesNaturales ;
+                owl:onProperty ontology:es_alimentada_por
               ] ;
       dc:source "Elaboracion propia"^^xsd:string ;
       owl:equivalentClass
@@ -1514,9 +1517,6 @@ ontology:AguasSaladas
       rdfs:label "Aguas saladas"@es ;
       rdfs:subClassOf ontology:Aguas ;
       dc:source "Diccionario de la Real Academia Espannola"^^xsd:string .
-
-[]    a       owl:AllDisjointClasses ;
-      owl:members (ontology:VerticeGeodesicoDeOrdenInferior ontology:VerticeGeodesicoRegcan95 ontology:VerticeGeodesicoRegente) .
 
 ontology:vertiente
       a       owl:DatatypeProperty ;
@@ -1671,9 +1671,6 @@ ontology:Pennon
       rdfs:subClassOf ontology:Morfologia ;
       dc:source "Diccionario de la Real Academia Española"@es .
 
-[]    a       owl:AllDifferent ;
-      owl:distinctMembers (situacion:elevado situacion:subterraneo situacion:superficial) .
-
 ontology:categoria
       a       owl:DatatypeProperty ;
       rdfs:domain ontology:AguasSubterraneas ;
@@ -1804,13 +1801,6 @@ ontology:situacion
       rdfs:domain ontology:ConduccionDeCombustible , ontology:AguasQuietasArtificiales ;
       rdfs:label "situación"@es ;
       rdfs:range
-              [ a       owl:Class ;
-                owl:intersectionOf (skos:Concept [ a       owl:Restriction ;
-                            owl:hasValue supply-net:situacion ;
-                            owl:onProperty skos:inScheme
-                          ])
-              ] ;
-      rdfs:range
               [ a       rdfs:Datatype ;
                 owl:oneOf
                         [ a       rdf:List ;
@@ -1829,6 +1819,13 @@ ontology:situacion
                                             ]
                                   ]
                         ]
+              ] ;
+      rdfs:range
+              [ a       owl:Class ;
+                owl:intersectionOf (skos:Concept [ a       owl:Restriction ;
+                            owl:hasValue supply-net:situacion ;
+                            owl:onProperty skos:inScheme
+                          ])
               ] .
 
 ontology:Vado
@@ -2065,6 +2062,9 @@ ontology:Caz
       rdfs:subClassOf ontology:Acequia ;
       dc:source "Diccionario de la Real Academia Espannola"^^xsd:string .
 
+[]    a       owl:AllDifferent ;
+      owl:distinctMembers (situacion:elevado situacion:subterraneo situacion:superficial) .
+
 ontology:EstacionDeAutobuses
       a       owl:Class ;
       rdfs:label "Estación de autobuses "@es , "Bus station"@en ;
@@ -2155,13 +2155,13 @@ ontology:Tuberia
       rdfs:subClassOf ontology:Conducto ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:onProperty ontology:conduce ;
-                owl:someValuesFrom ontology:AguasContinentales
+                owl:onProperty ontology:alimenta_a ;
+                owl:someValuesFrom ontology:FuenteArtificial
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:onProperty ontology:alimenta_a ;
-                owl:someValuesFrom ontology:FuenteArtificial
+                owl:onProperty ontology:conduce ;
+                owl:someValuesFrom ontology:AguasContinentales
               ] ;
       dc:source "WordNet"@en , "Diccionario de la Real Academia Española"@es .
 
@@ -2325,19 +2325,19 @@ ontology:Afluente
       dc:source "Diccionario de la Real Academia Espannola"^^xsd:string ;
       owl:equivalentClass
               [ a       owl:Class ;
+                owl:intersectionOf (ontology:Rio [ a       owl:Restriction ;
+                            owl:allValuesFrom ontology:Rio ;
+                            owl:onProperty ontology:desagua_en
+                          ])
+              ] ;
+      owl:equivalentClass
+              [ a       owl:Class ;
                 owl:intersectionOf ([ a       owl:Restriction ;
                             owl:allValuesFrom ontology:AguasCorrientesNaturales ;
                             owl:onProperty ontology:es_afluente_de
                           ] [ a       owl:Restriction ;
                             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
                             owl:onProperty ontology:es_afluente_de
-                          ])
-              ] ;
-      owl:equivalentClass
-              [ a       owl:Class ;
-                owl:intersectionOf (ontology:Rio [ a       owl:Restriction ;
-                            owl:allValuesFrom ontology:Rio ;
-                            owl:onProperty ontology:desagua_en
                           ])
               ] .
 
@@ -2440,6 +2440,9 @@ ontology:CentralElectrica
       rdfs:label "Central eléctrica"@es ;
       rdfs:subClassOf geosparql:Feature .
 
+[]    a       owl:AllDisjointClasses ;
+      owl:members (ontology:VerticeGeodesicoDeOrdenInferior ontology:VerticeGeodesicoRegcan95 ontology:VerticeGeodesicoRegente) .
+
 ontology:Albufera
       a       owl:Class ;
       rdfs:comment "Laguna litoral, en costa baja, de agua salina o ligeramente salobre, separada del mar por una lengua o cordon de arenas"@es ;
@@ -2457,13 +2460,13 @@ ontology:Albufera
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:onProperty ontology:esta_proxima_a ;
-                owl:someValuesFrom ontology:AguasMarinas
+                owl:onProperty ontology:es_comunicada_por ;
+                owl:someValuesFrom ontology:Canyo
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:onProperty ontology:es_comunicada_por ;
-                owl:someValuesFrom ontology:Canyo
+                owl:onProperty ontology:esta_proxima_a ;
+                owl:someValuesFrom ontology:AguasMarinas
               ] ;
       dc:source "Diccionario de la Real Academia Española"@es .
 
@@ -2535,6 +2538,9 @@ ontology:captura
       rdfs:range ontology:Rio ;
       rdfs:subPropertyOf ontology:conecta_con .
 
+[]    a       owl:AllDifferent ;
+      owl:distinctMembers (rutaTenT:rutaNoTranseuropea rutaTenT:rutaTranseuropea) .
+
 ontology:Efluente
       a       owl:Class ;
       rdfs:comment "Derivacion de un curso de agua principal o de un lago."^^xsd:string ;
@@ -2567,6 +2573,9 @@ categoriaDeCurvaDeNivel:depresionMaestra
       rdfs:comment "Curva que define una concavidad del terreno cada 100 m."@es ;
       rdfs:label "depresión maestra"@es ;
       skos:inScheme geodesy:categoriaDeCurvaDeNivel .
+
+[]    a       owl:AllDifferent ;
+      owl:distinctMembers (estadoDeUso:abandonado estadoDeUso:enConstruccion estadoDeUso:enUso) .
 
 ontology:InstalacionDeportiva
       a       owl:Class ;
@@ -2635,10 +2644,7 @@ ontology:longitud
               wgs84_pos:long .
 
 []    a       owl:AllDifferent ;
-      owl:distinctMembers (acceso:libre acceso:peaje) .
-
-[]    a       owl:AllDifferent ;
-      owl:distinctMembers (electrificacion:electrificado electrificacion:noElectrificado) .
+      owl:distinctMembers (tipoDeItinerario:itinerarioEuropeo tipoDeItinerario:itinerarioNoEuropeo) .
 
 transportes:numeroDeVias
       a       owl:NamedIndividual , skos:ConceptScheme ;
@@ -2767,9 +2773,6 @@ ontology:Guadi
       rdfs:subClassOf ontology:Rio ;
       dc:source "Novo, P.; Chicarro, F. (1957) Diccionario de geologia y ciencias afines. Tomo 1. Ed. Labor, S.A. Barcelona"^^xsd:string .
 
-[]    a       owl:AllDifferent ;
-      owl:distinctMembers (situacionDeVia:elevado situacionDeVia:subterraneo situacionDeVia:superficial) .
-
 ontology:iataCode
       a       owl:DatatypeProperty ;
       rdfs:comment "El código de aeropuertos de IATA está formado por grupos de tres letras, que designan a cada aeropuerto del mundo, asignadas por la Asociación Internacional de Transporte Aéreo (International Air Transport Association, IATA)."@es ;
@@ -2851,9 +2854,6 @@ ontology:precedeA
               ] ;
       rdfs:subPropertyOf ontology:esta_proxima_a ;
       owl:inverseOf ontology:sigueA .
-
-[]    a       owl:AllDifferent ;
-      owl:distinctMembers (estadoDeUso2:abandonado estadoDeUso2:enConstruccion estadoDeUso2:enUso) .
 
 wgs84_pos:lat
       a       owl:AnnotationProperty , owl:DatatypeProperty ;
@@ -3167,16 +3167,16 @@ ontology:Lago
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:onProperty ontology:dispone_de_emisario ;
-                owl:someValuesFrom ontology:Rio
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
                 owl:onProperty ontology:es_conectado_con ;
                 owl:someValuesFrom
                         [ a       owl:Class ;
                           owl:unionOf (ontology:Mar ontology:Rio)
                         ]
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty ontology:dispone_de_emisario ;
+                owl:someValuesFrom ontology:Rio
               ] ;
       dc:source "Fontanillo, E. (1986) Diccionario de Geografia. Ed. Anaya. Madrid & Diccionario de la Real Academia Espannola"^^xsd:string .
 
@@ -3392,6 +3392,11 @@ ontology:Captacion
       rdfs:label "Captación"@es ;
       rdfs:subClassOf ontology:HidronimoPuntual ;
       rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty ontology:actua_de_emisario_de ;
+                owl:someValuesFrom ontology:Rio
+              ] ;
+      rdfs:subClassOf
               [ a       owl:Class ;
                 owl:intersectionOf ([ a       owl:Restriction ;
                             owl:onProperty ontology:captura ;
@@ -3400,11 +3405,6 @@ ontology:Captacion
                             owl:cardinality "2"^^xsd:nonNegativeInteger ;
                             owl:onProperty ontology:captura
                           ])
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:onProperty ontology:actua_de_emisario_de ;
-                owl:someValuesFrom ontology:Rio
               ] ;
       dc:source "Novo, P.; Chicarro, F. (1957) Diccionario de Geologia y Ciencias afines. Tomo 1. Ed. Labor, S.A. Barcelona"@es .
 
@@ -3436,6 +3436,19 @@ ontology:AguasCorrientesNaturales
       rdfs:subClassOf ontology:AguasCorrientes ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
+                owl:onProperty ontology:deposita_en ;
+                owl:someValuesFrom ontology:Aluvion
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom
+                        [ a       owl:Class ;
+                          owl:unionOf (ontology:AguasCorrientes ontology:AguasQuietasNaturales ontology:Embalse ontology:Manantial)
+                        ] ;
+                owl:onProperty ontology:es_alimentada_por
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
                 owl:allValuesFrom
                         [ a       owl:Class ;
                           owl:unionOf (ontology:AguasCorrientes ontology:AguasQuietas)
@@ -3449,19 +3462,6 @@ ontology:AguasCorrientesNaturales
                         [ a       owl:Class ;
                           owl:unionOf (ontology:Glaciar ontology:Manantial ontology:MasaDeHielo ontology:Nacimiento)
                         ]
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:onProperty ontology:deposita_en ;
-                owl:someValuesFrom ontology:Aluvion
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom
-                        [ a       owl:Class ;
-                          owl:unionOf (ontology:AguasCorrientes ontology:AguasQuietasNaturales ontology:Embalse ontology:Manantial)
-                        ] ;
-                owl:onProperty ontology:es_alimentada_por
               ] ;
       ontology:provenance "Aguas naturales - Catalogo de entidades para el Nomenclator de Base Topografica Nacional 1:25000 (BTN25). Instituto Geografico Nacional"^^xsd:string , "Corriente de agua - Glosario Hidrologico Internacional - UNESCO"^^xsd:string ;
       owl:equivalentClass
@@ -4064,6 +4064,9 @@ ontology:conexion
       rdfs:domain ontology:AguasSubterraneas ;
       rdfs:range xsd:string .
 
+[]    a       owl:AllDifferent ;
+      owl:distinctMembers (competenciaAeroportuaria:aena competenciaAeroportuaria:militar competenciaAeroportuaria:privada) .
+
 ontology:Drenaje
       a       owl:Class ;
       rdfs:comment "Construccion destinada a la recogida, colecta y eliminacion de las aguas de cualquier espacio de inundacion."^^xsd:string ;
@@ -4243,16 +4246,16 @@ ontology:AguasMarinas
       rdfs:subClassOf ontology:AguasSaladas ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:onProperty ontology:es_conducido_por ;
-                owl:someValuesFrom ontology:AguasCorrientesArtificiales
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
                 owl:onProperty ontology:alimenta_a ;
                 owl:someValuesFrom
                         [ a       owl:Class ;
                           owl:unionOf (ontology:Albufera ontology:LagunaSalada)
                         ]
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty ontology:es_conducido_por ;
+                owl:someValuesFrom ontology:AguasCorrientesArtificiales
               ] ;
       rdfs:subClassOf
               [ a       owl:Class ;
@@ -4298,13 +4301,13 @@ ontology:Mar
       rdfs:subClassOf ontology:AguasMarinas ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:onProperty ontology:alimenta_a ;
-                owl:someValuesFrom ontology:Albufera
+                owl:onProperty ontology:es_comunicada_por ;
+                owl:someValuesFrom ontology:CanalMarino
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:onProperty ontology:es_comunicada_por ;
-                owl:someValuesFrom ontology:CanalMarino
+                owl:onProperty ontology:alimenta_a ;
+                owl:someValuesFrom ontology:Albufera
               ] ;
       dc:source "Vazquez Maure F.; Martin Lopez J. (1987) Vocabulario de terminos geograficos. Ed. Ministerio de Obras Publicas y Urbanismo. Instituto Geografico Nacional. Madrid. ISBN: 84-505-4929-9."^^xsd:string ;
       owl:equivalentClass
@@ -4447,9 +4450,6 @@ ontology:Chorrera
               ] ;
       ontology:provenance "Catalogo de fenomenos del Instituto Cartografico de Andalucia"^^xsd:string ;
       dc:source "Diccionario de la Real Academia Española"@es .
-
-[]    a       owl:AllDifferent ;
-      owl:distinctMembers (tipoDeItinerario:itinerarioEuropeo tipoDeItinerario:itinerarioNoEuropeo) .
 
 ontology:Castillo
       a       owl:Class ;
@@ -4661,16 +4661,16 @@ ontology:Marisma
       rdfs:subClassOf ontology:AguasDeTransicion , ontology:ZonaHumeda ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:onProperty ontology:origina ;
-                owl:someValuesFrom ontology:Lucio
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
                 owl:allValuesFrom
                         [ a       owl:Class ;
                           owl:unionOf (ontology:AguasMarinas ontology:Rio)
                         ] ;
                 owl:onProperty ontology:es_inundada_por
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty ontology:origina ;
+                owl:someValuesFrom ontology:Lucio
               ] ;
       dc:source "Fontanillo, E. (1986) Diccionario de Geografia. Ed. Anaya. Madrid."^^xsd:string .
 
@@ -4888,14 +4888,6 @@ ontology:Acuifero
       ontology:provenance "Directiva Marco del Agua. Union Europea"^^xsd:string , "Water Framework Directive. European Union"^^xsd:string ;
       dc:source "Embalse de agua subterranea - Glosario Hidrologico Internacional. UNESCO"^^xsd:string ;
       owl:equivalentClass
-              [ a       owl:Restriction ;
-                owl:onProperty ontology:se_extrae_para ;
-                owl:someValuesFrom
-                        [ a       owl:Class ;
-                          owl:unionOf (ontology:FuenteArtificial ontology:Pozo)
-                        ]
-              ] ;
-      owl:equivalentClass
               [ a       owl:Class ;
                 owl:intersectionOf ([ a       owl:Restriction ;
                             owl:allValuesFrom ontology:CorrienteSubterranea ;
@@ -4904,6 +4896,14 @@ ontology:Acuifero
                             owl:minCardinality "1"^^xsd:nonNegativeInteger ;
                             owl:onProperty ontology:permite
                           ])
+              ] ;
+      owl:equivalentClass
+              [ a       owl:Restriction ;
+                owl:onProperty ontology:se_extrae_para ;
+                owl:someValuesFrom
+                        [ a       owl:Class ;
+                          owl:unionOf (ontology:FuenteArtificial ontology:Pozo)
+                        ]
               ] .
 
 supply-net:tipoDeComponente
@@ -4992,8 +4992,8 @@ ontology:Sumidero
       rdfs:subClassOf ontology:Morfologia ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:onProperty ontology:alimenta_a ;
-                owl:someValuesFrom ontology:Acuifero
+                owl:onProperty ontology:origina ;
+                owl:someValuesFrom ontology:CorrienteSubterranea
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
@@ -5005,8 +5005,8 @@ ontology:Sumidero
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:onProperty ontology:origina ;
-                owl:someValuesFrom ontology:CorrienteSubterranea
+                owl:onProperty ontology:alimenta_a ;
+                owl:someValuesFrom ontology:Acuifero
               ] ;
       ontology:provenance "Glosario Hidrologico Internacional - UNESCO"^^xsd:string ;
       dc:source "Glosario Hidrologico Internacional - UNESCO"^^xsd:string .
@@ -5661,18 +5661,18 @@ ontology:Glaciar
       rdfs:label "Glaciar"@es ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:onProperty ontology:alimenta_a ;
-                owl:someValuesFrom
-                        [ a       owl:Class ;
-                          owl:unionOf (ontology:Arroyo ontology:Rio)
-                        ]
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
                 owl:onProperty ontology:origina ;
                 owl:someValuesFrom
                         [ a       owl:Class ;
                           owl:unionOf (ontology:Ibon ontology:Lago ontology:Laguna)
+                        ]
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty ontology:alimenta_a ;
+                owl:someValuesFrom
+                        [ a       owl:Class ;
+                          owl:unionOf (ontology:Arroyo ontology:Rio)
                         ]
               ] ;
       dc:source "Diccionario de la Real Academia Española"@es ;
