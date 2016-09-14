@@ -147,6 +147,9 @@ acceso:libre
                           ])
               ] .
 
+[]    a       owl:AllDifferent ;
+      owl:distinctMembers (rutaTenT:rutaNoTranseuropea rutaTenT:rutaTranseuropea) .
+
 transportes:estadoDeUso
       a       owl:NamedIndividual , skos:ConceptScheme ;
       rdfs:comment """indica el estado de uso. Puede tomar los valores:
@@ -207,6 +210,9 @@ tipoDeTrafico:mixto
       rdfs:comment "puede llevar mercancías o pasajeros"@es ;
       skos:inScheme transportes:tipoDeTrafico ;
       skos:prefLabel "tráfico mixto"@es .
+
+[]    a       owl:AllDifferent ;
+      owl:distinctMembers (acceso:libre acceso:peaje) .
 
 :Helipuerto
       a       owl:Class ;
@@ -363,6 +369,9 @@ puede tomar los valores:
                           ])
               ] .
 
+[]    a       owl:AllDifferent ;
+      owl:distinctMembers (situacionDeVia:elevado situacionDeVia:subterraneo situacionDeVia:superficial) .
+
 transportes:anchoDeVia
       a       owl:NamedIndividual , skos:ConceptScheme ;
       rdfs:comment """Esquema de conceptos para definir el ancho de una vía
@@ -387,6 +396,9 @@ numeroDeVias:unica
       rdfs:comment "En la vía se verifica el movimiento de los trenes en ambos sentidos"@es ;
       skos:inScheme transportes:numeroDeVias ;
       skos:prefLabel "vía única"@es .
+
+[]    a       owl:AllDifferent ;
+      owl:distinctMembers (electrificacion:electrificado electrificacion:noElectrificado) .
 
 :situacionDeVia
       a       owl:ObjectProperty ;
@@ -535,9 +547,6 @@ electrificacion:noElectrificado
       rdfs:subClassOf :EnclaveFerroviario ;
       terms:source "Administrador de Infraestructuras Ferroviarias (ADIF)"@es .
 
-[]    a       owl:AllDifferent ;
-      owl:distinctMembers (situacionDeVia:elevado situacionDeVia:subterraneo situacionDeVia:superficial) .
-
 transportes:acceso
       a       owl:NamedIndividual , skos:ConceptScheme ;
       rdfs:comment """Esquema de conceptos para definir el tipo de acceso de una vía
@@ -560,9 +569,6 @@ competenciaDeVia:autonomica
       rdfs:comment "indica que la via es competencia de la administración de las CCAA"@es ;
       skos:inScheme transportes:competenciaDeVia ;
       skos:prefLabel "competencia de vía autonómica"@es .
-
-[]    a       owl:AllDifferent ;
-      owl:distinctMembers (estadoDeUso:abandonado estadoDeUso:enConstruccion estadoDeUso:enUso) .
 
 anchoDeVia:metrico
       a       owl:NamedIndividual , skos:Concept ;
@@ -620,9 +626,6 @@ geo:acceso
                         ([ xsd:length 6
                           ])
               ] .
-
-[]    a       owl:AllDifferent ;
-      owl:distinctMembers (competenciaAeroportuaria:aena competenciaAeroportuaria:militar competenciaAeroportuaria:privada) .
 
 :FerrocarrilDeAltaVelocidad
       a       owl:Class ;
@@ -722,6 +725,9 @@ situacionDeVia:subterraneo
       skos:inScheme transportes:situacionDeVia ;
       skos:prefLabel "subterráneo"@es .
 
+[]    a       owl:AllDifferent ;
+      owl:distinctMembers (tipoDeItinerario:itinerarioEuropeo tipoDeItinerario:itinerarioNoEuropeo) .
+
 :PasoANivel
       a       owl:Class ;
       rdfs:comment "Cruce entre carretera y ferrocarril, que se produce al mismo nivel."@es ;
@@ -734,7 +740,7 @@ competenciaPortuaria:estatal
       skos:prefLabel "competencia portuaria estatal"@es .
 
 []    a       owl:AllDifferent ;
-      owl:distinctMembers (rutaTenT:rutaNoTranseuropea rutaTenT:rutaTranseuropea) .
+      owl:distinctMembers (competenciaAeroportuaria:aena competenciaAeroportuaria:militar competenciaAeroportuaria:privada) .
 
 :tipoDeItinerario
       a       owl:ObjectProperty ;
@@ -809,9 +815,6 @@ competenciaDeVia:local
       skos:inScheme transportes:competenciaDeVia ;
       skos:prefLabel "competencia de vía local"@es .
 
-[]    a       owl:AllDifferent ;
-      owl:distinctMembers (tipoDeItinerario:itinerarioEuropeo tipoDeItinerario:itinerarioNoEuropeo) .
-
 :Telesilla
       a       owl:Class ;
       rdfs:comment "Asiento suspendido de un cable de tracción, para el transporte de personas a la cumbre de una montaña o a un lugar elevado."@es ;
@@ -860,9 +863,6 @@ rutaTenT:rutaNoTranseuropea
       skos:inScheme transportes:rutaTenT ;
       skos:prefLabel "ruta no transeuropea"@es .
 
-[]    a       owl:AllDifferent ;
-      owl:distinctMembers (acceso:libre acceso:peaje) .
-
 :Calle
       a       owl:Class ;
       rdfs:comment "Vía que se encuentra localizada dentro de un núcleo de población o Diseminado superficial, y que ayuda a identificar la estructura de manzanas de dicho núcleo/diseminado."@es ;
@@ -892,6 +892,9 @@ estadoDeUso:abandonado
       rdfs:label "ItinerarionDeViaVerde"@es ;
       rdfs:subClassOf :Itinerario ;
       terms:source "Anexo A: Catálogo de Objetos Geográficos de BTN100."@es .
+
+[]    a       owl:AllDifferent ;
+      owl:distinctMembers (estadoDeUso:abandonado estadoDeUso:enConstruccion estadoDeUso:enUso) .
 
 :competenciaAeroportuaria
       a       owl:ObjectProperty ;
@@ -928,9 +931,6 @@ numeroDeVias:doble
                         ([ xsd:length 6
                           ])
               ] .
-
-[]    a       owl:AllDifferent ;
-      owl:distinctMembers (electrificacion:electrificado electrificacion:noElectrificado) .
 
 categoriaVial:primerOrden
       a       owl:NamedIndividual , skos:Concept ;

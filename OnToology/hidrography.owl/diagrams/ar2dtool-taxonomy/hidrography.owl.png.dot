@@ -1,7 +1,7 @@
 digraph ar2dtool_diagram { 
 rankdir=LR;
 size="1000"
-node [shape = rectangle, color="black"]; "ontology:Isla" "ontology:IslaMaritima" "ontology:Cala" "ontology:Pennon" "ontology:Cabo" "ontology:Esclusa" "ontology:Punta" "ontology:Estero" "ontology:ZonaContigua" "4aab3ea8:1570a4027c7:-7d2c" "ontology:Caz" "ontology:Lavajo" "ontology:Morfologia" "4aab3ea8:1570a4027c7:-7d94" "ontology:Torrente" "4aab3ea8:1570a4027c7:-7c61" "ontology:MasaDeAguaArtificial" "ontology:Estuario" "4aab3ea8:1570a4027c7:-7caa" "ontology:LlanuraDeInundacion" "ontology:Riachuelo" "ontology:Canyo" "ontology:Guadi" "ontology:Acuifero" "4aab3ea8:1570a4027c7:-7daa" "ontology:Nevero" "ontology:FuenteArtificial" "ontology:Azarbe" "ontology:Mar" "ontology:Canal" "ontology:Arroyo" "ontology:Rio" "ontology:Estanque" "4aab3ea8:1570a4027c7:-7cf6" "ontology:Recinto" "ontology:FuenteNatural" "ontology:Saladar" "ontology:ZonaEconomicaExclusiva" "ontology:FuenteSalada" "ontology:FenomenoHidrografico" "ontology:Barranquillo" "ontology:LagoSubterraneo" "ontology:CanalAguasContinentales" "ontology:Aluvion" "ontology:Acequia" "ontology:AltaMar" "ontology:Terma" "ontology:Pozo" "ontology:Canyada" "ontology:AguasCorrientes" "ontology:Garganta" "ontology:ManantialSalado" "ontology:Delta" "ontology:Humedal" "4aab3ea8:1570a4027c7:-7dd3" "4aab3ea8:1570a4027c7:-7e18" "ontology:Charca" "ontology:Marjal" "ontology:Cienaga" "ontology:LagoSalado" "ontology:Tuberia" "4aab3ea8:1570a4027c7:-7d36" "ontology:IslaFluvial" "ontology:Poza" "ontology:Lago" "ontology:AguasSubterraneas" "ontology:Dren" "ontology:Captacion" "ontology:Chorrera" "ontology:Ibon" "4aab3ea8:1570a4027c7:-7cef" "ontology:Nacimiento" "ontology:AguasCosteras" "4aab3ea8:1570a4027c7:-7dce" "ontology:HidronimoPuntual" "ontology:Albufera" "ontology:LagunaArtificial" "ontology:Colector" "ontology:Reguero" "ontology:Sifon" "ontology:Oceano" "4aab3ea8:1570a4027c7:-7ded" "4aab3ea8:1570a4027c7:-7e0b" "ontology:CanalDeLago" "ontology:AguasQuietas" "ontology:ZonaHumeda" "ontology:ZonaEncharcable" "ontology:AguasMarinas" "ontology:PlayaFluvial" "ontology:Rivera" "ontology:Basines" "ontology:Ribera" "4aab3ea8:1570a4027c7:-7d7b" "ontology:Embalse" "ontology:Marisma" "ontology:Ojo" "ontology:AguasSuperficiales" "ontology:Acuitardo" "ontology:Toma" "ontology:Manantial" "ontology:Piscina" "ontology:Desembocadura" "ontology:Cascada" "ontology:Regajo" "ontology:Rapido" "4aab3ea8:1570a4027c7:-7d8e" "ontology:CapaDeNieve" "4aab3ea8:1570a4027c7:-7d27" "ontology:Corriente" "ontology:EstanqueSalado" "ontology:Tremedal" "ontology:Deposito" "ontology:AguasCorrientesArtificiales" "ontology:Canalillo" "ontology:SurgenciaNatural" "ontology:SurgenciaArtificial" "ontology:Galacho" "ontology:Bodon" "ontology:MarTerritorial" "ontology:Confluencia" "ontology:CanalAguasMarinas" "ontology:Riacho" "ontology:Madre" "ontology:Distribucion" "owl:Thing" "ontology:Playa" "4aab3ea8:1570a4027c7:-7ccf" "ontology:BalsaDeHielo" "ontology:BancoDeNieve" "ontology:Conducto" "ontology:CapaDeHielo" "ontology:AguasCorrientesNaturales" "ontology:Paul" "ontology:Chortal" "ontology:Desague" "ontology:CorrienteSubterranea" "ontology:Sumidero" "4aab3ea8:1570a4027c7:-7c70" "ontology:Balsa" "ontology:Vertiente" "ontology:Abrevadero" "ontology:Aljibe" "ontology:AguasQuietasNaturales" "ontology:Fuente" "ontology:Meandro" "ontology:AguasDeTransicion" "ontology:Barranco" "ontology:MasaDeHielo" "ontology:Drenaje" "ontology:Vado" "ontology:Alberca" "ontology:Salina" "ontology:AguasSaladas" "4aab3ea8:1570a4027c7:-7d3e" "ontology:Surgencia" "ontology:Gotera" "ontology:Ria" "geopolitical:territory" "4aab3ea8:1570a4027c7:-7d6d" "ontology:Aguazal" "ontology:AguasContinentales" "4aab3ea8:1570a4027c7:-7d5d" "4aab3ea8:1570a4027c7:-7de6" "ontology:FuenteVauclusiana" "4aab3ea8:1570a4027c7:-7d82" "ontology:Lucio" "ontology:Laguna" "4aab3ea8:1570a4027c7:-7d31" "ontology:Aguas" "ontology:Efluente" "ontology:Ramal" "ontology:LagunaSalada" "ontology:AguasQuietasArtificiales" "ontology:Geiser" "ontology:FuenteArtesana" "ontology:Venaje" "ontology:Shuga" "ontology:Reguera" "ontology:Regato" "ontology:Brazo" "ontology:Nava" "ontology:Rambla" "skos:OrderedCollection" "skos:Collection" "foaf:Organization" "time:DurationDescription" "wgs84_pos:SpatialThing" "scovo:Dimension" "http://geo.linkeddata.es/ontology/Organizaci%C3%B3n" "http://geo.linkeddata.es/ontology/A%C3%B1o" "geopolitical:area" "time:DateTimeInterval" "time:January" "time:ProperInterval" "time:Interval" "time:TemporalEntity" "time:Year" "time:DateTimeDescription" "time:Instant" "geopolitical:disputed" "geopolitical:special_group" "geopolitical:group" "geopolitical:geographical_region" "geopolitical:other" "geopolitical:economic_region" "geopolitical:self_governing" "geopolitical:non_self_governing" "geopolitical:organization" ; /*classes style*/
+node [shape = rectangle, color="black"]; "ontology:Isla" "ontology:IslaMaritima" "ontology:Cala" "ontology:Pennon" "ontology:Cabo" "ontology:Esclusa" "ontology:Punta" "ontology:Estero" "ontology:ZonaContigua" "ontology:Caz" "ontology:Lavajo" "ontology:Morfologia" "-376103b1:15729f00861:-7dce" "-376103b1:15729f00861:-7ccf" "ontology:Torrente" "-376103b1:15729f00861:-7d94" "ontology:MasaDeAguaArtificial" "ontology:Estuario" "ontology:LlanuraDeInundacion" "ontology:Riachuelo" "ontology:Canyo" "ontology:Guadi" "-376103b1:15729f00861:-7d31" "ontology:Acuifero" "ontology:Nevero" "ontology:FuenteArtificial" "ontology:Azarbe" "ontology:Mar" "ontology:Canal" "ontology:Arroyo" "-376103b1:15729f00861:-7d5d" "ontology:Rio" "ontology:Estanque" "ontology:Recinto" "-376103b1:15729f00861:-7d82" "ontology:FuenteNatural" "ontology:Saladar" "ontology:ZonaEconomicaExclusiva" "-376103b1:15729f00861:-7d36" "ontology:FuenteSalada" "ontology:FenomenoHidrografico" "ontology:Barranquillo" "-376103b1:15729f00861:-7e18" "ontology:LagoSubterraneo" "ontology:CanalAguasContinentales" "ontology:Aluvion" "ontology:Acequia" "ontology:Terma" "ontology:AltaMar" "-376103b1:15729f00861:-7d2c" "-376103b1:15729f00861:-7cef" "ontology:Pozo" "ontology:Canyada" "ontology:AguasCorrientes" "ontology:Garganta" "ontology:ManantialSalado" "ontology:Delta" "ontology:Humedal" "-376103b1:15729f00861:-7daa" "ontology:Charca" "ontology:Marjal" "ontology:Cienaga" "ontology:LagoSalado" "ontology:Tuberia" "ontology:IslaFluvial" "ontology:Poza" "ontology:Lago" "ontology:AguasSubterraneas" "ontology:Dren" "-376103b1:15729f00861:-7c61" "ontology:Captacion" "ontology:Chorrera" "ontology:Ibon" "ontology:Nacimiento" "-376103b1:15729f00861:-7d7b" "ontology:AguasCosteras" "ontology:HidronimoPuntual" "ontology:Albufera" "ontology:LagunaArtificial" "ontology:Colector" "ontology:Reguero" "ontology:Sifon" "-376103b1:15729f00861:-7d3e" "ontology:Oceano" "ontology:CanalDeLago" "ontology:AguasQuietas" "ontology:ZonaHumeda" "-376103b1:15729f00861:-7d6d" "ontology:AguasMarinas" "ontology:ZonaEncharcable" "-376103b1:15729f00861:-7e0b" "ontology:PlayaFluvial" "ontology:Rivera" "ontology:Basines" "ontology:Ribera" "-376103b1:15729f00861:-7dd3" "ontology:Embalse" "ontology:Marisma" "ontology:Ojo" "ontology:AguasSuperficiales" "ontology:Acuitardo" "ontology:Toma" "ontology:Manantial" "ontology:Piscina" "ontology:Desembocadura" "ontology:Cascada" "ontology:Regajo" "ontology:Rapido" "ontology:CapaDeNieve" "ontology:Corriente" "ontology:Tremedal" "ontology:EstanqueSalado" "-376103b1:15729f00861:-7d8e" "-376103b1:15729f00861:-7de6" "ontology:Deposito" "ontology:AguasCorrientesArtificiales" "ontology:Canalillo" "ontology:SurgenciaNatural" "-376103b1:15729f00861:-7cf6" "ontology:SurgenciaArtificial" "ontology:Galacho" "ontology:Bodon" "ontology:MarTerritorial" "ontology:Confluencia" "ontology:CanalAguasMarinas" "ontology:Riacho" "ontology:Madre" "ontology:Distribucion" "-376103b1:15729f00861:-7c70" "owl:Thing" "ontology:Playa" "ontology:BalsaDeHielo" "ontology:BancoDeNieve" "ontology:Conducto" "ontology:CapaDeHielo" "-376103b1:15729f00861:-7d27" "ontology:AguasCorrientesNaturales" "-376103b1:15729f00861:-7ded" "ontology:Paul" "ontology:Chortal" "ontology:Desague" "ontology:CorrienteSubterranea" "ontology:Sumidero" "-376103b1:15729f00861:-7caa" "ontology:Balsa" "ontology:Vertiente" "ontology:Abrevadero" "ontology:Aljibe" "ontology:AguasQuietasNaturales" "ontology:Fuente" "ontology:Meandro" "ontology:AguasDeTransicion" "ontology:Barranco" "ontology:MasaDeHielo" "ontology:Drenaje" "ontology:Vado" "ontology:Alberca" "ontology:Salina" "ontology:AguasSaladas" "ontology:Surgencia" "ontology:Gotera" "ontology:Ria" "geopolitical:territory" "ontology:Aguazal" "ontology:AguasContinentales" "ontology:FuenteVauclusiana" "ontology:Lucio" "ontology:Laguna" "ontology:Aguas" "ontology:Efluente" "ontology:Ramal" "ontology:LagunaSalada" "ontology:AguasQuietasArtificiales" "ontology:Geiser" "ontology:FuenteArtesana" "ontology:Venaje" "ontology:Shuga" "ontology:Reguera" "ontology:Regato" "ontology:Brazo" "ontology:Nava" "ontology:Rambla" "skos:OrderedCollection" "skos:Collection" "foaf:Organization" "time:DurationDescription" "wgs84_pos:SpatialThing" "scovo:Dimension" "http://geo.linkeddata.es/ontology/Organizaci%C3%B3n" "http://geo.linkeddata.es/ontology/A%C3%B1o" "geopolitical:area" "time:DateTimeInterval" "time:January" "time:ProperInterval" "time:Interval" "time:TemporalEntity" "time:Year" "time:DateTimeDescription" "time:Instant" "geopolitical:disputed" "geopolitical:special_group" "geopolitical:group" "geopolitical:geographical_region" "geopolitical:other" "geopolitical:economic_region" "geopolitical:self_governing" "geopolitical:non_self_governing" "geopolitical:organization" ; /*classes style*/
 	"time:Year" -> "time:DurationDescription" [ label = "rdfs:subClassOf" ];
 	"ontology:Punta" -> "ontology:Morfologia" [ label = "rdfs:subClassOf" ];
 	"ontology:AguasContinentales" -> "ontology:Aguas" [ label = "rdfs:subClassOf" ];
@@ -12,7 +12,7 @@ node [shape = rectangle, color="black"]; "ontology:Isla" "ontology:IslaMaritima"
 	"ontology:AguasCorrientes" -> "ontology:AguasSuperficiales" [ label = "rdfs:subClassOf" ];
 	"ontology:Rapido" -> "ontology:Corriente" [ label = "rdfs:subClassOf" ];
 	"ontology:Reguero" -> "ontology:Arroyo" [ label = "rdfs:subClassOf" ];
-	"ontology:EstanqueSalado" -> "4aab3ea8:1570a4027c7:-7d3e" [ label = "rdfs:subClassOf" ];
+	"ontology:EstanqueSalado" -> "-376103b1:15729f00861:-7d3e" [ label = "rdfs:subClassOf" ];
 	"ontology:Vado" -> "ontology:Morfologia" [ label = "rdfs:subClassOf" ];
 	"ontology:Rambla" -> "ontology:ZonaHumeda" [ label = "rdfs:subClassOf" ];
 	"ontology:Rambla" -> "ontology:Rio" [ label = "rdfs:subClassOf" ];
@@ -23,7 +23,7 @@ node [shape = rectangle, color="black"]; "ontology:Isla" "ontology:IslaMaritima"
 	"skos:OrderedCollection" -> "skos:Collection" [ label = "rdfs:subClassOf" ];
 	"ontology:Galacho" -> "ontology:Barranco" [ label = "rdfs:subClassOf" ];
 	"ontology:Lavajo" -> "ontology:Charca" [ label = "rdfs:subClassOf" ];
-	"ontology:Delta" -> "4aab3ea8:1570a4027c7:-7d6d" [ label = "rdfs:subClassOf" ];
+	"ontology:Delta" -> "-376103b1:15729f00861:-7d6d" [ label = "rdfs:subClassOf" ];
 	"ontology:Delta" -> "ontology:Morfologia" [ label = "rdfs:subClassOf" ];
 	"ontology:ZonaContigua" -> "ontology:AguasMarinas" [ label = "rdfs:subClassOf" ];
 	"ontology:AltaMar" -> "ontology:AguasMarinas" [ label = "rdfs:subClassOf" ];
@@ -31,22 +31,22 @@ node [shape = rectangle, color="black"]; "ontology:Isla" "ontology:IslaMaritima"
 	"ontology:Rivera" -> "ontology:Arroyo" [ label = "rdfs:subClassOf" ];
 	"time:Interval" -> "time:TemporalEntity" [ label = "rdfs:subClassOf" ];
 	"ontology:Aguas" -> "ontology:FenomenoHidrografico" [ label = "rdfs:subClassOf" ];
-	"ontology:FuenteSalada" -> "4aab3ea8:1570a4027c7:-7d27" [ label = "rdfs:subClassOf" ];
+	"ontology:FuenteSalada" -> "-376103b1:15729f00861:-7d27" [ label = "rdfs:subClassOf" ];
 	"ontology:ZonaEncharcable" -> "ontology:Morfologia" [ label = "rdfs:subClassOf" ];
 	"ontology:Ramal" -> "ontology:Acequia" [ label = "rdfs:subClassOf" ];
 	"ontology:Riacho" -> "ontology:Arroyo" [ label = "rdfs:subClassOf" ];
 	"ontology:Albufera" -> "ontology:ZonaHumeda" [ label = "rdfs:subClassOf" ];
-	"ontology:Albufera" -> "4aab3ea8:1570a4027c7:-7ded" [ label = "rdfs:subClassOf" ];
+	"ontology:Albufera" -> "-376103b1:15729f00861:-7ded" [ label = "rdfs:subClassOf" ];
 	"ontology:Albufera" -> "ontology:Laguna" [ label = "rdfs:subClassOf" ];
 	"ontology:Albufera" -> "ontology:AguasSaladas" [ label = "rdfs:subClassOf" ];
 	"ontology:Gotera" -> "ontology:Cienaga" [ label = "rdfs:subClassOf" ];
 	"ontology:Pozo" -> "ontology:SurgenciaArtificial" [ label = "rdfs:subClassOf" ];
 	"ontology:Canalillo" -> "ontology:CanalAguasContinentales" [ label = "rdfs:subClassOf" ];
 	"ontology:Madre" -> "ontology:Acequia" [ label = "rdfs:subClassOf" ];
-	"ontology:Desembocadura" -> "4aab3ea8:1570a4027c7:-7d5d" [ label = "rdfs:subClassOf" ];
+	"ontology:Desembocadura" -> "-376103b1:15729f00861:-7d5d" [ label = "rdfs:subClassOf" ];
 	"ontology:Desembocadura" -> "ontology:HidronimoPuntual" [ label = "rdfs:subClassOf" ];
 	"ontology:Salina" -> "ontology:ZonaHumeda" [ label = "rdfs:subClassOf" ];
-	"ontology:Salina" -> "4aab3ea8:1570a4027c7:-7c61" [ label = "rdfs:subClassOf" ];
+	"ontology:Salina" -> "-376103b1:15729f00861:-7c61" [ label = "rdfs:subClassOf" ];
 	"ontology:Salina" -> "ontology:Recinto" [ label = "rdfs:subClassOf" ];
 	"ontology:Fuente" -> "ontology:Recinto" [ label = "rdfs:subClassOf" ];
 	"time:DateTimeInterval" -> "time:ProperInterval" [ label = "rdfs:subClassOf" ];
@@ -67,17 +67,17 @@ node [shape = rectangle, color="black"]; "ontology:Isla" "ontology:IslaMaritima"
 	"ontology:AguasQuietas" -> "ontology:AguasSuperficiales" [ label = "rdfs:subClassOf" ];
 	"geopolitical:non_self_governing" -> "geopolitical:territory" [ label = "rdfs:subClassOf" ];
 	"ontology:Meandro" -> "ontology:Morfologia" [ label = "rdfs:subClassOf" ];
-	"ontology:LagunaSalada" -> "4aab3ea8:1570a4027c7:-7cef" [ label = "rdfs:subClassOf" ];
+	"ontology:LagunaSalada" -> "-376103b1:15729f00861:-7cef" [ label = "rdfs:subClassOf" ];
 	"ontology:LagunaSalada" -> "ontology:Laguna" [ label = "rdfs:subClassOf" ];
 	"ontology:LagunaSalada" -> "ontology:AguasSaladas" [ label = "rdfs:subClassOf" ];
 	"ontology:Caz" -> "ontology:Acequia" [ label = "rdfs:subClassOf" ];
-	"ontology:Charca" -> "4aab3ea8:1570a4027c7:-7d8e" [ label = "rdfs:subClassOf" ];
+	"ontology:Charca" -> "-376103b1:15729f00861:-7d8e" [ label = "rdfs:subClassOf" ];
 	"ontology:Charca" -> "ontology:AguasQuietasNaturales" [ label = "rdfs:subClassOf" ];
-	"ontology:AguasQuietasNaturales" -> "4aab3ea8:1570a4027c7:-7e0b" [ label = "rdfs:subClassOf" ];
+	"ontology:AguasQuietasNaturales" -> "-376103b1:15729f00861:-7e0b" [ label = "rdfs:subClassOf" ];
 	"ontology:AguasQuietasNaturales" -> "ontology:AguasQuietas" [ label = "rdfs:subClassOf" ];
 	"ontology:IslaFluvial" -> "ontology:Isla" [ label = "rdfs:subClassOf" ];
 	"ontology:IslaFluvial" -> "ontology:Morfologia" [ label = "rdfs:subClassOf" ];
-	"ontology:Aljibe" -> "4aab3ea8:1570a4027c7:-7de6" [ label = "rdfs:subClassOf" ];
+	"ontology:Aljibe" -> "-376103b1:15729f00861:-7de6" [ label = "rdfs:subClassOf" ];
 	"ontology:Aljibe" -> "ontology:Deposito" [ label = "rdfs:subClassOf" ];
 	"ontology:BalsaDeHielo" -> "ontology:MasaDeHielo" [ label = "rdfs:subClassOf" ];
 	"ontology:MasaDeHielo" -> "ontology:AguasQuietasNaturales" [ label = "rdfs:subClassOf" ];
@@ -87,7 +87,7 @@ node [shape = rectangle, color="black"]; "ontology:Isla" "ontology:IslaMaritima"
 	"ontology:FuenteVauclusiana" -> "ontology:FuenteNatural" [ label = "rdfs:subClassOf" ];
 	"ontology:Tremedal" -> "ontology:Cienaga" [ label = "rdfs:subClassOf" ];
 	"http://geo.linkeddata.es/ontology/A%C3%B1o" -> "time:DurationDescription" [ label = "rdfs:subClassOf" ];
-	"ontology:Confluencia" -> "4aab3ea8:1570a4027c7:-7d7b" [ label = "rdfs:subClassOf" ];
+	"ontology:Confluencia" -> "-376103b1:15729f00861:-7d7b" [ label = "rdfs:subClassOf" ];
 	"ontology:Confluencia" -> "ontology:HidronimoPuntual" [ label = "rdfs:subClassOf" ];
 	"ontology:CapaDeHielo" -> "ontology:Nevero" [ label = "rdfs:subClassOf" ];
 	"ontology:SurgenciaNatural" -> "ontology:Surgencia" [ label = "rdfs:subClassOf" ];
@@ -96,15 +96,15 @@ node [shape = rectangle, color="black"]; "ontology:Isla" "ontology:IslaMaritima"
 	"ontology:Guadi" -> "ontology:Rio" [ label = "rdfs:subClassOf" ];
 	"ontology:Sifon" -> "ontology:Tuberia" [ label = "rdfs:subClassOf" ];
 	"ontology:Torrente" -> "ontology:AguasCorrientesNaturales" [ label = "rdfs:subClassOf" ];
-	"ontology:CanalDeLago" -> "4aab3ea8:1570a4027c7:-7daa" [ label = "rdfs:subClassOf" ];
+	"ontology:CanalDeLago" -> "-376103b1:15729f00861:-7daa" [ label = "rdfs:subClassOf" ];
 	"ontology:CanalDeLago" -> "ontology:CanalAguasContinentales" [ label = "rdfs:subClassOf" ];
 	"ontology:Acuitardo" -> "ontology:AguasSubterraneas" [ label = "rdfs:subClassOf" ];
 	"ontology:Azarbe" -> "ontology:Acequia" [ label = "rdfs:subClassOf" ];
 	"ontology:Mar" -> "ontology:AguasMarinas" [ label = "rdfs:subClassOf" ];
 	"ontology:Canyada" -> "ontology:Arroyo" [ label = "rdfs:subClassOf" ];
-	"ontology:Arroyo" -> "4aab3ea8:1570a4027c7:-7dd3" [ label = "rdfs:subClassOf" ];
+	"ontology:Arroyo" -> "-376103b1:15729f00861:-7dd3" [ label = "rdfs:subClassOf" ];
 	"ontology:Arroyo" -> "ontology:AguasCorrientesNaturales" [ label = "rdfs:subClassOf" ];
-	"ontology:Arroyo" -> "4aab3ea8:1570a4027c7:-7dce" [ label = "rdfs:subClassOf" ];
+	"ontology:Arroyo" -> "-376103b1:15729f00861:-7dce" [ label = "rdfs:subClassOf" ];
 	"ontology:Regajo" -> "ontology:Arroyo" [ label = "rdfs:subClassOf" ];
 	"geopolitical:area" -> "scovo:Dimension" [ label = "rdfs:subClassOf" ];
 	"geopolitical:area" -> "owl:Thing" [ label = "rdfs:subClassOf" ];
@@ -118,7 +118,7 @@ node [shape = rectangle, color="black"]; "ontology:Isla" "ontology:IslaMaritima"
 	"ontology:AguasSuperficiales" -> "ontology:AguasContinentales" [ label = "rdfs:subClassOf" ];
 	"time:DurationDescription" -> "scovo:Dimension" [ label = "rdfs:subClassOf" ];
 	"ontology:Deposito" -> "ontology:AguasQuietasArtificiales" [ label = "rdfs:subClassOf" ];
-	"ontology:Captacion" -> "4aab3ea8:1570a4027c7:-7d94" [ label = "rdfs:subClassOf" ];
+	"ontology:Captacion" -> "-376103b1:15729f00861:-7d94" [ label = "rdfs:subClassOf" ];
 	"ontology:Captacion" -> "ontology:HidronimoPuntual" [ label = "rdfs:subClassOf" ];
 	"ontology:Cabo" -> "ontology:Morfologia" [ label = "rdfs:subClassOf" ];
 	"ontology:Tuberia" -> "ontology:Conducto" [ label = "rdfs:subClassOf" ];
@@ -129,7 +129,7 @@ node [shape = rectangle, color="black"]; "ontology:Isla" "ontology:IslaMaritima"
 	"ontology:Ribera" -> "ontology:Morfologia" [ label = "rdfs:subClassOf" ];
 	"ontology:Drenaje" -> "ontology:Conducto" [ label = "rdfs:subClassOf" ];
 	"ontology:Corriente" -> "ontology:AguasCorrientes" [ label = "rdfs:subClassOf" ];
-	"ontology:FuenteArtesana" -> "4aab3ea8:1570a4027c7:-7d31" [ label = "rdfs:subClassOf" ];
+	"ontology:FuenteArtesana" -> "-376103b1:15729f00861:-7d31" [ label = "rdfs:subClassOf" ];
 	"ontology:FuenteArtesana" -> "ontology:FuenteNatural" [ label = "rdfs:subClassOf" ];
 	"ontology:Oceano" -> "ontology:Mar" [ label = "rdfs:subClassOf" ];
 	"ontology:Barranquillo" -> "ontology:Barranco" [ label = "rdfs:subClassOf" ];
@@ -140,16 +140,16 @@ node [shape = rectangle, color="black"]; "ontology:Isla" "ontology:IslaMaritima"
 	"ontology:Dren" -> "ontology:Conducto" [ label = "rdfs:subClassOf" ];
 	"ontology:CapaDeNieve" -> "ontology:Nevero" [ label = "rdfs:subClassOf" ];
 	"ontology:LlanuraDeInundacion" -> "ontology:ZonaEncharcable" [ label = "rdfs:subClassOf" ];
-	"ontology:Ojo" -> "4aab3ea8:1570a4027c7:-7caa" [ label = "rdfs:subClassOf" ];
+	"ontology:Ojo" -> "-376103b1:15729f00861:-7caa" [ label = "rdfs:subClassOf" ];
 	"ontology:Ojo" -> "ontology:Manantial" [ label = "rdfs:subClassOf" ];
 	"ontology:Terma" -> "ontology:Manantial" [ label = "rdfs:subClassOf" ];
 	"ontology:Vertiente" -> "ontology:Morfologia" [ label = "rdfs:subClassOf" ];
 	"ontology:Barranco" -> "ontology:Morfologia" [ label = "rdfs:subClassOf" ];
-	"ontology:AguasMarinas" -> "4aab3ea8:1570a4027c7:-7e18" [ label = "rdfs:subClassOf" ];
+	"ontology:AguasMarinas" -> "-376103b1:15729f00861:-7e18" [ label = "rdfs:subClassOf" ];
 	"ontology:AguasMarinas" -> "ontology:AguasSaladas" [ label = "rdfs:subClassOf" ];
 	"geopolitical:disputed" -> "geopolitical:territory" [ label = "rdfs:subClassOf" ];
 	"geopolitical:geographical_region" -> "geopolitical:group" [ label = "rdfs:subClassOf" ];
-	"ontology:Estero" -> "4aab3ea8:1570a4027c7:-7d36" [ label = "rdfs:subClassOf" ];
+	"ontology:Estero" -> "-376103b1:15729f00861:-7d36" [ label = "rdfs:subClassOf" ];
 	"ontology:Estero" -> "ontology:ZonaHumeda" [ label = "rdfs:subClassOf" ];
 	"ontology:Brazo" -> "ontology:CanalAguasMarinas" [ label = "rdfs:subClassOf" ];
 	"ontology:Shuga" -> "ontology:MasaDeHielo" [ label = "rdfs:subClassOf" ];
@@ -171,11 +171,11 @@ node [shape = rectangle, color="black"]; "ontology:Isla" "ontology:IslaMaritima"
 	"geopolitical:economic_region" -> "geopolitical:group" [ label = "rdfs:subClassOf" ];
 	"ontology:Aluvion" -> "ontology:Morfologia" [ label = "rdfs:subClassOf" ];
 	"ontology:Desague" -> "ontology:Tuberia" [ label = "rdfs:subClassOf" ];
-	"ontology:ManantialSalado" -> "4aab3ea8:1570a4027c7:-7ccf" [ label = "rdfs:subClassOf" ];
+	"ontology:ManantialSalado" -> "-376103b1:15729f00861:-7ccf" [ label = "rdfs:subClassOf" ];
 	"ontology:Surgencia" -> "ontology:AguasSuperficiales" [ label = "rdfs:subClassOf" ];
 	"ontology:CorrienteSubterranea" -> "ontology:AguasSubterraneas" [ label = "rdfs:subClassOf" ];
 	"ontology:Acequia" -> "ontology:AguasCorrientesArtificiales" [ label = "rdfs:subClassOf" ];
-	"ontology:Chortal" -> "4aab3ea8:1570a4027c7:-7d82" [ label = "rdfs:subClassOf" ];
+	"ontology:Chortal" -> "-376103b1:15729f00861:-7d82" [ label = "rdfs:subClassOf" ];
 	"ontology:Chortal" -> "ontology:Charca" [ label = "rdfs:subClassOf" ];
 	"geopolitical:self_governing" -> "geopolitical:territory" [ label = "rdfs:subClassOf" ];
 	"ontology:Cienaga" -> "ontology:ZonaHumeda" [ label = "rdfs:subClassOf" ];
@@ -191,10 +191,10 @@ node [shape = rectangle, color="black"]; "ontology:Isla" "ontology:IslaMaritima"
 	"ontology:HidronimoPuntual" -> "ontology:FenomenoHidrografico" [ label = "rdfs:subClassOf" ];
 	"ontology:LagunaArtificial" -> "ontology:Recinto" [ label = "rdfs:subClassOf" ];
 	"ontology:Colector" -> "ontology:Conducto" [ label = "rdfs:subClassOf" ];
-	"ontology:Rio" -> "4aab3ea8:1570a4027c7:-7c70" [ label = "rdfs:subClassOf" ];
 	"ontology:Rio" -> "ontology:AguasCorrientesNaturales" [ label = "rdfs:subClassOf" ];
+	"ontology:Rio" -> "-376103b1:15729f00861:-7c70" [ label = "rdfs:subClassOf" ];
 	"ontology:Saladar" -> "ontology:Salina" [ label = "rdfs:subClassOf" ];
-	"ontology:LagoSalado" -> "4aab3ea8:1570a4027c7:-7cf6" [ label = "rdfs:subClassOf" ];
+	"ontology:LagoSalado" -> "-376103b1:15729f00861:-7cf6" [ label = "rdfs:subClassOf" ];
 	"ontology:Lago" -> "ontology:AguasQuietasNaturales" [ label = "rdfs:subClassOf" ];
 	"ontology:Sumidero" -> "ontology:Morfologia" [ label = "rdfs:subClassOf" ];
 	"ontology:Humedal" -> "ontology:SurgenciaNatural" [ label = "rdfs:subClassOf" ];
@@ -204,7 +204,7 @@ node [shape = rectangle, color="black"]; "ontology:Isla" "ontology:IslaMaritima"
 	"ontology:AguasSubterraneas" -> "ontology:AguasContinentales" [ label = "rdfs:subClassOf" ];
 	"ontology:Toma" -> "ontology:SurgenciaArtificial" [ label = "rdfs:subClassOf" ];
 	"geopolitical:group" -> "geopolitical:area" [ label = "rdfs:subClassOf" ];
-	"ontology:FuenteArtificial" -> "4aab3ea8:1570a4027c7:-7d2c" [ label = "rdfs:subClassOf" ];
+	"ontology:FuenteArtificial" -> "-376103b1:15729f00861:-7d2c" [ label = "rdfs:subClassOf" ];
 	"ontology:FuenteArtificial" -> "ontology:SurgenciaArtificial" [ label = "rdfs:subClassOf" ];
 
 }

@@ -73,6 +73,9 @@ http://geo.linkeddata.es/kos/supply-net/situacion/superficial"""@es ;
       rdfs:label "Central eólica"@es ;
       rdfs:subClassOf :CentralElectrica .
 
+[]    a       owl:AllDifferent ;
+      owl:distinctMembers (situacion:elevado situacion:subterraneo situacion:superficial) .
+
 :CentralCicloCombinado
       a       owl:Class ;
       rdfs:comment """ La central térmica de ciclo combinado es aquella donde se genera electricidad mediante la utilización conjunta de dos turbinas:
@@ -110,9 +113,6 @@ terms:source
                             owl:onProperty skos:inScheme
                           ])
               ] .
-
-[]    a       owl:AllDifferent ;
-      owl:distinctMembers (situacion:elevado situacion:subterraneo situacion:superficial) .
 
 :DepositoDeCombustible
       a       owl:Class ;
