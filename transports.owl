@@ -8,51 +8,51 @@
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
     <!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
-    <!ENTITY transportes "http://geo.linkeddata.es/kos/transports/" >
+    <!ENTITY transportes "http://geo.linkeddata.es/kos/transportes/" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
-    <!ENTITY acceso "http://geo.linkeddata.es/kos/transports/acceso/" >
-    <!ENTITY rutaTenT "http://geo.linkeddata.es/kos/transports/rutaTenT/" >
-    <!ENTITY anchoDeVia "http://geo.linkeddata.es/kos/transports/anchoDeVia/" >
-    <!ENTITY tipoDeTramo "http://geo.linkeddata.es/kos/transports/tipoDeTramo/" >
-    <!ENTITY estadoDeUso "http://geo.linkeddata.es/kos/transports/estadoDeUso/" >
-    <!ENTITY numeroDeVias "http://geo.linkeddata.es/kos/transports/numeroDeVias/" >
-    <!ENTITY tipoDeTrafico "http://geo.linkeddata.es/kos/transports/tipoDeTrafico/" >
-    <!ENTITY categoriaVial "http://geo.linkeddata.es/kos/transports/categoriaVial/" >
-    <!ENTITY tipoDeCalzada "http://geo.linkeddata.es/kos/transports/tipoDeCalzada/" >
-    <!ENTITY situacionDeVia "http://geo.linkeddata.es/kos/transports/situacionDeVia/" >
-    <!ENTITY electrificacion "http://geo.linkeddata.es/kos/transports/electrificacion/" >
-    <!ENTITY tipoDeItinerario "http://geo.linkeddata.es/kos/transports/tipoDeItinerario/" >
-    <!ENTITY competenciaDeVia "http://geo.linkeddata.es/kos/transports/competenciaDeVia/" >
-    <!ENTITY competenciaPortuaria "http://geo.linkeddata.es/kos/transports/competenciaPortuaria/" >
-    <!ENTITY competenciaAeroportuaria "http://geo.linkeddata.es/kos/transports/competenciaAeroportuaria/" >
+    <!ENTITY acceso "http://geo.linkeddata.es/kos/transportes/acceso/" >
+    <!ENTITY ruta-ten-t "http://geo.linkeddata.es/kos/transportes/ruta-ten-t/" >
+    <!ENTITY ancho-de-via "http://geo.linkeddata.es/kos/transportes/ancho-de-via/" >
+    <!ENTITY estado-de-uso "http://geo.linkeddata.es/kos/transportes/estado-de-uso/" >
+    <!ENTITY tipo-de-tramo "http://geo.linkeddata.es/kos/transportes/tipo-de-tramo/" >
+    <!ENTITY numero-de-vias "http://geo.linkeddata.es/kos/transportes/numero-de-vias/" >
+    <!ENTITY categoria-vial "http://geo.linkeddata.es/kos/transportes/categoria-vial/" >
+    <!ENTITY electrificacion "http://geo.linkeddata.es/kos/transportes/electrificacion/" >
+    <!ENTITY tipo-de-trafico "http://geo.linkeddata.es/kos/transportes/tipo-de-trafico/" >
+    <!ENTITY tipo-de-calzada "http://geo.linkeddata.es/kos/transportes/tipo-de-calzada/" >
+    <!ENTITY situacion-de-via "http://geo.linkeddata.es/kos/transportes/situacion-de-via/" >
+    <!ENTITY tipo-de-itinerario "http://geo.linkeddata.es/kos/transportes/tipo-de-itinerario/" >
+    <!ENTITY competencia-de-via "http://geo.linkeddata.es/kos/transportes/competencia-de-via/" >
+    <!ENTITY competencia-portuaria "http://geo.linkeddata.es/kos/transportes/competencia-portuaria/" >
+    <!ENTITY competencia-aeroportuaria "http://geo.linkeddata.es/kos/transportes/competencia-aeroportuaria/" >
 ]>
 
 
 <rdf:RDF xmlns="&geo;ontology/"
      xml:base="&geo;ontology/"
-     xmlns:numeroDeVias="&geo;kos/transports/numeroDeVias/"
+     xmlns:numero-de-vias="&geo;kos/transportes/numero-de-vias/"
      xmlns:terms="http://purl.org/dc/terms/"
-     xmlns:situacionDeVia="&geo;kos/transports/situacionDeVia/"
-     xmlns:tipoDeTramo="&geo;kos/transports/tipoDeTramo/"
-     xmlns:anchoDeVia="&geo;kos/transports/anchoDeVia/"
+     xmlns:competencia-portuaria="&geo;kos/transportes/competencia-portuaria/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:ancho-de-via="&geo;kos/transportes/ancho-de-via/"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:tipoDeItinerario="&geo;kos/transports/tipoDeItinerario/"
-     xmlns:estadoDeUso="&geo;kos/transports/estadoDeUso/"
-     xmlns:transportes="&geo;kos/transports/"
+     xmlns:competencia-aeroportuaria="&geo;kos/transportes/competencia-aeroportuaria/"
+     xmlns:competencia-de-via="&geo;kos/transportes/competencia-de-via/"
+     xmlns:tipo-de-trafico="&geo;kos/transportes/tipo-de-trafico/"
+     xmlns:situacion-de-via="&geo;kos/transportes/situacion-de-via/"
+     xmlns:transportes="&geo;kos/transportes/"
+     xmlns:tipo-de-tramo="&geo;kos/transportes/tipo-de-tramo/"
+     xmlns:tipo-de-itinerario="&geo;kos/transportes/tipo-de-itinerario/"
      xmlns:geo="http://geo.linkeddata.es/"
-     xmlns:competenciaDeVia="&geo;kos/transports/competenciaDeVia/"
-     xmlns:acceso="&geo;kos/transports/acceso/"
-     xmlns:rutaTenT="&geo;kos/transports/rutaTenT/"
-     xmlns:categoriaVial="&geo;kos/transports/categoriaVial/"
-     xmlns:electrificacion="&geo;kos/transports/electrificacion/"
-     xmlns:competenciaPortuaria="&geo;kos/transports/competenciaPortuaria/"
-     xmlns:competenciaAeroportuaria="&geo;kos/transports/competenciaAeroportuaria/"
-     xmlns:tipoDeCalzada="&geo;kos/transports/tipoDeCalzada/"
+     xmlns:acceso="&geo;kos/transportes/acceso/"
+     xmlns:estado-de-uso="&geo;kos/transportes/estado-de-uso/"
+     xmlns:tipo-de-calzada="&geo;kos/transportes/tipo-de-calzada/"
+     xmlns:categoria-vial="&geo;kos/transportes/categoria-vial/"
+     xmlns:electrificacion="&geo;kos/transportes/electrificacion/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:tipoDeTrafico="&geo;kos/transports/tipoDeTrafico/"
-     xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:ruta-ten-t="&geo;kos/transportes/ruta-ten-t/">
     <owl:Ontology rdf:about="&geo;ontology/transports.owl">
         <owl:imports rdf:resource="&geo;ontology/transportes.owl"/>
         <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
@@ -105,7 +105,7 @@
                     <rdf:Description rdf:about="&skos;Concept"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&skos;inScheme"/>
-                        <owl:hasValue rdf:resource="&geo;kos/transports/acceso"/>
+                        <owl:hasValue rdf:resource="&geo;kos/transportes/acceso"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -114,13 +114,13 @@
 
 
 
-    <!-- http://geo.linkeddata.es/kos/transports/electrificacion -->
+    <!-- http://geo.linkeddata.es/kos/transportes/electrificacion -->
 
-    <owl:ObjectProperty rdf:about="&geo;kos/transports/electrificacion">
+    <owl:ObjectProperty rdf:about="&geo;kos/transportes/electrificacion">
         <rdfs:comment xml:lang="es">Esquema de conceptos para definir el tipo de electrificación de una vía
 puede tomar los valores:
-* http://geo.linkeddata.es/kos/transports/electrificacion/electrificado
-* http://geo.linkeddata.es/kos/transports/electrificacion/noElectrificado</rdfs:comment>
+* http://geo.linkeddata.es/kos/transportes/electrificacion/electrificado
+* http://geo.linkeddata.es/kos/transportes/electrificacion/no-electrificado</rdfs:comment>
         <skos:prefLabel xml:lang="es">electrificación</skos:prefLabel>
         <rdfs:domain rdf:resource="&geo;ontology/FerrocarrilConvencional"/>
         <rdfs:range>
@@ -129,7 +129,7 @@ puede tomar los valores:
                     <rdf:Description rdf:about="&skos;Concept"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&skos;inScheme"/>
-                        <owl:hasValue rdf:resource="&geo;kos/transports/electrificacion"/>
+                        <owl:hasValue rdf:resource="&geo;kos/transportes/electrificacion"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -149,7 +149,7 @@ puede tomar los valores:
                     <rdf:Description rdf:about="&skos;Concept"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&skos;inScheme"/>
-                        <owl:hasValue rdf:resource="&geo;kos/transports/anchoDeVia"/>
+                        <owl:hasValue rdf:resource="&geo;kos/transportes/ancho-de-via"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -167,7 +167,7 @@ puede tomar los valores:
                     <rdf:Description rdf:about="&skos;Concept"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&skos;inScheme"/>
-                        <owl:hasValue rdf:resource="&geo;kos/transports/tipoDeCalzada"/>
+                        <owl:hasValue rdf:resource="&geo;kos/transportes/tipo-de-calzada"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -197,7 +197,7 @@ puede tomar los valores:
                     <rdf:Description rdf:about="&skos;Concept"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&skos;inScheme"/>
-                        <owl:hasValue rdf:resource="&geo;kos/transports/categoriaVial"/>
+                        <owl:hasValue rdf:resource="&geo;kos/transportes/categoria-vial"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -226,7 +226,7 @@ puede tomar los valores:
                     <rdf:Description rdf:about="&skos;Concept"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&skos;inScheme"/>
-                        <owl:hasValue rdf:resource="&geo;kos/transports/competenciaAeroportuaria"/>
+                        <owl:hasValue rdf:resource="&geo;kos/transportes/competencia-aeroportuaria"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -240,6 +240,17 @@ puede tomar los valores:
     <owl:ObjectProperty rdf:about="&geo;ontology/competenciaDeVia">
         <rdfs:label xml:lang="es">competencia de vía</rdfs:label>
         <rdfs:comment xml:lang="es">competencia de la explotación de una vía</rdfs:comment>
+        <rdfs:range>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&skos;Concept"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&skos;inScheme"/>
+                        <owl:hasValue rdf:resource="&geo;kos/transportes/competencia-de-via"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -249,17 +260,6 @@ puede tomar los valores:
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:range>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&skos;Concept"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="&skos;inScheme"/>
-                        <owl:hasValue rdf:resource="&geo;kos/transports/competenciaDeVia"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:range>
     </owl:ObjectProperty>
 
 
@@ -276,7 +276,7 @@ puede tomar los valores:
                     <rdf:Description rdf:about="&skos;Concept"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&skos;inScheme"/>
-                        <owl:hasValue rdf:resource="&geo;kos/transports/competenciaPortuaria"/>
+                        <owl:hasValue rdf:resource="&geo;kos/transportes/competencia-portuaria"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -295,7 +295,7 @@ puede tomar los valores:
                     <rdf:Description rdf:about="&skos;Concept"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&skos;inScheme"/>
-                        <owl:hasValue rdf:resource="&geo;kos/transports/estadoDeUso"/>
+                        <owl:hasValue rdf:resource="&geo;kos/transportes/estado-de-uso"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -327,7 +327,7 @@ puede tomar los valores:
                     <rdf:Description rdf:about="&skos;Concept"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&skos;inScheme"/>
-                        <owl:hasValue rdf:resource="&geo;kos/transports/numeroDeVias"/>
+                        <owl:hasValue rdf:resource="&geo;kos/transportes/numero-de-vias"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -341,6 +341,17 @@ puede tomar los valores:
     <owl:ObjectProperty rdf:about="&geo;ontology/rutaTenT">
         <rdfs:label xml:lang="es">ruta TEN-T</rdfs:label>
         <rdfs:comment xml:lang="es">indica si el tramo de vía pertenece a la Red Transeuropea de Transporte (TEN-T)</rdfs:comment>
+        <rdfs:range>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&skos;Concept"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&skos;inScheme"/>
+                        <owl:hasValue rdf:resource="&geo;kos/transportes/ruta-ten-t"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -354,17 +365,6 @@ puede tomar los valores:
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:range>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&skos;Concept"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="&skos;inScheme"/>
-                        <owl:hasValue rdf:resource="&geo;kos/transports/rutaTenT"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:range>
     </owl:ObjectProperty>
 
 
@@ -374,6 +374,17 @@ puede tomar los valores:
     <owl:ObjectProperty rdf:about="&geo;ontology/situacionDeVia">
         <rdfs:label xml:lang="es">situación</rdfs:label>
         <rdfs:comment xml:lang="es">Disposición del tramo de vía sobre la superficie</rdfs:comment>
+        <rdfs:range>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&skos;Concept"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&skos;inScheme"/>
+                        <owl:hasValue rdf:resource="&geo;kos/transportes/situacion-de-via"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -384,17 +395,6 @@ puede tomar los valores:
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:range>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&skos;Concept"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="&skos;inScheme"/>
-                        <owl:hasValue rdf:resource="&geo;kos/transports/situacionDeVia"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:range>
     </owl:ObjectProperty>
 
 
@@ -419,7 +419,7 @@ puede tomar los valores:
                     <rdf:Description rdf:about="&skos;Concept"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&skos;inScheme"/>
-                        <owl:hasValue rdf:resource="&geo;kos/transports/tipoDeItinerario"/>
+                        <owl:hasValue rdf:resource="&geo;kos/transportes/tipo-de-itinerario"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -450,7 +450,7 @@ puede tomar los valores:
                     <rdf:Description rdf:about="&skos;Concept"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&skos;inScheme"/>
-                        <owl:hasValue rdf:resource="&geo;kos/transports/tipoDeTrafico"/>
+                        <owl:hasValue rdf:resource="&geo;kos/transportes/tipo-de-trafico"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -464,17 +464,6 @@ puede tomar los valores:
     <owl:ObjectProperty rdf:about="&geo;ontology/tipoDeTramo">
         <rdfs:label xml:lang="es">tipo de tramo</rdfs:label>
         <rdfs:comment xml:lang="es">Tramo de vía que se desarrollan por el interior de núcleos o diseminados superficiales</rdfs:comment>
-        <rdfs:range>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&skos;Concept"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="&skos;inScheme"/>
-                        <owl:hasValue rdf:resource="&geo;kos/transports/tipoDeTramo"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:range>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -484,6 +473,17 @@ puede tomar los valores:
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&skos;Concept"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&skos;inScheme"/>
+                        <owl:hasValue rdf:resource="&geo;kos/transportes/tipo-de-tramo"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:range>
     </owl:ObjectProperty>
 
 
@@ -564,15 +564,6 @@ puede tomar los valores:
         <rdfs:label xml:lang="en">iata code</rdfs:label>
         <rdfs:label xml:lang="es">código iata</rdfs:label>
         <rdfs:comment xml:lang="es">El código de aeropuertos de IATA está formado por grupos de tres letras, que designan a cada aeropuerto del mundo, asignadas por la Asociación Internacional de Transporte Aéreo (International Air Transport Association, IATA).</rdfs:comment>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&geo;ontology/Aerodromo"/>
-                    <rdf:Description rdf:about="&geo;ontology/Aeropuerto"/>
-                    <rdf:Description rdf:about="&geo;ontology/Helipuerto"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
         <rdfs:range>
             <rdfs:Datatype>
                 <owl:onDatatype rdf:resource="&xsd;string"/>
@@ -583,6 +574,15 @@ puede tomar los valores:
                 </owl:withRestrictions>
             </rdfs:Datatype>
         </rdfs:range>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&geo;ontology/Aerodromo"/>
+                    <rdf:Description rdf:about="&geo;ontology/Aeropuerto"/>
+                    <rdf:Description rdf:about="&geo;ontology/Helipuerto"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:DatatypeProperty>
 
 
@@ -593,15 +593,6 @@ puede tomar los valores:
         <rdfs:label xml:lang="en">icao code</rdfs:label>
         <rdfs:label xml:lang="es">código icao</rdfs:label>
         <rdfs:comment xml:lang="es">Código de designación de aeropuertos compuesto de cuatro caracteres alfanuméricos que sirve para identificar cada aeropuerto alrededor del mundo.</rdfs:comment>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&geo;ontology/Aerodromo"/>
-                    <rdf:Description rdf:about="&geo;ontology/Aeropuerto"/>
-                    <rdf:Description rdf:about="&geo;ontology/Helipuerto"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
         <rdfs:range>
             <rdfs:Datatype>
                 <owl:onDatatype rdf:resource="&xsd;string"/>
@@ -612,6 +603,15 @@ puede tomar los valores:
                 </owl:withRestrictions>
             </rdfs:Datatype>
         </rdfs:range>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&geo;ontology/Aerodromo"/>
+                    <rdf:Description rdf:about="&geo;ontology/Aeropuerto"/>
+                    <rdf:Description rdf:about="&geo;ontology/Helipuerto"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:DatatypeProperty>
 
 
@@ -683,11 +683,11 @@ puede tomar los valores:
                         <owl:unionOf rdf:parseType="Collection">
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&geo;ontology/calzada"/>
-                                <owl:hasValue rdf:resource="&geo;kos/transports/tipoDeCalzada/doble"/>
+                                <owl:hasValue rdf:resource="&geo;kos/transportes/tipo-de-calzada/doble"/>
                             </owl:Restriction>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&geo;ontology/calzada"/>
-                                <owl:hasValue rdf:resource="&geo;kos/transports/tipoDeCalzada/sentidoUnico"/>
+                                <owl:hasValue rdf:resource="&geo;kos/transportes/tipo-de-calzada/sentido-unico"/>
                             </owl:Restriction>
                         </owl:unionOf>
                     </owl:Class>
@@ -695,11 +695,11 @@ puede tomar los valores:
                         <owl:unionOf rdf:parseType="Collection">
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&geo;ontology/estadoDeUso"/>
-                                <owl:hasValue rdf:resource="&geo;kos/transports/estadoDeUso/enConstruccion"/>
+                                <owl:hasValue rdf:resource="&geo;kos/transportes/estado-de-uso/en-construccion"/>
                             </owl:Restriction>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&geo;ontology/estadoDeUso"/>
-                                <owl:hasValue rdf:resource="&geo;kos/transports/estadoDeUso/enUso"/>
+                                <owl:hasValue rdf:resource="&geo;kos/transportes/estado-de-uso/en-uso"/>
                             </owl:Restriction>
                         </owl:unionOf>
                     </owl:Class>
@@ -722,11 +722,11 @@ puede tomar los valores:
                         <owl:unionOf rdf:parseType="Collection">
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&geo;ontology/calzada"/>
-                                <owl:hasValue rdf:resource="&geo;kos/transports/tipoDeCalzada/doble"/>
+                                <owl:hasValue rdf:resource="&geo;kos/transportes/tipo-de-calzada/doble"/>
                             </owl:Restriction>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&geo;ontology/calzada"/>
-                                <owl:hasValue rdf:resource="&geo;kos/transports/tipoDeCalzada/sentidoUnico"/>
+                                <owl:hasValue rdf:resource="&geo;kos/transportes/tipo-de-calzada/sentido-unico"/>
                             </owl:Restriction>
                         </owl:unionOf>
                     </owl:Class>
@@ -734,11 +734,11 @@ puede tomar los valores:
                         <owl:unionOf rdf:parseType="Collection">
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&geo;ontology/estadoDeUso"/>
-                                <owl:hasValue rdf:resource="&geo;kos/transports/estadoDeUso/enConstruccion"/>
+                                <owl:hasValue rdf:resource="&geo;kos/transportes/estado-de-uso/en-construccion"/>
                             </owl:Restriction>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&geo;ontology/estadoDeUso"/>
-                                <owl:hasValue rdf:resource="&geo;kos/transports/estadoDeUso/enUso"/>
+                                <owl:hasValue rdf:resource="&geo;kos/transportes/estado-de-uso/en-uso"/>
                             </owl:Restriction>
                         </owl:unionOf>
                     </owl:Class>
@@ -784,11 +784,11 @@ puede tomar los valores:
                         <owl:unionOf rdf:parseType="Collection">
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&geo;ontology/calzada"/>
-                                <owl:hasValue rdf:resource="&geo;kos/transports/tipoDeCalzada/convencional"/>
+                                <owl:hasValue rdf:resource="&geo;kos/transportes/tipo-de-calzada/convencional"/>
                             </owl:Restriction>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&geo;ontology/calzada"/>
-                                <owl:hasValue rdf:resource="&geo;kos/transports/tipoDeCalzada/sentidoUnico"/>
+                                <owl:hasValue rdf:resource="&geo;kos/transportes/tipo-de-calzada/sentido-unico"/>
                             </owl:Restriction>
                         </owl:unionOf>
                     </owl:Class>
@@ -796,15 +796,15 @@ puede tomar los valores:
                         <owl:unionOf rdf:parseType="Collection">
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&geo;ontology/competenciaDeVia"/>
-                                <owl:hasValue rdf:resource="&geo;kos/transports/competenciaDeVia/autonomica"/>
+                                <owl:hasValue rdf:resource="&geo;kos/transportes/competencia-de-via/autonomica"/>
                             </owl:Restriction>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&geo;ontology/competenciaDeVia"/>
-                                <owl:hasValue rdf:resource="&geo;kos/transports/competenciaDeVia/local"/>
+                                <owl:hasValue rdf:resource="&geo;kos/transportes/competencia-de-via/local"/>
                             </owl:Restriction>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&geo;ontology/competenciaDeVia"/>
-                                <owl:hasValue rdf:resource="&geo;kos/transports/competenciaDeVia/provincial"/>
+                                <owl:hasValue rdf:resource="&geo;kos/transportes/competencia-de-via/provincial"/>
                             </owl:Restriction>
                         </owl:unionOf>
                     </owl:Class>
@@ -826,11 +826,11 @@ puede tomar los valores:
                 <owl:unionOf rdf:parseType="Collection">
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&geo;ontology/calzada"/>
-                        <owl:hasValue rdf:resource="&geo;kos/transports/tipoDeCalzada/convencional"/>
+                        <owl:hasValue rdf:resource="&geo;kos/transportes/tipo-de-calzada/convencional"/>
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&geo;ontology/calzada"/>
-                        <owl:hasValue rdf:resource="&geo;kos/transports/tipoDeCalzada/sentidoUnico"/>
+                        <owl:hasValue rdf:resource="&geo;kos/transportes/tipo-de-calzada/sentido-unico"/>
                     </owl:Restriction>
                 </owl:unionOf>
             </owl:Class>
@@ -859,11 +859,11 @@ puede tomar los valores:
                 <owl:unionOf rdf:parseType="Collection">
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&geo;ontology/estadoDeUso"/>
-                        <owl:hasValue rdf:resource="&geo;kos/transports/estadoDeUso/enConstruccion"/>
+                        <owl:hasValue rdf:resource="&geo;kos/transportes/estado-de-uso/en-construccion"/>
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&geo;ontology/estadoDeUso"/>
-                        <owl:hasValue rdf:resource="&geo;kos/transports/estadoDeUso/enUso"/>
+                        <owl:hasValue rdf:resource="&geo;kos/transportes/estado-de-uso/en-uso"/>
                     </owl:Restriction>
                 </owl:unionOf>
             </owl:Class>
@@ -917,11 +917,11 @@ puede tomar los valores:
                         <owl:unionOf rdf:parseType="Collection">
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&geo;ontology/estadoDeUso"/>
-                                <owl:hasValue rdf:resource="&geo;kos/transports/estadoDeUso/enConstruccion"/>
+                                <owl:hasValue rdf:resource="&geo;kos/transportes/estado-de-uso/en-construccion"/>
                             </owl:Restriction>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&geo;ontology/estadoDeUso"/>
-                                <owl:hasValue rdf:resource="&geo;kos/transports/estadoDeUso/enUso"/>
+                                <owl:hasValue rdf:resource="&geo;kos/transportes/estado-de-uso/en-uso"/>
                             </owl:Restriction>
                         </owl:unionOf>
                     </owl:Class>
@@ -1051,186 +1051,186 @@ puede tomar los valores:
 
 
 
-    <!-- http://geo.linkeddata.es/kos/transports/acceso -->
+    <!-- http://geo.linkeddata.es/kos/transportes/acceso -->
 
-    <skos:ConceptScheme rdf:about="&geo;kos/transports/acceso">
+    <skos:ConceptScheme rdf:about="&geo;kos/transportes/acceso">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
         <rdfs:comment xml:lang="es">Esquema de conceptos para definir el tipo de acceso de una vía
 puede tomar los valores:
-* http://geo.linkeddata.es/kos/transports/acceso/libre
-* http://geo.linkeddata.es/kos/transports/acceso/peaje</rdfs:comment>
+* http://geo.linkeddata.es/kos/transportes/acceso/libre
+* http://geo.linkeddata.es/kos/transportes/acceso/peaje</rdfs:comment>
         <skos:prefLabel xml:lang="es">acceso</skos:prefLabel>
     </skos:ConceptScheme>
 
 
 
-    <!-- http://geo.linkeddata.es/kos/transports/anchoDeVia -->
+    <!-- http://geo.linkeddata.es/kos/transportes/ancho-de-via -->
 
-    <skos:ConceptScheme rdf:about="&geo;kos/transports/anchoDeVia">
+    <skos:ConceptScheme rdf:about="&geo;kos/transportes/ancho-de-via">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
         <rdfs:comment xml:lang="es">Esquema de conceptos para definir el ancho de una vía
 puede tomar los valores:
-* http://geo.linkeddata.es/kos/transports/anchoDeVia/iberico
-* http://geo.linkeddata.es/kos/transports/anchoDeVia/internacional
-* http://geo.linkeddata.es/kos/transports/anchoDeVia/mixto
-* http://geo.linkeddata.es/kos/transports/anchoDeVia/metrico</rdfs:comment>
+* http://geo.linkeddata.es/kos/transportes/ancho-de-via//iberico
+* http://geo.linkeddata.es/kos/transportes/ancho-de-via/internacional
+* http://geo.linkeddata.es/kos/transportes/ancho-de-via/mixto
+* http://geo.linkeddata.es/kos/transportes/ancho-de-via/metrico</rdfs:comment>
         <skos:prefLabel xml:lang="es">ancho de vía</skos:prefLabel>
     </skos:ConceptScheme>
 
 
 
-    <!-- http://geo.linkeddata.es/kos/transports/categoriaVial -->
+    <!-- http://geo.linkeddata.es/kos/transportes/categoria-vial -->
 
-    <skos:ConceptScheme rdf:about="&geo;kos/transports/categoriaVial">
+    <skos:ConceptScheme rdf:about="&geo;kos/transportes/categoria-vial">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
         <rdfs:comment xml:lang="es">Esquema de conceptos para definir el tipo de categoría de una vía
 según su importancia. Puede tomar los valores:
-* http://geo.linkeddata.es/kos/transports/categoriaVial/primerOrden
-* http://geo.linkeddata.es/kos/transports/categoriaVial/segundoOrden
-* http://geo.linkeddata.es/kos/transports/categoriaVial/tercerOrden</rdfs:comment>
+* http://geo.linkeddata.es/kos/transportes/categoria-vial/primer-orden
+* http://geo.linkeddata.es/kos/transportes/categoria-vial/segundo-orden
+* http://geo.linkeddata.es/kos/transportes/categoria-vial/tercer-orden</rdfs:comment>
         <skos:prefLabel xml:lang="es">categoría vial</skos:prefLabel>
     </skos:ConceptScheme>
 
 
 
-    <!-- http://geo.linkeddata.es/kos/transports/competenciaAeroportuaria -->
+    <!-- http://geo.linkeddata.es/kos/transportes/competencia-aeroportuaria -->
 
-    <skos:ConceptScheme rdf:about="&geo;kos/transports/competenciaAeroportuaria">
+    <skos:ConceptScheme rdf:about="&geo;kos/transportes/competencia-aeroportuaria">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
         <rdfs:comment xml:lang="es">Esquema de conceptos para definir el tipo de cometencia de explotación aeroportuaria.
 puede tomar los valores:
-* http://geo.linkeddata.es/kos/transports/competenciaAeroportuaria/aena
-* http://geo.linkeddata.es/kos/transports/competenciaAeroportuaria/militar
-* http://geo.linkeddata.es/kos/transports/competenciaAeroportuaria/privada</rdfs:comment>
+* http://geo.linkeddata.es/kos/transportes/competencia-aeroportuaria/aena
+* http://geo.linkeddata.es/kos/transportes/competencia-aeroportuaria/militar
+* http://geo.linkeddata.es/kos/transportes/competencia-aeroportuaria/privada</rdfs:comment>
         <skos:prefLabel xml:lang="es">competencia aeroportuaria</skos:prefLabel>
     </skos:ConceptScheme>
 
 
 
-    <!-- http://geo.linkeddata.es/kos/transports/competenciaDeVia -->
+    <!-- http://geo.linkeddata.es/kos/transportes/competencia-de-via -->
 
-    <skos:ConceptScheme rdf:about="&geo;kos/transports/competenciaDeVia">
+    <skos:ConceptScheme rdf:about="&geo;kos/transportes/competencia-de-via">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
         <rdfs:comment xml:lang="es">Esquema de conceptos para definir de quien es la competencia de una determinada vía
 puede tomar los valores:
-* http://geo.linkeddata.es/kos/transports/competenciaVia/estatal
-* http://geo.linkeddata.es/kos/transports/competenciaVia/local
-* http://geo.linkeddata.es/kos/transports/competenciaVia/provicial
-* http://geo.linkeddata.es/kos/transports/competenciaVia/autonomica</rdfs:comment>
+* http://geo.linkeddata.es/kos/transportes/competencia-de-via/estatal
+* http://geo.linkeddata.es/kos/transportes/competencia-de-via/local
+* http://geo.linkeddata.es/kos/transportes/competencia-de-via/provicial
+* http://geo.linkeddata.es/kos/transportes/competencia-de-via/autonomica</rdfs:comment>
         <skos:prefLabel xml:lang="es">competencia de vía</skos:prefLabel>
     </skos:ConceptScheme>
 
 
 
-    <!-- http://geo.linkeddata.es/kos/transports/competenciaPortuaria -->
+    <!-- http://geo.linkeddata.es/kos/transportes/competencia-portuaria -->
 
-    <skos:ConceptScheme rdf:about="&geo;kos/transports/competenciaPortuaria">
+    <skos:ConceptScheme rdf:about="&geo;kos/transportes/competencia-portuaria">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
         <rdfs:comment xml:lang="es">Esquema de conceptos para definir el tipo la competencia de explotación de un puerto
 puede tomar los valores:
-* http://geo.linkeddata.es/kos/transports/competenciaPortuaria/estatal</rdfs:comment>
+* http://geo.linkeddata.es/kos/transportes/competencia-portuaria/estatal</rdfs:comment>
         <skos:prefLabel xml:lang="es">competencia portuaria</skos:prefLabel>
     </skos:ConceptScheme>
 
 
 
-    <!-- http://geo.linkeddata.es/kos/transports/electrificacion -->
+    <!-- http://geo.linkeddata.es/kos/transportes/electrificacion -->
 
-    <skos:ConceptScheme rdf:about="&geo;kos/transports/electrificacion">
+    <skos:ConceptScheme rdf:about="&geo;kos/transportes/electrificacion">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
         <rdfs:comment xml:lang="es">Esquema de conceptos para definir el tipo de electrificación de una vía
 puede tomar los valores:
-* http://geo.linkeddata.es/kos/transports/electrificacion/electrificado
-* http://geo.linkeddata.es/kos/transports/electrificacion/noElectrificado</rdfs:comment>
+* http://geo.linkeddata.es/kos/transportes/electrificacion/electrificado
+* http://geo.linkeddata.es/kos/transportes/electrificacion/no-electrificado</rdfs:comment>
         <skos:prefLabel xml:lang="es">electrificación</skos:prefLabel>
     </skos:ConceptScheme>
 
 
 
-    <!-- http://geo.linkeddata.es/kos/transports/estadoDeUso -->
+    <!-- http://geo.linkeddata.es/kos/transportes/estado-de-uso -->
 
-    <skos:ConceptScheme rdf:about="&geo;kos/transports/estadoDeUso">
+    <skos:ConceptScheme rdf:about="&geo;kos/transportes/estado-de-uso">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
         <skos:prefLabel xml:lang="es">estado de uso</skos:prefLabel>
         <rdfs:comment xml:lang="es">indica el estado de uso. Puede tomar los valores:
-* http://geo.linkeddata.es/kos/transporters/estadoDeUso/enConstruccion
-* http://geo.linkeddata.es/kos/transporters/estadoDeUso/enUso
-* http://geo.linkeddata.es/kos/transporters/estadoDeUso/abandonado</rdfs:comment>
+* http://geo.linkeddata.es/kos/transportes/estado-de-uso/en-construccion
+* http://geo.linkeddata.es/kos/transportes/estado-de-uso/en-uso
+* http://geo.linkeddata.es/kos/transportes/estado-de-uso/abandonado</rdfs:comment>
     </skos:ConceptScheme>
 
 
 
-    <!-- http://geo.linkeddata.es/kos/transports/numeroDeVias -->
+    <!-- http://geo.linkeddata.es/kos/transportes/numero-de-vias -->
 
-    <skos:ConceptScheme rdf:about="&geo;kos/transports/numeroDeVias">
+    <skos:ConceptScheme rdf:about="&geo;kos/transportes/numero-de-vias">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
         <rdfs:comment xml:lang="es">Esquema de conceptos para definir el número de vias
 puede tomar los valores:
-* http://geo.linkeddata.es/kos/transports/numeroDeVias/doble
-* http://geo.linkeddata.es/kos/transports/numeroDeVias/unica</rdfs:comment>
+* http://geo.linkeddata.es/kos/transportes/numero-de-vias/doble
+* http://geo.linkeddata.es/kos/transportes/numero-de-vias/unica</rdfs:comment>
         <skos:prefLabel xml:lang="es">número de vías</skos:prefLabel>
     </skos:ConceptScheme>
 
 
 
-    <!-- http://geo.linkeddata.es/kos/transports/rutaTenT -->
+    <!-- http://geo.linkeddata.es/kos/transportes/ruta-ten-t -->
 
-    <skos:ConceptScheme rdf:about="&geo;kos/transports/rutaTenT">
+    <skos:ConceptScheme rdf:about="&geo;kos/transportes/ruta-ten-t">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
         <rdfs:comment xml:lang="es">Esquema de conceptos que indica si el tramo de vía pertenece a la Red Transeuropea de Transporte (TEN-T)
 puede tomar los valores:
-* http://geo.linkeddata.es/kos/transports/rutaTenT/rutaTranseuropea
-* http://geo.linkeddata.es/kos/transports/rutaTenT/rutaNoTranseuropea</rdfs:comment>
+* http://geo.linkeddata.es/kos/transportes/ruta-ten-t/ruta-transeuropea
+* http://geo.linkeddata.es/kos/transportes/ruta-ten-t/ruta-no-transeuropea</rdfs:comment>
         <skos:prefLabel xml:lang="es">ruta TEN-T</skos:prefLabel>
     </skos:ConceptScheme>
 
 
 
-    <!-- http://geo.linkeddata.es/kos/transports/situacionDeVia -->
+    <!-- http://geo.linkeddata.es/kos/transportes/situacion-de-via -->
 
-    <skos:ConceptScheme rdf:about="&geo;kos/transports/situacionDeVia">
+    <skos:ConceptScheme rdf:about="&geo;kos/transportes/situacion-de-via">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
         <rdfs:comment xml:lang="es">Disposición del tramo de vía sobre la superficie.
 
-* http://geo.linkeddata.es/kos/transports/situacionDeVia/elevado
-* http://geo.linkeddata.es/kos/transports/situacionDeVia/subterraneo
-* http://geo.linkeddata.es/kos/transports/situacionDeVia/superficial</rdfs:comment>
+* http://geo.linkeddata.es/kos/transportes/situacion-de-via/elevado
+* http://geo.linkeddata.es/kos/transportes/situacion-de-via/subterraneo
+* http://geo.linkeddata.es/kos/transportes/situacion-de-via/superficial</rdfs:comment>
         <skos:prefLabel xml:lang="es">situación</skos:prefLabel>
     </skos:ConceptScheme>
 
 
 
-    <!-- http://geo.linkeddata.es/kos/transports/tipoDeCalzada -->
+    <!-- http://geo.linkeddata.es/kos/transportes/tipo-de-calzada -->
 
-    <skos:ConceptScheme rdf:about="&geo;kos/transports/tipoDeCalzada">
+    <skos:ConceptScheme rdf:about="&geo;kos/transportes/tipo-de-calzada">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
         <rdfs:comment xml:lang="es">Esquema de conceptos para definir el número de calzadas y sentido de circulación del tramo de vía.
 puede tomar los valores:
-* http://geo.linkeddata.es/kos/transports/calzada/doble
-* http://geo.linkeddata.es/kos/transports/calzada/convencional
-* http://geo.linkeddata.es/kos/transports/calzada/sentidoUnico</rdfs:comment>
+* http://geo.linkeddata.es/kos/transportes/tipo-de-calzada/doble
+* http://geo.linkeddata.es/kos/transportes/tipo-de-calzada/convencional
+* http://geo.linkeddata.es/kos/transportes/tipo-de-calzada/sentido-unico</rdfs:comment>
         <skos:prefLabel xml:lang="es">tipo de calzada</skos:prefLabel>
     </skos:ConceptScheme>
 
 
 
-    <!-- http://geo.linkeddata.es/kos/transports/tipoDeItinerario -->
+    <!-- http://geo.linkeddata.es/kos/transportes/tipo-de-itinerario -->
 
-    <skos:ConceptScheme rdf:about="&geo;kos/transports/tipoDeItinerario">
+    <skos:ConceptScheme rdf:about="&geo;kos/transportes/tipo-de-itinerario">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
         <rdfs:comment xml:lang="es">Esquema de conceptos para definir si el tramo de una vía pertenece a la red de carreteras europeas
 puede tomar los valores:
 
-* http://geo.linkeddata.es/kos/transports/tipoDeItinerario/itinerarioEuropeo
-* http://geo.linkeddata.es/kos/transports/tipoDeItinerario/itinerarioNoEuropeo</rdfs:comment>
+* http://geo.linkeddata.es/kos/transportes/tipo-de-itinerario/itinerario-europeo
+* http://geo.linkeddata.es/kos/transportes/tipo-de-itinerario/itinerario-no-europeo</rdfs:comment>
         <skos:prefLabel xml:lang="es">tipo de itinerario</skos:prefLabel>
     </skos:ConceptScheme>
 
 
 
-    <!-- http://geo.linkeddata.es/kos/transports/tipoDeTrafico -->
+    <!-- http://geo.linkeddata.es/kos/transportes/tipo-de-trafico -->
 
-    <skos:ConceptScheme rdf:about="&geo;kos/transports/tipoDeTrafico">
+    <skos:ConceptScheme rdf:about="&geo;kos/transportes/tipo-de-trafico">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
         <rdfs:comment xml:lang="es">kos que indica el tipo de tráfico que lleva un ferrocarril. Pueden ser
 * http://geo.linkeddata.es/kos/transporters/tipoDeTrafico/viajeros
@@ -1241,436 +1241,436 @@ puede tomar los valores:
 
 
 
-    <!-- http://geo.linkeddata.es/kos/transports/tipoDeTramo -->
+    <!-- http://geo.linkeddata.es/kos/transportes/tipo-de-tramo -->
 
-    <skos:ConceptScheme rdf:about="&geo;kos/transports/tipoDeTramo">
+    <skos:ConceptScheme rdf:about="&geo;kos/transportes/tipo-de-tramo">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
         <rdfs:comment xml:lang="es">Esquema de conceptos que indica si el tramo de vía  se desarrolla por el interior de núcleos o diseminados superficiales
 puede tomar los valores:
-* http://geo.linkeddata.es/kos/transports/tipoDeTramo/interno
-* http://geo.linkeddata.es/kos/transports/tipoDeTramo/noInterno</rdfs:comment>
+* http://geo.linkeddata.es/kos/transportes/tipo-de-tramo/interno
+* http://geo.linkeddata.es/kos/transportes/tipo-de-tramo/no-interno</rdfs:comment>
         <skos:prefLabel xml:lang="es">tipo de tramo</skos:prefLabel>
     </skos:ConceptScheme>
 
 
 
-    <!-- http://geo.linkeddata.es/kos/transports/acceso/libre -->
+    <!-- http://geo.linkeddata.es/kos/transportes/acceso/libre -->
 
-    <skos:Concept rdf:about="&geo;kos/transports/acceso/libre">
+    <skos:Concept rdf:about="&geo;kos/transportes/acceso/libre">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
         <skos:prefLabel xml:lang="es">acceso libre</skos:prefLabel>
         <rdfs:comment xml:lang="es">indica si la via es de acceso libre</rdfs:comment>
-        <skos:inScheme rdf:resource="&geo;kos/transports/acceso"/>
+        <skos:inScheme rdf:resource="&geo;kos/transportes/acceso"/>
     </skos:Concept>
 
 
 
-    <!-- http://geo.linkeddata.es/kos/transports/acceso/peaje -->
+    <!-- http://geo.linkeddata.es/kos/transportes/acceso/peaje -->
 
-    <skos:Concept rdf:about="&geo;kos/transports/acceso/peaje">
+    <skos:Concept rdf:about="&geo;kos/transportes/acceso/peaje">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
         <skos:prefLabel xml:lang="es">acceso con peaje</skos:prefLabel>
         <rdfs:comment xml:lang="es">indica que la vía es de pago.</rdfs:comment>
-        <skos:inScheme rdf:resource="&geo;kos/transports/acceso"/>
+        <skos:inScheme rdf:resource="&geo;kos/transportes/acceso"/>
     </skos:Concept>
 
 
 
-    <!-- http://geo.linkeddata.es/kos/transports/anchoDeVia/iberico -->
+    <!-- http://geo.linkeddata.es/kos/transportes/ancho-de-via/iberico -->
 
-    <skos:Concept rdf:about="&geo;kos/transports/anchoDeVia/iberico">
+    <skos:Concept rdf:about="&geo;kos/transportes/ancho-de-via/iberico">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
         <rdfs:comment xml:lang="es"> ancho ibérico (1.668 mm)</rdfs:comment>
         <skos:prefLabel xml:lang="es">ancho de vía ibérico</skos:prefLabel>
-        <skos:inScheme rdf:resource="&geo;kos/transports/anchoDeVia"/>
+        <skos:inScheme rdf:resource="&geo;kos/transportes/ancho-de-via"/>
     </skos:Concept>
 
 
 
-    <!-- http://geo.linkeddata.es/kos/transports/anchoDeVia/internacional -->
+    <!-- http://geo.linkeddata.es/kos/transportes/ancho-de-via/internacional -->
 
-    <skos:Concept rdf:about="&geo;kos/transports/anchoDeVia/internacional">
+    <skos:Concept rdf:about="&geo;kos/transportes/ancho-de-via/internacional">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
         <rdfs:comment xml:lang="es">acnho de via internacional (1.435 mm).</rdfs:comment>
         <skos:prefLabel xml:lang="es">ancho de vía internacional</skos:prefLabel>
-        <skos:inScheme rdf:resource="&geo;kos/transports/anchoDeVia"/>
+        <skos:inScheme rdf:resource="&geo;kos/transportes/ancho-de-via"/>
     </skos:Concept>
 
 
 
-    <!-- http://geo.linkeddata.es/kos/transports/anchoDeVia/metrico -->
+    <!-- http://geo.linkeddata.es/kos/transportes/ancho-de-via/metrico -->
 
-    <skos:Concept rdf:about="&geo;kos/transports/anchoDeVia/metrico">
+    <skos:Concept rdf:about="&geo;kos/transportes/ancho-de-via/metrico">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
         <skos:prefLabel xml:lang="es">ancho de vía métrico</skos:prefLabel>
         <rdfs:comment xml:lang="es">ancho métrico, 1.000  mm</rdfs:comment>
-        <skos:inScheme rdf:resource="&geo;kos/transports/anchoDeVia"/>
+        <skos:inScheme rdf:resource="&geo;kos/transportes/ancho-de-via"/>
     </skos:Concept>
 
 
 
-    <!-- http://geo.linkeddata.es/kos/transports/anchoDeVia/mixto -->
+    <!-- http://geo.linkeddata.es/kos/transportes/ancho-de-via/mixto -->
 
-    <skos:Concept rdf:about="&geo;kos/transports/anchoDeVia/mixto">
+    <skos:Concept rdf:about="&geo;kos/transportes/ancho-de-via/mixto">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
         <skos:prefLabel xml:lang="es">ancho de vía mixto</skos:prefLabel>
-        <skos:inScheme rdf:resource="&geo;kos/transports/anchoDeVia"/>
+        <skos:inScheme rdf:resource="&geo;kos/transportes/ancho-de-via"/>
     </skos:Concept>
 
 
 
-    <!-- http://geo.linkeddata.es/kos/transports/categoriaVial/primerOrden -->
+    <!-- http://geo.linkeddata.es/kos/transportes/categoria-vial/primer-orden -->
 
-    <skos:Concept rdf:about="&geo;kos/transports/categoriaVial/primerOrden">
+    <skos:Concept rdf:about="&geo;kos/transportes/categoria-vial/primer-orden">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
         <skos:prefLabel xml:lang="es">categoría vial de primer orden</skos:prefLabel>
-        <skos:inScheme rdf:resource="&geo;kos/transports/categoriaVial"/>
+        <skos:inScheme rdf:resource="&geo;kos/transportes/categoria-vial"/>
     </skos:Concept>
 
 
 
-    <!-- http://geo.linkeddata.es/kos/transports/categoriaVial/segundoOrden -->
+    <!-- http://geo.linkeddata.es/kos/transportes/categoria-vial/segundo-orden -->
 
-    <skos:Concept rdf:about="&geo;kos/transports/categoriaVial/segundoOrden">
+    <skos:Concept rdf:about="&geo;kos/transportes/categoria-vial/segundo-orden">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
         <skos:prefLabel xml:lang="es">categoría vial de segundo orden</skos:prefLabel>
-        <skos:inScheme rdf:resource="&geo;kos/transports/categoriaVial"/>
+        <skos:inScheme rdf:resource="&geo;kos/transportes/categoria-vial"/>
     </skos:Concept>
 
 
 
-    <!-- http://geo.linkeddata.es/kos/transports/categoriaVial/tercerOrden -->
+    <!-- http://geo.linkeddata.es/kos/transportes/categoria-vial/tercer-orden -->
 
-    <skos:Concept rdf:about="&geo;kos/transports/categoriaVial/tercerOrden">
+    <skos:Concept rdf:about="&geo;kos/transportes/categoria-vial/tercer-orden">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
         <skos:prefLabel xml:lang="es">categoría vial de tercer orden</skos:prefLabel>
-        <skos:inScheme rdf:resource="&geo;kos/transports/categoriaVial"/>
+        <skos:inScheme rdf:resource="&geo;kos/transportes/categoria-vial"/>
     </skos:Concept>
 
 
 
-    <!-- http://geo.linkeddata.es/kos/transports/competenciaAeroportuaria/aena -->
+    <!-- http://geo.linkeddata.es/kos/transportes/competencia-aeroportuaria/aena -->
 
-    <skos:Concept rdf:about="&geo;kos/transports/competenciaAeroportuaria/aena">
+    <skos:Concept rdf:about="&geo;kos/transportes/competencia-aeroportuaria/aena">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
         <skos:prefLabel xml:lang="es">aena</skos:prefLabel>
         <rdfs:comment xml:lang="es">competencia aeroportuaria de explotación por aena</rdfs:comment>
-        <skos:inScheme rdf:resource="&geo;kos/transports/competenciaAeroportuaria"/>
+        <skos:inScheme rdf:resource="&geo;kos/transportes/competencia-aeroportuaria"/>
     </skos:Concept>
 
 
 
-    <!-- http://geo.linkeddata.es/kos/transports/competenciaAeroportuaria/militar -->
+    <!-- http://geo.linkeddata.es/kos/transportes/competencia-aeroportuaria/militar -->
 
-    <skos:Concept rdf:about="&geo;kos/transports/competenciaAeroportuaria/militar">
+    <skos:Concept rdf:about="&geo;kos/transportes/competencia-aeroportuaria/militar">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
         <rdfs:comment xml:lang="es">competencia aeroportuaria de explotación militar</rdfs:comment>
         <skos:prefLabel xml:lang="es">militar</skos:prefLabel>
-        <skos:inScheme rdf:resource="&geo;kos/transports/competenciaAeroportuaria"/>
+        <skos:inScheme rdf:resource="&geo;kos/transportes/competencia-aeroportuaria"/>
     </skos:Concept>
 
 
 
-    <!-- http://geo.linkeddata.es/kos/transports/competenciaAeroportuaria/privada -->
+    <!-- http://geo.linkeddata.es/kos/transportes/competencia-aeroportuaria/privada -->
 
-    <skos:Concept rdf:about="&geo;kos/transports/competenciaAeroportuaria/privada">
+    <skos:Concept rdf:about="&geo;kos/transportes/competencia-aeroportuaria/privada">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
         <rdfs:comment xml:lang="es">competencia aeroportuaria de explotación privada</rdfs:comment>
         <skos:prefLabel xml:lang="es">privada</skos:prefLabel>
-        <skos:inScheme rdf:resource="&geo;kos/transports/competenciaAeroportuaria"/>
+        <skos:inScheme rdf:resource="&geo;kos/transportes/competencia-aeroportuaria"/>
     </skos:Concept>
 
 
 
-    <!-- http://geo.linkeddata.es/kos/transports/competenciaDeVia/autonomica -->
+    <!-- http://geo.linkeddata.es/kos/transportes/competencia-de-via/autonomica -->
 
-    <skos:Concept rdf:about="&geo;kos/transports/competenciaDeVia/autonomica">
+    <skos:Concept rdf:about="&geo;kos/transportes/competencia-de-via/autonomica">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
         <skos:prefLabel xml:lang="es">competencia de vía autonómica</skos:prefLabel>
         <rdfs:comment xml:lang="es">indica que la via es competencia de la administración de las CCAA</rdfs:comment>
-        <skos:inScheme rdf:resource="&geo;kos/transports/competenciaDeVia"/>
+        <skos:inScheme rdf:resource="&geo;kos/transportes/competencia-de-via"/>
     </skos:Concept>
 
 
 
-    <!-- http://geo.linkeddata.es/kos/transports/competenciaDeVia/estatal -->
+    <!-- http://geo.linkeddata.es/kos/transportes/competencia-de-via/estatal -->
 
-    <skos:Concept rdf:about="&geo;kos/transports/competenciaDeVia/estatal">
+    <skos:Concept rdf:about="&geo;kos/transportes/competencia-de-via/estatal">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
         <skos:prefLabel xml:lang="es">competencia de vía estatal</skos:prefLabel>
         <rdfs:comment xml:lang="es">indica que la via es competencia del Estado</rdfs:comment>
-        <skos:inScheme rdf:resource="&geo;kos/transports/competenciaDeVia"/>
+        <skos:inScheme rdf:resource="&geo;kos/transportes/competencia-de-via"/>
     </skos:Concept>
 
 
 
-    <!-- http://geo.linkeddata.es/kos/transports/competenciaDeVia/local -->
+    <!-- http://geo.linkeddata.es/kos/transportes/competencia-de-via/local -->
 
-    <skos:Concept rdf:about="&geo;kos/transports/competenciaDeVia/local">
+    <skos:Concept rdf:about="&geo;kos/transportes/competencia-de-via/local">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
         <skos:prefLabel xml:lang="es">competencia de vía local</skos:prefLabel>
         <rdfs:comment xml:lang="es">indica que la via es competencia del municipio</rdfs:comment>
-        <skos:inScheme rdf:resource="&geo;kos/transports/competenciaDeVia"/>
+        <skos:inScheme rdf:resource="&geo;kos/transportes/competencia-de-via"/>
     </skos:Concept>
 
 
 
-    <!-- http://geo.linkeddata.es/kos/transports/competenciaDeVia/provincial -->
+    <!-- http://geo.linkeddata.es/kos/transportes/competencia-de-via/provincial -->
 
-    <skos:Concept rdf:about="&geo;kos/transports/competenciaDeVia/provincial">
+    <skos:Concept rdf:about="&geo;kos/transportes/competencia-de-via/provincial">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
         <skos:prefLabel xml:lang="es">competencia de vía provincial</skos:prefLabel>
         <rdfs:comment xml:lang="es">indica que la via es competencia de la Diputación Provincial</rdfs:comment>
-        <skos:inScheme rdf:resource="&geo;kos/transports/competenciaDeVia"/>
+        <skos:inScheme rdf:resource="&geo;kos/transportes/competencia-de-via"/>
     </skos:Concept>
 
 
 
-    <!-- http://geo.linkeddata.es/kos/transports/competenciaPortuaria/estatal -->
+    <!-- http://geo.linkeddata.es/kos/transportes/competencia-portuaria/estatal -->
 
-    <skos:Concept rdf:about="&geo;kos/transports/competenciaPortuaria/estatal">
+    <skos:Concept rdf:about="&geo;kos/transportes/competencia-portuaria/estatal">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
         <skos:prefLabel xml:lang="es">competencia portuaria estatal</skos:prefLabel>
-        <skos:inScheme rdf:resource="&geo;kos/transports/competenciaPortuaria"/>
+        <skos:inScheme rdf:resource="&geo;kos/transportes/competencia-portuaria"/>
     </skos:Concept>
 
 
 
-    <!-- http://geo.linkeddata.es/kos/transports/electrificacion/electrificado -->
+    <!-- http://geo.linkeddata.es/kos/transportes/electrificacion/electrificado -->
 
-    <skos:Concept rdf:about="&geo;kos/transports/electrificacion/electrificado">
+    <skos:Concept rdf:about="&geo;kos/transportes/electrificacion/electrificado">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
         <rdfs:comment xml:lang="es">Indica que una vía está electrificada</rdfs:comment>
         <skos:prefLabel xml:lang="es">electrificado</skos:prefLabel>
-        <skos:inScheme rdf:resource="&geo;kos/transports/electrificacion"/>
+        <skos:inScheme rdf:resource="&geo;kos/transportes/electrificacion"/>
     </skos:Concept>
 
 
 
-    <!-- http://geo.linkeddata.es/kos/transports/electrificacion/noElectrificado -->
+    <!-- http://geo.linkeddata.es/kos/transportes/electrificacion/no-electrificado -->
 
-    <skos:Concept rdf:about="&geo;kos/transports/electrificacion/noElectrificado">
+    <skos:Concept rdf:about="&geo;kos/transportes/electrificacion/no-electrificado">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
         <rdfs:comment xml:lang="es">Indica que una vía no está electrificada</rdfs:comment>
         <skos:prefLabel xml:lang="es">no electrificado</skos:prefLabel>
-        <skos:inScheme rdf:resource="&geo;kos/transports/electrificacion"/>
+        <skos:inScheme rdf:resource="&geo;kos/transportes/electrificacion"/>
     </skos:Concept>
 
 
 
-    <!-- http://geo.linkeddata.es/kos/transports/estadoDeUso/abandonado -->
+    <!-- http://geo.linkeddata.es/kos/transportes/estado-de-uso/abandonado -->
 
-    <skos:Concept rdf:about="&geo;kos/transports/estadoDeUso/abandonado">
+    <skos:Concept rdf:about="&geo;kos/transportes/estado-de-uso/abandonado">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
         <skos:prefLabel xml:lang="es">abandonado</skos:prefLabel>
-        <skos:inScheme rdf:resource="&geo;kos/transports/estadoDeUso"/>
+        <skos:inScheme rdf:resource="&geo;kos/transportes/estado-de-uso"/>
     </skos:Concept>
 
 
 
-    <!-- http://geo.linkeddata.es/kos/transports/estadoDeUso/enConstruccion -->
+    <!-- http://geo.linkeddata.es/kos/transportes/estado-de-uso/en-construccion -->
 
-    <skos:Concept rdf:about="&geo;kos/transports/estadoDeUso/enConstruccion">
+    <skos:Concept rdf:about="&geo;kos/transportes/estado-de-uso/en-construccion">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
         <skos:prefLabel xml:lang="es">en construcción</skos:prefLabel>
         <rdfs:comment xml:lang="es">indica que está en construcción o en obras</rdfs:comment>
-        <skos:inScheme rdf:resource="&geo;kos/transports/estadoDeUso"/>
+        <skos:inScheme rdf:resource="&geo;kos/transportes/estado-de-uso"/>
     </skos:Concept>
 
 
 
-    <!-- http://geo.linkeddata.es/kos/transports/estadoDeUso/enUso -->
+    <!-- http://geo.linkeddata.es/kos/transportes/estado-de-uso/en-uso -->
 
-    <skos:Concept rdf:about="&geo;kos/transports/estadoDeUso/enUso">
+    <skos:Concept rdf:about="&geo;kos/transportes/estado-de-uso/en-uso">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
         <skos:prefLabel xml:lang="es">en uso</skos:prefLabel>
-        <skos:inScheme rdf:resource="&geo;kos/transports/estadoDeUso"/>
+        <skos:inScheme rdf:resource="&geo;kos/transportes/estado-de-uso"/>
     </skos:Concept>
 
 
 
-    <!-- http://geo.linkeddata.es/kos/transports/numeroDeVias/doble -->
+    <!-- http://geo.linkeddata.es/kos/transportes/numero-de-vias/doble -->
 
-    <skos:Concept rdf:about="&geo;kos/transports/numeroDeVias/doble">
+    <skos:Concept rdf:about="&geo;kos/transportes/numero-de-vias/doble">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
         <rdfs:comment xml:lang="es">Cada vía se dedica para la marcha de los trenes en un sentido</rdfs:comment>
         <skos:prefLabel xml:lang="es">vía doble</skos:prefLabel>
-        <skos:inScheme rdf:resource="&geo;kos/transports/numeroDeVias"/>
-        <owl:sameAs rdf:resource="&geo;kos/transports/numeroDeVias/unica"/>
+        <skos:inScheme rdf:resource="&geo;kos/transportes/numero-de-vias"/>
+        <owl:sameAs rdf:resource="&geo;kos/transportes/numero-de-vias/unica"/>
     </skos:Concept>
 
 
 
-    <!-- http://geo.linkeddata.es/kos/transports/numeroDeVias/unica -->
+    <!-- http://geo.linkeddata.es/kos/transportes/numero-de-vias/unica -->
 
-    <skos:Concept rdf:about="&geo;kos/transports/numeroDeVias/unica">
+    <skos:Concept rdf:about="&geo;kos/transportes/numero-de-vias/unica">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
         <rdfs:comment xml:lang="es">En la vía se verifica el movimiento de los trenes en ambos sentidos</rdfs:comment>
         <skos:prefLabel xml:lang="es">vía única</skos:prefLabel>
-        <skos:inScheme rdf:resource="&geo;kos/transports/numeroDeVias"/>
+        <skos:inScheme rdf:resource="&geo;kos/transportes/numero-de-vias"/>
     </skos:Concept>
 
 
 
-    <!-- http://geo.linkeddata.es/kos/transports/rutaTenT/rutaNoTranseuropea -->
+    <!-- http://geo.linkeddata.es/kos/transportes/ruta-ten-t/ruta-no-transeuropea -->
 
-    <skos:Concept rdf:about="&geo;kos/transports/rutaTenT/rutaNoTranseuropea">
+    <skos:Concept rdf:about="&geo;kos/transportes/ruta-ten-t/ruta-no-transeuropea">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
         <rdfs:comment xml:lang="es">El tramo forma parte de la Red Transeuropea de Transporte</rdfs:comment>
         <skos:prefLabel xml:lang="es">ruta no transeuropea</skos:prefLabel>
-        <skos:inScheme rdf:resource="&geo;kos/transports/rutaTenT"/>
+        <skos:inScheme rdf:resource="&geo;kos/transportes/ruta-ten-t"/>
     </skos:Concept>
 
 
 
-    <!-- http://geo.linkeddata.es/kos/transports/rutaTenT/rutaTranseuropea -->
+    <!-- http://geo.linkeddata.es/kos/transportes/ruta-ten-t/ruta-transeuropea -->
 
-    <skos:Concept rdf:about="&geo;kos/transports/rutaTenT/rutaTranseuropea">
+    <skos:Concept rdf:about="&geo;kos/transportes/ruta-ten-t/ruta-transeuropea">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
         <rdfs:comment xml:lang="es">El tramo no forma parte de la Red Transeuropea de Transporte</rdfs:comment>
         <skos:prefLabel xml:lang="es">ruta transeuropea</skos:prefLabel>
-        <skos:inScheme rdf:resource="&geo;kos/transports/rutaTenT"/>
+        <skos:inScheme rdf:resource="&geo;kos/transportes/ruta-ten-t"/>
     </skos:Concept>
 
 
 
-    <!-- http://geo.linkeddata.es/kos/transports/situacionDeVia/elevado -->
+    <!-- http://geo.linkeddata.es/kos/transportes/situacion-de-via/elevado -->
 
-    <skos:Concept rdf:about="&geo;kos/transports/situacionDeVia/elevado">
+    <skos:Concept rdf:about="&geo;kos/transportes/situacion-de-via/elevado">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
         <skos:prefLabel xml:lang="es">elevado</skos:prefLabel>
         <rdfs:comment xml:lang="es">vía elevada</rdfs:comment>
-        <skos:inScheme rdf:resource="&geo;kos/transports/situacionDeVia"/>
+        <skos:inScheme rdf:resource="&geo;kos/transportes/situacion-de-via"/>
     </skos:Concept>
 
 
 
-    <!-- http://geo.linkeddata.es/kos/transports/situacionDeVia/subterraneo -->
+    <!-- http://geo.linkeddata.es/kos/transportes/situacion-de-via/subterraneo -->
 
-    <skos:Concept rdf:about="&geo;kos/transports/situacionDeVia/subterraneo">
+    <skos:Concept rdf:about="&geo;kos/transportes/situacion-de-via/subterraneo">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
         <skos:prefLabel xml:lang="es">subterráneo</skos:prefLabel>
         <rdfs:comment xml:lang="es">vía subterránea</rdfs:comment>
-        <skos:inScheme rdf:resource="&geo;kos/transports/situacionDeVia"/>
+        <skos:inScheme rdf:resource="&geo;kos/transportes/situacion-de-via"/>
     </skos:Concept>
 
 
 
-    <!-- http://geo.linkeddata.es/kos/transports/situacionDeVia/superficial -->
+    <!-- http://geo.linkeddata.es/kos/transportes/situacion-de-via/superficial -->
 
-    <skos:Concept rdf:about="&geo;kos/transports/situacionDeVia/superficial">
+    <skos:Concept rdf:about="&geo;kos/transportes/situacion-de-via/superficial">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
         <skos:prefLabel xml:lang="es">superficial</skos:prefLabel>
         <rdfs:comment xml:lang="es">vía superficial</rdfs:comment>
-        <skos:inScheme rdf:resource="&geo;kos/transports/situacionDeVia"/>
+        <skos:inScheme rdf:resource="&geo;kos/transportes/situacion-de-via"/>
     </skos:Concept>
 
 
 
-    <!-- http://geo.linkeddata.es/kos/transports/tipoDeCalzada/convencional -->
+    <!-- http://geo.linkeddata.es/kos/transportes/tipo-de-calzada/convencional -->
 
-    <skos:Concept rdf:about="&geo;kos/transports/tipoDeCalzada/convencional">
+    <skos:Concept rdf:about="&geo;kos/transportes/tipo-de-calzada/convencional">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
         <skos:prefLabel xml:lang="es">calzada convencional</skos:prefLabel>
         <rdfs:comment xml:lang="es">Única calzada con doble sentido de circulación.</rdfs:comment>
-        <skos:inScheme rdf:resource="&geo;kos/transports/tipoDeCalzada"/>
+        <skos:inScheme rdf:resource="&geo;kos/transportes/tipo-de-calzada"/>
     </skos:Concept>
 
 
 
-    <!-- http://geo.linkeddata.es/kos/transports/tipoDeCalzada/doble -->
+    <!-- http://geo.linkeddata.es/kos/transportes/tipo-de-calzada/doble -->
 
-    <skos:Concept rdf:about="&geo;kos/transports/tipoDeCalzada/doble">
+    <skos:Concept rdf:about="&geo;kos/transportes/tipo-de-calzada/doble">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
         <rdfs:comment xml:lang="es">Dos calzadas separadas y paralelas, con sentidos distintos. </rdfs:comment>
         <skos:prefLabel xml:lang="es">calzada doble</skos:prefLabel>
-        <skos:inScheme rdf:resource="&geo;kos/transports/tipoDeCalzada"/>
+        <skos:inScheme rdf:resource="&geo;kos/transportes/tipo-de-calzada"/>
     </skos:Concept>
 
 
 
-    <!-- http://geo.linkeddata.es/kos/transports/tipoDeCalzada/sentidoUnico -->
+    <!-- http://geo.linkeddata.es/kos/transportes/tipo-de-calzada/sentido-unico -->
 
-    <skos:Concept rdf:about="&geo;kos/transports/tipoDeCalzada/sentidoUnico">
+    <skos:Concept rdf:about="&geo;kos/transportes/tipo-de-calzada/sentido-unico">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
         <rdfs:comment xml:lang="es">Calzada de sentido único no contigua a la del contrario.</rdfs:comment>
         <skos:prefLabel xml:lang="es">calzada de sentido único</skos:prefLabel>
-        <skos:inScheme rdf:resource="&geo;kos/transports/tipoDeCalzada"/>
+        <skos:inScheme rdf:resource="&geo;kos/transportes/tipo-de-calzada"/>
     </skos:Concept>
 
 
 
-    <!-- http://geo.linkeddata.es/kos/transports/tipoDeItinerario/itinerarioEuropeo -->
+    <!-- http://geo.linkeddata.es/kos/transportes/tipo-de-itinerario/itinerario-europeo -->
 
-    <skos:Concept rdf:about="&geo;kos/transports/tipoDeItinerario/itinerarioEuropeo">
+    <skos:Concept rdf:about="&geo;kos/transportes/tipo-de-itinerario/itinerario-europeo">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
         <rdfs:comment xml:lang="es">indica que el tramo de vía pertenece a la Red de Carreteras Europeas</rdfs:comment>
         <skos:prefLabel xml:lang="es">itinerario europeo</skos:prefLabel>
-        <skos:inScheme rdf:resource="&geo;kos/transports/tipoDeItinerario"/>
+        <skos:inScheme rdf:resource="&geo;kos/transportes/tipo-de-itinerario"/>
     </skos:Concept>
 
 
 
-    <!-- http://geo.linkeddata.es/kos/transports/tipoDeItinerario/itinerarioNoEuropeo -->
+    <!-- http://geo.linkeddata.es/kos/transportes/tipo-de-itinerario/itinerario-no-europeo -->
 
-    <skos:Concept rdf:about="&geo;kos/transports/tipoDeItinerario/itinerarioNoEuropeo">
+    <skos:Concept rdf:about="&geo;kos/transportes/tipo-de-itinerario/itinerario-no-europeo">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
         <rdfs:comment xml:lang="es">indica que el tramo de vía no pertenece a la Red de Carreteras Europeas</rdfs:comment>
         <skos:prefLabel xml:lang="es">itinerario no europeo</skos:prefLabel>
-        <skos:inScheme rdf:resource="&geo;kos/transports/tipoDeItinerario"/>
+        <skos:inScheme rdf:resource="&geo;kos/transportes/tipo-de-itinerario"/>
     </skos:Concept>
 
 
 
-    <!-- http://geo.linkeddata.es/kos/transports/tipoDeTrafico/mercancias -->
+    <!-- http://geo.linkeddata.es/kos/transportes/tipo-de-trafico/mercancias -->
 
-    <skos:Concept rdf:about="&geo;kos/transports/tipoDeTrafico/mercancias">
+    <skos:Concept rdf:about="&geo;kos/transportes/tipo-de-trafico/mercancias">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
         <skos:prefLabel xml:lang="es">tráfico de mercancías</skos:prefLabel>
-        <skos:inScheme rdf:resource="&geo;kos/transports/tipoDeTrafico"/>
+        <skos:inScheme rdf:resource="&geo;kos/transportes/tipo-de-trafico"/>
     </skos:Concept>
 
 
 
-    <!-- http://geo.linkeddata.es/kos/transports/tipoDeTrafico/mixto -->
+    <!-- http://geo.linkeddata.es/kos/transportes/tipo-de-trafico/mixto -->
 
-    <skos:Concept rdf:about="&geo;kos/transports/tipoDeTrafico/mixto">
+    <skos:Concept rdf:about="&geo;kos/transportes/tipo-de-trafico/mixto">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
         <rdfs:comment xml:lang="es">puede llevar mercancías o pasajeros</rdfs:comment>
         <skos:prefLabel xml:lang="es">tráfico mixto</skos:prefLabel>
-        <skos:inScheme rdf:resource="&geo;kos/transports/tipoDeTrafico"/>
+        <skos:inScheme rdf:resource="&geo;kos/transportes/tipo-de-trafico"/>
     </skos:Concept>
 
 
 
-    <!-- http://geo.linkeddata.es/kos/transports/tipoDeTrafico/viajeros -->
+    <!-- http://geo.linkeddata.es/kos/transportes/tipo-de-trafico/viajeros -->
 
-    <skos:Concept rdf:about="&geo;kos/transports/tipoDeTrafico/viajeros">
+    <skos:Concept rdf:about="&geo;kos/transportes/tipo-de-trafico/viajeros">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
         <skos:prefLabel xml:lang="es">tráfico de viajeros</skos:prefLabel>
-        <skos:inScheme rdf:resource="&geo;kos/transports/tipoDeTrafico"/>
+        <skos:inScheme rdf:resource="&geo;kos/transportes/tipo-de-trafico"/>
     </skos:Concept>
 
 
 
-    <!-- http://geo.linkeddata.es/kos/transports/tipoDeTramo/interno -->
+    <!-- http://geo.linkeddata.es/kos/transportes/tipo-de-tramo/interno -->
 
-    <skos:Concept rdf:about="&geo;kos/transports/tipoDeTramo/interno">
+    <skos:Concept rdf:about="&geo;kos/transportes/tipo-de-tramo/interno">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
         <rdfs:comment xml:lang="es">El tramo no discurre por el interior de poblaciones o zonas de uso</rdfs:comment>
         <skos:prefLabel xml:lang="es">tramo interno</skos:prefLabel>
-        <skos:inScheme rdf:resource="&geo;kos/transports/tipoDeTramo"/>
+        <skos:inScheme rdf:resource="&geo;kos/transportes/tipo-de-tramo"/>
     </skos:Concept>
 
 
 
-    <!-- http://geo.linkeddata.es/kos/transports/tipoDeTramo/noInterno -->
+    <!-- http://geo.linkeddata.es/kos/transportes/tipo-de-tramo/no-interno -->
 
-    <skos:Concept rdf:about="&geo;kos/transports/tipoDeTramo/noInterno">
+    <skos:Concept rdf:about="&geo;kos/transportes/tipo-de-tramo/no-interno">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
         <rdfs:comment xml:lang="es">El tramo no discurre por el interior de poblaciones o zonas de uso</rdfs:comment>
         <skos:prefLabel xml:lang="es">tramo no interno</skos:prefLabel>
-        <skos:inScheme rdf:resource="&geo;kos/transports/tipoDeTramo"/>
+        <skos:inScheme rdf:resource="&geo;kos/transportes/tipo-de-tramo"/>
     </skos:Concept>
 
 
@@ -1686,53 +1686,53 @@ puede tomar los valores:
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&geo;kos/transports/acceso/libre"/>
-            <rdf:Description rdf:about="&geo;kos/transports/acceso/peaje"/>
+            <rdf:Description rdf:about="&geo;kos/transportes/ruta-ten-t/ruta-no-transeuropea"/>
+            <rdf:Description rdf:about="&geo;kos/transportes/ruta-ten-t/ruta-transeuropea"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&geo;kos/transports/estadoDeUso/abandonado"/>
-            <rdf:Description rdf:about="&geo;kos/transports/estadoDeUso/enConstruccion"/>
-            <rdf:Description rdf:about="&geo;kos/transports/estadoDeUso/enUso"/>
+            <rdf:Description rdf:about="&geo;kos/transportes/electrificacion/electrificado"/>
+            <rdf:Description rdf:about="&geo;kos/transportes/electrificacion/no-electrificado"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&geo;kos/transports/rutaTenT/rutaNoTranseuropea"/>
-            <rdf:Description rdf:about="&geo;kos/transports/rutaTenT/rutaTranseuropea"/>
+            <rdf:Description rdf:about="&geo;kos/transportes/estado-de-uso/abandonado"/>
+            <rdf:Description rdf:about="&geo;kos/transportes/estado-de-uso/en-construccion"/>
+            <rdf:Description rdf:about="&geo;kos/transportes/estado-de-uso/en-uso"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&geo;kos/transports/situacionDeVia/elevado"/>
-            <rdf:Description rdf:about="&geo;kos/transports/situacionDeVia/subterraneo"/>
-            <rdf:Description rdf:about="&geo;kos/transports/situacionDeVia/superficial"/>
+            <rdf:Description rdf:about="&geo;kos/transportes/competencia-aeroportuaria/aena"/>
+            <rdf:Description rdf:about="&geo;kos/transportes/competencia-aeroportuaria/militar"/>
+            <rdf:Description rdf:about="&geo;kos/transportes/competencia-aeroportuaria/privada"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&geo;kos/transports/tipoDeItinerario/itinerarioEuropeo"/>
-            <rdf:Description rdf:about="&geo;kos/transports/tipoDeItinerario/itinerarioNoEuropeo"/>
+            <rdf:Description rdf:about="&geo;kos/transportes/acceso/libre"/>
+            <rdf:Description rdf:about="&geo;kos/transportes/acceso/peaje"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&geo;kos/transports/electrificacion/electrificado"/>
-            <rdf:Description rdf:about="&geo;kos/transports/electrificacion/noElectrificado"/>
+            <rdf:Description rdf:about="&geo;kos/transportes/situacion-de-via/elevado"/>
+            <rdf:Description rdf:about="&geo;kos/transportes/situacion-de-via/subterraneo"/>
+            <rdf:Description rdf:about="&geo;kos/transportes/situacion-de-via/superficial"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="&geo;kos/transports/competenciaAeroportuaria/aena"/>
-            <rdf:Description rdf:about="&geo;kos/transports/competenciaAeroportuaria/militar"/>
-            <rdf:Description rdf:about="&geo;kos/transports/competenciaAeroportuaria/privada"/>
+            <rdf:Description rdf:about="&geo;kos/transportes/tipo-de-itinerario/itinerario-europeo"/>
+            <rdf:Description rdf:about="&geo;kos/transportes/tipo-de-itinerario/itinerario-no-europeo"/>
         </owl:distinctMembers>
     </rdf:Description>
 </rdf:RDF>

@@ -2,35 +2,36 @@
 
 
 <!DOCTYPE rdf:RDF [
+    <!ENTITY terms "http://purl.org/dc/terms/" >
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
     <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY geo "http://geo.linkeddata.es/" >
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
-    <!ENTITY ontology "http://geo.linkeddata.es/ontology/" >
-    <!ENTITY hydro "http://geo.linkeddata.es/kos/hydrography/" >
+    <!ENTITY hidrografia "http://geo.linkeddata.es/kos/hidrografia/" >
     <!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
-    <!ENTITY categoriaDeRio "http://geo.linkeddata.es/kos/hydrography/categoriaDeRio/" >
-    <!ENTITY regimenDeLaguna "http://geo.linkeddata.es/kos/hydrography/regimenDeLaguna/" >
-    <!ENTITY categoriaDeIsla "http://geo.linkeddata.es/kos/hydrography/categoriaDeIsla/" >
+    <!ENTITY categoria-de-rio "http://geo.linkeddata.es/kos/hidrografia/categoria-de-rio/" >
+    <!ENTITY regimen-de-laguna "http://geo.linkeddata.es/kos/hidrografia/regimen-de-laguna/" >
+    <!ENTITY categoria-de-isla "http://geo.linkeddata.es/kos/hidrografia/categoria-de-isla/" >
 ]>
 
 
-<rdf:RDF xmlns="&ontology;hidrography.owl#"
-     xml:base="&ontology;hidrography.owl"
+<rdf:RDF xmlns="&geo;ontology/"
+     xml:base="&geo;ontology/"
+     xmlns:terms="http://purl.org/dc/terms/"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns:categoriaDeIsla="&hydro;categoriaDeIsla/"
-     xmlns:ontology="http://geo.linkeddata.es/ontology/"
-     xmlns:hydro="http://geo.linkeddata.es/kos/hydrography/"
-     xmlns:regimenDeLaguna="&hydro;regimenDeLaguna/"
+     xmlns:categoria-de-isla="&geo;kos/hidrografia/categoria-de-isla/"
+     xmlns:hydro="http://geo.linkeddata.es/kos/hidrografia/"
+     xmlns:regimen-de-laguna="&geo;kos/hidrografia/regimen-de-laguna/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:categoriaDeRio="&hydro;categoriaDeRio/"
+     xmlns:categoria-de-rio="&geo;kos/hidrografia/categoria-de-rio/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#">
-    <owl:Ontology rdf:about="&ontology;hidrography.owl">
-        <owl:imports rdf:resource="&ontology;hydro.owl"/>
+    <owl:Ontology rdf:about="&geo;ontology/hidrografia.owl">
+        <owl:imports rdf:resource="&geo;ontology/hydro.owl"/>
         <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
     </owl:Ontology>
 
@@ -44,7 +45,7 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-
+     <owl:AnnotationProperty rdf:about="&terms;source"/>
 
 
     <!--
@@ -71,17 +72,17 @@
 
     <!-- http://geo.linkeddata.es/ontology/categoriaDeIsla -->
 
-    <owl:ObjectProperty rdf:about="&ontology;categoriaDeIsla">
+    <owl:ObjectProperty rdf:about="&geo;ontology/categoriaDeIsla">
         <rdfs:label xml:lang="es">categoría de isla</rdfs:label>
         <rdfs:comment xml:lang="es">Indica la categoría de la isla</rdfs:comment>
-        <rdfs:domain rdf:resource="&ontology;Isla"/>
+        <rdfs:domain rdf:resource="&geo;ontology/Isla"/>
         <rdfs:range>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&skos;Concept"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&skos;inScheme"/>
-                        <owl:hasValue rdf:resource="&hydro;categoriaDeIsla"/>
+                        <owl:hasValue rdf:resource="&geo;kos/hidrografia/categoria-de-isla"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -92,7 +93,7 @@
 
     <!-- http://geo.linkeddata.es/ontology/categoriaDeRio -->
 
-    <owl:ObjectProperty rdf:about="&ontology;categoriaDeRio">
+    <owl:ObjectProperty rdf:about="&geo;ontology/categoriaDeRio">
         <rdfs:label xml:lang="es">categoría de río</rdfs:label>
         <rdfs:comment xml:lang="es">Indica el orden de interés de un río</rdfs:comment>
         <rdfs:range>
@@ -101,7 +102,7 @@
                     <rdf:Description rdf:about="&skos;Concept"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&skos;inScheme"/>
-                        <owl:hasValue rdf:resource="&hydro;categoriaDeRio"/>
+                        <owl:hasValue rdf:resource="&geo;kos/hidrografia/categoria-de-rio"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -112,17 +113,17 @@
 
     <!-- http://geo.linkeddata.es/ontology/regimenDeLaguna -->
 
-    <owl:ObjectProperty rdf:about="&ontology;regimenDeLaguna">
+    <owl:ObjectProperty rdf:about="&geo;ontology/regimenDeLaguna">
         <rdfs:label xml:lang="es">régimen de laguna</rdfs:label>
         <rdfs:comment xml:lang="es">indica la estacionalidad de las aguas</rdfs:comment>
-        <rdfs:domain rdf:resource="&ontology;Laguna"/>
+        <rdfs:domain rdf:resource="&geo;ontology/Laguna"/>
         <rdfs:range>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&skos;Concept"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&skos;inScheme"/>
-                        <owl:hasValue rdf:resource="&hydro;regimenDeLaguna"/>
+                        <owl:hasValue rdf:resource="&geo;kos/hidrografia/regimen-de-laguna"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -144,25 +145,25 @@
 
     <!-- http://geo.linkeddata.es/ontology/Albufera -->
 
-    <rdf:Description rdf:about="&ontology;Albufera">
-        <rdfs:subClassOf rdf:resource="&ontology;ZonaHumeda"/>
+    <rdf:Description rdf:about="&geo;ontology/Albufera">
+        <rdfs:subClassOf rdf:resource="&geo;ontology/ZonaHumeda"/>
     </rdf:Description>
 
 
 
     <!-- http://geo.linkeddata.es/ontology/Balsa -->
 
-    <rdf:Description rdf:about="&ontology;Balsa">
-        <rdfs:subClassOf rdf:resource="&ontology;Alberca"/>
+    <rdf:Description rdf:about="&geo;ontology/Balsa">
+        <rdfs:subClassOf rdf:resource="&geo;ontology/Alberca"/>
     </rdf:Description>
 
 
 
     <!-- http://geo.linkeddata.es/ontology/Cabo -->
 
-    <owl:Class rdf:about="&ontology;Cabo">
+    <owl:Class rdf:about="&geo;ontology/Cabo">
         <rdfs:label xml:lang="es">Cabo</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&ontology;Morfologia"/>
+        <rdfs:subClassOf rdf:resource="&geo;ontology/Morfologia"/>
         <dc:source xml:lang="es">Diccionario de la Real Academia Española</dc:source>
         <rdfs:comment xml:lang="es">Lengua de tierra que penetra en el mar.</rdfs:comment>
     </owl:Class>
@@ -171,9 +172,9 @@
 
     <!-- http://geo.linkeddata.es/ontology/Cala -->
 
-    <owl:Class rdf:about="&ontology;Cala">
+    <owl:Class rdf:about="&geo;ontology/Cala">
         <rdfs:label xml:lang="es">Cala</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&ontology;Morfologia"/>
+        <rdfs:subClassOf rdf:resource="&geo;ontology/Morfologia"/>
         <dc:source xml:lang="es">Diccionario de la Real Academia Española</dc:source>
         <rdfs:comment xml:lang="es">Ensenada pequeña.</rdfs:comment>
     </owl:Class>
@@ -182,17 +183,17 @@
 
     <!-- http://geo.linkeddata.es/ontology/Canyo -->
 
-    <rdf:Description rdf:about="&ontology;Canyo">
-        <rdfs:subClassOf rdf:resource="&ontology;ZonaHumeda"/>
+    <rdf:Description rdf:about="&geo;ontology/Canyo">
+        <rdfs:subClassOf rdf:resource="&geo;ontology/ZonaHumeda"/>
     </rdf:Description>
 
 
 
     <!-- http://geo.linkeddata.es/ontology/Esclusa -->
 
-    <owl:Class rdf:about="&ontology;Esclusa">
+    <owl:Class rdf:about="&geo;ontology/Esclusa">
         <rdfs:label xml:lang="es">Esclusa</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&ontology;AguasCorrientesArtificiales"/>
+        <rdfs:subClassOf rdf:resource="&geo;ontology/AguasCorrientesArtificiales"/>
         <rdfs:comment xml:lang="es">Compartimento, con puertas de entrada y salida, que se construye en un canal de navegación para que los barcos puedan pasar de un tramo a otro de diferente nivel, para lo cual se llena de agua o se vacía el espacio comprendido entre dichas puertas.</rdfs:comment>
     </owl:Class>
 
@@ -200,33 +201,33 @@
 
     <!-- http://geo.linkeddata.es/ontology/Estanque -->
 
-    <rdf:Description rdf:about="&ontology;Estanque">
-        <rdfs:subClassOf rdf:resource="&ontology;Alberca"/>
+    <rdf:Description rdf:about="&geo;ontology/Estanque">
+        <rdfs:subClassOf rdf:resource="&geo;ontology/Alberca"/>
     </rdf:Description>
 
 
 
     <!-- http://geo.linkeddata.es/ontology/Isla -->
 
-    <owl:Class rdf:about="&ontology;Isla">
-        <rdfs:subClassOf rdf:resource="&ontology;Morfologia"/>
+    <owl:Class rdf:about="&geo;ontology/Isla">
+        <rdfs:subClassOf rdf:resource="&geo;ontology/Morfologia"/>
     </owl:Class>
 
 
 
     <!-- http://geo.linkeddata.es/ontology/IslaFluvial -->
 
-    <rdf:Description rdf:about="&ontology;IslaFluvial">
-        <rdfs:subClassOf rdf:resource="&ontology;Isla"/>
+    <rdf:Description rdf:about="&geo;ontology/IslaFluvial">
+        <rdfs:subClassOf rdf:resource="&geo;ontology/Isla"/>
     </rdf:Description>
 
 
 
     <!-- http://geo.linkeddata.es/ontology/IslaMaritima -->
 
-    <owl:Class rdf:about="&ontology;IslaMaritima">
+    <owl:Class rdf:about="&geo;ontology/IslaMaritima">
         <rdfs:label xml:lang="es">Isla marítima</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&ontology;Isla"/>
+        <rdfs:subClassOf rdf:resource="&geo;ontology/Isla"/>
         <dc:source xml:lang="es">Catálogo de Objetos Geográficos BTN100</dc:source>
         <rdfs:comment xml:lang="es">Porción de tierra rodeada de agua del mar.</rdfs:comment>
     </owl:Class>
@@ -235,17 +236,17 @@
 
     <!-- http://geo.linkeddata.es/ontology/Marisma -->
 
-    <rdf:Description rdf:about="&ontology;Marisma">
-        <rdfs:subClassOf rdf:resource="&ontology;ZonaHumeda"/>
+    <rdf:Description rdf:about="&geo;ontology/Marisma">
+        <rdfs:subClassOf rdf:resource="&geo;ontology/ZonaHumeda"/>
     </rdf:Description>
 
 
 
     <!-- http://geo.linkeddata.es/ontology/Pennon -->
 
-    <owl:Class rdf:about="&ontology;Pennon">
+    <owl:Class rdf:about="&geo;ontology/Pennon">
         <rdfs:label xml:lang="es">Peñon</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&ontology;Morfologia"/>
+        <rdfs:subClassOf rdf:resource="&geo;ontology/Morfologia"/>
         <dc:source xml:lang="es">Diccionario de la Real Academia Española</dc:source>
         <rdfs:comment xml:lang="es">Monte peñascoso.</rdfs:comment>
     </owl:Class>
@@ -254,9 +255,9 @@
 
     <!-- http://geo.linkeddata.es/ontology/Punta -->
 
-    <owl:Class rdf:about="&ontology;Punta">
+    <owl:Class rdf:about="&geo;ontology/Punta">
         <rdfs:label xml:lang="es">Punta</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&ontology;Morfologia"/>
+        <rdfs:subClassOf rdf:resource="&geo;ontology/Morfologia"/>
         <dc:source xml:lang="es">Diccionario de la Real Academia Española</dc:source>
         <rdfs:comment xml:lang="es">Lengua de tierra, generalmente baja y de poca extensión, que penetra en el mar.</rdfs:comment>
     </owl:Class>
@@ -265,16 +266,16 @@
 
     <!-- http://geo.linkeddata.es/ontology/Rambla -->
 
-    <rdf:Description rdf:about="&ontology;Rambla">
-        <rdfs:subClassOf rdf:resource="&ontology;ZonaHumeda"/>
+    <rdf:Description rdf:about="&geo;ontology/Rambla">
+        <rdfs:subClassOf rdf:resource="&geo;ontology/ZonaHumeda"/>
     </rdf:Description>
 
 
 
     <!-- http://geo.linkeddata.es/ontology/Salina -->
 
-    <rdf:Description rdf:about="&ontology;Salina">
-        <rdfs:subClassOf rdf:resource="&ontology;ZonaHumeda"/>
+    <rdf:Description rdf:about="&geo;ontology/Salina">
+        <rdfs:subClassOf rdf:resource="&geo;ontology/ZonaHumeda"/>
     </rdf:Description>
 
 
@@ -290,111 +291,111 @@
 
 
 
-    <!-- http://geo.linkeddata.es/kos/hydrography/categoriaDeIsla -->
+    <!-- http://geo.linkeddata.es/kos/hidrografia/categoria-de-isla -->
 
-    <skos:ConceptScheme rdf:about="&hydro;categoriaDeIsla">
+    <skos:ConceptScheme rdf:about="&geo;kos/hidrografia/categoria-de-isla">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
         <rdfs:comment xml:lang="es">Puede tomar los valores:
-* http://geo.linkeddata.es/kos/hydrography/categoriaDeIsla/principal</rdfs:comment>
+* http://geo.linkeddata.es/kos/hidrografia/categoria-de-isla/principal</rdfs:comment>
         <skos:prefLabel xml:lang="es">categoría de isla</skos:prefLabel>
     </skos:ConceptScheme>
 
 
 
-    <!-- http://geo.linkeddata.es/kos/hydrography/categoriaDeRio -->
+    <!-- http://geo.linkeddata.es/kos/hidrografia/categoria-de-rio -->
 
-    <skos:ConceptScheme rdf:about="&hydro;categoriaDeRio">
+    <skos:ConceptScheme rdf:about="&geo;kos/hidrografia/categoria-de-rio">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
         <rdfs:comment xml:lang="es">categorización de un río. Puede tomar los valores:
-* http://geo.linkeddata.es/kos/hydrography/vategoriaDeRio/rioPrincipal
-* http://geo.linkeddata.es/kos/hydrography/vategoriaDeRio/rioSecundario
-* http://geo.linkeddata.es/kos/hydrography/vategoriaDeRio/rioTerceario
-* http://geo.linkeddata.es/kos/hydrography/vategoriaDeRio/rioDeMenorInteres
+* http://geo.linkeddata.es/kos/hidrografia/categoria-de-rio/rio-principal
+* http://geo.linkeddata.es/kos/hidrografia/categoria-de-rio/rio-secundario
+* http://geo.linkeddata.es/kos/hidrografia/categoria-de-rio/rio-terceario
+* http://geo.linkeddata.es/kos/hidrografia/categoria-de-rio/rio-de-menor-interes
 </rdfs:comment>
         <skos:prefLabel xml:lang="es">categoría de río</skos:prefLabel>
     </skos:ConceptScheme>
 
 
 
-    <!-- http://geo.linkeddata.es/kos/hydrography/regimenDeLaguna -->
+    <!-- http://geo.linkeddata.es/kos/hidrografia/regimen-de-laguna -->
 
-    <skos:ConceptScheme rdf:about="&hydro;regimenDeLaguna">
+    <skos:ConceptScheme rdf:about="&geo;kos/hidrografia/regimen-de-laguna">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
         <rdfs:comment xml:lang="es">puede tomar los valores:
-* http://geo.linkeddata.es/kos/hydrography/regimenDeLaguna/permanete
-* http://geo.linkeddata.es/kos/hydrography/regimenDeLaguna/noPermanente</rdfs:comment>
+* http://geo.linkeddata.es/kos/hidrografia/regimen-de-laguna/permanete
+* http://geo.linkeddata.es/kos/hidrografia/regimen-de-laguna/no-permanente</rdfs:comment>
         <skos:prefLabel xml:lang="es">régimen de laguna</skos:prefLabel>
     </skos:ConceptScheme>
 
 
 
-    <!-- http://geo.linkeddata.es/kos/hydrography/categoriaDeIsla/principal -->
+    <!-- http://geo.linkeddata.es/kos/hidrografia/categoria-de-isla/principal -->
 
-    <skos:Concept rdf:about="&hydro;categoriaDeIsla/principal">
+    <skos:Concept rdf:about="&geo;kos/hidrografia/categoria-de-isla/principal">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
         <rdfs:comment xml:lang="es">Indica que una isla es importante desde el punto de vista cartográfico</rdfs:comment>
         <skos:prefLabel xml:lang="es">principal</skos:prefLabel>
-        <skos:inScheme rdf:resource="&hydro;categoriaDeIsla"/>
+        <skos:inScheme rdf:resource="&geo;kos/hidrografia/categoria-de-isla"/>
     </skos:Concept>
 
 
 
-    <!-- http://geo.linkeddata.es/kos/hydrography/categoriaDeRio/rioDeMenorInteres -->
+    <!-- http://geo.linkeddata.es/kos/hidrografia/categoria-de-rio/rio-de-menor-interes -->
 
-    <skos:Concept rdf:about="&hydro;categoriaDeRio/rioDeMenorInteres">
+    <skos:Concept rdf:about="&geo;kos/hidrografia/categoria-de-rio/rio-de-menor-interes">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
         <skos:prefLabel xml:lang="es">río de menor interes</skos:prefLabel>
-        <skos:inScheme rdf:resource="&hydro;categoriaDeRio"/>
+        <skos:inScheme rdf:resource="&geo;kos/hidrografia/categoria-de-rio"/>
     </skos:Concept>
 
 
 
-    <!-- http://geo.linkeddata.es/kos/hydrography/categoriaDeRio/rioPrincipal -->
+    <!-- http://geo.linkeddata.es/kos/hidrografia/categoria-de-rio/rio-principal -->
 
-    <skos:Concept rdf:about="&hydro;categoriaDeRio/rioPrincipal">
+    <skos:Concept rdf:about="&geo;kos/hidrografia/categoria-de-rio/rio-principal">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
         <skos:prefLabel xml:lang="es">río de interés principal</skos:prefLabel>
-        <skos:inScheme rdf:resource="&hydro;categoriaDeRio"/>
+        <skos:inScheme rdf:resource="&geo;kos/hidrografia/categoria-de-rio"/>
     </skos:Concept>
 
 
 
-    <!-- http://geo.linkeddata.es/kos/hydrography/categoriaDeRio/rioSecundario -->
+    <!-- http://geo.linkeddata.es/kos/hidrografia/categoria-de-rio/rio-secundario -->
 
-    <skos:Concept rdf:about="&hydro;categoriaDeRio/rioSecundario">
+    <skos:Concept rdf:about="&geo;kos/hidrografia/categoria-de-rio/rio-secundario">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
         <skos:prefLabel xml:lang="es">río de interés secundario</skos:prefLabel>
-        <skos:inScheme rdf:resource="&hydro;categoriaDeRio"/>
+        <skos:inScheme rdf:resource="&geo;kos/hidrografia/categoria-de-rio"/>
     </skos:Concept>
 
 
 
-    <!-- http://geo.linkeddata.es/kos/hydrography/categoriaDeRio/rioTerceario -->
+    <!-- http://geo.linkeddata.es/kos/hidrografia/categoria-de-rio/rio-terceario -->
 
-    <skos:Concept rdf:about="&hydro;categoriaDeRio/rioTerceario">
+    <skos:Concept rdf:about="&geo;kos/hidrografia/categoria-de-rio/rio-terceario">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
         <skos:prefLabel xml:lang="es">río de interés terceario</skos:prefLabel>
-        <skos:inScheme rdf:resource="&hydro;categoriaDeRio"/>
+        <skos:inScheme rdf:resource="&geo;kos/hidrografia/categoria-de-rio"/>
     </skos:Concept>
 
 
 
-    <!-- http://geo.linkeddata.es/kos/hydrography/regimenDeLaguna/noPermanente -->
+    <!-- http://geo.linkeddata.es/kos/hidrografia/regimen-de-laguna/no-permanente -->
 
-    <skos:Concept rdf:about="&hydro;regimenDeLaguna/noPermanente">
+    <skos:Concept rdf:about="&geo;kos/hidrografia/regimen-de-laguna/no-permanente">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
         <skos:prefLabel xml:lang="es">no permanente</skos:prefLabel>
-        <skos:inScheme rdf:resource="&hydro;regimenDeLaguna"/>
+        <skos:inScheme rdf:resource="&geo;kos/hidrografia/regimen-de-laguna"/>
     </skos:Concept>
 
 
 
-    <!-- http://geo.linkeddata.es/kos/hydrography/regimenDeLaguna/permanente -->
+    <!-- http://geo.linkeddata.es/kos/hidrografia/regimen-de-laguna/permanente -->
 
-    <skos:Concept rdf:about="&hydro;regimenDeLaguna/permanente">
+    <skos:Concept rdf:about="&geo;kos/hidrografia/regimen-de-laguna/permanente">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
         <skos:prefLabel xml:lang="es">permanente</skos:prefLabel>
-        <skos:inScheme rdf:resource="&hydro;regimenDeLaguna"/>
+        <skos:inScheme rdf:resource="&geo;kos/hidrografia/regimen-de-laguna"/>
     </skos:Concept>
 </rdf:RDF>
 

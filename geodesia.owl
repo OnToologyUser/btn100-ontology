@@ -9,39 +9,33 @@
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
     <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
     <!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
-    <!ENTITY geodesy2 "http://geo.linkeddata.es/kos/geodesy/" >
+    <!ENTITY geodesia "http://geo.linkeddata.es/kos/geodesia/" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY wgs84_pos "http://www.w3.org/2003/01/geo/wgs84_pos#" >
     <!ENTITY geopolitical "http://aims.fao.org/aos/geopolitical.owl#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
-    <!ENTITY geodesy "http://geo.linkeddata.es/ontology/geodesy.owl#" >
-    <!ENTITY geodesy-ontology "http://geo.linkeddata.es/ontology/geodesy-ontology.owl#" >
-    <!ENTITY categoriaDeCurvaDeNivel "http://geo.linkeddata.es/kos/geodesy/categoriaDeCurvaDeNivel/" >
-    <!ENTITY categoriaDeCurvaDeNivel2 "htthttp://geo.linkeddata.es/kos/geodesy/categoriaDeCurvaDeNivel/" >
+    <!ENTITY categoriaDeCurvaDeNivel "http://geo.linkeddata.es/kos/geodesia/categoria-de-curva-de-nivel/" >
 ]>
 
 
 <rdf:RDF xmlns="http://geo.linkeddata.es/ontology/"
      xml:base="http://geo.linkeddata.es/ontology/"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns:categoriaDeCurvaDeNivel2="htt&geodesy2;categoriaDeCurvaDeNivel/"
      xmlns:wgs84_pos="http://www.w3.org/2003/01/geo/wgs84_pos#"
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:terms="http://purl.org/dc/terms/"
-     xmlns:geodesy="http://geo.linkeddata.es/ontology/geodesy.owl#"
-     xmlns:geodesy2="http://geo.linkeddata.es/kos/geodesy/"
-     xmlns:geodesy-ontology="http://geo.linkeddata.es/ontology/geodesy-ontology.owl#"
+     xmlns:geodesia="http://geo.linkeddata.es/kos/geodesia/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:geopolitical="http://aims.fao.org/aos/geopolitical.owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:categoriaDeCurvaDeNivel="&geodesy2;categoriaDeCurvaDeNivel/"
+     xmlns:categoriaDeCurvaDeNivel="&geodesia;categoria-de-curva-de-nivel/"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#">
-    <owl:Ontology rdf:about="http://geo.linkeddata.es/ontology/geodesy.owl">
+    <owl:Ontology rdf:about="http://geo.linkeddata.es/ontology/geodesia.owl">
         <dc:creator rdf:datatype="&xsd;string">Lissete Moscoso León</dc:creator>
-        <dc:title rdf:datatype="&xsd;string">geodesyOntology</dc:title>
+        <dc:title rdf:datatype="&xsd;string">geodesiaOntology</dc:title>
         <owl:versionInfo rdf:datatype="&xsd;string">v0.2</owl:versionInfo>
         <rdfs:comment xml:lang="en"></rdfs:comment>
         <dc:publisher xml:lang="en">Ontology Engineering Group</dc:publisher>
@@ -129,7 +123,7 @@ above the local reference ellipsoid).</rdfs:comment>
                     <rdf:Description rdf:about="&skos;Concept"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&skos;inScheme"/>
-                        <owl:hasValue rdf:resource="&geodesy2;categoriaDeCurvaDeNivel"/>
+                        <owl:hasValue rdf:resource="&geodesia;categoria-de-curva-de-nivel"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -556,75 +550,75 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
     
 
 
-    <!-- htthttp://geo.linkeddata.es/kos/geodesy/categoriaDeCurvaDeNivel/depresionGenerica -->
+    <!-- http://geo.linkeddata.es/kos/geodesia/categoria-de-curva-de-nivel/depresion-generica -->
 
-    <skos:Concept rdf:about="htt&geodesy2;categoriaDeCurvaDeNivel/depresionGenerica">
+    <skos:Concept rdf:about="&geodesia;categoria-de-curva-de-nivel/depresion-generica">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
         <rdfs:label xml:lang="es">depresión genérica</rdfs:label>
         <rdfs:comment xml:lang="es">Curva que define una concavidad del terreno cada 20 m.</rdfs:comment>
-        <skos:inScheme rdf:resource="&geodesy2;categoriaDeCurvaDeNivel"/>
+        <skos:inScheme rdf:resource="&geodesia;categoria-de-curva-de-nivel"/>
     </skos:Concept>
     
 
 
-    <!-- http://geo.linkeddata.es/kos/geodesy/categoriaDeCurvaDeNivel -->
+    <!-- http://geo.linkeddata.es/kos/geodesia/categoria-de-curva-de-nivel -->
 
-    <skos:ConceptScheme rdf:about="&geodesy2;categoriaDeCurvaDeNivel">
+    <skos:ConceptScheme rdf:about="&geodesia;categoria-de-curva-de-nivel">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
         <skos:prefLabel xml:lang="es">categoría de curva de nivel</skos:prefLabel>
         <rdfs:comment xml:lang="es">skos para categoria de curva de nivel.
 Puede tomar los valores:
-* http://geo.linkeddata.es/kos/geodesy/categoriaDeCurvaDeNivel/curvaDeNivelGenerica
-* http://geo.linkeddata.es/kos/geodesy/categoriaDeCurvaDeNivel/CurvaDeNivelInterpolada
-* http://geo.linkeddata.es/kos/geodesy/categoriaDeCurvaDeNivel/CurvaDeNivelMaestra
-* http://geo.linkeddata.es/kos/geodesy/categoriaDeCurvaDeNivel/depresionGenerica
-* http://geo.linkeddata.es/kos/geodesy/categoriaDeCurvaDeNivel/depresionMaestra
+* http://geo.linkeddata.es/kos/geodesia/categoria-de-curva-de-nivel/curva-de-nivel-generica
+* http://geo.linkeddata.es/kos/geodesia/categoria-de-curva-de-nivel/curva-de-nivel-interpolada
+* http://geo.linkeddata.es/kos/geodesia/categoria-de-curva-de-nivel/curva-de-nivel-maestra
+* http://geo.linkeddata.es/kos/geodesia/categoria-de-curva-de-nivel/depresion-generica
+* http://geo.linkeddata.es/kos/geodesia/categoria-de-curva-de-nivel/depresion-maestra
 </rdfs:comment>
     </skos:ConceptScheme>
     
 
 
-    <!-- http://geo.linkeddata.es/kos/geodesy/categoriaDeCurvaDeNivel/curvaDeNivelGenerica -->
+    <!-- http://geo.linkeddata.es/kos/geodesia/categoria-de-curva-de-nivel/curva-de-nivel-generica -->
 
-    <skos:Concept rdf:about="&geodesy2;categoriaDeCurvaDeNivel/curvaDeNivelGenerica">
+    <skos:Concept rdf:about="&geodesia;categoria-de-curva-de-nivel/curva-de-nivel-generica">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
         <rdfs:label xml:lang="es">curva de nivel genérica</rdfs:label>
         <rdfs:comment xml:lang="es">Curva de nivel con altitud cada 20 m.</rdfs:comment>
-        <skos:inScheme rdf:resource="&geodesy2;categoriaDeCurvaDeNivel"/>
+        <skos:inScheme rdf:resource="&geodesia;categoria-de-curva-de-nivel"/>
     </skos:Concept>
     
 
 
-    <!-- http://geo.linkeddata.es/kos/geodesy/categoriaDeCurvaDeNivel/curvaDeNivelInterpolada -->
+    <!-- http://geo.linkeddata.es/kos/geodesia/categoria-de-curva-de-nivel/curva-de-nivel-interpolada -->
 
-    <skos:Concept rdf:about="&geodesy2;categoriaDeCurvaDeNivel/curvaDeNivelInterpolada">
+    <skos:Concept rdf:about="&geodesia;categoria-de-curva-de-nivel/curva-de-nivel-interpolada">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
         <rdfs:label xml:lang="es">curva de nivel interpolada</rdfs:label>
         <rdfs:comment xml:lang="es">Curva con altitud resultado de un algoritmo de cálculo y no de los
 datos del terreno.</rdfs:comment>
-        <skos:inScheme rdf:resource="&geodesy2;categoriaDeCurvaDeNivel"/>
+        <skos:inScheme rdf:resource="&geodesia;categoria-de-curva-de-nivel"/>
     </skos:Concept>
     
 
 
-    <!-- http://geo.linkeddata.es/kos/geodesy/categoriaDeCurvaDeNivel/curvaDeNivelMaestra -->
+    <!-- http://geo.linkeddata.es/kos/geodesia/categoria-de-curva-de-nivel/curva-de-nivel-maestra -->
 
-    <skos:Concept rdf:about="&geodesy2;categoriaDeCurvaDeNivel/curvaDeNivelMaestra">
+    <skos:Concept rdf:about="&geodesia;categoria-de-curva-de-nivel/curva-de-nivel-maestra">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
         <rdfs:label xml:lang="es">curva de nivel maestra</rdfs:label>
         <rdfs:comment xml:lang="es">Curva de nivel con altitud múltiplo de 100 m.</rdfs:comment>
-        <skos:inScheme rdf:resource="&geodesy2;categoriaDeCurvaDeNivel"/>
+        <skos:inScheme rdf:resource="&geodesia;categoria-de-curva-de-nivel"/>
     </skos:Concept>
     
 
 
-    <!-- http://geo.linkeddata.es/kos/geodesy/categoriaDeCurvaDeNivel/depresionMaestra -->
+    <!-- http://geo.linkeddata.es/kos/geodesia/categoria-de-curva-de-nivel/depresion-maestra -->
 
-    <skos:Concept rdf:about="&geodesy2;categoriaDeCurvaDeNivel/depresionMaestra">
+    <skos:Concept rdf:about="&geodesia;categoria-de-curva-de-nivel/depresion-maestra">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
         <rdfs:label xml:lang="es">depresión maestra</rdfs:label>
         <rdfs:comment xml:lang="es">Curva que define una concavidad del terreno cada 100 m.</rdfs:comment>
-        <skos:inScheme rdf:resource="&geodesy2;categoriaDeCurvaDeNivel"/>
+        <skos:inScheme rdf:resource="&geodesia;categoria-de-curva-de-nivel"/>
     </skos:Concept>
     
 
