@@ -1,0 +1,222 @@
+@prefix :        <http://geo.linkeddata.es/ontology/> .
+@prefix dc:      <http://purl.org/dc/elements/1.1/> .
+@prefix geo:     <http://geo.linkeddata.es/> .
+@prefix terms:   <http://purl.org/dc/terms/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl2xml:  <http://www.w3.org/2006/12/owl2-xml#> .
+@prefix red-de-suministro:  <http://geo.linkeddata.es/kos/red-de-suministro/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix geopolitical:  <http://aims.fao.org/aos/geopolitical.owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix tipo-de-componente:  <http://geo.linkeddata.es/kos/red-de-suministro/tipo-de-componente/> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+
+:LineaElectrica
+      a       owl:Class ;
+      rdfs:comment "Conjunto de hilos (o cables) y otras instalaciones con fines conducir energía eléctrica. Una Línea eléctrica está constituida tanto por el elemento conductor (usualmente cables de acero, cobre o aluminio) como por sus elementos de soporte (las torres de alta tensión)."@es ;
+      rdfs:label "Linea eléctrica"@es .
+
+:CentralTerminca
+      a       owl:Class ;
+      rdfs:comment " instalación empleada en la generación de energía eléctrica a partir de la energía liberada en forma de calor, normalmente mediante la combustión de combustibles fósiles como petróleo, gas natural o carbón. Este calor es empleado por un ciclo termodinámico convencional para mover un alternador y producir energía eléctrica."@es ;
+      rdfs:label "Central términca"@es ;
+      rdfs:subClassOf :CentralElectrica .
+
+red-de-suministro:tipo-de-componente
+      a       owl:NamedIndividual , skos:ConceptScheme ;
+      rdfs:comment """Indica el tipo de componente de telecomunicaciones.
+Puede tomar los valores:
+* http://geo.linkeddata.es/kos/red-de-suministro/tipo-de-componente/emisor
+* http://geo.linkeddata.es/kos/red-de-suministro/tipo-de-componente/repetidor"""@es ;
+      skos:prefLabel "tipo de componente"@es .
+
+<http://geo.linkeddata.es/ontology/red-de-suministro.owl#>
+      a       owl:Ontology ;
+      rdfs:comment ""@en , "Ontología global de dominio sobre redes de conducciones y energía"@es , "ontología globlal de dominio de redes de suministro de energía. "@es ;
+      dc:creator "Lissete Moscoso León"^^xsd:string ;
+      dc:publisher "Ontology Engineering Group"@en ;
+      dc:title "red-de-suministroOntology"^^xsd:string ;
+      owl:imports <http://www.w3.org/2004/02/skos/core> ;
+      owl:versionInfo "v0.2"^^xsd:string .
+
+:LineaElectricaDeBajaTension
+      a       owl:Class ;
+      rdfs:comment """ se considera instalación de baja tensión eléctrica a aquella que distribuya o genere energía eléctrica para consumo propio y a las receptoras en los siguientes límites de tensiones nominales:
+
+    Tensión alterna: igual o inferior a 1000 voltios.
+    Tensión continua: igual o inferior a 1500 voltios.
+"""@es ;
+      rdfs:label "Linea eléctrica de baja tensión"@es ;
+      rdfs:subClassOf :LineaElectrica .
+
+tipo-de-componente:repetidor
+      a       owl:NamedIndividual , skos:Concept ;
+      skos:inScheme red-de-suministro:tipo-de-componente ;
+      skos:prefLabel "repetidor"@es .
+
+:EstacionDeTelecomunicacion
+      a       owl:Class ;
+      rdfs:comment "Centro que consta de todas las instalaciones necesarias para transmitir y recibir señales que aseguren un servicio de radiotelecomunicación determinado."@es ;
+      rdfs:label "Estación de telecomunicación"@es .
+
+:CentralElectrica
+      a       owl:Class ;
+      rdfs:comment "Conjunto de instalaciones utilizadas directa e indirectamente para la producción de energía eléctrica."@es ;
+      rdfs:label "Central eléctrica"@es .
+
+:CentralEolica
+      a       owl:Class ;
+      rdfs:comment "Instalacion industrial que constituye una agrupación de aerogeneradores que transforman la energía eólica en energía eléctrica."@es ;
+      rdfs:label "Central eólica"@es ;
+      rdfs:subClassOf :CentralElectrica .
+
+:CentralCicloCombinado
+      a       owl:Class ;
+      rdfs:comment """ La central térmica de ciclo combinado es aquella donde se genera electricidad mediante la utilización conjunta de  dos turbinas:
+
+    Un turbogrupo de gas
+    Un turbogrupo de vapor
+"""@es ;
+      rdfs:label "Central de ciclo combinado"@es ;
+      rdfs:subClassOf :CentralElectrica .
+
+<http://geo.linkeddata.es/kos/transportes/situacion-de-via/elevado>
+      a       owl:NamedIndividual , skos:Concept ;
+      rdfs:comment "vía elevada"@es ;
+      skos:inScheme <http://geo.linkeddata.es/kos/transportes/situacion-de-via> ;
+      skos:prefLabel "elevado"@es .
+
+terms:source
+      a       owl:AnnotationProperty .
+
+:CentralSolar
+      a       owl:Class ;
+      rdfs:comment "Instalación industrial en la que, a partir del calentamiento de un fluido mediante radiación solar y su uso en un ciclo termodinámico convencional, se produce la potencia necesaria para mover un alternador para generación de energía eléctrica "@es ;
+      rdfs:label "Central solar"@es ;
+      rdfs:subClassOf :CentralElectrica .
+
+:EstacionDeTelevision
+      a       owl:Class ;
+      rdfs:comment "Centro que consta de todas las instalaciones necesarias para transmitir y recibir señales que aseguren un servicio de televisión."@es ;
+      rdfs:label "Estación de televisión"@es ;
+      rdfs:subClassOf :EstacionDeTelecomunicacion .
+
+:DepositoDeCombustible
+      a       owl:Class ;
+      rdfs:comment "Contenedor seguro destinado al almacenamiento de líquidos o gases inflamables para su posterior distribución en algunos casos por medio de oleoductos o gaseoductos."@es ;
+      rdfs:label "Depósito de combustible"@es ;
+      terms:source "Anexo A: Catálogo de Objetos Geográficos de BTN100."@es .
+
+tipo-de-componente:emisor
+      a       owl:NamedIndividual , skos:Concept ;
+      skos:inScheme red-de-suministro:tipo-de-componente ;
+      skos:prefLabel "emisor"@es .
+
+:EstacionTelefonica
+      a       owl:Class ;
+      rdfs:comment "Centro que consta de todas las instalaciones necesarias para transmitir y recibir señales que aseguren servicios telefónico."@es ;
+      rdfs:label "Estación telefónica"@es ;
+      rdfs:subClassOf :EstacionDeTelecomunicacion .
+
+:SubestacionElectrica
+      a       owl:Class ;
+      rdfs:comment "Conjunto de instalaciones utilizadas para la reducción de la tensión o el voltaje de las líneas eléctricas."@es ;
+      rdfs:label "Subestación eléctrica"@es .
+
+:CentralNuclear
+      a       owl:Class ;
+      rdfs:comment "instalación industrial empleada para la generación de energía eléctrica a partir de energía nuclear. "@es ;
+      rdfs:label "Central nuclear"@es ;
+      rdfs:subClassOf :CentralElectrica .
+
+:CentralHidraulica
+      a       owl:Class ;
+      rdfs:comment "Instalación empleada en la generación de energía eléctrica como resultado de la energía potencial gravitatoria que posee la masa de agua de un cauce natural en virtud de un desnivel, también conocido como «salto geodésico»"@es ;
+      rdfs:label "Central hidráulica"@es ;
+      rdfs:subClassOf :CentralElectrica .
+
+:EstacionDeRadio
+      a       owl:Class ;
+      rdfs:comment "Centro que consta de todas las instalaciones necesarias para transmitir y recibir señales que aseguren un servicio de radio."@es ;
+      rdfs:label "Estación de radio"@es ;
+      rdfs:subClassOf :EstacionDeTelecomunicacion .
+
+<http://geo.linkeddata.es/kos/transportes/situacion-de-via/subterraneo>
+      a       owl:NamedIndividual , skos:Concept ;
+      rdfs:comment "vía subterránea"@es ;
+      skos:inScheme <http://geo.linkeddata.es/kos/transportes/situacion-de-via> ;
+      skos:prefLabel "subterráneo"@es .
+
+:componenteDeTelecomunicacion
+      a       owl:ObjectProperty ;
+      rdfs:domain :EstacionDeTelecomunicacion ;
+      rdfs:label "componente de telecomunicación"@es ;
+      rdfs:range
+              [ a       owl:Class ;
+                owl:intersectionOf (skos:Concept [ a       owl:Restriction ;
+                            owl:hasValue red-de-suministro:tipo-de-componente ;
+                            owl:onProperty skos:inScheme
+                          ])
+              ] .
+
+:situacionDeVia
+      a       owl:ObjectProperty ;
+      rdfs:comment "Disposición del tramo de vía sobre la superficie"@es ;
+      rdfs:domain :ConduccionDeCombustible ;
+      rdfs:label "situación"@es ;
+      rdfs:range
+              [ a       owl:Class ;
+                owl:intersectionOf (skos:Concept [ a       owl:Restriction ;
+                            owl:hasValue <http://geo.linkeddata.es/kos/transportes/situacion-de-via> ;
+                            owl:onProperty skos:inScheme
+                          ])
+              ] .
+
+<http://geo.linkeddata.es/kos/transportes/situacion-de-via/superficial>
+      a       owl:NamedIndividual , skos:Concept ;
+      rdfs:comment "vía superficial"@es ;
+      skos:inScheme <http://geo.linkeddata.es/kos/transportes/situacion-de-via> ;
+      skos:prefLabel "superficial"@es .
+
+:LineaElectricaDeAltaTension
+      a       owl:Class ;
+      rdfs:comment """Se considera instalación de alta tensión eléctrica aquella que genere, transporte, transforme, distribuya o utilice energía eléctrica con tensiones superiores a los siguientes límites:
+
+    Corriente alterna: Superior a 1000 voltios.
+    Corriente continua: Superior a 1500 voltios."""@es ;
+      rdfs:label "Linea eléctrica de alta tensión"@es ;
+      rdfs:subClassOf :LineaElectrica ;
+      owl:disjointWith :LineaElectricaDeBajaTension .
+
+:Gaseoducto
+      a       owl:Class ;
+      rdfs:comment "Tubería de grueso calibre y gran longitud para conducir a distancia gas combustible, procedente por lo general de emanaciones naturales."@es ;
+      rdfs:label "Gaseoducto"@es ;
+      rdfs:subClassOf :ConduccionDeCombustible ;
+      terms:source "Diccionario de la Real Academia Espannola"@es .
+
+:Oleoducto
+      a       owl:Class ;
+      rdfs:comment "Tubería provista de bombas y otros aparatos para conducir el petróleo a larga distancia."@es ;
+      rdfs:label "Oleoducto"@es ;
+      rdfs:subClassOf :ConduccionDeCombustible ;
+      terms:source "Diccionario de la Real Academia Espannola"@es .
+
+[]    a       owl:AllDifferent ;
+      owl:distinctMembers (<http://geo.linkeddata.es/kos/transportes/situacion-de-via/elevado> <http://geo.linkeddata.es/kos/transportes/situacion-de-via/subterraneo> <http://geo.linkeddata.es/kos/transportes/situacion-de-via/superficial>) .
+
+:ConduccionDeCombustible
+      a       owl:Class ;
+      rdfs:comment "Tubería e instalaciones conexas utilizadas para el transporte de combustibles."@es ;
+      rdfs:label "Conducción de combustible"@es ;
+      terms:source "Anexo A: Catálogo de Objetos Geográficos de BTN100."@es .
+
+<http://geo.linkeddata.es/kos/transportes/situacion-de-via>
+      a       owl:NamedIndividual , skos:ConceptScheme ;
+      rdfs:comment """Disposición del tramo de vía sobre la superficie.
+
+* http://geo.linkeddata.es/kos/transportes/situacion-de-via/elevado
+* http://geo.linkeddata.es/kos/transportes/situacion-de-via/subterraneo
+* http://geo.linkeddata.es/kos/transportes/situacion-de-via/superficial"""@es ;
+      skos:prefLabel "situación"@es .

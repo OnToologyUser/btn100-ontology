@@ -1,0 +1,103 @@
+{
+  "@context" : {
+    "EstacionDeTelevision" : {
+      "@id" : "http://geo.linkeddata.es/ontology/EstacionDeTelevision"
+    },
+    "versionInfo" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
+    },
+    "CentralNuclear" : {
+      "@id" : "http://geo.linkeddata.es/ontology/CentralNuclear"
+    },
+    "CentralElectrica" : {
+      "@id" : "http://geo.linkeddata.es/ontology/CentralElectrica"
+    },
+    "Gaseoducto" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Gaseoducto"
+    },
+    "EstacionDeRadio" : {
+      "@id" : "http://geo.linkeddata.es/ontology/EstacionDeRadio"
+    },
+    "situacionDeVia" : {
+      "@id" : "http://geo.linkeddata.es/ontology/situacionDeVia",
+      "@type" : "@id"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "Concept" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "CentralSolar" : {
+      "@id" : "http://geo.linkeddata.es/ontology/CentralSolar"
+    },
+    "LineaElectricaDeAltaTension" : {
+      "@id" : "http://geo.linkeddata.es/ontology/LineaElectricaDeAltaTension"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/elements/1.1/creator"
+    },
+    "SubestacionElectrica" : {
+      "@id" : "http://geo.linkeddata.es/ontology/SubestacionElectrica"
+    },
+    "CentralHidraulica" : {
+      "@id" : "http://geo.linkeddata.es/ontology/CentralHidraulica"
+    },
+    "ConduccionDeCombustible" : {
+      "@id" : "http://geo.linkeddata.es/ontology/ConduccionDeCombustible"
+    },
+    "LineaElectrica" : {
+      "@id" : "http://geo.linkeddata.es/ontology/LineaElectrica"
+    },
+    "ConceptScheme" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme"
+    },
+    "CentralTerminca" : {
+      "@id" : "http://geo.linkeddata.es/ontology/CentralTerminca"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/elements/1.1/title"
+    },
+    "source" : {
+      "@id" : "http://purl.org/dc/terms/source"
+    },
+    "EstacionDeTelecomunicacion" : {
+      "@id" : "http://geo.linkeddata.es/ontology/EstacionDeTelecomunicacion"
+    },
+    "publisher" : {
+      "@id" : "http://purl.org/dc/elements/1.1/publisher"
+    },
+    "componenteDeTelecomunicacion" : {
+      "@id" : "http://geo.linkeddata.es/ontology/componenteDeTelecomunicacion",
+      "@type" : "@id"
+    },
+    "Oleoducto" : {
+      "@id" : "http://geo.linkeddata.es/ontology/Oleoducto"
+    },
+    "DepositoDeCombustible" : {
+      "@id" : "http://geo.linkeddata.es/ontology/DepositoDeCombustible"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "CentralCicloCombinado" : {
+      "@id" : "http://geo.linkeddata.es/ontology/CentralCicloCombinado"
+    },
+    "CentralEolica" : {
+      "@id" : "http://geo.linkeddata.es/ontology/CentralEolica"
+    },
+    "prefLabel" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#prefLabel"
+    },
+    "LineaElectricaDeBajaTension" : {
+      "@id" : "http://geo.linkeddata.es/ontology/LineaElectricaDeBajaTension"
+    },
+    "inScheme" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#inScheme",
+      "@type" : "@id"
+    },
+    "EstacionTelefonica" : {
+      "@id" : "http://geo.linkeddata.es/ontology/EstacionTelefonica"
+    }
+  }
+}

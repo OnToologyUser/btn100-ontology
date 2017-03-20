@@ -1,0 +1,20 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "base:EstacionDeTelecomunicacion" "base:EstacionTelefonica" "base:Gaseoducto" "base:CentralHidraulica" "base:LineaElectricaDeBajaTension" "base:EstacionDeRadio" "base:CentralNuclear" "base:LineaElectrica" "base:EstacionDeTelevision" "base:CentralSolar" "base:ConduccionDeCombustible" "base:CentralCicloCombinado" "base:CentralElectrica" "base:Oleoducto" "base:CentralTerminca" "base:CentralEolica" "base:LineaElectricaDeAltaTension" "skos:OrderedCollection" "skos:Collection" ; /*classes style*/
+	"base:EstacionDeRadio" -> "base:EstacionDeTelecomunicacion" [ label = "rdfs:subClassOf" ];
+	"base:CentralNuclear" -> "base:CentralElectrica" [ label = "rdfs:subClassOf" ];
+	"base:CentralEolica" -> "base:CentralElectrica" [ label = "rdfs:subClassOf" ];
+	"base:CentralSolar" -> "base:CentralElectrica" [ label = "rdfs:subClassOf" ];
+	"base:CentralTerminca" -> "base:CentralElectrica" [ label = "rdfs:subClassOf" ];
+	"base:CentralHidraulica" -> "base:CentralElectrica" [ label = "rdfs:subClassOf" ];
+	"base:LineaElectricaDeAltaTension" -> "base:LineaElectrica" [ label = "rdfs:subClassOf" ];
+	"base:Oleoducto" -> "base:ConduccionDeCombustible" [ label = "rdfs:subClassOf" ];
+	"base:EstacionDeTelevision" -> "base:EstacionDeTelecomunicacion" [ label = "rdfs:subClassOf" ];
+	"skos:OrderedCollection" -> "skos:Collection" [ label = "rdfs:subClassOf" ];
+	"base:CentralCicloCombinado" -> "base:CentralElectrica" [ label = "rdfs:subClassOf" ];
+	"base:EstacionTelefonica" -> "base:EstacionDeTelecomunicacion" [ label = "rdfs:subClassOf" ];
+	"base:LineaElectricaDeBajaTension" -> "base:LineaElectrica" [ label = "rdfs:subClassOf" ];
+	"base:Gaseoducto" -> "base:ConduccionDeCombustible" [ label = "rdfs:subClassOf" ];
+
+}
