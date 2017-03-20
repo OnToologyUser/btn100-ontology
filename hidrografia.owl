@@ -115,7 +115,7 @@
 
     <owl:ObjectProperty rdf:about="&geo;ontology/regimenDeLaguna">
         <rdfs:label xml:lang="es">régimen de laguna</rdfs:label>
-        <rdfs:comment xml:lang="es">indica la estacionalidad de las aguas</rdfs:comment>
+        <rdfs:comment xml:lang="es">indica la estacionalidad de las  aguas</rdfs:comment>
         <rdfs:domain rdf:resource="&geo;ontology/Laguna"/>
         <rdfs:range>
             <owl:Class>

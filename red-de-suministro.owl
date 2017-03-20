@@ -135,7 +135,7 @@
     <owl:Class rdf:about="http://geo.linkeddata.es/ontology/CentralCicloCombinado">
         <rdfs:label xml:lang="es">Central de ciclo combinado</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://geo.linkeddata.es/ontology/CentralElectrica"/>
-        <rdfs:comment xml:lang="es"> La central térmica de ciclo combinado es aquella donde se genera electricidad mediante la utilización conjunta de dos turbinas:
+        <rdfs:comment xml:lang="es"> La central térmica de ciclo combinado es aquella donde se genera electricidad mediante la utilización conjunta de  dos turbinas:
 
     Un turbogrupo de gas
     Un turbogrupo de vapor
