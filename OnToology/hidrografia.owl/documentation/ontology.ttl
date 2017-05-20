@@ -1,0 +1,185 @@
+@prefix :        <http://geo.linkeddata.es/ontology/> .
+@prefix dc:      <http://purl.org/dc/elements/1.1/> .
+@prefix categoria-de-isla:  <http://geo.linkeddata.es/kos/hidrografia/categoria-de-isla/> .
+@prefix terms:   <http://purl.org/dc/terms/> .
+@prefix hydro:   <http://geo.linkeddata.es/kos/hidrografia/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix regimen-de-laguna:  <http://geo.linkeddata.es/kos/hidrografia/regimen-de-laguna/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix categoria-de-rio:  <http://geo.linkeddata.es/kos/hidrografia/categoria-de-rio/> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+
+:Punta
+      a       owl:Class ;
+      rdfs:comment "Lengua de tierra, generalmente baja y de poca extensión, que penetra en el mar."@es ;
+      rdfs:label "Punta"@es ;
+      rdfs:subClassOf :Morfologia ;
+      dc:source "Diccionario de la Real Academia Española"@es .
+
+hydro:regimen-de-laguna
+      a       owl:NamedIndividual , skos:ConceptScheme ;
+      rdfs:comment """puede tomar los valores:
+* http://geo.linkeddata.es/kos/hidrografia/regimen-de-laguna/permanete
+* http://geo.linkeddata.es/kos/hidrografia/regimen-de-laguna/no-permanente"""@es ;
+      skos:prefLabel "régimen de laguna"@es .
+
+categoria-de-rio:rio-secundario
+      a       owl:NamedIndividual , skos:Concept ;
+      skos:inScheme hydro:categoria-de-rio ;
+      skos:prefLabel "río de interés secundario"@es .
+
+categoria-de-rio:rio-terceario
+      a       owl:NamedIndividual , skos:Concept ;
+      skos:inScheme hydro:categoria-de-rio ;
+      skos:prefLabel "río de interés terceario"@es .
+
+:Rambla
+      rdfs:subClassOf :ZonaHumeda .
+
+:Cabo
+      a       owl:Class ;
+      rdfs:comment "Lengua de tierra que penetra en el mar."@es ;
+      rdfs:label "Cabo"@es ;
+      rdfs:subClassOf :Morfologia ;
+      dc:source "Diccionario de la Real Academia Española"@es .
+
+hydro:categoria-de-rio
+      a       owl:NamedIndividual , skos:ConceptScheme ;
+      rdfs:comment """categorización de un río. Puede tomar los valores:
+* http://geo.linkeddata.es/kos/hidrografia/categoria-de-rio/rio-principal
+* http://geo.linkeddata.es/kos/hidrografia/categoria-de-rio/rio-secundario
+* http://geo.linkeddata.es/kos/hidrografia/categoria-de-rio/rio-terceario
+* http://geo.linkeddata.es/kos/hidrografia/categoria-de-rio/rio-de-menor-interes
+"""@es ;
+      skos:prefLabel "categoría de río"@es .
+
+:Estanque
+      rdfs:subClassOf :Alberca .
+
+:categoriaDeIsla
+      a       owl:ObjectProperty ;
+      rdfs:comment "Indica la categoría de la isla"@es ;
+      rdfs:domain :Isla ;
+      rdfs:label "categoría de isla"@es ;
+      rdfs:range
+              [ a       owl:Class ;
+                owl:intersectionOf (skos:Concept [ a       owl:Restriction ;
+                            owl:hasValue hydro:categoria-de-isla ;
+                            owl:onProperty skos:inScheme
+                          ])
+              ] .
+
+categoria-de-isla:principal
+      a       owl:NamedIndividual , skos:Concept ;
+      rdfs:comment "Indica que una isla es importante desde el punto de vista cartográfico"@es ;
+      skos:inScheme hydro:categoria-de-isla ;
+      skos:prefLabel "principal"@es .
+
+terms:source
+      a       owl:AnnotationProperty .
+
+:Albufera
+      rdfs:subClassOf :ZonaHumeda .
+
+:Cala
+      a       owl:Class ;
+      rdfs:comment "Ensenada pequeña."@es ;
+      rdfs:label "Cala"@es ;
+      rdfs:subClassOf :Morfologia ;
+      dc:source "Diccionario de la Real Academia Española"@es .
+
+:IslaFluvial
+      rdfs:subClassOf :Isla .
+
+:regimenDeLaguna
+      a       owl:ObjectProperty ;
+      rdfs:comment "indica la estacionalidad de las  aguas"@es ;
+      rdfs:domain :Laguna ;
+      rdfs:label "régimen de laguna"@es ;
+      rdfs:range
+              [ a       owl:Class ;
+                owl:intersectionOf (skos:Concept [ a       owl:Restriction ;
+                            owl:hasValue hydro:regimen-de-laguna ;
+                            owl:onProperty skos:inScheme
+                          ])
+              ] .
+
+regimen-de-laguna:no-permanente
+      a       owl:NamedIndividual , skos:Concept ;
+      skos:inScheme hydro:regimen-de-laguna ;
+      skos:prefLabel "no permanente"@es .
+
+:Canyo
+      rdfs:subClassOf :ZonaHumeda .
+
+regimen-de-laguna:permanente
+      a       owl:NamedIndividual , skos:Concept ;
+      skos:inScheme hydro:regimen-de-laguna ;
+      skos:prefLabel "permanente"@es .
+
+:IslaMaritima
+      a       owl:Class ;
+      rdfs:comment "Porción de tierra rodeada de agua del mar."@es ;
+      rdfs:label "Isla marítima"@es ;
+      rdfs:subClassOf :Isla ;
+      dc:source "Catálogo de Objetos Geográficos BTN100"@es .
+
+:categoriaDeRio
+      a       owl:ObjectProperty ;
+      rdfs:comment "Indica el orden de interés de un río"@es ;
+      rdfs:label "categoría de río"@es ;
+      rdfs:range
+              [ a       owl:Class ;
+                owl:intersectionOf (skos:Concept [ a       owl:Restriction ;
+                            owl:hasValue hydro:categoria-de-rio ;
+                            owl:onProperty skos:inScheme
+                          ])
+              ] .
+
+categoria-de-rio:rio-principal
+      a       owl:NamedIndividual , skos:Concept ;
+      skos:inScheme hydro:categoria-de-rio ;
+      skos:prefLabel "río de interés principal"@es .
+
+<http://geo.linkeddata.es/ontology/hidrografia.owl>
+      a       owl:Ontology ;
+      owl:imports <http://www.w3.org/2004/02/skos/core> , <http://geo.linkeddata.es/ontology/hydro.owl> .
+
+:Marisma
+      rdfs:subClassOf :ZonaHumeda .
+
+:Salina
+      rdfs:subClassOf :ZonaHumeda .
+
+:Balsa
+      rdfs:subClassOf :Alberca .
+
+:Isla
+      a       owl:Class ;
+      rdfs:subClassOf :Morfologia .
+
+hydro:categoria-de-isla
+      a       owl:NamedIndividual , skos:ConceptScheme ;
+      rdfs:comment """Puede tomar los valores:
+* http://geo.linkeddata.es/kos/hidrografia/categoria-de-isla/principal"""@es ;
+      skos:prefLabel "categoría de isla"@es .
+
+:Esclusa
+      a       owl:Class ;
+      rdfs:comment "Compartimento, con puertas de entrada y salida, que se construye en un canal de navegación para que los barcos puedan pasar de un tramo a otro de diferente nivel, para lo cual se llena de agua o se vacía el espacio comprendido entre dichas puertas."@es ;
+      rdfs:label "Esclusa"@es ;
+      rdfs:subClassOf :AguasCorrientesArtificiales .
+
+:Pennon
+      a       owl:Class ;
+      rdfs:comment "Monte peñascoso."@es ;
+      rdfs:label "Peñon"@es ;
+      rdfs:subClassOf :Morfologia ;
+      dc:source "Diccionario de la Real Academia Española"@es .
+
+categoria-de-rio:rio-de-menor-interes
+      a       owl:NamedIndividual , skos:Concept ;
+      skos:inScheme hydro:categoria-de-rio ;
+      skos:prefLabel "río de menor interes"@es .
