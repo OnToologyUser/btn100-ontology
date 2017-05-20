@@ -661,7 +661,7 @@
       "@id" : "http://purl.org/dc/elements/1.1/creator"
     },
     "electrificacion" : {
-      "@id" : "http://geo.linkeddata.es/kos/transports/electrificacion",
+      "@id" : "http://geo.linkeddata.es/kos/transportes/electrificacion",
       "@type" : "@id"
     },
     "SubestacionElectrica" : {
@@ -1213,6 +1213,10 @@
     },
     "esta_proxima_a" : {
       "@id" : "http://geo.linkeddata.es/ontology/esta_proxima_a",
+      "@type" : "@id"
+    },
+    "estadoDeLaExplotacionMinera" : {
+      "@id" : "http://geo.linkeddata.es/ontology/estadoDeLaExplotacionMinera",
       "@type" : "@id"
     },
     "EstacionPermanenteGPS" : {

@@ -1,48 +1,44 @@
 @prefix :        <http://geo.linkeddata.es/ontology/btn100.owl#> .
-@prefix estadoDeUso2:  <http://geo.linkeddata.es/kos/transports/estadoDeUso/> .
-@prefix categoriaDeCurvaDeNivel2:  <htthttp://geo.linkeddata.es/kos/geodesy/categoriaDeCurvaDeNivel/> .
-@prefix numeroDeVias:  <http://geo.linkeddata.es/kos/transports/numeroDeVias/> .
-@prefix population-buildings:  <http://geo.linkeddata.es/kos/population-buildings/> .
+@prefix numero-de-vias:  <http://geo.linkeddata.es/kos/transportes/numero-de-vias/> .
 @prefix terms:   <http://purl.org/dc/terms/> .
-@prefix situacionDeVia:  <http://geo.linkeddata.es/kos/transports/situacionDeVia/> .
-@prefix categoriaDeIsla:  <http://geo.linkeddata.es/kos/hydrography/categoriaDeIsla/> .
-@prefix tipoDeTramo:  <http://geo.linkeddata.es/kos/transports/tipoDeTramo/> .
-@prefix geodesy:  <http://geo.linkeddata.es/kos/geodesy/> .
-@prefix capital:  <http://geo.linkeddata.es/kos/populatuon-buildings/capital/> .
-@prefix hydro:   <http://geo.linkeddata.es/kos/hydrography/> .
-@prefix regimenDeLaguna:  <http://geo.linkeddata.es/kos/hydrography/regimenDeLaguna/> .
-@prefix anchoDeVia:  <http://geo.linkeddata.es/kos/transports/anchoDeVia/> .
-@prefix kos:     <http://geo.linkeddata.es/kos/> .
+@prefix competencia-portuaria:  <http://geo.linkeddata.es/kos/transportes/competencia-portuaria/> .
+@prefix geodesia:  <http://geo.linkeddata.es/kos/geodesia/> .
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix situacion:  <http://geo.linkeddata.es/kos/supply-net/situacion/> .
+@prefix ancho-de-via:  <http://geo.linkeddata.es/kos/transportes/ancho-de-via/> .
 @prefix geopolitical:  <http://aims.fao.org/aos/geopolitical.owl#> .
-@prefix supply-net:  <http://geo.linkeddata.es/kos/supply-net/> .
 @prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix btn100:  <http://geo.linkeddata.es/kos/btn100/> .
-@prefix tipoDeItinerario:  <http://geo.linkeddata.es/kos/transports/tipoDeItinerario/> .
-@prefix categoriaDeCurvaDeNivel:  <http://geo.linkeddata.es/kos/geodesy/categoriaDeCurvaDeNivel/> .
-@prefix estadoDeUso:  <http://geo.linkeddata.es/kos/population-buildings/estadoDeUso/> .
+@prefix competencia-aeroportuaria:  <http://geo.linkeddata.es/kos/transportes/competencia-aeroportuaria/> .
+@prefix categoria-de-rio:  <http://geo.linkeddata.es/kos/hidrografia/categoria-de-rio/> .
+@prefix competencia-de-via:  <http://geo.linkeddata.es/kos/transportes/competencia-de-via/> .
+@prefix tipo-de-trafico:  <http://geo.linkeddata.es/kos/transportes/tipo-de-trafico/> .
+@prefix poblaciones-construcciones:  <http://geo.linkeddata.es/kos/poblaciones-construcciones/> .
 @prefix dc:      <http://purl.org/dc/elements/1.1/> .
-@prefix transportes:  <http://geo.linkeddata.es/kos/transports/> .
+@prefix situacion-de-via:  <http://geo.linkeddata.es/kos/transportes/situacion-de-via/> .
+@prefix transportes:  <http://geo.linkeddata.es/kos/transportes/> .
+@prefix tipo-de-itinerario:  <http://geo.linkeddata.es/kos/transportes/tipo-de-itinerario/> .
+@prefix categoria-de-isla:  <http://geo.linkeddata.es/kos/hidrografia/categoria-de-isla/> .
 @prefix geo:     <http://geo.linkeddata.es/> .
 @prefix wgs84_pos:  <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix tipo-de-tramo:  <http://geo.linkeddata.es/kos/transportes/tipo-de-tramo/> .
 @prefix foaf:    <http://xmlns.com/foaf/0.1/> .
-@prefix competenciaDeVia:  <http://geo.linkeddata.es/kos/transports/competenciaDeVia/> .
-@prefix acceso:  <http://geo.linkeddata.es/kos/transports/acceso/> .
-@prefix rutaTenT:  <http://geo.linkeddata.es/kos/transports/rutaTenT/> .
-@prefix categoriaVial:  <http://geo.linkeddata.es/kos/transports/categoriaVial/> .
+@prefix estado-de-uso2:  <http://geo.linkeddata.es/kos/poblaciones-construcciones/estado-de-uso/> .
+@prefix tipo-de-capital:  <http://geo.linkeddata.es/kos/poblaciones-construcciones/tipo-de-capital/> .
+@prefix acceso:  <http://geo.linkeddata.es/kos/transportes/acceso/> .
+@prefix estado-de-uso:  <http://geo.linkeddata.es/kos/transportes/estado-de-uso/> .
+@prefix categoria-de-curva-de-nivel:  <http://geo.linkeddata.es/kos/geodesia/categoria-de-curva-de-nivel/> .
+@prefix tipo-de-calzada:  <http://geo.linkeddata.es/kos/transportes/tipo-de-calzada/> .
 @prefix ontology:  <http://geo.linkeddata.es/ontology/> .
-@prefix electrificacion:  <http://geo.linkeddata.es/kos/transports/electrificacion/> .
+@prefix categoria-vial:  <http://geo.linkeddata.es/kos/transportes/categoria-vial/> .
+@prefix hidrografia:  <http://geo.linkeddata.es/kos/hidrografia/> .
+@prefix electrificacion:  <http://geo.linkeddata.es/kos/transportes/electrificacion/> .
 @prefix geosparql:  <http://www.opengis.net/ont/geosparql#> .
-@prefix categoriaDeRio:  <http://geo.linkeddata.es/kos/hydrography/categoriaDeRio/> .
-@prefix competenciaAeroportuaria:  <http://geo.linkeddata.es/kos/transports/competenciaAeroportuaria/> .
-@prefix competenciaPortuaria:  <http://geo.linkeddata.es/kos/transports/competenciaPortuaria/> .
+@prefix red-de-suministro:  <http://geo.linkeddata.es/kos/red-de-suministro/> .
+@prefix regimen-de-laguna:  <http://geo.linkeddata.es/kos/hidrografia/regimen-de-laguna/> .
 @prefix owl:     <http://www.w3.org/2002/07/owl#> .
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
-@prefix tipoDeCalzada:  <http://geo.linkeddata.es/kos/transports/tipoDeCalzada/> .
-@prefix tipoDeTrafico:  <http://geo.linkeddata.es/kos/transports/tipoDeTrafico/> .
-@prefix tipoDeComponente:  <http://geo.linkeddata.es/kos/supply-net/tipoDeComponente/> .
+@prefix tipo-de-componente:  <http://geo.linkeddata.es/kos/red-de-suministro/tipo-de-componente/> .
 @prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix ruta-ten-t:  <http://geo.linkeddata.es/kos/transportes/ruta-ten-t/> .
 
 ontology:Canalillo
       a       owl:Class ;
@@ -61,12 +57,6 @@ ontology:VerticeGeodesicoRegente
       rdfs:comment "Perteneciente a la Red de Regente"@es ;
       rdfs:label "VerticeGeodesicoRegente"@es ;
       rdfs:subClassOf ontology:VerticeGeodesico .
-
-estadoDeUso2:enConstruccion
-      a       owl:NamedIndividual , skos:Concept ;
-      rdfs:comment "indica que está en construcción o en obras"@es ;
-      skos:inScheme transportes:estadoDeUso ;
-      skos:prefLabel "en construcción"@es .
 
 ontology:Regato
       a       owl:Class ;
@@ -90,7 +80,7 @@ ontology:categoriaDeRio
       rdfs:range
               [ a       owl:Class ;
                 owl:intersectionOf (skos:Concept [ a       owl:Restriction ;
-                            owl:hasValue hydro:categoriaDeRio ;
+                            owl:hasValue hidrografia:categoria-de-rio ;
                             owl:onProperty skos:inScheme
                           ])
               ] .
@@ -173,13 +163,14 @@ ontology:AguasCorrientes
                 owl:unionOf (ontology:AguasCorrientesArtificiales ontology:AguasCorrientesNaturales)
               ] .
 
-population-buildings:estadoDeUso
+transportes:competencia-aeroportuaria
       a       owl:NamedIndividual , skos:ConceptScheme ;
-      rdfs:comment """indica el estado de uso. Puede tomar los valores:
-* http://geo.linkeddata.es/kos/population-buildings/estadoDeUso/enConstruccion
-* http://geo.linkeddata.es/kos/population-buildings/estadoDeUso/enUso
-* http://geo.linkeddata.es/kos/population-buildings/estadoDeUso/abandonado"""@es ;
-      skos:prefLabel "estado de uso"@es .
+      rdfs:comment """Esquema de conceptos para definir el tipo de cometencia de explotación aeroportuaria.
+puede tomar los valores:
+* http://geo.linkeddata.es/kos/transportes/competencia-aeroportuaria/aena
+* http://geo.linkeddata.es/kos/transportes/competencia-aeroportuaria/militar
+* http://geo.linkeddata.es/kos/transportes/competencia-aeroportuaria/privada"""@es ;
+      skos:prefLabel "competencia aeroportuaria"@es .
 
 ontology:ZonaContigua
       a       owl:Class ;
@@ -193,9 +184,9 @@ ontology:ZonaContigua
               ] ;
       dc:source "Diez de Velasco, Manuel (1999) Instituciones de derecho internacional publico. Duodecima edicion. Madrid: Tecnos. 924 p. ISBN: 84-309-3446-4"^^xsd:string .
 
-btn100:relieve
+<http://geo.linkeddata.es/kos/btn100/relieve>
       a       owl:NamedIndividual , skos:Concept ;
-      skos:inScheme kos:btn100 ;
+      skos:inScheme <http://geo.linkeddata.es/kos/btn100> ;
       skos:notation "02" ;
       skos:prefLabel "relieve"@es .
 
@@ -210,7 +201,7 @@ ontology:rutaTenT
       rdfs:range
               [ a       owl:Class ;
                 owl:intersectionOf (skos:Concept [ a       owl:Restriction ;
-                            owl:hasValue transportes:rutaTenT ;
+                            owl:hasValue transportes:ruta-ten-t ;
                             owl:onProperty skos:inScheme
                           ])
               ] .
@@ -224,18 +215,18 @@ ontology:Autovia
               [ a       owl:Class ;
                 owl:intersectionOf ([ a       owl:Class ;
                             owl:unionOf ([ a       owl:Restriction ;
-                                        owl:hasValue tipoDeCalzada:doble ;
+                                        owl:hasValue tipo-de-calzada:doble ;
                                         owl:onProperty ontology:calzada
                                       ] [ a       owl:Restriction ;
-                                        owl:hasValue tipoDeCalzada:sentidoUnico ;
+                                        owl:hasValue tipo-de-calzada:sentido-unico ;
                                         owl:onProperty ontology:calzada
                                       ])
                           ] [ a       owl:Class ;
                             owl:unionOf ([ a       owl:Restriction ;
-                                        owl:hasValue estadoDeUso2:enConstruccion ;
+                                        owl:hasValue estado-de-uso:en-construccion ;
                                         owl:onProperty ontology:estadoDeUso
                                       ] [ a       owl:Restriction ;
-                                        owl:hasValue estadoDeUso2:enUso ;
+                                        owl:hasValue estado-de-uso:en-uso ;
                                         owl:onProperty ontology:estadoDeUso
                                       ])
                           ])
@@ -245,10 +236,10 @@ ontology:Autovia
 geopolitical:territory
       a       owl:Class .
 
-capital:noCapital
+estado-de-uso:en-uso
       a       owl:NamedIndividual , skos:Concept ;
-      skos:inScheme capital:tipoDeCapital ;
-      skos:prefLabel "no es capital"@es .
+      skos:inScheme transportes:estado-de-uso ;
+      skos:prefLabel "en uso"@es .
 
 ontology:Canyo
       a       owl:Class ;
@@ -269,15 +260,6 @@ ontology:Canyo
                 owl:someValuesFrom ontology:Marisma
               ] ;
       dc:source "Vazquez Maure F.; Martin Lopez J. (1987) Vocabulario de terminos geograficos. Ed. Ministerio de Obras Publicas y Urbanismo. Instituto Geografico Nacional. Madrid. ISBN: 84-505-4929-9."^^xsd:string .
-
-transportes:situacionDeVia
-      a       owl:NamedIndividual , skos:ConceptScheme ;
-      rdfs:comment """Disposición del tramo de vía sobre la superficie.
-
-* http://geo.linkeddata.es/kos/transports/situacionDeVia/elevado
-* http://geo.linkeddata.es/kos/transports/situacionDeVia/subterraneo
-* http://geo.linkeddata.es/kos/transports/situacionDeVia/superficial"""@es ;
-      skos:prefLabel "situación"@es .
 
 ontology:eutrofizacion
       a       owl:DatatypeProperty ;
@@ -310,12 +292,11 @@ ontology:Aeroclub
       rdfs:label "Aeroclub"@en , "Aeroclub"@es ;
       rdfs:subClassOf geosparql:Feature .
 
-categoriaDeCurvaDeNivel:curvaDeNivelInterpolada
+tipo-de-itinerario:itinerario-no-europeo
       a       owl:NamedIndividual , skos:Concept ;
-      rdfs:comment """Curva con altitud resultado de un algoritmo de cálculo y no de los
-datos del terreno."""@es ;
-      rdfs:label "curva de nivel interpolada"@es ;
-      skos:inScheme geodesy:categoriaDeCurvaDeNivel .
+      rdfs:comment "indica que el tramo de vía no pertenece a la Red de Carreteras Europeas"@es ;
+      skos:inScheme transportes:tipo-de-itinerario ;
+      skos:prefLabel "itinerario no europeo"@es .
 
 ontology:estado
       a       owl:DatatypeProperty ;
@@ -345,15 +326,6 @@ ontology:VerticeGeodesicoRegcan95
       rdfs:comment "Perteneciente a REGCAN95"@es ;
       rdfs:label "VerticeGeodesicoRegcan95"@es ;
       rdfs:subClassOf ontology:VerticeGeodesico .
-
-competenciaAeroportuaria:militar
-      a       owl:NamedIndividual , skos:Concept ;
-      rdfs:comment "competencia aeroportuaria de explotación militar"@es ;
-      skos:inScheme transportes:competenciaAeroportuaria ;
-      skos:prefLabel "militar"@es .
-
-[]    a       owl:AllDifferent ;
-      owl:distinctMembers (situacionDeVia:elevado situacionDeVia:subterraneo situacionDeVia:superficial) .
 
 ontology:almacena
       a       owl:ObjectProperty ;
@@ -420,12 +392,6 @@ ontology:Acequia
               ] ;
       dc:source "Vazquez Maure F.; Martin Lopez J. Vocabulario de terminos geograficos. Madrid: Ministerio de Obras Publicas y Urbanismo. Instituto Geografico Nacional. 1987. 89 p. ISBN: 84-505-4929-9."^^xsd:string .
 
-hydro:categoriaDeIsla
-      a       owl:NamedIndividual , skos:ConceptScheme ;
-      rdfs:comment """Puede tomar los valores:
-* http://geo.linkeddata.es/kos/hydrography/categoriaDeIsla/principal"""@es ;
-      skos:prefLabel "categoría de isla"@es .
-
 ontology:FerrocarrilDeAltaVelocidad
       a       owl:Class ;
       rdfs:comment "Anexo A: Catálogo de Objetos Geográficos de BTN100."@es , "Tramo de vía por la que circula el Tren de alta velocidad de España (AVE)."@es ;
@@ -434,10 +400,10 @@ ontology:FerrocarrilDeAltaVelocidad
               [ a       owl:Class ;
                 owl:intersectionOf (ontology:Ferrocarril [ a       owl:Class ;
                             owl:unionOf ([ a       owl:Restriction ;
-                                        owl:hasValue estadoDeUso2:enConstruccion ;
+                                        owl:hasValue estado-de-uso:en-construccion ;
                                         owl:onProperty ontology:estadoDeUso
                                       ] [ a       owl:Restriction ;
-                                        owl:hasValue estadoDeUso2:enUso ;
+                                        owl:hasValue estado-de-uso:en-uso ;
                                         owl:onProperty ontology:estadoDeUso
                                       ])
                           ])
@@ -448,14 +414,6 @@ ontology:descarga_en
       rdfs:domain ontology:AguasSubterraneas ;
       rdfs:range ontology:ZonaHumeda ;
       owl:inverseOf ontology:sufre_descarga_de .
-
-transportes:tipoDeTrafico
-      a       owl:NamedIndividual , skos:ConceptScheme ;
-      rdfs:comment """kos que indica el tipo de tráfico que lleva un ferrocarril. Pueden ser
-* http://geo.linkeddata.es/kos/transporters/tipoDeTrafico/viajeros
-* http://geo.linkeddata.es/kos/transporters/tipoDeTrafico/mercancias
-* http://geo.linkeddata.es/kos/transporters/tipoDeTrafico/mixto"""@es ;
-      skos:prefLabel "tipo de tráfico"@es .
 
 ontology:consta_de
       a       owl:TransitiveProperty , owl:ObjectProperty ;
@@ -468,6 +426,19 @@ ontology:consta_de
                 owl:unionOf (ontology:AguasDeTransicion ontology:Corriente ontology:Embalse ontology:HidronimoPuntual ontology:Morfologia)
               ] .
 
+hidrografia:regimen-de-laguna
+      a       owl:NamedIndividual , skos:ConceptScheme ;
+      rdfs:comment """puede tomar los valores:
+* http://geo.linkeddata.es/kos/hidrografia/regimen-de-laguna/permanete
+* http://geo.linkeddata.es/kos/hidrografia/regimen-de-laguna/no-permanente"""@es ;
+      skos:prefLabel "régimen de laguna"@es .
+
+electrificacion:electrificado
+      a       owl:NamedIndividual , skos:Concept ;
+      rdfs:comment "Indica que una vía está electrificada"@es ;
+      skos:inScheme transportes:electrificacion ;
+      skos:prefLabel "electrificado"@es .
+
 ontology:competenciaDeVia
       a       owl:ObjectProperty ;
       rdfs:comment "competencia de la explotación de una vía"@es ;
@@ -479,13 +450,10 @@ ontology:competenciaDeVia
       rdfs:range
               [ a       owl:Class ;
                 owl:intersectionOf (skos:Concept [ a       owl:Restriction ;
-                            owl:hasValue transportes:competenciaDeVia ;
+                            owl:hasValue transportes:competencia-de-via ;
                             owl:onProperty skos:inScheme
                           ])
               ] .
-
-[]    a       owl:AllDifferent ;
-      owl:distinctMembers (electrificacion:electrificado electrificacion:noElectrificado) .
 
 ontology:AguasSuperficiales
       a       owl:Class ;
@@ -499,12 +467,12 @@ ontology:AguasSuperficiales
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:onProperty ontology:es_transvasada ;
+                owl:onProperty ontology:es_distribuida ;
                 owl:someValuesFrom ontology:CanalAguasContinentales
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:onProperty ontology:es_distribuida ;
+                owl:onProperty ontology:es_transvasada ;
                 owl:someValuesFrom ontology:CanalAguasContinentales
               ] ;
       ontology:provenance "Directiva Marco del Agua. Union Europea"^^xsd:string ;
@@ -513,11 +481,6 @@ ontology:AguasSuperficiales
               [ a       owl:Class ;
                 owl:unionOf (ontology:AguasCorrientes ontology:AguasDeTransicion ontology:AguasQuietas ontology:Surgencia)
               ] .
-
-regimenDeLaguna:permanente
-      a       owl:NamedIndividual , skos:Concept ;
-      skos:inScheme hydro:regimenDeLaguna ;
-      skos:prefLabel "permanente"@es .
 
 ontology:Desague
       a       owl:Class ;
@@ -546,6 +509,12 @@ ontology:Fuente
       rdfs:subClassOf ontology:Recinto ;
       dc:source "Vazquez Maure F.; Martin Lopez J. (1987) Vocabulario de terminos geograficos. Ed. Ministerio de Obras Publicas y Urbanismo. Instituto Geografico"^^xsd:string .
 
+hidrografia:categoria-de-isla
+      a       owl:NamedIndividual , skos:ConceptScheme ;
+      rdfs:comment """Puede tomar los valores:
+* http://geo.linkeddata.es/kos/hidrografia/categoria-de-isla/principal"""@es ;
+      skos:prefLabel "categoría de isla"@es .
+
 ontology:Aluvion
       a       owl:Class ;
       rdfs:comment "Suelo formado por acumulacion de detritos, tales como lodos, gravas, guijarros y arenas, depositados por las aguas en desembocaduras y cauces de los rios y arroyos"@es ;
@@ -553,16 +522,16 @@ ontology:Aluvion
       rdfs:subClassOf ontology:Morfologia ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
+                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onProperty ontology:estaEn
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
                 owl:allValuesFrom
                         [ a       owl:Class ;
                           owl:unionOf (ontology:Arroyo ontology:Rio)
                         ] ;
                 owl:onProperty ontology:parte_de
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:cardinality "1"^^xsd:nonNegativeInteger ;
-                owl:onProperty ontology:estaEn
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
@@ -582,10 +551,18 @@ ontology:tipoDeItinerario
       rdfs:range
               [ a       owl:Class ;
                 owl:intersectionOf (skos:Concept [ a       owl:Restriction ;
-                            owl:hasValue transportes:tipoDeItinerario ;
+                            owl:hasValue transportes:tipo-de-itinerario ;
                             owl:onProperty skos:inScheme
                           ])
               ] .
+
+transportes:tipo-de-trafico
+      a       owl:NamedIndividual , skos:ConceptScheme ;
+      rdfs:comment """kos que indica el tipo de tráfico que lleva un ferrocarril. Pueden ser
+* http://geo.linkeddata.es/kos/transporters/tipoDeTrafico/viajeros
+* http://geo.linkeddata.es/kos/transporters/tipoDeTrafico/mercancias
+* http://geo.linkeddata.es/kos/transporters/tipoDeTrafico/mixto"""@es ;
+      skos:prefLabel "tipo de tráfico"@es .
 
 ontology:Apartadero
       a       owl:Class ;
@@ -602,6 +579,9 @@ ontology:EstacionInvernal
               [ a       owl:Class ;
                 owl:intersectionOf (ontology:Alojamiento ontology:LugarDeOcio)
               ] .
+
+[]    a       owl:AllDifferent ;
+      owl:distinctMembers (acceso:libre acceso:peaje) .
 
 ontology:PuertoDeMontanna
       a       owl:Class ;
@@ -624,6 +604,11 @@ ontology:CanalAguasMarinas
                             owl:onProperty ontology:conduce
                           ])
               ] .
+
+categoria-vial:tercer-orden
+      a       owl:NamedIndividual , skos:Concept ;
+      skos:inScheme transportes:categoria-vial ;
+      skos:prefLabel "categoría vial de tercer orden"@es .
 
 ontology:Paul
       a       owl:Class ;
@@ -649,7 +634,7 @@ ontology:anchoDeVia
       rdfs:range
               [ a       owl:Class ;
                 owl:intersectionOf (skos:Concept [ a       owl:Restriction ;
-                            owl:hasValue transportes:anchoDeVia ;
+                            owl:hasValue transportes:ancho-de-via ;
                             owl:onProperty skos:inScheme
                           ])
               ] .
@@ -734,6 +719,9 @@ ontology:ZonaUniversitaria
       rdfs:label "Zona universitaria"@es ;
       rdfs:subClassOf ontology:ZonaDeUsoCaracteristico .
 
+[]    a       owl:AllDifferent ;
+      owl:distinctMembers (estado-de-uso:abandonado estado-de-uso:en-construccion estado-de-uso:en-uso) .
+
 ontology:volumen_de_extraccion
       a       owl:DatatypeProperty ;
       rdfs:domain ontology:Acuifero ;
@@ -817,15 +805,6 @@ ontology:Estuario
       rdfs:subClassOf ontology:AguasDeTransicion ;
       dc:source "Vazquez Maure F.; Martin Lopez J. (1987) Vocabulario de terminos geograficos. Ed. Ministerio de Obras Publicas y Urbanismo. Instituto Geografico Nacional. Madrid. ISBN: 84-505-4929-9 & WordNet"^^xsd:string .
 
-[]    a       owl:AllDifferent ;
-      owl:distinctMembers (estadoDeUso2:abandonado estadoDeUso2:enConstruccion estadoDeUso2:enUso) .
-
-anchoDeVia:iberico
-      a       owl:NamedIndividual , skos:Concept ;
-      rdfs:comment " ancho ibérico (1.668 mm)"@es ;
-      skos:inScheme transportes:anchoDeVia ;
-      skos:prefLabel "ancho de vía ibérico"@es .
-
 ontology:BaseAerea
       a       owl:Class ;
       rdfs:comment "Aeropuerto militar donde las fuerzas aéreas, con el apoyo de instalaciones logísticas adecuadas, se preparan para el vuelo y el combate."@es ;
@@ -838,18 +817,23 @@ ontology:ExplotacionMinera
       rdfs:label "Explotación minera"@es ;
       rdfs:subClassOf geosparql:Feature .
 
-btn100:hidrografia
+<http://geo.linkeddata.es/kos/btn100/hidrografia>
       a       owl:NamedIndividual , skos:Concept ;
-      skos:inScheme kos:btn100 ;
+      skos:inScheme <http://geo.linkeddata.es/kos/btn100> ;
       skos:notation "03" ;
       skos:prefLabel "hidrografía"@es .
 
-transportes:competenciaPortuaria
-      a       owl:NamedIndividual , skos:ConceptScheme ;
-      rdfs:comment """Esquema de conceptos para definir el tipo la competencia de explotación de un puerto
-puede tomar los valores:
-* http://geo.linkeddata.es/kos/transports/competenciaPortuaria/estatal"""@es ;
-      skos:prefLabel "competencia portuaria"@es .
+ancho-de-via:iberico
+      a       owl:NamedIndividual , skos:Concept ;
+      rdfs:comment " ancho ibérico (1.668 mm)"@es ;
+      skos:inScheme transportes:ancho-de-via ;
+      skos:prefLabel "ancho de vía ibérico"@es .
+
+ruta-ten-t:ruta-no-transeuropea
+      a       owl:NamedIndividual , skos:Concept ;
+      rdfs:comment "El tramo forma parte de la Red Transeuropea de Transporte"@es ;
+      skos:inScheme transportes:ruta-ten-t ;
+      skos:prefLabel "ruta no transeuropea"@es .
 
 ontology:FenomenoTopografico
       a       owl:Class ;
@@ -876,11 +860,6 @@ ontology:CuencaHidrografica
       rdfs:subClassOf geosparql:Feature ;
       dc:source "Cuenca fluvial - Glosario Hidrologico Internacional. UNESCO"^^xsd:string , "Fontanillo, E. (1986) Diccionario de Geografia. Ed. Anaya. Madrid."^^xsd:string .
 
-situacion:subterraneo
-      a       owl:NamedIndividual , skos:Concept ;
-      skos:inScheme supply-net:situacion ;
-      skos:prefLabel "subterráneo"@es .
-
 ontology:geometria
       a       owl:DatatypeProperty ;
       rdfs:domain ontology:FenomenoHidrografico , ontology:Morfologia , ontology:CuencaHidrografica .
@@ -903,8 +882,16 @@ ontology:Rio
       rdfs:subClassOf ontology:AguasCorrientesNaturales ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:onProperty ontology:es_almacenado_en ;
-                owl:someValuesFrom ontology:Embalse
+                owl:onProperty ontology:es_alimentada_por ;
+                owl:someValuesFrom
+                        [ a       owl:Class ;
+                          owl:unionOf (ontology:Glaciar ontology:Manantial ontology:MasaDeHielo)
+                        ]
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom ontology:Captacion ;
+                owl:onProperty ontology:es_capturado
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
@@ -920,14 +907,9 @@ ontology:Rio
                 owl:someValuesFrom ontology:Lago
               ] ;
       rdfs:subClassOf
-              [ a       owl:Class ;
-                owl:intersectionOf ([ a       owl:Restriction ;
-                            owl:allValuesFrom ontology:Nacimiento ;
-                            owl:onProperty ontology:es_originado_por
-                          ] [ a       owl:Restriction ;
-                            owl:cardinality "1"^^xsd:nonNegativeInteger ;
-                            owl:onProperty ontology:es_originado_por
-                          ])
+              [ a       owl:Restriction ;
+                owl:onProperty ontology:es_almacenado_en ;
+                owl:someValuesFrom ontology:Embalse
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
@@ -936,21 +918,13 @@ ontology:Rio
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:onProperty ontology:es_alimentada_por ;
-                owl:someValuesFrom
-                        [ a       owl:Class ;
-                          owl:unionOf (ontology:Glaciar ontology:Manantial ontology:MasaDeHielo)
-                        ]
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
                 owl:allValuesFrom ontology:AguasCorrientesNaturales ;
                 owl:onProperty ontology:tiene_afluente
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom ontology:Captacion ;
-                owl:onProperty ontology:es_capturado
+                owl:onProperty ontology:estaEn ;
+                owl:someValuesFrom ontology:Barranco
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
@@ -958,9 +932,14 @@ ontology:Rio
                 owl:someValuesFrom ontology:CorrienteSubterranea
               ] ;
       rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:onProperty ontology:estaEn ;
-                owl:someValuesFrom ontology:Barranco
+              [ a       owl:Class ;
+                owl:intersectionOf ([ a       owl:Restriction ;
+                            owl:allValuesFrom ontology:Nacimiento ;
+                            owl:onProperty ontology:es_originado_por
+                          ] [ a       owl:Restriction ;
+                            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onProperty ontology:es_originado_por
+                          ])
               ] ;
       ontology:provenance "Curso de agua principal - Catalogo de fenomenos. Proyecto GEOALEX"@es , "Río - Directiva Marco del Agua. Union Europea"@es , "River - Water Framework Directive. European Union"@en ;
       dc:source "Water Framework Directive. European Union"@en ;
@@ -1002,7 +981,7 @@ ontology:tipoDeTramo
       rdfs:range
               [ a       owl:Class ;
                 owl:intersectionOf (skos:Concept [ a       owl:Restriction ;
-                            owl:hasValue transportes:tipoDeTramo ;
+                            owl:hasValue transportes:tipo-de-tramo ;
                             owl:onProperty skos:inScheme
                           ])
               ] .
@@ -1045,7 +1024,7 @@ ontology:categoriaDeCurvaDeNivel
       rdfs:range
               [ a       owl:Class ;
                 owl:intersectionOf (skos:Concept [ a       owl:Restriction ;
-                            owl:hasValue geodesy:categoriaDeCurvaDeNivel ;
+                            owl:hasValue geodesia:categoria-de-curva-de-nivel ;
                             owl:onProperty skos:inScheme
                           ])
               ] .
@@ -1079,26 +1058,17 @@ wgs84_pos:lat_long
       rdfs:comment "A comma-separated representation of a latitude, longitude coordinate." ;
       rdfs:label "lat/long" .
 
+competencia-portuaria:estatal
+      a       owl:NamedIndividual , skos:Concept ;
+      skos:inScheme transportes:competencia-portuaria ;
+      skos:prefLabel "competencia portuaria estatal"@es .
+
 ontology:ConduccionDeCombustible
       a       owl:Class ;
       rdfs:comment "Tubería e instalaciones conexas utilizadas para el transporte de combustibles."@es ;
       rdfs:label "Conducción de combustible"@es ;
       rdfs:subClassOf geosparql:Feature ;
       terms:source "Anexo A: Catálogo de Objetos Geográficos de BTN100."@es .
-
-estadoDeUso:enConstruccion
-      a       owl:NamedIndividual , skos:Concept ;
-      rdfs:comment "indica que está en construcción o en obras"@es ;
-      skos:inScheme population-buildings:estadoDeUso ;
-      skos:prefLabel "en construcción"@es .
-
-situacion:superficial
-      a       owl:NamedIndividual , skos:Concept ;
-      skos:inScheme supply-net:situacion ;
-      skos:prefLabel "superficial"@es .
-
-[]    a       owl:AllDifferent ;
-      owl:distinctMembers (acceso:libre acceso:peaje) .
 
 ontology:es_alimentada_por
       a       owl:ObjectProperty ;
@@ -1151,10 +1121,10 @@ ontology:Galacho
 
 <http://geo.linkeddata.es/ontology/btn100.owl>
       a       owl:Ontology ;
-      rdfs:comment ""@en , "Ontología global de dominio sobre fenómenos topográficos y geodesia"@es , "Ontología global de dominio sobre fenómenos hidrográficos"@es , "Ontología global de dominio sobre redes de conducciones y energía"@es , "Ontología global de dominio sobre  poblaciones y construcciones"@es , "ontología globlal de dominio de redes de suministro de energía. "@es ;
-      dc:creator "Luis Manuel Vilches-Blázquez"^^xsd:string , "Lissete Moscoso"^^xsd:string , "Lissete Moscoso León"^^xsd:string ;
+      rdfs:comment ""@en , "Ontología global de del catálogo btn100"@es ;
+      dc:creator "Luis Manuel Vilches-Blázquez"^^xsd:string , "Lissete Moscoso León"^^xsd:string ;
       dc:publisher "Ontology Engineering Group"@en ;
-      dc:title "populationBuildingsOntology"^^xsd:string , "suply-netOntology"^^xsd:string , "hydrOntology"^^xsd:string , "geodesyOntology"^^xsd:string ;
+      dc:title "btn100Ontology"^^xsd:string ;
       owl:imports <http://www.w3.org/2004/02/skos/core> , <http://www.opengis.net/ont/geosparql> ;
       owl:versionInfo "v0.2"^^xsd:string .
 
@@ -1200,11 +1170,11 @@ ontology:Abrevadero
       rdfs:subClassOf ontology:Deposito ;
       dc:source "Elaboración propia"@es .
 
-categoriaDeCurvaDeNivel:curvaDeNivelMaestra
+categoria-de-isla:principal
       a       owl:NamedIndividual , skos:Concept ;
-      rdfs:comment "Curva de nivel con altitud múltiplo de 100 m."@es ;
-      rdfs:label "curva de nivel maestra"@es ;
-      skos:inScheme geodesy:categoriaDeCurvaDeNivel .
+      rdfs:comment "Indica que una isla es importante desde el punto de vista cartográfico"@es ;
+      skos:inScheme hidrografia:categoria-de-isla ;
+      skos:prefLabel "principal"@es .
 
 ontology:MarTerritorial
       a       owl:Class ;
@@ -1218,12 +1188,6 @@ ontology:MarTerritorial
               ] ;
       ontology:provenance "Catalogo de objetos de Colombia"^^xsd:string ;
       dc:source "Decreto Ley 2324/84 Convenio Internacional sobre derecho del mar \"CONVEMAR\". 1992 & Diez de Velasco, Manuel (1999) Instituciones de derecho internacional publico. Duodecima edicion. Madrid: Tecnos. 924 p. ISBN: 84-309-3446-4"^^xsd:string .
-
-btn100:unidadesAdministrativasYZonasProtegidas
-      a       owl:NamedIndividual , skos:Concept ;
-      skos:inScheme kos:btn100 ;
-      skos:notation "01" ;
-      skos:prefLabel "unidades administrativas y zonas protegidas"@es .
 
 ontology:Ramal
       a       owl:Class ;
@@ -1252,16 +1216,6 @@ ontology:Arroyo
                         ]
               ] ;
       rdfs:subClassOf
-              [ a       owl:Class ;
-                owl:intersectionOf ([ a       owl:Restriction ;
-                            owl:onProperty ontology:es_almacenado_en ;
-                            owl:someValuesFrom ontology:Embalse
-                          ] [ a       owl:Restriction ;
-                            owl:cardinality "1"^^xsd:nonNegativeInteger ;
-                            owl:onProperty ontology:es_almacenado_en
-                          ])
-              ] ;
-      rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom ontology:AguasCorrientesNaturales ;
                 owl:onProperty ontology:tiene_afluente
@@ -1279,6 +1233,16 @@ ontology:Arroyo
                             owl:onProperty ontology:es_originado_por
                           ])
               ] ;
+      rdfs:subClassOf
+              [ a       owl:Class ;
+                owl:intersectionOf ([ a       owl:Restriction ;
+                            owl:onProperty ontology:es_almacenado_en ;
+                            owl:someValuesFrom ontology:Embalse
+                          ] [ a       owl:Restriction ;
+                            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onProperty ontology:es_almacenado_en
+                          ])
+              ] ;
       ontology:provenance "Curso de agua secundario - Catalogo de fenomenos. Proyecto GEOALEX"^^xsd:string ;
       dc:source "Vazquez Maure F.; Martin Lopez J. (1987) Vocabulario de terminos geograficos. Ed. Ministerio de Obras Publicas y Urbanismo. Instituto Geografico Nacional. Madrid. ISBN: 84-505-4929-9."^^xsd:string .
 
@@ -1287,6 +1251,16 @@ ontology:ZonaMilitar
       rdfs:comment "Zona reservada para fines de la defensa nacional o de las bases ofensivas que en cada territorio se instalen."@es ;
       rdfs:label "Zona militar"@es ;
       rdfs:subClassOf ontology:ZonaDeUsoCaracteristico .
+
+hidrografia:categoria-de-rio
+      a       owl:NamedIndividual , skos:ConceptScheme ;
+      rdfs:comment """categorización de un río. Puede tomar los valores:
+* http://geo.linkeddata.es/kos/hidrografia/categoria-de-rio/rio-principal
+* http://geo.linkeddata.es/kos/hidrografia/categoria-de-rio/rio-secundario
+* http://geo.linkeddata.es/kos/hidrografia/categoria-de-rio/rio-terceario
+* http://geo.linkeddata.es/kos/hidrografia/categoria-de-rio/rio-de-menor-interes
+"""@es ;
+      skos:prefLabel "categoría de río"@es .
 
 ontology:capacidad
       a       owl:DatatypeProperty ;
@@ -1301,7 +1275,7 @@ ontology:regimenDeLaguna
       rdfs:range
               [ a       owl:Class ;
                 owl:intersectionOf (skos:Concept [ a       owl:Restriction ;
-                            owl:hasValue hydro:regimenDeLaguna ;
+                            owl:hasValue hidrografia:regimen-de-laguna ;
                             owl:onProperty skos:inScheme
                           ])
               ] .
@@ -1312,11 +1286,6 @@ ontology:IslaMaritima
       rdfs:label "Isla marítima"@es ;
       rdfs:subClassOf ontology:Isla ;
       dc:source "Catálogo de Objetos Geográficos BTN100"@es .
-
-estadoDeUso:enUso
-      a       owl:NamedIndividual , skos:Concept ;
-      skos:inScheme population-buildings:estadoDeUso ;
-      skos:prefLabel "en uso"@es .
 
 ontology:nombre_alternativo
       a       owl:DatatypeProperty ;
@@ -1340,10 +1309,16 @@ ontology:CanalAguasContinentales
                           ])
               ] .
 
-categoriaVial:tercerOrden
+acceso:libre
       a       owl:NamedIndividual , skos:Concept ;
-      skos:inScheme transportes:categoriaVial ;
-      skos:prefLabel "categoría vial de tercer orden"@es .
+      rdfs:comment "indica si la via es de acceso libre"@es ;
+      skos:inScheme transportes:acceso ;
+      skos:prefLabel "acceso libre"@es .
+
+categoria-de-rio:rio-terceario
+      a       owl:NamedIndividual , skos:Concept ;
+      skos:inScheme hidrografia:categoria-de-rio ;
+      skos:prefLabel "río de interés terceario"@es .
 
 ontology:Humedal
       a       owl:Class ;
@@ -1364,14 +1339,12 @@ ontology:PasoANivel
       rdfs:subClassOf geosparql:Feature ;
       terms:source "Anexo A: Catálogo de Objetos Geográficos de BTN100."@es .
 
-transportes:tipoDeItinerario
-      a       owl:NamedIndividual , skos:ConceptScheme ;
-      rdfs:comment """Esquema de conceptos para definir si el tramo de una vía pertenece a la red de carreteras europeas
-puede tomar los valores:
-
-* http://geo.linkeddata.es/kos/transports/tipoDeItinerario/itinerarioEuropeo
-* http://geo.linkeddata.es/kos/transports/tipoDeItinerario/itinerarioNoEuropeo"""@es ;
-      skos:prefLabel "tipo de itinerario"@es .
+numero-de-vias:doble
+      a       owl:NamedIndividual , skos:Concept ;
+      rdfs:comment "Cada vía se dedica para la marcha de los trenes en un sentido"@es ;
+      owl:sameAs numero-de-vias:unica ;
+      skos:inScheme transportes:numero-de-vias ;
+      skos:prefLabel "vía doble"@es .
 
 ontology:es_capturado
       a       owl:ObjectProperty ;
@@ -1408,12 +1381,6 @@ ontology:Telesilla
       rdfs:label "Telesilla"@es ;
       rdfs:subClassOf ontology:TransporteSuspendido ;
       terms:source "Diccionario de la Real Academia Española."@es .
-
-tipoDeCalzada:doble
-      a       owl:NamedIndividual , skos:Concept ;
-      rdfs:comment "Dos calzadas separadas y paralelas, con sentidos distintos. "@es ;
-      skos:inScheme transportes:tipoDeCalzada ;
-      skos:prefLabel "calzada doble"@es .
 
 ontology:AguasQuietasNaturales
       a       owl:Class ;
@@ -1463,7 +1430,7 @@ ontology:componenteDeTelecomunicacion
       rdfs:range
               [ a       owl:Class ;
                 owl:intersectionOf (skos:Concept [ a       owl:Restriction ;
-                            owl:hasValue supply-net:tipoDeComponente ;
+                            owl:hasValue red-de-suministro:tipo-de-componente ;
                             owl:onProperty skos:inScheme
                           ])
               ] .
@@ -1522,10 +1489,13 @@ ontology:vertiente
       a       owl:DatatypeProperty ;
       rdfs:domain ontology:Aguas .
 
-categoriaVial:primerOrden
-      a       owl:NamedIndividual , skos:Concept ;
-      skos:inScheme transportes:categoriaVial ;
-      skos:prefLabel "categoría vial de primer orden"@es .
+transportes:acceso
+      a       owl:NamedIndividual , skos:ConceptScheme ;
+      rdfs:comment """Esquema de conceptos para definir el tipo de acceso de una vía
+puede tomar los valores:
+* http://geo.linkeddata.es/kos/transportes/acceso/libre
+* http://geo.linkeddata.es/kos/transportes/acceso/peaje"""@es ;
+      skos:prefLabel "acceso"@es .
 
 ontology:es_inundada_por
       a       owl:ObjectProperty ;
@@ -1538,18 +1508,6 @@ ontology:es_inundada_por
                 owl:unionOf (ontology:AguasCorrientesNaturales ontology:AguasCosteras ontology:AguasMarinas ontology:AguasQuietasNaturales ontology:AguasSubterraneas ontology:AguasSuperficiales ontology:Embalse ontology:Laguna ontology:Rio)
               ] ;
       owl:inverseOf ontology:inunda .
-
-tipoDeCalzada:convencional
-      a       owl:NamedIndividual , skos:Concept ;
-      rdfs:comment "Única calzada con doble sentido de circulación."@es ;
-      skos:inScheme transportes:tipoDeCalzada ;
-      skos:prefLabel "calzada convencional"@es .
-
-categoriaDeIsla:principal
-      a       owl:NamedIndividual , skos:Concept ;
-      rdfs:comment "Indica que una isla es importante desde el punto de vista cartográfico"@es ;
-      skos:inScheme hydro:categoriaDeIsla ;
-      skos:prefLabel "principal"@es .
 
 ontology:ZonaDeportiva
       a       owl:Class ;
@@ -1573,14 +1531,6 @@ ontology:transvasa
       rdfs:domain ontology:CanalAguasContinentales ;
       rdfs:range ontology:AguasSuperficiales ;
       rdfs:subPropertyOf ontology:conduce .
-
-transportes:rutaTenT
-      a       owl:NamedIndividual , skos:ConceptScheme ;
-      rdfs:comment """Esquema de conceptos que indica si el tramo de vía pertenece a la Red Transeuropea de Transporte (TEN-T)
-puede tomar los valores:
-* http://geo.linkeddata.es/kos/transports/rutaTenT/rutaTranseuropea
-* http://geo.linkeddata.es/kos/transports/rutaTenT/rutaNoTranseuropea"""@es ;
-      skos:prefLabel "ruta TEN-T"@es .
 
 ontology:nombre
       a       owl:DatatypeProperty ;
@@ -1616,11 +1566,21 @@ ontology:Delta
       ontology:provenance "Alexandria Digital Library (ADL) Feature Type Thesaurus"@en ;
       dc:source "Diccionario de la Real Academia Española"@es .
 
+regimen-de-laguna:permanente
+      a       owl:NamedIndividual , skos:Concept ;
+      skos:inScheme hidrografia:regimen-de-laguna ;
+      skos:prefLabel "permanente"@es .
+
 ontology:Carretera
       a       owl:Class ;
       rdfs:comment "Camino público, ancho y espacioso, pavimentado y dispuesto para el tránsito de vehículos."@es ;
       rdfs:label "Carretera"@es , "Road"@en ;
       rdfs:subClassOf geosparql:Feature .
+
+tipo-de-componente:emisor
+      a       owl:NamedIndividual , skos:Concept ;
+      skos:inScheme red-de-suministro:tipo-de-componente ;
+      skos:prefLabel "emisor"@es .
 
 ontology:volumen
       a       owl:DatatypeProperty ;
@@ -1789,17 +1749,9 @@ ontology:CurvaDeNivel
       rdfs:label "CurvaDeNivel"@es ;
       rdfs:subClassOf ontology:FenomenoTopografico .
 
-btn100:puntosDeControl
-      a       owl:NamedIndividual , skos:Concept ;
-      skos:inScheme kos:btn100 ;
-      skos:notation "10" ;
-      skos:prefLabel "puntos de control"@es .
-
 ontology:situacion
-      a       owl:DatatypeProperty , owl:ObjectProperty ;
-      rdfs:comment "indica la posición del tramo sobre la superficie"@es ;
-      rdfs:domain ontology:ConduccionDeCombustible , ontology:AguasQuietasArtificiales ;
-      rdfs:label "situación"@es ;
+      a       owl:DatatypeProperty ;
+      rdfs:domain ontology:AguasQuietasArtificiales ;
       rdfs:range
               [ a       rdfs:Datatype ;
                 owl:oneOf
@@ -1819,13 +1771,6 @@ ontology:situacion
                                             ]
                                   ]
                         ]
-              ] ;
-      rdfs:range
-              [ a       owl:Class ;
-                owl:intersectionOf (skos:Concept [ a       owl:Restriction ;
-                            owl:hasValue supply-net:situacion ;
-                            owl:onProperty skos:inScheme
-                          ])
               ] .
 
 ontology:Vado
@@ -1913,11 +1858,6 @@ ontology:tipologia_de_cobertura
                         ]
               ] .
 
-estadoDeUso2:enUso
-      a       owl:NamedIndividual , skos:Concept ;
-      skos:inScheme transportes:estadoDeUso ;
-      skos:prefLabel "en uso"@es .
-
 ontology:VistaPanoramica
       a       owl:Class ;
       rdfs:comment "Es la que muestra un panorama usualmente paisajístico o arquitectónico, y que se distingue por el amplio horizonte visual que cubre."@es ;
@@ -1944,9 +1884,9 @@ ontology:origen_formacion
                         ]
               ] .
 
-btn100:transportes
+<http://geo.linkeddata.es/kos/btn100/transportes>
       a       owl:NamedIndividual , skos:Concept ;
-      skos:inScheme kos:btn100 ;
+      skos:inScheme <http://geo.linkeddata.es/kos/btn100> ;
       skos:notation "06" ;
       skos:prefLabel "transportes"@es .
 
@@ -1981,10 +1921,11 @@ ontology:Lavajo
       rdfs:subClassOf ontology:Charca ;
       dc:source "Vazquez Maure F.; Martin Lopez J. (1987) Vocabulario de terminos geograficos. Ed. Ministerio de Obras Publicas y Urbanismo. Instituto Geografico Nacional. Madrid. ISBN: 84-505-4929-9 & Diccionario de la Real Academia Espannola"@es .
 
-categoriaDeRio:rioDeMenorInteres
+estado-de-uso:en-construccion
       a       owl:NamedIndividual , skos:Concept ;
-      skos:inScheme hydro:categoriaDeRio ;
-      skos:prefLabel "río de menor interes"@es .
+      rdfs:comment "indica que está en construcción o en obras"@es ;
+      skos:inScheme transportes:estado-de-uso ;
+      skos:prefLabel "en construcción"@es .
 
 ontology:altitudElipsoidal
       a       owl:DatatypeProperty ;
@@ -2023,6 +1964,12 @@ ontology:Acuitardo
       ontology:provenance "Glosario Hidrologico Internacional - UNESCO"^^xsd:string ;
       dc:source "Glosario Hidrologico Internacional - UNESCO"^^xsd:string .
 
+competencia-aeroportuaria:privada
+      a       owl:NamedIndividual , skos:Concept ;
+      rdfs:comment "competencia aeroportuaria de explotación privada"@es ;
+      skos:inScheme transportes:competencia-aeroportuaria ;
+      skos:prefLabel "privada"@es .
+
 ontology:Apeadero
       a       owl:Class ;
       rdfs:comment "Son dependencias con servicio exclusivo para la subida y bajada de viajeros. Son muy habituales en los grandes núcleos de población, y no tienen personal."@es , "En los ferrocarriles, sitio de la vía preparado para el servicio público, pero sin apartadero ni los demás accesorios de una estación."@es ;
@@ -2037,16 +1984,16 @@ ontology:Madre
       rdfs:subClassOf ontology:Acequia ;
       dc:source "Diccionario de la Real Academia Espannola"^^xsd:string .
 
-electrificacion:noElectrificado
+tipo-de-itinerario:itinerario-europeo
       a       owl:NamedIndividual , skos:Concept ;
-      rdfs:comment "Indica que una vía no está electrificada"@es ;
-      skos:inScheme transportes:electrificacion ;
-      skos:prefLabel "no electrificado"@es .
+      rdfs:comment "indica que el tramo de vía pertenece a la Red de Carreteras Europeas"@es ;
+      skos:inScheme transportes:tipo-de-itinerario ;
+      skos:prefLabel "itinerario europeo"@es .
 
-capital:nacion
+tipo-de-trafico:mercancias
       a       owl:NamedIndividual , skos:Concept ;
-      skos:inScheme capital:tipoDeCapital ;
-      skos:prefLabel "capital de nación"@es .
+      skos:inScheme transportes:tipo-de-trafico ;
+      skos:prefLabel "tráfico de mercancías"@es .
 
 ontology:Estanque
       a       owl:Class ;
@@ -2062,8 +2009,17 @@ ontology:Caz
       rdfs:subClassOf ontology:Acequia ;
       dc:source "Diccionario de la Real Academia Espannola"^^xsd:string .
 
-[]    a       owl:AllDifferent ;
-      owl:distinctMembers (situacion:elevado situacion:subterraneo situacion:superficial) .
+geodesia:categoria-de-curva-de-nivel
+      a       owl:NamedIndividual , skos:ConceptScheme ;
+      rdfs:comment """skos para categoria de curva de nivel.
+Puede tomar los valores:
+* http://geo.linkeddata.es/kos/geodesia/categoria-de-curva-de-nivel/curva-de-nivel-generica
+* http://geo.linkeddata.es/kos/geodesia/categoria-de-curva-de-nivel/curva-de-nivel-interpolada
+* http://geo.linkeddata.es/kos/geodesia/categoria-de-curva-de-nivel/curva-de-nivel-maestra
+* http://geo.linkeddata.es/kos/geodesia/categoria-de-curva-de-nivel/depresion-generica
+* http://geo.linkeddata.es/kos/geodesia/categoria-de-curva-de-nivel/depresion-maestra
+"""@es ;
+      skos:prefLabel "categoría de curva de nivel"@es .
 
 ontology:EstacionDeAutobuses
       a       owl:Class ;
@@ -2077,11 +2033,25 @@ ontology:Colector
       rdfs:subClassOf ontology:Conducto ;
       dc:source "Diccionario de la Real Academia Española"@es .
 
+transportes:numero-de-vias
+      a       owl:NamedIndividual , skos:ConceptScheme ;
+      rdfs:comment """Esquema de conceptos para definir el número de vias
+puede tomar los valores:
+* http://geo.linkeddata.es/kos/transportes/numero-de-vias/doble
+* http://geo.linkeddata.es/kos/transportes/numero-de-vias/unica"""@es ;
+      skos:prefLabel "número de vías"@es .
+
 ontology:EstacionDeTelecomunicacion
       a       owl:Class ;
       rdfs:comment "Centro que consta de todas las instalaciones necesarias para transmitir y recibir señales que aseguren un servicio de radiotelecomunicación determinado."@es ;
       rdfs:label "Estación de telecomunicación"@es ;
       rdfs:subClassOf geosparql:Feature .
+
+electrificacion:no-electrificado
+      a       owl:NamedIndividual , skos:Concept ;
+      rdfs:comment "Indica que una vía no está electrificada"@es ;
+      skos:inScheme transportes:electrificacion ;
+      skos:prefLabel "no electrificado"@es .
 
 ontology:estaEn
       a       owl:ObjectProperty ;
@@ -2103,6 +2073,12 @@ ontology:CentralCicloCombinado
 """@es ;
       rdfs:label "Central de ciclo combinado"@es ;
       rdfs:subClassOf ontology:CentralElectrica .
+
+tipo-de-calzada:sentido-unico
+      a       owl:NamedIndividual , skos:Concept ;
+      rdfs:comment "Calzada de sentido único no contigua a la del contrario."@es ;
+      skos:inScheme transportes:tipo-de-calzada ;
+      skos:prefLabel "calzada de sentido único"@es .
 
 ontology:salinidad
       a       owl:DatatypeProperty ;
@@ -2141,12 +2117,6 @@ ontology:ineCode
                         ([ xsd:length 11
                           ])
               ] .
-
-categoriaDeCurvaDeNivel2:depresionGenerica
-      a       owl:NamedIndividual , skos:Concept ;
-      rdfs:comment "Curva que define una concavidad del terreno cada 20 m."@es ;
-      rdfs:label "depresión genérica"@es ;
-      skos:inScheme geodesy:categoriaDeCurvaDeNivel .
 
 ontology:Tuberia
       a       owl:Class ;
@@ -2189,6 +2159,11 @@ ontology:recarga_natural
       rdfs:domain ontology:AguasSubterraneas ;
       rdfs:range xsd:string .
 
+regimen-de-laguna:no-permanente
+      a       owl:NamedIndividual , skos:Concept ;
+      skos:inScheme hidrografia:regimen-de-laguna ;
+      skos:prefLabel "no permanente"@es .
+
 ontology:ParadorNacional
       a       owl:Class ;
       rdfs:comment "Conjunto de hoteles de alta categoría distribuidos por toda España, localizados en edificios emblemáticos o emplazamientos destacables que han sido seleccionados por su interés histórico, artístico o cultural."@es ;
@@ -2197,11 +2172,6 @@ ontology:ParadorNacional
               [ a       owl:Class ;
                 owl:intersectionOf (ontology:Alojamiento ontology:LugarDeOcio)
               ] .
-
-situacion:elevado
-      a       owl:NamedIndividual , skos:Concept ;
-      skos:inScheme supply-net:situacion ;
-      skos:prefLabel "elevado"@es .
 
 ontology:ZonaVerde
       a       owl:Class ;
@@ -2222,16 +2192,6 @@ ontology:Invernadero
       rdfs:label "Invernadero"@es ;
       rdfs:subClassOf ontology:ZonaDeUsoCaracteristico .
 
-capital:comunidadAutonoma
-      a       owl:NamedIndividual , skos:Concept ;
-      skos:inScheme capital:tipoDeCapital ;
-      skos:prefLabel "capital de comunida autónoma"@es .
-
-capital:provincia
-      a       owl:NamedIndividual , skos:Concept ;
-      skos:inScheme capital:tipoDeCapital ;
-      skos:prefLabel "capital de provincia"@es .
-
 ontology:AguasCosteras
       a       owl:Class ;
       rdfs:comment """Surface water on the landward side of a line, every point of which is at a distance of one nautical mile on the seaward side from the nearest point of the baseline from which the breadth of territorial
@@ -2240,13 +2200,13 @@ waters is measured, extending where appropriate up to the outer limit of transit
       rdfs:subClassOf ontology:AguasMarinas ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:onProperty ontology:inunda ;
-                owl:someValuesFrom ontology:Estero
+                owl:onProperty ontology:parte_de ;
+                owl:someValuesFrom ontology:Mar
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:onProperty ontology:parte_de ;
-                owl:someValuesFrom ontology:Mar
+                owl:onProperty ontology:inunda ;
+                owl:someValuesFrom ontology:Estero
               ] ;
       dc:source "European Parliament and the Council of the European Union (2000) Directive 2000/60/EC of the European Parliament and of the Council for establishing a framework for Community action in the field of water policy. Brussels, p 72."^^xsd:string , "Parlamento Europeo y Consejo de la Union Europea. (2000) Directiva 2000/60/CE del Parlmento Europeo y del Consejo por la que se establece un marco comunitario de actuacion en el ambito de la politica de aguas. pp 72"^^xsd:string .
 
@@ -2292,6 +2252,12 @@ ontology:AguasQuietas
                 owl:unionOf (ontology:AguasQuietasArtificiales ontology:AguasQuietasNaturales)
               ] .
 
+<http://geo.linkeddata.es/kos/btn100/unidades-administrativas-y-zonas-protegidas>
+      a       owl:NamedIndividual , skos:Concept ;
+      skos:inScheme <http://geo.linkeddata.es/kos/btn100> ;
+      skos:notation "01" ;
+      skos:prefLabel "unidades administrativas y zonas protegidas"@es .
+
 ontology:CarreteraNacional
       a       owl:Class ;
       rdfs:comment "Vía de comunicación dedicada al tráfico rodado, cuya competencia corresponde a la Administración Central del Estado, clasificada como carretera de primer orden por el Ministerio de Fomento (Red de Interés General del Estado)."@es ;
@@ -2300,10 +2266,10 @@ ontology:CarreteraNacional
       rdfs:subClassOf
               [ a       owl:Class ;
                 owl:unionOf ([ a       owl:Restriction ;
-                            owl:hasValue tipoDeCalzada:convencional ;
+                            owl:hasValue tipo-de-calzada:convencional ;
                             owl:onProperty ontology:calzada
                           ] [ a       owl:Restriction ;
-                            owl:hasValue tipoDeCalzada:sentidoUnico ;
+                            owl:hasValue tipo-de-calzada:sentido-unico ;
                             owl:onProperty ontology:calzada
                           ])
               ] .
@@ -2340,6 +2306,11 @@ ontology:Afluente
                             owl:onProperty ontology:es_afluente_de
                           ])
               ] .
+
+tipo-de-capital:provincia
+      a       owl:NamedIndividual , skos:Concept ;
+      skos:inScheme poblaciones-construcciones:tipo-de-capital ;
+      skos:prefLabel "capital de provincia"@es .
 
 ontology:icaoCode
       a       owl:DatatypeProperty ;
@@ -2382,11 +2353,14 @@ ontology:huso
       rdfs:label "huso"@es ;
       rdfs:range xsd:int .
 
-electrificacion:electrificado
-      a       owl:NamedIndividual , skos:Concept ;
-      rdfs:comment "Indica que una vía está electrificada"@es ;
-      skos:inScheme transportes:electrificacion ;
-      skos:prefLabel "electrificado"@es .
+transportes:tipo-de-calzada
+      a       owl:NamedIndividual , skos:ConceptScheme ;
+      rdfs:comment """Esquema de conceptos para definir el número de calzadas y sentido de circulación del tramo de vía.
+puede tomar los valores:
+* http://geo.linkeddata.es/kos/transportes/tipo-de-calzada/doble
+* http://geo.linkeddata.es/kos/transportes/tipo-de-calzada/convencional
+* http://geo.linkeddata.es/kos/transportes/tipo-de-calzada/sentido-unico"""@es ;
+      skos:prefLabel "tipo de calzada"@es .
 
 ontology:IslaFluvial
       a       owl:Class ;
@@ -2424,15 +2398,18 @@ ontology:SurgenciaNatural
       rdfs:subClassOf ontology:Surgencia ;
       dc:source "Lopez Marinas, Juan Manuel; Perron, Mariano (2002) Glosario y Vocabulario espannol, ingles y frances de terminos habituales en geologia aplicada a la ingenieria civil. Madrid: CIE Inversiones Editoriales Dossat 2000. 237 p. ISBN: 84-95312-55-7 & Elaboracion propia"^^xsd:string .
 
-estadoDeUso:abandonado
-      a       owl:NamedIndividual , skos:Concept ;
-      skos:inScheme population-buildings:estadoDeUso ;
-      skos:prefLabel "abandonado"@es .
-
 ontology:long
       a       owl:DatatypeProperty ;
       rdfs:domain ontology:FenomenoHidrografico , ontology:Morfologia , ontology:CuencaHidrografica ;
       rdfs:subPropertyOf ontology:coordenadas .
+
+transportes:estado-de-uso
+      a       owl:NamedIndividual , skos:ConceptScheme ;
+      rdfs:comment """indica el estado de uso. Puede tomar los valores:
+* http://geo.linkeddata.es/kos/transportes/estado-de-uso/en-construccion
+* http://geo.linkeddata.es/kos/transportes/estado-de-uso/en-uso
+* http://geo.linkeddata.es/kos/transportes/estado-de-uso/abandonado"""@es ;
+      skos:prefLabel "estado de uso"@es .
 
 ontology:CentralElectrica
       a       owl:Class ;
@@ -2440,24 +2417,11 @@ ontology:CentralElectrica
       rdfs:label "Central eléctrica"@es ;
       rdfs:subClassOf geosparql:Feature .
 
-[]    a       owl:AllDisjointClasses ;
-      owl:members (ontology:VerticeGeodesicoDeOrdenInferior ontology:VerticeGeodesicoRegcan95 ontology:VerticeGeodesicoRegente) .
-
 ontology:Albufera
       a       owl:Class ;
       rdfs:comment "Laguna litoral, en costa baja, de agua salina o ligeramente salobre, separada del mar por una lengua o cordon de arenas"@es ;
       rdfs:label "Albufera"@es ;
       rdfs:subClassOf ontology:Laguna , ontology:ZonaHumeda , ontology:AguasSaladas ;
-      rdfs:subClassOf
-              [ a       owl:Class ;
-                owl:intersectionOf ([ a       owl:Restriction ;
-                            owl:allValuesFrom ontology:AguasMarinas ;
-                            owl:onProperty ontology:es_alimentada_por
-                          ] [ a       owl:Restriction ;
-                            owl:cardinality "1"^^xsd:nonNegativeInteger ;
-                            owl:onProperty ontology:es_alimentada_por
-                          ])
-              ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:onProperty ontology:es_comunicada_por ;
@@ -2467,6 +2431,16 @@ ontology:Albufera
               [ a       owl:Restriction ;
                 owl:onProperty ontology:esta_proxima_a ;
                 owl:someValuesFrom ontology:AguasMarinas
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Class ;
+                owl:intersectionOf ([ a       owl:Restriction ;
+                            owl:allValuesFrom ontology:AguasMarinas ;
+                            owl:onProperty ontology:es_alimentada_por
+                          ] [ a       owl:Restriction ;
+                            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onProperty ontology:es_alimentada_por
+                          ])
               ] ;
       dc:source "Diccionario de la Real Academia Española"@es .
 
@@ -2481,12 +2455,6 @@ ontology:Poza
                 owl:onProperty ontology:parte_de
               ] ;
       dc:source "Diccionario de la Real Academia Española"@es .
-
-tipoDeItinerario:itinerarioNoEuropeo
-      a       owl:NamedIndividual , skos:Concept ;
-      rdfs:comment "indica que el tramo de vía no pertenece a la Red de Carreteras Europeas"@es ;
-      skos:inScheme transportes:tipoDeItinerario ;
-      skos:prefLabel "itinerario no europeo"@es .
 
 ontology:Geiser
       a       owl:Class ;
@@ -2513,13 +2481,21 @@ ontology:esCapitalDe
               [ a       owl:Class ;
                 owl:unionOf (ontology:Diseminado ontology:NucleoPoblacional)
               ] ;
+      rdfs:label "es capital de"@es ;
       rdfs:range
               [ a       owl:Class ;
                 owl:intersectionOf (skos:Concept [ a       owl:Restriction ;
-                            owl:hasValue capital:tipoDeCapital ;
+                            owl:hasValue poblaciones-construcciones:tipo-de-capital ;
                             owl:onProperty skos:inScheme
                           ])
               ] .
+
+categoria-de-curva-de-nivel:curva-de-nivel-interpolada
+      a       owl:NamedIndividual , skos:Concept ;
+      rdfs:comment """Curva con altitud resultado de un algoritmo de cálculo y no de los
+datos del terreno."""@es ;
+      rdfs:label "curva de nivel interpolada"@es ;
+      skos:inScheme geodesia:categoria-de-curva-de-nivel .
 
 ontology:EstacionDeRadio
       a       owl:Class ;
@@ -2527,19 +2503,11 @@ ontology:EstacionDeRadio
       rdfs:label "Estación de radio"@es ;
       rdfs:subClassOf ontology:EstacionDeTelecomunicacion .
 
-capital:municipio
-      a       owl:NamedIndividual , skos:Concept ;
-      skos:inScheme capital:tipoDeCapital ;
-      skos:prefLabel "capital de municipio"@es .
-
 ontology:captura
       a       owl:ObjectProperty ;
       rdfs:domain ontology:Captacion ;
       rdfs:range ontology:Rio ;
       rdfs:subPropertyOf ontology:conecta_con .
-
-[]    a       owl:AllDifferent ;
-      owl:distinctMembers (rutaTenT:rutaNoTranseuropea rutaTenT:rutaTranseuropea) .
 
 ontology:Efluente
       a       owl:Class ;
@@ -2568,15 +2536,6 @@ ontology:sigueA
               ] ;
       rdfs:subPropertyOf ontology:esta_proxima_a .
 
-categoriaDeCurvaDeNivel:depresionMaestra
-      a       owl:NamedIndividual , skos:Concept ;
-      rdfs:comment "Curva que define una concavidad del terreno cada 100 m."@es ;
-      rdfs:label "depresión maestra"@es ;
-      skos:inScheme geodesy:categoriaDeCurvaDeNivel .
-
-[]    a       owl:AllDifferent ;
-      owl:distinctMembers (estadoDeUso:abandonado estadoDeUso:enConstruccion estadoDeUso:enUso) .
-
 ontology:InstalacionDeportiva
       a       owl:Class ;
       rdfs:comment "Recinto o construcción provista de los medios necesarios para el aprendizaje, la práctica y la competición de uno o más deportes. "@es ;
@@ -2591,6 +2550,12 @@ ontology:CotaMunicipal
       rdfs:comment "Cota Municipal."@es ;
       rdfs:label "CotaMunicipal"@es ;
       rdfs:subClassOf ontology:PuntoAcotado .
+
+ancho-de-via:internacional
+      a       owl:NamedIndividual , skos:Concept ;
+      rdfs:comment "acnho de via internacional (1.435 mm)."@es ;
+      skos:inScheme transportes:ancho-de-via ;
+      skos:prefLabel "ancho de vía internacional"@es .
 
 ontology:Azarbe
       a       owl:Class ;
@@ -2614,6 +2579,17 @@ ontology:Camping
                 owl:intersectionOf (ontology:Alojamiento ontology:LugarDeOcio)
               ] .
 
+categoria-de-rio:rio-de-menor-interes
+      a       owl:NamedIndividual , skos:Concept ;
+      skos:inScheme hidrografia:categoria-de-rio ;
+      skos:prefLabel "río de menor interes"@es .
+
+<http://geo.linkeddata.es/kos/btn100/conducciones-y-energia>
+      a       owl:NamedIndividual , skos:Concept ;
+      skos:inScheme <http://geo.linkeddata.es/kos/btn100> ;
+      skos:notation "07" ;
+      skos:prefLabel "conducciones y energía"@es .
+
 ontology:CentralTerminca
       a       owl:Class ;
       rdfs:comment " instalación empleada en la generación de energía eléctrica a partir de la energía liberada en forma de calor, normalmente mediante la combustión de combustibles fósiles como petróleo, gas natural o carbón. Este calor es empleado por un ciclo termodinámico convencional para mover un alternador y producir energía eléctrica."@es ;
@@ -2632,6 +2608,11 @@ ontology:conduce
               ] ;
       owl:inverseOf ontology:es_conducido_por .
 
+tipo-de-componente:repetidor
+      a       owl:NamedIndividual , skos:Concept ;
+      skos:inScheme red-de-suministro:tipo-de-componente ;
+      skos:prefLabel "repetidor"@es .
+
 ontology:longitud
       a       owl:DatatypeProperty ;
       rdfs:domain ontology:Aguas ;
@@ -2642,17 +2623,6 @@ ontology:longitud
       rdfs:range xsd:float ;
       owl:equivalentProperty
               wgs84_pos:long .
-
-[]    a       owl:AllDifferent ;
-      owl:distinctMembers (tipoDeItinerario:itinerarioEuropeo tipoDeItinerario:itinerarioNoEuropeo) .
-
-transportes:numeroDeVias
-      a       owl:NamedIndividual , skos:ConceptScheme ;
-      rdfs:comment """Esquema de conceptos para definir el número de vias
-puede tomar los valores:
-* http://geo.linkeddata.es/kos/transports/numeroDeVias/doble
-* http://geo.linkeddata.es/kos/transports/numeroDeVias/unica"""@es ;
-      skos:prefLabel "número de vías"@es .
 
 ontology:Ruta
       a       owl:Class ;
@@ -2718,12 +2688,6 @@ ontology:SubestacionElectrica
       rdfs:label "Subestación eléctrica"@es ;
       rdfs:subClassOf geosparql:Feature .
 
-situacionDeVia:subterraneo
-      a       owl:NamedIndividual , skos:Concept ;
-      rdfs:comment "vía subterránea"@es ;
-      skos:inScheme transportes:situacionDeVia ;
-      skos:prefLabel "subterráneo"@es .
-
 ontology:Conducto
       a       owl:Class ;
       rdfs:comment "Canal, con frecuencia cerrado, que tiene como objeto el transporte de productos liquidos"^^xsd:string ;
@@ -2741,10 +2705,21 @@ ontology:Conducto
               ] ;
       dc:source "Fontanillo, E. (1986) Diccionario de Geografia. Ed. Anaya. Madrid."^^xsd:string .
 
+tipo-de-calzada:doble
+      a       owl:NamedIndividual , skos:Concept ;
+      rdfs:comment "Dos calzadas separadas y paralelas, con sentidos distintos. "@es ;
+      skos:inScheme transportes:tipo-de-calzada ;
+      skos:prefLabel "calzada doble"@es .
+
 ontology:aportacion
       a       owl:DatatypeProperty ;
       rdfs:domain ontology:AguasCorrientes , ontology:AguasQuietas ;
       rdfs:seeAlso "{\"epigenico\", \"hipogenico\", \"mixto\", \"otros\"}" .
+
+categoria-de-rio:rio-secundario
+      a       owl:NamedIndividual , skos:Concept ;
+      skos:inScheme hidrografia:categoria-de-rio ;
+      skos:prefLabel "río de interés secundario"@es .
 
 ontology:Alberca
       a       owl:Class ;
@@ -2761,7 +2736,7 @@ ontology:categoriaDeIsla
       rdfs:range
               [ a       owl:Class ;
                 owl:intersectionOf (skos:Concept [ a       owl:Restriction ;
-                            owl:hasValue hydro:categoriaDeIsla ;
+                            owl:hasValue hidrografia:categoria-de-isla ;
                             owl:onProperty skos:inScheme
                           ])
               ] .
@@ -2789,6 +2764,11 @@ ontology:iataCode
                           ])
               ] .
 
+ancho-de-via:mixto
+      a       owl:NamedIndividual , skos:Concept ;
+      skos:inScheme transportes:ancho-de-via ;
+      skos:prefLabel "ancho de vía mixto"@es .
+
 ontology:Cienaga
       a       owl:Class ;
       rdfs:comment "Terreno donde abundan charcos y cenagales"^^xsd:string ;
@@ -2796,11 +2776,24 @@ ontology:Cienaga
       rdfs:subClassOf ontology:ZonaHumeda ;
       dc:source "Elaboracion propia"^^xsd:string .
 
+transportes:ruta-ten-t
+      a       owl:NamedIndividual , skos:ConceptScheme ;
+      rdfs:comment """Esquema de conceptos que indica si el tramo de vía pertenece a la Red Transeuropea de Transporte (TEN-T)
+puede tomar los valores:
+* http://geo.linkeddata.es/kos/transportes/ruta-ten-t/ruta-transeuropea
+* http://geo.linkeddata.es/kos/transportes/ruta-ten-t/ruta-no-transeuropea"""@es ;
+      skos:prefLabel "ruta TEN-T"@es .
+
 ontology:Universidad
       a       owl:Class ;
       rdfs:comment "Establecimiento o conjunto de unidades educativas de enseñanza superior e investigación"@es ;
       rdfs:label "Universidad"@es ;
       rdfs:subClassOf ontology:LugarDeInteres .
+
+tipo-de-capital:municipio
+      a       owl:NamedIndividual , skos:Concept ;
+      skos:inScheme poblaciones-construcciones:tipo-de-capital ;
+      skos:prefLabel "capital de municipio"@es .
 
 ontology:Camino
       a       owl:Class ;
@@ -2877,6 +2870,23 @@ ontology:curvatura
       rdfs:domain ontology:Meandro ;
       rdfs:range xsd:string .
 
+poblaciones-construcciones:tipo-de-capital
+      a       owl:NamedIndividual , skos:ConceptScheme ;
+      rdfs:comment """Especifica de qué administración oficial es capital. Puede tomar los valores:
+* http://geo.linkeddata.es/kos/poblaciones-construcciones/tipo-de-capital/comunidad-autonoma
+* http://geo.linkeddata.es/kos/poblaciones-construcciones/tipo-de-capital/comunidad-autonoma-no-de-provincia
+* http://geo.linkeddata.es/kos/poblaciones-construcciones/tipo-de-capital/nacion
+* http://geo.linkeddata.es/kos/poblaciones-construcciones/tipo-de-capital/municipio
+* http://geo.linkeddata.es/kos/poblaciones-construcciones/tipo-de-capital/no-capital
+* http://geo.linkeddata.es/kos/poblaciones-construcciones/tipo-de-capital/provincia"""@es ;
+      skos:prefLabel "tipo de capital"@es .
+
+competencia-de-via:local
+      a       owl:NamedIndividual , skos:Concept ;
+      rdfs:comment "indica que la via es competencia del municipio"@es ;
+      skos:inScheme transportes:competencia-de-via ;
+      skos:prefLabel "competencia de vía local"@es .
+
 ontology:CapaDeNieve
       a       owl:Class ;
       rdfs:comment "Nieve acumulada en el terreno."^^xsd:string ;
@@ -2901,6 +2911,12 @@ ontology:Corriente
       ontology:provenance "Getty Thesaurus of Geographic Names"@en ;
       dc:source "Vazquez Maure F.; Martin Lopez J. (1987) Vocabulario de terminos geograficos. Ed. Ministerio de Obras Publicas y Urbanismo. Instituto Geografico Nacional. Madrid. ISBN: 84-505-4929-9 & Elaboracion propia"@es .
 
+competencia-aeroportuaria:militar
+      a       owl:NamedIndividual , skos:Concept ;
+      rdfs:comment "competencia aeroportuaria de explotación militar"@es ;
+      skos:inScheme transportes:competencia-aeroportuaria ;
+      skos:prefLabel "militar"@es .
+
 foaf:based_near
       a       owl:AnnotationProperty .
 
@@ -2910,6 +2926,20 @@ ontology:Regajo
       rdfs:label "Regajo"@es ;
       rdfs:subClassOf ontology:Arroyo ;
       dc:source "Diccionario de la Real Academia Espannola"^^xsd:string .
+
+poblaciones-construcciones:estado-de-uso
+      a       owl:NamedIndividual , skos:ConceptScheme ;
+      rdfs:comment """indica el estado de uso. Puede tomar los valores:
+* http://geo.linkeddata.es/kos/poblaciones-construcciones/estado-de-uso/en-construccion
+* http://geo.linkeddata.es/kos/poblaciones-construcciones/estado-de-uso/en-uso
+* http://geo.linkeddata.es/kos/poblaciones-construcciones/estado-de-uso/abandonado"""@es ;
+      skos:prefLabel "estado de uso"@es .
+
+competencia-de-via:autonomica
+      a       owl:NamedIndividual , skos:Concept ;
+      rdfs:comment "indica que la via es competencia de la administración de las CCAA"@es ;
+      skos:inScheme transportes:competencia-de-via ;
+      skos:prefLabel "competencia de vía autonómica"@es .
 
 ontology:Cargadero
       a       owl:Class ;
@@ -2965,6 +2995,15 @@ above the local reference ellipsoid).""" ;
       rdfs:domain wgs84_pos:SpatialThing ;
       rdfs:label "altitude" .
 
+transportes:categoria-vial
+      a       owl:NamedIndividual , skos:ConceptScheme ;
+      rdfs:comment """Esquema de conceptos para definir el tipo de categoría de una vía
+según su importancia. Puede tomar los valores:
+* http://geo.linkeddata.es/kos/transportes/categoria-vial/primer-orden
+* http://geo.linkeddata.es/kos/transportes/categoria-vial/segundo-orden
+* http://geo.linkeddata.es/kos/transportes/categoria-vial/tercer-orden"""@es ;
+      skos:prefLabel "categoría vial"@es .
+
 ontology:Aguazal
       a       owl:Class ;
       rdfs:comment "Espacio al que fluye o confluye agua y tiene caracter pantanoso, generalmente con vegetacion palustre"^^xsd:string ;
@@ -2984,10 +3023,23 @@ ontology:AguasDulces
                           ])
               ] .
 
-competenciaDeVia:provincial
+transportes:competencia-portuaria
+      a       owl:NamedIndividual , skos:ConceptScheme ;
+      rdfs:comment """Esquema de conceptos para definir el tipo la competencia de explotación de un puerto
+puede tomar los valores:
+* http://geo.linkeddata.es/kos/transportes/competencia-portuaria/estatal"""@es ;
+      skos:prefLabel "competencia portuaria"@es .
+
+situacion-de-via:elevado
+      a       owl:NamedIndividual , skos:Concept ;
+      rdfs:comment "vía elevada"@es ;
+      skos:inScheme transportes:situacion-de-via ;
+      skos:prefLabel "elevado"@es .
+
+competencia-de-via:provincial
       a       owl:NamedIndividual , skos:Concept ;
       rdfs:comment "indica que la via es competencia de la Diputación Provincial"@es ;
-      skos:inScheme transportes:competenciaDeVia ;
+      skos:inScheme transportes:competencia-de-via ;
       skos:prefLabel "competencia de vía provincial"@es .
 
 ontology:ZonaIndustrial
@@ -2996,15 +3048,16 @@ ontology:ZonaIndustrial
       rdfs:label "Zona industrial"@es ;
       rdfs:subClassOf ontology:ZonaDeUsoCaracteristico .
 
-numeroDeVias:unica
+situacion-de-via:subterraneo
       a       owl:NamedIndividual , skos:Concept ;
-      rdfs:comment "En la vía se verifica el movimiento de los trenes en ambos sentidos"@es ;
-      skos:inScheme transportes:numeroDeVias ;
-      skos:prefLabel "vía única"@es .
+      rdfs:comment "vía subterránea"@es ;
+      skos:inScheme transportes:situacion-de-via ;
+      skos:prefLabel "subterráneo"@es .
 
 ontology:situacionDeVia
       a       owl:ObjectProperty ;
       rdfs:comment "Disposición del tramo de vía sobre la superficie"@es ;
+      rdfs:domain ontology:ConduccionDeCombustible ;
       rdfs:domain
               [ a       owl:Class ;
                 owl:unionOf (ontology:Autopista ontology:Carretera ontology:Enlace ontology:Ferrocarril)
@@ -3013,21 +3066,13 @@ ontology:situacionDeVia
       rdfs:range
               [ a       owl:Class ;
                 owl:intersectionOf (skos:Concept [ a       owl:Restriction ;
-                            owl:hasValue transportes:situacionDeVia ;
+                            owl:hasValue transportes:situacion-de-via ;
                             owl:onProperty skos:inScheme
                           ])
               ] .
 
 dc:creator
       a       owl:AnnotationProperty .
-
-transportes:tipoDeTramo
-      a       owl:NamedIndividual , skos:ConceptScheme ;
-      rdfs:comment """Esquema de conceptos que indica si el tramo de vía  se desarrolla por el interior de núcleos o diseminados superficiales
-puede tomar los valores:
-* http://geo.linkeddata.es/kos/transports/tipoDeTramo/interno
-* http://geo.linkeddata.es/kos/transports/tipoDeTramo/noInterno"""@es ;
-      skos:prefLabel "tipo de tramo"@es .
 
 ontology:desembocaEn
       a       owl:ObjectProperty ;
@@ -3057,25 +3102,6 @@ ontology:Laguna
                         ]
               ] ;
       dc:source "Fontanillo, E. (1986) Diccionario de Geografia. Ed. Anaya. Madrid & Diccionario de la Real Academia Espannola"^^xsd:string .
-
-transportes:categoriaVial
-      a       owl:NamedIndividual , skos:ConceptScheme ;
-      rdfs:comment """Esquema de conceptos para definir el tipo de categoría de una vía
-según su importancia. Puede tomar los valores:
-* http://geo.linkeddata.es/kos/transports/categoriaVial/primerOrden
-* http://geo.linkeddata.es/kos/transports/categoriaVial/segundoOrden
-* http://geo.linkeddata.es/kos/transports/categoriaVial/tercerOrden"""@es ;
-      skos:prefLabel "categoría vial"@es .
-
-transportes:competenciaDeVia
-      a       owl:NamedIndividual , skos:ConceptScheme ;
-      rdfs:comment """Esquema de conceptos para definir de quien es la competencia de una determinada vía
-puede tomar los valores:
-* http://geo.linkeddata.es/kos/transports/competenciaVia/estatal
-* http://geo.linkeddata.es/kos/transports/competenciaVia/local
-* http://geo.linkeddata.es/kos/transports/competenciaVia/provicial
-* http://geo.linkeddata.es/kos/transports/competenciaVia/autonomica"""@es ;
-      skos:prefLabel "competencia de vía"@es .
 
 ontology:parte_de
       a       owl:ObjectProperty ;
@@ -3107,16 +3133,6 @@ ontology:Manantial
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:onProperty ontology:origina ;
-                owl:someValuesFrom ontology:Chortal
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:onProperty ontology:alimenta_a ;
-                owl:someValuesFrom ontology:AguasCorrientesNaturales
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:onProperty ontology:origina ;
                 owl:someValuesFrom
                         [ a       owl:Class ;
                           owl:unionOf ([ a       owl:Class ;
@@ -3138,7 +3154,23 @@ ontology:Manantial
                                     ])
                         ]
               ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty ontology:origina ;
+                owl:someValuesFrom ontology:Chortal
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty ontology:alimenta_a ;
+                owl:someValuesFrom ontology:AguasCorrientesNaturales
+              ] ;
       dc:source "Vazquez Maure F.; Martin Lopez J. (1987) Vocabulario de terminos geograficos. Ed. Ministerio de Obras Publicas y Urbanismo. Instituto Geografico Nacional. Madrid. ISBN: 84-505-4929-9"^^xsd:string .
+
+categoria-de-curva-de-nivel:depresion-maestra
+      a       owl:NamedIndividual , skos:Concept ;
+      rdfs:comment "Curva que define una concavidad del terreno cada 100 m."@es ;
+      rdfs:label "depresión maestra"@es ;
+      skos:inScheme geodesia:categoria-de-curva-de-nivel .
 
 ontology:FuenteSalada
       a       owl:Class ;
@@ -3155,15 +3187,8 @@ ontology:Lago
       rdfs:subClassOf ontology:AguasQuietasNaturales ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom
-                        [ a       owl:Class ;
-                          owl:intersectionOf ([ a       owl:Class ;
-                                      owl:unionOf (ontology:Glaciar ontology:Rio)
-                                    ] [ a       owl:Class ;
-                                      owl:complementOf ontology:Manantial
-                                    ])
-                        ] ;
-                owl:onProperty ontology:es_originado_por
+                owl:onProperty ontology:dispone_de_emisario ;
+                owl:someValuesFrom ontology:Rio
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
@@ -3175,8 +3200,15 @@ ontology:Lago
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:onProperty ontology:dispone_de_emisario ;
-                owl:someValuesFrom ontology:Rio
+                owl:allValuesFrom
+                        [ a       owl:Class ;
+                          owl:intersectionOf ([ a       owl:Class ;
+                                      owl:unionOf (ontology:Glaciar ontology:Rio)
+                                    ] [ a       owl:Class ;
+                                      owl:complementOf ontology:Manantial
+                                    ])
+                        ] ;
+                owl:onProperty ontology:es_originado_por
               ] ;
       dc:source "Fontanillo, E. (1986) Diccionario de Geografia. Ed. Anaya. Madrid & Diccionario de la Real Academia Espannola"^^xsd:string .
 
@@ -3208,6 +3240,11 @@ ontology:Recinto
       rdfs:subClassOf ontology:AguasQuietasArtificiales ;
       dc:source "WordNet"@en .
 
+categoria-vial:primer-orden
+      a       owl:NamedIndividual , skos:Concept ;
+      skos:inScheme transportes:categoria-vial ;
+      skos:prefLabel "categoría vial de primer orden"@es .
+
 ontology:FuenteVauclusiana
       a       owl:Class ;
       rdfs:comment "Surgencia en regiones karsticas controlada por un sifon natural y que fluye de forma intermitente."^^xsd:string ;
@@ -3238,11 +3275,6 @@ ontology:ZonaHumeda
                                       ])
                           ])
               ] .
-
-tipoDeComponente:repetidor
-      a       owl:NamedIndividual , skos:Concept ;
-      skos:inScheme supply-net:tipoDeComponente ;
-      skos:prefLabel "repetidor"@es .
 
 ontology:naturaleza_quimica
       a       owl:DatatypeProperty ;
@@ -3287,10 +3319,16 @@ ontology:Desembocadura
               ] ;
       dc:source "Diccionario de la Real Academia Española & Elaboracion propia"@es .
 
-competenciaPortuaria:estatal
+ruta-ten-t:ruta-transeuropea
       a       owl:NamedIndividual , skos:Concept ;
-      skos:inScheme transportes:competenciaPortuaria ;
-      skos:prefLabel "competencia portuaria estatal"@es .
+      rdfs:comment "El tramo no forma parte de la Red Transeuropea de Transporte"@es ;
+      skos:inScheme transportes:ruta-ten-t ;
+      skos:prefLabel "ruta transeuropea"@es .
+
+tipo-de-capital:no-capital
+      a       owl:NamedIndividual , skos:Concept ;
+      skos:inScheme poblaciones-construcciones:tipo-de-capital ;
+      skos:prefLabel "no es capital"@es .
 
 ontology:altitudOrtometrica
       a       owl:DatatypeProperty ;
@@ -3311,18 +3349,18 @@ ontology:Autopista
               [ a       owl:Class ;
                 owl:intersectionOf ([ a       owl:Class ;
                             owl:unionOf ([ a       owl:Restriction ;
-                                        owl:hasValue tipoDeCalzada:doble ;
+                                        owl:hasValue tipo-de-calzada:doble ;
                                         owl:onProperty ontology:calzada
                                       ] [ a       owl:Restriction ;
-                                        owl:hasValue tipoDeCalzada:sentidoUnico ;
+                                        owl:hasValue tipo-de-calzada:sentido-unico ;
                                         owl:onProperty ontology:calzada
                                       ])
                           ] [ a       owl:Class ;
                             owl:unionOf ([ a       owl:Restriction ;
-                                        owl:hasValue estadoDeUso2:enConstruccion ;
+                                        owl:hasValue estado-de-uso:en-construccion ;
                                         owl:onProperty ontology:estadoDeUso
                                       ] [ a       owl:Restriction ;
-                                        owl:hasValue estadoDeUso2:enUso ;
+                                        owl:hasValue estado-de-uso:en-uso ;
                                         owl:onProperty ontology:estadoDeUso
                                       ])
                           ])
@@ -3370,11 +3408,6 @@ ontology:AguasContinentales
                 owl:unionOf (ontology:AguasSubterraneas ontology:AguasSuperficiales)
               ] .
 
-capital:comunidadAutonomaNoDeProvincia
-      a       owl:NamedIndividual , skos:Concept ;
-      skos:inScheme capital:tipoDeCapital ;
-      skos:prefLabel "capital de comunidad autónoma  y no de provincia"@es .
-
 ontology:cuenca
       a       owl:DatatypeProperty ;
       rdfs:domain ontology:AguasCorrientesNaturales .
@@ -3416,6 +3449,25 @@ ontology:Oceano
       ontology:provenance "Oceanographic geographical features - Data Specification of INSPIRE"^^xsd:string ;
       dc:source "Diccionario de la Real Academia Espannola"^^xsd:string .
 
+ontology:estadoDeLaExplotacionMinera
+      a       owl:ObjectProperty ;
+      rdfs:comment "estado de utilización de una explotación minera"@es ;
+      rdfs:domain ontology:ExplotacionMinera ;
+      rdfs:label "estado de uso"@es ;
+      rdfs:range
+              [ a       owl:Class ;
+                owl:intersectionOf (skos:Concept [ a       owl:Restriction ;
+                            owl:hasValue poblaciones-construcciones:estado-de-uso ;
+                            owl:onProperty skos:inScheme
+                          ])
+              ] .
+
+ancho-de-via:metrico
+      a       owl:NamedIndividual , skos:Concept ;
+      rdfs:comment "ancho métrico, 1.000  mm"@es ;
+      skos:inScheme transportes:ancho-de-via ;
+      skos:prefLabel "ancho de vía métrico"@es .
+
 ontology:PatrimonioDelaHumanidad
       a       owl:Class ;
       rdfs:comment """Título conferido por la Unesco a sitios específicos del planeta (sean bosque, montaña, lago, cueva, desierto, edificación, complejo arquitectónico o
@@ -3429,16 +3481,16 @@ ontology:CentralSolar
       rdfs:label "Central solar"@es ;
       rdfs:subClassOf ontology:CentralElectrica .
 
+estado-de-uso2:abandonado
+      a       owl:NamedIndividual , skos:Concept ;
+      skos:inScheme poblaciones-construcciones:estado-de-uso ;
+      skos:prefLabel "abandonado"@es .
+
 ontology:AguasCorrientesNaturales
       a       owl:Class ;
       rdfs:comment "Aguas continentales situadas en la superficie del suelo que tienen o pueden tener un movimiento notable y continuo a traves de un cauce de origen natural"^^xsd:string ;
       rdfs:label "Aguas corrientes naturales"@es , "Corriente fluvial"@es , "Cursos de agua naturales"@es , "Aguas naturales"@es , "Curso natural de agua"@es , "Corriente de agua"@es , "Natural flowing water"@en ;
       rdfs:subClassOf ontology:AguasCorrientes ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:onProperty ontology:deposita_en ;
-                owl:someValuesFrom ontology:Aluvion
-              ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom
@@ -3463,17 +3515,16 @@ ontology:AguasCorrientesNaturales
                           owl:unionOf (ontology:Glaciar ontology:Manantial ontology:MasaDeHielo ontology:Nacimiento)
                         ]
               ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty ontology:deposita_en ;
+                owl:someValuesFrom ontology:Aluvion
+              ] ;
       ontology:provenance "Aguas naturales - Catalogo de entidades para el Nomenclator de Base Topografica Nacional 1:25000 (BTN25). Instituto Geografico Nacional"^^xsd:string , "Corriente de agua - Glosario Hidrologico Internacional - UNESCO"^^xsd:string ;
       owl:equivalentClass
               [ a       owl:Class ;
                 owl:unionOf (ontology:Arroyo ontology:Glaciar ontology:Rambla ontology:Rio)
               ] .
-
-anchoDeVia:internacional
-      a       owl:NamedIndividual , skos:Concept ;
-      rdfs:comment "acnho de via internacional (1.435 mm)."@es ;
-      skos:inScheme transportes:anchoDeVia ;
-      skos:prefLabel "ancho de vía internacional"@es .
 
 ontology:FuenteArtificial
       a       owl:Class ;
@@ -3492,19 +3543,6 @@ ontology:FuenteArtificial
               ] ;
       dc:source "Vazquez Maure F.; Martin Lopez J. (1987) Vocabulario de terminos geograficos. Ed. Ministerio de Obras Publicas y Urbanismo. Instituto Geografico Nacional. Madrid. ISBN: 84-505-4929-9"^^xsd:string .
 
-situacionDeVia:superficial
-      a       owl:NamedIndividual , skos:Concept ;
-      rdfs:comment "vía superficial"@es ;
-      skos:inScheme transportes:situacionDeVia ;
-      skos:prefLabel "superficial"@es .
-
-hydro:regimenDeLaguna
-      a       owl:NamedIndividual , skos:ConceptScheme ;
-      rdfs:comment """puede tomar los valores:
-* http://geo.linkeddata.es/kos/hydrography/regimenDeLaguna/permanete
-* http://geo.linkeddata.es/kos/hydrography/regimenDeLaguna/noPermanente"""@es ;
-      skos:prefLabel "régimen de laguna"@es .
-
 ontology:ZonaPortuaria
       a       owl:Class ;
       rdfs:comment "Espacio destinado y orientado especialmente al flujo de mercancías, personas, información o a dar abrigo y seguridad a aquellas embarcaciones o naves encargadas de llevar a cabo dichas tareas."@es ;
@@ -3521,11 +3559,11 @@ ontology:se_extrae_para
       rdfs:subPropertyOf ontology:alimenta_a ;
       owl:inverseOf ontology:se_extrae .
 
-acceso:libre
+tipo-de-trafico:mixto
       a       owl:NamedIndividual , skos:Concept ;
-      rdfs:comment "indica si la via es de acceso libre"@es ;
-      skos:inScheme transportes:acceso ;
-      skos:prefLabel "acceso libre"@es .
+      rdfs:comment "puede llevar mercancías o pasajeros"@es ;
+      skos:inScheme transportes:tipo-de-trafico ;
+      skos:prefLabel "tráfico mixto"@es .
 
 wgs84_pos:
       rdfs:comment """
@@ -3619,6 +3657,12 @@ basic geo vocab
  Version $Id: wgs84_pos.rdf,v 1.22 2009/04/20 15:00:30 timbl Exp $. See http://www.w3.org/2003/01/geo/ for more details.""" ;
       dc:title "WGS84 Geo Positioning: an RDF vocabulary" .
 
+acceso:peaje
+      a       owl:NamedIndividual , skos:Concept ;
+      rdfs:comment "indica que la vía es de pago."@es ;
+      skos:inScheme transportes:acceso ;
+      skos:prefLabel "acceso con peaje"@es .
+
 ontology:tipologia_de_surgencia
       a       owl:DatatypeProperty ;
       rdfs:domain ontology:Surgencia ;
@@ -3640,14 +3684,6 @@ ontology:riesgo_quimico
       rdfs:comment "tabla MasaSubterranea_Riesgo Quimico columna sustancia"^^xsd:string ;
       rdfs:domain ontology:AguasSubterraneas ;
       rdfs:range xsd:string .
-
-transportes:estadoDeUso
-      a       owl:NamedIndividual , skos:ConceptScheme ;
-      rdfs:comment """indica el estado de uso. Puede tomar los valores:
-* http://geo.linkeddata.es/kos/transporters/estadoDeUso/enConstruccion
-* http://geo.linkeddata.es/kos/transporters/estadoDeUso/enUso
-* http://geo.linkeddata.es/kos/transporters/estadoDeUso/abandonado"""@es ;
-      skos:prefLabel "estado de uso"@es .
 
 ontology:Riachuelo
       a       owl:Class ;
@@ -3697,22 +3733,10 @@ ontology:evacua_de
                 owl:unionOf (ontology:Acuifero ontology:ZonaEncharcable)
               ] .
 
-tipoDeTrafico:mixto
-      a       owl:NamedIndividual , skos:Concept ;
-      rdfs:comment "puede llevar mercancías o pasajeros"@es ;
-      skos:inScheme transportes:tipoDeTrafico ;
-      skos:prefLabel "tráfico mixto"@es .
-
-kos:btn100
+<http://geo.linkeddata.es/kos/btn100>
       a       owl:NamedIndividual , skos:ConceptScheme ;
       rdfs:comment "Tesauro SKOS creado a partir de la documentación del Catálogo de Objetos Geográficos de BTN100"@es ;
       skos:prefLabel "btn100"@es .
-
-tipoDeCalzada:sentidoUnico
-      a       owl:NamedIndividual , skos:Concept ;
-      rdfs:comment "Calzada de sentido único no contigua a la del contrario."@es ;
-      skos:inScheme transportes:tipoDeCalzada ;
-      skos:prefLabel "calzada de sentido único"@es .
 
 ontology:LagoSubterraneo
       a       owl:Class ;
@@ -3728,6 +3752,9 @@ wgs84_pos:long
 
 ontology:provenance
       a       owl:AnnotationProperty .
+
+[]    a       owl:AllDifferent ;
+      owl:distinctMembers (electrificacion:electrificado electrificacion:no-electrificado) .
 
 ontology:LagunaSalada
       a       owl:Class ;
@@ -3768,12 +3795,6 @@ ontology:LugarDeInteres
       rdfs:comment "Edificación o Lugar de interés por el uso que se le da o su relación con la cultura. Aquí se incluyen los Bienes de Interés Cultural (BIC)"@es ;
       rdfs:label "Lugar de interés"@es ;
       rdfs:subClassOf geosparql:Feature .
-
-tipoDeTramo:noInterno
-      a       owl:NamedIndividual , skos:Concept ;
-      rdfs:comment "El tramo no discurre por el interior de poblaciones o zonas de uso"@es ;
-      skos:inScheme transportes:tipoDeTramo ;
-      skos:prefLabel "tramo no interno"@es .
 
 ontology:es_conectado_con
       a       owl:ObjectProperty ;
@@ -3930,11 +3951,6 @@ ontology:localizadoEn
       rdfs:domain ontology:FenomenoHidrografico ;
       rdfs:range geopolitical:territory .
 
-tipoDeTrafico:viajeros
-      a       owl:NamedIndividual , skos:Concept ;
-      skos:inScheme transportes:tipoDeTrafico ;
-      skos:prefLabel "tráfico de viajeros"@es .
-
 ontology:lat
       a       owl:DatatypeProperty ;
       rdfs:domain ontology:FenomenoHidrografico , ontology:Morfologia , ontology:CuencaHidrografica ;
@@ -3948,7 +3964,6 @@ ontology:Cantera
 
 ontology:estadoDeUso
       a       owl:ObjectProperty ;
-      rdfs:domain ontology:ExplotacionMinera ;
       rdfs:domain
               [ a       owl:Class ;
                 owl:unionOf (ontology:Autopista ontology:Autovia ontology:Carretera ontology:Enlace ontology:Ferrocarril ontology:Puerto)
@@ -3957,35 +3972,16 @@ ontology:estadoDeUso
       rdfs:range
               [ a       owl:Class ;
                 owl:intersectionOf (skos:Concept [ a       owl:Restriction ;
-                            owl:hasValue population-buildings:estadoDeUso ;
-                            owl:onProperty skos:inScheme
-                          ])
-              ] ;
-      rdfs:range
-              [ a       owl:Class ;
-                owl:intersectionOf (skos:Concept [ a       owl:Restriction ;
-                            owl:hasValue transportes:estadoDeUso ;
+                            owl:hasValue transportes:estado-de-uso ;
                             owl:onProperty skos:inScheme
                           ])
               ] .
-
-categoriaDeCurvaDeNivel:curvaDeNivelGenerica
-      a       owl:NamedIndividual , skos:Concept ;
-      rdfs:comment "Curva de nivel con altitud cada 20 m."@es ;
-      rdfs:label "curva de nivel genérica"@es ;
-      skos:inScheme geodesy:categoriaDeCurvaDeNivel .
 
 ontology:Cementerio
       a       owl:Class ;
       rdfs:comment "Lugar, generalmente cercado, destinado a enterrar los restos mortales o cadáveres de los difuntos. "@es ;
       rdfs:label "Cementerio"@es ;
       rdfs:subClassOf ontology:ZonaDeUsoCaracteristico , ontology:LugarDeInteres .
-
-competenciaDeVia:estatal
-      a       owl:NamedIndividual , skos:Concept ;
-      rdfs:comment "indica que la via es competencia del Estado"@es ;
-      skos:inScheme transportes:competenciaDeVia ;
-      skos:prefLabel "competencia de vía estatal"@es .
 
 ontology:poblacion
       a       owl:DatatypeProperty ;
@@ -4000,12 +3996,6 @@ ontology:Bodon
       rdfs:label "Bodón"@es ;
       rdfs:subClassOf ontology:Charca ;
       dc:source "Diccionario de la Real Academia Espannola"^^xsd:string .
-
-competenciaAeroportuaria:privada
-      a       owl:NamedIndividual , skos:Concept ;
-      rdfs:comment "competencia aeroportuaria de explotación privada"@es ;
-      skos:inScheme transportes:competenciaAeroportuaria ;
-      skos:prefLabel "privada"@es .
 
 ontology:Canal
       a       owl:Class ;
@@ -4023,16 +4013,28 @@ ontology:Canal
                 owl:unionOf (ontology:CanalAguasContinentales ontology:CanalAguasMarinas)
               ] .
 
-categoriaVial:segundoOrden
+numero-de-vias:unica
       a       owl:NamedIndividual , skos:Concept ;
-      skos:inScheme transportes:categoriaVial ;
-      skos:prefLabel "categoría vial de segundo orden"@es .
+      rdfs:comment "En la vía se verifica el movimiento de los trenes en ambos sentidos"@es ;
+      skos:inScheme transportes:numero-de-vias ;
+      skos:prefLabel "vía única"@es .
+
+competencia-de-via:estatal
+      a       owl:NamedIndividual , skos:Concept ;
+      rdfs:comment "indica que la via es competencia del Estado"@es ;
+      skos:inScheme transportes:competencia-de-via ;
+      skos:prefLabel "competencia de vía estatal"@es .
 
 ontology:AguasSubterraneas
       a       owl:Class ;
       rdfs:comment "Todas las aguas que se encuentran bajo la superficie del suelo en la zona de saturacion y en contacto directo con el suelo o el subsuelo."^^xsd:string , "All water which is below the surface of the ground in the saturation zone and in direct contact with the ground or subsoil."^^xsd:string ;
       rdfs:label "Aguas subterraneas"@es , "Groundwater"@en , "Agua freatica"@es , "Agua subterranea"@es , "Masa de agua subterranea"@es ;
       rdfs:subClassOf ontology:AguasContinentales ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty ontology:descarga_en ;
+                owl:someValuesFrom ontology:ZonaHumeda
+              ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom
@@ -4047,11 +4049,6 @@ ontology:AguasSubterraneas
                         ] ;
                 owl:onProperty ontology:es_alimentada_por
               ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:onProperty ontology:descarga_en ;
-                owl:someValuesFrom ontology:ZonaHumeda
-              ] ;
       ontology:provenance "Agua subterranea - The Digital Geographic Information Exchange Standard (DIGEST). Digital Geographic Information Working Group (DGIWG)"^^xsd:string , "Parlamento Europeo y Consejo de la Union Europea. (2000) Directiva 2000/60/CE del Parlmento Europeo y del Consejo por la que se establece un marco comunitario de actuacion en el ambito de la politica de aguas. pp 72"^^xsd:string ;
       dc:source "Parlamento Europeo y Consejo de la Union Europea. (2000) Directiva 2000/60/CE del Parlmento Europeo y del Consejo por la que se establece un marco comunitario de actuacion en el ambito de la politica de aguas. pp 72"^^xsd:string .
 
@@ -4064,9 +4061,6 @@ ontology:conexion
       rdfs:domain ontology:AguasSubterraneas ;
       rdfs:range xsd:string .
 
-[]    a       owl:AllDifferent ;
-      owl:distinctMembers (competenciaAeroportuaria:aena competenciaAeroportuaria:militar competenciaAeroportuaria:privada) .
-
 ontology:Drenaje
       a       owl:Class ;
       rdfs:comment "Construccion destinada a la recogida, colecta y eliminacion de las aguas de cualquier espacio de inundacion."^^xsd:string ;
@@ -4075,10 +4069,8 @@ ontology:Drenaje
       ontology:provenance "Catalogo de fenomenos de la Base Cartografica Numerica 1:25.000 (BCN25)"^^xsd:string ;
       dc:source "Fontanillo, E. (1986) Diccionario de Geografia. Ed. Anaya. Madrid & George, P. (1991) Diccionario de Geografia. Madrid: Akal."^^xsd:string .
 
-anchoDeVia:mixto
-      a       owl:NamedIndividual , skos:Concept ;
-      skos:inScheme transportes:anchoDeVia ;
-      skos:prefLabel "ancho de vía mixto"@es .
+[]    a       owl:AllDifferent ;
+      owl:distinctMembers (situacion-de-via:elevado situacion-de-via:subterraneo situacion-de-via:superficial) .
 
 ontology:Morfologia
       a       owl:Class ;
@@ -4095,26 +4087,15 @@ ontology:Morfologia
               ] ;
       ontology:provenance "Glosario Hidrologico Internacional - UNESCO"^^xsd:string , "Catalogo de objetos de Colombia"@es .
 
-transportes:electrificacion
-      a       owl:NamedIndividual , owl:ObjectProperty , skos:ConceptScheme ;
-      rdfs:comment """Esquema de conceptos para definir el tipo de electrificación de una vía
+transportes:ancho-de-via
+      a       owl:NamedIndividual , skos:ConceptScheme ;
+      rdfs:comment """Esquema de conceptos para definir el ancho de una vía
 puede tomar los valores:
-* http://geo.linkeddata.es/kos/transports/electrificacion/electrificado
-* http://geo.linkeddata.es/kos/transports/electrificacion/noElectrificado"""@es ;
-      rdfs:domain ontology:FerrocarrilConvencional ;
-      rdfs:range
-              [ a       owl:Class ;
-                owl:intersectionOf (skos:Concept [ a       owl:Restriction ;
-                            owl:hasValue transportes:electrificacion ;
-                            owl:onProperty skos:inScheme
-                          ])
-              ] ;
-      skos:prefLabel "electrificación"@es .
-
-categoriaDeRio:rioSecundario
-      a       owl:NamedIndividual , skos:Concept ;
-      skos:inScheme hydro:categoriaDeRio ;
-      skos:prefLabel "río de interés secundario"@es .
+* http://geo.linkeddata.es/kos/transportes/ancho-de-via//iberico
+* http://geo.linkeddata.es/kos/transportes/ancho-de-via/internacional
+* http://geo.linkeddata.es/kos/transportes/ancho-de-via/mixto
+* http://geo.linkeddata.es/kos/transportes/ancho-de-via/metrico"""@es ;
+      skos:prefLabel "ancho de vía"@es .
 
 ontology:numeroDeVias
       a       owl:ObjectProperty ;
@@ -4123,15 +4104,13 @@ ontology:numeroDeVias
       rdfs:range
               [ a       owl:Class ;
                 owl:intersectionOf (skos:Concept [ a       owl:Restriction ;
-                            owl:hasValue transportes:numeroDeVias ;
+                            owl:hasValue transportes:numero-de-vias ;
                             owl:onProperty skos:inScheme
                           ])
               ] .
 
-tipoDeComponente:emisor
-      a       owl:NamedIndividual , skos:Concept ;
-      skos:inScheme supply-net:tipoDeComponente ;
-      skos:prefLabel "emisor"@es .
+[]    a       owl:AllDifferent ;
+      owl:distinctMembers (tipo-de-itinerario:itinerario-europeo tipo-de-itinerario:itinerario-no-europeo) .
 
 ontology:FuenteNatural
       a       owl:Class ;
@@ -4148,10 +4127,6 @@ ontology:AguasCorrientesArtificiales
       dc:source "Cauce artificial - Catalogo de fenomenos de la Base Topografica Nacional 1:25000 (BTN25). Instituto Geografico Nacional"^^xsd:string , "Aguas artificiales - Catalogo de entidades para el Nomenclator de la Base Topografica Nacional 1:25000 (BTN25). Instituto Geografico Nacional"^^xsd:string ;
       owl:equivalentClass
               [ a       owl:Class ;
-                owl:unionOf (ontology:Acequia ontology:Canal ontology:Conducto)
-              ] ;
-      owl:equivalentClass
-              [ a       owl:Class ;
                 owl:intersectionOf ([ a       owl:Restriction ;
                             owl:allValuesFrom
                                     [ a       owl:Class ;
@@ -4162,6 +4137,10 @@ ontology:AguasCorrientesArtificiales
                             owl:minCardinality "1"^^xsd:nonNegativeInteger ;
                             owl:onProperty ontology:conduce
                           ])
+              ] ;
+      owl:equivalentClass
+              [ a       owl:Class ;
+                owl:unionOf (ontology:Acequia ontology:Canal ontology:Conducto)
               ] .
 
 ontology:origina
@@ -4179,6 +4158,12 @@ ontology:origina
 dc:publisher
       a       owl:AnnotationProperty .
 
+categoria-de-curva-de-nivel:depresion-generica
+      a       owl:NamedIndividual , skos:Concept ;
+      rdfs:comment "Curva que define una concavidad del terreno cada 20 m."@es ;
+      rdfs:label "depresión genérica"@es ;
+      skos:inScheme geodesia:categoria-de-curva-de-nivel .
+
 ontology:competenciaPortuaria
       a       owl:ObjectProperty ;
       rdfs:comment "Competencia de la explotación portuaria"@es ;
@@ -4187,21 +4172,10 @@ ontology:competenciaPortuaria
       rdfs:range
               [ a       owl:Class ;
                 owl:intersectionOf (skos:Concept [ a       owl:Restriction ;
-                            owl:hasValue transportes:competenciaPortuaria ;
+                            owl:hasValue transportes:competencia-portuaria ;
                             owl:onProperty skos:inScheme
                           ])
               ] .
-
-rutaTenT:rutaNoTranseuropea
-      a       owl:NamedIndividual , skos:Concept ;
-      rdfs:comment "El tramo forma parte de la Red Transeuropea de Transporte"@es ;
-      skos:inScheme transportes:rutaTenT ;
-      skos:prefLabel "ruta no transeuropea"@es .
-
-estadoDeUso2:abandonado
-      a       owl:NamedIndividual , skos:Concept ;
-      skos:inScheme transportes:estadoDeUso ;
-      skos:prefLabel "abandonado"@es .
 
 ontology:es_originado_por
       a       owl:ObjectProperty ;
@@ -4225,13 +4199,6 @@ ontology:cota
       rdfs:label "cota"@es ;
       rdfs:range xsd:float .
 
-numeroDeVias:doble
-      a       owl:NamedIndividual , skos:Concept ;
-      rdfs:comment "Cada vía se dedica para la marcha de los trenes en un sentido"@es ;
-      owl:sameAs numeroDeVias:unica ;
-      skos:inScheme transportes:numeroDeVias ;
-      skos:prefLabel "vía doble"@es .
-
 ontology:EstacionPermanenteGPS
       a       owl:Class ;
       rdfs:comment "Vértices de la Red de Estaciones Permanentes de GPS, de la que se pueden obtener valores de observación para un día concreto y una hora determinada."@es ;
@@ -4245,12 +4212,8 @@ ontology:AguasMarinas
       rdfs:label "Masa de agua marina"@es , "Hidrografia maritima"@es , "Aguas oceánicas"@es , "Aguas marinas"@es , "Sea regions"@en ;
       rdfs:subClassOf ontology:AguasSaladas ;
       rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:onProperty ontology:alimenta_a ;
-                owl:someValuesFrom
-                        [ a       owl:Class ;
-                          owl:unionOf (ontology:Albufera ontology:LagunaSalada)
-                        ]
+              [ a       owl:Class ;
+                owl:complementOf ontology:AguasDulces
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
@@ -4258,16 +4221,20 @@ ontology:AguasMarinas
                 owl:someValuesFrom ontology:AguasCorrientesArtificiales
               ] ;
       rdfs:subClassOf
-              [ a       owl:Class ;
-                owl:complementOf ontology:AguasDulces
+              [ a       owl:Restriction ;
+                owl:onProperty ontology:alimenta_a ;
+                owl:someValuesFrom
+                        [ a       owl:Class ;
+                          owl:unionOf (ontology:Albufera ontology:LagunaSalada)
+                        ]
               ] ;
       ontology:provenance "Hidrografia maritima - Catalogo de entidades para el Nomenclator de la Base Topografica Nacional 1:25.000 (BTN25). Instituto Geografico Nacional"^^xsd:string , "Aguas oceanicas - Instituto Espannol de Oceanografia"^^xsd:string , "George, P. (1991) Diccionario de Geografia. Madrid: Akal & Elaboracion propia"^^xsd:string , "Sea regions - Data Specification of INSPIRE"^^xsd:string .
 
-btn100:conduccionesYEnergia
+tipo-de-tramo:no-interno
       a       owl:NamedIndividual , skos:Concept ;
-      skos:inScheme kos:btn100 ;
-      skos:notation "07" ;
-      skos:prefLabel "conducciones y energía"@es .
+      rdfs:comment "El tramo no discurre por el interior de poblaciones o zonas de uso"@es ;
+      skos:inScheme transportes:tipo-de-tramo ;
+      skos:prefLabel "tramo no interno"@es .
 
 ontology:LlanuraDeInundacion
       a       owl:Class ;
@@ -4301,13 +4268,13 @@ ontology:Mar
       rdfs:subClassOf ontology:AguasMarinas ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:onProperty ontology:es_comunicada_por ;
-                owl:someValuesFrom ontology:CanalMarino
+                owl:onProperty ontology:alimenta_a ;
+                owl:someValuesFrom ontology:Albufera
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:onProperty ontology:alimenta_a ;
-                owl:someValuesFrom ontology:Albufera
+                owl:onProperty ontology:es_comunicada_por ;
+                owl:someValuesFrom ontology:CanalMarino
               ] ;
       dc:source "Vazquez Maure F.; Martin Lopez J. (1987) Vocabulario de terminos geograficos. Ed. Ministerio de Obras Publicas y Urbanismo. Instituto Geografico Nacional. Madrid. ISBN: 84-505-4929-9."^^xsd:string ;
       owl:equivalentClass
@@ -4335,7 +4302,7 @@ ontology:calzada
       rdfs:range
               [ a       owl:Class ;
                 owl:intersectionOf (skos:Concept [ a       owl:Restriction ;
-                            owl:hasValue transportes:tipoDeCalzada ;
+                            owl:hasValue transportes:tipo-de-calzada ;
                             owl:onProperty skos:inScheme
                           ])
               ] .
@@ -4361,7 +4328,7 @@ ontology:tipoDeTrafico
       rdfs:range
               [ a       owl:Class ;
                 owl:intersectionOf (skos:Concept [ a       owl:Restriction ;
-                            owl:hasValue transportes:tipoDeTrafico ;
+                            owl:hasValue transportes:tipo-de-trafico ;
                             owl:onProperty skos:inScheme
                           ])
               ] .
@@ -4382,6 +4349,12 @@ ontology:es_conducido_por
               [ a       owl:Class ;
                 owl:unionOf (ontology:AguasCorrientesArtificiales ontology:Manantial ontology:Rio)
               ] .
+
+competencia-aeroportuaria:aena
+      a       owl:NamedIndividual , skos:Concept ;
+      rdfs:comment "competencia aeroportuaria de explotación por aena"@es ;
+      skos:inScheme transportes:competencia-aeroportuaria ;
+      skos:prefLabel "aena"@es .
 
 ontology:Faro
       a       owl:Class ;
@@ -4463,19 +4436,11 @@ ontology:CentralNuclear
       rdfs:label "Central nuclear"@es ;
       rdfs:subClassOf ontology:CentralElectrica .
 
-transportes:tipoDeCalzada
-      a       owl:NamedIndividual , skos:ConceptScheme ;
-      rdfs:comment """Esquema de conceptos para definir el número de calzadas y sentido de circulación del tramo de vía.
-puede tomar los valores:
-* http://geo.linkeddata.es/kos/transports/calzada/doble
-* http://geo.linkeddata.es/kos/transports/calzada/convencional
-* http://geo.linkeddata.es/kos/transports/calzada/sentidoUnico"""@es ;
-      skos:prefLabel "tipo de calzada"@es .
-
-categoriaDeRio:rioTerceario
+situacion-de-via:superficial
       a       owl:NamedIndividual , skos:Concept ;
-      skos:inScheme hydro:categoriaDeRio ;
-      skos:prefLabel "río de interés terceario"@es .
+      rdfs:comment "vía superficial"@es ;
+      skos:inScheme transportes:situacion-de-via ;
+      skos:prefLabel "superficial"@es .
 
 ontology:Enlace
       a       owl:Class ;
@@ -4485,10 +4450,10 @@ ontology:Enlace
       rdfs:subClassOf
               [ a       owl:Class ;
                 owl:unionOf ([ a       owl:Restriction ;
-                            owl:hasValue estadoDeUso2:enConstruccion ;
+                            owl:hasValue estado-de-uso:en-construccion ;
                             owl:onProperty ontology:estadoDeUso
                           ] [ a       owl:Restriction ;
-                            owl:hasValue estadoDeUso2:enUso ;
+                            owl:hasValue estado-de-uso:en-uso ;
                             owl:onProperty ontology:estadoDeUso
                           ])
               ] ;
@@ -4524,15 +4489,21 @@ extraídos y tanto si se encuentran en la superficie, en el subsuelo o bajo las 
       rdfs:label "Zona arqueológica"@es ;
       rdfs:subClassOf ontology:LugarDeInteres .
 
-transportes:anchoDeVia
-      a       owl:NamedIndividual , skos:ConceptScheme ;
-      rdfs:comment """Esquema de conceptos para definir el ancho de una vía
+transportes:electrificacion
+      a       owl:NamedIndividual , owl:ObjectProperty , skos:ConceptScheme ;
+      rdfs:comment """Esquema de conceptos para definir el tipo de electrificación de una vía
 puede tomar los valores:
-* http://geo.linkeddata.es/kos/transports/anchoDeVia/iberico
-* http://geo.linkeddata.es/kos/transports/anchoDeVia/internacional
-* http://geo.linkeddata.es/kos/transports/anchoDeVia/mixto
-* http://geo.linkeddata.es/kos/transports/anchoDeVia/metrico"""@es ;
-      skos:prefLabel "ancho de vía"@es .
+* http://geo.linkeddata.es/kos/transportes/electrificacion/electrificado
+* http://geo.linkeddata.es/kos/transportes/electrificacion/no-electrificado"""@es ;
+      rdfs:domain ontology:FerrocarrilConvencional ;
+      rdfs:range
+              [ a       owl:Class ;
+                owl:intersectionOf (skos:Concept [ a       owl:Restriction ;
+                            owl:hasValue transportes:electrificacion ;
+                            owl:onProperty skos:inScheme
+                          ])
+              ] ;
+      skos:prefLabel "electrificación"@es .
 
 ontology:tasa_de_renovacion
       a       owl:DatatypeProperty ;
@@ -4622,25 +4593,10 @@ ontology:ocupacion
                         ]
               ] .
 
-supply-net:situacion
-      a       owl:NamedIndividual , skos:ConceptScheme ;
-      rdfs:comment """Puede tomar los valores:
-http://geo.linkeddata.es/kos/supply-net/situacion/elevado
-http://geo.linkeddata.es/kos/supply-net/situacion/subterraneo
-http://geo.linkeddata.es/kos/supply-net/situacion/superficial"""@es ;
-      skos:prefLabel "situación"@es .
-
-geodesy:categoriaDeCurvaDeNivel
-      a       owl:NamedIndividual , skos:ConceptScheme ;
-      rdfs:comment """skos para categoria de curva de nivel.
-Puede tomar los valores:
-* http://geo.linkeddata.es/kos/geodesy/categoriaDeCurvaDeNivel/curvaDeNivelGenerica
-* http://geo.linkeddata.es/kos/geodesy/categoriaDeCurvaDeNivel/CurvaDeNivelInterpolada
-* http://geo.linkeddata.es/kos/geodesy/categoriaDeCurvaDeNivel/CurvaDeNivelMaestra
-* http://geo.linkeddata.es/kos/geodesy/categoriaDeCurvaDeNivel/depresionGenerica
-* http://geo.linkeddata.es/kos/geodesy/categoriaDeCurvaDeNivel/depresionMaestra
-"""@es ;
-      skos:prefLabel "categoría de curva de nivel"@es .
+categoria-vial:segundo-orden
+      a       owl:NamedIndividual , skos:Concept ;
+      skos:inScheme transportes:categoria-vial ;
+      skos:prefLabel "categoría vial de segundo orden"@es .
 
 ontology:Cascada
       a       owl:Class ;
@@ -4680,6 +4636,11 @@ ontology:CurvaDeNivelBatimetrica
       rdfs:label "CurvaDeNivelBatimetrica"@es ;
       rdfs:subClassOf ontology:CurvaDeNivel .
 
+estado-de-uso:abandonado
+      a       owl:NamedIndividual , skos:Concept ;
+      skos:inScheme transportes:estado-de-uso ;
+      skos:prefLabel "abandonado"@es .
+
 ontology:Pico
       a       owl:Class ;
       rdfs:comment "Montaña de cumbre puntiaguda"@es ;
@@ -4693,21 +4654,8 @@ ontology:Suministro
       rdfs:subClassOf ontology:EnclaveFerroviario ;
       terms:source "Administrador de Infraestructuras Ferroviarias (ADIF)"@es .
 
-transportes:acceso
-      a       owl:NamedIndividual , skos:ConceptScheme ;
-      rdfs:comment """Esquema de conceptos para definir el tipo de acceso de una vía
-puede tomar los valores:
-* http://geo.linkeddata.es/kos/transports/acceso/libre
-* http://geo.linkeddata.es/kos/transports/acceso/peaje"""@es ;
-      skos:prefLabel "acceso"@es .
-
 terms:source
       a       owl:AnnotationProperty .
-
-ontology:zona_de_descarga
-      a       owl:DatatypeProperty ;
-      rdfs:domain ontology:Acuifero ;
-      rdfs:range xsd:string .
 
 ontology:Cala
       a       owl:Class ;
@@ -4716,11 +4664,10 @@ ontology:Cala
       rdfs:subClassOf ontology:Morfologia ;
       dc:source "Diccionario de la Real Academia Española"@es .
 
-competenciaDeVia:autonomica
-      a       owl:NamedIndividual , skos:Concept ;
-      rdfs:comment "indica que la via es competencia de la administración de las CCAA"@es ;
-      skos:inScheme transportes:competenciaDeVia ;
-      skos:prefLabel "competencia de vía autonómica"@es .
+ontology:zona_de_descarga
+      a       owl:DatatypeProperty ;
+      rdfs:domain ontology:Acuifero ;
+      rdfs:range xsd:string .
 
 ontology:categoriaVial
       a       owl:ObjectProperty ;
@@ -4730,7 +4677,7 @@ ontology:categoriaVial
       rdfs:range
               [ a       owl:Class ;
                 owl:intersectionOf (skos:Concept [ a       owl:Restriction ;
-                            owl:hasValue transportes:categoriaVial ;
+                            owl:hasValue transportes:categoria-vial ;
                             owl:onProperty skos:inScheme
                           ])
               ] .
@@ -4874,12 +4821,6 @@ ontology:ZonaEconomicaExclusiva
               ] ;
       dc:source "Diez de Velasco, Manuel (1999) Instituciones de derecho internacional publico. Duodecima edicion. Madrid: Tecnos. 924 p. ISBN: 84-309-3446-4"^^xsd:string .
 
-situacionDeVia:elevado
-      a       owl:NamedIndividual , skos:Concept ;
-      rdfs:comment "vía elevada"@es ;
-      skos:inScheme transportes:situacionDeVia ;
-      skos:prefLabel "elevado"@es .
-
 ontology:Acuifero
       a       owl:Class ;
       rdfs:comment "Dit de la formació geològica en la qual s'emmagatzema i circula aigua subterrània, aprofitant la porositat del terreny que l'acull i el gradient hidràulic allà present."@cat , "Couche de terrain ou une roche, suffisamment poreuse (qui peut stocker de l'eau) et perméable (où l'eau circule librement), pour contenir une nappe d'eau souterraine."@fr , "A subsurface layer or layers of rock or other geological strata of sufficient porosity and permeability to allow either a significant flow of groundwater or the abstraction of significant quantities of groundwater."@en , "Una o mas capas subterraneas de roca o de otros estratos geologicos que tienen la suficiente porosidad y permeabilidad para permitir ya sea un flujo significativo de aguas subterraneas o la extraccion de cantidades significativas de aguas subterraneas"@es ;
@@ -4887,6 +4828,14 @@ ontology:Acuifero
       rdfs:subClassOf ontology:AguasSubterraneas ;
       ontology:provenance "Directiva Marco del Agua. Union Europea"^^xsd:string , "Water Framework Directive. European Union"^^xsd:string ;
       dc:source "Embalse de agua subterranea - Glosario Hidrologico Internacional. UNESCO"^^xsd:string ;
+      owl:equivalentClass
+              [ a       owl:Restriction ;
+                owl:onProperty ontology:se_extrae_para ;
+                owl:someValuesFrom
+                        [ a       owl:Class ;
+                          owl:unionOf (ontology:FuenteArtificial ontology:Pozo)
+                        ]
+              ] ;
       owl:equivalentClass
               [ a       owl:Class ;
                 owl:intersectionOf ([ a       owl:Restriction ;
@@ -4896,23 +4845,18 @@ ontology:Acuifero
                             owl:minCardinality "1"^^xsd:nonNegativeInteger ;
                             owl:onProperty ontology:permite
                           ])
-              ] ;
-      owl:equivalentClass
-              [ a       owl:Restriction ;
-                owl:onProperty ontology:se_extrae_para ;
-                owl:someValuesFrom
-                        [ a       owl:Class ;
-                          owl:unionOf (ontology:FuenteArtificial ontology:Pozo)
-                        ]
               ] .
 
-supply-net:tipoDeComponente
+transportes:tipo-de-tramo
       a       owl:NamedIndividual , skos:ConceptScheme ;
-      rdfs:comment """Indica el tipo de componente de telecomunicaciones.
-Puede tomar los valores:
-* http://geo.linkeddata.es/kos/supply-net/tipoDeComponente/emisor
-* http://geo.linkeddata.es/kos/supply-net/tipoDeComponente/repetidor"""@es ;
-      skos:prefLabel "tipo de componente"@es .
+      rdfs:comment """Esquema de conceptos que indica si el tramo de vía  se desarrolla por el interior de núcleos o diseminados superficiales
+puede tomar los valores:
+* http://geo.linkeddata.es/kos/transportes/tipo-de-tramo/interno
+* http://geo.linkeddata.es/kos/transportes/tipo-de-tramo/no-interno"""@es ;
+      skos:prefLabel "tipo de tramo"@es .
+
+[]    a       owl:AllDisjointClasses ;
+      owl:members (ontology:VerticeGeodesicoDeOrdenInferior ontology:VerticeGeodesicoRegcan95 ontology:VerticeGeodesicoRegente) .
 
 ontology:Ribera
       a       owl:Class ;
@@ -4934,6 +4878,12 @@ ontology:dispone_de_emisario
       rdfs:domain ontology:Lago ;
       rdfs:range ontology:Rio ;
       owl:inverseOf ontology:actua_de_emisario_de .
+
+categoria-de-curva-de-nivel:curva-de-nivel-maestra
+      a       owl:NamedIndividual , skos:Concept ;
+      rdfs:comment "Curva de nivel con altitud múltiplo de 100 m."@es ;
+      rdfs:label "curva de nivel maestra"@es ;
+      skos:inScheme geodesia:categoria-de-curva-de-nivel .
 
 ontology:Shuga
       a       owl:Class ;
@@ -4968,6 +4918,12 @@ ontology:Estero
               ] ;
       dc:source "Fontanillo, E. (1986) Diccionario de Geografia. Ed. Anaya. Madrid & Diccionario de la Real Academia Espannola"^^xsd:string .
 
+<http://geo.linkeddata.es/kos/btn100/puntos-de-control>
+      a       owl:NamedIndividual , skos:Concept ;
+      skos:inScheme <http://geo.linkeddata.es/kos/btn100> ;
+      skos:notation "10" ;
+      skos:prefLabel "puntos de control"@es .
+
 ontology:Chortal
       a       owl:Class ;
       rdfs:comment "Lagunilla formada por un manantial poco abundante que brota en el fondo de ella"^^xsd:string ;
@@ -4985,6 +4941,11 @@ ontology:Chortal
               ] ;
       dc:source "Diccionario de la Real Academia Espannola"^^xsd:string .
 
+tipo-de-capital:nacion
+      a       owl:NamedIndividual , skos:Concept ;
+      skos:inScheme poblaciones-construcciones:tipo-de-capital ;
+      skos:prefLabel "capital de nación"@es .
+
 ontology:Sumidero
       a       owl:Class ;
       rdfs:comment "Agujero o abertura en el fondo o el costado de una depresion por la que una corriente de superficie o un lago, fluye parcial o totalmente hacia el sistema karstico subterraneo."^^xsd:string ;
@@ -4992,8 +4953,8 @@ ontology:Sumidero
       rdfs:subClassOf ontology:Morfologia ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:onProperty ontology:origina ;
-                owl:someValuesFrom ontology:CorrienteSubterranea
+                owl:onProperty ontology:alimenta_a ;
+                owl:someValuesFrom ontology:Acuifero
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
@@ -5005,21 +4966,15 @@ ontology:Sumidero
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:onProperty ontology:alimenta_a ;
-                owl:someValuesFrom ontology:Acuifero
+                owl:onProperty ontology:origina ;
+                owl:someValuesFrom ontology:CorrienteSubterranea
               ] ;
       ontology:provenance "Glosario Hidrologico Internacional - UNESCO"^^xsd:string ;
       dc:source "Glosario Hidrologico Internacional - UNESCO"^^xsd:string .
 
-btn100:poblacionesYConstrucciones
+categoria-de-rio:rio-principal
       a       owl:NamedIndividual , skos:Concept ;
-      skos:inScheme kos:btn100 ;
-      skos:notation "05" ;
-      skos:prefLabel "poblaciones y construcciones"@es .
-
-categoriaDeRio:rioPrincipal
-      a       owl:NamedIndividual , skos:Concept ;
-      skos:inScheme hydro:categoriaDeRio ;
+      skos:inScheme hidrografia:categoria-de-rio ;
       skos:prefLabel "río de interés principal"@es .
 
 ontology:tiene_afluente
@@ -5092,6 +5047,16 @@ ontology:ZonaEncharcable
                 owl:onProperty ontology:es_inundada_por
               ] .
 
+transportes:competencia-de-via
+      a       owl:NamedIndividual , skos:ConceptScheme ;
+      rdfs:comment """Esquema de conceptos para definir de quien es la competencia de una determinada vía
+puede tomar los valores:
+* http://geo.linkeddata.es/kos/transportes/competencia-de-via/estatal
+* http://geo.linkeddata.es/kos/transportes/competencia-de-via/local
+* http://geo.linkeddata.es/kos/transportes/competencia-de-via/provicial
+* http://geo.linkeddata.es/kos/transportes/competencia-de-via/autonomica"""@es ;
+      skos:prefLabel "competencia de vía"@es .
+
 ontology:comunica_con
       a       owl:ObjectProperty ;
       rdfs:domain
@@ -5103,16 +5068,8 @@ ontology:comunica_con
                 owl:unionOf (ontology:AguasMarinas ontology:AguasSubterraneas ontology:AguasSuperficiales ontology:Marisma ontology:Ria)
               ] .
 
-capital:tipoDeCapital
-      a       owl:NamedIndividual , skos:ConceptScheme ;
-      rdfs:comment """Especifica de qué administración oficial es capital. Puede tomar los valores:
-* http://geo.linkeddata.es/kos/puntosDeInteres/tipoDeCapital/comunidadAutonoma
-* http://geo.linkeddata.es/kos/puntosDeInteres/tipoDeCapital/comunidadAutonomaNoDeProvincia
-* http://geo.linkeddata.es/kos/puntosDeInteres/tipoDeCapital/nacion
-* http://geo.linkeddata.es/kos/puntosDeInteres/tipoDeCapital/municipio
-* http://geo.linkeddata.es/kos/puntosDeInteres/tipoDeCapital/noCapital
-* http://geo.linkeddata.es/kos/puntosDeInteres/tipoDeCapital/provincia"""@es ;
-      skos:prefLabel "tipo de capital"@es .
+[]    a       owl:AllDifferent ;
+      owl:distinctMembers (ruta-ten-t:ruta-no-transeuropea ruta-ten-t:ruta-transeuropea) .
 
 ontology:destino
       a       owl:DatatypeProperty ;
@@ -5164,6 +5121,11 @@ ontology:ZonaMonumental
       rdfs:label "Zona monumental"@es ;
       rdfs:subClassOf ontology:ZonaDeUsoCaracteristico .
 
+tipo-de-capital:comunidad-autonoma-no-de-provincia
+      a       owl:NamedIndividual , skos:Concept ;
+      skos:inScheme poblaciones-construcciones:tipo-de-capital ;
+      skos:prefLabel "capital de comunidad autónoma  y no de provincia"@es .
+
 ontology:distribuye
       a       owl:ObjectProperty ;
       rdfs:domain
@@ -5189,10 +5151,11 @@ ontology:FerrocarrilConvencional
       rdfs:label "Tramo de vía convencional"@es ;
       rdfs:subClassOf ontology:Ferrocarril .
 
-regimenDeLaguna:noPermanente
+categoria-de-curva-de-nivel:curva-de-nivel-generica
       a       owl:NamedIndividual , skos:Concept ;
-      skos:inScheme hydro:regimenDeLaguna ;
-      skos:prefLabel "no permanente"@es .
+      rdfs:comment "Curva de nivel con altitud cada 20 m."@es ;
+      rdfs:label "curva de nivel genérica"@es ;
+      skos:inScheme geodesia:categoria-de-curva-de-nivel .
 
 ontology:Garganta
       a       owl:Class ;
@@ -5210,12 +5173,6 @@ ontology:permite
       a       owl:ObjectProperty ;
       rdfs:domain ontology:Acuifero ;
       rdfs:range ontology:CorrienteSubterranea .
-
-rutaTenT:rutaTranseuropea
-      a       owl:NamedIndividual , skos:Concept ;
-      rdfs:comment "El tramo no forma parte de la Red Transeuropea de Transporte"@es ;
-      skos:inScheme transportes:rutaTenT ;
-      skos:prefLabel "ruta transeuropea"@es .
 
 ontology:esta_proxima_a
       a       owl:ObjectProperty ;
@@ -5305,16 +5262,23 @@ ontology:Terma
       ontology:provenance "Glosario Hidrologico Internacional - UNESCO"^^xsd:string , "Fuente termomineral - Glosario Hidrologico Internacional. UNESCO"^^xsd:string , "Fenomenos termales - Alexandria Digital Library (ADL) Feature Type Thesaurus"^^xsd:string , "Aguas termales - EuroRegionalMap (ERM)"^^xsd:string , "Aguas termales - EuroGlobalMap (EGM)"^^xsd:string , "Fuente termal - Glosario Hidrologico Internacional. UNESCO"^^xsd:string ;
       dc:source "Glosario Hidrologico Internacional - UNESCO"^^xsd:string .
 
-tipoDeTramo:interno
-      a       owl:NamedIndividual , skos:Concept ;
-      rdfs:comment "El tramo no discurre por el interior de poblaciones o zonas de uso"@es ;
-      skos:inScheme transportes:tipoDeTramo ;
-      skos:prefLabel "tramo interno"@es .
+red-de-suministro:tipo-de-componente
+      a       owl:NamedIndividual , skos:ConceptScheme ;
+      rdfs:comment """Indica el tipo de componente de telecomunicaciones.
+Puede tomar los valores:
+* http://geo.linkeddata.es/kos/red-de-suministro/tipo-de-componente/emisor
+* http://geo.linkeddata.es/kos/red-de-suministro/tipo-de-componente/repetidor"""@es ;
+      skos:prefLabel "tipo de componente"@es .
 
 ontology:zona_de_recarga
       a       owl:DatatypeProperty ;
       rdfs:domain ontology:Acuifero ;
       rdfs:range xsd:string .
+
+estado-de-uso2:en-uso
+      a       owl:NamedIndividual , skos:Concept ;
+      skos:inScheme poblaciones-construcciones:estado-de-uso ;
+      skos:prefLabel "en uso"@es .
 
 ontology:LagoSalado
       a       owl:Class ;
@@ -5323,25 +5287,6 @@ ontology:LagoSalado
               [ a       owl:Class ;
                 owl:intersectionOf (ontology:AguasContinentales ontology:AguasSaladas)
               ] .
-
-transportes:competenciaAeroportuaria
-      a       owl:NamedIndividual , skos:ConceptScheme ;
-      rdfs:comment """Esquema de conceptos para definir el tipo de cometencia de explotación aeroportuaria.
-puede tomar los valores:
-* http://geo.linkeddata.es/kos/transports/competenciaAeroportuaria/aena
-* http://geo.linkeddata.es/kos/transports/competenciaAeroportuaria/militar
-* http://geo.linkeddata.es/kos/transports/competenciaAeroportuaria/privada"""@es ;
-      skos:prefLabel "competencia aeroportuaria"@es .
-
-hydro:categoriaDeRio
-      a       owl:NamedIndividual , skos:ConceptScheme ;
-      rdfs:comment """categorización de un río. Puede tomar los valores:
-* http://geo.linkeddata.es/kos/hydrography/vategoriaDeRio/rioPrincipal
-* http://geo.linkeddata.es/kos/hydrography/vategoriaDeRio/rioSecundario
-* http://geo.linkeddata.es/kos/hydrography/vategoriaDeRio/rioTerceario
-* http://geo.linkeddata.es/kos/hydrography/vategoriaDeRio/rioDeMenorInteres
-"""@es ;
-      skos:prefLabel "categoría de río"@es .
 
 ontology:CarreteraAutonomica
       a       owl:Class ;
@@ -5352,21 +5297,21 @@ ontology:CarreteraAutonomica
               [ a       owl:Class ;
                 owl:intersectionOf ([ a       owl:Class ;
                             owl:unionOf ([ a       owl:Restriction ;
-                                        owl:hasValue tipoDeCalzada:convencional ;
+                                        owl:hasValue tipo-de-calzada:convencional ;
                                         owl:onProperty ontology:calzada
                                       ] [ a       owl:Restriction ;
-                                        owl:hasValue tipoDeCalzada:sentidoUnico ;
+                                        owl:hasValue tipo-de-calzada:sentido-unico ;
                                         owl:onProperty ontology:calzada
                                       ])
                           ] [ a       owl:Class ;
                             owl:unionOf ([ a       owl:Restriction ;
-                                        owl:hasValue competenciaDeVia:autonomica ;
+                                        owl:hasValue competencia-de-via:autonomica ;
                                         owl:onProperty ontology:competenciaDeVia
                                       ] [ a       owl:Restriction ;
-                                        owl:hasValue competenciaDeVia:local ;
+                                        owl:hasValue competencia-de-via:local ;
                                         owl:onProperty ontology:competenciaDeVia
                                       ] [ a       owl:Restriction ;
-                                        owl:hasValue competenciaDeVia:provincial ;
+                                        owl:hasValue competencia-de-via:provincial ;
                                         owl:onProperty ontology:competenciaDeVia
                                       ])
                           ])
@@ -5450,14 +5395,29 @@ ontology:EstacionTelefonica
       rdfs:label "Estación telefónica"@es ;
       rdfs:subClassOf ontology:EstacionDeTelecomunicacion .
 
+tipo-de-trafico:viajeros
+      a       owl:NamedIndividual , skos:Concept ;
+      skos:inScheme transportes:tipo-de-trafico ;
+      skos:prefLabel "tráfico de viajeros"@es .
+
+estado-de-uso2:en-construccion
+      a       owl:NamedIndividual , skos:Concept ;
+      rdfs:comment "indica que está en construcción o en obras"@es ;
+      skos:inScheme poblaciones-construcciones:estado-de-uso ;
+      skos:prefLabel "en construcción"@es .
+
 ontology:es_afluente_de
       a       owl:ObjectProperty ;
       owl:inverseOf ontology:tiene_afluente .
 
-tipoDeTrafico:mercancias
-      a       owl:NamedIndividual , skos:Concept ;
-      skos:inScheme transportes:tipoDeTrafico ;
-      skos:prefLabel "tráfico de mercancías"@es .
+transportes:situacion-de-via
+      a       owl:NamedIndividual , skos:ConceptScheme ;
+      rdfs:comment """Disposición del tramo de vía sobre la superficie.
+
+* http://geo.linkeddata.es/kos/transportes/situacion-de-via/elevado
+* http://geo.linkeddata.es/kos/transportes/situacion-de-via/subterraneo
+* http://geo.linkeddata.es/kos/transportes/situacion-de-via/superficial"""@es ;
+      skos:prefLabel "situación"@es .
 
 ontology:AguasDeTransicion
       a       owl:Class ;
@@ -5465,6 +5425,10 @@ ontology:AguasDeTransicion
       rdfs:label "Transitional waters"@en , "Aguas de transición"@es ;
       rdfs:subClassOf ontology:AguasSuperficiales ;
       dc:source "Directiva Marco del Agua. Union Europea"^^xsd:string , "European Parliament and the Council of the European Union. DIRECTIVE 2000/60/EC OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL for establishing a framework for Community action in the field of water policy. Brussels, 23 October 2000. p 72."^^xsd:string ;
+      owl:equivalentClass
+              [ a       owl:Class ;
+                owl:unionOf (ontology:Canyo ontology:Estuario ontology:Marisma ontology:Ria)
+              ] ;
       owl:equivalentClass
               [ a       owl:Class ;
                 owl:intersectionOf ([ a       owl:Restriction ;
@@ -5486,10 +5450,6 @@ ontology:AguasDeTransicion
                             owl:cardinality "2"^^xsd:nonNegativeInteger ;
                             owl:onProperty ontology:sometida_a_influencia_de
                           ])
-              ] ;
-      owl:equivalentClass
-              [ a       owl:Class ;
-                owl:unionOf (ontology:Canyo ontology:Estuario ontology:Marisma ontology:Ria)
               ] .
 
 ontology:Idioma_alternativo
@@ -5537,11 +5497,14 @@ ontology:MasaDeHielo
 ontology:sometido
       a       owl:ObjectProperty .
 
-tipoDeItinerario:itinerarioEuropeo
-      a       owl:NamedIndividual , skos:Concept ;
-      rdfs:comment "indica que el tramo de vía pertenece a la Red de Carreteras Europeas"@es ;
-      skos:inScheme transportes:tipoDeItinerario ;
-      skos:prefLabel "itinerario europeo"@es .
+transportes:tipo-de-itinerario
+      a       owl:NamedIndividual , skos:ConceptScheme ;
+      rdfs:comment """Esquema de conceptos para definir si el tramo de una vía pertenece a la red de carreteras europeas
+puede tomar los valores:
+
+* http://geo.linkeddata.es/kos/transportes/tipo-de-itinerario/itinerario-europeo
+* http://geo.linkeddata.es/kos/transportes/tipo-de-itinerario/itinerario-no-europeo"""@es ;
+      skos:prefLabel "tipo de itinerario"@es .
 
 ontology:grado_de_contaminacion
       a       owl:DatatypeProperty ;
@@ -5549,23 +5512,16 @@ ontology:grado_de_contaminacion
       rdfs:domain ontology:AguasSubterraneas ;
       rdfs:range xsd:string .
 
-acceso:peaje
+tipo-de-capital:comunidad-autonoma
       a       owl:NamedIndividual , skos:Concept ;
-      rdfs:comment "indica que la vía es de pago."@es ;
-      skos:inScheme transportes:acceso ;
-      skos:prefLabel "acceso con peaje"@es .
+      skos:inScheme poblaciones-construcciones:tipo-de-capital ;
+      skos:prefLabel "capital de comunida autónoma"@es .
 
 ontology:Aeropuerto
       a       owl:Class ;
       rdfs:comment "Terreno llano provisto de un conjunto de pistas, instalaciones y servicios destinados al tráfico regular de aviones."@es ;
       rdfs:label "Airport"@en , "Aeropuerto"@es ;
       rdfs:subClassOf geosparql:Feature .
-
-anchoDeVia:metrico
-      a       owl:NamedIndividual , skos:Concept ;
-      rdfs:comment "ancho métrico, 1.000  mm"@es ;
-      skos:inScheme transportes:anchoDeVia ;
-      skos:prefLabel "ancho de vía métrico"@es .
 
 ontology:uso
       a       owl:DatatypeProperty ;
@@ -5595,6 +5551,9 @@ ontology:Muralla
       rdfs:label "Muralla"@es ;
       rdfs:subClassOf geosparql:Feature .
 
+[]    a       owl:AllDifferent ;
+      owl:distinctMembers (estado-de-uso2:abandonado estado-de-uso2:en-construccion estado-de-uso2:en-uso) .
+
 ontology:perimetro
       a       owl:DatatypeProperty ;
       rdfs:domain ontology:FenomenoHidrografico , ontology:Morfologia , ontology:CuencaHidrografica .
@@ -5605,12 +5564,6 @@ ontology:EstacionDeFerrocarril
       rdfs:label "Train station"@en , "Estación de ferrocarril"@es ;
       rdfs:subClassOf ontology:EnclaveFerroviario ;
       terms:source "Administrador de Infraestructuras Ferroviarias (ADIF)"@es .
-
-competenciaAeroportuaria:aena
-      a       owl:NamedIndividual , skos:Concept ;
-      rdfs:comment "competencia aeroportuaria de explotación por aena"@es ;
-      skos:inScheme transportes:competenciaAeroportuaria ;
-      skos:prefLabel "aena"@es .
 
 ontology:Nacimiento
       a       owl:Class ;
@@ -5696,6 +5649,18 @@ ontology:es_distribuida
               ] ;
       rdfs:subPropertyOf ontology:es_conducido_por .
 
+tipo-de-tramo:interno
+      a       owl:NamedIndividual , skos:Concept ;
+      rdfs:comment "El tramo no discurre por el interior de poblaciones o zonas de uso"@es ;
+      skos:inScheme transportes:tipo-de-tramo ;
+      skos:prefLabel "tramo interno"@es .
+
+<http://geo.linkeddata.es/kos/btn100/poblaciones-y-construcciones>
+      a       owl:NamedIndividual , skos:Concept ;
+      skos:inScheme <http://geo.linkeddata.es/kos/btn100> ;
+      skos:notation "05" ;
+      skos:prefLabel "poblaciones y construcciones"@es .
+
 ontology:Barranco
       a       owl:Class ;
       rdfs:comment "Quiebra profunda que hacen en la tierra las corrientes de agua"@es ;
@@ -5730,12 +5695,6 @@ ontology:CanalMarino
                             owl:onProperty ontology:comunica_con
                           ])
               ] .
-
-competenciaDeVia:local
-      a       owl:NamedIndividual , skos:Concept ;
-      rdfs:comment "indica que la via es competencia del municipio"@es ;
-      skos:inScheme transportes:competenciaDeVia ;
-      skos:prefLabel "competencia de vía local"@es .
 
 ontology:HidronimoPuntual
       a       owl:Class ;
@@ -5774,6 +5733,9 @@ ontology:Meandro
       ontology:provenance "Glosario Hidrologico Internacional - UNESCO"^^xsd:string ;
       dc:source "Vazquez Maure F.; Martin Lopez J. (1987) Vocabulario de terminos geograficos. Ed. Ministerio de Obras Publicas y Urbanismo. Instituto Geografico Nacional. Madrid. ISBN: 84-505-4929-9."^^xsd:string .
 
+[]    a       owl:AllDifferent ;
+      owl:distinctMembers (competencia-aeroportuaria:aena competencia-aeroportuaria:militar competencia-aeroportuaria:privada) .
+
 ontology:competenciaAeroportuaria
       a       owl:ObjectProperty ;
       rdfs:comment "Competencia de la explotación earoportuaria"@es ;
@@ -5785,7 +5747,7 @@ ontology:competenciaAeroportuaria
       rdfs:range
               [ a       owl:Class ;
                 owl:intersectionOf (skos:Concept [ a       owl:Restriction ;
-                            owl:hasValue transportes:competenciaAeroportuaria ;
+                            owl:hasValue transportes:competencia-aeroportuaria ;
                             owl:onProperty skos:inScheme
                           ])
               ] .
@@ -5809,6 +5771,12 @@ ontology:navegable
                                   ]
                         ]
               ] .
+
+tipo-de-calzada:convencional
+      a       owl:NamedIndividual , skos:Concept ;
+      rdfs:comment "Única calzada con doble sentido de circulación."@es ;
+      skos:inScheme transportes:tipo-de-calzada ;
+      skos:prefLabel "calzada convencional"@es .
 
 ontology:autoridad_competente
       a       owl:DatatypeProperty ;
